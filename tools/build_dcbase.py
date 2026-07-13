@@ -33,12 +33,18 @@ INERT_PHP = ("posting.php", "ucp.php", "search.php", "mcp.php", "report.php",
              "cron.php", "feed.php", "memberlist.php", "faq.php", "style.php")
 stats = collections.Counter()
 
+def canon(path, q, frag=""):
+    """Canonical original-style phpBB URL (root-relative, sid-free)."""
+    parts = [f"{k}={q[k][0]}" for k in ("f", "t", "p", "mode", "u", "start") if k in q]
+    return "/" + path + ("?" + "&".join(parts) if parts else "") + frag
+
 def resolve(href):
-    """-> ('ok',url) | ('red',text-target) | ('inert',) | ('keep',url)"""
+    """-> ('ok',url) | ('red',url) | ('inert',) | ('keep',url)
+    Archived phpBB links keep their ORIGINAL URL form; the worker serves the
+    static content there so the address bar stays authentic."""
     if not href or href.startswith(("#", "mailto:", "javascript:")):
         return ("keep", href)
     h = href.replace("&amp;", "&").strip()
-    # absolute self-links -> relative
     for pre in ("https://forum.dcbase.org/", "http://forum.dcbase.org/",
                 "https://www.dcbase.org/", "//forum.dcbase.org/"):
         if h.startswith(pre): h = "./" + h[len(pre):]; break
@@ -49,33 +55,34 @@ def resolve(href):
     path = h.split("?")[0].split("#")[0]
     frag = ("#" + h.split("#", 1)[1]) if "#" in h else ""
     q = urllib.parse.parse_qs(h.split("?", 1)[1].split("#")[0]) if "?" in h else {}
-    q.pop("sid", None)
+    q.pop("sid", None); q.pop("view", None)
     if path in ("", "index.php", "app.php"):
-        return ("ok", "index.html")
+        return ("ok", "/")
     if path == "viewtopic.php":
         t = q.get("t", [None])[0]; p = q.get("p", [None])[0]; start = q.get("start", ["0"])[0]
-        if not t and p:
-            t = pmap.get(p); frag = frag or (f"#p{p}")
         if t:
-            if t in topics:
-                return ("ok", topic_file(t, start) + frag)
-            return ("red", f"topic {t}")
+            arch = (t in topics) if start == "0" else ((t, start) in topic_pages)
+            return ("ok" if arch else "red", canon(path, q, frag))
+        if p:
+            pt = pmap.get(p)
+            if not frag: frag = f"#p{p}"
+            return ("ok" if (pt and pt in topics) else "red", canon(path, q, frag))
         return ("inert",)
     if path == "viewforum.php":
-        f = q.get("f", [None])[0]; start = q.get("start", ["0"])[0]
+        f = q.get("f", [None])[0]
         if f:
-            return ("ok", forum_file(f, start)) if f in forums else ("red", f"forum {f}")
+            return ("ok" if f in forums else "red", canon(path, q))
         return ("inert",)
     if path == "memberlist.php" and q.get("mode", [""])[0] == "viewprofile":
         u = q.get("u", [None])[0]
         if u:
-            return ("ok", f"u{u}.html") if u in profiles else ("red", f"user {u}")
+            return ("ok" if u in profiles else "red", canon(path, q))
         return ("inert",)
     if path == "download/file.php":
         a = q.get("id", [None])[0]
         if a and a in attach:
-            return ("ok", attach[a])
-        return ("red", "attachment")
+            return ("ok", "/" + attach[a])
+        return ("red", None)
     if any(path.endswith(x) for x in INERT_PHP):
         return ("inert",)
     if path.startswith(("styles/", "assets/", "images/", "download/")):
@@ -178,22 +185,23 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
     const q = url.searchParams;
-    let target = null, frag = "";
+    let target = null;
     if (path === "/viewtopic.php") {
       let t = q.get("t");
       const p = q.get("p"), start = q.get("start");
-      if (!t && p) { t = PMAP[p]; if (t) frag = "#p" + p; }
-      if (t) target = "/t" + t + (start && start !== "0" ? "_s" + start : "") + ".html" + frag;
+      if (!t && p) t = PMAP[p];
+      if (t) target = "/t" + t + (start && start !== "0" ? "_s" + start : "");
     } else if (path === "/viewforum.php") {
       const f = q.get("f"), start = q.get("start");
-      if (f) target = "/f" + f + (start && start !== "0" ? "_s" + start : "") + ".html";
+      if (f) target = "/f" + f + (start && start !== "0" ? "_s" + start : "");
     } else if (path === "/memberlist.php") {
       const u = q.get("u");
-      if (q.get("mode") === "viewprofile" && u) target = "/u" + u + ".html";
+      if (q.get("mode") === "viewprofile" && u) target = "/u" + u;
     } else if (path === "/index.php" || path === "/app.php") {
       target = "/";
     }
-    if (target) return Response.redirect(url.origin + target, 301);
+    // serve the archived content AT the original URL (no redirect)
+    if (target) return env.ASSETS.fetch(new Request(url.origin + target, request));
     return env.ASSETS.fetch(request);
   }
 };

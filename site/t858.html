@@ -28,7 +28,7 @@
 <div class="headerbar" role="banner">
 <div class="inner">
 <div class="site-description" id="site-description">
-<a class="logo" href="/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<a class="logo" href="https://www.dcbase.org/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
 <h1>DCBase</h1>
 <p>Empowering and innovating features for the peer to peer masses</p>
 <p class="skiplink"><a href="#start_here">Skip to content</a></p>
@@ -62,7 +62,7 @@
 </ul>
 <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
 <li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="https://www.dcbase.org/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
 <span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/" itemprop="url"><span itemprop="title">Forums</span></a></span>
 <span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=74" itemprop="url"><span itemprop="title">Protocols</span></a></span>
 <span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=19" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
@@ -136,7 +136,7 @@
 </a>
 <span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>30 Jun 2013, 14:06
 			</p>
-<div class="content">I think <a class="postlink" href="http://www.dcbase.org/forums/posting.php?mode=reply&amp;f=55&amp;t=855">this extension</a> has a good intention, but I find it to be slightly too narrow and I think that the error code "Transfer protocol unsupported" (41) is more apt for this. 41 specifies that you use the field 'PR' for the protocol string that was invalid. Now, in this case (for ADC/1.0 vs ADCS/1.0), you would specify respond with "STA 41 PRADC/1.0". Doing so has an implication: specifying that ADC/1.0 is invalid does not necessarily mean that (not-existant) "ADC/1.1" isn't. I.e., you are saying "i don't allow/know that" but aren't giving a hint to what is actually allowed/you know. Therefore, I think a more general approach would be to add another field to this error code 41 for "hinted supported protocol string", HR. To manage an ADCS requirement, you'd send "STA 41 PRADC/1.0 HRADCS/1.0". I.e., "I don't support ADC 1.0, but I will support ADCS 1.0". If the HR field is supplied, I think the sending client can also include an appropriate message (or if the receiving does it) indicating to the user (if it is shown to them) that they need to turn on ADCS. Doing a generic approach to this also means we don't need to include more and more error codes depending on protocol support.<br/>
+<div class="content">I think <a class="postlink inert" href="#" title="Disabled in this archive">this extension</a> has a good intention, but I find it to be slightly too narrow and I think that the error code "Transfer protocol unsupported" (41) is more apt for this. 41 specifies that you use the field 'PR' for the protocol string that was invalid. Now, in this case (for ADC/1.0 vs ADCS/1.0), you would specify respond with "STA 41 PRADC/1.0". Doing so has an implication: specifying that ADC/1.0 is invalid does not necessarily mean that (not-existant) "ADC/1.1" isn't. I.e., you are saying "i don't allow/know that" but aren't giving a hint to what is actually allowed/you know. Therefore, I think a more general approach would be to add another field to this error code 41 for "hinted supported protocol string", HR. To manage an ADCS requirement, you'd send "STA 41 PRADC/1.0 HRADCS/1.0". I.e., "I don't support ADC 1.0, but I will support ADCS 1.0". If the HR field is supplied, I think the sending client can also include an appropriate message (or if the receiving does it) indicating to the user (if it is shown to them) that they need to turn on ADCS. Doing a generic approach to this also means we don't need to include more and more error codes depending on protocol support.<br/>
 <br/>
 I don't know if another code can use the same field to have a similar effect.</div>
 </div>
@@ -253,7 +253,7 @@ I don't know if another code can use the same field to have a similar effect.</d
 <div class="inner">
 <ul class="nav-footer linklist" id="nav-footer" role="menubar">
 <li class="breadcrumbs">
-<span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
+<span class="crumb"><a data-navbar-reference="home" href="https://www.dcbase.org/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
 <li class="rightside">All times are <span title="UTC">UTC</span></li>
 <li class="rightside">
 <a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">

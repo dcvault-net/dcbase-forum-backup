@@ -28,7 +28,7 @@
 <div class="headerbar" role="banner">
 <div class="inner">
 <div class="site-description" id="site-description">
-<a class="logo" href="/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<a class="logo" href="https://www.dcbase.org/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
 <h1>DCBase</h1>
 <p>Empowering and innovating features for the peer to peer masses</p>
 <p class="skiplink"><a href="#start_here">Skip to content</a></p>
@@ -62,7 +62,7 @@
 </ul>
 <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
 <li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="https://www.dcbase.org/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
 <span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/" itemprop="url"><span itemprop="title">Forums</span></a></span>
 <span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=74" itemprop="url"><span itemprop="title">Protocols</span></a></span>
 <span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=19" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
@@ -234,7 +234,7 @@ One way that might make sense would be that the client sends the full filter onl
 </a>
 <span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a></strong> » </span>26 Mar 2013, 17:17
 			</p>
-<div class="content">on bloom tables being too big, i have written simple solutions on &lt;<a class="postlink" href="http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798">http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798</a>&gt; that would be worth evaluating before trying too hard (alternate conn / partial update / whathaveyou).<br/>
+<div class="content">on bloom tables being too big, i have written simple solutions on &lt;<a class="postlink" href="/viewtopic.php?f=18&amp;t=798">http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798</a>&gt; that would be worth evaluating before trying too hard (alternate conn / partial update / whathaveyou).<br/>
 <blockquote><div><cite>klondike wrote:</cite>Currently some clients download a user's Filelist in order to match their queues against them and see if they share anything we are interested on having, the heuristics vary by client but I think it will be more eficient to instead download the BLOM and match the queue and then depending on the filter send the appropriate GFIs thus reducing the total load. What do you think?</div></blockquote>
 sounds interesting... i wonder how many files would have to be matched before the bloom+GFI solution costs more than a regular file list download (keep in mind file lists are usually compressed)?</div>
 </div>
@@ -282,7 +282,7 @@ No, on the lan parties where i set these up the link speed is at least 100 Mbit 
 Usually we speak of user in a single hub, even if they were in more than one the internet uplink would be the limiter. Also in lan parties sending a whole file list isn't a big problem <img alt=":P" class="smilies" height="17" src="images/smilies/icon_razz.gif" title="Razz" width="15"/><br/>
 <blockquote><div><cite>maksis wrote:</cite>One way that might make sense would be that the client sends the full filter only when it joins the hub, and after that it only adds new items (or partial filters) in it. This could be done every time when the user adds something new in queue or when new items are added in share. The client can also compare the new TTH set to an old one when the share has been refreshed and get the difference to send. I haven't looked into the bloom filter at all so I don't know whether it's is possible to make it work like that or not.</div></blockquote>
 Yes and no, if you keep the filter parameters constant then it is possible to just send the differences with the old one (i.e. the places were bits have been set to one). Anyway the hub should still have the power to request a new filter from the client since the new shares may require it to change the parameters to make the filter effective again.<br/>
-<blockquote><div><cite>poy wrote:</cite>on bloom tables being too big, i have written simple solutions on &lt;<a class="postlink" href="http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798">http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798</a>&gt; that would be worth evaluating before trying too hard (alternate conn / partial update / whathaveyou).</div></blockquote>
+<blockquote><div><cite>poy wrote:</cite>on bloom tables being too big, i have written simple solutions on &lt;<a class="postlink" href="/viewtopic.php?f=18&amp;t=798">http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798</a>&gt; that would be worth evaluating before trying too hard (alternate conn / partial update / whathaveyou).</div></blockquote>
 Little you can do if the client is traffic limitting the filter sending since you will either end up with either an useless filter if the client has to many files or with old invalid filterchunks you'd have to renew otherwise. Because yes, I have seen clients taking 15 minutes to send the filter over a gigabit link because either of them was limiting the traffic (the captures hinted it was the client).<br/>
 <blockquote><div><cite>poy wrote:</cite><blockquote><div><cite>klondike wrote:</cite>Currently some clients download a user's Filelist in order to match their queues against them and see if they share anything we are interested on having, the heuristics vary by client but I think it will be more eficient to instead download the BLOM and match the queue and then depending on the filter send the appropriate GFIs thus reducing the total load. What do you think?</div></blockquote>
 sounds interesting... i wonder how many files would have to be matched before the bloom+GFI solution costs more than a regular file list download (keep in mind file lists are usually compressed)?</div></blockquote>
@@ -342,7 +342,7 @@ Depends on the size of the compressed filelist and the m parameter you use. Norm
 </a>
 <span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a></strong> » </span>28 Aug 2013, 21:34
 			</p>
-<div class="content"><blockquote><div><cite>poy wrote:</cite>on bloom tables being too big, i have written simple solutions on &lt;<a class="postlink" href="http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798">http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798</a>&gt; that would be worth evaluating before trying too hard (alternate conn / partial update / whathaveyou).</div></blockquote>
+<div class="content"><blockquote><div><cite>poy wrote:</cite>on bloom tables being too big, i have written simple solutions on &lt;<a class="postlink" href="/viewtopic.php?f=18&amp;t=798">http://www.dcbase.org/forums/viewtopic.php?f=18&amp;t=798</a>&gt; that would be worth evaluating before trying too hard (alternate conn / partial update / whathaveyou).</div></blockquote>
 
 If the size of the bloom filter would be 50% of the current one used by ADCH++, the amount of false positive would be increased from 0,4% to ~10%. If the filter size would be 25% of the original one, the amount of false positives is almost 60% already. If 10% can be considered as an acceptable level of false positives, how much would the split filter help?<br/>
 <br/>
@@ -489,7 +489,7 @@ All ADC hubs meant for sharing I'm staying in are hosted on 10 Mbit connection b
 <div class="inner">
 <ul class="nav-footer linklist" id="nav-footer" role="menubar">
 <li class="breadcrumbs">
-<span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
+<span class="crumb"><a data-navbar-reference="home" href="https://www.dcbase.org/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
 <li class="rightside">All times are <span title="UTC">UTC</span></li>
 <li class="rightside">
 <a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">

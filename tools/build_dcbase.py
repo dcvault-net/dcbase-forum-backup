@@ -33,6 +33,13 @@ INERT_PHP = ("posting.php", "ucp.php", "search.php", "mcp.php", "report.php",
              "cron.php", "feed.php", "memberlist.php", "faq.php", "style.php")
 stats = collections.Counter()
 
+# every historical base URL the forum lived at -> normalized to a bare phpBB path
+_FB = ["forum.dcbase.org", "www.forum.dcbase.org",
+       "www.dcbase.org/forums", "dcbase.org/forums",
+       "www.dcbase.org/forum", "dcbase.org/forum",
+       "www.dcbase.org/legacy_dcpp_forums", "dcbase.org/legacy_dcpp_forums"]
+FORUM_BASES = tuple(f"{s}{b}/" for b in _FB for s in ("https://", "http://", "//"))
+
 def canon(path, q, frag=""):
     """Canonical original-style phpBB URL (root-relative, sid-free)."""
     parts = [f"{k}={q[k][0]}" for k in ("f", "t", "p", "mode", "u", "start") if k in q]
@@ -45,11 +52,10 @@ def resolve(href):
     if not href or href.startswith(("#", "mailto:", "javascript:")):
         return ("keep", href)
     h = href.replace("&amp;", "&").strip()
-    for pre in ("https://forum.dcbase.org/", "http://forum.dcbase.org/",
-                "https://www.dcbase.org/", "//forum.dcbase.org/"):
-        if h.startswith(pre): h = "./" + h[len(pre):]; break
-    if h.startswith(("http://", "https://")):
-        return ("keep", href)              # external
+    for pre in FORUM_BASES:
+        if h.startswith(pre): h = h[len(pre):]; break
+    if h.startswith(("http://", "https://", "//")):
+        return ("keep", href)              # other external (incl. dcbase.org wiki/homepage)
     h = h[2:] if h.startswith("./") else h
     h = h.lstrip("/")
     path = h.split("?")[0].split("#")[0]

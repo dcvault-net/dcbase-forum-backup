@@ -171,6 +171,36 @@ for root, _, files in os.walk(RAW):
         if not fn.endswith(".html"): continue
         process(os.path.join(root, fn), fn)
 
+# Cloudflare Pages advanced-mode worker: original phpBB URLs -> static files
+WORKER_BODY = '''
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    const path = url.pathname;
+    const q = url.searchParams;
+    let target = null, frag = "";
+    if (path === "/viewtopic.php") {
+      let t = q.get("t");
+      const p = q.get("p"), start = q.get("start");
+      if (!t && p) { t = PMAP[p]; if (t) frag = "#p" + p; }
+      if (t) target = "/t" + t + (start && start !== "0" ? "_s" + start : "") + ".html" + frag;
+    } else if (path === "/viewforum.php") {
+      const f = q.get("f"), start = q.get("start");
+      if (f) target = "/f" + f + (start && start !== "0" ? "_s" + start : "") + ".html";
+    } else if (path === "/memberlist.php") {
+      const u = q.get("u");
+      if (q.get("mode") === "viewprofile" && u) target = "/u" + u + ".html";
+    } else if (path === "/index.php" || path === "/app.php") {
+      target = "/";
+    }
+    if (target) return Response.redirect(url.origin + target, 301);
+    return env.ASSETS.fetch(request);
+  }
+};
+'''
+with open(os.path.join(SITE, "_worker.js"), "w", encoding="utf-8") as fh:
+    fh.write("const PMAP = " + json.dumps(pmap, separators=(",", ":")) + ";\n" + WORKER_BODY)
+
 print("=== dcbase build stats ===")
 for k in sorted(stats): print(f"  {stats[k]:6}  {k}")
 print(f"attachments: {len(attach)}")

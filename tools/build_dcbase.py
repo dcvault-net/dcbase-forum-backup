@@ -54,8 +54,12 @@ def resolve(href):
     h = href.replace("&amp;", "&").strip()
     for pre in FORUM_BASES:
         if h.startswith(pre): h = h[len(pre):]; break
+    # the dead parent-site homepage (logo / "DCNF Home") -> local forum index
+    if h.rstrip("/") in ("https://www.dcbase.org", "http://www.dcbase.org",
+                         "https://dcbase.org", "http://dcbase.org"):
+        return ("ok", "/")
     if h.startswith(("http://", "https://", "//")):
-        return ("keep", href)              # other external (incl. dcbase.org wiki/homepage)
+        return ("keep", href)              # other external (incl. dcbase.org wiki)
     h = h[2:] if h.startswith("./") else h
     h = h.lstrip("/")
     path = h.split("?")[0].split("#")[0]

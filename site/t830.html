@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>[ADC 1.0.3] Examples for commands - DCBase</title>
+<link href="/app.php/feed?sid=936e3d33e056464f14c0d1438665c9f2" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=936e3d33e056464f14c0d1438665c9f2" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=936e3d33e056464f14c0d1438665c9f2" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=936e3d33e056464f14c0d1438665c9f2" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=936e3d33e056464f14c0d1438665c9f2" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/87?sid=936e3d33e056464f14c0d1438665c9f2" rel="alternate" title="Feed - Forum - Pushed ideas" type="application/atom+xml"/> <link href="/app.php/feed/topic/830?sid=936e3d33e056464f14c0d1438665c9f2" rel="alternate" title="Feed - Topic - [ADC 1.0.3] Examples for commands" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=830" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f74.html" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f19.html" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="55" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f55.html" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+<span class="crumb" data-forum-id="87" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f87.html" itemprop="url"><span itemprop="title">Pushed ideas</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t830.html">[ADC 1.0.3] Examples for commands</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t830.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			2 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p3002">
+<div class="inner">
+<dl class="postprofile" id="profile3002">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3002">
+<h3 class="first"><a href="#p3002">[ADC 1.0.3] Examples for commands</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t830.html#p3002" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>08 Feb 2013, 16:07
+			</p>
+<div class="content">The following is a suggestion to improve the documentation by presenting examples of all commands. I don't really care if we put each command example below their respective command or just to have it the bottom "example section".<br/>
+<br/>
+Small note: I was slightly unsure of the identifier for directories below (in e.g. GET or GFI), so please validate what I've written is actually correct.<br/>
+<blockquote class="uncited"><div>
+STA<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|ISTA 211 Hub\sfull |A STA sent from a hub with the severity Fatal (2) and the error code Hub full (11). The descriptive text afterward is to preferably be presented to the user.<br/>
+|CSTA 151 File\snot\savailable |A STA is sent in a client to client connection, indicating that the request for a file failed (error code 51), as the file was not vailable. The severity (Recoverable, 1) indicates that an error occured but that the connection will remain.<br/>
+|ESTA BBBB CCCC 142 Transfer\sprotocol\sunsupported TO123456789 PRADC/0.5 |A STA is sent from one client to another client in a hub, routed as a E-type message (meaning that the sender should receive it as well), as a response for not supporting transfers of the 'protocol' kind. The token '123456789' is used and the protocol is "ADC/0.5" (see the command CTM for the version that shall be used in this protocol version).<br/>
+|=====<br/>
+<br/>
+SUP<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|ISUP ADBASE ADTIGR ADBLOM |A SUP sent from a hub indicating that the hub has added the features BASE, TIGR and BLOM.<br/>
+|HSUP RMBLOM ADZLIF |A SUP sent from a client to the hub indicating that the client has added the fature ZLIF and removed the feature BLOM.<br/>
+|=====<br/>
+<br/>
+SID<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|ISID BBBB |An SID is sent from the hub indicating that the client's SID from then on shall be BBBB.<br/>
+|=====<br/>
+<br/>
+INF<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|IINF CT32 NIexample_hub DEThe\s\simple\shub |An INF is sent from the hub containing its own information: the name is "example_hub" and description "The simple hub".<br/>
+|BINF BBBB HN0 HR1 HO2 NIsample_user DEsample\scontent SF123456 SS42 I4192.168.0.1 U46666 IDIPJJWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KC3I PDIJJJWEPPPLCA33F2ZCR7YO4F6ZXWE4NJ3WQ3C3I |An INF sent from a client (with the SID BBBB) containing the following information: the name is "sample_user", the description is "sample content", in three hubs in total (one as registered and two as operator), with a total share size of 42 bytes (with 123456 files) etc.<br/>
+|CINF IPJJWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KC3I TO123456789 |An INF is sent in a client to client connection indicating the CID and token.<br/>
+|=====<br/>
+<br/>
+MSG<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|IMSG There\sare\s42\susers\sonline |A MSG that is sent from the hub  with the message "There are 42 users online".<br/>
+|BMSG BBBB likes\scats ME1 |A MSG that is sent from a client (with SID BBBB), spoken in third person with the message "likes cats". This will appear like (or something similar) "john likes cats" (assuming that the user with BBBB has the name john).<br/>
+|DMSG CCCC BBBB I\sprefer\sdogs PMCCCC |A MSG is sent from a client to another client, spoken as a "private message", with the message "I prefer dogs".<br/>
+|=====<br/>
+<br/>
+SCH<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|BSCH BBBB ANubuntu ANlinux NOgentoo EXISO EXIMG TO123456789 TY1 |A SCH that is sent from a client where the search terms "ubuntu" and "linux" should be in the file (TY1) name, excluding files that have "gentoo" in them. The extension of the file should be ISO or IMG. The token "123456789" is used.<br/>
+|BSCH BBBB ANubuntu LE4294967296 TO123456789 |A SCH that is sent from a client where the search term "ubuntu" should be in the file (TY1) name. The token "123456789" is used. The file must be less than 4 GiB in size (4294967296 bytes).<br/>
+|FSCH BBBB +TCP4 ANubuntu TO123456789 |A SCH that is sent from a client where the search term "ubuntu" should be in the file (TY1) name. The token "123456789" is used. The hub should only route the SCH to clients that support the feature TCP4.<br/>
+|=====<br/>
+<br/>
+RES<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|DRES CCCC BBBB FN/share/linux/ubuntu.iso SI42 SL1 TO123456789 TRIPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII |A RES that is sent from a client (through the hub) indicating a response with the file name "ubuntu.iso" (and its path within the share), where the file sise is 42 bytes. The token "123456789" is used. The TR field indicate the hash of the file (see the TIGR extension).<br/>
+|URES IPJJWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII TRIPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII FN/share/linux/ubuntu.iso SI42 TO123456789| A RES that is sent from a client (via UDP) indicating a response with the file name "ubuntu.iso" (and its path within the share), where the file sise is 42 bytes. The token "123456789" is used. The TR field indicate the hash of the file (see the TIGR extension).<br/>
+|CRES FN/share/linux/ubuntu.iso SI42 |A RES that is sent from a client indicating a response with the file name "ubuntu.iso" (and its path within the share), where the file sise is 42 bytes.<br/>
+|=====<br/>
+<br/>
+CTM<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|DCTM BBBB CCCC ADC/1.0 6666 123456789 |A CTM that is sent from a client to another client indicating that it wants to have a client to client connection. The protocol "ADC/1.0" is used. The port 6666 is used. The token is 123456789. The hub should only send this to the target user (with SID CCCC).<br/>
+|ECTM BBBB CCCC ADC/0.5 6666 123456789 |A CTM that is sent from a client to another client indicating that it wants to have a client to client connection. The (fictional) protocol "ADC/1.0" is used. The port 6666 is used. The token is 123456789. The hub should send this to the target user (with SID CCCC) and to the originating party (with SID BBBB).<br/>
+|=====<br/>
+<br/>
+RCM<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|DRCM BBBB CCCC ADC/1.0 123456789 |A RCM that is sent from a client to another client indicating that it wants to have a client to client connection. The protocol "ADC/1.0" is used. TThe token is 123456789. The hub should only send this to the target user (with SID CCCC).<br/>
+|ERCM BBBB CCCC ADC/0.5 123456789 |A RCM that is sent from a client to another client indicating that it wants to have a client to client connection. The (fictional) protocol "ADC/0.5" is used. TThe token is 123456789. The hub should send this to the target user (with SID CCCC) and to the originating party (with SID BBBB).<br/>
+|=====<br/>
+<br/>
+GPA<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|IGPA JJWEPPPLCA3PF2ZCRRYO3333 |A GPA that is sent from the hub indicating the password-response sequence with the random data JJWEPPPLCA3PF2ZCRRYO3333.<br/>
+|=====<br/>
+<br/>
+PAS<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|HPAS YO4F2ZX2EV2JMW2KCIIYYYYY |A PAS that is sent from the client where the password and random data is hashed.<br/>
+|=====<br/>
+<br/>
+QUI<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|IQUI BBBB |A QUI that is sent from the hub indicating that the client BBBB has disconnected.<br/>
+|IQUI BBBB IDCCCC MSCats\sare\horrible DI1 TL-1 |A QUI that is sent from the hub indicating that the client BBBB has disconnected. The originator of the action is the client with the SID CCCC. The message "Cats are horrible" is included. All clients should terminate their connections with the client BBBB (DI1). The client should never attempt to reconnect (TL-1).<br/>
+|=====<br/>
+<br/>
+GET<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|CGET file TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII 0 -1 |A GET that is sent from a client as a request for a file with the identifier TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII (see TIGR extension). The sending client should send the entire file.<br/>
+|CGET list /share/ 0 -1 RE1 |A GET that is sent from a client as a request for a directory with the identifier /share/. The sending client should send the directory and its subdirectories.<br/>
+|CGET file TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII 6666 3333 |A GET that is sent from a client as a request for a file with the identifier TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII (see TIGR extension). The sending client should send the next 3333 bytes, starting at byte position 6666.<br/>
+|=====<br/>
+<br/>
+GFI<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|CGFI file TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII |A GFI that is sent from a client as a request for file information for a file with the identifier TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII (see TIGR extension). <br/>
+|CGFI list /share/ |A GFI that is sent from a client as a request for directory information with the identifier /share/.<br/>
+|=====<br/>
+<br/>
+SND<br/>
+[options="autowidth,header"]<br/>
+|=====<br/>
+|Example |Description<br/>
+|CSND file TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII 0 9999 |A SND that is sent from a client prior to streaming data for the file with the identifier TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII (see TIGR extension). The sending client indicates that it will send 9999 bytes and start streaming at the byte position 0 (the beginning of the file).<br/>
+|CSND list /share/ 0 66 |A SND that is sent from a client prior to streaming data for the directory with the identifier /share/. The sending client indicates that it will send 66 bytes.<br/>
+|CSND file TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII 6666 3333 |A SND that is sent from a client prior to streaming data for the file with the identifier TTH/IPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII (see TIGR extension). The sending client indicates that it will send 3333 bytes and start streaming at the byte position 6666.<br/>
+|=====<br/>
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p3006">
+<div class="inner">
+<dl class="postprofile" id="profile3006">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3006">
+<h3><a href="#p3006">Re: Examples for commands</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t830.html#p3006" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>23 Feb 2013, 14:39
+			</p>
+<div class="content">I take the no comments as an agreement and I have subsequently added the posted list to the ADC document for ADC 1.0.3. See <a class="postlink" href="https://adc.svn.sourceforge.net/viewvc/adc/trunk/ADC.txt?r1=95&amp;r2=96">here</a> for the SVN changes.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t830.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form action="#" method="post" onsubmit="return false">
+<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
+<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents">
+<fieldset class="display-options">
+<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
+<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
+<hr class="dashed"/>
+<input class="button2" name="sort" type="submit" value="Go"/>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+<div class="pagination">
+			2 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f87.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Pushed ideas”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

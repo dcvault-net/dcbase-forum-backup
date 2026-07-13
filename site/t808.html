@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ADC wireshark dissector - DCBase</title>
+<link href="/app.php/feed?sid=86e5bfa07fae5c60f0c24faea903f063" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=86e5bfa07fae5c60f0c24faea903f063" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=86e5bfa07fae5c60f0c24faea903f063" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=86e5bfa07fae5c60f0c24faea903f063" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=86e5bfa07fae5c60f0c24faea903f063" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/18?sid=86e5bfa07fae5c60f0c24faea903f063" rel="alternate" title="Feed - Forum - Protocol Talk" type="application/atom+xml"/> <link href="/app.php/feed/topic/808?sid=86e5bfa07fae5c60f0c24faea903f063" rel="alternate" title="Feed - Topic - ADC wireshark dissector" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=808" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f74.html" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f19.html" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="18" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f18.html" itemprop="url"><span itemprop="title">Protocol Talk</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t808.html">ADC wireshark dissector</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Here is the sub forum used for talking about ideas, implementations and suggestions or typical guidelines.<br/>
+<br/>
+Further info on extension or the protocol is found at our <a class="postlink" href="http://dcbase.org/wiki/index.php/Main_Page">Wiki</a><br/></div>
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t808.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			1 post
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2947">
+<div class="inner">
+<dl class="postprofile" id="profile2947">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2947">
+<h3 class="first"><a href="#p2947">ADC wireshark dissector</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t808.html#p2947" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>22 Dec 2012, 13:08
+			</p>
+<div class="content">This is a future text for the ADC wireshark dissector project: <a class="postlink" href="https://launchpad.net/adcwireshark">https://launchpad.net/adcwireshark</a>  The text is not final (plenty of spelling errors etc) and this is simply me wanting to put this text somewhere (and I think more people will see it here and be able to comment on if something is incredingly wrong).<br/>
+<blockquote class="uncited"><div>
+Wireshark is a netowkr monitor and analyser. It uses 'dissectors' (plugins) to parse the netwrok trafffic and present it to a user based on the underlaying protocol. Wireshark has dissectors multiple levels on the OSI 7 layers. The topmost level, applications, exist protocols such as FTP, HTTP, BitTorrent as well as NMDC and ADC.<br/>
+<br/>
+ADC is essentially broken up into three sections: what is being sent (type and command), who sending/the intended recipient and parameters for the command.<br/>
+<br/>
+ADC has two delimiters: space and newline. The former separates commands, parameters etc. Each messageends in a enwline character. Is is allowed to send an empty message, consisting only of a newline.<br/>
+<br/>
+Length and version is not specified in messages.<br/>
+<br/>
+Messages are escaped using the following table<br/>
+|\s |A space<br/>
+|\n |A newline<br/>
+|\\ |The '\' character.<br/>
+<br/>
+The message type initiates all messages and determines the routing (who is sending and who should be the recipient). This is a metter of parsing cfor clients while the hub is the one in charge of the actual routing. The type may be one of the following (copied from the spec).<br/>
+<br/>
+The command is always three characters and specify what to do. This also implies what parameters shall follow. There are two types of paramters: named and positional. Positional parameters always come first in the specified order followed by the named parameters that can come in any order. Positional parameters consist of only a value and may be empty (no value). A named parameter consist of a name and value where the value may be empty. A command need not have any parameters at all. The parameters themselves are not relevant from a simplisitc parsing model view.<br/>
+<br/>
+The sender and recipient always consist of four characters. As noted earlier, the presence of a sender or receiver is implied from the type.<br/>
+<br/>
+This relatively simple structure of a message in ADC means that the protocol has a minimum bound of five characters (type, command and newline). The use of a sender increase the message by 4 characters and a recipient by an additional 5 characters (includes the space). Each parameter may be boundless but named parameters consist of at least two characters (their name).<br/>
+<br/>
+As the length of a message is not specified, it means that any parser must traverse the message until a newline has been found. TCP is nice enough to order messages so it's possible to assembly broken packages while UDP is not so kind. A relatively low amount of data is sent with UDP although the parser should be agnostic.<br/>
+<br/>
+Parameter values may differ and the following table shows all possible types of data to expect<br/>
+Integer<br/>
+Float<br/>
+String<br/>
+IPv4/IPv6 address<br/>
+Enumeration<br/>
+Bitfield<br/>
+<br/>
+The ADC wireshark dissector is divded in three parts: basic message parsing (dividing commands from parameters), parameter parsing according to type and a generic structure of all commands, parameters and descriptions of each. This structure allows future versions of this dissector to simply add a command or parameter without having to care about parsing or other components.<br/>
+<br/>
+The following is a command, CTM, with its parameters<br/>
+<br/>
+It is easy to see that any additional parameter can be added without knowledge of how the protocol handles the data. The positional parameters are required per the specific and are not subject for revision unless a new version of the specification is created. This structure doesn't necessarily care about the order of the parameters or how it is treated by normal implementatiosn that the type is correct.<br/>
+<br/>
+The initial parsing of the message is simply to discover what the command is and if there is a sender and recipient. The sender and recipient is not stored further as it does not yeild additional information of worth. The dissector could create a list fo clients logging in (a BINF message with a nickname) but that might never be complete so the dissector simply do not try this. Additionally, saving any iformation will increase the memory footprint by 4 bytes for the SID and additional bytes for the client's nick.<br/>
+<br/>
+Wireshark recommends that dissectors use TCP-foo for messages of known length and TCP-bar for others. ADC falls in the latter category. One must not be blinded by commands that, for now, only contain positional parameters as that a) may change tomorrow and b) the positional parameters may be of variable length.<br/>
+<br/>
+It is also important to make sure that messages aren't broken or partial. It is therefore important that the dissector waits until it has receivd a full message chain that it can fully parse. Wireshark doesn't allowed a dissector to display partial messages anyway.<br/>
+<br/>
+The dissector does not treat extensions differently from mandated commands or parameters as they all have the same structure. It therefore makes no sense to parse or display them differently, aparent from showing e.g. "extension" next to the command or parameter.<br/>
+<br/>
+The basic parsing in the dissector works as the following: <br/>
+Scan for the next newline. This is one message.<br/>
+Check the first character, this will determine if there is a sender and receiver.<br/>
+Keep the characters in position 1-3 as these indidcate the command.<br/>
+Remove everything before the start of the parameters.<br/>
+Split the remaining string per the sperator.<br/>
+The first n parameters are the positional parameters as per the command structure. Parse the value according to its type.<br/>
+The remaining parameters are the named parameters. The first two characters indicate the name of the parameter and the remaining characters is its value. parse the value according to the type.<br/>
+<br/>
+This is a fairly simple algorithm but it has one major drawback: data needs to be stored almost always as string in the dissector.
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t808.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			1 post
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f18.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Talk”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

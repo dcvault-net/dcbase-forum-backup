@@ -1,0 +1,52 @@
+﻿-- Min-Share/sLOT Script
+-- By TwîsTèd-dèvîl    21/2/08
+-- [] = Profile , {} = Minshare .
+-- If setting minshare to KB,MB,GB or TB remember to change the message from set amount :)
+-- Here is byte table (has best i can find)
+-- 1024 = KB
+-- 1048576 = MB
+-- 1073741824 = GB
+-- 1099511627776 = TB 
+-- Added redirect addy 
+-- Added Slot-Checking too
+-------------------------------------------------------------
+Bot = "-minshare_check_"
+Hub = "adc://yourdns.org"  
+Bytes = 1073741824        
+Share = {
+	 [0] = {0},   -- Master
+	 [1] = {0},   -- Operator
+	 [2] = {0},   -- VIP
+	 [3] = {5},   -- Registered
+	 [-1] = {7},  -- Unreg
+}
+Slots = {
+         [0] = {0},   -- Master
+	 [1] = {0},   -- Operator
+	 [2] = {0},   -- VIP
+	 [3] = {0},   -- Registered
+	 [-1] = {3},  -- Unreg
+}
+--------------------------------------------------------------
+
+function MyINFOArrival(user,data)
+	Core.GetUserAllData(user) 
+	if Share[user.iProfile] then
+		local minShare = Share[user.iProfile][1]*Bytes
+		local minNr = Share[user.iProfile][1]
+		if user.iShareSize < minShare then
+			Core.SendToNick(user.sNick,"<"..Bot.."> Sorry you have not meet the hubs  "..minNr.." GB Minimal share!!\n"..
+                                                   "\t                    <"..Bot.."> Get more share or go here "..Hub.."")
+			Core.Disconnect(user)
+	        end
+                if Slots[user.iProfile] then
+		local minSlots = Slots[user.iProfile][1]
+		local minNr = Slots[user.iProfile][1]
+		if user.iSlots < minSlots then
+			Core.SendToNick(user.sNick,"<"..Bot.."> Sorry you have not got enough slots open , you need  "..minNr.." !!\n"..
+                                                   "\t                    <"..Bot.."> Open more slots or go here "..Hub.."")
+			Core.Disconnect(user)
+	                end
+                end
+        end
+end

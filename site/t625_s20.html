@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SUDP - encrypting UDP traffic - Page 3 - DCBase</title>
+<link href="/app.php/feed?sid=8457fcb98943f018fa8122ece96e495a" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=8457fcb98943f018fa8122ece96e495a" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=8457fcb98943f018fa8122ece96e495a" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=8457fcb98943f018fa8122ece96e495a" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=8457fcb98943f018fa8122ece96e495a" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/18?sid=8457fcb98943f018fa8122ece96e495a" rel="alternate" title="Feed - Forum - Protocol Talk" type="application/atom+xml"/> <link href="/app.php/feed/topic/625?sid=8457fcb98943f018fa8122ece96e495a" rel="alternate" title="Feed - Topic - SUDP - encrypting UDP traffic" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=625&amp;start=20" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f74.html" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f19.html" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="18" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f18.html" itemprop="url"><span itemprop="title">Protocol Talk</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t625_s20.html">SUDP - encrypting UDP traffic</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Here is the sub forum used for talking about ideas, implementations and suggestions or typical guidelines.<br/>
+<br/>
+Further info on extension or the protocol is found at our <a class="postlink" href="http://dcbase.org/wiki/index.php/Main_Page">Wiki</a><br/></div>
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t625_s20.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			34 posts
+							<ul>
+<li class="arrow previous"><a class="button button-icon-only" href="t625_s10.html" rel="prev" role="button"><i aria-hidden="true" class="icon fa-chevron-left fa-fw"></i><span class="sr-only">Previous</span></a></li>
+<li><a class="button" href="t625.html" role="button">1</a></li>
+<li><a class="button" href="t625_s10.html" role="button">2</a></li>
+<li class="active"><span>3</span></li>
+<li><a class="button" href="t625_s30.html" role="button">4</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="t625_s30.html" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2368">
+<div class="inner">
+<dl class="postprofile" id="profile2368">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2368">
+<h3 class="first"><a href="#p2368">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>17 Aug 2010, 22:24
+			</p>
+<div class="content"><blockquote class="uncited"><div>Though a client could start dropping results coming from a CID which already sent some, the number of CIDs in the hubs is limited and the amount of result to be displayed can be limited to 10 per client as recommended by the protocol. So checks can be done to avoid this kind of attack</div></blockquote>
+
+Nothing hinders you to discard packets  if  there are more than x times ammount of users in the hub.<br/>
+<br/>
+<blockquote class="uncited"><div>I don't find that as a reason to justify that, a hole will be a hole no matter there are other bigger ones.</div></blockquote>
+
+Its a matter of the weakest link ...   There is no point in putting an additional defense mechanism  against DoS caused by garbled RES in if  valid  RES are more dangerous for DoS and defense mechanism for them should also work for the garbled version.<br/>
+<br/>
+<blockquote class="uncited"><div>The problem is that you are thinking only in RES when SUDP should cover any UDP message used with ADC. </div></blockquote>
+And you can check the first 5 letters for all commands you are willing to handle ... it doesn't matter if you support 1 or x commands.<br/>
+<br/>
+<blockquote class="uncited"><div>Anyway, the fact you don't see a potential win in thinkering with RES or other UDP messages doesn't mean there can't be one, you simply don't know it yet.</div></blockquote>
+Indeed yet I don't see that tinkering succeed. The attack you linked just won't work here. To short command.. to few possibilities to copy ... and no matter what you do,  you will only create an invalid RES that can be discarded.<br/>
+<br/>
+But that all doesn't matter what you can reach by tinkering, as anything you could reach by tinkering with the UDP packet could have just been sent from the start directly by yourself...<br/>
+so no .. there is no point in preventing tinkering as long as we don't start  signing the packets. Though signing was decided against for simplicity, so there is no point in a hash for integrity.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2419">
+<div class="inner">
+<dl class="postprofile" id="profile2419">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2419">
+<h3><a href="#p2419">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>15 Oct 2010, 22:22
+			</p>
+<div class="content">The following is what I've been able to gather from this thread. <br/>
+<br/>
+Three items;
+<ul>
+<li> I have written the text to be encrypting any UDP message and not only RES. At time of writing, yes, it is not very likely to get any other type of message. However, I think this approach is the best, for forward compatibility. The example text is using with SCH and RES, though.</li>
+<li> The text currently specifies PKCS5 padding, yet it was claimed this was bad. <strong class="text-strong">Please come up with an alternative text</strong> or padding algorithm (or whatever the term is).  <span style="color:#800000">Edit: This appears to be only a problem in particular circumstances and not in general case. Will continue to use PKCS5 in the future. </span></li>
+<li> The text state specifies that KY is 16 bytes yet the example is using 26 bytes. <strong class="text-strong">I don't understand this reasoning, so please clarify</strong>. I have left it as is, for the time being. <span style="color:#800000">Edit: 16 bytes in plain text appears to be 26 bytes in Base32.</span></li></ul>
+
+I have gone the route of Quicksilver's text since he has been able to argue for his algorithm the best (in my mind). <br/>
+<blockquote class="uncited"><div>
+==== SUDP - Encrypting UDP traffic<br/>
+<br/>
+This is an extension that allows UDP traffic to be encrypted.<br/>
+<br/>
+While assymetric encryption may be optimal in sense of security, a symmetric cipher will protect perfectly against outside adversaries given the hub-client connections is also running ADCS. New is that senders now create a random IV for their 'request command' (e.g. searches) and send it along the 'response command'  (e.g. search result). <br/>
+<br/>
+Signal SUDP in SUP and in the INF's SU field.<br/>
+<br/>
+If a client signal support for SUDP in an ADCS hub, it may extend commands (that will generate a response, e.g. SCH) with a KY-flag as the encryption key. <span style="color:#800000">[Edit:] Clients shall only include the flag in ADCS hubs.</span><br/>
+[options="autowidth"]<br/>
+|=====<br/>
+|KY | 16 byte encryption key in BASE32. 128 bit AES encryption shall be used.<br/>
+|=====<br/>
+<br/>
+For example, a SCH command will result in 29 Bytes of overhead ("&lt;space&gt;KY"+26 Bytes Base32 encoded key).<br/>
+<br/>
+A client that has a response for the command can now encrypt the response message by prepending 16 bytes of random data and afterwards encrypting it with AES/CBC/PKCS5Padding (Cipher/Blockmode/Padding) using 16 zero bytes as IV for CBC. <br/>
+<br/>
+In above scenario, the response would be a RES command.<br/>
+<br/>
+====== Decryption notes<br/>
+In the case of searching, the searching client in return for decryption first has to guess which commands it receives are encrypted and which are not. It can do so for example by simply trying decryption with all currently active keys. If a key is wrong or the message was not encrypted, padding will fail and decryption is unsuccessful! <span style="color:#800000">[Edit:] Clients may also try and interpret the message as plain message and then try all keys and take the first key as valid that succeeds decrypting and produces a non-garbled message.</span> Note that in a normal circumstance, the client will most likely be using relatively few active keys.</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2420">
+<div class="inner">
+<dl class="postprofile" id="profile2420">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2420">
+<h3><a href="#p2420">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>15 Oct 2010, 23:08
+			</p>
+<div class="content">I was going to modify the edited text, but appearantly the forum software don't allow me anymore. Anyway, the previously edited text should be;<br/>
+<blockquote class="uncited"><div>Client may otherwise verify if the message is a U-type message, followed by a known command (and a space). If that is not the case, the client takes the most recent key and decrypts. If that succeed, the message is valid.<br/>
+<br/>
+There is a potential chance that decryption succeed with what is bad key. If that is the case, the client should verify that the data is not garbled.</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2422">
+<div class="inner">
+<dl class="postprofile" id="profile2422">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2422">
+<h3><a href="#p2422">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>15 Oct 2010, 23:35
+			</p>
+<div class="content">Added to ADC-Ext 1.0.6.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2498">
+<div class="inner">
+<dl class="postprofile" id="profile2498">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2498">
+<h3><a href="#p2498">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>29 Nov 2010, 20:27
+			</p>
+<div class="content">Pushed in official ADC-Ext 1.0.6.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2700">
+<div class="inner">
+<dl class="postprofile" id="profile2700">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2700">
+<h3><a href="#p2700">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>17 Feb 2011, 15:28
+			</p>
+<div class="content">Pretorian, I'm asking this as I don't know enough of the ADC way of doing things, can a new propossal for SUDP be submited as SUDP2 or similar?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2712">
+<div class="inner">
+<dl class="postprofile" id="profile2712">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2712">
+<h3><a href="#p2712">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>20 Feb 2011, 20:57
+			</p>
+<div class="content"><blockquote><div><cite>klondike wrote:</cite>Pretorian, I'm asking this as I don't know enough of the ADC way of doing things, can a new propossal for SUDP be submited as SUDP2 or similar?</div></blockquote>
+All features must be a 'four character code'; so you have to either have "SUD2" or something completely new. <br/>
+<br/>
+What exactly do you want modified?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2725">
+<div class="inner">
+<dl class="postprofile" id="profile2725">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2725">
+<h3><a href="#p2725">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>11 Mar 2011, 23:32
+			</p>
+<div class="content">Well I had some ideas that could be useful to handle the  obfuscation problem whilst having still key identification, I also miss a message digest to ensure the messages are not modified. Here is the proposal:<br/>
+<br/>
+As part of the myinfo, the client will send an OBK (or obfuscation key) in BASE32. This key should be randomly chosen, should be the same on all the hubs but can be changed (using the OKS command) when the client doesn't expect to receive new messages obfuscated with it.<br/>
+<br/>
+When sending a command that will produce UDP replies (for example SCH) you pass two positional parameters:<br/>
+KY encryption key in BASE32<br/>
+KI key identifier in BASE32 (should be random and of the same size or smaller than the block size)<br/>
+<br/>
+This adds at least a 3 extra byte overhead but also results in easier key search.<br/>
+<br/>
+When answering, the client will do the following:<br/>
+id = Generate a random byte (which is not U nor $ to avoid clashes with unencrypted NMDC and ADC UDP packets)<br/>
+iv = Generate a IV of blocksize bits.<br/>
+eki = Encrypt with the destination OBK using CBC and iv as IV the KI (extended with 0 bytes on its left if it is smaller than the provided one).<br/>
+md = Hash with the session hash the answer being sent (for example URES ...)<br/>
+pcmd = Pad <br/>
+em = Encrypt with the received KY using CBC and eki as IV the command with the md appended at the end of it.<br/>
+<br/>
+Finally you send id | iv | eki | em<br/>
+<br/>
+Regarding decryption:<br/>
+The client checks that the id is not U nor $ otherwise passes the message to be interpreted by the SUDP parser or the normal parsers.<br/>
+The client decrypts the key id using the provided iv with his OBK and checks if it has a matching key which was sent. If it doesn't the message is passed to SUDP for parsing or dropped.<br/>
+If it finds a matching key then decrypts the message, unpads it (WITHOUT checking the padding) and calculates its digest.<br/>
+Finally it checks the padding and then that the digests match. if they don't the message is dropped. If it doesn't the message is passed to SUDP for parsing or dropped.<br/>
+<br/>
+To avoid oracle style attacks it is very important to check the padding and that the digests match after calculating the digest itself.<br/>
+<br/>
+---<br/>
+<br/>
+I still want to make the protocol not cipher dependent, so I'll reread again the session hash negotiation algorithm and propose a similar solution for this.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2728">
+<div class="inner">
+<dl class="postprofile" id="profile2728">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2728">
+<h3><a href="#p2728">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>18 Mar 2011, 05:02
+			</p>
+<div class="content">Seeing nobody said nothing I bet that part is good enough. Now lets go to the encryption algorithm discussions:<br/>
+<br/>
+keys are negotiated through the new proposed key format:<br/>
+<br/>
+Keys will be in a slightly different format, instead of being plain keys they will have the format:<br/>
+TYPE1":"BASE32 key1","TYPE2":"BASE32 key1","...","TYPEN":"BASE32 keyN"<br/>
+Where types correspond to the cipher feature name.<br/>
+<br/>
+For example:<br/>
+AES:aaaaaaaaaaaaaaaaaaaaaaaaa,NONE:bbbbbbbbbbbbbbbbb<br/>
+<br/>
+To avoid conflicts with the previous SUDP version the named parameter to be used when passing the in the request password will be K2 instead of KY.<br/>
+<br/>
+Cipher and they feature names will be proposed in the same way as extensions and must not conflict with them. Their name can't also contain the : and , characters to make parsing easier.<br/>
+<br/>
+Implementers should bear in mind that increasing the number of supported protocols will be doing more operations to check the validity of  packets (specially bad packets) as it will be needed to do as many decryptions as ciphers it supports over the first block. It is reasonable to think that in case AES 128 is broken a new cipher will be propossed and migration to it will be fast enough so more than two cipher won't coexist.<br/>
+<br/>
+==============================================================================================================<br/>
+AES cipher proposal:<br/>
+This proposal only defines AES 128 bits in CBC mode and using PKCS5 under the name AES.<br/>
+<br/>
+===============================================================================================================<br/>
+<br/>
+So well any comments, suggestions, critics or whatever? I'd like to start making the reference implementation if you think is OK.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2729">
+<div class="inner">
+<dl class="postprofile" id="profile2729">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 19:34</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2729">
+<h3><a href="#p2729">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a></strong> » </span>18 Mar 2011, 21:51
+			</p>
+<div class="content"><ul>
+<li>Use HMAC, not a raw hash function. See <a class="postlink" href="https://secure.wikimedia.org/wikipedia/en/wiki/HMAC#Design_principles">Wikipedia's HMAC design principles</a> section's references for why - basically there are some trivial prefix/suffix attacks that don't depend on breaking the underlying hash function. There's a Google Tech Talk on this issue too - see 22:54 in <a class="postlink" href="https://www.youtube.com/watch?v=ySQl0NhW1J0#t=22m54s">Crypto Strikes Back</a>.</li>
+<li>You seem to be looking for <a class="postlink" href="https://secure.wikimedia.org/wikipedia/en/wiki/Authenticated_encryption">authenticated encryption</a>, a reasonable goal. However, there are (see Wikipedia article) several authenticated encryption modes which avoid the insecurities in both MAC-then-encrypt and encrypt-then-MAC modes (you use the former) as documented by <a class="postlink" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.121.4203&amp;rep=rep1&amp;type=pdf">Authenticated encryption: Relations among notions and analysis of the generic composition paradigm</a> (see table 2) and <a class="postlink" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.5488&amp;rep=rep1&amp;type=pdf">The order of encryption and authentication for protecting communications (or: How secure is SSL?)</a> (which does admit that MAC-then-encrypt, though generally insecure, actually works in your specific case of using CBC).</li>
+<li>It's important to get the IV from a cryptographically secure RNG such as <a class="postlink" href="https://www.openssl.org/docs/crypto/BN_rand.html">BN_rand()</a>.</li>
+<li>NIST's <a class="postlink" href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">Recommendation for Block Cipher Modes</a>, appendix A (and the various other sources I could find), suggests that 0-padding is fine. For some specific crypto protocols it's very important to avoid (zero-padding, or more generally deterministic padding, was important in the recent PS3 break for example).</li>
+<li>PKCS#5 seem fine.</li>
+<li>The general design looks okay - the random IV reduces the (mostly unavoidable, but...) risk of reusing a secret encryption key across so many messages.</li></ul>
+Disclaimer: crypto is more subtle than I understand, so I probably missed a lot here.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t625_s20.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form action="#" method="post" onsubmit="return false">
+<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
+<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents">
+<fieldset class="display-options">
+<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
+<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
+<hr class="dashed"/>
+<input class="button2" name="sort" type="submit" value="Go"/>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+<div class="pagination">
+			34 posts
+							<ul>
+<li class="arrow previous"><a class="button button-icon-only" href="t625_s10.html" rel="prev" role="button"><i aria-hidden="true" class="icon fa-chevron-left fa-fw"></i><span class="sr-only">Previous</span></a></li>
+<li><a class="button" href="t625.html" role="button">1</a></li>
+<li><a class="button" href="t625_s10.html" role="button">2</a></li>
+<li class="active"><span>3</span></li>
+<li><a class="button" href="t625_s30.html" role="button">4</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="t625_s30.html" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f18.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Talk”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

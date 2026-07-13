@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>OpenCDM - A Proposal for Client Devs - Page 2 - DCBase</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - DCBase" href="/app.php/feed?sid=66c815157833e005b15bbc918cc3f701">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/app.php/feed/news?sid=66c815157833e005b15bbc918cc3f701">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/app.php/feed/forums?sid=66c815157833e005b15bbc918cc3f701">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/app.php/feed/topics?sid=66c815157833e005b15bbc918cc3f701">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/app.php/feed/topics_active?sid=66c815157833e005b15bbc918cc3f701">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Clients" href="/app.php/feed/forum/13?sid=66c815157833e005b15bbc918cc3f701">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - OpenCDM - A Proposal for Client Devs" href="/app.php/feed/topic/42?sid=66c815157833e005b15bbc918cc3f701">	
+	<link rel="canonical" href="https://forum.dcbase.org/viewtopic.php?t=42&amp;start=10">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=21" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="https://www.dcbase.org/" title="DCNF Home"><span class="site_logo"></span></a>
+				<h1>DCBase</h1>
+				<p>Empowering and innovating features for the peer to peer masses</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=66c815157833e005b15bbc918cc3f701" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=66c815157833e005b15bbc918cc3f701" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="https://www.dcbase.org/" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">DCNF Home</span></a></span>
+										<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="./index.php?sid=66c815157833e005b15bbc918cc3f701" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Forums</span></a></span>
+
+											<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="75"><a href="./viewforum.php?f=75&amp;sid=66c815157833e005b15bbc918cc3f701" itemprop="url"><span itemprop="title">Software</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="13"><a href="./viewforum.php?f=13&amp;sid=66c815157833e005b15bbc918cc3f701" itemprop="url"><span itemprop="title">Clients</span></a></span>
+												</li>
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=13&amp;t=42&amp;start=10&amp;sid=66c815157833e005b15bbc918cc3f701">OpenCDM - A Proposal for Client Devs</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Discussion and questions about clients<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=13&amp;t=42&amp;sid=66c815157833e005b15bbc918cc3f701" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=13&amp;t=42&amp;start=10&amp;sid=66c815157833e005b15bbc918cc3f701&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+	
+			<div class="pagination">
+			13 posts
+							<ul>
+			<li class="arrow previous"><a class="button button-icon-only" href="./viewtopic.php?f=13&amp;t=42&amp;sid=66c815157833e005b15bbc918cc3f701" rel="prev" role="button"><i class="icon fa-chevron-left fa-fw" aria-hidden="true"></i><span class="sr-only">Previous</span></a></li>
+				<li><a class="button" href="./viewtopic.php?f=13&amp;t=42&amp;sid=66c815157833e005b15bbc918cc3f701" role="button">1</a></li>
+			<li class="active"><span>2</span></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p111" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile111">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">Toast</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content111">
+
+						<h3 class="first"><a href="#p111">Draft 1.1</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=111&amp;sid=66c815157833e005b15bbc918cc3f701#p111" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> &raquo; </span>30 Dec 2007, 20:59
+			</p>
+			
+			
+			
+			<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?&gt;
+&lt;!--Version Draft 1.1 Idea proposed by Toast 29/12/2007 Orginal Idea of CDM Based of Sulan Client Detection Mod--&gt;
+&lt;Clientlist&gt;
+  &lt;!--This should be made dynamic, so when protocol evolves parameters and profile detections can be added. 
+
+This will add to the evolving of CDM Detection and updating standards.
+
+Instead of multible files to just have one and add to it--&gt;
+  &lt;Profiles&gt;
+    &lt;Name&gt;Clientname&lt;/Name&gt;
+    &lt;Version&gt;Stated Version of Client&lt;/Version&gt;
+    &lt;Tag&gt;Stated Tag of Client&lt;/Tag&gt;
+    &lt;Description&gt;Stated Description of Client (Option Below)&lt;Option&gt;(0=Disabled 1=Enabled) This is for Version in Description&lt;/Option&gt;&lt;/Description&gt;
+    &lt;Nick&gt;Stated Nick in Client&lt;/Nick&gt;
+    &lt;Shared&gt;Stated Share of Client&lt;/Shared&gt;
+    &lt;Email&gt;Stated E-Mail in Client&lt;/Email&gt;
+    &lt;Supports&gt;Stated Supports of Clients&lt;/Supports&gt;
+    &lt;TestSUR&gt;Stated TestSUR of Client&lt;/TestSUR&gt;
+    &lt;Status&gt;Stated Status of Client&lt;/Status&gt;
+    &lt;Connection&gt;Stated Connection of Client&lt;/Connection&gt;
+    &lt;CheckMismatch&gt;Option for Mismatch (0=Disable 1=Enable)&lt;/CheckMismatch&gt;
+    &lt;Flagclient&gt;Option for Flagging a Client as Bad (0=Disable 1=Enable)&lt;/Flagclient&gt;
+    &lt;CheatingDescription&gt;Optional Cheating Description&lt;/CheatingDescription&gt;
+    &lt;Comment&gt;Clients Comments&lt;/Comment&gt;
+    &lt;RawToSend&gt;0&lt;/RawToSend&gt;
+  &lt;/Profiles&gt;
+  &lt;Parameters&gt;
+    &lt;SM Name="SM // Short for Stated Mode" RegExp="Regexp for Stated Mode" /&gt;
+    &lt;SH Name="SH // Short for Stated Hubs" RegExp="Regexp for Stated Hubs" /&gt;
+    &lt;SS Name="SS // Short for Stated Slots" RegExp="Regexp for Stated Slots" /&gt;
+    &lt;SL Name="SL // Short for Stated Limiter" RegExp="Regexp for Stated Limiter" /&gt;
+    &lt;SC Name="SC // Short for Stated Connection" RegExp="Regexp for Stated Connection" /&gt;
+    &lt;DSC Name="DSC // Short for Description Stated Connection" RegExp="Regexp for Description Stated Connection" /&gt;
+  &lt;/Parameters&gt;
+  &lt;CID&gt;
+    &lt;Suspected&gt;
+      &lt;CIDValue Value="Enter Value of Suspected CIDS Here"&gt;Comments of CID&lt;RawToSend&gt;The Raw to Send&lt;/RawToSend&gt;&lt;/CIDValue&gt;
+    &lt;/Suspected&gt;
+    &lt;Bad&gt;
+      &lt;CIDValue Value="Enter Value of Bad CIDS Here"&gt;Comments of CID&lt;RawToSend&gt;The Raw to Send&lt;/RawToSend&gt;&lt;/CIDValue&gt;
+    &lt;/Bad&gt;
+  &lt;/CID&gt;
+  &lt;IPWatch&gt;
+    &lt;IPDetection&gt;
+      &lt;IP Value="Enter IP or IP Range Here"&gt;Comment on IP Range&lt;FlagOption&gt;(0=Disable, 1=Enable) To Flag IP or IP Range as bad&lt;/FlagOption&gt;&lt;RawToSend&gt;0&lt;/RawToSend&gt;&lt;/IP&gt;
+    &lt;/IPDetection&gt;
+    &lt;HostDetection&gt;
+      &lt;Host Value="Enter Host Value Here"&gt;Comment on Host Range&lt;FlagOption&gt;(0=Disable, 1=Enable) To Flag Host as bad&lt;/FlagOption&gt;&lt;RawToSend&gt;0&lt;/RawToSend&gt;&lt;/Host&gt;
+    &lt;/HostDetection&gt;
+  &lt;/IPWatch&gt;
+  &lt;Filelists&gt;
+    &lt;Filelist&gt;
+      &lt;Detection&gt;
+        &lt;RegExp RegExp="Regular Expression Value Here"&gt;Name for the Detection&lt;/RegExp&gt;
+        &lt;FlagOption&gt;(0=Disabled, 1=Enabled)Flag for Bad Filelist &lt;CheatingDescription&gt;Optional Comment for Cheat Description&lt;/CheatingDescription&gt;&lt;/FlagOption&gt;
+        &lt;RawToSend&gt;0&lt;/RawToSend&gt;
+      &lt;/Detection&gt;
+    &lt;/Filelist&gt;
+  &lt;/Filelists&gt;
+  &lt;Information&gt;
+    &lt;!--This should be showed in client profile window--&gt;
+    &lt;ProfileVersion&gt;Stated Version&lt;/ProfileVersion&gt;
+    &lt;ProfileMessage&gt;Stated Message&lt;/ProfileMessage&gt;
+    &lt;ProfileUrl&gt;Stated URL&lt;/ProfileUrl&gt;
+    &lt;ProfileMaintainer&gt;Stated Maintainer&lt;/ProfileMaintainer&gt;
+    &lt;ProfileEmail&gt;Stated E-Mail&lt;/ProfileEmail&gt;
+  &lt;/Information&gt;
+&lt;/Clientlist&gt;</code></pre></div>
+
+Updated to an idea Crise has for Apex so that it will become intergraded into clientprofile</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=11&amp;sid=66c815157833e005b15bbc918cc3f701">xml_draft_1.1.rar</a></dt>
+			<dd><em>Draft 1.1</em></dd>			<dd>(1.17 KiB) Downloaded 220 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1039" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1039">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=151&amp;sid=66c815157833e005b15bbc918cc3f701" style="color: #AEB404;" class="username-coloured">Dj_Offset</a>							</dt>
+
+						<dd class="profile-rank">Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 53</dd>		<dd class="profile-joined"><strong>Joined:</strong> 15 Sep 2008, 21:48</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> <!-- m --><a class="postlink" href="adcs://adcs.uhub.org:1511">adcs://adcs.uhub.org:1511</a><!-- m --></dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Dj_Offset">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Dj_Offset</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://www.uhub.org" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1039">
+
+						<h3 ><a href="#p1039">Re: OpenCDM - A Proposal for Client Devs</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1039&amp;sid=66c815157833e005b15bbc918cc3f701#p1039" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=151&amp;sid=66c815157833e005b15bbc918cc3f701" style="color: #AEB404;" class="username-coloured">Dj_Offset</a></strong> &raquo; </span>03 Nov 2008, 22:53
+			</p>
+			
+			
+			
+			<div class="content">What problem does this solve?</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1040" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1040">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">Toast</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1040">
+
+						<h3 ><a href="#p1040">Re: OpenCDM - A Proposal for Client Devs</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1040&amp;sid=66c815157833e005b15bbc918cc3f701#p1040" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> &raquo; </span>04 Nov 2008, 17:00
+			</p>
+			
+			
+			
+			<div class="content">old topic already fixxed by Adrian and Crise check the <a href="http://www.adcportal.com/wiki/index.php/AML#New_CMD_for_ADC" class="postlink">wiki</a></div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=13&amp;t=42&amp;sid=66c815157833e005b15bbc918cc3f701" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=13&amp;t=42&amp;start=10&amp;sid=66c815157833e005b15bbc918cc3f701&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=13&amp;t=42&amp;start=10&amp;sid=66c815157833e005b15bbc918cc3f701">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			13 posts
+							<ul>
+			<li class="arrow previous"><a class="button button-icon-only" href="./viewtopic.php?f=13&amp;t=42&amp;sid=66c815157833e005b15bbc918cc3f701" rel="prev" role="button"><i class="icon fa-chevron-left fa-fw" aria-hidden="true"></i><span class="sr-only">Previous</span></a></li>
+				<li><a class="button" href="./viewtopic.php?f=13&amp;t=42&amp;sid=66c815157833e005b15bbc918cc3f701" role="button">1</a></li>
+			<li class="active"><span>2</span></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=13&amp;sid=66c815157833e005b15bbc918cc3f701" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Clients”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=9&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-cat-link"> <span> Site &amp; Forum</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site News</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Problems</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Site Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=41&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Implemented Suggestions</span></a></li>
+																<li><a href="./viewforum.php?f=56&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Wiki</span></a></li>
+																<li><a href="./viewforum.php?f=57&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Submitions</span></a></li>
+																<li><a href="./viewforum.php?f=58&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Request Account</span></a></li>
+																<li><a href="./viewforum.php?f=59&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=75&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-cat-link"> <span> Software</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Clients</span></a></li>
+																<li><a href="./viewforum.php?f=26&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=83&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; DC++</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hub Software</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=35&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=37&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Guides</span></a></li>
+																<li><a href="./viewforum.php?f=28&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bot Software</span></a></li>
+																<li><a href="./viewforum.php?f=29&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=30&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LUA Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=31&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=32&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Clientside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=34&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Python Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=38&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=74&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-cat-link"> <span> Protocols</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Advanced Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=33&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=55&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Ideas</span></a></li>
+																<li><a href="./viewforum.php?f=87&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Pushed ideas</span></a></li>
+																<li><a href="./viewforum.php?f=80&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Neo-Modus Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=81&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=82&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-cat-link"> <span> Resources</span></a></li>
+																<li><a href="./viewforum.php?f=50&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tutorials</span></a></li>
+																<li><a href="./viewforum.php?f=51&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SDK/Libs</span></a></li>
+																<li><a href="./viewforum.php?f=62&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Documentation</span></a></li>
+																<li><a href="./viewforum.php?f=63&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Icon Packs</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hublists</span></a></li>
+																<li><a href="./viewforum.php?f=84&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Links</span></a></li>
+																<li><a href="./viewforum.php?f=86&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Chat logs</span></a></li>
+																<li><a href="./viewforum.php?f=85&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Other resources</span></a></li>
+																<li><a href="./viewforum.php?f=88&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-cat-link"> <span> Teams</span></a></li>
+																<li><a href="./viewforum.php?f=89&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Security</span></a></li>
+																<li><a href="./viewforum.php?f=90&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cryptography</span></a></li>
+																<li><a href="./viewforum.php?f=91&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Software</span></a></li>
+																<li><a href="./viewforum.php?f=92&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Interoperability</span></a></li>
+																<li><a href="./viewforum.php?f=93&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Protocol</span></a></li>
+																<li><a href="./viewforum.php?f=94&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Infrastructure</span></a></li>
+																<li><a href="./viewforum.php?f=96&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-forum-link"> <span> DC Network Foundation</span></a></li>
+																<li><a href="./viewforum.php?f=54&amp;sid=66c815157833e005b15bbc918cc3f701" class="jumpbox-forum-link"> <span> Offtopic Discussions</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://www.dcbase.org/" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>DCNF Home</span></a></span>									<span class="crumb"><a href="./index.php?sid=66c815157833e005b15bbc918cc3f701" data-navbar-reference="index"><span>Forums</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=66c815157833e005b15bbc918cc3f701" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+																<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=66c815157833e005b15bbc918cc3f701" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=66c815157833e005b15bbc918cc3f701" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=66c815157833e005b15bbc918cc3f701" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.core.tidy_cache&amp;sid=66c815157833e005b15bbc918cc3f701" width="1" height="1" alt="cron" /></div>
+
+<script src="./assets/javascript/jquery.min.js?assets_version=21"></script>
+<script src="./assets/javascript/core.js?assets_version=21"></script>
+
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=21"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=21"></script>
+
+
+
+</body>
+</html>

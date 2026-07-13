@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>[ADC-Ext 1.0.6] Group search extensions (EX in SCH) - DCBase</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - DCBase" href="/app.php/feed?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/app.php/feed/news?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/app.php/feed/forums?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/app.php/feed/topics?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/app.php/feed/topics_active?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Pushed ideas" href="/app.php/feed/forum/87?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - [ADC-Ext 1.0.6] Group search extensions (EX in SCH)" href="/app.php/feed/topic/681?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">	
+	<link rel="canonical" href="https://forum.dcbase.org/viewtopic.php?t=681">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=21" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="https://www.dcbase.org/" title="DCNF Home"><span class="site_logo"></span></a>
+				<h1>DCBase</h1>
+				<p>Empowering and innovating features for the peer to peer masses</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="https://www.dcbase.org/" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">DCNF Home</span></a></span>
+										<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="./index.php?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Forums</span></a></span>
+
+											<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="74"><a href="./viewforum.php?f=74&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="19"><a href="./viewforum.php?f=19&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="55"><a href="./viewforum.php?f=55&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="87"><a href="./viewforum.php?f=87&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" itemprop="url"><span itemprop="title">Pushed ideas</span></a></span>
+												</li>
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">[ADC-Ext 1.0.6] Group search extensions (EX in SCH)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+	
+			<div class="pagination">
+			11 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="./viewtopic.php?f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewtopic.php?f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p2424" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2424">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #B40404;" class="username-coloured">Pretorian</a>							</dt>
+
+						<dd class="profile-rank">Site Admin</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 214</dd>		<dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2424">
+
+						<h3 class="first"><a href="#p2424">[ADC-Ext 1.0.6] Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2424&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2424" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #B40404;" class="username-coloured">Pretorian</a></strong> &raquo; </span>16 Oct 2010, 09:03
+			</p>
+			
+			
+			
+			<div class="content"><blockquote class="uncited"><div>
+=== GR - Group search extensions<br>
+In BASE, clients add EX fields to SCH to denote which extension files should have. This can lead to a situation where the large bulk of extensions are of similar 'type', e.g. audio files or documents. This extension intend to add a field GR which groups multiple extensions. In addition, the field RX shall be used for group-exclusion; if all extensions in a group but one are desired, field RX will be used to exclude that group item.<br>
+<br>
+Field GR values:<br>
+[options="autowidth"]<br>
+|=====<br>
+|1 |Audio |MP3, FLAC, OGG, MPC, APE, WMA, WAV, M4A, MP2, MID, AU, AIFF, RA<br>
+|2 |Compressed |RAR, 7z, ZIP, TAR, TZ, BZ2, Z, ACE, LHA, LZH, ARJ<br>
+|4 |Document |DOC, XLS, PPT, DOCX, XLSX, PPTX, ODF, ODT, ODS, ODP, PDF, XPS, HTM, HTML, XML, TXT, NFO, RTF<br>
+|8 |Executable |EXE, COM, BAT, CMD, DLL, VBS, PS1, MSI<br>
+|16 |Picture |BMP, ICO, JPG, JPEG, PNG, GIF, TGA, AI, PS, PICT, EPS, IMG, PCT, PSP, TIF, RLE, PCX, SFW, PSD, CDR<br>
+|32 |Video |MPG, AVI, MKV, WMV, MOV, MP4, 3GP, QT, ASX, DIVX, ASF, PXP, OGM, FLV, RM, RMVB, WEBM, MPEG<br>
+|=====<br>
+Multiple groups are specified by adding the numbers together.<br>
+<br>
+Field RX<br>
+[options="autowidth"]<br>
+|=====<br>
+|RX |Extensions that in a group but are not desired. E.g., "GR1 RXMP3 RXWAV" would include all extensions in the 'audio' group except 'MP3' or 'WAV'. <br>
+|=====
+</div></blockquote>
+
+Note that I used DC++ for listing all of those extensions. Feel free to suggest additions.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2425" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2425">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=199&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">darkKlor</a>							</dt>
+
+						<dd class="profile-rank">Senior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 100</dd>		<dd class="profile-joined"><strong>Joined:</strong> 30 Dec 2008, 14:59</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2425">
+
+						<h3 ><a href="#p2425">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2425&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2425" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=199&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">darkKlor</a></strong> &raquo; </span>20 Oct 2010, 23:25
+			</p>
+			
+			
+			
+			<div class="content">A set for common programming file extensions? I suppose if anyone was bothered you could have sets relevant to a number of areas e.g. CAD could be another. Just because they're in the protocol doesn't mean the client has to display them to the user.. just return search results for them.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2430" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2430">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #B40404;" class="username-coloured">Pretorian</a>							</dt>
+
+						<dd class="profile-rank">Site Admin</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 214</dd>		<dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2430">
+
+						<h3 ><a href="#p2430">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2430&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2430" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #B40404;" class="username-coloured">Pretorian</a></strong> &raquo; </span>25 Oct 2010, 16:09
+			</p>
+			
+			
+			
+			<div class="content">Write down a list of extensions and I'll add it. <img class="smilies" src="./images/smilies/icon_e_smile.gif" width="15" height="17" alt=":)" title="Smile"> (The question is rather whether those things are commonly searched for...)</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2470" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2470">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=197&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">poy</a>							</dt>
+
+						<dd class="profile-rank">Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 78</dd>		<dd class="profile-joined"><strong>Joined:</strong> 26 Nov 2008, 17:04</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2470">
+
+						<h3 ><a href="#p2470">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2470&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2470" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=197&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">poy</a></strong> &raquo; </span>19 Nov 2010, 15:16
+			</p>
+			
+			
+			
+			<div class="content">this is now in DC++ and will appear in the version following 0.770.<br>
+<br>
+rev 2297: &lt;<a href="https://bazaar.launchpad.net/~dcplusplus-team/dcplusplus/trunk/revision/2297" class="postlink">http://bazaar.launchpad.net/~dcplusplus ... ision/2297</a>&gt;</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2489" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2489">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=197&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">poy</a>							</dt>
+
+						<dd class="profile-rank">Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 78</dd>		<dd class="profile-joined"><strong>Joined:</strong> 26 Nov 2008, 17:04</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2489">
+
+						<h3 ><a href="#p2489">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2489&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2489" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=197&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">poy</a></strong> &raquo; </span>27 Nov 2010, 15:04
+			</p>
+			
+			
+			
+			<div class="content">now that this is in the dev version of DC++, ADC hub owners seem to be concerned about how well searches will work in the near future.<br>
+<br>
+it is likely that several mods of DC++ that don't have the GR code changes are going to be sticking around for a while; some of them are even in the middle of important overhauls.<br>
+these mods (or old DC++ versions as well) will return expected results on NMDC searches but more random results on ADC. we knew it from the start and thought the compromise was ok, but ADC hub owners think otherwise. even if just for searches, this decreases the predictability and trust in ADC.<br>
+<br>
+we have a couple of solutions to solve this concern, and one must be chosen before a DC++ release:<br>
+- make this a named extension so it can be detected whether the peer supports it or not. i propose "SEGA" (Search Extension Grouping - version A).<br>
+- release the parser part first, and wait a few months before releasing the actual extension grouping.<br>
+needless to say, i strongly prefer the first solution.<br>
+<br>
+there is one more issue: the default extensions that have been in DC++ were only there to match NMDC perfectly. we have now decided it will be safe to remove deprecated extensions from that list; so here is a new, updated list (by eMTee):
+<blockquote class="uncited"><div>
+|1 |Audio |APE, FLAC, M4A, MID, MP3, MPC, OGG, RA, WAV, WMA<br>
+|2 |Compressed |7Z, ACE, ARJ, BZ2, LHA, LZH, RAR, TAR, TZ, Z, ZIP<br>
+|4 |Document |DOC, DOCX, HTM, HTML, NFO, ODF, ODP, ODS, ODT, PDF, PPT, PPTX, RTF, TXT, XLS, XLSX, XML, XPS<br>
+|8 |Executable |APP, BAT, CMD, COM, DLL, EXE, JAR, MSI, PS1, VBS, WSF<br>
+|16 |Picture |BMP, CDR, EPS, GIF, ICO, IMG, JPEG, JPG, PNG, PS, PSD, SFW, TGA, TIF, WEBP<br>
+|32 |Video |3GP, ASF, ASX, AVI, DIVX, FLV, MKV, MOV, MP4, MPEG, MPG, OGM, PXP, QT, RM, RMVB, SWF, VOB, WEBM, WMV
+</div></blockquote></div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2490" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2490">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #B40404;" class="username-coloured">Pretorian</a>							</dt>
+
+						<dd class="profile-rank">Site Admin</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 214</dd>		<dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2490">
+
+						<h3 ><a href="#p2490">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2490&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2490" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #B40404;" class="username-coloured">Pretorian</a></strong> &raquo; </span>27 Nov 2010, 19:50
+			</p>
+			
+			
+			
+			<div class="content">SEGA will be fine, updating accordingly.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2491" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2491">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=197&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">poy</a>							</dt>
+
+						<dd class="profile-rank">Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 78</dd>		<dd class="profile-joined"><strong>Joined:</strong> 26 Nov 2008, 17:04</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2491">
+
+						<h3 ><a href="#p2491">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2491&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2491" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=197&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">poy</a></strong> &raquo; </span>28 Nov 2010, 15:56
+			</p>
+			
+			
+			
+			<div class="content">SEGA should now be supported by DC++ (rev 2311). note that i have added "gz" to the list above.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2493" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2493">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #B40404;" class="username-coloured">Pretorian</a>							</dt>
+
+						<dd class="profile-rank">Site Admin</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 214</dd>		<dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2493">
+
+						<h3 ><a href="#p2493">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2493&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2493" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #B40404;" class="username-coloured">Pretorian</a></strong> &raquo; </span>29 Nov 2010, 20:25
+			</p>
+			
+			
+			
+			<div class="content">Pushed in official ADC-Ext 1.0.6.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2503" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2503">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=203&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">Sulan</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 16</dd>		<dd class="profile-joined"><strong>Joined:</strong> 19 Jan 2009, 20:33</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2503">
+
+						<h3 ><a href="#p2503">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2503&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2503" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=203&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">Sulan</a></strong> &raquo; </span>04 Dec 2010, 21:00
+			</p>
+			
+			
+			
+			<div class="content">Now we are only missing a gui implementation <img class="smilies" src="./images/smilies/icon_e_wink.gif" width="15" height="17" alt=";-)" title="Wink"></div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2515" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2515">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=120&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">Big Muscle</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 39</dd>		<dd class="profile-joined"><strong>Joined:</strong> 01 Jul 2008, 19:27</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2515">
+
+						<h3 ><a href="#p2515">Re: Group search extensions (EX in SCH)</a></h3>
+
+													
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2515&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1#p2515" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=120&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" style="color: #AEB404;" class="username-coloured">Big Muscle</a></strong> &raquo; </span>06 Dec 2010, 14:22
+			</p>
+			
+			
+			
+			<div class="content">How is it with performance? <br>
+<br>
+In NMDC, the filetype flag is saved for each folder, so only appropriate folders need to be explored for files. Also file extension comparison is very fast, because it just compare 4 bytes which is one operation on 32bit system.<br>
+<br>
+On the other side, in ADC, whole shared folders structure needs to be explored which can be very slow. And extension comparison is slow too, because it compares strings char by char which is 4 operations in normal case.<br>
+<br>
+I suggested to merge NMDC and ADC code together. Now, ADC extension checking is in ADCHub and NMDC extension checking is in ShareManager, and the extensions are doubled. If everything is merged into code in ShareManager and filetype flags are used for ADC too (at least in case of standard filetypes), it should fix the first performance problem (folder exploration).</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			11 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="./viewtopic.php?f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewtopic.php?f=87&amp;t=681&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=87&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Pushed ideas”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=9&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-cat-link"> <span> Site &amp; Forum</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site News</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Problems</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Site Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=41&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Implemented Suggestions</span></a></li>
+																<li><a href="./viewforum.php?f=56&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Wiki</span></a></li>
+																<li><a href="./viewforum.php?f=57&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Submitions</span></a></li>
+																<li><a href="./viewforum.php?f=58&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Request Account</span></a></li>
+																<li><a href="./viewforum.php?f=59&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=75&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-cat-link"> <span> Software</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Clients</span></a></li>
+																<li><a href="./viewforum.php?f=26&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=83&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; DC++</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hub Software</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=35&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=37&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Guides</span></a></li>
+																<li><a href="./viewforum.php?f=28&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bot Software</span></a></li>
+																<li><a href="./viewforum.php?f=29&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=30&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LUA Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=31&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=32&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Clientside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=34&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Python Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=38&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=74&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-cat-link"> <span> Protocols</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Advanced Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=33&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=55&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Ideas</span></a></li>
+																<li><a href="./viewforum.php?f=87&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Pushed ideas</span></a></li>
+																<li><a href="./viewforum.php?f=80&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Neo-Modus Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=81&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=82&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-cat-link"> <span> Resources</span></a></li>
+																<li><a href="./viewforum.php?f=50&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tutorials</span></a></li>
+																<li><a href="./viewforum.php?f=51&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SDK/Libs</span></a></li>
+																<li><a href="./viewforum.php?f=62&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Documentation</span></a></li>
+																<li><a href="./viewforum.php?f=63&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Icon Packs</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hublists</span></a></li>
+																<li><a href="./viewforum.php?f=84&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Links</span></a></li>
+																<li><a href="./viewforum.php?f=86&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Chat logs</span></a></li>
+																<li><a href="./viewforum.php?f=85&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Other resources</span></a></li>
+																<li><a href="./viewforum.php?f=88&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-cat-link"> <span> Teams</span></a></li>
+																<li><a href="./viewforum.php?f=89&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Security</span></a></li>
+																<li><a href="./viewforum.php?f=90&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cryptography</span></a></li>
+																<li><a href="./viewforum.php?f=91&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Software</span></a></li>
+																<li><a href="./viewforum.php?f=92&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Interoperability</span></a></li>
+																<li><a href="./viewforum.php?f=93&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Protocol</span></a></li>
+																<li><a href="./viewforum.php?f=94&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Infrastructure</span></a></li>
+																<li><a href="./viewforum.php?f=96&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-forum-link"> <span> DC Network Foundation</span></a></li>
+																<li><a href="./viewforum.php?f=54&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" class="jumpbox-forum-link"> <span> Offtopic Discussions</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://www.dcbase.org/" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>DCNF Home</span></a></span>									<span class="crumb"><a href="./index.php?sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" data-navbar-reference="index"><span>Forums</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+																<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.core.prune_notifications&amp;sid=aa82e7bc97d62cdcaaa18c3e7afdadd1" width="1" height="1" alt="cron" /></div>
+
+<script src="./assets/javascript/jquery.min.js?assets_version=21"></script>
+<script src="./assets/javascript/core.js?assets_version=21"></script>
+
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=21"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=21"></script>
+
+
+
+</body>
+</html>

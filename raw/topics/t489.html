@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>gentoo luadch ebuild (unfinished) - DCBase</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - DCBase" href="/app.php/feed?sid=a18214e365d72197ca9083b6ce9a5d8f">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/app.php/feed/news?sid=a18214e365d72197ca9083b6ce9a5d8f">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/app.php/feed/forums?sid=a18214e365d72197ca9083b6ce9a5d8f">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/app.php/feed/topics?sid=a18214e365d72197ca9083b6ce9a5d8f">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/app.php/feed/topics_active?sid=a18214e365d72197ca9083b6ce9a5d8f">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Guides" href="/app.php/feed/forum/40?sid=a18214e365d72197ca9083b6ce9a5d8f">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - gentoo luadch ebuild (unfinished)" href="/app.php/feed/topic/489?sid=a18214e365d72197ca9083b6ce9a5d8f">	
+	<link rel="canonical" href="https://forum.dcbase.org/viewtopic.php?t=489">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=21" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="https://www.dcbase.org/" title="DCNF Home"><span class="site_logo"></span></a>
+				<h1>DCBase</h1>
+				<p>Empowering and innovating features for the peer to peer masses</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=a18214e365d72197ca9083b6ce9a5d8f" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="https://www.dcbase.org/" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">DCNF Home</span></a></span>
+										<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="./index.php?sid=a18214e365d72197ca9083b6ce9a5d8f" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Forums</span></a></span>
+
+											<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="75"><a href="./viewforum.php?f=75&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" itemprop="url"><span itemprop="title">Software</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="14"><a href="./viewforum.php?f=14&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" itemprop="url"><span itemprop="title">Hub Software</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="40"><a href="./viewforum.php?f=40&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" itemprop="url"><span itemprop="title">Guides</span></a></span>
+												</li>
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=40&amp;t=489&amp;sid=a18214e365d72197ca9083b6ce9a5d8f">gentoo luadch ebuild (unfinished)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Guides for Hub Software<br>
+<br>
+<a href="http://adc.sourceforge.net/wiki/index.php/DSHub" class="postlink">DSHub</a> | <a href="http://adc.sourceforge.net/wiki/index.php/ADCHPP" class="postlink">ADCH++</a> | <a href="http://adc.sourceforge.net/wiki/index.php/Luadch" class="postlink">LUADCH</a><br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=40&amp;t=489&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=40&amp;t=489&amp;sid=a18214e365d72197ca9083b6ce9a5d8f&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+	
+			<div class="pagination">
+			7 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p1591" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1591">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 25</dd>		<dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1591">
+
+						<h3 class="first"><a href="#p1591">gentoo luadch ebuild (unfinished)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=40&amp;p=1591&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1591&amp;sid=a18214e365d72197ca9083b6ce9a5d8f#p1591" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a></strong> &raquo; </span>18 Mar 2009, 18:36
+			</p>
+			
+			
+			
+			<div class="content">hi guys i'm trying do a gentoo ebuild for luadc so far iv've got this <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>TuXpoWer luadch # emerge luadch
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild   R   ] net-p2p/luadch-0.08  0 kB [1]
+
+Total: 1 package (1 reinstall), Size of downloads: 0 kB
+Portage tree and overlays:
+ [0] /usr/portage
+ [1] /usr/local/overlays/lys
+
+&gt;&gt;&gt; Creating Manifest for /usr/local/overlays/lys/net-p2p/luadch
+
+&gt;&gt;&gt; Verifying ebuild manifests
+
+&gt;&gt;&gt; Emerging (1 of 1) net-p2p/luadch-0.08 from lys
+ * luadch_v0.08_src.zip RMD160 SHA1 SHA256 size ;-) ...                                                    [ ok ]
+ * checking ebuild checksums ;-) ...                                                                       [ ok ]
+ * checking auxfile checksums ;-) ...                                                                      [ ok ]
+ * checking miscfile checksums ;-) ...                                                                     [ ok ]
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking luadch_v0.08_src.zip to /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-p2p/luadch-0.08/work ...
+./configure --prefix=/usr --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib
+Copy core...
+Building lua...
+Building adclib...
+Building unicode...
+Building luasocket...
+Building luasec...
+Building hub...
+init.lua: import libs
+init.lua: loaded 'adclib'
+init.lua: loaded 'unicode'
+init.lua: loaded 'socket'
+init.lua: import optional libs
+init.lua: loaded 'ssl'
+init.lua: import core
+init.lua: loaded 'const'
+init.lua: loaded 'mem'
+init.lua: loaded 'signal'
+init.lua: loaded 'doc'
+init.lua: loaded 'util'
+init.lua: loaded 'types'
+init.lua: loaded 'cfg'
+init.lua: loaded 'out'
+init.lua: loaded 'server'
+init.lua: loaded 'adc'
+init.lua: loaded 'scripts'
+init.lua: loaded 'hub'
+init.lua: init core modules
+init.lua: initialized 'util'
+init.lua: initialized 'cfg'
+[18.03.09 18:34:12] adc.lua: try to parse 'BINF 2MZZ NI[BOT]HubSecurity DEhub\ssecurity OP1 CT5 IDDYPUMY4RQXBICYSLAK22RJQWP2H36NFQPZSFTPI HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0'
+[18.03.09 18:34:12] adc.lua: parsed 'BINF 2MZZ NI[BOT]HubSecurity DEhub\ssecurity OP1 CT5 IDDYPUMY4RQXBICYSLAK22RJQWP2H36NFQPZSFTPI HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0
+'
+[18.03.09 18:34:12] ** Loaded hub_cmd_manager.lua **
+[18.03.09 18:34:12] ** Loaded hub_inf_manager.lua **
+[18.03.09 18:34:12] ** Loaded usr_hubs.lua **
+[18.03.09 18:34:12] ** Loaded usr_slots.lua **
+[18.03.09 18:34:12] ** Loaded usr_share.lua **
+[18.03.09 18:34:12] ** Loaded hub_user_ranks.lua **
+[18.03.09 18:34:12] ** Loaded usr_nick_prefix.lua **
+[18.03.09 18:34:12] ** Loaded usr_desc_prefix.lua **
+[18.03.09 18:34:12] adc.lua: try to parse 'BINF 65UW NI[BOT]OpChat DEchatroom\sfor\soperators OP1 CT5 ID5TOXXCNOH6I5X2EXRRARQQEG34GAYK3EXGPQH2Y HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0'
+[18.03.09 18:34:12] adc.lua: parsed 'BINF 65UW NI[BOT]OpChat DEchatroom\sfor\soperators OP1 CT5 ID5TOXXCNOH6I5X2EXRRARQQEG34GAYK3EXGPQH2Y HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0
+'
+[18.03.09 18:34:12] ** Loaded bot_opchat.lua **
+[18.03.09 18:34:12] adc.lua: try to parse 'BINF 7GQ2 NI[BOT]EchoBot DEsimple\stest\sbot OP1 CT5 IDXSDIUGT4A55LRA6TXF6WJAHLR5JIEBTH72R4LQY HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0'
+[18.03.09 18:34:12] adc.lua: parsed 'BINF 7GQ2 NI[BOT]EchoBot DEsimple\stest\sbot OP1 CT5 IDXSDIUGT4A55LRA6TXF6WJAHLR5JIEBTH72R4LQY HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0
+'
+[18.03.09 18:34:12] ** Loaded bot_echobot.lua **
+[18.03.09 18:34:12] ** Loaded cmd_help.lua **
+[18.03.09 18:34:12] ** Loaded cmd_rules.lua **
+[18.03.09 18:34:12] ** Loaded cmd_userinfo.lua **
+[18.03.09 18:34:12] ** Loaded cmd_accinfo.lua **
+[18.03.09 18:34:12] ** Loaded cmd_setpas.lua **
+[18.03.09 18:34:12] ** Loaded cmd_upgrade.lua **
+[18.03.09 18:34:12] ** Loaded cmd_mass.lua **
+[18.03.09 18:34:12] ** Loaded cmd_ban.lua **
+[18.03.09 18:34:12] ** Loaded cmd_unban.lua **
+[18.03.09 18:34:12] ** Loaded cmd_reg.lua **
+[18.03.09 18:34:12] ** Loaded cmd_delreg.lua **
+[18.03.09 18:34:12] ** Loaded cmd_errors.lua **
+[18.03.09 18:34:12] ** Loaded cmd_reload.lua **
+[18.03.09 18:34:12] ** Loaded cmd_restart.lua **
+[18.03.09 18:34:12] ** Loaded cmd_shutdown.lua **
+[18.03.09 18:34:12] ** Loaded cmd_ascii.lua **
+[18.03.09 18:34:12] ** Loaded cmd_userlist.lua **
+[18.03.09 18:34:12] ** Loaded etc_hubcommands.lua **
+[18.03.09 18:34:12] ** Loaded etc_usercommands.lua **
+[18.03.09 18:34:12] ** Loaded etc_report.lua **
+[18.03.09 18:34:12] ** Loaded etc_motd.lua **
+[18.03.09 18:34:12] ** Loaded etc_banner.lua **
+[18.03.09 18:34:12] ** Loaded etc_unknown_command.lua **
+[18.03.09 18:34:12] server.lua: new server listener on *:6110
+[18.03.09 18:34:12] server.lua: new server listener on *:4660
+init.lua: initialized 'hub'
+init.lua: initialized 'scripts'
+
+Luadch v0.08 by blastbeat (2007-2008)</code></pre></div>
+
+suggestions or ideas on how to get past this bit it downloads the file unpacks and configures and builds it but then starts it right up,i think ive got all the dependencies covered to as far as gentoo goes, being as comes with a compiler /glibc etc by default.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1595" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1595">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 25</dd>		<dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1595">
+
+						<h3 ><a href="#p1595">Re: gentoo luadch ebuild (unfinished)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=40&amp;p=1595&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1595&amp;sid=a18214e365d72197ca9083b6ce9a5d8f#p1595" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a></strong> &raquo; </span>18 Mar 2009, 20:30
+			</p>
+			
+			
+			
+			<div class="content">i got it past that by redoing the ebuild using blastbeat's compile withgcc script then it gets stuck on make, even though at this point the softwares compiled allready<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>emerge luadch
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild  N    ] net-p2p/luadch-0.08  0 kB [1]
+
+Total: 1 package (1 new), Size of downloads: 0 kB
+Portage tree and overlays:
+ [0] /usr/portage
+ [1] /usr/local/overlays/lys
+
+&gt;&gt;&gt; Creating Manifest for /usr/local/overlays/lys/net-p2p/luadch
+
+&gt;&gt;&gt; Verifying ebuild manifests
+
+&gt;&gt;&gt; Emerging (1 of 1) net-p2p/luadch-0.08 from lys
+ * luadch_v0.08_src.zip RMD160 SHA1 SHA256 size ;-) ...                                         [ ok ]
+ * checking ebuild checksums ;-) ...                                                            [ ok ]
+ * checking auxfile checksums ;-) ...                                                           [ ok ]
+ * checking miscfile checksums ;-) ...                                                          [ ok ]
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking luadch_v0.08_src.zip to /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-p2p/luadch-0.08/work ...
+./configure --prefix=/usr --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib
+Copy core...
+Building lua...
+Building adclib...
+Building unicode...
+Building luasocket...
+Building luasec...
+Building hub...
+Hub Is Compiled
+make: *** No targets specified and no makefile found.  Stop.</code></pre></div>
+
+trying find a way around it ;)</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1596" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1596">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 25</dd>		<dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1596">
+
+						<h3 ><a href="#p1596">Re: gentoo luadch ebuild (unfinished)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=40&amp;p=1596&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1596&amp;sid=a18214e365d72197ca9083b6ce9a5d8f#p1596" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a></strong> &raquo; </span>18 Mar 2009, 21:19
+			</p>
+			
+			
+			
+			<div class="content">btw the file im working with is : luadch-0.08.ebuild  <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code># Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+# Author: blastbeat
+# Author-email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7b19171a080f191e1a0f3b0e081e09085508140e09181e1d14091c1e55151e0f">[email&#160;protected]</a>
+# License: GPL3 // undecided as yet
+inherit eutils autotools
+
+DESCRIPTION="Luadch is a hub for the ADC network and mostly written in Lua"
+HOMEPAGE="http://sourceforge.net/projects/luadch/"
+SRC_URI="mirror://sourceforge/${PN}/luadch_v${PV}_src.zip"
+
+KEYWORDS="-* ~x86 ~amd64 ~ppc"
+SLOT="0"
+LICENSE="GPL-2"
+
+RDEPEND="app-arch/unzip
+        dev-libs/openssl
+        dev-libs/geoip
+        =dev-lang/lua-5.1.4"
+
+DEPEND="${RDEPEND}"
+
+S=${WORKDIR}
+PREFIX="/opt/luadch"
+
+src_unpack() {
+            unpack ${A}
+            cd "${S}"
+        cp "${FILESDIR}"/configure configure || die "cp failed"
+}
+
+src_compile()
+{
+        econf || die "econf failed"
+#       emake || die "emake failed"
+emake
+}
+
+
+
+DOCS="api default_levels manual settings_help"
+
+src_install() {
+        insinto ${PREFIX}
+        doins -r *.lua *.war *.tbl *.en *.de *.ext *.config *.html *.css *.properties *.pdf *.ver *.sh *.txt || die
+}
+
+pkg_postinst() {
+        elog "Warning This is an experimental ebuild"
+        elog "If it doesnt work tough, use at own risk!"
+        elog "for more info read the website"
+        elog "http://sourceforge.net/projects/luadch/"
+        elog
+}
+</code></pre></div>
+
+ blastbeat's compile_with_gcc.sh script is used by that to configure/compile the software but removed the line that starts the hub up. gotta figure out how package it up and move it somewhere now then hopefully should work, if anyones got an suggestions or ideas feel free to post :)</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1597" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1597">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 25</dd>		<dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1597">
+
+						<h3 ><a href="#p1597">Re: gentoo luadch ebuild</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=40&amp;p=1597&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1597&amp;sid=a18214e365d72197ca9083b6ce9a5d8f#p1597" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a></strong> &raquo; </span>18 Mar 2009, 22:54
+			</p>
+			
+			
+			
+			<div class="content">well works here now <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>firewall ~ # emerge luadch
+Calculating dependencies... done!
+[ebuild  N    ] net-p2p/luadch-0.08  1,138 kB [1]
+
+Total: 1 package (1 new), Size of downloads: 1,138 kB
+Portage tree and overlays:
+ [0] /usr/portage
+ [1] /usr/local/overlays/lys
+
+&gt;&gt;&gt; Creating Manifest for /usr/local/overlays/lys/net-p2p/luadch
+  digest.assumed                 1
+   luadch-0.08::luadch_v0.08_src.zip
+
+&gt;&gt;&gt; Verifying ebuild manifests
+
+&gt;&gt;&gt; Emerging (1 of 1) net-p2p/luadch-0.08 from lys
+&gt;&gt;&gt; Downloading 'http://nchc.dl.sourceforge.net/sourceforge/luadch/luadch_v0.08_src.zip'
+--2009-03-18 22:51:50--  http://nchc.dl.sourceforge.net/sourceforge/luadch/luadch_v0.08_src.zip
+Resolving firewall... 127.0.0.1
+Connecting to firewall|127.0.0.1|:8080... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 1165291 (1.1M) [application/zip]
+Saving to: `/usr/portage/distfiles/luadch_v0.08_src.zip'
+
+100%[================================================================================================================&gt;] 1,165,291   97.1K/s   in 12s     
+
+2009-03-18 22:52:03 (95.8 KB/s) - `/usr/portage/distfiles/luadch_v0.08_src.zip' saved [1165291/1165291]
+
+ * luadch_v0.08_src.zip RMD160 SHA1 SHA256 size ;-) ...                                                                                            [ ok ]
+ * checking ebuild checksums ;-) ...                                                                                                               [ ok ]
+ * checking auxfile checksums ;-) ...                                                                                                              [ ok ]
+ * checking miscfile checksums ;-) ...                                                                                                             [ ok ]
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking luadch_v0.08_src.zip to /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-p2p/luadch-0.08/work ...
+./configure --prefix=/usr --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib
+Copy core...
+Building lua...
+Building adclib...
+Building unicode...
+Building luasocket...
+Building luasec...
+Building hub...
+make 
+make: *** No targets specified and no makefile found.  Stop.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: net-p2p/luadch-0.08
+
+&gt;&gt;&gt; Install luadch-0.08 into /var/tmp/portage/net-p2p/luadch-0.08/image/ category net-p2p
+&gt;&gt;&gt; Completed installing luadch-0.08 into /var/tmp/portage/net-p2p/luadch-0.08/image/
+
+&gt;&gt;&gt; Installing net-p2p/luadch-0.08
+ * checking 0 files for package collisions
+ * Removing doc
+ * Removing man
+ * Removing info
+ * Removing /usr/share/info
+ * Warning This is an experimental ebuild
+ * If it doesnt work tough, use at own risk!
+ * the hubsoft is now installed in /opt/luadch
+ * for more info read the website
+ * http://sourceforge.net/projects/luadch/
+ * 
+</code></pre></div>
+
+it's far from perfect though, it's a starting point though i guess :-)<br>
+<br>
+luadch-0.08.ebuild for gentoo linux can be found at the bottom if this post <em class="text-italics">(moderator edit)</em><br>
+<br>
+any problems with the install use FEATURES="-sandbox" emerge luadch<br>
+<br>
+fyi you will need to put this in a portage overlay for instructions on that see here <a href="http://www.gentoo-wiki.info/HOWTO_Installing_3rd_Party_Ebuilds" class="postlink">http://www.gentoo-wiki.info/HOWTO_Insta ... ty_Ebuilds</a><br>
+<br>
+hope it works for you guys and maybe someone can come up with an improved ebuild, i'll look into it further aswell though :)</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=92&amp;sid=a18214e365d72197ca9083b6ce9a5d8f">luadch-overlay.tar.bz2</a></dt>
+						<dd>(2.36 KiB) Downloaded 229 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1601" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1601">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">Pietry</a>							</dt>
+
+						<dd class="profile-rank">Senior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 328</dd>		<dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Pietry">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Pietry</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.death-squad.ro/dshub" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1601">
+
+						<h3 ><a href="#p1601">Re: gentoo luadch ebuild (unfinished)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=40&amp;p=1601&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1601&amp;sid=a18214e365d72197ca9083b6ce9a5d8f#p1601" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">Pietry</a></strong> &raquo; </span>19 Mar 2009, 06:36
+			</p>
+			
+			
+			
+			<div class="content">Thank you for your work. Perhaps the ebuild can be included with luadch package? I'm not too familiar on how gentoo system works ( i'm more of a red hat or debian ).</div>
+
+			
+			
+									
+									<div id="sig1601" class="signature">Just someone</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1603" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1603">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">Toast</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1603">
+
+						<h3 ><a href="#p1603">Re: gentoo luadch ebuild (unfinished)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=40&amp;p=1603&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1603&amp;sid=a18214e365d72197ca9083b6ce9a5d8f#p1603" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> &raquo; </span>19 Mar 2009, 08:45
+			</p>
+			
+			
+			
+			<div class="content">Debian user also but its really good that we get some diversity in here amongst linux distros</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1617" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1617">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 25</dd>		<dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1617">
+
+						<h3 ><a href="#p1617">Re: gentoo luadch ebuild (unfinished)</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=40&amp;p=1617&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1617&amp;sid=a18214e365d72197ca9083b6ce9a5d8f#p1617" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=65&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="username">lys</a></strong> &raquo; </span>22 Mar 2009, 05:47
+			</p>
+			
+			
+			
+			<div class="content">no problem :)</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=40&amp;t=489&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=40&amp;t=489&amp;sid=a18214e365d72197ca9083b6ce9a5d8f&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=40&amp;t=489&amp;sid=a18214e365d72197ca9083b6ce9a5d8f">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			7 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=40&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Guides”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=9&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-cat-link"> <span> Site &amp; Forum</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site News</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Problems</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Site Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=41&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Implemented Suggestions</span></a></li>
+																<li><a href="./viewforum.php?f=56&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Wiki</span></a></li>
+																<li><a href="./viewforum.php?f=57&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Submitions</span></a></li>
+																<li><a href="./viewforum.php?f=58&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Request Account</span></a></li>
+																<li><a href="./viewforum.php?f=59&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=75&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-cat-link"> <span> Software</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Clients</span></a></li>
+																<li><a href="./viewforum.php?f=26&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=83&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; DC++</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hub Software</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=35&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=37&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Guides</span></a></li>
+																<li><a href="./viewforum.php?f=28&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bot Software</span></a></li>
+																<li><a href="./viewforum.php?f=29&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=30&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LUA Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=31&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=32&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Clientside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=34&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Python Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=38&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=74&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-cat-link"> <span> Protocols</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Advanced Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=33&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=55&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Ideas</span></a></li>
+																<li><a href="./viewforum.php?f=87&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Pushed ideas</span></a></li>
+																<li><a href="./viewforum.php?f=80&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Neo-Modus Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=81&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=82&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-cat-link"> <span> Resources</span></a></li>
+																<li><a href="./viewforum.php?f=50&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tutorials</span></a></li>
+																<li><a href="./viewforum.php?f=51&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SDK/Libs</span></a></li>
+																<li><a href="./viewforum.php?f=62&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Documentation</span></a></li>
+																<li><a href="./viewforum.php?f=63&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Icon Packs</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hublists</span></a></li>
+																<li><a href="./viewforum.php?f=84&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Links</span></a></li>
+																<li><a href="./viewforum.php?f=86&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Chat logs</span></a></li>
+																<li><a href="./viewforum.php?f=85&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Other resources</span></a></li>
+																<li><a href="./viewforum.php?f=88&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-cat-link"> <span> Teams</span></a></li>
+																<li><a href="./viewforum.php?f=89&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Security</span></a></li>
+																<li><a href="./viewforum.php?f=90&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cryptography</span></a></li>
+																<li><a href="./viewforum.php?f=91&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Software</span></a></li>
+																<li><a href="./viewforum.php?f=92&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Interoperability</span></a></li>
+																<li><a href="./viewforum.php?f=93&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Protocol</span></a></li>
+																<li><a href="./viewforum.php?f=94&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Infrastructure</span></a></li>
+																<li><a href="./viewforum.php?f=96&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-forum-link"> <span> DC Network Foundation</span></a></li>
+																<li><a href="./viewforum.php?f=54&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" class="jumpbox-forum-link"> <span> Offtopic Discussions</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://www.dcbase.org/" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>DCNF Home</span></a></span>									<span class="crumb"><a href="./index.php?sid=a18214e365d72197ca9083b6ce9a5d8f" data-navbar-reference="index"><span>Forums</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+																<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.core.tidy_search&amp;sid=a18214e365d72197ca9083b6ce9a5d8f" width="1" height="1" alt="cron" /></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./assets/javascript/jquery.min.js?assets_version=21"></script>
+<script src="./assets/javascript/core.js?assets_version=21"></script>
+
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=21"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=21"></script>
+
+
+
+</body>
+</html>

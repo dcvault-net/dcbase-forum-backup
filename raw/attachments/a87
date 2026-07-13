@@ -1,0 +1,137 @@
+---- FindNick 1.1 made by FlipFlop 
+----
+---- Use '/findnick nickname' to search for a nickname (or part of it) in connected hubs.
+----
+---- 1.1 changelog:
+----		- added ADC support
+
+
+-- SETTINGS:
+NicksToMain = 1   	-- display searchresult in mainchat of current hub
+NicksToHubs = 1 	-- display searchresults in the hubs where the nicks are found
+NicksToPM = 1 	-- display searchresult in pm
+-- SETTINGS END
+
+currenthub = nil
+
+dcpp:setListener("ownChatOut", "FindNick",
+   function(hub, msg )
+   local s,e,cmd = string.find(msg, "^%p(%w+)")
+   if cmd and NickCmds[cmd] then
+      return 1,NickCmds[cmd](hub,msg)
+   else
+      return
+   end
+end
+)
+
+function MainOutput (hub, message)
+	if hub:getProtocol() == "adc" then
+		hub:addLine(message)
+	else
+		hub:injectChat(message)
+	end
+end
+
+function PmOutput (hub, message)
+	if hub:getProtocol() == "adc" then
+		hub:injectPrivMsg(hub:getOwnSid(),hub:getOwnSid(),AdcEscape(message))
+	else
+		hub:injectPrivMsgFmt(hub:getOwnNick(), hub:getOwnNick(), message)
+	end
+end
+
+function NickOutput (username, hub)
+	_,_,hubname = string.find(hub:getHubName(), "%((%S*)%)$")
+	if not hubname then hubname = hub:getHubName() end
+	if hub:getProtocol() == "nmdc" then 
+		hubname = "dchub://"..hubname
+	end
+	if NicksToMain == 1 then MainOutput(currenthub, "*** User " ..username.. " found in: " ..hubname) end
+	if NicksToPM == 1 then PmOutput(currenthub, "*** User " ..username.. " found in: " ..hubname) end
+	if NicksToHubs == 1 then MainOutput(hub, "*** User " ..username.. " found in here.") end
+end
+
+NickCmds = {
+	findnick = function(hub, msg)
+		if string.lower(string.sub(msg, 1, 9)) == "/findnick" then
+			currenthub = hub
+			DC():PrintDebug("Find Nick started........")
+
+			nick = string.lower(string.sub (msg, 11))
+
+			MainOutput(currenthub, "*** Searching for '"  ..nick.. "' in all connected hubs...")
+				
+			counter = 0
+			for _,hub in pairs(dcpp:getHubs()) do
+				DC():PrintDebug("*Hub: " ..hub:getAddress().. " is being checked...")
+				for k,l in pairs(hub._users) do
+					if string.find(string.lower(hub._users[k]._nick), string.lower(nick)) then							-- if ADC-hub
+						NickOutput(hub._users[k]._nick, hub)
+						counter = counter + 1
+					elseif type(k) == "string" then
+						if string.find(string.lower(k), string.lower(nick)) then 
+							NickOutput(k, hub)
+							counter = counter + 1
+						end
+					elseif  type(k) == "table" then
+						for i,m in pairs(k) do
+							if string.find(string.lower(i), string.lower(nick)) then
+								NickOutput(i, hub)
+								counter = counter + 1
+							end
+						end	
+					end
+				end
+			end	
+
+			MainOutput(currenthub, "*** Found " ..counter.. " users containing: '"  ..nick.. "'")
+			if NicksToMain == 0 then MainOutput(currenthub, "*** Check pm or hubs for results") end
+			if NicksToPM == 1 then PmOutput(currenthub, "*** Found " ..counter.. " users containing: '"  ..nick.. "'") end
+
+			DC():PrintDebug("Find Nick finished.")
+		end
+	end, 
+} 
+
+AdcEscape = function(msg, inverse)
+	msg = string.gsub(msg, "\r", "")
+	local ret = ""
+	if inverse then
+		local replacetable = {}
+		replacetable["\\\\"] = [[\]]
+		replacetable["\\s"] = [[ ]]
+		replacetable["\\n"] = "\n"
+		local skip = false
+		for k = 1, string.len(msg) do
+			if skip then
+				skip = false
+			else
+				local c = string.sub( msg, k, k + 1)
+				if replacetable[c] then
+					ret = ret .. replacetable[c]
+					skip = true
+				else
+					ret = ret .. string.sub(c, 1, 1)
+				end
+			end
+		end
+	else
+		local replacetable = {}
+		replacetable["\\"] = [[\\]]
+		replacetable[" "] = [[\s]]
+		replacetable["\n"] = [[\n]]
+
+		for k = 1, string.len(msg) do
+			local c = string.sub( msg, k, k)
+			if replacetable[c] then
+				ret = ret .. replacetable[c]
+			else
+				ret = ret .. c
+			end
+		end
+	end
+	return ret
+end
+
+DC():PrintDebug( "  ** Loaded findnick.lua by FlipFlop **") 

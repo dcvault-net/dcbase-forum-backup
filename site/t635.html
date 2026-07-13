@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Parsers Specification thoughts during implementation - DCBase</title>
+<link href="/app.php/feed?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/55?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - Forum - Protocol Ideas" type="application/atom+xml"/> <link href="/app.php/feed/topic/635?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - Topic - Parsers Specification thoughts during implementation" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=635" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f74.html" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f19.html" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="55" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f55.html" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t635.html">Parsers Specification thoughts during implementation</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for ADC may be presented here for others to review and point out flaws or further improve the idea.<br/></div>
+<div class="rules">
+<div class="inner">
+<strong>Forum rules</strong><br/>
+			If you have an account on the wiki, remember to update the ADC Proposals page for new ideas.<br/>
+<br/>
+<a class="postlink" href="http://dcbase.org/wiki/ADC_Proposals_list">http://dcbase.org/wiki/ADC_Proposals_list</a>
+</div>
+</div>
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t635.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			19 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="t635_s10.html" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="t635_s10.html" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2205">
+<div class="inner">
+<dl class="postprofile" id="profile2205">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u351.html">udoprog</a> </dt>
+<dd class="profile-rank">Newbie</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Mar 2010, 22:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2205">
+<h3 class="first"><a href="#p2205">Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u351.html">udoprog</a></strong> » </span>31 Mar 2010, 09:22
+			</p>
+<div class="content">I am currently in progress of writing an ADC library in python at:<br/>
+<a class="postlink" href="https://github.com/udoprog/python-adc">http://github.com/udoprog/python-adc</a><br/>
+<br/>
+I am basically finished writing the parser for the ADC grammar, and have a couple of questions/pointers I would wish to highlight.<br/>
+<br/>
+<strong class="text-strong">Please note the following definitions from the ADC spec's:</strong>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>message_body          ::= (b_message_header | cih_message_header | de_message_header | f_message_header | u_message_header | message_header)
+                          (separator positional_parameter)* (separator named_parameter)*
+positional_parameter  ::= parameter_value
+named_parameter       ::= parameter_name parameter_value?
+parameter_name        ::= simple_alpha simple_alphanum
+parameter_value       ::= escaped_letter+
+escaped_letter        ::= [^ \#x0a] | escape 's' | escape 'n' | escape escape
+</code></pre></div>
+
+The <em class="text-italics">formal</em> grammar is disambiguous when choosing between a positional or a named parameter, this is since <strong class="text-strong">positional_parameters</strong> are optional and all possible expansions of a positional parameter can be applied to named ones.<br/>
+<br/>
+A backwards compatible solution would be to change the definition of positional_parameter to:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>positional_parameter  ::= ^parameter_name parameter_value
+</code></pre></div>
+
+The unfortunate side effect of this would be that some positional_paramer's would be treated as named_parameter's (like: "TEst")<br/>
+<br/>
+A more graceful solution would be to prefix each argument in order to specify the type (as example):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>positional_parameter  ::= 'P' parameter_value
+named_parameter       ::= 'N' parameter_name parameter_value?
+</code></pre></div>
+
+Another hickup about the formal grammar is the definition of a base32 string in the <strong class="text-strong">encoded_cid</strong>;
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>encoded_cid           ::= base32_character+
+</code></pre></div>
+
+this is a base32 encoded string with varying length w/o padding, which makes it difficult to decode unless you make the correct assumption of which hashing algorithm is used, where you know which length the encoded data should be padded with. Padding is also recommended by <a class="postlink" href="http://www.faqs.org/rfcs/rfc3548.html">http://www.faqs.org/rfcs/rfc3548.html</a> (official base32 encoding)<br/>
+<br/>
+My suggestion would be to specify that a base32 string must be padded correctly, and the grammar be modified to support this;
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>base32_padding        ::= '='
+base32_string          ::= base32_character+ base32_padding*
+encoded_cid           ::= base32_string
+...
+</code></pre></div>
+
+If base32 strings are represented this way, base32 decoding can be performed early in the lexing process, which would allow for a more transparent (and stable) protocol since it does not have to be context-aware in order to decode the strings properly.<br/>
+<br/>
+<strong class="text-strong">to sum things up</strong>
+<ul>
+<li> Named vs Positional parameters are too disambiguous to be parsed and validated in a formal (context-unaware) manner.</li>
+<li> Base 32 encoded strings are represented in a manner which prevents a parser from decoding them early, which in turn complicates the client implementation and decoding process.</li>
+<li> <em class="text-italics">Why use base32 encoding to begin with when basically all known hashing tools to man by default represents hashes in base16?</em></li></ul></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2206">
+<div class="inner">
+<dl class="postprofile" id="profile2206">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u203.html" style="color: #AEB404;">Sulan</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 16</dd> <dd class="profile-joined"><strong>Joined:</strong> 19 Jan 2009, 20:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2206">
+<h3><a href="#p2206">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u203.html" style="color: #AEB404;">Sulan</a></strong> » </span>31 Mar 2010, 09:57
+			</p>
+<div class="content">Using "type" as variable name? I thought it was bad practice to use builtin keywords as variable names.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2207">
+<div class="inner">
+<dl class="postprofile" id="profile2207">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2207">
+<h3><a href="#p2207">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>31 Mar 2010, 10:11
+			</p>
+<div class="content">A) I doubt the intention of the spec was to provide a grammar that can be used as is in a parser!<br/>
+To me it seems the primary target was to provide syntax in a way that  defines a spec ... so humans understand it... its not meant to be directly fed to some parser tool! <br/>
+<br/>
+B) Base32 in DC world is never padded... as the length is allways fixed ... don't ask me why .. just add the padding yourself if you not feed it to some self build parser...<br/>
+<br/>
+C) because it was there..  also the reason why not Base64 is used.. besides Base32 is 25% less overhead than Base16</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2208">
+<div class="inner">
+<dl class="postprofile" id="profile2208">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u343.html" style="color: #AEB404;">andyhhp</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2208">
+<h3><a href="#p2208">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u343.html" style="color: #AEB404;">andyhhp</a></strong> » </span>31 Mar 2010, 10:18
+			</p>
+<div class="content">You keep on saying "disambiguous" .<br/>
+<br/>
+Do you in fact mean ambiguous?  The rest of your argument implies thats what you mean.<br/>
+<br/>
+disambiguous itself isnt a word - the closest is unambiguous.  (There is 'disambiguation' which means a suplimentary method of telling two ambiguous items appart, no longer making them ambiguous)<br/>
+<br/>
+Sorry if I have got the wrong idea but Im just trying to make sure<br/>
+<br/>
+~Andyhhp</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2209">
+<div class="inner">
+<dl class="postprofile" id="profile2209">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u199.html" style="color: #AEB404;">darkKlor</a> </dt>
+<dd class="profile-rank">Senior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Dec 2008, 14:59</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2209">
+<h3><a href="#p2209">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u199.html" style="color: #AEB404;">darkKlor</a></strong> » </span>31 Mar 2010, 10:25
+			</p>
+<div class="content">udoprog: connect to the dev hub -&gt; adcs://devpublic.adcportal.com:16591<br/>
+we're all in there</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2210">
+<div class="inner">
+<dl class="postprofile" id="profile2210">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u54.html">Pietry</a> </dt>
+<dd class="profile-rank">Senior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 328</dd> <dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+<dd class="profile-contact">
+<strong>Contact:</strong>
+<div class="dropdown-container dropdown-left">
+<a class="dropdown-trigger" href="#" title="Contact Pietry">
+<i aria-hidden="true" class="icon fa-commenting-o fa-fw icon-lg"></i><span class="sr-only">Contact Pietry</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents contact-icons">
+<div>
+<a class="last-cell" href="http://www.death-squad.ro/dshub" title="Website">
+<span class="contact-icon phpbb_website-icon">Website</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2210">
+<h3><a href="#p2210">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u54.html">Pietry</a></strong> » </span>31 Mar 2010, 11:20
+			</p>
+<div class="content"><blockquote><div><cite>Quicksilver wrote:</cite>I doubt the intention of the spec was to provide a grammar that can be used as is in a parser!<br/>
+To me it seems the primary target was to provide syntax in a way that defines a spec ... so humans understand it... its not meant to be directly fed to some parser tool! </div></blockquote>
+
+The spec must also provide understanding but also perfectly strict and unambiguous grammar since the protocol must be parsed eventually.
+<blockquote><div><cite>udoprog wrote:</cite>
+The formal grammar is disambiguous when choosing between a positional or a named parameter, this is since positional_parameters  are optional and all possible expansions of a positional parameter can be applied to named ones.</div></blockquote>
+If you look in the spec:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>message_body          ::= (b_message_header | cih_message_header | de_message_header | f_message_header | u_message_header | message_header)
+                          (separator positional_parameter)* (separator named_parameter)*
+positional_parameter  ::= parameter_value
+named_parameter       ::= parameter_name parameter_value?
+parameter_name        ::= simple_alpha simple_alphanum
+</code></pre></div>
+
+A positional parameter is something like "whatever" or "3242352", while an named parameter is something like<br/>
+[A-Z][A-Z0-9].+<br/>
+You can see the distinction by the preceding [A-Z][A-Z0-9] ( and perhaps use it somehow to match it ). <br/>
+However, this fits the regular expression .* for the positional parameter.<br/>
+I suggest using a sintactic predicate for matching, so that any parameter matching a name parameter go to the named parameters.<br/>
+The grammar might be something like<br/>
+parameter = [A-Z][A-Z0-9] parameter_value | parameter_value,<br/>
+in which case first case goes to named parameter, and second to positional parameter.<br/>
+<br/>
+The grammar indeed is ambiguous but I believe there might be an error, this may be the right one:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>message_body          ::= (b_message_header | cih_message_header | de_message_header | f_message_header | u_message_header | message_header) (separator positional_parameter)? (separator named_parameter)*</code></pre></div>
+
+I have never seen messages with more than one positional parameter.<br/>
+<br/>
+Perhaps you can make a hack to fix this problem temporarily, but it surely is a problem in there, and must be fixed in the next ADC version. I'm very curious what arne or cologic have to say about it.</div>
+<div class="signature" id="sig2210">Just someone</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2211">
+<div class="inner">
+<dl class="postprofile" id="profile2211">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u54.html">Pietry</a> </dt>
+<dd class="profile-rank">Senior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 328</dd> <dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+<dd class="profile-contact">
+<strong>Contact:</strong>
+<div class="dropdown-container dropdown-left">
+<a class="dropdown-trigger" href="#" title="Contact Pietry">
+<i aria-hidden="true" class="icon fa-commenting-o fa-fw icon-lg"></i><span class="sr-only">Contact Pietry</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents contact-icons">
+<div>
+<a class="last-cell" href="http://www.death-squad.ro/dshub" title="Website">
+<span class="contact-icon phpbb_website-icon">Website</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2211">
+<h3><a href="#p2211">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u54.html">Pietry</a></strong> » </span>31 Mar 2010, 11:28
+			</p>
+<div class="content"><blockquote><div><cite>udoprog wrote:</cite>this is a base32 encoded string with varying length w/o padding, which makes it difficult to decode unless you make the correct assumption of which hashing algorithm is used, where you know which length the encoded data should be padded with. </div></blockquote>
+
+You always know the hash algorithm because of initial SUP negiotiation. ADC Protocol provides variable length base32 string for this reason exactly, so you can use more hash algorithms.<br/>
+Here is some example:<br/>
+HSUP ADBASE ADTIGR<br/>
+ISUP ADBASE ADTIGR<br/>
+...<br/>
+(all subsequent commands will use Tiger as hash algorithm ).<br/>
+<br/>
+Hope this clears things up</div>
+<div class="signature" id="sig2211">Just someone</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2212">
+<div class="inner">
+<dl class="postprofile" id="profile2212">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u199.html" style="color: #AEB404;">darkKlor</a> </dt>
+<dd class="profile-rank">Senior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Dec 2008, 14:59</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2212">
+<h3><a href="#p2212">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u199.html" style="color: #AEB404;">darkKlor</a></strong> » </span>31 Mar 2010, 11:56
+			</p>
+<div class="content">Pietry: I mentioned it on dev, but doesn't<br/>
+RCM protocol separator token<br/>
+have a couple more than one positional parameters?<br/>
+<br/>
+I'd call this more than one too:<br/>
+STA code description <br/>
+<br/>
+The STA case is actually a point of annoyance for me. Somebody (I forget whom) seems to think that STA 000  RFadcportal.com<br/>
+would be a valid command (note the double space, and lack of description. Whoever it was thinks that since the length is zero, it is an empty string. I think that is a load of crap, personally.<br/>
+<br/>
+I don't think positional parameters provide a huge amount of value anyway. I wouldn't lose any sleep if we got rid of them altogether. A clear distinction in the spec of required vs. optional parameters would be of more use to me.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2213">
+<div class="inner">
+<dl class="postprofile" id="profile2213">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u351.html">udoprog</a> </dt>
+<dd class="profile-rank">Newbie</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Mar 2010, 22:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2213">
+<h3><a href="#p2213">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u351.html">udoprog</a></strong> » </span>31 Mar 2010, 12:34
+			</p>
+<div class="content"><blockquote><div><cite>andyhhp wrote:</cite>You keep on saying "disambiguous" .<br/>
+Sorry if I have got the wrong idea but Im just trying to make sure
+</div></blockquote>
+I should be the one excusing since I've been gut busting the English language, the phrase I was after was indeed that the grammar was »ambiguous« and my head had for some reason hard-coded this as »disambiguous«.<br/>
+<blockquote><div><cite>Pietry wrote:</cite><blockquote><div><cite>Quicksilver wrote:</cite>I doubt the intention of the spec was to provide a grammar that can be used as is in a parser!<br/>
+To me it seems the primary target was to provide syntax in a way that defines a spec ... so humans understand it... its not meant to be directly fed to some parser tool! </div></blockquote>
+
+The spec must also provide understanding but also perfectly strict and unambiguous grammar since the protocol must be parsed eventually.
+</div></blockquote>
+Well said Pietry, indeed, the message must be parsed at some point, be it a simple string inspection or a full fledged LR/RD parser.<br/>
+<br/>
+Using a syntactic predicate would indeed work, but as you mentioned would leave the protocol only with one positional parameter. Since I'm mostly just interested in the grammar, this works for me, but I'm not qualified to make any predictions about the overall impact of this approach.<br/>
+<blockquote><div><cite>Pietry wrote:</cite><blockquote><div><cite>udoprog wrote:</cite>this is a base32 encoded string with varying length w/o padding, which makes it difficult to decode unless you make the correct assumption of which hashing algorithm is used, where you know which length the encoded data should be padded with. </div></blockquote>
+
+You always know the hash algorithm because of initial SUP negiotiation. ADC Protocol provides variable length base32 string for this reason exactly, so you can use more hash algorithms.<br/>
+Here is some example:<br/>
+HSUP ADBASE ADTIGR<br/>
+ISUP ADBASE ADTIGR<br/>
+...<br/>
+(all subsequent commands will use Tiger as hash algorithm ).<br/>
+<br/>
+Hope this clears things up</div></blockquote>
+This part wasn't unclear, I just feel that it is unfortunate that the base32-encoded hashes cannot be decoded until the message is passed from the parser/protocol layer into the actual application.<br/>
+If it was possible to reliably decode the base32 hashes before the message is passed into the application, library abstraction would be much easier to achieve since the message processing would be completely decoupled from the session implementation.<br/>
+As it is now, the message cannot be correctly decoded until it been passed into the client which is aware of the session state (and until after the SUP negotiation has taken place).<br/>
+<br/>
+Am I making sense?<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite>C) because it was there..  also the reason why not Base64 is used.. besides Base32 is 25% less overhead than Base16</div></blockquote>
+In most scripting languages, including python, encoding in base32 is a pain and sometimes 20 times slower than base16 encoding.<br/>
+Is the bandwidth overhead really an issue since the hash is such just a fraction of the entire session?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2214">
+<div class="inner">
+<dl class="postprofile" id="profile2214">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u351.html">udoprog</a> </dt>
+<dd class="profile-rank">Newbie</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Mar 2010, 22:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2214">
+<h3><a href="#p2214">Re: Parsers Specification thoughts during implementation</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u351.html">udoprog</a></strong> » </span>31 Mar 2010, 12:43
+			</p>
+<div class="content"><blockquote><div><cite>Sulan wrote:</cite>Using "type" as variable name? I thought it was bad practice to use builtin keywords as variable names.</div></blockquote>
+That is correct, the local variable 'type' should be replaced with something more prudent like 'header_type', but the field (self.type) does not shadow any declarations, so that should not pose any problems.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t635.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form action="#" method="post" onsubmit="return false">
+<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
+<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents">
+<fieldset class="display-options">
+<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
+<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
+<hr class="dashed"/>
+<input class="button2" name="sort" type="submit" value="Go"/>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+<div class="pagination">
+			19 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="t635_s10.html" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="t635_s10.html" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f55.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Ideas”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

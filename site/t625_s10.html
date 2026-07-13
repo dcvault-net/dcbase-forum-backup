@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SUDP - encrypting UDP traffic - Page 2 - DCBase</title>
+<link href="/app.php/feed?sid=1bbf6baa224dbe74994916ada7be7bcb" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=1bbf6baa224dbe74994916ada7be7bcb" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=1bbf6baa224dbe74994916ada7be7bcb" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=1bbf6baa224dbe74994916ada7be7bcb" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=1bbf6baa224dbe74994916ada7be7bcb" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/18?sid=1bbf6baa224dbe74994916ada7be7bcb" rel="alternate" title="Feed - Forum - Protocol Talk" type="application/atom+xml"/> <link href="/app.php/feed/topic/625?sid=1bbf6baa224dbe74994916ada7be7bcb" rel="alternate" title="Feed - Topic - SUDP - encrypting UDP traffic" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=625&amp;start=10" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f74.html" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f19.html" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="18" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f18.html" itemprop="url"><span itemprop="title">Protocol Talk</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t625_s10.html">SUDP - encrypting UDP traffic</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Here is the sub forum used for talking about ideas, implementations and suggestions or typical guidelines.<br/>
+<br/>
+Further info on extension or the protocol is found at our <a class="postlink" href="http://dcbase.org/wiki/index.php/Main_Page">Wiki</a><br/></div>
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t625_s10.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			34 posts
+							<ul>
+<li class="arrow previous"><a class="button button-icon-only" href="t625.html" rel="prev" role="button"><i aria-hidden="true" class="icon fa-chevron-left fa-fw"></i><span class="sr-only">Previous</span></a></li>
+<li><a class="button" href="t625.html" role="button">1</a></li>
+<li class="active"><span>2</span></li>
+<li><a class="button" href="t625_s20.html" role="button">3</a></li>
+<li><a class="button" href="t625_s30.html" role="button">4</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="t625_s20.html" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2189">
+<div class="inner">
+<dl class="postprofile" id="profile2189">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u343.html" style="color: #AEB404;">andyhhp</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2189">
+<h3 class="first"><a href="#p2189">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u343.html" style="color: #AEB404;">andyhhp</a></strong> » </span>23 Feb 2010, 16:07
+			</p>
+<div class="content">You make some quite good points.  Key handling should be left up to the clients in question.<br/>
+<br/>
+About BLOM.  I would think it wise to not make a protocol which assumes the presence of another optional feature.  Either you should explicitly state that BLOM is a pre-requisite of SUDP, or designed the protocol assuming that BLOM is not present, even if the arguments for it assume BLOM.<br/>
+<br/>
+Just as a possible alternative:  have the key distribution as a feature broadcast. (using USK for Udp Security Key because i cant think of a better name at the moment, and its hard convaying this meaning an not having the commandname look like a profanity)<br/>
+C -&gt; H:  FUSK &lt;myCID&gt; +SUDP &lt;version?&gt; &lt;26bytes base32encoded data&gt;<br/>
+<br/>
+In the case where BLOM is not present, the feature broadcast will prevent the BINF strings getting any longer, and will prevent inflation of every BSCH command with the key data.<br/>
+<br/>
+Having said this, it does open up the problem of a new node logging in after the key broadcast, and wishing to know the key with which to respond.  This could be sorted by having a D-type key exchange which gets used if a client wants to respond to a BSCH but doesnt have the key.<br/>
+<br/>
+<br/>
+Another thought which has only just come to mind.  This UDP encryption should apply to all point-point UDP communication, rather than UDP/RES, as this could cover the forward compatability case (e.g. BigMuscles UDP DHT implementation) where you want ALL udp to be encrypted rather than just the RES packets<br/>
+<br/>
+~Andrew</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2193">
+<div class="inner">
+<dl class="postprofile" id="profile2193">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2193">
+<h3><a href="#p2193">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>24 Feb 2010, 13:28
+			</p>
+<div class="content">Thats not really working ... as any user that would join afterwards would not get the key...<br/>
+<br/>
+<br/>
+If the BLOM feature is not in place  SUDP will still work the same way.<br/>
+Its just so that it profits from BLOM as BLOM reduces ammount of SCH sent below INF. <br/>
+<br/>
+If you really want to spare some more traffic  what you coudl do is<br/>
+sending 2 SCH<br/>
+like  FSCH +SUDP   with key<br/>
+and FSCH -SUDP without key ...   as as long as DC++ does not support SUDP its some traffic impact...<br/>
+still its not that noticeable..<br/>
+either the hub supports BLOM or its his own fault for having to handle a bit more traffic.<br/>
+The feature works with BLOM present and without..  and It would be bad to add additional complexity by adding different modus operandi depending on other hubfeatures present  if its not really needed.<br/>
+SUDP  is optimised like this for usage with BLOM and for faster joining to hubs   versus  less traffic without BLOM and more complexity in the clients.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2357">
+<div class="inner">
+<dl class="postprofile" id="profile2357">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">klondike</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content2357">
+<h3><a href="#p2357">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><span class="username">klondike</span></strong> » </span>14 Aug 2010, 00:49
+			</p>
+<div class="content">Hi,<br/>
+<br/>
+A simple solution to the multiple key problem is adding the one-way hash of the key into the message. That way you can easily check into the client (with a simple lookup into a hash table or a trie) which is the correct key.<br/>
+<br/>
+Now my question. As the main goal seems to be keeping the RES secure, why don't use the TOKEN as key?<br/>
+<br/>
+Anyway to keep other UDP transfers safe you could also use a global key for other transfers (According to BASE, SCH and STA can also be sent through UDP). This may be sent by the hub to all the clients after a logout (and on login) being global for all the users or be sent by the user at login (being individual to each user). If the CID were safe then checking if a logged out user is sending the data would be trivial but as a client can spoof any CID sent to him on previous commands this won't work.<br/>
+<br/>
+Also a thing which seems to have been forgotten is the fact that the CID was sent with U type messages but on these won't be sent. Finally it would be a good idea to be able to tell apart the encripted UDP messages from the non encrypted ones, also a integrity check is needed to avoid random messages. My suggestion would then be this:<br/>
+<br/>
+For safe UDP packets:<br/>
+0: 'S' (used to tell appart from U unencrypted messages) + <br/>
+1..16: Hash of key ( key encrypted by itself using ECB) +<br/>
+17..32: IV (encrypted by the key using ECB and without padding) +<br/>
+32..(end-16): original U (once unencrypted it should then be decifered and parsed)+<br/>
+(end-16)..end:key (which should be checked to ensure the message integrity).<br/>
+<br/>
+From byte 32 to end the block should be padded using PKCS5Padding andinstead of ECB (which would allow block repetition and garbage addition by a third party) y suggest xoring the plaintext with the plaintext from the previous block (or the IV for the first) before encryption. Thus invalid blocks are propagated affecting the key (which is added at the end as a integrity mechanism).<br/>
+<br/>
+This additions would only add 34 bytes to the messages but would make easy checking the integrity of the packages, being able to tell which are ciphered and which not, and allow the protocol being used with any kind of U message.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2358">
+<div class="inner">
+<dl class="postprofile" id="profile2358">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2358">
+<h3><a href="#p2358">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>14 Aug 2010, 15:06
+			</p>
+<div class="content">Hello klondike<br/>
+<blockquote class="uncited"><div>Now my question. As the main goal seems to be keeping the RES secure, why don't use the TOKEN as key?</div></blockquote>
+<br/>
+In the first version of the SUDP proposal that was done.. but we decided against that.  Such multiple usage  is more hackish and not good protocol design<br/>
+<blockquote class="uncited"><div>If the CID were safe then checking if a logged out user is sending the data would be trivial but as a client can spoof any CID sent to him on previous commands this won't work.</div></blockquote>
+No secure method was used to keep the protocol simple... CID/PID system is way simpler to implement than public key cryptography<br/>
+I am not sure which clients support  data other than  RES being sent over UDP ..<br/>
+<blockquote class="uncited"><div>
+Also a thing which seems to have been forgotten is the fact that the CID was sent with U type messages but on these won't be sent. </div></blockquote>
+I don'T understand what you mean with that<br/>
+<blockquote class="uncited"><div>Finally it would be a good idea to be able to tell apart the encripted UDP messages from the non encrypted ones, </div></blockquote>
+No actually that would not be a good idea. Encrypted text should not be distinguishable from random data ... prefixing every Encrypted message with an "S" breaks this<br/>
+<blockquote class="uncited"><div>also a integrity check is needed to avoid random messages. </div></blockquote>
+PKCS5 padding is an integrity check for the message<br/>
+<br/>
+<blockquote class="uncited"><div>1..16: Hash of key ( key encrypted by itself using ECB) </div></blockquote>
+This is kind of close to a known plain text problem ... encrypting the key itself in a message encrypted with it is not a good thing to do.<br/>
+<br/>
+<blockquote class="uncited"><div>(end-16)..end:key (which should be checked to ensure the message integrity).</div></blockquote>
+As said  PKCS5 padding does integrity check<br/>
+<br/>
+<blockquote class="uncited"><div>andinstead of ECB (which would allow block repetition and garbage addition by a third party) y suggest xoring the plaintext with the plaintext from the previous block (or the IV for the first) before encryption. Thus invalid blocks are propagated affecting the key (which is added at the end as a integrity mechanism).</div></blockquote>
+
+You basically described CBC block mode here, which is already used.<br/>
+<br/>
+<br/>
+I hope this addresses all your concerns and no questions are left open. I do though currently not see any improvement by your recommendation.<br/>
+One can only argue that the key encrpted in the message allows for cheaper checking if the right key is used, but trades of securty. <br/>
+Though cheaper is here not really of concern as the used computing power is indeed negligible for decrypting the whole message.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2359">
+<div class="inner">
+<dl class="postprofile" id="profile2359">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">klondike</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content2359">
+<h3><a href="#p2359">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><span class="username">klondike</span></strong> » </span>15 Aug 2010, 03:39
+			</p>
+<div class="content">Hello Quicksilver,
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>Now my question. As the main goal seems to be keeping the RES secure, why don't use the TOKEN as key?</div></blockquote>
+In the first version of the SUDP proposal that was done.. but we decided against that.  Such multiple usage  is more hackish and not good protocol design</div></blockquote>
+Looks reasonable to me, just wanted to know about that.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>If the CID were safe then checking if a logged out user is sending the data would be trivial but as a client can spoof any CID sent to him on previous commands this won't work.</div></blockquote>
+No secure method was used to keep the protocol simple... CID/PID system is way simpler to implement than public key cryptography<br/>
+I am not sure which clients support  data other than  RES being sent over UDP ..</div></blockquote>
+As of now no one, though future extensions could. (In fact theorically search and status codes can be sent over UDP, though the use of UDP for searchs is not recommended).<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>Also a thing which seems to have been forgotten is the fact that the CID was sent with U type messages but on these won't be sent. </div></blockquote>
+I don'T understand what you mean with that</div></blockquote>
+According to the spec any message of the UDP kind should have the CID appended before the command in the header.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>Finally it would be a good idea to be able to tell apart the encripted UDP messages from the non encrypted ones, </div></blockquote>
+No actually that would not be a good idea. Encrypted text should not be distinguishable from random data ... prefixing every Encrypted message with an "S" breaks this</div></blockquote>
+Then what about a non U? Anyway I don't see your point on non marking encrypted data as it. For the record, TLS, SSL do a part of the handshake not ciphered so any eavesdropper can tell a data channel is being opened. Also your udp packets will have some headers which make them distinguishable, so you should get the idea that any packet you send would be easily distinguishable from random data, the question is is distinguisable from other ciphered data? If you want protocol obfuscation that is enough.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>also a integrity check is needed to avoid random messages. </div></blockquote>
+PKCS5 padding is an integrity check for the message<br/>
+<blockquote class="uncited"><div>(end-16)..end:key (which should be checked to ensure the message integrity).</div></blockquote>
+As said  PKCS5 padding does integrity check
+</div></blockquote>
+PKCS5 padding can be a weak integrity check for the message. In fact 1 out of 2^8 random messages would pass without being detected (any one whose last byte is 0x01). Adding either a hash or the own key will increase that probability to 1 out of 2^136 (or higher) which is reasonably harder.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>1..16: Hash of key ( key encrypted by itself using ECB) </div></blockquote>
+This is kind of close to a known plain text problem ... encrypting the key itself in a message encrypted with it is not a good thing to do.</div></blockquote>
+We could use some kind of hash or simply encrypt a preknown text. if I'm not proposing a real hash function here (instead of this) is because ADC seems to avoid specific hash algorithms as much as it can.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>andinstead of ECB (which would allow block repetition and garbage addition by a third party) y suggest xoring the plaintext with the plaintext from the previous block (or the IV for the first) before encryption. Thus invalid blocks are propagated affecting the key (which is added at the end as a integrity mechanism).</div></blockquote>
+You basically described CBC block mode here, which is already used.</div></blockquote>
+My fault change ECB to CBC (Just tripped there). <br/>
+<br/>
+CBC has a basic problem which is that as it use cyphertext to cypher the next part instead of plain text I can easily add some data if I can asume some garbage. This opens the system to some replay attacks as it does with hard disks. (Here, for example, you can see in more depth what I mean <a class="postlink" href="http://www.off.net/~jme/loopdev_vul.html">http://www.off.net/~jme/loopdev_vul.html</a> ) Anyway you have some reason on you concerns as after some reading I have seen that my mode has also some problems. The problem still remains as and eavesdropper could still modify the data being sent. Of course, this won't be necessary at all if we could use a hash function over the message and attach the result to the end (and cipher it) but that's not the case.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite>I hope this addresses all your concerns and no questions are left open. I do though currently not see any improvement by your recommendation.<br/>
+One can only argue that the key encrpted in the message allows for cheaper checking if the right key is used, but trades of securty. <br/>
+Though cheaper is here not really of concern as the used computing power is indeed negligible for decrypting the whole message.</div></blockquote>
+I think your concept of negligible is not the same as mine.<br/>
+I use the DC network on LANs with Gigaethernet links and were users, as the hubs are seasonal, do their searches on specified periods. A simple attack would be sending random large UDP packets to the address used on the search so their DC clients start consuming large amount of CPU (decripting the data) and became unresponsive. Of course, this problem would be worse, the higher the number of available keys (hence the idea of adding some hash to make the decryption faster).<br/>
+<br/>
+Again, the problem is that in the grounds of simplicity ADC tries to avoid the usage of specific hash algorithms so you have to look for alternate solutions based on what we have (a specific encryption function).<br/>
+<br/>
+And yes, hashes can be easily done using a encription function, but as you said they are not safe. Anyway if you don't wan't to send the key in the message here is what i suggest:<br/>
+0: 'S' (used to tell appart from U unencrypted messages) +<br/>
+1..16: Hash of key ( know plain text encrypted by itself using ECB, it can be always the same or it can be chosen at random during the key exchange as long as both pairs use the same) +<br/>
+17..32: IV (encrypted by the key using ECB and without padding) +<br/>
+32..(end-16): original UDP message (once unencrypted it should then be decifered and parsed)+<br/>
+(end-16)..end:hash (as things stand my propossed hash consists on encrypting the IV using each block as key).<br/>
+<br/>
+IV<br/>
+|<br/>
+AES - block1<br/>
+|<br/>
+AES- block2<br/>
+|<br/>
+etc.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2360">
+<div class="inner">
+<dl class="postprofile" id="profile2360">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2360">
+<h3><a href="#p2360">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>15 Aug 2010, 10:10
+			</p>
+<div class="content"><blockquote><div><cite>klondike wrote:</cite>According to the spec any message of the UDP kind should have the CID appended before the command in the header.</div></blockquote>
+<strong class="text-strong">After </strong>the command.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2361">
+<div class="inner">
+<dl class="postprofile" id="profile2361">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2361">
+<h3><a href="#p2361">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>15 Aug 2010, 13:01
+			</p>
+<div class="content"><blockquote class="uncited"><div>As of now no one, though future extensions could. (In fact theorically search and status codes can be sent over UDP, though the use of UDP for searchs is not recommended).</div></blockquote>
+
+I am not sure if many communication will go directly... mostly for security reasons direct UDP is nearly never usable.<br/>
+<blockquote class="uncited"><div>
+<br/>
+Then what about a non U? Anyway I don't see your point on non marking encrypted data as it. For the record, TLS, SSL do a part of the handshake not ciphered so any eavesdropper can tell a data channel is being opened. Also your udp packets will have some headers which make them distinguishable, so you should get the idea that any packet you send would be easily distinguishable from random data, the question is is distinguisable from other ciphered data? If you want protocol obfuscation that is enough.</div></blockquote>
+random data = body ... the header is allways the same... but this "S" will also be in the body.<br/>
+<blockquote class="uncited"><div>PKCS5 padding can be a weak integrity check for the message. In fact 1 out of 2^8 random messages would pass without being detected (any one whose last byte is 0x01). Adding either a hash or the own key will increase that probability to 1 out of 2^136 (or higher) which is reasonably harder.</div></blockquote>
+It is indeed weak ... though you also can check after decryption for the first 5 bytes... if they are something you expect..<br/>
+this already gets you up to  nearly 2^-48  which seems okayish..<br/>
+<br/>
+Though you have a point pkcs5 alone is not good enough. that should be improved.<br/>
+<br/>
+<blockquote class="uncited"><div>Anyway you have some reason on you concerns as after some reading I have seen that my mode has also some problems. The problem still remains as and eavesdropper could still modify the data being sent. Of course, this won't be necessary at all if we could use a hash function over the message and attach the result to the end (and cipher it) but that's not the case.</div></blockquote>
+
+ok an attacker can insert some random data with some 2^-8 probability in our situation. but be aware. Someone able to modify data  can also break our TLS security as we don't use PKI ... modifying Data/MIDM is just not in our attacker model.<br/>
+<br/>
+<blockquote class="uncited"><div>I use the DC network on LANs with Gigaethernet links and were users, as the hubs are seasonal, do their searches on specified periods. A simple attack would be sending random large UDP packets to the address used on the search so their DC clients start consuming large amount of CPU (decripting the data) and became unresponsive. Of course, this problem would be worse, the higher the number of available keys (hence the idea of adding some hash to make the decryption faster).</div></blockquote>
+
+What is large ammounts? How many keys do you expect to be active at the same time?<br/>
+I really do expect only a single key to be active, or at most 2 to 3 keys.<br/>
+My CPU (core2 duo) can decrypt 150 MiB/s without problems ... so with 2 -3 keys even on GBit lan ... the CPU could keep up..<br/>
+Though I would really think about building in some DoS protection to solve this.. as anyone who sends you a hundred thousands of UDP packets per second wants to DoS you... and this is not just problematic with encrypted UDP.<br/>
+<br/>
+You could also try handling it smart.. i.e. decrypting and reading ... and discarding as soon as its invalid (not finding URES) before reaching the end.<br/>
+DoS especially in a LAN shouldn't be a problem... usually people DoS-ing you there are close enough to smack them for doing so.. while with only a 100MBit or smaller connection the CPU can overcome the burden of decryption. In the end its a lousy DoS ... there are better ways to crush a DC client than like this.<br/>
+<br/>
+--------------<br/>
+Thank you for your recommendations.. I am still against adding a prefix to an encrypted packet... it doesn't win us anything..<br/>
+But that pkcs5 padding is not sufficient for integrity check was indeed not thought of!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2362">
+<div class="inner">
+<dl class="postprofile" id="profile2362">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">klondike</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content2362">
+<h3><a href="#p2362">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><span class="username">klondike</span></strong> » </span>15 Aug 2010, 16:55
+			</p>
+<div class="content"><blockquote><div><cite>Pretorian wrote:</cite><blockquote><div><cite>klondike wrote:</cite>According to the spec any message of the UDP kind should have the CID appended before the command in the header.</div></blockquote>
+<strong class="text-strong">After </strong>the command.</div></blockquote>
+Thanks, I always use to confuse after and before, I'm sorry <img alt=":(" class="smilies" height="17" src="images/smilies/icon_e_sad.gif" title="Sad" width="15"/><br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>As of now no one, though future extensions could. (In fact theorically search and status codes can be sent over UDP, though the use of UDP for searchs is not recommended).</div></blockquote>
+
+I am not sure if many communication will go directly... mostly for security reasons direct UDP is nearly never usable.</div></blockquote>
+Well, that depends I see a reason to send status over UDP when you don't need to grant the arrival, also I read something about multicast and ADC, that would require UDP with some additions to address the security issues, though I know multicasting + ADC hasn't been well received <img alt=":(" class="smilies" height="17" src="images/smilies/icon_e_sad.gif" title="Sad" width="15"/>.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>Then what about a non U? Anyway I don't see your point on non marking encrypted data as it. For the record, TLS, SSL do a part of the handshake not ciphered so any eavesdropper can tell a data channel is being opened. Also your udp packets will have some headers which make them distinguishable, so you should get the idea that any packet you send would be easily distinguishable from random data, the question is is distinguisable from other ciphered data? If you want protocol obfuscation that is enough.</div></blockquote>
+random data = body ... the header is allways the same... but this "S" will also be in the body.</div></blockquote>
+The why don't add a secondary port for SUDP as there is for TLS, that'd be better?<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>PKCS5 padding can be a weak integrity check for the message. In fact 1 out of 2^8 random messages would pass without being detected (any one whose last byte is 0x01). Adding either a hash or the own key will increase that probability to 1 out of 2^136 (or higher) which is reasonably harder.</div></blockquote>
+It is indeed weak ... though you also can check after decryption for the first 5 bytes... if they are something you expect..<br/>
+this already gets you up to  nearly 2^-48  which seems okayish..<br/>
+<br/>
+Though you have a point pkcs5 alone is not good enough. that should be improved.</div></blockquote>
+Now I see my supidity, for sending the CID some hash function has been used, you could state in the protocol that the hash function to be used here is the same as there.<br/>
+<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>Anyway you have some reason on you concerns as after some reading I have seen that my mode has also some problems. The problem still remains as and eavesdropper could still modify the data being sent. Of course, this won't be necessary at all if we could use a hash function over the message and attach the result to the end (and cipher it) but that's not the case.</div></blockquote>
+
+ok an attacker can insert some random data with some 2^-8 probability in our situation. but be aware. Someone able to modify data  can also break our TLS security as we don't use PKI ... modifying Data/MIDM is just not in our attacker model.</div></blockquote>
+Well, although we don't use PKI, certificate signatures can be checked by other ways (for example on an HTTP server with PKI <img alt=":P" class="smilies" height="17" src="images/smilies/icon_razz.gif" title="Razz" width="15"/>), though not the integrity of this packets.<br/>
+<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>I use the DC network on LANs with Gigaethernet links and were users, as the hubs are seasonal, do their searches on specified periods. A simple attack would be sending random large UDP packets to the address used on the search so their DC clients start consuming large amount of CPU (decripting the data) and became unresponsive. Of course, this problem would be worse, the higher the number of available keys (hence the idea of adding some hash to make the decryption faster).</div></blockquote>
+
+What is large ammounts? How many keys do you expect to be active at the same time?<br/>
+I really do expect only a single key to be active, or at most 2 to 3 keys.<br/>
+My CPU (core2 duo) can decrypt 150 MiB/s without problems ... so with 2 -3 keys even on GBit lan ... the CPU could keep up..<br/>
+Though I would really think about building in some DoS protection to solve this.. as anyone who sends you a hundred thousands of UDP packets per second wants to DoS you... and this is not just problematic with encrypted UDP.</div></blockquote>
+knowing my users I'd expect them to be using around 10 simultaneous searches.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite>You could also try handling it smart.. i.e. decrypting and reading ... and discarding as soon as its invalid (not finding URES) before reaching the end.</div></blockquote>
+Anyway I don't see why not hashing the key (with the same one way hash used for the CID) And adding that hash at the beggining of the packet. On one side data will still be undistinguisable from random, on the other you gain some DOS protection against attacks targetting the probability for various keys to be used at the same time.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite>DoS especially in a LAN shouldn't be a problem... usually people DoS-ing you there are close enough to smack them for doing so.. while with only a 100MBit or smaller connection the CPU can overcome the burden of decryption. In the end its a lousy DoS ... there are better ways to crush a DC client than like this.</div></blockquote>
+Try to find the attacker between 500 people <img alt=":P" class="smilies" height="17" src="images/smilies/icon_razz.gif" title="Razz" width="15"/> it may be near but you don't know him.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite>Thank you for your recommendations.. I am still against adding a prefix to an encrypted packet... it doesn't win us anything..<br/>
+But that pkcs5 padding is not sufficient for integrity check was indeed not thought of!</div></blockquote>
+That's what this forums are for, don't you think?<br/>
+<br/>
+At the end, my proposal would be like this.<br/>
+Listen for SUDP packets on a different port (that way the client can easily tell which packets have been ciphered and which don't).And send packets with this format:<br/>
+0..(size of hash-1): Hash of key ( using the same algorithm as for CID) +<br/>
+(size of hash)..(size of hash+15): IV (encrypted by the key using ECB and without padding) +<br/>
+(size of hash+15)..(end-size of hash-1): original UDP message using CBC (once unencrypted and checked it should then be decifered and parsed)+<br/>
+(end-size of hash)..end:hash (of the whole original UDP message ).<br/>
+<br/>
+What do you think? I think that way you get all the issues solved and you just add 48 bytes to the message (for TTH, for other hashes it can be more).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2365">
+<div class="inner">
+<dl class="postprofile" id="profile2365">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2365">
+<h3><a href="#p2365">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>16 Aug 2010, 16:53
+			</p>
+<div class="content"><blockquote class="uncited"><div>Anyway I don't see why not hashing the key (with the same one way hash used for the CID) </div></blockquote>
+
+No win in it.. if you want this to verify the validity  just checking for  message starts with "URES " is sufficinet...<br/>
+Before your client dies from exhaustion of  decrypting its really simpler to kill it by sending that many real RES ...<br/>
+if the client wants them to be diesplayed in the UI ... it will die long before the first 50 MiB of RES...<br/>
+<br/>
+There is just no point to DoS protect a thing that is the least of your worries in case of a DoS attack ... the encryption won't be the weakest link ... not even with 10, 20 or 100 searches running in parallel.<br/>
+<br/>
+<blockquote class="uncited"><div>
+Well, although we don't use PKI, certificate signatures can be checked by other ways (for example on an HTTP server with PKI <img alt=":P" class="smilies" height="17" src="images/smilies/icon_razz.gif" title="Razz" width="15"/>), though not the integrity of this packets.</div></blockquote>
+We currently have KEYP ... so we really have something in place against the tinkering  for TLS. Still I don'T see the gain for a possible adversary to tinker with RES ... possibly make them unreadable. <br/>
+<br/>
+<br/>
+A different Port for UDP is a possibility... though it seemed overkill...<br/>
+As in contrast to TLS we can decide here much simpler what is encrypted and what is not.<br/>
+With SUDP we are not relying on some higher level construct as with TLS. This means we can, without much cost distinguish between encrypted and unencrypted packets. (instead if checking the first byte for == 'S'  we check the first byte for not being "U")<br/>
+<br/>
+<br/>
+--<br/>
+<blockquote class="uncited"><div>Listen for SUDP packets on a different port (that way the client can easily tell which packets have been ciphered and which don't).And send packets with this format:<br/>
+0..(size of hash-1): Hash of key ( using the same algorithm as for CID) +<br/>
+(size of hash)..(size of hash+15): IV (encrypted by the key using ECB and without padding) +<br/>
+(size of hash+15)..(end-size of hash-1): original UDP message using CBC (once unencrypted and checked it should then be decifered and parsed)+<br/>
+(end-size of hash)..end:hash (of the whole original UDP message ).</div></blockquote>
+
+1. Prepending the key like this is bad.. because all search results would have the same start... little information leak to the outside..<br/>
+<br/>
+2.  ECB+no padding(IV) =  Enc(IV)<br/>
+ENC(IV) + CBC(IV,DATA)   is the same as  CBC(0,IV+DATA)  which is already done. Just a different view of the same thing. Before we wrote it also with ECB of IV and then CBC of data using IV.. but just using one time CBC with IV=0 and usign the first bytes for the real IV then  is shorter.. and if people implement it like that also simpler.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2366">
+<div class="inner">
+<dl class="postprofile" id="profile2366">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">klondike</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content2366">
+<h3><a href="#p2366">Re: SUDP - encrypting UDP traffic</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><span class="username">klondike</span></strong> » </span>16 Aug 2010, 18:54
+			</p>
+<div class="content"><blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>Anyway I don't see why not hashing the key (with the same one way hash used for the CID) </div></blockquote>
+
+No win in it.. if you want this to verify the validity  just checking for  message starts with "URES " is sufficinet...<br/>
+Before your client dies from exhaustion of  decrypting its really simpler to kill it by sending that many real RES ...<br/>
+if the client wants them to be diesplayed in the UI ... it will die long before the first 50 MiB of RES...</div></blockquote>
+Though a client could start dropping results coming from a CID which already sent some, the number of CIDs in the hubs is limited and the amount of result to be displayed can be limited to 10 per client as recommended by the protocol. So checks can be done to avoid this kind of attack <img alt=":P" class="smilies" height="17" src="images/smilies/icon_razz.gif" title="Razz" width="15"/><br/>
+<blockquote><div><cite>Quicksilver wrote:</cite>There is just no point to DoS protect a thing that is the least of your worries in case of a DoS attack ... the encryption won't be the weakest link ... not even with 10, 20 or 100 searches running in parallel.</div></blockquote>
+I don't find that as a reason to justify that, a hole will be a hole no matter there are other bigger ones.<br/>
+<br/>
+<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>
+Well, although we don't use PKI, certificate signatures can be checked by other ways (for example on an HTTP server with PKI <img alt=":P" class="smilies" height="17" src="images/smilies/icon_razz.gif" title="Razz" width="15"/>), though not the integrity of this packets.</div></blockquote>
+We currently have KEYP ... so we really have something in place against the tinkering  for TLS. Still I don'T see the gain for a possible adversary to tinker with RES ... possibly make them unreadable.</div></blockquote>
+The problem is that you are thinking only in RES when SUDP should cover any UDP message used with ADC. Anyway, the fact you don't see a potential win in thinkering with RES or other UDP messages doesn't mean there can't be one, you simply don't know it yet.<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite>A different Port for UDP is a possibility... though it seemed overkill...<br/>
+As in contrast to TLS we can decide here much simpler what is encrypted and what is not.<br/>
+With SUDP we are not relying on some higher level construct as with TLS. This means we can, without much cost distinguish between encrypted and unencrypted packets. (instead if checking the first byte for == 'S'  we check the first byte for not being "U")</div></blockquote>
+And what happens if it's an U?<br/>
+<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite><blockquote class="uncited"><div>Listen for SUDP packets on a different port (that way the client can easily tell which packets have been ciphered and which don't).And send packets with this format:<br/>
+0..(size of hash-1): Hash of key ( using the same algorithm as for CID) +<br/>
+(size of hash)..(size of hash+15): IV (encrypted by the key using ECB and without padding) +<br/>
+(size of hash+15)..(end-size of hash-1): original UDP message using CBC (once unencrypted and checked it should then be decifered and parsed)+<br/>
+(end-size of hash)..end:hash (of the whole original UDP message ).</div></blockquote>
+
+1. Prepending the key like this is bad.. because all search results would have the same start... little information leak to the outside..</div></blockquote>
+Hum, that can be easily solved using a random SALT and xoring it with the key hash. This would also ensure no packet can be confuse as we can use a random SALT except those beggining with U.<br/>
+<br/>
+<blockquote><div><cite>Quicksilver wrote:</cite>2.  ECB+no padding(IV) =  Enc(IV)<br/>
+ENC(IV) + CBC(IV,DATA)   is the same as  CBC(0,IV+DATA)  which is already done. Just a different view of the same thing. Before we wrote it also with ECB of IV and then CBC of data using IV.. but just using one time CBC with IV=0 and usign the first bytes for the real IV then  is shorter.. and if people implement it like that also simpler.</div></blockquote>
+True, I didn't think on it.  Anyway to add the hash it'd be CBC(0,IV+DATA+hash(DATA)).<br/>
+<br/>
+0..(size of hash-1): SALT (Random and not beggining with U) +<br/>
+(size of hash)..(size of hash*2-1): SALT XOR Hash of key  ( using the same algorithm as for CID) +<br/>
+(size of hash*2)..(size of hash*2+15): IV (encrypted by the key using ECB and without padding) +<br/>
+(size of hash*2+16)..(end): original UDP message concat hash of the message using CBC (once unencrypted and checked it should then be decifered and parsed)<br/>
+<br/>
+(On the previous description I forgot to encrypt the hash too <img alt=":(" class="smilies" height="17" src="images/smilies/icon_e_sad.gif" title="Sad" width="15"/> )</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t625_s10.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form action="#" method="post" onsubmit="return false">
+<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
+<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents">
+<fieldset class="display-options">
+<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
+<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
+<hr class="dashed"/>
+<input class="button2" name="sort" type="submit" value="Go"/>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+<div class="pagination">
+			34 posts
+							<ul>
+<li class="arrow previous"><a class="button button-icon-only" href="t625.html" rel="prev" role="button"><i aria-hidden="true" class="icon fa-chevron-left fa-fw"></i><span class="sr-only">Previous</span></a></li>
+<li><a class="button" href="t625.html" role="button">1</a></li>
+<li class="active"><span>2</span></li>
+<li><a class="button" href="t625_s20.html" role="button">3</a></li>
+<li><a class="button" href="t625_s30.html" role="button">4</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="t625_s20.html" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f18.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Talk”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

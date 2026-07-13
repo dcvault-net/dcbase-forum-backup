@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>dchub URI scheme - DCBase</title>
+<link href="/app.php/feed?sid=d45ecf3e663d3f8d3e8c997c50fc6db7" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=d45ecf3e663d3f8d3e8c997c50fc6db7" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=d45ecf3e663d3f8d3e8c997c50fc6db7" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=d45ecf3e663d3f8d3e8c997c50fc6db7" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=d45ecf3e663d3f8d3e8c997c50fc6db7" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/81?sid=d45ecf3e663d3f8d3e8c997c50fc6db7" rel="alternate" title="Feed - Forum - Protocol Talk" type="application/atom+xml"/> <link href="/app.php/feed/topic/821?sid=d45ecf3e663d3f8d3e8c997c50fc6db7" rel="alternate" title="Feed - Topic - dchub URI scheme" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=821" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f74.html" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="80" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f80.html" itemprop="url"><span itemprop="title">Neo-Modus Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="81" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f81.html" itemprop="url"><span itemprop="title">Protocol Talk</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t821.html">dchub URI scheme</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t821.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			5 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2987">
+<div class="inner">
+<dl class="postprofile" id="profile2987">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2987">
+<h3 class="first"><a href="#p2987">dchub URI scheme</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t821.html#p2987" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>31 Jan 2013, 21:06
+			</p>
+<div class="content">The following is a URI scheme that I intend to submit to IETF for the inclusion as a standardized URI. <br/>
+<blockquote class="uncited"><div>
+(last updated 2013-01-31)<br/>
+<br/>
+Resource Identifier (RI) Scheme name: dchub <br/>
+Status: REQUEST<br/>
+<br/>
+Scheme syntax:<br/>
+<br/>
+   dchub://&lt;host&gt;[:&lt;port&gt;]/[&lt;user&gt;/&lt;path&gt;]<br/>
+<br/>
+   A client should connect to a server (hub) "host" with an optional port, which defaults to 411.<br/>
+<br/>
+   A client should queue a directory or file (according to the path) and attempt to download the directory or file from the specified user. <br/>
+<br/>
+   A user should always be followed by a path to a directory or file.<br/>
+<br/>
+   Examples:<br/>
+      dchub://example.com<br/>
+      dchub://example.com:666<br/>
+      dchub://example.com/John/uploads/applications/linux.iso<br/>
+      dchub://example.com:411/John/uploads/applications/linux.iso<br/>
+<br/>
+Scheme semantics:<br/>
+   Connect to a server and optionally download a file from a user.<br/>
+<br/>
+Encoding considerations:<br/>
+   The executing system's encoding is used.<br/>
+<br/>
+Applications/protocols that use this scheme name:<br/>
+   Used by various Direct Connect clients.<br/>
+<br/>
+Interoperability considerations:<br/>
+   The path is a path in the user's shared files. The path does not reflect a system's underlying file system.<br/>
+<br/>
+Security considerations:<br/>
+   The user that is in the hub may not be the same user as when the URI was constructed. Likewise with the path.<br/>
+Contact:<br/>
+   Registering party: Fredrik Ullner &lt;<a class="inert" href="#" title="Disabled in this archive"><span class="__cf_email__" data-cfemail="5a3c283f3e283331742f3636343f281a3d373b333674393537">[email protected]</span></a>&gt;<br/>
+   Scheme creator: Jonathan Hess<br/>
+Author/Change controller:<br/>
+   The registering party or a member of the NMDC project<br/>
+References:<br/>
+<a class="postlink" href="http://nmdc.sourceforge.net/">http://nmdc.sourceforge.net/</a>, <a class="postlink" href="https://en.wikipedia.org/wiki/Direct_Connect%28file_sharing%29">http://en.wikipedia.org/wiki/Direct_Con ... e_sharing)</a> <br/>
+<br/>
+(file created 2013-01-31)
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2996">
+<div class="inner">
+<dl class="postprofile" id="profile2996">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u197.html" style="color: #AEB404;">poy</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 78</dd> <dd class="profile-joined"><strong>Joined:</strong> 26 Nov 2008, 17:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2996">
+<h3><a href="#p2996">Re: dchub URI scheme</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t821.html#p2996" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u197.html" style="color: #AEB404;">poy</a></strong> » </span>02 Feb 2013, 16:56
+			</p>
+<div class="content">this is great; i have minor comments...<br/>
+<blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>   dchub://&lt;host&gt;[:&lt;port&gt;]/[&lt;user&gt;/&lt;path&gt;]</div></blockquote></div></blockquote>
+shouldn't the slash between port &amp; user be optional (ie inside the following brackets)?<br/>
+<blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>   A user should always be followed by a path to a directory or file.</div></blockquote></div></blockquote>
+the path being optional, "should" is too strong here. how about "may only be followed by"?<br/>
+<blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>Encoding considerations:<br/>
+   The executing system's encoding is used.</div></blockquote></div></blockquote>
+i know that NMDC uses system-dependant encodings; but this is somewhat separate. couldn't we specify UTF-8 here, and let the client convert to the encoding it prefers (which the user may have configured to be different than the system encoding)?<br/>
+<blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>Applications/protocols that use this scheme name:<br/>
+   Used by various Direct Connect clients.</div></blockquote></div></blockquote>
+might want to clarify that while clients do understand the address and (for some) a user param, there isn't any that we know of that fully parses the path param.<br/>
+<blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>Interoperability considerations:<br/>
+   The path is a path in the user's shared files. The path does not reflect a system's underlying file system.</div></blockquote></div></blockquote>
+the path format has to be detailed:<br/>
+- what is the separator? -&gt; /<br/>
+- how does one refer to a directory? -&gt; by ending the path with a separator.<br/>
+- what happens when a directory is passed as the path param, does the client download it, show it to the user, or leave it to the client's discretion)?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2997">
+<div class="inner">
+<dl class="postprofile" id="profile2997">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2997">
+<h3><a href="#p2997">Re: dchub URI scheme</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t821.html#p2997" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>03 Feb 2013, 13:14
+			</p>
+<div class="content"><blockquote><div><cite>poy wrote:</cite>
+<blockquote class="uncited"><div>dchub://&lt;host&gt;[:&lt;port&gt;]/[&lt;user&gt;/&lt;path&gt;]</div></blockquote>
+shouldn't the slash between port &amp; user be optional (ie inside the following brackets)?</div></blockquote>
+Yes, it's wrong. It should be;
+<blockquote class="uncited"><div>dchub://&lt;host&gt;[:&lt;port&gt;][/[&lt;user&gt;/&lt;path&gt;]]</div></blockquote>
+<blockquote><div><cite>poy wrote:</cite><blockquote class="uncited"><div>   A user should always be followed by a path to a directory or file.</div></blockquote>
+the path being optional, "should" is too strong here. how about "may only be followed by"?</div></blockquote>
+I don't think the implementations did anything with just a user, you had to have a path afterwards. I am not entirely sure what should happen otherwise, download the file list only?<br/>
+<blockquote><div><cite>poy wrote:</cite><blockquote class="uncited"><div>Encoding considerations:   The executing system's encoding is used.</div></blockquote>
+i know that NMDC uses system-dependant encodings; but this is somewhat separate. couldn't we specify UTF-8 here, and let the client convert to the encoding it prefers (which the user may have configured to be different than the system encoding)?</div></blockquote>
+Sounds fine, should one just write "UTF-8" or should one be eloborate?<br/>
+<blockquote><div><cite>poy wrote:</cite><blockquote class="uncited"><div>Applications/protocols that use this scheme name:<br/>
+   Used by various Direct Connect clients.</div></blockquote>
+might want to clarify that while clients do understand the address and (for some) a user param, there isn't any that we know of that fully parses the path param.</div></blockquote>
+The old NMDC client did in fact support the user and path. Potentially writing something like;
+<blockquote class="uncited"><div>Used by various Direct Connect clients. Not all implementations support the user and path syntax.</div></blockquote>
+<blockquote><div><cite>poy wrote:</cite><blockquote class="uncited"><div>Interoperability considerations:<br/>
+   The path is a path in the user's shared files. The path does not reflect a system's underlying file system.</div></blockquote>
+the path format has to be detailed:<br/>
+- what is the separator? -&gt; /<br/>
+- how does one refer to a directory? -&gt; by ending the path with a separator.<br/>
+- what happens when a directory is passed as the path param, does the client download it, show it to the user, or leave it to the client's discretion)?</div></blockquote>
+Good comments. I generally want to say "download it" to your third item...<br/>
+<br/>
+Following is an updated version with changes in bold.
+<blockquote class="uncited"><div>
+(last updated 2013-01-31)<br/>
+<br/>
+Resource Identifier (RI) Scheme name: dchub <br/>
+Status: REQUEST<br/>
+<br/>
+Scheme syntax:<br/>
+<br/>
+<strong class="text-strong">dchub://&lt;host&gt;[:&lt;port&gt;][/[&lt;user&gt;/&lt;path&gt;]]</strong><br/>
+<br/>
+   A client should connect to a server (hub) "host" with an optional port, which defaults to 411.<br/>
+<br/>
+   A client should queue a directory or file (according to the path) and attempt to download the directory or file from the specified user. <br/>
+<br/>
+   A user should always be followed by a path to a directory or file.   <br/>
+<br/>
+<strong class="text-strong">   Path separator is a slash ('/'). Directories are referenced by ending the path with a separator. Clients should download the entire directory with its content.</strong><br/>
+<br/>
+   Examples:<br/>
+      dchub://example.com<br/>
+      dchub://example.com:666<br/>
+      dchub://example.com/John/uploads/applications/linux.iso<br/>
+      dchub://example.com:411/John/uploads/applications/linux.iso<br/>
+<br/>
+Scheme semantics:<br/>
+   Connect to a server and optionally download a file from a user.<br/>
+<br/>
+Encoding considerations:<br/>
+<strong class="text-strong">UTF-8, see RFC 3986.</strong><br/>
+<br/>
+Applications/protocols that use this scheme name:<br/>
+   Used by various Direct Connect clients. <strong class="text-strong">Not all implementations support the user and path syntax.</strong><br/>
+<br/>
+Interoperability considerations:<br/>
+   The path is a path in the user's shared files. The path does not reflect a system's underlying file system.<br/>
+<br/>
+Security considerations:<br/>
+   The user that is in the hub may not be the same user as when the URI was constructed. Likewise with the path.<br/>
+<br/>
+Contact:<br/>
+   Registering party: Fredrik Ullner &lt;<a class="inert" href="#" title="Disabled in this archive"><span class="__cf_email__" data-cfemail="9ef8ecfbfaecf7f5b0ebf2f2f0fbecdef9f3fff7f2b0fdf1f3">[email protected]</span></a>&gt;<br/>
+   Scheme creator: Jonathan Hess<br/>
+<br/>
+Author/Change controller:<br/>
+   The registering party or a member of the NMDC project<br/>
+<br/>
+References:<br/>
+<a class="postlink" href="http://nmdc.sourceforge.net/">http://nmdc.sourceforge.net/</a>, <a class="postlink" href="https://en.wikipedia.org/wiki/Direct_Connect%28file_sharing%29">http://en.wikipedia.org/wiki/Direct_Con ... e_sharing)</a> <br/>
+<br/>
+(file created 2013-01-31)
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p3000">
+<div class="inner">
+<dl class="postprofile" id="profile3000">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u197.html" style="color: #AEB404;">poy</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 78</dd> <dd class="profile-joined"><strong>Joined:</strong> 26 Nov 2008, 17:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3000">
+<h3><a href="#p3000">Re: dchub URI scheme</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t821.html#p3000" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u197.html" style="color: #AEB404;">poy</a></strong> » </span>03 Feb 2013, 17:07
+			</p>
+<div class="content"><blockquote><div><cite>Pretorian wrote:</cite>I don't think the implementations did anything with just a user, you had to have a path afterwards. I am not entirely sure what should happen otherwise, download the file list only?</div></blockquote>
+this is what DC++ currently does; it understands a "user" param (downloads the file list) but doesn't parse the "path" param. would be good to allow the path to be optional.<br/>
+<blockquote><div><cite>Pretorian wrote:</cite>Sounds fine, should one just write "UTF-8" or should one be eloborate?</div></blockquote>
+are you referring to variants like UTF-16 being BE or LE? i don't think UTF-8 has any such branching.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p3003">
+<div class="inner">
+<dl class="postprofile" id="profile3003">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3003">
+<h3><a href="#p3003">Re: dchub URI scheme</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t821.html#p3003" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u261.html" style="color: #B40404;">Pretorian</a></strong> » </span>08 Feb 2013, 16:13
+			</p>
+<div class="content">New syntax to accomodate for lack of path support;
+<blockquote class="uncited"><div>dchub://&lt;host&gt;[:&lt;port&gt;][/[&lt;user&gt;[/&lt;path&gt;]]]</div></blockquote>
+poy, I think you said that DC++ does not handle a slash after a user, so above require the slash to be present IFF path is present.<br/>
+<br/>
+To accomodate for it in the text;
+<blockquote class="uncited"><div>A user should may be followed by a path to a directory or file. The client should download the user's file list if path is omitted.</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t821.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form action="#" method="post" onsubmit="return false">
+<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
+<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents">
+<fieldset class="display-options">
+<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
+<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
+<hr class="dashed"/>
+<input class="button2" name="sort" type="submit" value="Go"/>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+<div class="pagination">
+			5 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f81.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Talk”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>gentoo luadch ebuild (unfinished) - DCBase</title>
+<link href="/app.php/feed?sid=a18214e365d72197ca9083b6ce9a5d8f" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=a18214e365d72197ca9083b6ce9a5d8f" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=a18214e365d72197ca9083b6ce9a5d8f" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=a18214e365d72197ca9083b6ce9a5d8f" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=a18214e365d72197ca9083b6ce9a5d8f" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/40?sid=a18214e365d72197ca9083b6ce9a5d8f" rel="alternate" title="Feed - Forum - Guides" type="application/atom+xml"/> <link href="/app.php/feed/topic/489?sid=a18214e365d72197ca9083b6ce9a5d8f" rel="alternate" title="Feed - Topic - gentoo luadch ebuild (unfinished)" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=489" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="75" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f75.html" itemprop="url"><span itemprop="title">Software</span></a></span>
+<span class="crumb" data-forum-id="14" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f14.html" itemprop="url"><span itemprop="title">Hub Software</span></a></span>
+<span class="crumb" data-forum-id="40" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f40.html" itemprop="url"><span itemprop="title">Guides</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t489.html">gentoo luadch ebuild (unfinished)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Guides for Hub Software<br/>
+<br/>
+<a class="postlink" href="http://adc.sourceforge.net/wiki/index.php/DSHub">DSHub</a> | <a class="postlink" href="http://adc.sourceforge.net/wiki/index.php/ADCHPP">ADCH++</a> | <a class="postlink" href="http://adc.sourceforge.net/wiki/index.php/Luadch">LUADCH</a><br/></div>
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t489.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p1591">
+<div class="inner">
+<dl class="postprofile" id="profile1591">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u65.html">lys</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1591">
+<h3 class="first"><a href="#p1591">gentoo luadch ebuild (unfinished)</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u65.html">lys</a></strong> » </span>18 Mar 2009, 18:36
+			</p>
+<div class="content">hi guys i'm trying do a gentoo ebuild for luadc so far iv've got this <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>TuXpoWer luadch # emerge luadch
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild   R   ] net-p2p/luadch-0.08  0 kB [1]
+
+Total: 1 package (1 reinstall), Size of downloads: 0 kB
+Portage tree and overlays:
+ [0] /usr/portage
+ [1] /usr/local/overlays/lys
+
+&gt;&gt;&gt; Creating Manifest for /usr/local/overlays/lys/net-p2p/luadch
+
+&gt;&gt;&gt; Verifying ebuild manifests
+
+&gt;&gt;&gt; Emerging (1 of 1) net-p2p/luadch-0.08 from lys
+ * luadch_v0.08_src.zip RMD160 SHA1 SHA256 size ;-) ...                                                    [ ok ]
+ * checking ebuild checksums ;-) ...                                                                       [ ok ]
+ * checking auxfile checksums ;-) ...                                                                      [ ok ]
+ * checking miscfile checksums ;-) ...                                                                     [ ok ]
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking luadch_v0.08_src.zip to /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-p2p/luadch-0.08/work ...
+./configure --prefix=/usr --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib
+Copy core...
+Building lua...
+Building adclib...
+Building unicode...
+Building luasocket...
+Building luasec...
+Building hub...
+init.lua: import libs
+init.lua: loaded 'adclib'
+init.lua: loaded 'unicode'
+init.lua: loaded 'socket'
+init.lua: import optional libs
+init.lua: loaded 'ssl'
+init.lua: import core
+init.lua: loaded 'const'
+init.lua: loaded 'mem'
+init.lua: loaded 'signal'
+init.lua: loaded 'doc'
+init.lua: loaded 'util'
+init.lua: loaded 'types'
+init.lua: loaded 'cfg'
+init.lua: loaded 'out'
+init.lua: loaded 'server'
+init.lua: loaded 'adc'
+init.lua: loaded 'scripts'
+init.lua: loaded 'hub'
+init.lua: init core modules
+init.lua: initialized 'util'
+init.lua: initialized 'cfg'
+[18.03.09 18:34:12] adc.lua: try to parse 'BINF 2MZZ NI[BOT]HubSecurity DEhub\ssecurity OP1 CT5 IDDYPUMY4RQXBICYSLAK22RJQWP2H36NFQPZSFTPI HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0'
+[18.03.09 18:34:12] adc.lua: parsed 'BINF 2MZZ NI[BOT]HubSecurity DEhub\ssecurity OP1 CT5 IDDYPUMY4RQXBICYSLAK22RJQWP2H36NFQPZSFTPI HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0
+'
+[18.03.09 18:34:12] ** Loaded hub_cmd_manager.lua **
+[18.03.09 18:34:12] ** Loaded hub_inf_manager.lua **
+[18.03.09 18:34:12] ** Loaded usr_hubs.lua **
+[18.03.09 18:34:12] ** Loaded usr_slots.lua **
+[18.03.09 18:34:12] ** Loaded usr_share.lua **
+[18.03.09 18:34:12] ** Loaded hub_user_ranks.lua **
+[18.03.09 18:34:12] ** Loaded usr_nick_prefix.lua **
+[18.03.09 18:34:12] ** Loaded usr_desc_prefix.lua **
+[18.03.09 18:34:12] adc.lua: try to parse 'BINF 65UW NI[BOT]OpChat DEchatroom\sfor\soperators OP1 CT5 ID5TOXXCNOH6I5X2EXRRARQQEG34GAYK3EXGPQH2Y HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0'
+[18.03.09 18:34:12] adc.lua: parsed 'BINF 65UW NI[BOT]OpChat DEchatroom\sfor\soperators OP1 CT5 ID5TOXXCNOH6I5X2EXRRARQQEG34GAYK3EXGPQH2Y HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0
+'
+[18.03.09 18:34:12] ** Loaded bot_opchat.lua **
+[18.03.09 18:34:12] adc.lua: try to parse 'BINF 7GQ2 NI[BOT]EchoBot DEsimple\stest\sbot OP1 CT5 IDXSDIUGT4A55LRA6TXF6WJAHLR5JIEBTH72R4LQY HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0'
+[18.03.09 18:34:12] adc.lua: parsed 'BINF 7GQ2 NI[BOT]EchoBot DEsimple\stest\sbot OP1 CT5 IDXSDIUGT4A55LRA6TXF6WJAHLR5JIEBTH72R4LQY HN0 HR0 HO1 VE++\sBot SL0 SS0 SF0
+'
+[18.03.09 18:34:12] ** Loaded bot_echobot.lua **
+[18.03.09 18:34:12] ** Loaded cmd_help.lua **
+[18.03.09 18:34:12] ** Loaded cmd_rules.lua **
+[18.03.09 18:34:12] ** Loaded cmd_userinfo.lua **
+[18.03.09 18:34:12] ** Loaded cmd_accinfo.lua **
+[18.03.09 18:34:12] ** Loaded cmd_setpas.lua **
+[18.03.09 18:34:12] ** Loaded cmd_upgrade.lua **
+[18.03.09 18:34:12] ** Loaded cmd_mass.lua **
+[18.03.09 18:34:12] ** Loaded cmd_ban.lua **
+[18.03.09 18:34:12] ** Loaded cmd_unban.lua **
+[18.03.09 18:34:12] ** Loaded cmd_reg.lua **
+[18.03.09 18:34:12] ** Loaded cmd_delreg.lua **
+[18.03.09 18:34:12] ** Loaded cmd_errors.lua **
+[18.03.09 18:34:12] ** Loaded cmd_reload.lua **
+[18.03.09 18:34:12] ** Loaded cmd_restart.lua **
+[18.03.09 18:34:12] ** Loaded cmd_shutdown.lua **
+[18.03.09 18:34:12] ** Loaded cmd_ascii.lua **
+[18.03.09 18:34:12] ** Loaded cmd_userlist.lua **
+[18.03.09 18:34:12] ** Loaded etc_hubcommands.lua **
+[18.03.09 18:34:12] ** Loaded etc_usercommands.lua **
+[18.03.09 18:34:12] ** Loaded etc_report.lua **
+[18.03.09 18:34:12] ** Loaded etc_motd.lua **
+[18.03.09 18:34:12] ** Loaded etc_banner.lua **
+[18.03.09 18:34:12] ** Loaded etc_unknown_command.lua **
+[18.03.09 18:34:12] server.lua: new server listener on *:6110
+[18.03.09 18:34:12] server.lua: new server listener on *:4660
+init.lua: initialized 'hub'
+init.lua: initialized 'scripts'
+
+Luadch v0.08 by blastbeat (2007-2008)</code></pre></div>
+
+suggestions or ideas on how to get past this bit it downloads the file unpacks and configures and builds it but then starts it right up,i think ive got all the dependencies covered to as far as gentoo goes, being as comes with a compiler /glibc etc by default.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1595">
+<div class="inner">
+<dl class="postprofile" id="profile1595">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u65.html">lys</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1595">
+<h3><a href="#p1595">Re: gentoo luadch ebuild (unfinished)</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u65.html">lys</a></strong> » </span>18 Mar 2009, 20:30
+			</p>
+<div class="content">i got it past that by redoing the ebuild using blastbeat's compile withgcc script then it gets stuck on make, even though at this point the softwares compiled allready<br/>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>emerge luadch
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild  N    ] net-p2p/luadch-0.08  0 kB [1]
+
+Total: 1 package (1 new), Size of downloads: 0 kB
+Portage tree and overlays:
+ [0] /usr/portage
+ [1] /usr/local/overlays/lys
+
+&gt;&gt;&gt; Creating Manifest for /usr/local/overlays/lys/net-p2p/luadch
+
+&gt;&gt;&gt; Verifying ebuild manifests
+
+&gt;&gt;&gt; Emerging (1 of 1) net-p2p/luadch-0.08 from lys
+ * luadch_v0.08_src.zip RMD160 SHA1 SHA256 size ;-) ...                                         [ ok ]
+ * checking ebuild checksums ;-) ...                                                            [ ok ]
+ * checking auxfile checksums ;-) ...                                                           [ ok ]
+ * checking miscfile checksums ;-) ...                                                          [ ok ]
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking luadch_v0.08_src.zip to /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-p2p/luadch-0.08/work ...
+./configure --prefix=/usr --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib
+Copy core...
+Building lua...
+Building adclib...
+Building unicode...
+Building luasocket...
+Building luasec...
+Building hub...
+Hub Is Compiled
+make: *** No targets specified and no makefile found.  Stop.</code></pre></div>
+
+trying find a way around it ;)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1596">
+<div class="inner">
+<dl class="postprofile" id="profile1596">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u65.html">lys</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1596">
+<h3><a href="#p1596">Re: gentoo luadch ebuild (unfinished)</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u65.html">lys</a></strong> » </span>18 Mar 2009, 21:19
+			</p>
+<div class="content">btw the file im working with is : luadch-0.08.ebuild  <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code># Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+# Author: blastbeat
+# Author-email: <a class="__cf_email__ inert" data-cfemail="7b19171a080f191e1a0f3b0e081e09085508140e09181e1d14091c1e55151e0f" href="#" title="Disabled in this archive">[email protected]</a>
+# License: GPL3 // undecided as yet
+inherit eutils autotools
+
+DESCRIPTION="Luadch is a hub for the ADC network and mostly written in Lua"
+HOMEPAGE="http://sourceforge.net/projects/luadch/"
+SRC_URI="mirror://sourceforge/${PN}/luadch_v${PV}_src.zip"
+
+KEYWORDS="-* ~x86 ~amd64 ~ppc"
+SLOT="0"
+LICENSE="GPL-2"
+
+RDEPEND="app-arch/unzip
+        dev-libs/openssl
+        dev-libs/geoip
+        =dev-lang/lua-5.1.4"
+
+DEPEND="${RDEPEND}"
+
+S=${WORKDIR}
+PREFIX="/opt/luadch"
+
+src_unpack() {
+            unpack ${A}
+            cd "${S}"
+        cp "${FILESDIR}"/configure configure || die "cp failed"
+}
+
+src_compile()
+{
+        econf || die "econf failed"
+#       emake || die "emake failed"
+emake
+}
+
+
+
+DOCS="api default_levels manual settings_help"
+
+src_install() {
+        insinto ${PREFIX}
+        doins -r *.lua *.war *.tbl *.en *.de *.ext *.config *.html *.css *.properties *.pdf *.ver *.sh *.txt || die
+}
+
+pkg_postinst() {
+        elog "Warning This is an experimental ebuild"
+        elog "If it doesnt work tough, use at own risk!"
+        elog "for more info read the website"
+        elog "http://sourceforge.net/projects/luadch/"
+        elog
+}
+</code></pre></div>
+
+ blastbeat's compile_with_gcc.sh script is used by that to configure/compile the software but removed the line that starts the hub up. gotta figure out how package it up and move it somewhere now then hopefully should work, if anyones got an suggestions or ideas feel free to post :)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1597">
+<div class="inner">
+<dl class="postprofile" id="profile1597">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u65.html">lys</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1597">
+<h3><a href="#p1597">Re: gentoo luadch ebuild</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u65.html">lys</a></strong> » </span>18 Mar 2009, 22:54
+			</p>
+<div class="content">well works here now <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>firewall ~ # emerge luadch
+Calculating dependencies... done!
+[ebuild  N    ] net-p2p/luadch-0.08  1,138 kB [1]
+
+Total: 1 package (1 new), Size of downloads: 1,138 kB
+Portage tree and overlays:
+ [0] /usr/portage
+ [1] /usr/local/overlays/lys
+
+&gt;&gt;&gt; Creating Manifest for /usr/local/overlays/lys/net-p2p/luadch
+  digest.assumed                 1
+   luadch-0.08::luadch_v0.08_src.zip
+
+&gt;&gt;&gt; Verifying ebuild manifests
+
+&gt;&gt;&gt; Emerging (1 of 1) net-p2p/luadch-0.08 from lys
+&gt;&gt;&gt; Downloading 'http://nchc.dl.sourceforge.net/sourceforge/luadch/luadch_v0.08_src.zip'
+--2009-03-18 22:51:50--  http://nchc.dl.sourceforge.net/sourceforge/luadch/luadch_v0.08_src.zip
+Resolving firewall... 127.0.0.1
+Connecting to firewall|127.0.0.1|:8080... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 1165291 (1.1M) [application/zip]
+Saving to: `/usr/portage/distfiles/luadch_v0.08_src.zip'
+
+100%[================================================================================================================&gt;] 1,165,291   97.1K/s   in 12s     
+
+2009-03-18 22:52:03 (95.8 KB/s) - `/usr/portage/distfiles/luadch_v0.08_src.zip' saved [1165291/1165291]
+
+ * luadch_v0.08_src.zip RMD160 SHA1 SHA256 size ;-) ...                                                                                            [ ok ]
+ * checking ebuild checksums ;-) ...                                                                                                               [ ok ]
+ * checking auxfile checksums ;-) ...                                                                                                              [ ok ]
+ * checking miscfile checksums ;-) ...                                                                                                             [ ok ]
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking luadch_v0.08_src.zip to /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-p2p/luadch-0.08/work
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-p2p/luadch-0.08/work ...
+./configure --prefix=/usr --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib
+Copy core...
+Building lua...
+Building adclib...
+Building unicode...
+Building luasocket...
+Building luasec...
+Building hub...
+make 
+make: *** No targets specified and no makefile found.  Stop.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: net-p2p/luadch-0.08
+
+&gt;&gt;&gt; Install luadch-0.08 into /var/tmp/portage/net-p2p/luadch-0.08/image/ category net-p2p
+&gt;&gt;&gt; Completed installing luadch-0.08 into /var/tmp/portage/net-p2p/luadch-0.08/image/
+
+&gt;&gt;&gt; Installing net-p2p/luadch-0.08
+ * checking 0 files for package collisions
+ * Removing doc
+ * Removing man
+ * Removing info
+ * Removing /usr/share/info
+ * Warning This is an experimental ebuild
+ * If it doesnt work tough, use at own risk!
+ * the hubsoft is now installed in /opt/luadch
+ * for more info read the website
+ * http://sourceforge.net/projects/luadch/
+ * 
+</code></pre></div>
+
+it's far from perfect though, it's a starting point though i guess :-)<br/>
+<br/>
+luadch-0.08.ebuild for gentoo linux can be found at the bottom if this post <em class="text-italics">(moderator edit)</em><br/>
+<br/>
+any problems with the install use FEATURES="-sandbox" emerge luadch<br/>
+<br/>
+fyi you will need to put this in a portage overlay for instructions on that see here <a class="postlink" href="http://www.gentoo-wiki.info/HOWTO_Installing_3rd_Party_Ebuilds">http://www.gentoo-wiki.info/HOWTO_Insta ... ty_Ebuilds</a><br/>
+<br/>
+hope it works for you guys and maybe someone can come up with an improved ebuild, i'll look into it further aswell though :)</div>
+<dl class="attachbox">
+<dt>
+						Attachments
+					</dt>
+<dd>
+<dl class="file">
+<dt><span class="imageset icon_topic_attach"></span> <a class="postlink unavail" href="#" title="Not archived">luadch-overlay.tar.bz2</a></dt>
+<dd>(2.36 KiB) Downloaded 229 times</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1601">
+<div class="inner">
+<dl class="postprofile" id="profile1601">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u54.html">Pietry</a> </dt>
+<dd class="profile-rank">Senior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 328</dd> <dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+<dd class="profile-contact">
+<strong>Contact:</strong>
+<div class="dropdown-container dropdown-left">
+<a class="dropdown-trigger" href="#" title="Contact Pietry">
+<i aria-hidden="true" class="icon fa-commenting-o fa-fw icon-lg"></i><span class="sr-only">Contact Pietry</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents contact-icons">
+<div>
+<a class="last-cell" href="http://www.death-squad.ro/dshub" title="Website">
+<span class="contact-icon phpbb_website-icon">Website</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1601">
+<h3><a href="#p1601">Re: gentoo luadch ebuild (unfinished)</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u54.html">Pietry</a></strong> » </span>19 Mar 2009, 06:36
+			</p>
+<div class="content">Thank you for your work. Perhaps the ebuild can be included with luadch package? I'm not too familiar on how gentoo system works ( i'm more of a red hat or debian ).</div>
+<div class="signature" id="sig1601">Just someone</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1603">
+<div class="inner">
+<dl class="postprofile" id="profile1603">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content1603">
+<h3><a href="#p1603">Re: gentoo luadch ebuild (unfinished)</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>19 Mar 2009, 08:45
+			</p>
+<div class="content">Debian user also but its really good that we get some diversity in here amongst linux distros</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1617">
+<div class="inner">
+<dl class="postprofile" id="profile1617">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u65.html">lys</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 09 Feb 2008, 16:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1617">
+<h3><a href="#p1617">Re: gentoo luadch ebuild (unfinished)</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t489.html#p1617" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u65.html">lys</a></strong> » </span>22 Mar 2009, 05:47
+			</p>
+<div class="content">no problem :)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t489.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form action="#" method="post" onsubmit="return false">
+<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
+<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents">
+<fieldset class="display-options">
+<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
+<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
+<hr class="dashed"/>
+<input class="button2" name="sort" type="submit" value="Go"/>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f40.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Guides”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

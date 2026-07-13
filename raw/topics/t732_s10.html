@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>ADCH++ Guard for adc commands flooding and limit rules - Page 2 - DCBase</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - DCBase" href="/app.php/feed?sid=81d1b6c8b8aeced0844857ce4d55dc22">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/app.php/feed/news?sid=81d1b6c8b8aeced0844857ce4d55dc22">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/app.php/feed/forums?sid=81d1b6c8b8aeced0844857ce4d55dc22">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/app.php/feed/topics?sid=81d1b6c8b8aeced0844857ce4d55dc22">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/app.php/feed/topics_active?sid=81d1b6c8b8aeced0844857ce4d55dc22">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Hubside Scripting" href="/app.php/feed/forum/31?sid=81d1b6c8b8aeced0844857ce4d55dc22">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - ADCH++ Guard for adc commands flooding and limit rules" href="/app.php/feed/topic/732?sid=81d1b6c8b8aeced0844857ce4d55dc22">	
+	<link rel="canonical" href="https://forum.dcbase.org/viewtopic.php?t=732&amp;start=10">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=21" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="https://www.dcbase.org/" title="DCNF Home"><span class="site_logo"></span></a>
+				<h1>DCBase</h1>
+				<p>Empowering and innovating features for the peer to peer masses</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=81d1b6c8b8aeced0844857ce4d55dc22" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="https://www.dcbase.org/" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">DCNF Home</span></a></span>
+										<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="./index.php?sid=81d1b6c8b8aeced0844857ce4d55dc22" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Forums</span></a></span>
+
+											<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="75"><a href="./viewforum.php?f=75&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" itemprop="url"><span itemprop="title">Software</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="30"><a href="./viewforum.php?f=30&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" itemprop="url"><span itemprop="title">LUA Scripting</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="31"><a href="./viewforum.php?f=31&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" itemprop="url"><span itemprop="title">Hubside Scripting</span></a></span>
+												</li>
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=31&amp;t=732&amp;start=10&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">ADCH++ Guard for adc commands flooding and limit rules</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Post finished Hubside Scripts here, known supporting hubsofts for LUA scripting.<br>
+<br>
+<a href="https://sourceforge.net/projects/adchpp/" class="postlink">ADCH++</a> | <a href="https://sourceforge.net/projects/dcwatch/" class="postlink">DCWatch</a> | <a href="https://sourceforge.net/projects/luadch/" class="postlink">LUADCH</a><br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=31&amp;t=732&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=31&amp;t=732&amp;start=10&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+	
+			<div class="pagination">
+			20 posts
+							<ul>
+			<li class="arrow previous"><a class="button button-icon-only" href="./viewtopic.php?f=31&amp;t=732&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" rel="prev" role="button"><i class="icon fa-chevron-left fa-fw" aria-hidden="true"></i><span class="sr-only">Previous</span></a></li>
+				<li><a class="button" href="./viewtopic.php?f=31&amp;t=732&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" role="button">1</a></li>
+			<li class="active"><span>2</span></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p2694" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2694">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2694">
+
+						<h3 class="first"><a href="#p2694">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2694&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2694&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2694" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>12 Feb 2011, 11:32
+			</p>
+			
+			
+			
+			<div class="content">rev: 1.0.22<br>
+<br>
+Changelog:<br>
+<br>
+Added a +guardabout command to view version and scripts memory use<br>
+<br>
+Added a set of tables that allows entity (users) loging, it asigns a unique id to a user based on his CID/IP and then monitors for changes, keeps @ this moment number of logins, first join, last join, changes in Nick, IP or CID, and tables can be searched by either ID, CID, IP and Nick. These tables will be used for future functionality like time online etc.   To enable the loging use +cfgfl fl_entitylog , the database is selfcleaning and keeps records based on the fl_logexptime setting.<br>
+<br>
+Added a li_minlevel  setting that lets you specify the level from where the limit rules should affect the users, practical example, you run a hub where all can enter but only regged can dl, then you can set your mindownloadlevel and li_minlevel both to 1 with final result that only those who can download will be affected by the sharing rules. Also finalised the possibilety to instead of dropping those users redirect them to the address specified in the li_redirect setting. The above only effects the sharing rules like min/max share, min/max slots etc.<br>
+<br>
+Pulled most of the "explenation" out of the lua's header and putted it in the HowTo help file<br>
+<br>
+Have fun <img class="smilies" src="./images/smilies/icon_e_smile.gif" width="15" height="17" alt=":)" title="Smile"></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=174&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">Guard-HowTo.rtf</a></dt>
+			<dd><em>Read this before using the Guard script</em></dd>			<dd>(8.17 KiB) Downloaded 148 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=173&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">access.guard.lua</a></dt>
+			<dd><em>1.0.22</em></dd>			<dd>(128.48 KiB) Downloaded 138 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2695" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2695">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=57&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="username">Spookie</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 19</dd>		<dd class="profile-joined"><strong>Joined:</strong> 05 Dec 2007, 16:40</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2695">
+
+						<h3 ><a href="#p2695">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2695&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2695&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2695" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=57&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="username">Spookie</a></strong> &raquo; </span>14 Feb 2011, 21:33
+			</p>
+			
+			
+			
+			<div class="content">Sounds good</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2716" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2716">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2716">
+
+						<h3 ><a href="#p2716">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2716&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2716&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2716" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>21 Feb 2011, 18:24
+			</p>
+			
+			
+			
+			<div class="content">rev: 1.0.24 (rev 489)<br>
+<br>
+Changelog:<br>
+<br>
+Added time online, last logon etc to the entity stats and its reporting (still a ongoing task)<br>
+Changed settings so they are now seperated by flood / limits / entitys each saved in their own file<br>
+Changed the list commands so they now show the settings in the result screen<br>
+Modifyed client data retrieval to be compatible with ADCH 485 and above (still backwards compatible)<br>
+Default settings are now made in such a way that you can enable the above using 3 commands<br>
+<br>
++cfgfl maxrate 60 , +cfgli maxrate 60 , +cfgen entitylog 1<br>
+<br>
+the above will enable the flood protection for the cmd's and limits, and enables entity loging.<br>
+When you used this script before delete fl_settings file in your config folder if you want to use the default settings<br>
+Updated/renamed the "how_to"   to   "guard_guide.rtf"</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=176&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">guard_guide.rtf</a></dt>
+			<dd><em>Read this before using the Guard script</em></dd>			<dd>(8.8 KiB) Downloaded 129 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=175&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">access.guard.lua</a></dt>
+			<dd><em>rev: 1.0.24 (rev 489)</em></dd>			<dd>(140.91 KiB) Downloaded 130 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2720" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2720">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2720">
+
+						<h3 ><a href="#p2720">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2720&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2720&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2720" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>22 Feb 2011, 21:09
+			</p>
+			
+			
+			
+			<div class="content">rev: 1.0.24 (rev 491)<br>
+<br>
+Rectifyed typo</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=177&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">access.guard.lua</a></dt>
+						<dd>(140.92 KiB) Downloaded 135 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2722" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2722">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2722">
+
+						<h3 ><a href="#p2722">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2722&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2722&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2722" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>24 Feb 2011, 09:34
+			</p>
+			
+			
+			
+			<div class="content">rev: 1.0.24 (rev 492)<br>
+<br>
+Changelog:<br>
+<br>
+Added client version information in all stats and entity tables<br>
+<br>
+Added a timed functionality to update the entity's "time online" so its not only updated on logoff (prevent loss of data on hub restart or script reload)<br>
+<br>
+Changed the command output , cosmetic changes, for all stats , limit and entity lists and logs<br>
+<br>
+PS: ADCH 2.7.0 is released a nice new version that solves a few of the "old" bugs <br>
+<br>
+<a href="http://adchpp.sourceforge.net" class="postlink">http://adchpp.sourceforge.net</a></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=180&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">access.guard.lua</a></dt>
+			<dd><em>rev: 1.0.24 (rev 492)</em></dd>			<dd>(142.77 KiB) Downloaded 115 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=179&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">guard_guide.rtf</a></dt>
+			<dd><em>Read this before using the Guard script</em></dd>			<dd>(8.8 KiB) Downloaded 108 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2723" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2723">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2723">
+
+						<h3 ><a href="#p2723">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2723&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2723&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2723" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>26 Feb 2011, 09:16
+			</p>
+			
+			
+			
+			<div class="content">rev: 1.0.24 (rev 493)<br>
+<br>
+Changelog:<br>
+<br>
+Improved the entity's "time online" timer system and verify online users on scripts startup.<br>
+<br>
+Some code optimalitation and coscmetic changes.</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=184&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">guard_guide.rtf</a></dt>
+			<dd><em>Read this before using the Guard script</em></dd>			<dd>(8.8 KiB) Downloaded 125 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=183&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">access.guard.lua</a></dt>
+			<dd><em>rev: 1.0.24 (rev 493)</em></dd>			<dd>(144.29 KiB) Downloaded 123 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2724" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2724">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2724">
+
+						<h3 ><a href="#p2724">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2724&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2724&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2724" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>09 Mar 2011, 18:17
+			</p>
+			
+			
+			
+			<div class="content">rev: 1.0.24 (rev 494)<br>
+<br>
+Changelog:<br>
+<br>
+Improved the entity's handling and added a seperate expire time for regged users.<br>
+Some code optimalitation and coscmetic changes to the different stats and logs.<br>
+Added reason to kick and tmpbanlog's.</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=186&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">guard_guide.rtf</a></dt>
+			<dd><em>Read this before using the Guard script</em></dd>			<dd>(8.8 KiB) Downloaded 118 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=185&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">access.guard.lua</a></dt>
+			<dd><em>rev: 1.0.24 (rev 494)</em></dd>			<dd>(144.95 KiB) Downloaded 126 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2727" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2727">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2727">
+
+						<h3 ><a href="#p2727">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2727&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2727&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2727" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>16 Mar 2011, 12:21
+			</p>
+			
+			
+			
+			<div class="content">rev: 1.0.24 (rev 495)<br>
+<br>
+Changelog:<br>
+<br>
+Added<br>
++cfgli maxsameip : allows you to specify how many users can connect using the same ip address<br>
++cfgli minnicklength : specify minimum nicklength for your hub<br>
+<br>
+This will be probebly the last rev posted here unless this needs a bug patch , am starting to remove duplicates from access.lua and this script so nxt version will only run with a modded access.lua <img class="smilies" src="./images/smilies/icon_e_smile.gif" width="15" height="17" alt=":)" title="Smile"></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=188&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">guard_guide.rtf</a></dt>
+			<dd><em>Read this before using the Guard script</em></dd>			<dd>(8.8 KiB) Downloaded 138 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=187&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">access.guard.lua</a></dt>
+			<dd><em>rev: 1.0.24 (rev 495)</em></dd>			<dd>(149.43 KiB) Downloaded 116 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2735" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2735">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2735">
+
+						<h3 ><a href="#p2735">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2735&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2735&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2735" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>04 Apr 2011, 09:34
+			</p>
+			
+			
+			
+			<div class="content">rev: 1.0.24 (rev 496)<br>
+<br>
+Changelog:<br>
+<br>
+Changed limitstats and rate reporting , had a small bug.</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="./download/file.php?id=189&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">access.guard.lua</a></dt>
+			<dd><em>rev: 1.0.24 (rev 496)</em></dd>			<dd>(149.56 KiB) Downloaded 147 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2778" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2778">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 31</dd>		<dd class="profile-joined"><strong>Joined:</strong> 10 Nov 2009, 11:57</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2778">
+
+						<h3 ><a href="#p2778">Re: ADCH++ Guard for adc commands flooding and limit rules</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=31&amp;p=2778&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2778&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22#p2778" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=332&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" style="color: #5F04B4;" class="username-coloured">Pirre</a></strong> &raquo; </span>03 Jun 2011, 07:28
+			</p>
+			
+			
+			
+			<div class="content">New version are from now on available on <a href="https://bazaar.launchpad.net/~pierreparys/adchpp/adchpp_guard/files/head:/plugins/Script/examples/" class="postlink">http://bazaar.launchpad.net/~pierrepary ... /examples/</a><br>
+<br>
+You will need to use also the access.lua posted there, and its higly recommended to use all the scripts in that folder from there if you use guard.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=31&amp;t=732&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=31&amp;t=732&amp;start=10&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=31&amp;t=732&amp;start=10&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			20 posts
+							<ul>
+			<li class="arrow previous"><a class="button button-icon-only" href="./viewtopic.php?f=31&amp;t=732&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" rel="prev" role="button"><i class="icon fa-chevron-left fa-fw" aria-hidden="true"></i><span class="sr-only">Previous</span></a></li>
+				<li><a class="button" href="./viewtopic.php?f=31&amp;t=732&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" role="button">1</a></li>
+			<li class="active"><span>2</span></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=31&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Hubside Scripting”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=9&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-cat-link"> <span> Site &amp; Forum</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site News</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Problems</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Site Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=41&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Implemented Suggestions</span></a></li>
+																<li><a href="./viewforum.php?f=56&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Wiki</span></a></li>
+																<li><a href="./viewforum.php?f=57&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Submitions</span></a></li>
+																<li><a href="./viewforum.php?f=58&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Request Account</span></a></li>
+																<li><a href="./viewforum.php?f=59&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=75&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-cat-link"> <span> Software</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Clients</span></a></li>
+																<li><a href="./viewforum.php?f=26&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=83&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; DC++</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hub Software</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=35&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=37&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Guides</span></a></li>
+																<li><a href="./viewforum.php?f=28&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bot Software</span></a></li>
+																<li><a href="./viewforum.php?f=29&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=30&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LUA Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=31&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=32&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Clientside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=34&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Python Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=38&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=74&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-cat-link"> <span> Protocols</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Advanced Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=33&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=55&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Ideas</span></a></li>
+																<li><a href="./viewforum.php?f=87&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Pushed ideas</span></a></li>
+																<li><a href="./viewforum.php?f=80&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Neo-Modus Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=81&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=82&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-cat-link"> <span> Resources</span></a></li>
+																<li><a href="./viewforum.php?f=50&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tutorials</span></a></li>
+																<li><a href="./viewforum.php?f=51&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SDK/Libs</span></a></li>
+																<li><a href="./viewforum.php?f=62&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Documentation</span></a></li>
+																<li><a href="./viewforum.php?f=63&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Icon Packs</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hublists</span></a></li>
+																<li><a href="./viewforum.php?f=84&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Links</span></a></li>
+																<li><a href="./viewforum.php?f=86&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Chat logs</span></a></li>
+																<li><a href="./viewforum.php?f=85&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Other resources</span></a></li>
+																<li><a href="./viewforum.php?f=88&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-cat-link"> <span> Teams</span></a></li>
+																<li><a href="./viewforum.php?f=89&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Security</span></a></li>
+																<li><a href="./viewforum.php?f=90&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cryptography</span></a></li>
+																<li><a href="./viewforum.php?f=91&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Software</span></a></li>
+																<li><a href="./viewforum.php?f=92&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Interoperability</span></a></li>
+																<li><a href="./viewforum.php?f=93&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Protocol</span></a></li>
+																<li><a href="./viewforum.php?f=94&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Infrastructure</span></a></li>
+																<li><a href="./viewforum.php?f=96&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-forum-link"> <span> DC Network Foundation</span></a></li>
+																<li><a href="./viewforum.php?f=54&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" class="jumpbox-forum-link"> <span> Offtopic Discussions</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://www.dcbase.org/" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>DCNF Home</span></a></span>									<span class="crumb"><a href="./index.php?sid=81d1b6c8b8aeced0844857ce4d55dc22" data-navbar-reference="index"><span>Forums</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+																<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.core.tidy_cache&amp;sid=81d1b6c8b8aeced0844857ce4d55dc22" width="1" height="1" alt="cron" /></div>
+
+<script src="./assets/javascript/jquery.min.js?assets_version=21"></script>
+<script src="./assets/javascript/core.js?assets_version=21"></script>
+
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=21"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=21"></script>
+
+
+
+</body>
+</html>

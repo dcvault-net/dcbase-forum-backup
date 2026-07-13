@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Hash set extension - DCBase</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - DCBase" href="/app.php/feed?sid=b7d75d4b391005b50dcaeba377119a5d">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/app.php/feed/news?sid=b7d75d4b391005b50dcaeba377119a5d">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/app.php/feed/forums?sid=b7d75d4b391005b50dcaeba377119a5d">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/app.php/feed/topics?sid=b7d75d4b391005b50dcaeba377119a5d">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/app.php/feed/topics_active?sid=b7d75d4b391005b50dcaeba377119a5d">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Protocol Ideas" href="/app.php/feed/forum/55?sid=b7d75d4b391005b50dcaeba377119a5d">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Hash set extension" href="/app.php/feed/topic/554?sid=b7d75d4b391005b50dcaeba377119a5d">	
+	<link rel="canonical" href="https://forum.dcbase.org/viewtopic.php?t=554">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=21" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="https://www.dcbase.org/" title="DCNF Home"><span class="site_logo"></span></a>
+				<h1>DCBase</h1>
+				<p>Empowering and innovating features for the peer to peer masses</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=b7d75d4b391005b50dcaeba377119a5d" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="https://www.dcbase.org/" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">DCNF Home</span></a></span>
+										<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="./index.php?sid=b7d75d4b391005b50dcaeba377119a5d" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Forums</span></a></span>
+
+											<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="74"><a href="./viewforum.php?f=74&amp;sid=b7d75d4b391005b50dcaeba377119a5d" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="19"><a href="./viewforum.php?f=19&amp;sid=b7d75d4b391005b50dcaeba377119a5d" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="55"><a href="./viewforum.php?f=55&amp;sid=b7d75d4b391005b50dcaeba377119a5d" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+												</li>
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=55&amp;t=554&amp;sid=b7d75d4b391005b50dcaeba377119a5d">Hash set extension</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for ADC may be presented here for others to review and point out flaws or further improve the idea.<br /></div>
+
+	<div class="rules">
+		<div class="inner">
+
+					<strong>Forum rules</strong><br />
+			If you have an account on the wiki, remember to update the ADC Proposals page for new ideas.<br>
+<br>
+<a href="http://dcbase.org/wiki/ADC_Proposals_list" class="postlink">http://dcbase.org/wiki/ADC_Proposals_list</a>
+		
+		</div>
+	</div>
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=55&amp;t=554&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=55&amp;t=554&amp;sid=b7d75d4b391005b50dcaeba377119a5d&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+	
+			<div class="pagination">
+			6 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p1941" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1941">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=b7d75d4b391005b50dcaeba377119a5d" style="color: #B40404;" class="username-coloured">Pretorian</a>							</dt>
+
+						<dd class="profile-rank">Site Admin</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 214</dd>		<dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1941">
+
+						<h3 class="first"><a href="#p1941">Hash set extension</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=55&amp;p=1941&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1941&amp;sid=b7d75d4b391005b50dcaeba377119a5d#p1941" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=b7d75d4b391005b50dcaeba377119a5d" style="color: #B40404;" class="username-coloured">Pretorian</a></strong> &raquo; </span>10 Aug 2009, 23:19
+			</p>
+			
+			
+			
+			<div class="content">BASE does not allow multiple items to have one distinct hash. The intention is to allow automatic searches and matching for a set of files or even directory structures. The following intends to add hash sets.<br>
+<br>
+The file list need to be modified to be able to contain a hash set attribute. Hashes are used similarly as for files with a TTH attribute (if TTH is the chosen algorithm), but named "hashset". The previously negotiated hash method should be assumed. That means that the Directory element may contain a 'hashset' attribute and the File element may contain a 'hashset' attribute. If file list size is a worrysome matter, simply "set" should be used.<br>
+<br>
+There are various ways a hash set can be created from;
+<ul><li>1. Selected files' names concatenated.<br>
+2. Selected files' names and their absolute paths concatenated (in terms of path in the directory tree of the file list).<br>
+3. Selected files' hashes concatenated.<br>
+4. Selected files' content concatenated.<br>
+5. Random generated data.<br>
+6. Combination of above items.</li></ul>
+
+Now, while these items will surely create enough unique content to base the hash set, some are more practical than others. If the set shall be part of a Directory, "selected files" above are to be treated as "the files in the directory" as well as "directory name". <br>
+<br>
+Investigation;
+<ul><li>1. Likely to be unique with a sufficiently high grade, especially in a high amount of files.<br>
+2. While more unique than previous item, it may be inaccurate if two users have the two files "file1.txt" and "file2.txt" if the former have the files at "shared/text" and the other user have the files at "downloaded/text".<br>
+3. Likely to be more unique than item 1, as these values are based on the files' content.<br>
+4. While likely to be as likely as item 3, not viable to (re-)hash that much content.<br>
+5. Not likely to be unique unless a good seed is used. The random range need to be sufficiently large to generate a trustworthy hash.<br>
+6. Items 1, 3 and 4 are likely to be similar in their uniqueness (or at least only slighy variations). Therefore, it is unlikely that any combination will yield a better unique hash.</li></ul>
+
+Conclusion;<br>
+It seems items 1, 3 and 4 are similarly unique. Item 4 is likely not to be used due to its ineffciancy. Choosing between item 1 and 3 should yield a better unique base data when selecting item 3. Therefore;<br>
+<strong class="text-strong">Selected files' hashes shall be concatenated.</strong></div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1942" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1942">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="username">Pietry</a>							</dt>
+
+						<dd class="profile-rank">Senior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 328</dd>		<dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Pietry">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Pietry</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.death-squad.ro/dshub" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1942">
+
+						<h3 ><a href="#p1942">Re: Hash set extension</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=55&amp;p=1942&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1942&amp;sid=b7d75d4b391005b50dcaeba377119a5d#p1942" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="username">Pietry</a></strong> &raquo; </span>11 Aug 2009, 07:19
+			</p>
+			
+			
+			
+			<div class="content">I agree that the hash set should include the hashes of all files , and a master hash for all the files perhaps. <br>
+This extension can bring a torrent like similarity and one could search/download a whole pack of files, like a complete directory with a distribution perhaps. This has been talked on DCDev if I recall correctly and it's good if this extension brings this functionality on ADC.</div>
+
+			
+			
+									
+									<div id="sig1942" class="signature">Just someone</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1974" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1974">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=235&amp;sid=b7d75d4b391005b50dcaeba377119a5d" style="color: #AEB404;" class="username-coloured">arnetheduck</a>							</dt>
+
+						<dd class="profile-rank">Newbie</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 8</dd>		<dd class="profile-joined"><strong>Joined:</strong> 17 Mar 2009, 13:37</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1974">
+
+						<h3 ><a href="#p1974">Re: Hash set extension</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=55&amp;p=1974&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1974&amp;sid=b7d75d4b391005b50dcaeba377119a5d#p1974" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=235&amp;sid=b7d75d4b391005b50dcaeba377119a5d" style="color: #AEB404;" class="username-coloured">arnetheduck</a></strong> &raquo; </span>19 Aug 2009, 18:36
+			</p>
+			
+			
+			
+			<div class="content">while it's up, there was some talk about adding out-of-hash files to the set as well, i e the files that contribute to the hash would be a subset of the whole set of files so that non-critical files or files that change (sfv for example?) don't modify the set hash...</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1976" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1976">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=87&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="username">en_dator</a>							</dt>
+
+						<dd class="profile-rank">Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 72</dd>		<dd class="profile-joined"><strong>Joined:</strong> 01 Apr 2008, 19:24</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1976">
+
+						<h3 ><a href="#p1976">Re: Hash set extension</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=55&amp;p=1976&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1976&amp;sid=b7d75d4b391005b50dcaeba377119a5d#p1976" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=87&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="username">en_dator</a></strong> &raquo; </span>19 Aug 2009, 19:47
+			</p>
+			
+			
+			
+			<div class="content">then filename should not be ^filename$ but instead ^(relativepath)?filename$<br>
+<br>
+as there is need to be able to contain a directory structure in the hashset.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2284" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2284">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=b7d75d4b391005b50dcaeba377119a5d" style="color: #B40404;" class="username-coloured">Pretorian</a>							</dt>
+
+						<dd class="profile-rank">Site Admin</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 214</dd>		<dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2284">
+
+						<h3 ><a href="#p2284">Re: Hash set extension</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=55&amp;p=2284&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2284&amp;sid=b7d75d4b391005b50dcaeba377119a5d#p2284" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=b7d75d4b391005b50dcaeba377119a5d" style="color: #B40404;" class="username-coloured">Pretorian</a></strong> &raquo; </span>31 May 2010, 15:46
+			</p>
+			
+			
+			
+			<div class="content"><em class="text-italics">I would like to make the following addendum to the specification;</em><br>
+<br>
+Signal feature HSET so the other client know you support this extension.<br>
+<br>
+The attribute <em class="text-italics">set</em> shall be used for all files that are in the hash set generation. The hash set is generated by concatenating all hashes in an ascending string order.<br>
+<br>
+The attribute <em class="text-italics">setex</em> (set generation excluded) shall be used for all files that are in a given set but are NOT part of the hash set generation. <br>
+<br>
+I.e., if file A, B and C shall be included in a set, but a varying C shall be allowed, then set hash == hash(hash of A + hash of B) <strong class="text-strong">or</strong> set hash == hash(hash of B + hash of A) depending on string order. File A and B shall include the attribute set and file C shall include the attribute setex.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p3639" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile3639">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=770&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="username">iOCTAGRAM</a>							</dt>
+
+						<dd class="profile-rank">Newbie</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 1</dd>		<dd class="profile-joined"><strong>Joined:</strong> 21 Oct 2017, 18:19</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content3639">
+
+						<h3 ><a href="#p3639">Re: Hash set extension</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=55&amp;p=3639&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=3639&amp;sid=b7d75d4b391005b50dcaeba377119a5d#p3639" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=770&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="username">iOCTAGRAM</a></strong> &raquo; </span>21 Oct 2017, 18:53
+			</p>
+			
+			
+			
+			<div class="content">Is there a precise algorithm description available so I can reimplement it? I know it's ancient and obsolete misfeature abandoned in favor of dcls, but I need exactly it.<br>
+<br>
+I've got a folder TTH response from FlyLink DC r503-x64-19663 for TTH search request, and I need to repeat calculations with debug prints. I saved complete remote filelist and trying to independently recalculate folder TTH, but no matter what I try it doesn't match.<br>
+<br>
+This is so ancient I don't know who may recall the precise algorithm. I recall something about sorting, concatenating and hashing. I tried to sort or not sort hashes. I tried to reverse endianness or not reverse endianness. I tried to reverse endianness before or after sorting. I tried raw TIGER or TTH. I just can't make it match.<br>
+<br>
+Downloaded FlyLink sources. Surprisingly I can't even find where does TTH gets calculated for folders. Everything is so asynchronous, I spend several hours, but I still can't see the code responsible for it. Tried with StrongDC sources, no luck. But it didn't originate in FlyLinkDC, it was inherited long ago, and then nobody touched this code. Can anybody point me where exactly in the sources it's implemented?</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=55&amp;t=554&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=55&amp;t=554&amp;sid=b7d75d4b391005b50dcaeba377119a5d&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=55&amp;t=554&amp;sid=b7d75d4b391005b50dcaeba377119a5d">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			6 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=55&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Protocol Ideas”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=9&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-cat-link"> <span> Site &amp; Forum</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site News</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Problems</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Site Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=41&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Implemented Suggestions</span></a></li>
+																<li><a href="./viewforum.php?f=56&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Wiki</span></a></li>
+																<li><a href="./viewforum.php?f=57&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Submitions</span></a></li>
+																<li><a href="./viewforum.php?f=58&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Request Account</span></a></li>
+																<li><a href="./viewforum.php?f=59&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=75&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-cat-link"> <span> Software</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Clients</span></a></li>
+																<li><a href="./viewforum.php?f=26&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=83&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; DC++</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hub Software</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=35&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=37&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Guides</span></a></li>
+																<li><a href="./viewforum.php?f=28&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bot Software</span></a></li>
+																<li><a href="./viewforum.php?f=29&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=30&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LUA Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=31&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=32&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Clientside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=34&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Python Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=38&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=74&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-cat-link"> <span> Protocols</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Advanced Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=33&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=55&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Ideas</span></a></li>
+																<li><a href="./viewforum.php?f=87&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Pushed ideas</span></a></li>
+																<li><a href="./viewforum.php?f=80&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Neo-Modus Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=81&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=82&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-cat-link"> <span> Resources</span></a></li>
+																<li><a href="./viewforum.php?f=50&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tutorials</span></a></li>
+																<li><a href="./viewforum.php?f=51&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SDK/Libs</span></a></li>
+																<li><a href="./viewforum.php?f=62&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Documentation</span></a></li>
+																<li><a href="./viewforum.php?f=63&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Icon Packs</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hublists</span></a></li>
+																<li><a href="./viewforum.php?f=84&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Links</span></a></li>
+																<li><a href="./viewforum.php?f=86&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Chat logs</span></a></li>
+																<li><a href="./viewforum.php?f=85&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Other resources</span></a></li>
+																<li><a href="./viewforum.php?f=88&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-cat-link"> <span> Teams</span></a></li>
+																<li><a href="./viewforum.php?f=89&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Security</span></a></li>
+																<li><a href="./viewforum.php?f=90&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cryptography</span></a></li>
+																<li><a href="./viewforum.php?f=91&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Software</span></a></li>
+																<li><a href="./viewforum.php?f=92&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Interoperability</span></a></li>
+																<li><a href="./viewforum.php?f=93&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Protocol</span></a></li>
+																<li><a href="./viewforum.php?f=94&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Infrastructure</span></a></li>
+																<li><a href="./viewforum.php?f=96&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-forum-link"> <span> DC Network Foundation</span></a></li>
+																<li><a href="./viewforum.php?f=54&amp;sid=b7d75d4b391005b50dcaeba377119a5d" class="jumpbox-forum-link"> <span> Offtopic Discussions</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://www.dcbase.org/" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>DCNF Home</span></a></span>									<span class="crumb"><a href="./index.php?sid=b7d75d4b391005b50dcaeba377119a5d" data-navbar-reference="index"><span>Forums</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=b7d75d4b391005b50dcaeba377119a5d" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+																<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=b7d75d4b391005b50dcaeba377119a5d" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=b7d75d4b391005b50dcaeba377119a5d" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.core.tidy_warnings&amp;sid=b7d75d4b391005b50dcaeba377119a5d" width="1" height="1" alt="cron" /></div>
+
+<script src="./assets/javascript/jquery.min.js?assets_version=21"></script>
+<script src="./assets/javascript/core.js?assets_version=21"></script>
+
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=21"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=21"></script>
+
+
+
+</body>
+</html>

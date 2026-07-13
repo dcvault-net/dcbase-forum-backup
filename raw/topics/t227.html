@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>A new proposal for a more secure Direct Connect - DCBase</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - DCBase" href="/app.php/feed?sid=a4cd9c353f9e853a9f2d16f044cf1186">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/app.php/feed/news?sid=a4cd9c353f9e853a9f2d16f044cf1186">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/app.php/feed/forums?sid=a4cd9c353f9e853a9f2d16f044cf1186">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/app.php/feed/topics?sid=a4cd9c353f9e853a9f2d16f044cf1186">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/app.php/feed/topics_active?sid=a4cd9c353f9e853a9f2d16f044cf1186">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Site News" href="/app.php/feed/forum/10?sid=a4cd9c353f9e853a9f2d16f044cf1186">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - A new proposal for a more secure Direct Connect" href="/app.php/feed/topic/227?sid=a4cd9c353f9e853a9f2d16f044cf1186">	
+	<link rel="canonical" href="https://forum.dcbase.org/viewtopic.php?t=227">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=21" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="https://www.dcbase.org/" title="DCNF Home"><span class="site_logo"></span></a>
+				<h1>DCBase</h1>
+				<p>Empowering and innovating features for the peer to peer masses</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=a4cd9c353f9e853a9f2d16f044cf1186" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="https://www.dcbase.org/" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">DCNF Home</span></a></span>
+										<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="./index.php?sid=a4cd9c353f9e853a9f2d16f044cf1186" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Forums</span></a></span>
+
+											<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="9"><a href="./viewforum.php?f=9&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" itemprop="url"><span itemprop="title">Site &amp; Forum</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="10"><a href="./viewforum.php?f=10&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" itemprop="url"><span itemprop="title">Site News</span></a></span>
+												</li>
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186">A new proposal for a more secure Direct Connect</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Site Announcements<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+	
+			<div class="pagination">
+			11 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="./viewtopic.php?f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewtopic.php?f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p510" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile510">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Pietry</a>							</dt>
+
+						<dd class="profile-rank">Senior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 328</dd>		<dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Pietry">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Pietry</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.death-squad.ro/dshub" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content510">
+
+						<h3 class="first"><a href="#p510">A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=510&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=510&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p510" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Pietry</a></strong> &raquo; </span>03 Jun 2008, 17:51
+			</p>
+			
+			
+			
+			<div class="content">Hi. I have thought about <a href="http://www.adcportal.com/forums/viewtopic.php?f=47&amp;t=189" class="postlink">ADCS</a> and how we can improve the world of Direct Connect, and the ADC network.<br>
+First, I looked over to see how DC++ ( and clones) create the certificates they use for ADCS connections. The certificate doesn't seem to be signed, and it's granted actually to that CID ( client's unique id ).<br>
+I want to propose something about how to make this more secure for both hubs and clients who want to connect ( mostly clients who have certain rights on the hub ). This is intented to replace password-based login.<br>
+First of all, let's start with a hub. After the hub is being set in normal ADC mode, the user needs to switch to ADCS. In this moment, the hub makes a certificate request to a CA [<a href="https://en.wikipedia.org/wiki/Certificate_authority" class="postlink">1</a>], that temporarily grants him a certificate signed by this CA, hereby making the hub authoritative for it's own users. <br>
+<br>
+[1] : I propose the CA to be somebody of trust in Direct Connect, that can also monitor hubs and even revoke certificates for the hubs that don't respect certain rules ( moral rules, the general direct connect rules...etc ). My first suggestion is a big hublist , with great influence ( these people also monitor hubs regularly ). Once the hub has this certificate from this CA, then users can connect to it safely ( It would be nice if clients could implement the CA's public key and check the certificate's signature, and at least warn users on login if the hub is not signed by the CA)<br>
+<br>
+The second step of this thingy is to create user accounts on the hub. For this, each client creates a public and a private key. The hub should be able to have an input for a client's public key, and create a certificate for the client signed by the hub. This way, the client can login to the hub ( in which moment the hub checks if the certificate is signed correctly by itself ) and grant the respective user with all the rights given . No password needed, and the security greatly increases since the client's private key is never sent anywhere so he's the only one who can use the certificate, and only the hub who signed it can actually decipher it and accept it. <br>
+<br>
+Hope this post is quite clear, I await some questions if not. I would also like something from Crise for the client part and netcelli/Catalin for the hublist part.<br>
+<br>
+I'm in the disposition of implementing all this in DSHub for the hubsoft part.</div>
+
+			
+			
+									
+									<div id="sig510" class="signature">Just someone</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p512" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile512">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">Toast</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content512">
+
+						<h3 ><a href="#p512">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=512&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=512&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p512" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> &raquo; </span>04 Jun 2008, 15:16
+			</p>
+			
+			
+			
+			<div class="content">The big question is who should run a service like this ?<br>
+<br>
+Well my vote is on hublist managers.<br>
+<br>
+DCHublist and Hubtracker are the current up to date hublists.<br>
+<br>
+Well DCHublist more then Hubtracker since they are banning old software that support CTM Exploits (Sorry Catalin).<br>
+<br>
+Here are some thoughts about ethical rules for a CA<br>
+
+<ul>
+<li>impartial</li>
+<li>Updated on DC Standards/Flaws *(ex. Exploits view notes below)</li></ul>
+
+Note: the CTM Exploit and other exploits known on Direct Connect should be protected against not every hublist yet thou (too bad).<br>
+<br>
+Reasons for banning a hub as a CA<br>
+
+<ul>
+<li>1. Destructive Behaviour towards Direct Connect Community<strong class="text-strong">*</strong><br>
+2. Used for Faking<br>
+3. Used for spreading illegal porn</li>
+</ul>
+
+*note: Thinking of the recent events of hublist.org when it was taken out of commission and left 10000 of users stranded looking for hublists.<br>
+<br>
+There for a failsafe method should be implemented also so this cant happen to adcs CA's</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p513" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile513">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=57&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Spookie</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 19</dd>		<dd class="profile-joined"><strong>Joined:</strong> 05 Dec 2007, 16:40</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content513">
+
+						<h3 ><a href="#p513">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=513&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=513&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p513" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=57&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Spookie</a></strong> &raquo; </span>04 Jun 2008, 15:28
+			</p>
+			
+			
+			
+			<div class="content">This is a intresting idea.<br>
+<br>
+I will wait for more information from hublist/client devs before I put my vote in for who  should manage this.<br>
+<br>
+Toast ideas about rules/banning/security is good.<br>
+<br>
+Spookie</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p516" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile516">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Pietry</a>							</dt>
+
+						<dd class="profile-rank">Senior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 328</dd>		<dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Pietry">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Pietry</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.death-squad.ro/dshub" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content516">
+
+						<h3 ><a href="#p516">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=516&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=516&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p516" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Pietry</a></strong> &raquo; </span>05 Jun 2008, 09:58
+			</p>
+			
+			
+			
+			<div class="content">Anyway, there shouldn't be just one CA. Having more it's more failsafe and people can choose who to trust.<br>
+( Users could trust the hublists they already use in their client, when the hublist per se is being downloaded, the client could also grab the hublist's public key if it doesn't have it already , so it can check the certificates signed by this hublist )<br>
+<br>
+A hub signed by dchublist.com ( example ) should be more trustworthy than a hub signed by myshittiehublist.com ( example )</div>
+
+			
+			
+									
+									<div id="sig516" class="signature">Just someone</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p523" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile523">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">Kryppy</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content523">
+
+						<h3 ><a href="#p523">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=523&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=523&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p523" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">Kryppy</span></strong> &raquo; </span>06 Jun 2008, 08:01
+			</p>
+			
+			
+			
+			<div class="content">Very interesting , but how to improve basic users to use it ?( i mean that  when it will be ready , the user's shouldnot understand the benefits and the use of it)</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p524" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile524">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">Toast</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content524">
+
+						<h3 ><a href="#p524">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=524&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=524&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p524" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> &raquo; </span>06 Jun 2008, 08:22
+			</p>
+			
+			
+			
+			<div class="content">Well thats up to hublists and hubsoft developers and client developers<br>
+<br>
+Perhaps someway to clarify it for the common user<br>
+<br>
+like upon login a msg appears that verifies that it is a secure hub and a short explanation.<br>
+<br>
+Clients could mark secure hubs in another color separating them from the rest<br>
+<br>
+<img src="http://www.adcportal.com/misc/secure.jpg" class="postimage" alt="Image"><br>
+<br>
+<em class="text-italics">Too bad that more developers hasn't commented yet on this thread.</em></div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p525" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile525">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Pietry</a>							</dt>
+
+						<dd class="profile-rank">Senior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 328</dd>		<dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Pietry">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Pietry</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.death-squad.ro/dshub" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content525">
+
+						<h3 ><a href="#p525">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=525&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=525&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p525" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Pietry</a></strong> &raquo; </span>06 Jun 2008, 10:50
+			</p>
+			
+			
+			
+			<div class="content">A client could post a green check sign when connecting to hub and some message in the status bar like :<br>
+"This hub is signed as safe by blablahublist.com"<br>
+or a red exclamation mark with :<br>
+"WARNING: This hub is not certified by any hublist, your experience may be different, even dangerous"</div>
+
+			
+			
+									
+									<div id="sig525" class="signature">Just someone</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1050" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1050">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">chaos</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1050">
+
+						<h3 ><a href="#p1050">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=1050&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1050&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p1050" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">chaos</span></strong> &raquo; </span>09 Nov 2008, 17:42
+			</p>
+			
+			
+			
+			<div class="content">It's an interesting concept that you have here. Sorry for my late input on this. A couple of considerations though. Yes dchublist.com is trying to take a stand against exploitable hubs, it has its downfalls as you can imagen but thats life. We are not just simply banning their hubs though we are just refusing to list them in the client list or online list of the website. They are still managable and the owners have the option to update in order to reactivate. <br>
+We would be happy to digitally sign hubs but this technology must be based upon existing technology not something we ourselves will devlop otherwise there is likely to be disagreements and arising issues. One thing I dont particiluarly want though is a key edition to the hublist formatted file, this data should be stored elsewhere... when your serving well over 150,000 client lists per day... adding several bytes or even kb's to the list size can have quite an impact on resources not just for us but anyone else who wishes to implement such a feature in the future.<br>
+I do disagree with something though. The rules for a digitally signed hub. U mentioned the exploitable hubs could not be digitally signed which is a given as no issuer would sign a hubsoft version that can be exploited. But in terms of the content the hub has, this is a sticky subject. Half of so called 'bad porn' on the net is just filenames comprised of many bad keywaords for maximum exposure, doesnt mean its actually bad porn. And what content a hub hosts is nothing to do with hublists, its the owners and ops of that hub that need to regulate it. We as a hublist can only categorise the hubs content not pass judgement based upon it.<br>
+So what exactly will make a hub certifiable? I think thats a tougher question then previously thought of <img class="smilies" src="./images/smilies/icon_e_wink.gif" width="15" height="17" alt=";)" title="Wink"></div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1051" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1051">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Pietry</a>							</dt>
+
+						<dd class="profile-rank">Senior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 328</dd>		<dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Pietry">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Pietry</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.death-squad.ro/dshub" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>
+									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1051">
+
+						<h3 ><a href="#p1051">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=1051&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1051&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p1051" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">Pietry</a></strong> &raquo; </span>09 Nov 2008, 18:19
+			</p>
+			
+			
+			
+			<div class="content">Since this was posted, my thoughts have changed a little bit. Indeed, it would be a too great risk of subjectivity and/or centralization minuses. However, the hub signing the clients stands. And the hub will be signed by itself. In this case the user can tell if the hub has changed since his certificate will no longer be valid ( being signed by the hub's private key ) , so masquerading will not be possible. And you're right about the content of the hub, that's a subject of too much subjectivity.</div>
+
+			
+			
+									
+									<div id="sig1051" class="signature">Just someone</div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p1144" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile1144">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=134&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">adimosh</a>							</dt>
+
+						<dd class="profile-rank">Newbie</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 4</dd>		<dd class="profile-joined"><strong>Joined:</strong> 15 Aug 2008, 21:23</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content1144">
+
+						<h3 ><a href="#p1144">Re: A new proposal for a more secure Direct Connect</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=10&amp;p=1144&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=1144&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186#p1144" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=134&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="username">adimosh</a></strong> &raquo; </span>30 Nov 2008, 09:07
+			</p>
+			
+			
+			
+			<div class="content">My (very very late) input on this:<br>
+- having no centralized and recognized authority/authorities will add absolutely nothing towards the DC community. It's like Mozilla or IE accepting by default any type of certificate issued by any type of CA. In that case, there wouldn't be any purpose in having CA-s. If you really wish to do something about it, do it the way it is currently done in commercial software: have official CA-s and allow independent CA-s. That way, a user will see "This hub's certificate may not be valid because: The certificate was not signed by a trusted certification authority. If you trust this authority (<a href="http://www.certificationauthorityfordummies.com" class="postlink">www.certificationauthorityfordummies.com</a>), please click <span style="text-decoration:underline">here</span> to add it to your trusted authorities list." ... or something like that ...<br>
+- keep in mind that centralization doesn't mean unity of operation; having one standing CA doesn't mean that it cannot be spread along a larger community, in terms of operation; that way, redundancy is ensured: one falls, the rest still stand, and with clever-enough web development, it is possible<br>
+- for the moment (since ADCS is somewhat of a novelty), why not allow hubs to generate their own certificates, as Pietry said?<br>
+<br>
+However, I do have a question: how exactly do current hub software and current clients communicate the certificate(s) one to another?</div>
+
+			
+			
+									
+									<div id="sig1144" class="signature"><strong class="text-strong">Ixian Corp "Sharing" project</strong><br>
+<br>
+<a href="http://www.ixiancorp.com/sharing/dc.aspx" class="postlink">DC Clients</a> and <a href="http://www.ixiancorp.com/sharing/dchub.aspx" class="postlink">Hub software</a><br>
+<a href="http://www.ixiancorp.com/sharing/torrent.aspx" class="postlink">Torrent clients</a><br>
+<a href="http://www.ixiancorp.com/sharing/antivirus.aspx" class="postlink">Personal Antivirus</a><br>
+<a href="http://www.ixiancorp.com/sharing/codec.aspx" class="postlink">CODECs</a></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			11 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="./viewtopic.php?f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewtopic.php?f=10&amp;t=227&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=10&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Site News”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=9&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-cat-link"> <span> Site &amp; Forum</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site News</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Problems</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Site Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=41&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Implemented Suggestions</span></a></li>
+																<li><a href="./viewforum.php?f=56&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Wiki</span></a></li>
+																<li><a href="./viewforum.php?f=57&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Submitions</span></a></li>
+																<li><a href="./viewforum.php?f=58&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Request Account</span></a></li>
+																<li><a href="./viewforum.php?f=59&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=75&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-cat-link"> <span> Software</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Clients</span></a></li>
+																<li><a href="./viewforum.php?f=26&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=83&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; DC++</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hub Software</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=35&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=37&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Guides</span></a></li>
+																<li><a href="./viewforum.php?f=28&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bot Software</span></a></li>
+																<li><a href="./viewforum.php?f=29&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=30&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LUA Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=31&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=32&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Clientside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=34&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Python Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=38&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=74&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-cat-link"> <span> Protocols</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Advanced Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=33&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=55&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Ideas</span></a></li>
+																<li><a href="./viewforum.php?f=87&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Pushed ideas</span></a></li>
+																<li><a href="./viewforum.php?f=80&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Neo-Modus Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=81&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=82&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-cat-link"> <span> Resources</span></a></li>
+																<li><a href="./viewforum.php?f=50&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tutorials</span></a></li>
+																<li><a href="./viewforum.php?f=51&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SDK/Libs</span></a></li>
+																<li><a href="./viewforum.php?f=62&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Documentation</span></a></li>
+																<li><a href="./viewforum.php?f=63&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Icon Packs</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hublists</span></a></li>
+																<li><a href="./viewforum.php?f=84&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Links</span></a></li>
+																<li><a href="./viewforum.php?f=86&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Chat logs</span></a></li>
+																<li><a href="./viewforum.php?f=85&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Other resources</span></a></li>
+																<li><a href="./viewforum.php?f=88&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-cat-link"> <span> Teams</span></a></li>
+																<li><a href="./viewforum.php?f=89&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Security</span></a></li>
+																<li><a href="./viewforum.php?f=90&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cryptography</span></a></li>
+																<li><a href="./viewforum.php?f=91&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Software</span></a></li>
+																<li><a href="./viewforum.php?f=92&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Interoperability</span></a></li>
+																<li><a href="./viewforum.php?f=93&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Protocol</span></a></li>
+																<li><a href="./viewforum.php?f=94&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Infrastructure</span></a></li>
+																<li><a href="./viewforum.php?f=96&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-forum-link"> <span> DC Network Foundation</span></a></li>
+																<li><a href="./viewforum.php?f=54&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" class="jumpbox-forum-link"> <span> Offtopic Discussions</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://www.dcbase.org/" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>DCNF Home</span></a></span>									<span class="crumb"><a href="./index.php?sid=a4cd9c353f9e853a9f2d16f044cf1186" data-navbar-reference="index"><span>Forums</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+																<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.core.tidy_cache&amp;sid=a4cd9c353f9e853a9f2d16f044cf1186" width="1" height="1" alt="cron" /></div>
+
+<script src="./assets/javascript/jquery.min.js?assets_version=21"></script>
+<script src="./assets/javascript/core.js?assets_version=21"></script>
+
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=21"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=21"></script>
+
+
+
+</body>
+</html>

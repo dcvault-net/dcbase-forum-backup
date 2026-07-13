@@ -1,0 +1,41 @@
+local base = _G
+
+module("redirect")
+
+base.require("luadchpp")
+local adchpp = base.luadchpp
+
+local cm = adchpp.getCM()
+
+-- Rev: 1.0.0
+
+-- WARNING !!!!!!!!!! This script can NOT be used on a ADCS hub as there is no way to see if a connecting user is in secure mode or not in ADCH LUA.
+
+-- Script does not use a timer so redirect is instantaneous, advantage is no extra timers creation or pending sockets, disadvantage is a litle tx band as you send the redirect to all users.
+
+-- Script needs ADCH++ (rev 504) or above.
+
+-- Settings:
+
+-- Fully ADC qualified hub address (can be a adcs:// if you redirect to another hub).
+local Redirect = "adc://redirect.net:411"
+-- Bot name used for the msg's.
+local Bot = "Redirect_Bot"
+-- Hubname as you want it's shown in the msg.
+local Hubname = "ADCH_Hub"
+-- Reason that you want to be send in PM to the redirected user, if "" no reason will be send.
+local Reason = "You should update your favorits for " .. Hubname .. " with the new address !"
+
+
+-- Array test NMDC to ADC(S) redirect
+
+redirect_1 = cm:signalConnected():connect(function(entity)
+	-- Sending a NMDC redirect to all connecting users (TODO exclude those that use a secure connection), clients in ADC mode just ignore these unknown commands.
+	local c = entity:asClient()
+	if c then
+		if #Reason > 0 then
+			c:send(adchpp.Buffer_create("$To: Guest From: " .. Bot .. " $<<" .. Bot .. ">> You are being redirected to " .. Redirect .. " : " .. Reason .. "|"))
+		end
+		c:send(adchpp.Buffer_create("$ForceMove " .. Redirect .. "|\n"))
+	end
+end)

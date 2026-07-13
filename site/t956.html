@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>4-byte utf-8 and DC software - DCBase</title>
+<link href="/app.php/feed?sid=2305c9cbfd6a8213c7f61aab1efc2368" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=2305c9cbfd6a8213c7f61aab1efc2368" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=2305c9cbfd6a8213c7f61aab1efc2368" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=2305c9cbfd6a8213c7f61aab1efc2368" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=2305c9cbfd6a8213c7f61aab1efc2368" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/18?sid=2305c9cbfd6a8213c7f61aab1efc2368" rel="alternate" title="Feed - Forum - Protocol Talk" type="application/atom+xml"/> <link href="/app.php/feed/topic/956?sid=2305c9cbfd6a8213c7f61aab1efc2368" rel="alternate" title="Feed - Topic - 4-byte utf-8 and DC software" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=956" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f74.html" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f19.html" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="18" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f18.html" itemprop="url"><span itemprop="title">Protocol Talk</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t956.html">4-byte utf-8 and DC software</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Here is the sub forum used for talking about ideas, implementations and suggestions or typical guidelines.<br/>
+<br/>
+Further info on extension or the protocol is found at our <a class="postlink" href="http://dcbase.org/wiki/index.php/Main_Page">Wiki</a><br/></div>
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t956.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			11 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="t956_s10.html" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="t956_s10.html" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p3256">
+<div class="inner">
+<dl class="postprofile" id="profile3256">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3256">
+<h3 class="first"><a href="#p3256">4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3256" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>16 Nov 2014, 02:57
+			</p>
+<div class="content">Hi!<br/>
+<br/>
+I detected whilst updating my hub's MOTD (for reference I have hanged it at <a class="postlink" href="http://klondike.es/motd.txt">http://klondike.es/motd.txt</a>) that messages with 4-byte UTF-8 whilst sent properly are filtered by many DC engines.<br/>
+<br/>
+Ironically the character I was testing was the one at <a class="postlink" href="http://www.fileformat.info/info/unicode/char/1f572/index.htm">http://www.fileformat.info/info/unicode ... /index.htm</a> (this forums SQL databse rejects inserting it).<br/>
+<br/>
+So far my results are these:<br/>
+<br/>
+Hub software:<br/>
+* ADCH: Can send messages with the character but filters incoming ones<br/>
+* uhub: Can send messages with the character but filters incoming ones<br/>
+* Flexhub: Replaces the character on the message by an '?' (question mark)<br/>
+<br/>
+Client software:<br/>
+* eiskaltdc: Can send messages with the character but filters incoming ones<br/>
+<br/>
+I'm unsure what's causing it as the character is valid utf-8 and shouldn't be filtered.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p3257">
+<div class="inner">
+<dl class="postprofile" id="profile3257">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3257">
+<h3><a href="#p3257">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3257" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>17 Nov 2014, 04:27
+			</p>
+<div class="content">Pretorian asked if this could be caused by an old unicode engine as it is fairly recent. I didn't test as deeply with the pineapple codepoint <a class="postlink" href="http://www.fileformat.info/info/unicode/char/1f34d/index.htm">http://www.fileformat.info/info/unicode ... /index.htm</a> as I did with the other but it seems to trigger similar behaviour where I tested.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p3262">
+<div class="inner">
+<dl class="postprofile" id="profile3262">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 19:34</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3262">
+<h3><a href="#p3262">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3262" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a></strong> » </span>17 Nov 2014, 21:14
+			</p>
+<div class="content">MySQL's manual probably explains why the forum has rejected your 4-byte "NO PIRACY" codepoint:
+<blockquote><div><cite><a class="postlink" href="https://dev.mysql.com/doc/refman/5.5/en/charset-unicode-utf8mb4.html">https://dev.mysql.com/doc/refman/5.5/en/charset-unicode-utf8mb4.html</a> wrote:</cite>The character set named utf8 uses a maximum of three bytes per character and contains only BMP characters. As of MySQL 5.5.3, the utf8mb4 character set uses a maximum of four bytes per character supports supplemental characters</div></blockquote>
+I haven't checked uhub or FlexHub, but adchpp's <a class="postlink" href="https://bazaar.launchpad.net/~dcplusplus-team/adchpp/trunk/view/head:/adchpp/Text.cpp">Text.cpp</a> doesn't support 4-byte UTF-8 encodings in either <a class="postlink" href="https://bazaar.launchpad.net/~dcplusplus-team/adchpp/trunk/view/head:/adchpp/Text.cpp#L29">Text::utf8ToWc</a> or <a class="postlink" href="https://bazaar.launchpad.net/~dcplusplus-team/adchpp/trunk/view/head:/adchpp/Text.cpp#L95">Text::wcToUtf8</a>, which explains your observations.<br/>
+<br/>
+4-byte UTF-8 shouldn't be filtered, no. RFC 3629 <a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-3">defines 4-byte UTF-8</a>; however, it was simply never implemented.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p3263">
+<div class="inner">
+<dl class="postprofile" id="profile3263">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3263">
+<h3><a href="#p3263">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3263" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>18 Nov 2014, 01:27
+			</p>
+<div class="content">Yeah I found the code doing the filtering in uhub too, see <a class="postlink" href="https://github.com/janvidar/uhub/blob/master/src/util/misc.c">https://github.com/janvidar/uhub/blob/m ... til/misc.c</a><br/>
+<br/>
+We probably should explain this into the ADC standard and maybe provide some use cases (if possible with something other than that stupid "no piracy" icon).<br/>
+<br/>
+The main question this raises is, should we leave the ground set in case they decide to expand to 5 or even 6 bytes unicode or just stick with the standard?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p3264">
+<div class="inner">
+<dl class="postprofile" id="profile3264">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 19:34</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3264">
+<h3><a href="#p3264">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3264" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a></strong> » </span>18 Nov 2014, 02:02
+			</p>
+<div class="content"><blockquote><div><cite>klondike wrote:</cite>Yeah I found the code doing the filtering in uhub too, see <a class="postlink" href="https://github.com/janvidar/uhub/blob/master/src/util/misc.c">https://github.com/janvidar/uhub/blob/m ... til/misc.c</a><br/>
+<br/>
+We probably should explain this into the ADC standard and maybe provide some use cases (if possible with something other than that stupid "no piracy" icon).<br/>
+<br/>
+The main question this raises is, should we leave the ground set in case they decide to expand to 5 or even 6 bytes unicode or just stick with the standard?</div></blockquote>
+Hopefully you've alerted janvidar to the issue in uhub.<br/>
+<br/>
+I agree, this many hubs getting it wrong in the same way suggests a widespread misunderstanding with an unambiguously correct fix. It's worth mentioning somewhere, with example use cases.<br/>
+<br/>
+I'm disinclined to encourage preparation for 5+ byte UTF-8 support. The previous <a class="postlink" href="https://tools.ietf.org/html/rfc2279">UTF-8 RFC</a> did allow for "sequences of 1 to 6 octets". However, not only does the superceding UTF-8 RFC actually enumerate <a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-3">exactly 4 possible codepoint representation lengths</a>, but, after five years' accumulated experience between 1998 and 2003, deliberately "<a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-12">Restricted the range of characters to 0000-10FFFF (the UTF-16 accessible range)</a>" versus RFC 2279, all representable within 4 bytes. I'd suggest just sticking with the current standard.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p3265">
+<div class="inner">
+<dl class="postprofile" id="profile3265">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3265">
+<h3><a href="#p3265">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3265" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>18 Nov 2014, 06:20
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>Hopefully you've alerted janvidar to the issue in uhub.</div></blockquote>
+Nah, I'll just fix the code my self and send a merge request his way instead.<br/>
+<blockquote><div><cite>cologic wrote:</cite>I agree, this many hubs getting it wrong in the same way suggests a widespread misunderstanding with an unambiguously correct fix. It's worth mentioning somewhere, with example use cases.</div></blockquote>
+A good example would probably the emoticon block which can be found on <a class="postlink" href="http://www.fileformat.info/info/unicode/block/emoticons/list.htm">http://www.fileformat.info/info/unicode ... s/list.htm</a> most are utf-8, likely to be used and providing a good baseline for what is historically an evolution of IRC.<br/>
+<blockquote><div><cite>cologic wrote:</cite>I'm disinclined to encourage preparation for 5+ byte UTF-8 support. The previous <a class="postlink" href="https://tools.ietf.org/html/rfc2279">UTF-8 RFC</a> did allow for "sequences of 1 to 6 octets". However, not only does the superceding UTF-8 RFC actually enumerate <a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-3">exactly 4 possible codepoint representation lengths</a>, but, after five years' accumulated experience between 1998 and 2003, deliberately "<a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-12">Restricted the range of characters to 0000-10FFFF (the UTF-16 accessible range)</a>" versus RFC 2279, all representable within 4 bytes. I'd suggest just sticking with the current standard.</div></blockquote>
+Sounds like a good idea, I'd like to see what the others say so if this bites us again on the far future (let's hope not) whoever has to fix this can know the reasons why we didn't take another approach.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p3273">
+<div class="inner">
+<dl class="postprofile" id="profile3273">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 19:34</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3273">
+<h3><a href="#p3273">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3273" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a></strong> » </span>19 Nov 2014, 17:23
+			</p>
+<div class="content"><blockquote><div><cite>klondike wrote:</cite>A good example would probably the emoticon block which can be found on <a class="postlink" href="http://www.fileformat.info/info/unicode/block/emoticons/list.htm">http://www.fileformat.info/info/unicode ... s/list.htm</a> most are utf-8, likely to be used and providing a good baseline for what is historically an evolution of IRC.</div></blockquote>
+Works for me.
+<blockquote><div><cite>klondike wrote:</cite><blockquote><div><cite>cologic wrote:</cite>I'm disinclined to encourage preparation for 5+ byte UTF-8 support. The previous <a class="postlink" href="https://tools.ietf.org/html/rfc2279">UTF-8 RFC</a> did allow for "sequences of 1 to 6 octets". However, not only does the superceding UTF-8 RFC actually enumerate <a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-3">exactly 4 possible codepoint representation lengths</a>, but, after five years' accumulated experience between 1998 and 2003, deliberately "<a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-12">Restricted the range of characters to 0000-10FFFF (the UTF-16 accessible range)</a>" versus RFC 2279, all representable within 4 bytes. I'd suggest just sticking with the current standard.</div></blockquote>
+Sounds like a good idea, I'd like to see what the others say so if this bites us again on the far future (let's hope not) whoever has to fix this can know the reasons why we didn't take another approach.</div></blockquote>
+Agree that documenting rationales for this sort of decision is important.<br/>
+<br/>
+Additionally, both <a class="postlink" href="https://www.w3.org/TR/2000/REC-xml-20001006#NT-Char">XML 1.0</a> (2000) and <a class="postlink" href="https://www.w3.org/TR/xml11/#NT-Char">XML 1.1</a> (2006) define supported character ranges topping out at #x10FFFF, just as RFC 3629. For filelists, this likewise restrains valid Unicode codepoints to those fitting in 4-byte UTF-8 representations.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p3279">
+<div class="inner">
+<dl class="postprofile" id="profile3279">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3279">
+<h3><a href="#p3279">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3279" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>24 Nov 2014, 09:53
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite><blockquote><div><cite>klondike wrote:</cite>A good example would probably the emoticon block which can be found on <a class="postlink" href="http://www.fileformat.info/info/unicode/block/emoticons/list.htm">http://www.fileformat.info/info/unicode ... s/list.htm</a> most are utf-8, likely to be used and providing a good baseline for what is historically an evolution of IRC.</div></blockquote>
+Works for me.
+<blockquote><div><cite>klondike wrote:</cite><blockquote><div><cite>cologic wrote:</cite>I'm disinclined to encourage preparation for 5+ byte UTF-8 support. The previous <a class="postlink" href="https://tools.ietf.org/html/rfc2279">UTF-8 RFC</a> did allow for "sequences of 1 to 6 octets". However, not only does the superceding UTF-8 RFC actually enumerate <a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-3">exactly 4 possible codepoint representation lengths</a>, but, after five years' accumulated experience between 1998 and 2003, deliberately "<a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-12">Restricted the range of characters to 0000-10FFFF (the UTF-16 accessible range)</a>" versus RFC 2279, all representable within 4 bytes. I'd suggest just sticking with the current standard.</div></blockquote>
+Sounds like a good idea, I'd like to see what the others say so if this bites us again on the far future (let's hope not) whoever has to fix this can know the reasons why we didn't take another approach.</div></blockquote>
+Agree that documenting rationales for this sort of decision is important.<br/>
+<br/>
+Additionally, both <a class="postlink" href="https://www.w3.org/TR/2000/REC-xml-20001006#NT-Char">XML 1.0</a> (2000) and <a class="postlink" href="https://www.w3.org/TR/xml11/#NT-Char">XML 1.1</a> (2006) define supported character ranges topping out at #x10FFFF, just as RFC 3629. For filelists, this likewise restrains valid Unicode codepoints to those fitting in 4-byte UTF-8 representations.</div></blockquote>
+
+Cool, I suppose Pretorian knows better where should we keep this noted down.<br/>
+<br/>
+For the record (and in case it helps those needing a reference) here is the patch for uhub <a class="postlink" href="https://github.com/janvidar/uhub/pull/27">https://github.com/janvidar/uhub/pull/27</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p3280">
+<div class="inner">
+<dl class="postprofile" id="profile3280">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 19:34</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3280">
+<h3><a href="#p3280">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3280" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u262.html" style="color: #AEB404;">cologic</a></strong> » </span>25 Nov 2014, 06:11
+			</p>
+<div class="content"><blockquote><div><cite>klondike wrote:</cite>Cool, I suppose Pretorian knows better where should we keep this noted down.<br/>
+<br/>
+For the record (and in case it helps those needing a reference) here is the patch for uhub <a class="postlink" href="https://github.com/janvidar/uhub/pull/27">https://github.com/janvidar/uhub/pull/27</a></div></blockquote>
+Yes, Pretorian would be the person to ask here.<br/>
+<br/>
+Your commit to add <a class="postlink" href="https://github.com/klondi/mimicmod-lan/commit/8a7e892aeb519986d26b22ac1f8d95c58d94ae55">support for 4 byte UTF-8 characters and stricter character checking</a> including a specific check for what appears to be <a class="postlink" href="https://www.unicode.org/reports/tr26/">CESU-8</a> or some similar UTF-16 surrogate encoding puzzles me; RFC 3926 notes that:
+<blockquote><div><cite><a class="postlink" href="https://tools.ietf.org/html/rfc3629#section-3">https://tools.ietf.org/html/rfc3629#section-3</a> wrote:</cite>The definition of UTF-8 prohibits encoding character numbers between U+D800 and U+DFFF, which are reserved for use with the UTF-16 encoding form (as surrogate pairs) and do not directly represent characters.  When encoding in UTF-8 from UTF-16 data, it is necessary to first decode the UTF-16 data to obtain character numbers, which are then encoded in UTF-8 as described above.  This contrasts with <a class="postlink" href="https://www.unicode.org/reports/tr26/">CESU-8</a>, which is a UTF-8-like encoding <strong class="text-strong">that is not meant for use on the Internet</strong>. CESU-8 operates similarly to UTF-8 but encodes the UTF-16 code values (16-bit quantities) instead of the character number (code point). This leads to different results for character numbers above 0xFFFF; the CESU-8 encoding of those characters <strong class="text-strong">is NOT valid UTF-8</strong>.</div></blockquote>
+While your code indeed appears to treat this as invalid input, I'm puzzled why it should have to be specifically checked for and prohibited at all; to the extent it's invalid, it should be invalid without any specific reference to this not-meant-for-internet-usage surrogate encoding. What is the use case here; has some ADC software historically used such encodings?<br/>
+<br/>
+I realize that adchpp's <a class="postlink" href="https://bazaar.launchpad.net/~dcplusplus-team/adchpp/trunk/view/head:/adchpp/Text.cpp#L29">Text::utf8ToWc</a> has a similar "Ugly utf-16 surrogate catch" and I'm mostly confused why it's there at all. I was intending to remove it, so I'm especially curious why you specifically (re-)added it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p3281">
+<div class="inner">
+<dl class="postprofile" id="profile3281">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u376.html">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 14 Nov 2010, 13:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3281">
+<h3><a href="#p3281">Re: 4-byte utf-8 and DC software</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t956.html#p3281" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u376.html">klondike</a></strong> » </span>25 Nov 2014, 07:01
+			</p>
+<div class="content">The reason why they recommend treating surrogates as invalid is the same as why they recommend checking for character ranges: to prevent various ways of encoding the same thing which may (for example) allow going over filters.<br/>
+<br/>
+The reason why some encodings allow encoding surrogates is because there are systems using utf-16 (back when they thought 16 bits would be enough for everybody) which encode the 16byte value directly into utf-8 instead of handling the surrogates for example for storage in a database.<br/>
+<br/>
+The problem with such approach is that a system using utf-16 as its internal representation will decode the surrogates and then interpret them as the symbol they represent instead of converting the 3 or 4 byte utf-8 sequence with the symbol into the appropriate surrogate set. This causes information to be representable in two ways which is a bad thing for filters.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t956.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form action="#" method="post" onsubmit="return false">
+<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
+<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents">
+<fieldset class="display-options">
+<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
+<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
+<hr class="dashed"/>
+<input class="button2" name="sort" type="submit" value="Go"/>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+<div class="pagination">
+			11 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="t956_s10.html" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="t956_s10.html" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f18.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Talk”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

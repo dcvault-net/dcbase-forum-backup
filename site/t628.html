@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ADC specification - DCBase</title>
+<link href="/app.php/feed?sid=7a60e09914bb1261293efe00e58e3e04" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=7a60e09914bb1261293efe00e58e3e04" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=7a60e09914bb1261293efe00e58e3e04" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=7a60e09914bb1261293efe00e58e3e04" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=7a60e09914bb1261293efe00e58e3e04" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/18?sid=7a60e09914bb1261293efe00e58e3e04" rel="alternate" title="Feed - Forum - Protocol Talk" type="application/atom+xml"/> <link href="/app.php/feed/topic/628?sid=7a60e09914bb1261293efe00e58e3e04" rel="alternate" title="Feed - Topic - ADC specification" type="application/atom+xml"/>
+<link href="https://forum.dcbase.org/viewtopic.php?t=628" rel="canonical"/>
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="index.html" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-skip-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+</ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="index.html" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="index.html" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f74.html" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f19.html" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="18" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="f18.html" itemprop="url"><span itemprop="title">Protocol Talk</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="t628.html">ADC specification</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Here is the sub forum used for talking about ideas, implementations and suggestions or typical guidelines.<br/>
+<br/>
+Further info on extension or the protocol is found at our <a class="postlink" href="http://dcbase.org/wiki/index.php/Main_Page">Wiki</a><br/></div>
+<div class="action-bar bar-top">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t628.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2179">
+<div class="inner">
+<dl class="postprofile" id="profile2179">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u343.html" style="color: #AEB404;">andyhhp</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2179">
+<h3 class="first"><a href="#p2179">ADC specification</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u343.html" style="color: #AEB404;">andyhhp</a></strong> » </span>18 Feb 2010, 20:50
+			</p>
+<div class="content">Hello,<br/>
+<br/>
+I am a hub developer and owner and have implemented ADC in a python-based, distributed hub.<br/>
+<br/>
+However, I have a couple of queries about the specification (specifically as appears <a class="postlink" href="http://adc.sourceforge.net/ADC.html">http://adc.sourceforge.net/ADC.html</a> but this is the same as several other documents, including the adcportal wiki)<br/>
+<br/>
+In section 5, you introduce the BASE messages with the contexts of F,T,C and U.  First of all, whats the difference between the U and C of BASE as opposed to the U and C of BAS0?  If there is no difference, why are they re-specified.<br/>
+<br/>
+Also, what happens between F and T from BASE and H and I from BAS0?  Are they supposed to superseed the BAS0 commands?  (I have not come across a client which deals with "FSUP ADBASE ADTIGR" or "FSID &lt;sid&gt;" correctly even when the client sends ADBASE in its INF string, making F and T irrelevent).  In addition to this, F (from hub) from BASE conflicts with F (feature broadcast).  I know it is possble to distinguish them by looking forward in the string and working backwards, but this does cause ambiguity - "FSID ABCD" and "FSCH ABCD +TCP4 &lt;blah&gt;" are both valid messages as far as the protocol definition says, and worst of all, F is listed as valid contexts for both of them.<br/>
+<br/>
+In section 6.1, you show an example Client-Hub handshake.  For IINF, the parameters "HU1 HI1" appear but are never defined at all in the document.  What do they mean and why dont they appear in the description of the INF parameters?  (The reason that this problem comes up is that most clients seem fine to accept a IINF from a hub with the hub bit set in CT, but jUCy dies in agony if these parameters arnt present).<br/>
+<br/>
+<br/>
+Is there a properly written, full specification of the ADC protocol anywhere?  To even get our hub up and running, I had to reverse engineer the protocol from existing hubs, because the document seemed too ambiguous to follow correctly.<br/>
+<br/>
+Unfortunatly, this results in a situation where each client and hub responds differently to what is intended to be the same commands.<br/>
+<br/>
+<br/>
+I hate to sound as if I am complaining because I respect and activly encorage what you are doing, but having a complete specification to start with would make life so much easier for developers.<br/>
+<br/>
+~Andrew</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2182">
+<div class="inner">
+<dl class="postprofile" id="profile2182">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content2182">
+<h3><a href="#p2182">Re: ADC specification</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>20 Feb 2010, 14:16
+			</p>
+<div class="content">I forwarded your question in DCDev so far no one has a clue</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2183">
+<div class="inner">
+<dl class="postprofile" id="profile2183">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2183">
+<h3><a href="#p2183">Re: ADC specification</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>21 Feb 2010, 02:54
+			</p>
+<div class="content">1. I am not that much aware of  BAS0 vs BASE spec.. thoughh is that important? BASE spec is waht counts and BAS= is only testspec for BASE. If there is no real difference it might just have been rewritten for beauty and understandability..<br/>
+<br/>
+on "FSUP ADBASE ADTIGR" or "FSID &lt;sid&gt;"   these just have no meaning.  SUP message has currently only meaning from client to hub and back.. broadcast liek that is not done... <br/>
+<br/>
+imho the intentions of the protocol defs was creating some sort of layer .. i.e. hub would only need to know about first letter of a command received by a client and then check target and source SIDs and act uppon them ... (potentially only INF would need further checking) <br/>
+downside is that some commands can be created that have no meaning/are not useful .. upside is simplicity and openness for the future...<br/>
+<br/>
+btw F broadcasts are feature broadcasts... so broadcasts between client and other clients. Where FSUP might be possible some day if some features requires it ... SID is marked being only in client-hub context so no feature broadcasts should be made with that.<br/>
+<br/>
+<br/>
+ --<br/>
+In section 6.1,...  probably that were just made up example flags ...there is no reason for not adding new flags.. so they probably just represent some example..<br/>
+Though I would like to hear more about dying in agony.. without some more detailed error report in the jucy forum for example any misbehaviour found could be fixed in no time..<br/>
+<br/>
+ADC spec afair is as it stands there ... though I am sure that any clarifications on the protocol are welcome... helpful further ressources are the wiki and the DCDev people in the DCDev hubs...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2184">
+<div class="inner">
+<dl class="postprofile" id="profile2184">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u343.html" style="color: #AEB404;">andyhhp</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2184">
+<h3><a href="#p2184">Re: ADC specification</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u343.html" style="color: #AEB404;">andyhhp</a></strong> » </span>21 Feb 2010, 05:20
+			</p>
+<div class="content">@Quicksilver:<br/>
+<blockquote class="uncited"><div>BASE spec is waht counts and BAS= is only testspec for BASE</div></blockquote>
+
+I understand that but the specification makes no distinction between what is BAS0 and what is BASE.  It says "if BASE is present, we add these new contexts"<br/>
+<br/>
+Should that mean "these new four contexts override the previous ones" in which case H and I should no longer exist (this seems implied by the list of valid contexts with each command in section 5.3) or does it mean "these new four contexts should be used in conjunction with the previously defined ones" in which case H and I should mean the same as F(rom hub) and T.  Most clients I have tried using seem to use H and I even when the hub specified ADBASE and specifically not ADBAS0, although this is mainly based on StrongDC and LinuxDC++.<br/>
+<blockquote class="uncited"><div>on "FSUP ADBASE ADTIGR" or "FSID &lt;sid&gt;" these just have no meaning.</div></blockquote>
+
+I beg to differ.  The BASE protocol states in section 5 that the context F is used to mean "from hub" so as far as I can see, the hub is perfectly correct in replying with the F context rather than the I context.<br/>
+<blockquote class="uncited"><div>In section 6.1,... probably that were just made up example flags</div></blockquote>  It would be nice if this were clarified - all the other flags shown in the example handshakes are genuine and required.<br/>
+<blockquote class="uncited"><div>Though I would like to hear more about dying in agony</div></blockquote>
+
+Here is the raw line capture from the point of view of the hub: (&gt;: are incoming messages while &lt;: are outgoing ones)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>&gt;: HSUP ADBASE ADTIGR ADUCM0 ADBLO0
+&lt;: ISUP ADBASE ADTIGR
+&lt;: ISID VK54
+&lt;: IINF HU1 HI1 CT32 <a class="__cf_email__ inert" data-cfemail="7e30373f3a0a1b12121f3e3d1f131c0c171a191b" href="#" title="Disabled in this archive">[email protected]</a> DEADC/Dtella\snetwork\sat\sCambridge VEdtella-cambridge-1.2.4.5
+&gt;: BINF VK54 ID2POUVKZI47GUHHIQ5A56GTZ7JU4YRQQ5LUB6PBY PDQCSKXJQL3YTRSCTKOIJ7FVVQSA3Y773M4FTSW2Q NIandyhhp_jucy SL2 SS0 SF0 HN0 HR0 HO0 VEUC\sV:0.82 SUTCP4,UDP4,ADC0,KEY0 US12500000 U49086 KPSHA256/BEZWEILMD2EBTBCMEBFOY4K26QE2L3KKQG52F2IL3O EZUPNQN4QA I40.0.0.0
+&lt;: BINF MWYO ID3JX7VJINLK3JEZLOYD63EJK3L62IZEZGH5GM2RQ= I4127.0.0.1 SS0 SF0 VEDt:1.2.4.5/W US0 DS0 SL0 AS0 AM0 NI*Dtella
+ DELocal\sDtella\sBot HN1 HR1 HO1 CT31
+&lt;: BINF VK54 NIandyhhp_jucy VEUC\sV:0.82;Dt:1.2.4.5/W SS0 U49086 I40.0.0.0 SUTCP4,UDP4,ADC0,KEY0 SF0 HR0 KPSHA256/BEZWEI
+LMD2EBTBCMEBFOY4K26QE2L3KKQG52F2IL3OEZUPNQN4QA HN0 HO0 SL2 US12500000 ID2POUVKZI47GUHHIQ5A56GTZ7JU4YRQQ5LUB6PBY= CT0
+&lt;: ISTA 000 0.\sRequesting\sconfig\sfrom\scambridge.config.dtella.org...
+&gt;: HSTA 143 Need\sID\sin\sfirst\sINF FMID</code></pre></div>
+
+This was taken from jUCy 0.82.  The error would imply that one of the BINFs doesnt have an ID, but both clearly have.  It seems I remembered the problem incorrectly - it was a while since I attempted to debug it.  Is it possible that jUCy does not like the '=' padding at the end of the base64 encoded string and is flagging an error?<br/>
+<br/>
+@Toast:   <img alt=":(" class="smilies" height="17" src="images/smilies/icon_e_sad.gif" title="Sad" width="15"/><br/>
+<br/>
+~Andrew</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2185">
+<div class="inner">
+<dl class="postprofile" id="profile2185">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2185">
+<h3><a href="#p2185">Re: ADC specification</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>21 Feb 2010, 12:34
+			</p>
+<div class="content">yes jucy is stil not implementing full ADC spec/BASE<br/>
+jucy needs ID in first inf even though  it should not ...<br/>
+<br/>
+and there are some other things still missing...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2191">
+<div class="inner">
+<dl class="postprofile" id="profile2191">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="u54.html">Pietry</a> </dt>
+<dd class="profile-rank">Senior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 328</dd> <dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
+<dd class="profile-contact">
+<strong>Contact:</strong>
+<div class="dropdown-container dropdown-left">
+<a class="dropdown-trigger" href="#" title="Contact Pietry">
+<i aria-hidden="true" class="icon fa-commenting-o fa-fw icon-lg"></i><span class="sr-only">Contact Pietry</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents contact-icons">
+<div>
+<a class="last-cell" href="http://www.death-squad.ro/dshub" title="Website">
+<span class="contact-icon phpbb_website-icon">Website</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2191">
+<h3><a href="#p2191">Re: ADC specification</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username" href="u54.html">Pietry</a></strong> » </span>23 Feb 2010, 18:12
+			</p>
+<div class="content">1. BAS0 is pre ADC 1.0 BASE. The 0 means it's an early version of BASE.<br/>
+2. You're saying the spec is weird but you're not reading it. Context is different of message type !<br/>
+<br/>
+Contexts :<br/>
+F  	 From hub (hub-client TCP)<br/>
+T 	To hub (hub-client TCP)<br/>
+C 	Between clients (client-client TCP)<br/>
+U 	Between clients (client-client UDP) <br/>
+<br/>
+Message types:<br/>
+B  	 Broadcast  	 Hub must send message to all connected clients, including the sender of the message.<br/>
+C 	Client message 	Clients must use this message type when communicating directly over TCP.<br/>
+D 	Direct message 	The hub must send the message to the target_sid user.<br/>
+E 	Echo message 	The hub must send the message to the target_sid user and the my_sid user.<br/>
+F 	Feature broadcast 	The hub must send message to all clients that support both all required (+) and no excluded (-) features named. The feature name is matched against the corresponding SU field in INF sent by each client.<br/>
+H 	Hub message 	Clients must use this message type when a message is intended for the hub only.<br/>
+I 	Info message 	Hubs must use this message type when sending a message to a client that didn't come from another client.<br/>
+U 	UDP message 	Clients must use this message type when communicating directly over UDP. <br/>
+<br/>
+<blockquote class="uncited"><div><blockquote class="uncited"><div>on "FSUP ADBASE ADTIGR" or "FSID &lt;sid&gt;" these just have no meaning.</div></blockquote>
+<br/>
+<br/>
+I beg to differ. The BASE protocol states in section 5 that the context F is used to mean "from hub" so as far as I can see, the hub is perfectly correct in replying with the F context rather than the I context.</div></blockquote>
+
+F is the message type, not the context. in this case, the FSUP means a feature broadcast for the SUP message. According to the spec, the F message header is : f_message_header      ::= 'F' command_name separator my_sid separator (('+'|'-') feature_name)+<br/>
+and accordingly, your message must be similar to FSUP &lt;sid&gt; +TCP4 ADBASE<br/>
+<br/>
+Hope this clears things up, if you have more questions don't hesitate to ask.<br/>
+The only spec is the one you found, and it's quite clear to me.<br/>
+<br/>
+The HI1 and HU1 are old flags used in earlier versions that were removed, but the example remained as it was. However, it's not wrong since unknown parameters must be parsed like any other parameter.<br/>
+<br/>
+There is no need to reverse engineer, please ask what you need.</div>
+<div class="signature" id="sig2191">Just someone</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2192">
+<div class="inner">
+<dl class="postprofile" id="profile2192">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2192">
+<h3><a href="#p2192">Re: ADC specification</a></h3>
+<ul class="post-buttons">
+<li>
+<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
+</a>
+</li>
+</ul>
+<p class="author">
+<a class="unread" href="t628.html#p2192" title="Post">
+<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
+</a>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="u280.html" style="color: #AEB404;">Quicksilver</a></strong> » </span>24 Feb 2010, 00:41
+			</p>
+<div class="content">Due to the padding = on the ID  the hash is not matched against the Regexp for Tiger192 -&gt; the ID flag is dropped -&gt; no ID is detected by jucy ..<br/>
+and jucy does not fully implement ADC  i.e. needs ID present -&gt; without ID the user is invalid..<br/>
+<br/>
+in general in DirectConnect the usual padding =  are allways omitted!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<a class="button inert" href="#" title="Disabled in this archive">
+<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
+</a>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
+<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>
+<a accesskey="p" href="t628.html" title="Print view">
+<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form action="#" method="post" onsubmit="return false">
+<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
+<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents">
+<fieldset class="display-options">
+<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
+<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
+<hr class="dashed"/>
+<input class="button2" name="sort" type="submit" value="Go"/>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="f18.html">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Talk”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="f9.html"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="f10.html"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="f12.html"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="f20.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f41.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f56.html"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="f57.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="f58.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="f59.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="f75.html"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f13.html"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="f26.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f45.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f36.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f83.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="f14.html"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f27.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f35.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="f37.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="f40.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="f28.html"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f29.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="f30.html"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f31.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f32.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="f34.html"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="f38.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="f74.html"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="f19.html"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f33.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="f18.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f55.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f87.html"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="f80.html"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="f81.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="f82.html"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="f44.html"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="f50.html"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="f51.html"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f62.html"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="f63.html"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f15.html"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="f84.html"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="f86.html"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="f85.html"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="f88.html"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="f89.html"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="f90.html"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="f91.html"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="f92.html"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="f93.html"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="f94.html"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="f96.html"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="f54.html"> <span> Offtopic Discussions</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="index.html"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="index.html"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside">
+<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+
+</body>
+</html>

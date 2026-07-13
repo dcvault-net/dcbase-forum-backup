@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Authentication Issues - DCBase</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - DCBase" href="/app.php/feed?sid=b80783533164ae2c7e973c2003ac4beb">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/app.php/feed/news?sid=b80783533164ae2c7e973c2003ac4beb">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/app.php/feed/forums?sid=b80783533164ae2c7e973c2003ac4beb">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/app.php/feed/topics?sid=b80783533164ae2c7e973c2003ac4beb">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/app.php/feed/topics_active?sid=b80783533164ae2c7e973c2003ac4beb">	<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Bot Software" href="/app.php/feed/forum/28?sid=b80783533164ae2c7e973c2003ac4beb">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Authentication Issues" href="/app.php/feed/topic/749?sid=b80783533164ae2c7e973c2003ac4beb">	
+	<link rel="canonical" href="https://forum.dcbase.org/viewtopic.php?t=749">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=21" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=21" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="https://www.dcbase.org/" title="DCNF Home"><span class="site_logo"></span></a>
+				<h1>DCBase</h1>
+				<p>Empowering and innovating features for the peer to peer masses</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=b80783533164ae2c7e973c2003ac4beb" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="https://www.dcbase.org/" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">DCNF Home</span></a></span>
+										<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="./index.php?sid=b80783533164ae2c7e973c2003ac4beb" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Forums</span></a></span>
+
+											<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="75"><a href="./viewforum.php?f=75&amp;sid=b80783533164ae2c7e973c2003ac4beb" itemprop="url"><span itemprop="title">Software</span></a></span>
+															<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="28"><a href="./viewforum.php?f=28&amp;sid=b80783533164ae2c7e973c2003ac4beb" itemprop="url"><span itemprop="title">Bot Software</span></a></span>
+												</li>
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=28&amp;t=749&amp;sid=b80783533164ae2c7e973c2003ac4beb">Authentication Issues</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Discussion and questions about bot software<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=28&amp;t=749&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=28&amp;t=749&amp;sid=b80783533164ae2c7e973c2003ac4beb&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+	
+			<div class="pagination">
+			7 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p2750" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2750">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=380&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">pR0Ps</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 29</dd>		<dd class="profile-joined"><strong>Joined:</strong> 05 Dec 2010, 11:35</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2750">
+
+						<h3 class="first"><a href="#p2750">Authentication Issues</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=28&amp;p=2750&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2750&amp;sid=b80783533164ae2c7e973c2003ac4beb#p2750" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=380&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">pR0Ps</a></strong> &raquo; </span>05 May 2011, 05:28
+			</p>
+			
+			
+			
+			<div class="content">I'm writing an ADC bot in Delphi and I'm having a few issues with authenticated logins.<br>
+<br>
+I'm generating the Tiger hash with the <a href="https://code.google.com/p/delphidec/" class="postlink">Delphi Encryption Compendium</a> (a well-respected cryptographic suit for Delphi) so I'm reasonably confident that the hashing algorithm isn't the problem.<br>
+<br>
+I've written BinToBase32 and Base32ToBin functions which convert between UTF-8 and Base32 string encodings. They also add 0's to the end of the binary representation of the string if the length of it is not divisible by 5 (for BinToBase32) or 8 (for Base32ToBin) to make it encode properly . Once again, I'm reasonably sure the 2 functions work properly as I can convert a string back and forth with no difference to the original (except letters on the end due to the padding). I can provide the source for them if needed.<br>
+<br>
+When hashing the password and random data I use the following function:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function HashADCPassword(key : string; pass : UTF8String): string;
+begin
+  Result := BinToBase32(THash_Tiger.CalcBinary(pass + Base32ToBin(key), TFormat_Copy));
+end;
+</code></pre></div>
+Where 'THash_Tiger.CalcBinary' is the hashing function and 'TFormat_Copy' is the output format (meaning copy the binary data with no formatting).<br>
+<br>
+As far as I understand the ADC spec, this is the proper way of computing the hash to send back to the hubsoft.<br>
+<br>
+However, with another client I recorded this with a password of 'none':
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[Incoming] IGPA PDCQPYQG75AQFJBA4BD5QIYY2FTTQRVBAFG5BOTURPZ3Z4JNRIAA
+[Outgoing] HPAS 4EJM7GAJGMSKQZVUSHPGYAQ53HNNZGLVJN5SDNQ
+</code></pre></div>
+
+When I replicate this scenario (using the data the other client was given) with my program I get a final hash of 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>CP4POWXTLRIKQYFCXWG2FY56ECS3COSPCZNDGVI
+</code></pre></div>
+which is obviously wrong.<br>
+<br>
+I'm probably doing something really small wrong, but I've been stewing over it for a few days now and getting nowhere so I figured I'd ask for help.<br>
+<br>
+PS: I'm not sure if this is the right place for this, feel free to move it if it isn't.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2751" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2751">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=343&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">andyhhp</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 30</dd>		<dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2751">
+
+						<h3 ><a href="#p2751">Re: Authentication Issues</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=28&amp;p=2751&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2751&amp;sid=b80783533164ae2c7e973c2003ac4beb#p2751" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=343&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">andyhhp</a></strong> &raquo; </span>05 May 2011, 07:54
+			</p>
+			
+			
+			
+			<div class="content">2 possibilities:<br>
+<br>
+1) which hub/client are you testing against? I had a problem exactly like this when doing the authentication and it turned out that the other half was using a botched implementation.  I would suggest starting with hash(PID) == CID as at this point, the only thing which could go wrong is the hash.<br>
+<br>
+The other option is to run the tiger hash test suite <a href="http://www.cs.technion.ac.il/~biham/Reports/Tiger/test-vectors-nessie-format.dat" class="postlink">http://www.cs.technion.ac.il/~biham/Rep ... format.dat</a>, which might actually be a better starting point.  Please note that for test vector 6, you need to expand the ..'s - the message = "foo" is sadly not literally foo, despite its implications.<br>
+<br>
+There are two tiger hash functions - Tiger and Tiger2.  They differer only in how they pad the input stream up to the required block size.  However, this results in vastly different hashes.  See <a href="https://en.wikipedia.org/wiki/Tiger_hash" class="postlink">http://en.wikipedia.org/wiki/Tiger_hash</a> for a comparison.<br>
+<br>
+Hope this gives you a starting point<br>
+<br>
+~Andrew</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2754" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2754">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=380&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">pR0Ps</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 29</dd>		<dd class="profile-joined"><strong>Joined:</strong> 05 Dec 2010, 11:35</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2754">
+
+						<h3 ><a href="#p2754">Re: Authentication Issues</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=28&amp;p=2754&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2754&amp;sid=b80783533164ae2c7e973c2003ac4beb#p2754" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=380&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">pR0Ps</a></strong> &raquo; </span>05 May 2011, 19:40
+			</p>
+			
+			
+			
+			<div class="content">I should have mentioned that I was testing against ADCH++ v2.7.0 (r488) Release and the data was captured from ApexDC++ v1.4.3. The login by that client was successful and I'm testing my program against the same hub.<br>
+<br>
+I also just ran the hashing algorithm against that test suite and it passed with flying colours. It correctly hashed all of the large sampling of values I threw at it. It's definitely not the hashing function that's the problem.<br>
+<br>
+My UTF-8 -&gt; Base32 conversions don't add in the '=' for padding the final result up to a multiple of 8 characters. EX:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>BintoBase32 ('A') produces 'IE', not 'IE======'
+</code></pre></div>
+ADC doesn't use these though so it shouldn't matter, correct?<br>
+<br>
+I tried with a simple CID/PID pair that I know is working but...
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>CID = D2MTCFRCZLUJA7TLZDU2MJAYPWS2JZHNNZX5FUA
+PID = V2U7PQKHZXJ4M5QWNIO6SEB4NKN4CDHT6M2V4EA
+BinToBase32(THash_Tiger.CalcBinary(Base32ToBin('PID'), TFormat_Copy)) =&gt; 'VYV5AS63PRAQZDUFVQYZ2XNFZBLM6DYV6DVPHXY'
+</code></pre></div>
+
+Is this code
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function HashADCPassword(key : string; pass : UTF8String): string;
+begin
+  Result := BinToBase32(THash_Tiger.CalcBinary(pass + Base32ToBin(key), TFormat_Copy));
+end;
+</code></pre></div>
+the correct way of encoding the input and output of the hashing function? If the hashing function is right, as well as the Base32 &lt;-&gt; UTF8 conversions, that seems like the only point there could be a bug.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2755" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2755">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=343&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">andyhhp</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 30</dd>		<dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2755">
+
+						<h3 ><a href="#p2755">Re: Authentication Issues</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=28&amp;p=2755&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2755&amp;sid=b80783533164ae2c7e973c2003ac4beb#p2755" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=343&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">andyhhp</a></strong> &raquo; </span>05 May 2011, 21:18
+			</p>
+			
+			
+			
+			<div class="content"><blockquote class="uncited"><div>ADC doesn't use these though so it shouldn't matter, correct?</div></blockquote>
+This is a point of contention.  The spec states base32 which requires the padding to resolve ambiguity, but the spec BNF excludes the padding.  All DC++ based clients are happy with either, but Jucy is specifically not - it failes if you provide the padding.  I know this from implementing my hub.<br>
+<br>
+There is talk to make the spec more strict, because at the moment there are ambiguities which have the potential to cause problems.  Nothing has happened so far though.<br>
+<br>
+As for the PID/CID pair, dont you mean:<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>BinToBase32(THash_Tiger.CalcBinary(Base32ToBin(PID), TFormat_Copy))</code></pre></div>instead of <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>BinToBase32(THash_Tiger.CalcBinary(Base32ToBin('PID'), TFormat_Copy))</code></pre></div>?<br>
+<br>
+It would make a significant difference.<br>
+<br>
+As for the authentication, what exactly does the + operator do when given a LHS of UTF8String and a rhs of binary string?  Chances are that it is playing funny buggers with the btyes with high bits set.</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2757" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2757">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=380&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">pR0Ps</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 29</dd>		<dd class="profile-joined"><strong>Joined:</strong> 05 Dec 2010, 11:35</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2757">
+
+						<h3 ><a href="#p2757">Re: Authentication Issues</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=28&amp;p=2757&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2757&amp;sid=b80783533164ae2c7e973c2003ac4beb#p2757" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=380&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">pR0Ps</a></strong> &raquo; </span>09 May 2011, 14:13
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>andyhhp wrote:</cite>Dont you mean:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>BinToBase32(THash_Tiger.CalcBinary(Base32ToBin(PID), TFormat_Copy))</code></pre></div>instead of<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>BinToBase32(THash_Tiger.CalcBinary(Base32ToBin('PID'), TFormat_Copy))</code></pre></div>?</div></blockquote>
+
+Yes, I didn't copy-paste the code, I quickly typed up an example with my hash results and forgot to remove the quotes. Yes, that would probably mess something up  <img class="smilies" src="./images/smilies/icon_lol.gif" width="15" height="17" alt=":lol:" title="Laughing"> <br>
+
+<blockquote><div><cite>andyhhp wrote:</cite>
+What exactly does the + operator do when given a LHS of UTF8String and a rhs of binary string?  Chances are that it is playing funny buggers with the btyes with high bits set.
+</div></blockquote>
+
+I'm now converting each of the strings to a string of its binary representation, adding those strings together, converting it to a UTF8String, THEN hashing it. I get the same result.<br>
+<br>
+It has to be something with the way I encode/decode the 8-bit strings. My entire encoding unit is at this link if anyone wants to take a look.<br>
+<br>
+<a href="https://dl.dropbox.com/u/1430741/StrEncode.pas" class="postlink">http://dl.dropbox.com/u/1430741/StrEncode.pas</a></div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2760" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2760">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #B40404;" class="username-coloured">Pretorian</a>							</dt>
+
+						<dd class="profile-rank">Site Admin</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 214</dd>		<dd class="profile-joined"><strong>Joined:</strong> 21 Jul 2009, 10:21</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2760">
+
+						<h3 ><a href="#p2760">Re: Authentication Issues</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=28&amp;p=2760&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2760&amp;sid=b80783533164ae2c7e973c2003ac4beb#p2760" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=261&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #B40404;" class="username-coloured">Pretorian</a></strong> &raquo; </span>09 May 2011, 19:54
+			</p>
+			
+			
+			
+			<div class="content">Generate random data and store it in PID_raw, then;<br>
+PID = Base32( PID_raw )<br>
+CID = Base32( Hash( PID_raw ) )<br>
+<br>
+For GPA/PAS, assuming that '12345' is the random data supplied in GPA, then;<br>
+PAS = Base32( Hash( password + '12345' ) )</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p2777" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile2777">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=380&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">pR0Ps</a>							</dt>
+
+						<dd class="profile-rank">Junior Member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 29</dd>		<dd class="profile-joined"><strong>Joined:</strong> 05 Dec 2010, 11:35</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content2777">
+
+						<h3 ><a href="#p2777">Re: Authentication Issues</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=28&amp;p=2777&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=2777&amp;sid=b80783533164ae2c7e973c2003ac4beb#p2777" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=380&amp;sid=b80783533164ae2c7e973c2003ac4beb" style="color: #AEB404;" class="username-coloured">pR0Ps</a></strong> &raquo; </span>31 May 2011, 06:33
+			</p>
+			
+			
+			
+			<div class="content">I found the solution.<br>
+<br>
+The problem was when the Base32 encoded string (5 bits per character) was converted to an unencoded string (8 bits per character) there was a discrepancy. The Base32-encoded string to hash was 39 characters long. At 5 bits per character, that gives it a total of 195 bits. 195 bits divided into 8 bit characters gives 24 characters, plus 3 extra bits. In my original implementation, I added 0's on the end of the binary representation to complete the last character, rather than discarding them.<br>
+<br>
+When I started trying to hash the unencoded string (essentially just plain bytes of data), those extra 0's that got passed into the hashing function messed with it, giving me the wrong answer.<br>
+<br>
+As soon as I started chopping off the extra bits instead of padding them with 0's, everything started working beautifully.<br>
+<br>
+<br>
+EDIT: The link to the source code in the above post is now invalid, but the source code for the entire project is available on the <a href="https://sourceforge.net/projects/netchatlink/" class="postlink">Sourceforge project page</a> (the issue is fixed as of Alpha 5)</div>
+
+			
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=28&amp;t=749&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="button" title="This topic is locked, you cannot edit posts or make further replies.">
+							<span>Locked</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=28&amp;t=749&amp;sid=b80783533164ae2c7e973c2003ac4beb&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=28&amp;t=749&amp;sid=b80783533164ae2c7e973c2003ac4beb">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			7 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=28&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Bot Software”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=9&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-cat-link"> <span> Site &amp; Forum</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site News</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Problems</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Site Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=41&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Implemented Suggestions</span></a></li>
+																<li><a href="./viewforum.php?f=56&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Wiki</span></a></li>
+																<li><a href="./viewforum.php?f=57&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Suggestions &amp; Submitions</span></a></li>
+																<li><a href="./viewforum.php?f=58&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Request Account</span></a></li>
+																<li><a href="./viewforum.php?f=59&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=75&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-cat-link"> <span> Software</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Clients</span></a></li>
+																<li><a href="./viewforum.php?f=26&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=83&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; DC++</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hub Software</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=35&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=37&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; SDK</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Guides</span></a></li>
+																<li><a href="./viewforum.php?f=28&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bot Software</span></a></li>
+																<li><a href="./viewforum.php?f=29&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=30&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LUA Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=31&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=32&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Clientside Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=34&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Python Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=38&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Hubside Scripts</span></a></li>
+																<li><a href="./viewforum.php?f=74&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-cat-link"> <span> Protocols</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Advanced Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=33&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=55&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Ideas</span></a></li>
+																<li><a href="./viewforum.php?f=87&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Pushed ideas</span></a></li>
+																<li><a href="./viewforum.php?f=80&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Neo-Modus Direct Connect</span></a></li>
+																<li><a href="./viewforum.php?f=81&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Talk</span></a></li>
+																<li><a href="./viewforum.php?f=82&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Protocol Features</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-cat-link"> <span> Resources</span></a></li>
+																<li><a href="./viewforum.php?f=50&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tutorials</span></a></li>
+																<li><a href="./viewforum.php?f=51&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SDK/Libs</span></a></li>
+																<li><a href="./viewforum.php?f=62&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Documentation</span></a></li>
+																<li><a href="./viewforum.php?f=63&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Icon Packs</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hublists</span></a></li>
+																<li><a href="./viewforum.php?f=84&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Links</span></a></li>
+																<li><a href="./viewforum.php?f=86&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Chat logs</span></a></li>
+																<li><a href="./viewforum.php?f=85&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Other resources</span></a></li>
+																<li><a href="./viewforum.php?f=88&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-cat-link"> <span> Teams</span></a></li>
+																<li><a href="./viewforum.php?f=89&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Security</span></a></li>
+																<li><a href="./viewforum.php?f=90&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cryptography</span></a></li>
+																<li><a href="./viewforum.php?f=91&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Software</span></a></li>
+																<li><a href="./viewforum.php?f=92&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Interoperability</span></a></li>
+																<li><a href="./viewforum.php?f=93&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Protocol</span></a></li>
+																<li><a href="./viewforum.php?f=94&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Infrastructure</span></a></li>
+																<li><a href="./viewforum.php?f=96&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-forum-link"> <span> DC Network Foundation</span></a></li>
+																<li><a href="./viewforum.php?f=54&amp;sid=b80783533164ae2c7e973c2003ac4beb" class="jumpbox-forum-link"> <span> Offtopic Discussions</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://www.dcbase.org/" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>DCNF Home</span></a></span>									<span class="crumb"><a href="./index.php?sid=b80783533164ae2c7e973c2003ac4beb" data-navbar-reference="index"><span>Forums</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=b80783533164ae2c7e973c2003ac4beb" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+																<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=b80783533164ae2c7e973c2003ac4beb" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=b80783533164ae2c7e973c2003ac4beb" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.core.tidy_warnings&amp;sid=b80783533164ae2c7e973c2003ac4beb" width="1" height="1" alt="cron" /></div>
+
+<script src="./assets/javascript/jquery.min.js?assets_version=21"></script>
+<script src="./assets/javascript/core.js?assets_version=21"></script>
+
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=21"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=21"></script>
+
+
+
+</body>
+</html>

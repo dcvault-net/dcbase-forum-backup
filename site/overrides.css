@@ -1,0 +1,31 @@
+/* Overrides for the static DCBase forum archive (loaded after prosilver). */
+
+/* links to threads/forums/users that were never archived: red + inert */
+a.unavail, a.unavail:link, a.unavail:visited { color: #cc2200 !important; cursor: help; }
+a.unavail:hover { text-decoration: line-through; }
+
+/* disabled interactive functions (login, search, posting, ...) */
+a.inert { cursor: default; }
+a.inert:hover { text-decoration: none; }
+
+/* never-archived inline content */
+.na { color: #cc2200; font-weight: bold; font-size: 0.9em; }
+
+/* reconstruction note in the footer */
+.archive-note {
+  max-width: 1000px;
+  margin: 12px auto;
+  padding: 10px 14px;
+  border: 1px solid #c8c8c8;
+  border-left: 4px solid #cc2200;
+  background: #f7f7f7;
+  color: #444;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.archive-note a { color: #105289; }
+.archive-note .na { color: #cc2200; }
+
+/* the disabled search box / inputs shouldn't look active */
+input[type="text"], input[type="search"], input[type="password"] { cursor: default; }

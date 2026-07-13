@@ -103,6 +103,32 @@ FOOTER_NOTE = (
     'posting and other interactive functions are disabled.'
 )
 
+NOTFOUND_HTML = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not in this archive - DCBase</title>
+<link rel="stylesheet" href="/styles/prosilver/theme/stylesheet.css">
+<link rel="stylesheet" href="/overrides.css">
+<style>
+  .na-box { max-width: 640px; margin: 60px auto; padding: 24px 28px; border: 1px solid #c8c8c8;
+            border-left: 4px solid #cc2200; background: #f7f7f7; border-radius: 3px; }
+  .na-box h1 { font-size: 20px; margin: 0 0 10px; color: #cc2200; }
+  .na-box p { margin: 8px 0; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="na-box">
+  <h1>Not in this archive</h1>
+  <p>This thread, forum, post or page was never captured by the Internet Archive, so it is
+     not part of this static backup of the DCBase forum.</p>
+  <p><a href="/">&larr; Back to the forum index</a></p>
+</div>
+</body>
+</html>
+'''
+
 def process(src, out_name):
     soup = BeautifulSoup(open(src, encoding="utf-8", errors="replace").read(), "html.parser")
     for s in soup.find_all("script"):
@@ -184,36 +210,56 @@ for root, _, files in os.walk(RAW):
         if not fn.endswith(".html"): continue
         process(os.path.join(root, fn), fn)
 
-# Cloudflare Pages advanced-mode worker: original phpBB URLs -> static files
-WORKER_BODY = '''
+# set of valid page slugs (for the worker to 404 on missing content)
+valid = set()
+for k in filemap:
+    typ, rest = k.split(":", 1)
+    if typ not in ("topic", "forum", "profile"): continue
+    key = ast.literal_eval(rest) if rest.startswith(("[", "(")) else rest
+    if typ == "topic":   valid.add(f"t{key[0]}" if key[1] == "0" else f"t{key[0]}_s{key[1]}")
+    elif typ == "forum": valid.add(f"f{key[0]}" if key[1] == "0" else f"f{key[0]}_s{key[1]}")
+    elif typ == "profile": valid.add(f"u{key}")
+
+# Cloudflare Pages advanced-mode worker: serve original phpBB URLs, real 404 for missing
+WORKER_BODY = r'''
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    const path = url.pathname;
-    const q = url.searchParams;
-    let target = null;
+    const path = url.pathname, q = url.searchParams;
+    let slug = null, isContent = false;
     if (path === "/viewtopic.php") {
-      let t = q.get("t");
-      const p = q.get("p"), start = q.get("start");
+      isContent = true;
+      let t = q.get("t"); const p = q.get("p"), start = q.get("start");
       if (!t && p) t = PMAP[p];
-      if (t) target = "/t" + t + (start && start !== "0" ? "_s" + start : "");
+      if (t) slug = "t" + t + (start && start !== "0" ? "_s" + start : "");
     } else if (path === "/viewforum.php") {
+      isContent = true;
       const f = q.get("f"), start = q.get("start");
-      if (f) target = "/f" + f + (start && start !== "0" ? "_s" + start : "");
+      if (f) slug = "f" + f + (start && start !== "0" ? "_s" + start : "");
     } else if (path === "/memberlist.php") {
       const u = q.get("u");
-      if (q.get("mode") === "viewprofile" && u) target = "/u" + u;
+      if (q.get("mode") === "viewprofile" && u) { isContent = true; slug = "u" + u; }
     } else if (path === "/index.php" || path === "/app.php") {
-      target = "/";
+      return env.ASSETS.fetch(new Request(url.origin + "/", request));
+    } else if (/^\/[tfu]\d[\w]*$/.test(path)) {
+      isContent = true; slug = path.slice(1);
     }
-    // serve the archived content AT the original URL (no redirect)
-    if (target) return env.ASSETS.fetch(new Request(url.origin + target, request));
+    if (isContent) {
+      if (slug && VALID.has(slug))
+        return env.ASSETS.fetch(new Request(url.origin + "/" + slug, request));
+      const nf = await env.ASSETS.fetch(new Request(url.origin + "/404.html", request));
+      return new Response(nf.body, { status: 404, headers: nf.headers });
+    }
     return env.ASSETS.fetch(request);
   }
 };
 '''
 with open(os.path.join(SITE, "_worker.js"), "w", encoding="utf-8") as fh:
-    fh.write("const PMAP = " + json.dumps(pmap, separators=(",", ":")) + ";\n" + WORKER_BODY)
+    fh.write("const PMAP = " + json.dumps(pmap, separators=(",", ":")) + ";\n"
+             + "const VALID = new Set(" + json.dumps(sorted(valid), separators=(",", ":")) + ");\n"
+             + WORKER_BODY)
+
+open(os.path.join(SITE, "404.html"), "w", encoding="utf-8").write(NOTFOUND_HTML)
 
 print("=== dcbase build stats ===")
 for k in sorted(stats): print(f"  {stats[k]:6}  {k}")

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>UserCommand command - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=4786">UserCommand command</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			8 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p25793">
+<div class="inner">
+<dl class="postprofile" id="profile25793">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25793">
+<h3 class="first"><a href="#p25793">UserCommand command</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-08-17 04:28
+			</p>
+<div class="content"><!-- m --><a class="postlink" href="http://dcplusplus.sourceforge.net/wiki/index.php/UserCommand%20command?version=2">http://dcplusplus.sourceforge.net/wiki/ ... ?version=2</a><!-- m -->
+<br/>
+<br/>some (i.e. Opera and possibly me as well) argue that it needs a Supports
+<br/>but unless a Supports command is implemented soon, I'll do without.
+<br/>please comment on the above rfc</div>
+<div class="notice">
+					Last edited by <a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> on 2003-08-17 12:56, edited 1 time in total.
+									</div>
+<div class="signature" id="sig25793"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25808">
+<div class="inner">
+<dl class="postprofile" id="profile25808">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25808">
+<h3><a href="#p25808"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2003-08-17 11:55
+			</p>
+<div class="content">i think i was against $UserCommands last time it was discussed so i better be consistent with my earlier belifs. ;))
+<br/>
+<br/>First, usercommands is today visible in two frames (atleast my own mod), in the search-frame and the userlist-frame (when i think about it i have it in the filetransfer-frame aswell). Maybe it should be a good idea to seperate these sort of commands as they usualy are junk in the other frames. The problem with this is that the protocol suggestion and change becomes totaly dominated by one client DC++ as other clients might have different approach to how its gui works. I very much dislike changes in protocol which is devoted to one and only one client. Ok the $Support is a way to get around this, but hmm.. well... bit then maybee call it DC++UserCommand as the suggestion will be very DC++-specific.
+<br/>
+<br/>This comment will be more towards why and how instead of the comments to the protocol.
+<br/>
+<br/>Most usercommands which is not OP-related will end up in the wrong frame, thats atleast my oppinion. usercommands such that +help should probably be add into the main-hubframe (where the chat is displayed, and we only have copy-paste etc today).
+<br/>
+<br/>OPs on the other hand often ties its usercommand to different typ of reg/kick/ban/redirect etc, and then maybee we could have options for this aswell and not only mainchat/pm. Ok, your suggestion was to add raw-support, but i don't think thats a good idea. When you kick for example you want to make sure that you have not already kicked that user (this will often be the case when you kick alot in the searchframe) as dc++ does for the kick-command.
+<br/>
+<br/>and then we get into what the client should do with the usercommands recived, but thats another question.
+<br/>
+<br/>i would love to see how it works on a couple of hubs for some quasi-common users.
+<br/>
+<br/>i-will-not-use-it-and-be-against-it-but-that-doesn't-mean-its-a-bad-thing-to-impliment-ly'ers.</div>
+<div class="signature" id="sig25808">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25811">
+<div class="inner">
+<dl class="postprofile" id="profile25811">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25811">
+<h3><a href="#p25811"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-08-17 13:24
+			</p>
+<div class="content"><blockquote><div><cite>ivulfusbar wrote:</cite>First, usercommands is today visible in two frames (atleast my own mod), in the search-frame and the userlist-frame (when i think about it i have it in the filetransfer-frame aswell). Maybe it should be a good idea to seperate these sort of commands as they usualy are junk in the other frames.<br/>[snip=dc++specificness]</div></blockquote><br/>of course the %[mynick], %[file], %[nick], etc, etc, will have to be standardized. afaik only dc++ has usercommands atm, and the setup is quite clean imo, so I don't think there are any problems with standardizing those.<br/>adding options to get the commands in the correct frame is not a good thing ("other clients might have different [...] gui"). I think it would be both easier and better to let the client decide where to put the commands.<br/>i.e. it uses %[file]? -&gt; we only use/add it in/to frames that support the file variable<br/><br/><blockquote><div><cite>ivulfusbar wrote:</cite>DC++UserCommand</div></blockquote><br/>please don't ;)<br/><br/><blockquote><div><cite>ivulfusbar wrote:</cite>usercommands such that +help should probably be add into the main-hubframe (where the chat is displayed, and we only have copy-paste etc today).</div></blockquote><br/>true, I have nothing against adding usercommands to mainframe (copy-paste exists in oDC, not in regular dc++ :P )<br/><br/><blockquote><div><cite>ivulfusbar wrote:</cite>your suggestion was to add raw-support, but i don't think thats a good idea. When you kick for example you want to make sure that you have not already kicked that user (this will often be the case when you kick alot in the searchframe) as dc++ does for the kick-command.</div></blockquote><br/>ah, I see what you mean, although I personally don't have problems with sending garbage to the hub if one can't remember who you just kicked. but wouldn't this easily be solved if you remove all commands that use %[nick]?<br/>aren't there any better arguments against raw commands?<br/>(currently dc++ removes all usercommands except those that do not specify a specific hub or 'op' along with kick/redir for offline users)<br/><br/><blockquote><div><cite>ivulfusbar wrote:</cite>and then we get into what the client should do with the usercommands recived, but thats another question.</div></blockquote>
+<br/>I'd say add them (while connected) to the specific hub, unless the user has turned the automatically-fetch-usercommands option off. we could add them to a frame and such so everyone could enable/disable specific items, but I feel that it would be more bloat than useful as I think hubowners know what their OPs want/need (and users usually shouldn't get more than perhaps a +rules and +help)
+<br/>(simply showing the usercommands on request through mainframe text would be sufficient, I think)</div>
+<div class="signature" id="sig25811"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p31643">
+<div class="inner">
+<dl class="postprofile" id="profile31643">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content31643">
+<h3><a href="#p31643"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2003-11-01 01:21
+			</p>
+<div class="content">Sedulus, a couple of questions about the UserCommands.
+<br/>
+<br/>1. The automatically-fetch-usercommands option, when will that be implemented? I believe users should have the option to choose if they should recieve these commands or not, since they are pretty invasive, and most users won't have any idea what is going on when suddenly commands appear in their menu.
+<br/>
+<br/>2. In the wiki, only contexts 1, 2 and 4 are present. Are there more? I seem to be seeing 3 being used in Gadget's scripts, or don't they have any use? The link to version 2 seems to be faulty as well, but perhaps i'm looking at an old version.
+<br/>
+<br/>3. "$UserCommand 255 7" doesn't seem to be erasing all commands. Actually 255 doesn't seem to do nothing, no matter what context you use. Am i understanding something wrong? The wiki is somewhat confusing in places.. However, i did notice that all commands disappear when you disconnect from the hub. Bug or feature?
+<br/>
+<br/>That's it from me, keep up the good work =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p31646">
+<div class="inner">
+<dl class="postprofile" id="profile31646">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content31646">
+<h3><a href="#p31646"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2003-11-01 01:22
+			</p>
+<div class="content">eh.. oh yeah, using DC++ 0.301 of course. In case anyone missed that.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p32879">
+<div class="inner">
+<dl class="postprofile" id="profile32879">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32879">
+<h3><a href="#p32879"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-11-12 15:48
+			</p>
+<div class="content"><blockquote><div><cite>Todi wrote:</cite>1. The automatically-fetch-usercommands option, when will that be implemented? I believe users should have the option to choose if they should recieve these commands or not, since they are pretty invasive, and most users won't have any idea what is going on when suddenly commands appear in their menu.</div></blockquote><br/>there is no such option at the moment. either you code one yourself and submit a patch, or you'll have to say pretty please to some developer.<br/><br/><blockquote><div><cite>Todi wrote:</cite>2. In the wiki, only contexts 1, 2 and 4 are present. Are there more? I seem to be seeing 3 being used in Gadget's scripts, or don't they have any use? The link to version 2 seems to be faulty as well, but perhaps i'm looking at an old version.</div></blockquote><br/>3 == 1 | 2, they are ORed together. that means they will be used both in the 1 and in the 2 context.<br/><br/>faulty link: yes.. that should be plain <!-- m --><a class="postlink" href="http://dcplusplus.sourceforge.net/wiki/index.php/UserCommand%20command">http://dcplusplus.sourceforge.net/wiki/ ... %20command</a><!-- m --><br/><br/><blockquote><div><cite>Todi wrote:</cite>3. "$UserCommand 255 7" doesn't seem to be erasing all commands. Actually 255 doesn't seem to do nothing, no matter what context you use. Am i understanding something wrong? The wiki is somewhat confusing in places.. However, i did notice that all commands disappear when you disconnect from the hub. Bug or feature?</div></blockquote>
+<br/>255: yes.. this is not implemented in dc++ yet
+<br/>disappearing commands: yes, this is a feature, or rather, expected behaviour. else you could have UserCommands from one hub in another, which is plain useless.</div>
+<div class="signature" id="sig32879"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p32893">
+<div class="inner">
+<dl class="postprofile" id="profile32893">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32893">
+<h3><a href="#p32893"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2003-11-12 18:40
+			</p>
+<div class="content"><blockquote><div><cite>Sedulus wrote:</cite>there is no such option at the moment. either you code one yourself and submit a patch, or you'll have to say pretty please to some developer.</div></blockquote><br/>I'm trying to learn darnit <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> 'cause i'm not good at begging. Just sit tight for a couple of years, and it shall be done.<br/><br/><blockquote><div><cite>Sedulus wrote:</cite>3 == 1 | 2, they are ORed together. that means they will be used both in the 1 and in the 2 context.</div></blockquote><br/>Aaaah.. that explains a lot of things actually... thank you for clearing that up =)<br/><br/><blockquote><div><cite>Sedulus wrote:</cite>255: yes.. this is not implemented in dc++ yet<br/>disappearing commands: yes, this is a feature, or rather, expected behaviour. else you could have UserCommands from one hub in another, which is plain useless.</div></blockquote>
+<br/>That explains that too =) Thank you for taking the time to answer Sedulus.</div>
+<div class="signature" id="sig32893"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p33168">
+<div class="inner">
+<dl class="postprofile" id="profile33168">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content33168">
+<h3><a href="#p33168"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2003-11-14 23:20
+			</p>
+<div class="content">*sighs*.. I better hurry up learning.. because arne doesn't seem happy with the $Usercommand or something.. since he put in the new feature "Send once to nick" (raw-nick-limited) in DC++ 0.302 and Sedulus updated the $Usercommand wiki with the exact same feature.. but DC++ still doesn't support either that, or the 255. You want me to beg? I'll beg.. pleeease combine your efforts...  <img alt=":cry:" class="smilies" src="/images/smilies/icon_cry.gif" title="Crying or Very sad"/></div>
+<div class="signature" id="sig33168"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			8 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

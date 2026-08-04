@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Getting an unfinished file from TransferView - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=16305">Getting an unfinished file from TransferView</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			15 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p83137">
+<div class="inner">
+<dl class="postprofile" id="profile83137">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-02-08 21:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83137">
+<h3 class="first"><a href="#p83137">Getting an unfinished file from TransferView</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a></strong> » </span>2006-02-08 21:23
+			</p>
+<div class="content">Hi there!
+<br/>
+<br/>Well as the topic might have revealed I'm in need of getting the file name of the temporary file in the unfinished folder that is currently selected by the user. I also need the path to the unfinished folder.
+<br/>
+<br/>What I want to do is add a function that lets the user right click on any file and choose "Stream in VLC", which opens the temporary file in VLC. What I've got this far is the following code:
+<br/>
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>LRESULT TransferView::onStream(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/)<br/>{<br/>   <br/>   int i = -1;<br/>   while( ( i = ctrlTransfers.GetNextItem(i, LVNI_SELECTED) ) != -1)<br/>   {<br/>      ItemInfo* itemInfo = ctrlTransfers.getItemData(i);<br/>      tstring filePath = itemInfo-&gt;getText(COLUMN_PATH);<br/>      tstring fileName = itemInfo-&gt;getText(COLUMN_FILE);<br/>      tstring str = _T("\"c:\\Program Files\\VideoLAN\\VLC\\vlc.exe\" \"");<br/><br/>      str += filePath;<br/>      str += fileName;<br/>      str += _T("\"");<br/>                                 LPCTSTR p = str.c_str();<br/>      MessageBox(p, (LPCTSTR)"dafd");<br/>      _wsystem(str.c_str());<br/>   }<br/>   return 0;<br/>}<br/></code></pre></div>
+<br/>
+<br/>
+<br/>
+<br/>Now I know I shouldn't hard code the path to VLC or ever hard code that VLC has to be used here, but I'm still in a very early phase here so try to look past that. The message box is just for simple debugging, I wanted to se exactly what I was sending into _wsystem() function.
+<br/>
+<br/>The main issue here is that filePath and fileName contains the path and name of the soon to be finished file, but that is not what I want. What I want is the unfinished path and the name of the temporary file in it so that I can stream it while it is downloading. I have searched for it but to be honest I really don't even know where to look so if someone could just give med a hint or something I would really appreciate it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83140">
+<div class="inner">
+<dl class="postprofile" id="profile83140">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83140">
+<h3><a href="#p83140"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-02-08 21:38
+			</p>
+<div class="content">Have a look at getTempTarget.</div>
+<div class="signature" id="sig83140"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83156">
+<div class="inner">
+<dl class="postprofile" id="profile83156">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17117">Big Muscle</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 72</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-23 19:45</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83156">
+<h3><a href="#p83156"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17117">Big Muscle</a></strong> » </span>2006-02-09 10:19
+			</p>
+<div class="content">I use this:
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>      ItemInfo *ii = ctrlTransfers.getItemData(i);<br/><br/>      QueueItem::StringMap queue = QueueManager::getInstance()-&gt;lockQueue();<br/><br/>      string tmp = ii-&gt;Target;<br/>      QueueItem::StringIter qi = queue.find(&amp;tmp);<br/><br/>      string aTempTarget;<br/>      if(qi != queue.end())<br/>         aTempTarget = qi-&gt;second-&gt;getTempTarget();<br/><br/>      QueueManager::getInstance()-&gt;unlockQueue();<br/><br/>      WinUtil::RunPreviewCommand(wID - IDC_PREVIEW_APP, aTempTarget);<br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83189">
+<div class="inner">
+<dl class="postprofile" id="profile83189">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-02-08 21:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83189">
+<h3><a href="#p83189"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a></strong> » </span>2006-02-09 21:59
+			</p>
+<div class="content">Hi, thanks for the reply and sorry to be a bother but I can't seem to find: string Target in ItemInfo as you described. What exactly does Target hold? Is it just the file name, the path and file name or none of the above?
+<br/>
+<br/>So what I'm set out on doing is just finding the QueueItem that is currently selected so I can get a hold of the temp name of the file, and then to get the path of the unfinished directory.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83202">
+<div class="inner">
+<dl class="postprofile" id="profile83202">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17117">Big Muscle</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 72</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-23 19:45</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83202">
+<h3><a href="#p83202"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17117">Big Muscle</a></strong> » </span>2006-02-10 10:09
+			</p>
+<div class="content">ah, sorry <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> ii-&gt;Target is (ii-&gt;path + ii-&gt;file)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83266">
+<div class="inner">
+<dl class="postprofile" id="profile83266">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-02-08 21:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83266">
+<h3><a href="#p83266"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a></strong> » </span>2006-02-11 01:42
+			</p>
+<div class="content">Thanks alot for all the help, this is what I ended up with in case anyone is intrested in doing something similar.
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>LRESULT TransferView::onStream(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/)<br/>{<br/>   <br/>   int i = -1;<br/>   while( ( i = ctrlTransfers.GetNextItem(i, LVNI_SELECTED) ) != -1)<br/>   {<br/>      <br/>      ItemInfo* itemInfo = ctrlTransfers.getItemData(i);<br/>      tstring target = itemInfo-&gt;getText(COLUMN_PATH) + itemInfo-&gt;getText(COLUMN_FILE);<br/>      QueueItem::StringMap queue = QueueManager::getInstance()-&gt;lockQueue();<br/>      QueueItem::StringIter iter = queue.find( &amp;(Text::fromT(target)) );<br/><br/>      if(iter != queue.end())<br/>      {<br/>         string VLCPath = "\"C:\\Program Files\\VideoLAN\\VLC\\vlc.exe\" \"";<br/>         string tempTarget = iter-&gt;second-&gt;getTempTarget();<br/>         string execPath = VLCPath + tempTarget + "\"";<br/>         WinExec(execPath.c_str(), SW_SHOWNORMAL);<br/>      }<br/><br/>      else<br/>      {<br/>         MessageBox(_T("Please make sure a connection \nhas been established to the uploader"), _T("Can't stream this file"));<br/>      }<br/><br/>      QueueManager::getInstance()-&gt;unlockQueue();<br/>   }<br/>   return 0;<br/>}<br/></code></pre></div>
+<br/>
+<br/>I tried to figure out a way to get the local path to vlc dynamicaly and perhaps give out an error message if it wasen't found, but the best I could think of was the windows registry, but that is just not going to happen:P</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83268">
+<div class="inner">
+<dl class="postprofile" id="profile83268">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83268">
+<h3><a href="#p83268"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2006-02-11 01:49
+			</p>
+<div class="content">Why not simply look in HKEY_CLASSES_ROOT for the program to open e.g. .avi files?  Seems much cleaner.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83279">
+<div class="inner">
+<dl class="postprofile" id="profile83279">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101126">bastya_elvtars</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 164</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-06 13:39</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> HU</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83279">
+<h3><a href="#p83279"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101126">bastya_elvtars</a></strong> » </span>2006-02-11 11:23
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>Why not simply look in HKEY_CLASSES_ROOT for the program to open e.g. .avi files?  Seems much cleaner.</div></blockquote>
+<br/>
+<br/>I think VLC is the only one that can open these DCTMP files properly. I would ask the VLC developoers to make an installer that either adds an environment variable of the VLC path, or adds VLC to Path environment variable. Or let the user manually choose it, like in CZDC++.</div>
+<div class="signature" id="sig83279">Hey you, / Don't help them to bury the light... / Don't give in / Without a fight. (Pink Floyd)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83282">
+<div class="inner">
+<dl class="postprofile" id="profile83282">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-02-08 21:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83282">
+<h3><a href="#p83282"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a></strong> » </span>2006-02-11 13:22
+			</p>
+<div class="content">I could look for the VLC path in HKEY_LOCKAL_MACHINE\\Software\\VideoLAN but I'm not very skilled in reading from the registry and I couldn't find a good tutorial for it either so I quickly abandonned that idea. 
+<br/>
+<br/>So then I thought that VLC perhaps created an environment variable, but they didn't, and asking them to do it just for me would be kind of useless, since then my streaming function would only work for me which it already does with the hardcoded path.
+<br/>
+<br/>So when I get the time for it, I will probably try to make a setting in the settings gui where you fill in the path, and if you don't then the streaming function will tell you to fill it in. Does this seem reasonable or do you think it's stupid not to simply learn registry management?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83285">
+<div class="inner">
+<dl class="postprofile" id="profile83285">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101126">bastya_elvtars</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 164</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-06 13:39</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> HU</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83285">
+<h3><a href="#p83285"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101126">bastya_elvtars</a></strong> » </span>2006-02-11 13:51
+			</p>
+<div class="content">The best is to make the user fill it in/browse for it, since there are also zip packages for VLC so there are no entries created in that case.</div>
+<div class="signature" id="sig83285">Hey you, / Don't help them to bury the light... / Don't give in / Without a fight. (Pink Floyd)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83288">
+<div class="inner">
+<dl class="postprofile" id="profile83288">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83288">
+<h3><a href="#p83288"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-02-11 15:11
+			</p>
+<div class="content"><blockquote><div><cite>Snuttan wrote:</cite>I could look for the VLC path in HKEY_LOCKAL_MACHINE\\Software\\VideoLAN but I'm not very skilled in reading from the registry and I couldn't find a good tutorial for it either so I quickly abandonned that idea.</div></blockquote> Have a look at RegOpenKeyEx in DC++.</div>
+<div class="signature" id="sig83288"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83378">
+<div class="inner">
+<dl class="postprofile" id="profile83378">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-02-08 21:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83378">
+<h3><a href="#p83378"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a></strong> » </span>2006-02-12 20:34
+			</p>
+<div class="content"><blockquote class="uncited"><div>The best is to make the user fill it in/browse for it, since there are also zip packages for VLC so there are no entries created in that case.<br/></div></blockquote><br/>Very good point, thanks alot for the heads up, when I get the time I'll look into the dc++ gui<br/><br/><blockquote class="uncited"><div>Have a look at RegOpenKeyEx in DC++.<br/></div></blockquote>
+<br/>I looked into it as you said and it didn't look too hard so I created new version which reads your registry, I could more or less just copy what was written in WinUtil....not too creative I know but no point in reinventing the wheel right? Also I understand what the functions do so I have learned something new so thanks for the tip. One thing I don't fully understand though is why are the RegOpenKeyEx and RegQueryValueEx  preceeded by the :: operator when it doesn't seem to be in an unused namespace or class????? It compiles all the same with the :: operator omited from these calls.
+<br/>
+<br/>Anyway this is what the new code looks like
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>LRESULT TransferView::onStream(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/)<br/>{<br/>   <br/>   int i = -1;<br/>   while( ( i = ctrlTransfers.GetNextItem(i, LVNI_SELECTED) ) != -1)<br/>   {<br/>      <br/>      ItemInfo* itemInfo = ctrlTransfers.getItemData(i);<br/>      tstring target = itemInfo-&gt;getText(COLUMN_PATH) + itemInfo-&gt;getText(COLUMN_FILE);<br/>      QueueItem::StringMap queue = QueueManager::getInstance()-&gt;lockQueue();<br/>      QueueItem::StringIter iter = queue.find( &amp;(Text::fromT(target)) );<br/><br/>      if(iter != queue.end())<br/>      {<br/>         HKEY hk;<br/>         TCHAR buf[512];<br/>         tstring VLC;<br/>         if(::RegOpenKeyEx(HKEY_LOCAL_MACHINE, _T("SOFTWARE\\VideoLAN\\VLC"), NULL, KEY_READ, &amp;hk) == ERROR_SUCCESS)<br/>         {<br/>            DWORD bufLen = sizeof(buf) * sizeof(TCHAR);<br/>            ::RegQueryValueEx(hk, _T("InstallDir"), NULL, NULL, (LPBYTE)buf, &amp;bufLen);<br/>            ::RegCloseKey(hk);<br/>            VLC = buf;<br/><br/>            string VLCPath = Text::fromT(VLC);<br/>            VLCPath = "\"" + VLCPath + "\\vlc.exe\" \"";<br/>            string tempTarget = iter-&gt;second-&gt;getTempTarget();<br/>            string execPath = VLCPath + tempTarget + "\"";<br/>            WinExec(execPath.c_str(), SW_SHOWNORMAL);<br/>         }<br/><br/>         else<br/>         {<br/>            MessageBox(_T("VLC does not appear to be located on this computer, or it was installed using the .zip version.\nPlease use the VLC installer on your windows system"),<br/>                     _T("Error locating VLC"));<br/>         }<br/>      }<br/><br/>      else<br/>      {<br/>         MessageBox(_T("Please make sure a connection \nhas been established to the uploader"), _T("Can't stream this file"));<br/>      }<br/><br/>      QueueManager::getInstance()-&gt;unlockQueue();<br/>   }<br/>   return 0;<br/>}<br/></code></pre></div>
+<br/>
+<br/>I will still try to create gui stuff for those who used the .zip version...but that will come when I have some spare time....kind of rare these days:P</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83452">
+<div class="inner">
+<dl class="postprofile" id="profile83452">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83452">
+<h3><a href="#p83452"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-02-14 11:30
+			</p>
+<div class="content"><blockquote><div><cite>Snuttan wrote:</cite>One thing I don't fully understand though is why are the RegOpenKeyEx and RegQueryValueEx  preceeded by the :: operator when it doesn't seem to be in an unused namespace or class????? It compiles all the same with the :: operator omited from these calls.</div></blockquote> I think, the :: is there to call the function(s) in the global scope and override any 'standard' function that's elsewhere.</div>
+<div class="signature" id="sig83452"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83483">
+<div class="inner">
+<dl class="postprofile" id="profile83483">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-02-08 21:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83483">
+<h3><a href="#p83483"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106432">Snuttan</a></strong> » </span>2006-02-14 22:47
+			</p>
+<div class="content">ooh so if there were a namespace clash it would go with the one in the global namespace if one exists in it?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83487">
+<div class="inner">
+<dl class="postprofile" id="profile83487">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83487">
+<h3><a href="#p83487"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-02-15 02:39
+			</p>
+<div class="content"><blockquote><div><cite>Snuttan wrote:</cite>ooh so if there were a namespace clash it would go with the one in the global namespace if one exists in it?</div></blockquote>unfortunately dc++ doesn't use many namespaces.  <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/> But from what ullner said, yes. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			15 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

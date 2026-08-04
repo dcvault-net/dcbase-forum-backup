@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Optimized search - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=351">Optimized search</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			6 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p1597">
+<div class="inner">
+<dl class="postprofile" id="profile1597">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=305">yilard</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 11:04</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Slovakia</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1597">
+<h3 class="first"><a href="#p1597">Optimized search</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=305">yilard</a></strong> » </span>2003-01-20 21:46
+			</p>
+<div class="content">Optimized Search Algorithm Design
+<br/>by Vladimir 'Yilard' marko
+<br/>
+<br/>What is this about?
+<br/>--------------------------
+<br/>I consider current file search algorithm implemented to be one of the biggest weaknesses of DC++ (current version 0.22). This document describes replacement/improvement to this algorithm. I have also appended my partial implementation.
+<br/>
+<br/>Motivation
+<br/>----------------------
+<br/>Current file search algorithm is one of the most cpu consuming aspects of DC++. The time complexity of the algorithm depends roughly on number of client search requests coming from users on logged in hubs and the number of shared files.
+<br/>
+<br/>The dependency is clear: the more users on hubs, where I'm looged on, the more search requests per second. In fact the DC++ process tend to put almost 100% cpu load on my system when logged more than 5 hubs. My system is Athlon 900 Mhz, 512 MB RAM and Windows XP with 160 GB+ of share.
+<br/>
+<br/>With todays numbers of hub users that exceed 1000 in some cases, this problem becomes real pain. I have proved the assumption that search make up majority of this load by disabling search command processing and the DC++ cpu load quickly dropped from 100% to less than 5% (measured with Windows Task Manager). As I don't believe in disabling the search completely I started to analyze problem more in depth.
+<br/>
+<br/>What's wrong with current search algorhithm
+<br/>---------------------------------------------------------------
+<br/>First of all, the original algorhithm is more or less linear search and has been designed to return matching results as quick as possible. But according to seatrch spy, less than 10% of search requests are hits. This forces the program to go through all file records in 90% of cases.
+<br/>
+<br/>Smart algorithm (Reversing the priorities)
+<br/>---------------------------------------------------------------
+<br/>I have set my main goal not to return matches as quick as possible, but to discover that there are not matching file records as quickly as possible. Apparently, it's not possible to apply some kind of search tree-like technique (which would turn linear search in something like O(log n) complexity), because we need to do substring match.
+<br/>
+<br/>I have already started with Search Spy window so I will continue looking in what peaople are looking for. When you look to it closely, you will realized that about 90% of requests contain file extensions and these belong to very limited set (mp3, bin, avi, mpeg, zip...).
+<br/>
+<br/>My idea is to split the set of file records into several subsets according to whether they contain certain substring. This substrings may be defined as the extensions from limited set I have mentioned above. So we would have subset of  files containing mp3, subset of files containing bin, etc. These subsets may have intersections, which aren't important now. Now we can detect these significant strings in search request string and then limit the searching to particular subset.
+<br/>
+<br/>It also may be smart to arrange list of searched substrings so the longest string is searched first, because there are the greatest possibility of mismatch with long search strings. But I haven't forethought this idea yet.
+<br/>
+<br/>Maybe it would be interesting to conduct some kind of survey by observing which search string people are looking for but I thing my point are obvious just from look at the Search Spy.
+<br/>
+<br/>Simplified algorhithm
+<br/>-------------------------------
+<br/>I am not used to program in C++ and I'm completely confused by things like STL (as a Java and Delphi programmer I am not interested anyway). Also I didn't want to break things too much to make CVS imports of DC++ releases and synchronizing with my project too complicated, so I decided just to make smaller modifications to the original algorithm.
+<br/>
+<br/>Initialization: I have set up several groups based on most common file extensions - I called them pivots. Then I search for pivots as substrings in the name of each file remembering  which pivots were found (attribute mask). I remember the same thing for each directory (dirNameMask). Additionaly there is also record for each directory which carry set of all pivot groups where are all subdirectories and files in subdirectories of particular directory belong (subDirMask).
+<br/>Actual searching: First extract the pivot groups that will be searched by looking for pivot substrings in search request. The pivot substrings are then removed from search request string list (if it is possible). Then traverse the directory structure recursively, but will enter only subdirectories that contain files which belong to all the pivot groups in that the search request belong. Aditionally each file and directory is compared first according to pivot groups (please see the code) and then by searching for substrings.
+<br/>
+<br/>I designed the algorithm with having in mind that people usually have files organized in directories according to content (Mp3s, Movies, Install, etc). Then this algorithm allows to skip the whole directory subtrees which certainly don't contain searched files.
+<br/>I have implemeted this simplified new algorithm in my modified DC++ client. 
+<br/>
+<br/>Results
+<br/>-------------
+<br/>Note that this is not yet thoroughly tested but I have used it with my friends and seems to work well. All tests are done with simplified algorithm. I have tested even with 18 hubs and the DC++ CPU load peaks don't exceed 50% while maintaining under 20% most of the time (I have about 160 GB share with many mp3s, txt files and rar archives). I have measured over 40 search request per second.
+<br/>
+<br/>I did some artificial benchmarks by searching selected strings and found that the reduction in search time varies from 50% to 98% depending on search request.
+<br/>
+<br/>As you can see, proposed algorithm is faster than original when people request searching strings containing pivots (something like "britney spears mp3" "matrix 2 avi", etc. <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/> ) and doesn't help at all when searching for complete nonsense (like: "preteen rape lolita pr0n sex anal oral" <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/> ).  In the latter case the algorithm may be a bit slower but the slowdown doesn't exceed 2% even in this (worst) case. Please note, that implementing the complete algorithm instead of simplified would allow much better performance.
+<br/>
+<br/>I would like to hear about your opinion on speeding up the search algorithm. Maybe it's time to put DC++ into feature freeze as it is already pretty functional and to deal with those performance issues (e.g. search, overblown threads, etc.). 
+<br/>
+<br/>I can supply source code in case of serious interest. But please take the attached sources as and example, I know that what I have done is a mess (I haven't coded in C++ for some 5 years and I'm really not up to date with current libraries:P ). I don't want anyone to use clients modified with my search on public hubs (except me and friends I trust)!! This is due to possibility of bugs, that may harm other users.
+<br/>
+<br/>I'm sure that experienced windows C++ coder would do much better job implementing my design. Do you think any experienced developer can put some time into implementing proposed algorithm properly (or even better algorithm)? Feel free to ask if I my explanations are unclear, or you have any further questions.
+<br/>
+<br/>You can contact me on DC++ Chat Hub my nick is [sk]yilard.</div>
+<div class="signature" id="sig1597"><em class="text-italics">In the age of super-boredom/hype and mediocrity/celebrate relentlessness/menace to society --KMFDM</em></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1609">
+<div class="inner">
+<dl class="postprofile" id="profile1609">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-16 01:08</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1609">
+<h3><a href="#p1609"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a></strong> » </span>2003-01-21 01:47
+			</p>
+<div class="content">Nice idea!  I wonder, though, why so many search requests have extensions?  I know I don't include the extension in searches I make...  Could it be the "Automatically search for alternates" feature in DC++?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1613">
+<div class="inner">
+<dl class="postprofile" id="profile1613">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1613">
+<h3><a href="#p1613"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-01-21 07:12
+			</p>
+<div class="content"><blockquote><div><cite>Gumboot wrote:</cite>Nice idea!  I wonder, though, why so many search requests have extensions?  I know I don't include the extension in searches I make...  Could it be the "Automatically search for alternates" feature in DC++?</div></blockquote>
+<br/>
+<br/>Yes.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1704">
+<div class="inner">
+<dl class="postprofile" id="profile1704">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1704">
+<h3><a href="#p1704"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2003-01-22 13:41
+			</p>
+<div class="content">Heh, I got this as a mail as well a week ago, but I didn't have time to look into it, anyway, now it's here in the forums and that's good...(I even answered the mail now =)...anyway, this is the best researched patch / addition I've received so far (well, there's one more of this caliber that will show up in dc++ soon...), keep up the good work (I wish more people did like this...not just thoughtless "I want that / this / whatever")
+<br/>
+<br/>anyway, the idea is sound and I'll add it to (the next?) version, probably with some modifications of mine...for instance, could someone have a look at how many search with the type specified to something different than "all types" (i e movies, documents and so on...)...it would probably also make sense to make the autosearch specifiy a type when it searches, this way a lot of searches could be filtered out in an early stage...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1730">
+<div class="inner">
+<dl class="postprofile" id="profile1730">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1730">
+<h3><a href="#p1730"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2003-01-22 20:58
+			</p>
+<div class="content">(best thread so far in this forum)
+<br/>
+<br/>He has a good point, i have actually also thought a little bit about this and this is what i had in mind.
+<br/>
+<br/>My thoughts was to have a set for each datatype used by the protocol, 
+<br/>audio files, compressed files, documents, executables, pictures, video, folder and one for any. 
+<br/>If searched for a compressed file you would only need to search this set (and maybe the "any set").
+<br/>
+<br/>My second observation is this, when dc++ autosearches for files it doesn't use the ability to set datatype in the $Search. It always adds a 1 for any file. This combined with above would certainly speed up things.
+<br/>
+<br/>these-are-only-some-small-thoughts-i-have-had-about-search-and-i-agree-with-arne-that-this-how-a-feature-request-should-look-like-ly'ers ;))</div>
+<div class="signature" id="sig1730">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2449">
+<div class="inner">
+<dl class="postprofile" id="profile2449">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2449">
+<h3><a href="#p2449"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2003-01-30 12:38
+			</p>
+<div class="content">Alright, added the search thing in a slightly different form...without the mask for each file, this takes quite a bit of memory if there are a lot of files....(since the map&lt;string,int64&gt; would have to be replaced by map&lt;string,fileinfo&gt;, fileinfo being a struct with more info...)...I hope this is enough, could someone perform some profiling and see if searches are any faster?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			6 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

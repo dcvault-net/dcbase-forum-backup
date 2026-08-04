@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Search Bot Port - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="12" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=12" itemprop="url"><span itemprop="title">Developer's resort</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=12&amp;t=1579">Search Bot Port</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">A private forum for us Super-Humans, I even trust you to be able to edit your own posts =)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p8244">
+<div class="inner">
+<dl class="postprofile" id="profile8244">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 81</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-06 16:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ohio</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8244">
+<h3 class="first"><a href="#p8244">Search Bot Port</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a></strong> » </span>2003-03-20 21:18
+			</p>
+<div class="content">aDe has talked about a udp port created specifically for search bots.
+<br/>
+<br/>I think we all understand the benefits of this.
+<br/>
+<br/>Here is a thought that would produce the same effect, but would not require a second port for the hub, and no additional protocol commands.
+<br/>
+<br/>Normal Login Protocol
+<br/>C&gt;H: Connection
+<br/>H&gt;C: $Lock ...
+<br/>C&gt;H: $Key ...
+<br/>C&gt;H: $ValidateNick ...
+<br/>C&gt;H: $MyINFO ...
+<br/>H&gt;C: $HubName ...
+<br/>H&gt;C: $Hello ... (at this point $Hello is sent to all clients)
+<br/>
+<br/>Search Bot Login
+<br/>C&gt;H: Connection
+<br/>H&gt;C: $Lock ...
+<br/>C&gt;H: $Key ...
+<br/>C&gt;H: $ValidateNick ...
+<br/>H&gt;C: $HubName ...
+<br/>H&gt;C: $Hello ... (at this point $Hello is <strong class="text-strong">not</strong> sent to other clients)
+<br/>
+<br/>Knowing that the $MyINFO command is required to correctly join a hub.
+<br/>If this command is not sent by the client, the hub assumes the client is a search bot.
+<br/>
+<br/>When in this state...
+<br/><ul>only $Search, $SR, $GetNickList, $NickList and $Quit are valid messages send back and forth.</ul><ul>The hub would not send this client the following messages<br/>$To, $Hello (regarding other's entering the hub), $MyINFO, $Search, etc...</ul><ul>The hub would not accept the following command from the client<br/>$To, $GetINFO, $ConnectToMe, etc...</ul><ul>If $MyINFO is sent by the client then the hub assumes it is not a search bot and send a $Hello to the rest of the connected clients</ul>
+<br/>
+<br/>I think this would definatly help reduce network traffic on hubs, and may help encorage hub owners to allow search bots.
+<br/>
+<br/>Is this a good idea?
+<br/>Is this possible?
+<br/>
+<br/>Should I crawl back in my hole <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8245">
+<div class="inner">
+<dl class="postprofile" id="profile8245">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8245">
+<h3><a href="#p8245"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-20 21:31
+			</p>
+<div class="content">Basically, until you send MyINFO, your considered a searchbot? Sounds sane.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8248">
+<div class="inner">
+<dl class="postprofile" id="profile8248">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8248">
+<h3><a href="#p8248"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-03-20 22:18
+			</p>
+<div class="content">actually.. I already have the above in dch++ combined with a snippet of Lua:<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function dchpp.clientLine( client, data )<br/>    if string.lower( nick ) == "zsearch[moglo]" then<br/>        local ret,c,ip = string.find( data, "^%$Search ([0-9.]+):" )<br/>        if ret and ip == client:getIp() then<br/>            dchpp.sendToAll( data )<br/>        end<br/>        client:disconnect()<br/>        return dchpp.ACTION_DISCONNECTED<br/>    end<br/>end</code></pre></div>
+<br/>dch++ never sends the Hello's since no myinfo has been sent,
+<br/>but in the mean time, the search has been forwarded.
+<br/>
+<br/>so, it all sounds quite sane :)</div>
+<div class="signature" id="sig8248"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8260">
+<div class="inner">
+<dl class="postprofile" id="profile8260">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 81</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-06 16:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ohio</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8260">
+<h3><a href="#p8260"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a></strong> » </span>2003-03-20 23:54
+			</p>
+<div class="content">I don't know how golsearch works, but MoS++ doesn't send the search commands until the $hello &lt;nick&gt; is recieved from the hub.
+<br/>
+<br/>The $hello command does not need to be sent to the rest of the hub, but it does need to be sent to the search client.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8263">
+<div class="inner">
+<dl class="postprofile" id="profile8263">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8263">
+<h3><a href="#p8263"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-03-21 00:05
+			</p>
+<div class="content">well yeah, it does get sent to the client that logs on (I think even dc++ would choke on not getting a Hello)</div>
+<div class="signature" id="sig8263"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12886">
+<div class="inner">
+<dl class="postprofile" id="profile12886">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12886">
+<h3><a href="#p12886"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-27 07:38
+			</p>
+<div class="content">*furrows brow*  Couldn't this be an exploit waiting to happen?  If a client supports this then someone would be able to come in, and sit, hidden... also, bypassing any share/slot requirements.  Heck... with a decent HACK of DC++ you could que up hubs like a search bot do your search.. get your results, request downloads from people.. and not have to be in any hub.
+<br/>
+<br/>I guess that exploitation could become less and less as more users use DC++ and have the option checked to disconnect uploads from users not in hub.....  
+<br/>
+<br/>The hidden problem seems like it could be an issue though, while I was programming my client I introduced a bug where it didn't send the | after myInfo (and nothing was sent afterwards) and I was in the hubs I joined for a long time not being detected.  (of course I wouldn't of been able to do searches, but I am just saying this as in I effectivly was counted as not sending in $MyINFO)
+<br/>
+<br/>So.. to fix that hubs have to become more strict on how soon the MyINFO needs to be sent.
+<br/>
+<br/>Ahh well, just my thoughts on this <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12893">
+<div class="inner">
+<dl class="postprofile" id="profile12893">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12893">
+<h3><a href="#p12893"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-04-27 10:51
+			</p>
+<div class="content"><blockquote><div><cite>Moch wrote:</cite>Heck... with a decent HACK of DC++ you could que up hubs like a search bot do your search.. get your results, request downloads from people.. and not have to be in any hub.</div></blockquote>
+<br/>
+<br/>You wouldn't be able to sit hidden downloading since $ConnectToMe etc won't be allowed.
+<br/>With a decent 'hack' of dc++ you can do alot =)
+<br/>I don't think this is going to raise any further issues, though. There's nothing limiting you from doing the same thing today...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=12">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Developer's resort”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

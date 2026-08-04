@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Is there a way to stop the slot stealing exploit? - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=3260">Is there a way to stop the slot stealing exploit?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			26 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p17255">
+<div class="inner">
+<dl class="postprofile" id="profile17255">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17255">
+<h3 class="first"><a href="#p17255">Is there a way to stop the slot stealing exploit?</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-02 22:31
+			</p>
+<div class="content">There seems to be some kind of exploit where people can get a slot when your slots are full without you granting them one.  Someone told me that it had something or other to do with getting your file list or a small file so that it sort of doesn't count it as a slot at first and then they can somehow get a large file right after.  I'm hoping that if I ask here someone who is familiar with how this exploit is done could have ideas or at least details that could spark ideas.  I did have one of my own though I'm not really sure how good it is.  It seems to me that if your number of free slots goes negative (like it did last time someone somehow used this exploit on me) then the client could automatically close the upload in the upload list that was started at the latest time.  The client could just store the ticks variable or something like that of when the upload was started and compare when it goes negative if the file is larger than, say 1MB or so.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17256">
+<div class="inner">
+<dl class="postprofile" id="profile17256">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17256">
+<h3><a href="#p17256"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-02 22:35
+			</p>
+<div class="content">Oh yeah, another idea just occured to me that might help.  The client could automatically close each connection after a file is completed including the list.  If the exploit does indeed rely on that connection still being open or something like that, then it will become impossible.  Also, someone before mentioned that there was a problem with people who slot hog and download practically every file (if not every file) in a person's list and end up taking a long time.  If the connection is closed after each file, it would give someone else half a chance to get in.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17259">
+<div class="inner">
+<dl class="postprofile" id="profile17259">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17259">
+<h3><a href="#p17259"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-02 22:42
+			</p>
+<div class="content">Oops...  Uhm, does the open a slot automatically if speed goes below a certain amount option make the number of available slots go negative?  If so, then I'm sorry.  I had heard there was an exploit that would let people do that, and when I looked at my client the speed was well above that setting, but people were getting worse speeds since there was another person getting from me and I have a pretty limited upload.  Leechers aren't known for thinking ahead anyway (as in the type of leecher who WOULD cheat, not just any leecher.)  Anyway, I'll just disable that all the same since it doesn't seem to work the intended way in the long run.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17584">
+<div class="inner">
+<dl class="postprofile" id="profile17584">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6720">hypernurb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-20 01:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17584">
+<h3><a href="#p17584"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6720">hypernurb</a></strong> » </span>2003-06-04 23:43
+			</p>
+<div class="content">a thread of you talking to youself, iteresting.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17598">
+<div class="inner">
+<dl class="postprofile" id="profile17598">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17598">
+<h3><a href="#p17598"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-06-05 01:08
+			</p>
+<div class="content">I have yet to see a case of "too many uploads" that has not been caused by either use of the "automatically open a slot if speed is below xxkb" or  "automatically disconnect users who go offline."   In short, I have seen no such exploit.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17737">
+<div class="inner">
+<dl class="postprofile" id="profile17737">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17737">
+<h3><a href="#p17737"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-06 00:52
+			</p>
+<div class="content">Unfortunately, it turns out that there is.  I disabled that option to open a new slot, and someone still managed to do it.  I was talking and glanced at it one moment, then, next thing I know, there's four uploads running and it said slots -1/3.  Unfortunately, I don't pay attention enough to know which one cheated.  Since I'm just sick of the whole mess, I just had to close all four and let people get back in the proper way, watching for a while to see if the cheater pulled it again.  Which they haven't while I've been watching so far at least.  Probably not many people actually pull this exploit as it doesn't seem like it's terribly easy and if they had just a little common sense they'd realize they are just going to give themselves (and everyone else downloading from me) worse speeds that way.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17745">
+<div class="inner">
+<dl class="postprofile" id="profile17745">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17745">
+<h3><a href="#p17745"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-06-06 01:29
+			</p>
+<div class="content"><blockquote><div><cite>Nazo wrote:</cite>Unfortunately, it turns out that there is.</div></blockquote>
+<br/>Well, I think the burden of proof to show that there is an exploit is on you.  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>I too thought that there was a bug in DC++, but  I've yet to find an unexplained extra upload.  This topic is relatively high visibility, if someone can step in with methods to reproduce it (or smarter yet, PM me or one of the other mods ), then I'll be happy to admit I'm wrong.  <img alt=":mrgreen:" class="smilies" src="/images/smilies/icon_mrgreen.gif" title="Mr. Green"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17755">
+<div class="inner">
+<dl class="postprofile" id="profile17755">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17755">
+<h3><a href="#p17755"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-06 02:24
+			</p>
+<div class="content">I was rather hoping to find someone who knew about it or at least knew enough of how DC++ works to figure out how they did it.  Still, I'll try my best to keep a lookout to see if I can figure out exactly what it is that they do.  So far all I have is the part that someone mentioned to me a long time ago where it had something or other to do with getting the small file first.
+<br/>
+<br/>Ok, just asked around.  So far I haven't found someone who actually knows how it's done, though I did see one other who said they'd seen it happen to them, but someone did have an idea.  When they get the filelist, it opens the connection, but if you tell it to download, the client disconnects and waits for a bit before trying to get whatever you told it to download.  Maybe, though, there are some modified clients that don't disconnect after getting the list and don't wait the 30 seconds or whatever it is dc++ waits before trying to get the next file.
+<br/>
+<br/>Anyway, I'll keep looking.  Someday I'll probably catch them in the act I hope and see what they did.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17797">
+<div class="inner">
+<dl class="postprofile" id="profile17797">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content17797">
+<h3><a href="#p17797"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-06-06 11:11
+			</p>
+<div class="content"><blockquote><div><cite>Nazo wrote:</cite>I was rather hoping to find someone who knew about it or at least knew enough of how DC++ works to figure out how they did it.</div></blockquote>
+<br/>
+<br/>You did. If there's a REAL exploit GargoyleMT knows enought o find and help stomp it out. But, as he said, you'll have to provide some real evidence that an exploit exists.
+<br/>
+<br/>What you've suggested about small files first, won't do it. I have had extra slots opened too, but it always because someone re-connected within the 5-10 minutes after they got disconnected...
+<br/>
+<br/>HaArD</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17803">
+<div class="inner">
+<dl class="postprofile" id="profile17803">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17803">
+<h3><a href="#p17803"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-06-06 13:22
+			</p>
+<div class="content">"Someone told me that it had something or other to do with getting your file list or a small file so that it sort of doesn't count it as a slot at first and then they can somehow get a large file right after." 
+<br/>Nope. Never happened to me.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17841">
+<div class="inner">
+<dl class="postprofile" id="profile17841">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content17841">
+<h3><a href="#p17841"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-06-06 22:06
+			</p>
+<div class="content">me either, in fact, I have watched users grab my list, then get a couple files (nfo, sfv) then get disconnected because there are no slots available.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p19437">
+<div class="inner">
+<dl class="postprofile" id="profile19437">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8342">XmothX</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 14</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-18 18:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19437">
+<h3><a href="#p19437"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8342">XmothX</a></strong> » </span>2003-06-20 18:04
+			</p>
+<div class="content">correct me if i am wrong guys,
+<br/>i have been using DC++ for quite some time and 
+<br/>the slots discreprency (-1/4), means that you have
+<br/> 4 ppl connected to you so all you slots are taken up
+<br/>then at some time ago, you granted somebody a slot
+<br/>so they come into the hub and a slot is automatically handed 
+<br/>to them, maybe someone you dont remember.
+<br/>if this is the case i would say its correct, 
+<br/>the only complaint is that 
+<br/>DC++ has a grant a slot but not a ungrant a slot.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p19438">
+<div class="inner">
+<dl class="postprofile" id="profile19438">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19438">
+<h3><a href="#p19438"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-06-20 18:07
+			</p>
+<div class="content">that's not needed because the granted slot does not stay as such for very long <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p19460">
+<div class="inner">
+<dl class="postprofile" id="profile19460">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19460">
+<h3><a href="#p19460"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-06-21 01:08
+			</p>
+<div class="content"><blockquote><div><cite>XmothX wrote:</cite>the only complaint is that DC++ has a grant a slot but not a ungrant a slot.</div></blockquote>
+<br/>
+<br/>That's because DC++ gave that ability to Father Time.  He automatically revokes granted slots after 10 minutes, or after the person conects and successfully gets a slot.  This is only true for DC++, modifications (such as BCDC) can and have changed that.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p19605">
+<div class="inner">
+<dl class="postprofile" id="profile19605">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8522">snole</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-22 13:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19605">
+<h3><a href="#p19605">Am I wrong?</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8522">snole</a></strong> » </span>2003-06-22 13:56
+			</p>
+<div class="content">I've always thought it is because I use the function
+<br/>"Automaticly disconnect users who leave the HUB."
+<br/>
+<br/>If you check the Readme/Newbie help in the program, it says:
+<br/>
+<br/>"* if a user leaves the hub DC++ will close his slots, if the user is back within 10 minutes DC++ will grant him a slot.
+<br/>THIS CAN CAUSE YOUR UPLOAD GOING OVER MAXIMUM SET IN SETTINGS"
+<br/>
+<br/>I've interpeted it like this.
+<br/>If you got that automaticly disconnect thingy on, it will disconnect people leaving the HUB, but if they get back within 10 minutes, they get the slot back, even if all your slots are full. In case they were disconnected by ISP or some technical problem.
+<br/>
+<br/>Am I totally wrong on this <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p19617">
+<div class="inner">
+<dl class="postprofile" id="profile19617">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19617">
+<h3><a href="#p19617"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-22 17:30
+			</p>
+<div class="content">You may be correct in this.  It may explain how rare it is that this occurs since people have to get back on fast enough.  I sure hope you are because if there is some little trick to steal slots, thogh it may not be well known and/or it may be complicated and hard to do, people will learn of it and gladly abuse it.  And with slow connections like mine, one person abusing can hurt everyone.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p19619">
+<div class="inner">
+<dl class="postprofile" id="profile19619">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19619">
+<h3><a href="#p19619"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-06-22 17:38
+			</p>
+<div class="content">"* if a user leaves the hub DC++ will close his slots, if the user is back within 10 minutes DC++ will grant him a slot. 
+<br/>THIS CAN CAUSE YOUR UPLOAD GOING OVER MAXIMUM SET IN SETTINGS" 
+<br/>
+<br/>He's right, you know... i seem to have over looked this. However it's not big deal.
+<br/>
+<br/>...and how did you figure that this is abuseable?? Who, in the right mind, is going to disconnect from the hub, lose their slot, reconnect, only to get their slot back again, except at a slower speed. Only a fool would think like that! <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p19622">
+<div class="inner">
+<dl class="postprofile" id="profile19622">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19622">
+<h3><a href="#p19622"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-22 17:50
+			</p>
+<div class="content">I didn't say THAT was abusable.  I said that if there was a way of abuse of slots, it would need to be found out because eventually a lot of people would figure out how to do it and use it.  I don't consider this to be something that that user is going to do unless they purposefully want to decrease your bandwidth for everyone including themselves, which doesn't make sense unless they want to hurt someone else getting from you, which is still pretty silly.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p19664">
+<div class="inner">
+<dl class="postprofile" id="profile19664">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content19664">
+<h3><a href="#p19664"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-06-23 07:54
+			</p>
+<div class="content"><blockquote><div><cite>OLDoMiNiON wrote:</cite>"* if a user leaves the hub DC++ will close his slots, if the user is back within 10 minutes DC++ will grant him a slot. <br/>THIS CAN CAUSE YOUR UPLOAD GOING OVER MAXIMUM SET IN SETTINGS" <br/><br/>He's right, you know... i seem to have over looked this. However it's not big deal.<br/><br/>...and how did you figure that this is abuseable?? Who, in the right mind, is going to disconnect from the hub, lose their slot, reconnect, only to get their slot back again, except at a slower speed. Only a fool would think like that! <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/></div></blockquote>
+<br/>
+<br/>hmm... you just made me think of a possibility.... 
+<br/>
+<br/>I get a no slots available message
+<br/>I go into the users filelist and find a nice small file, like 15k
+<br/>While that's d/l I disconnect
+<br/>Then I re-connect 
+<br/>
+<br/>Do I get my slot back?
+<br/>Can I now use that slot for file &gt; 16k?
+<br/>
+<br/>HaArD</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p19666">
+<div class="inner">
+<dl class="postprofile" id="profile19666">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8522">snole</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-22 13:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19666">
+<h3><a href="#p19666">RE</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8522">snole</a></strong> » </span>2003-06-23 08:53
+			</p>
+<div class="content">You'll get your slot back, but only for the file you originally DL'ed.
+<br/>So it's not exploitable.
+<br/>
+<br/> <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p19802">
+<div class="inner">
+<dl class="postprofile" id="profile19802">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19802">
+<h3><a href="#p19802"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-06-24 17:39
+			</p>
+<div class="content"><blockquote><div><cite>HaArD wrote:</cite>hmm... you just made me think of a possibility.... <br/><br/>I get a no slots available message<br/>I go into the users filelist and find a nice small file, like 15k<br/>While that's d/l I disconnect<br/>Then I re-connect</div></blockquote><br/><br/>Check the changelog again.  I thought of this when I first thought there was a problem in DC++ handing out download slots. <br/><br/><blockquote><div><cite>Changelog for 0.231 wrote:</cite> -- 0.231 2003-02-04 --<br/>* Fixed so that a user won't be granted a slot when using a "free" slot if disconnected because of the <br/>  autodisconnect feature (thanks Todd Pederzani)</div></blockquote>
+<br/>
+<br/>Like I originally said, "Auto-Open new slot if speed is under ..." and "Disconnect users who leave the hub" are responsible for 99% of the "too many uploads" problems that people think they have.  (The remaining 1% is from manually granted slots.)
+<br/>
+<br/>It's all documented, perhaps it should be done better so people understand the consequences of their choices.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p19876">
+<div class="inner">
+<dl class="postprofile" id="profile19876">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content19876">
+<h3><a href="#p19876"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-06-25 09:08
+			</p>
+<div class="content">oops... missed that in the changelog...
+<br/>
+<br/>OK I'll stick with my original position, which is the same as yours, what exploit? Please provide some evidence...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p19986">
+<div class="inner">
+<dl class="postprofile" id="profile19986">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19986">
+<h3><a href="#p19986"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-06-26 02:18
+			</p>
+<div class="content"><blockquote><div><cite>HaArD wrote:</cite>OK I'll stick with my original position, which is the same as yours, what exploit? Please provide some evidence...</div></blockquote>
+<br/><img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  Well, we can use all the ivul thinkers we can.  That was just my contribution.
+<br/>
+<br/>This "exploit" could be reduced a lot if the function of the Disconnect Offline Users was changed.  I was thinking perhaps that the user could get a grace period (120 seconds?) after disconnecting to come back online.  If they don't, they get nixed, with no granted slot.
+<br/>
+<br/>Perhaps it needs to be more like 210 seconds, anything above the default time for DC++ to retry connecting to a disconnected hub (3 minutes?).
+<br/>
+<br/><span style="color: green">Show Me The Money</span> <img alt=":mrgreen:" class="smilies" src="/images/smilies/icon_mrgreen.gif" title="Mr. Green"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p19996">
+<div class="inner">
+<dl class="postprofile" id="profile19996">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 360</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-16 10:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content19996">
+<h3><a href="#p19996"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a></strong> » </span>2003-06-26 06:55
+			</p>
+<div class="content">Why would this work better than the current 10 minute timeout? Just set temp ban to 11 minutes and it works great <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>. There is no exploit here, if anyone is afraid of getting more uploaders than they have slots, just don't activate that option!?</div>
+<div class="signature" id="sig19996"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://whyrar.omfg.se">http://whyrar.omfg.se</a> - Guide to RAR and DC behaviour!<br/><a class="postlink" href="http://bodstrom.omfg.se">http://bodstrom.omfg.se</a> - BodstrÃ¶msamhÃ¤llet, LÃ¤nksamling om hoten mot vÃ¥r personliga integritet</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p20015">
+<div class="inner">
+<dl class="postprofile" id="profile20015">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content20015">
+<h3><a href="#p20015"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-06-26 11:39
+			</p>
+<div class="content"><blockquote><div><cite>cyberal wrote:</cite>Why would this work better than the current 10 minute timeout? Just set temp ban to 11 minutes and it works great <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>. There is no exploit here, if anyone is afraid of getting more uploaders than they have slots, just don't activate that option!?</div></blockquote>
+<br/>
+<br/>Your post seems to have the assumption that all of the extra downloaders people are seeing come from them getting kicked by the OPs.  This might be true in .se for .se users, but on the hubs I'm on, people's internet connections (or routes to the hub) do drop out occasionally, causing them to lose connection with the hub.  This will, of course, trigger a disconnection in those people who have the "Disconnect users who leave the hub" option on.  There's no rule that says that reconnecting will take 10 minutes. 
+<br/>
+<br/>I hope my suggestion makes more sense to you now, cyberal.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p20102">
+<div class="inner">
+<dl class="postprofile" id="profile20102">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content20102">
+<h3><a href="#p20102"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-06-27 01:03
+			</p>
+<div class="content">How about changing the disconnect to happen 10 minutes AFTER they disconnect instead of giving them 10 free minutes to re-connect and regain the slot.
+<br/>
+<br/>Problem solved....????
+<br/>
+<br/>HaArD
+<br/>
+<br/>P.S. This actually might work better at discouraging "pop in and leech" activity because after 10 minutes of downloading they will probably forget where they popped in......</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			26 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

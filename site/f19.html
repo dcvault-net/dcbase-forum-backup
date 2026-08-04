@@ -6,20 +6,20 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>DCBase - Advanced Direct Connect</title>
-<link href="/app.php/feed?sid=4c40671c61fa7ef56c5963fb428dbec1" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=4c40671c61fa7ef56c5963fb428dbec1" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=4c40671c61fa7ef56c5963fb428dbec1" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=4c40671c61fa7ef56c5963fb428dbec1" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=4c40671c61fa7ef56c5963fb428dbec1" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/>
+    
 <!--
 	phpBB style name: prosilver
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
 	Modified by:
 -->
-<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
 <!--[if lte IE 9]>
 	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
 <![endif]-->
-<link href="overrides.css" rel="stylesheet"/></head>
+<link href="/overrides.css" rel="stylesheet"/></head>
 <body class="nojs notouch section-viewforum ltr" id="phpbb">
 <div class="wrap" id="wrap">
 <a accesskey="t" class="top-anchor" id="top"></a>
@@ -48,17 +48,22 @@
 </ul>
 </div>
 </li>
-<li data-skip-responsive="true">
+<li data-last-responsive="true">
 <a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
 <i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
 </a>
 </li>
 <li class="rightside" data-skip-responsive="true">
 <a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
 </a>
 </li>
-</ul>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
 <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
 <li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 <span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
@@ -87,20 +92,17 @@
 </ul>
 <ul class="topiclist forums">
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Protocol Features" href="/app.php/feed?sid=4c40671c61fa7ef56c5963fb428dbec1?f=33">
+								<a class="feed-icon-forum" title="Feed - Protocol Features" href="/app.php/feed?f=33">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Protocol Features</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=33">Protocol Features</a>
 <br/>Here are whitepapers on ADC Features that can give you help.												
-												<div class="responsive-show" style="display: none;">
-															Topics: <strong>5</strong>
-</div>
-</div>
+											</div>
 </dt>
 <dd class="topics">5 <dfn>Topics</dfn></dd>
 <dd class="posts">10 <dfn>Posts</dfn></dd>
@@ -108,20 +110,17 @@
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=33&amp;p=3049#p3049" title="Re: CID, PID ? Authentication or Identification">Re: CID, PID ? Authentication…</a> <br/>
-																	by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=468">Emery</a> <a href="/viewtopic.php?f=33&amp;p=3049#p3049" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>01 May 2013, 15:58
+																	by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=468">Emery</a> <br/>Wed May 01, 2013 3:58 pm
 													</span>
 </dd>
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Protocol Talk" href="/app.php/feed?sid=4c40671c61fa7ef56c5963fb428dbec1?f=18">
+								<a class="feed-icon-forum" title="Feed - Protocol Talk" href="/app.php/feed?f=18">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Protocol Talk</span>
 								</a>
 							-->
@@ -129,9 +128,6 @@
 <br/>Here is the sub forum used for talking about ideas, implementations and suggestions or typical guidelines.<br/>
 <br/>
 Further info on extension or the protocol is found at our <a class="postlink" href="http://dcbase.org/wiki/index.php/Main_Page">Wiki</a>
-<div class="responsive-show" style="display: none;">
-															Topics: <strong>38</strong>
-</div>
 </div>
 </dt>
 <dd class="topics">38 <dfn>Topics</dfn></dd>
@@ -140,29 +136,23 @@ Further info on extension or the protocol is found at our <a class="postlink" hr
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=18&amp;p=3440#p3440" title="Re: new title">Re: new title</a> <br/>
-																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> <a href="/viewtopic.php?f=18&amp;p=3440#p3440" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>13 Apr 2015, 14:15
+																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> <br/>Mon Apr 13, 2015 2:15 pm
 													</span>
 </dd>
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read_subforum">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Protocol Ideas" href="/app.php/feed?sid=4c40671c61fa7ef56c5963fb428dbec1?f=55">
+								<a class="feed-icon-forum" title="Feed - Protocol Ideas" href="/app.php/feed?f=55">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Protocol Ideas</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=55">Protocol Ideas</a>
 <br/>Ideas for ADC may be presented here for others to review and point out flaws or further improve the idea.												
-												<div class="responsive-show" style="display: none;">
-															Topics: <strong>105</strong>
-</div>
-</div>
+											</div>
 </dt>
 <dd class="topics">105 <dfn>Topics</dfn></dd>
 <dd class="posts">510 <dfn>Posts</dfn></dd>
@@ -170,10 +160,7 @@ Further info on extension or the protocol is found at our <a class="postlink" hr
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=55&amp;p=4021#p4021" title="Re: DC++ protocol negotiation via ALPN">Re: DC++ protocol negotiation…</a> <br/>
-																	by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=898">Dexo</a> <a href="/viewtopic.php?f=55&amp;p=4021#p4021" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>29 Jan 2019, 13:13
+																	by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=898">Dexo</a> <br/>Tue Jan 29, 2019 1:13 pm
 													</span>
 </dd>
 </dl>
@@ -235,6 +222,10 @@ Further info on extension or the protocol is found at our <a class="postlink" hr
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
 <li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
@@ -244,21 +235,33 @@ Further info on extension or the protocol is found at our <a class="postlink" hr
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
 </ul>
 </div>
 </div>
 </div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
 </div>
-<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
 <div class="navbar" role="navigation">
 <div class="inner">
 <ul class="nav-footer linklist" id="nav-footer" role="menubar">
 <li class="breadcrumbs">
 <span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
 <li class="rightside">All times are <span title="UTC">UTC</span></li>
-<li class="rightside">
-<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
 </a>
 </li>
 <li class="rightside" data-last-responsive="true">
@@ -303,7 +306,6 @@ Further info on extension or the protocol is found at our <a class="postlink" hr
 <div>
 <a accesskey="z" class="anchor" id="bottom"></a>
 </div>
-
 
 
 

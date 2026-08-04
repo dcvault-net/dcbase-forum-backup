@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Data Reparation - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=8482">Data Reparation</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			17 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p44287">
+<div class="inner">
+<dl class="postprofile" id="profile44287">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18715">PsychoBrat</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-02 05:11</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Australia</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44287">
+<h3 class="first"><a href="#p44287">Data Reparation</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18715">PsychoBrat</a></strong> » </span>2004-03-02 05:22
+			</p>
+<div class="content">Hi,
+<br/>
+<br/>I had a look through the forums but didn't find anything about this, so sorry if its been suggested before.
+<br/>
+<br/>Data integrity can sometimes be a bit of a problem, so I was thinking a "repair from {source}" feature would be a good idea. For example, even if you downloaded the file correctly off someone else and their version was corrupt, you would be able to repair your download off someone elses copy.
+<br/>It would work by checksumming reasonably sized chunks of the file then comparing them against checksums of chunks of the target user's file. Maybe if it determines a chunk to be incorrect, it could then in turn checksum smaller chunks of that segment to minimise the amount of data that needs to be retransferred when the corrupt part is identified.
+<br/>
+<br/>Potential issue: This would obviously only work with other users with DC++, as there would be some work at their end.
+<br/>
+<br/>I know the concept isn't that complicated to understand, so its likely that the team would want to create their own system if they were to implement it, however if not...
+<br/>
+<br/>There is an open-source piece of software called ZIDRAV that already allows something extremely simmilar to this to be done, but through fairly manual methods (user creates a checksum, sends it to another user, they use that checksum along with a checksum of their own version to create a patch file that that user then sends back and the first user uses to patch their file.... *phew* lol). I have already asked the creator and he didn't object to having his code integrated into DC++ if it was wanted.
+<br/>Website: <!-- m --><a class="postlink" href="http://sourceforge.net/projects/zidrav/">http://sourceforge.net/projects/zidrav/</a><!-- m -->
+<br/>
+<br/>There is also another piece of software called fr1x that has been released under the GNU GPL and does a simmilar thing, but users a server application that the host user can add a list of files to, then clients can connect and use it to repair any of the files in the list.
+<br/>Website: <!-- m --><a class="postlink" href="http://www.r1ch.net/projects/fr1x/">http://www.r1ch.net/projects/fr1x/</a><!-- m -->
+<br/>
+<br/>Cheers,
+<br/>-jEFF</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44552">
+<div class="inner">
+<dl class="postprofile" id="profile44552">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5949">Smirnof100</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 03:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44552">
+<h3><a href="#p44552"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5949">Smirnof100</a></strong> » </span>2004-03-05 07:15
+			</p>
+<div class="content">ya... what if the person you are checksumming against has a corrupt version of the file...  it will go through chunk chunk chunk find a chunk that is different and then "fix" your good file with the corrupted one...  tell me a good way around that.   :twisted: 
+<br/>
+<br/>You could fix it by say getting 3 checksums from 3 ppl with the same sized files and choosing 1 of the users with matching checksums... and that could use one of the extra "filelist slot"
+<br/>
+<br/>And a better way than resonably sized chunks would be cut in half, find bad part, cut in half, find bad part, cut in half, find bad part... in my opinion anywayz...  then your data would be get 2 checksums, compare, get 2 checksums, compare, get 2 checksums, compare...  anywayz...</div>
+<div class="signature" id="sig44552">Build a Man a Fire, and he will be Warm for a day.
+<br/>Set a Man on Fire, and he will be Warm for the Rest of his Life.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p44642">
+<div class="inner">
+<dl class="postprofile" id="profile44642">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44642">
+<h3><a href="#p44642"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-03-06 08:06
+			</p>
+<div class="content">Well, since Tiger Tree Hashing (TTH) will be coming along in the next version (though it might not be stable...) it should be possible to request the entire hash tree for a file (we could call it $GetTTHFull or something).  Then we verify to check for corruption while the table was being transferred, i.e. recreate the hash tree from the bottom rung and see if it comes out the same (if the client feels like adding in this safeguard...). Then we use $GetZBlock or whatever to get the missing pieces.  I remember reading that the resolution would be 64k or 1/512th of the file, whichever is bigger.  Therefore, even for movies, you'll only have to redownload a little more than a meg for each corrupted segment.
+<br/>
+<br/>As for making sure that the person you're repairing from has an uncorrupted copy, I think we should leave that one up to the user who to verify off of... though it could use other sources provided they have the exact same file, which one could check by searching by the root TTH.
+<br/>
+<br/>And thanks for drawing me out of lurking mode and getting me to register. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44644">
+<div class="inner">
+<dl class="postprofile" id="profile44644">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44644">
+<h3><a href="#p44644"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-03-06 08:09
+			</p>
+<div class="content">I spend 15 minutes editing that to make it as readable as possible and to make sure the grammar is nice, then double post.  Today is not looking good for me.  <img alt=":?" class="smilies" src="/images/smilies/icon_confused.gif" title="Confused"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p44649">
+<div class="inner">
+<dl class="postprofile" id="profile44649">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44649">
+<h3><a href="#p44649"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-03-06 09:09
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>I spend 15 minutes editing that to make it as readable as possible and to make sure the grammar is nice, then double post.  Today is not looking good for me.  <img alt=":?" class="smilies" src="/images/smilies/icon_confused.gif" title="Confused"/></div></blockquote>*Fixed, I don't balme you for doublepost by misstake with the current status of the forum, hopefuklly speed will bwe regained soon.</div>
+<div class="signature" id="sig44649"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44737">
+<div class="inner">
+<dl class="postprofile" id="profile44737">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44737">
+<h3><a href="#p44737"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-03-07 04:32
+			</p>
+<div class="content">2nd pass:  looking at one of the other threads, it seems BCDC++ already uses something like $GetMeta TTH filename.  It would make sense to do it this way since it's more general.  Of course, having a lot of complete hash trees being transferred around would kind of cut into bandwidth, seeing as for files &gt;=32 megs the tree would be 24k in size (smaller than most bz2 file lists, but not insignificant)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p45224">
+<div class="inner">
+<dl class="postprofile" id="profile45224">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45224">
+<h3><a href="#p45224"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-12 01:07
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>As for making sure that the person you're repairing from has an uncorrupted copy, I think we should leave that one up to the user who to verify off of...</div></blockquote><br/><br/>Bitzi.com lets you look up files based on their tiger tree hash:<br/><br/><a class="postlink" href="http://bitzi.com/lookup/tree:tiger:BJR4ACISMCW4SA7YDXOMSHDK2PRK7HAZMR5IKLQ">DCPlusPlus-0.307.exe</a><br/><br/>Notice, in particular, the rating.<br/><br/>If we collaborate with the folks at Bitzi, we can have voting and meta-data submission inside DC++.  <span style="text-decoration: underline">This is where the awesomeness begins.</span><br/><br/><br/><blockquote><div><cite>PseudonympH wrote:</cite>the tree would be 24k in size</div></blockquote>
+<br/>I believe 24k is a maximum size for a tree depth of 9 (1019 values, including the root, plus a 24 byte/value).  Arne's GetMeta will only transfer the lowest level of the tree, which will be  12k for a depth of 9 (2^9*24).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p45236">
+<div class="inner">
+<dl class="postprofile" id="profile45236">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7686">Xan1977</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 627</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-06 01:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45236">
+<h3><a href="#p45236"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7686">Xan1977</a></strong> » </span>2004-03-12 01:49
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>Bitzi.com lets you look up files based on their tiger tree hash:<br/><br/><a class="postlink" href="http://bitzi.com/lookup/tree:tiger:BJR4ACISMCW4SA7YDXOMSHDK2PRK7HAZMR5IKLQ">DCPlusPlus-0.307.exe</a><br/><br/>Notice, in particular, the rating.<br/><br/>If we collaborate with the folks at Bitzi, we can have voting and meta-data submission inside DC++.  <span style="text-decoration: underline">This is where the awesomeness begins.</span></div></blockquote>
+<br/>This is the coolest thing I've seen in a long time.  Wow, awesomeness factor level overload.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p45251">
+<div class="inner">
+<dl class="postprofile" id="profile45251">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45251">
+<h3><a href="#p45251"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-12 02:15
+			</p>
+<div class="content"><blockquote><div><cite>Xan1977 wrote:</cite>This is the coolest thing I've seen in a long time.  Wow, awesomeness factor level overload.</div></blockquote>
+<br/>There are reasons to get excited about hashing.  Like <a class="postlink" href="http://magnet-uri.sourceforge.net/">magnet links</a>.
+<br/>
+<br/>If anyone's afraid of kazaa like fakes, this is a potential solution, or at least a temporary edge in the war.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p45801">
+<div class="inner">
+<dl class="postprofile" id="profile45801">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45801">
+<h3><a href="#p45801"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2004-03-17 08:37
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>PseudonympH wrote:</cite>As for making sure that the person you're repairing from has an uncorrupted copy, I think we should leave that one up to the user who to verify off of...</div></blockquote><br/><br/>Bitzi.com lets you look up files based on their tiger tree hash:<br/><br/><a class="postlink" href="http://bitzi.com/lookup/tree:tiger:BJR4ACISMCW4SA7YDXOMSHDK2PRK7HAZMR5IKLQ">DCPlusPlus-0.307.exe</a><br/><br/>Notice, in particular, the rating.<br/><br/>If we collaborate with the folks at Bitzi, we can have voting and meta-data submission inside DC++.  <span style="text-decoration: underline">This is where the awesomeness begins.</span><br/></div></blockquote>
+<br/><img alt="Image" class="postimage" src="http://4aal.nl/dl/s/emot-drool.gif"/>
+<br/>
+<br/>just a couple questions..
+<br/>
+<br/>- how will those magnet links look like? My idea is an URL with a couple parameters, the only required parameter is the hash code, but you could also add the "filename" tag as a parameter so that dc++ knows what filename it should put in the download queue (or does dc++ already knows what filename to use only by reading the hash code?)
+<br/>- Will the meta-data also mean mp3 bitrate? The way i would like it is one general "info" field for each file, and the filelist-parser could add all the info about a file there, so in case of mp3's you can add the bitrate and encoder there, or in case of movies you could add the resolution and codec, etc. Hope you have something similar in mind... 
+<br/>
+<br/>Well when these features are added, dc++ is allmost perfect in my opinion <img alt="8-)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/>, the only things i would like more is a google-like search and some minor interface changes (like grouping search and hubs windows)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p45850">
+<div class="inner">
+<dl class="postprofile" id="profile45850">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45850">
+<h3><a href="#p45850"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-03-17 21:24
+			</p>
+<div class="content">No, the filename is not included in the hash code, although it could just search by that hash (since it needs to find sources for it anyway...) and use the first filename that matches (simple) or the most popular (more complex).  Metadata such as mp3 bitrate is possible, yes, but I have no idea how arne is planning on implementing GetMeta, so I can't tell you if it will be in there.
+<br/>
+<br/>Basically, it is possible, but whether it will happen or not is a different story.  The problem with these kinds of things is that the protocol wasn't built with this kind of extendability in mind, so everything like this is simply a hack on top of the existing protocol.  Maybe if DCTNG and/or ADC ever get implemented it will be possible to do it without everything being so shaky.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p45995">
+<div class="inner">
+<dl class="postprofile" id="profile45995">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45995">
+<h3><a href="#p45995"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-19 00:27
+			</p>
+<div class="content"><blockquote><div><cite>Wisp wrote:</cite>- how will those magnet links look like?</div></blockquote><br/>Magnet URIs are a defined standard: <!-- m --><a class="postlink" href="http://magnet-uri.sourceforge.net/">http://magnet-uri.sourceforge.net/</a><!-- m --><br/><br/><br/><blockquote><div><cite>Wisp wrote:</cite>- Will the meta-data also mean mp3 bitrate? The way i would like it is one general "info" field for each file, and the filelist-parser could add all the info about a file there, so in case of mp3's you can add the bitrate and encoder there, or in case of movies you could add the resolution and codec, etc. Hope you have something similar in mind... </div></blockquote><br/>You've just re-described meta-data, something I've written about in a bunch of posts. =)<br/><br/>But yes, it would (likely) include mp3 data, avi lengths/codec/resolution, image resolution, and anything anyone wanted to contribute a patch for.  <br/><br/><blockquote><div><cite>Wisp wrote:</cite>the only things i would like more is a google-like search and some minor interface changes (like grouping search and hubs windows)</div></blockquote>
+<br/>Both of those are in the feature tracker, and get duplicated occasionally, they're unlikey to be forgotten. =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p55247">
+<div class="inner">
+<dl class="postprofile" id="profile55247">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=21558">Stacker</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-04-30 05:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55247">
+<h3><a href="#p55247"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=21558">Stacker</a></strong> » </span>2004-06-09 04:28
+			</p>
+<div class="content">Are Magnet links possible in DC++ now?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p55252">
+<div class="inner">
+<dl class="postprofile" id="profile55252">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55252">
+<h3><a href="#p55252"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2004-06-09 06:21
+			</p>
+<div class="content">Afaik, not in vanilla. However i believe several clones have this capability. Not sure if it's the exact same implementation or if they've done it independently however.</div>
+<div class="signature" id="sig55252"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p55308">
+<div class="inner">
+<dl class="postprofile" id="profile55308">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=21558">Stacker</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-04-30 05:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55308">
+<h3><a href="#p55308"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=21558">Stacker</a></strong> » </span>2004-06-09 19:29
+			</p>
+<div class="content">Not trying to sound ignorant or anything, but do you know of a site where I can get some information on this? On their current progress of the magnet link feature they are trying to implement? Or even where I can download their releases ?
+<br/>I thought DC was just DC.  lol</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p55310">
+<div class="inner">
+<dl class="postprofile" id="profile55310">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55310">
+<h3><a href="#p55310"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2004-06-09 19:46
+			</p>
+<div class="content"><blockquote class="uncited"><div> Added magnet link handler, size and filename not needed hash is enough <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> ... magnet link format : magnet:?xt=urn:tree:tiger:TTTTTTTTTT&amp;xl=999&amp;dn=Filename.Ext<br/>* Added magnet link copy to search frame.<br/>* Added handling for magnet link in main chat ... opens search frame with hash search ;o)<br/>* Added magnet link copy to directorylisting frame.</div></blockquote>
+<br/>
+<br/><a class="postlink" href="http://sourceforge.net/projects/reverseconnect/">Reverse Connect</a> (unsafe multi-source downloading, not recommended)
+<br/><a class="postlink" href="http://www.czdcplusplus.tk/">CZDC++</a>
+<br/><a class="postlink" href="http://snail.pc.cz/StrongDC/indexen.htm">StrongDC++</a>
+<br/>
+<br/>Those are the one i know have the feature. However, they all have more or less bad features, so i can't really recommend using either of them...</div>
+<div class="signature" id="sig55310"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p55341">
+<div class="inner">
+<dl class="postprofile" id="profile55341">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=23743">Morainaki</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-10 02:36</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55341">
+<h3><a href="#p55341"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=23743">Morainaki</a></strong> » </span>2004-06-10 02:38
+			</p>
+<div class="content">for magnet link pages go here:
+<br/>
+<br/><!-- m --><a class="postlink" href="http://magnet.revconnect.com/index.php?network=1">http://magnet.revconnect.com/index.php?network=1</a><!-- m -->
+<br/><!-- m --><a class="postlink" href="http://www.revconnect.com/forum/index.php?c=2">http://www.revconnect.com/forum/index.php?c=2</a><!-- m --></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			17 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Understanding.... - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=1454">Understanding....</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			6 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p7566">
+<div class="inner">
+<dl class="postprofile" id="profile7566">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7566">
+<h3 class="first"><a href="#p7566">Understanding....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-13 08:14
+			</p>
+<div class="content">Hello,
+<br/>
+<br/>I need some assistance understanding how dc++ *hangs* together. I have already read the code, read the docs, read the doxygen docs, read the faq, read the posts in here, read the protocol doco so I know what it is suppose to do but i cant quite get how it hangs together. I figure the code below starts everything up but what does it actually start up?
+<br/>Code excerpt from client/DCPlusPlus.cpp
+<br/>
+<br/>LogManager::newInstance();
+<br/>TimerManager::newInstance();
+<br/>ShareManager::newInstance();
+<br/>CryptoManager::newInstance();
+<br/>SearchManager::newInstance();
+<br/>ClientManager::newInstance();
+<br/>ConnectionManager::newInstance();
+<br/>DownloadManager::newInstance();
+<br/>UploadManager::newInstance();
+<br/>HubManager::newInstance();
+<br/>QueueManager::newInstance();
+<br/>FinishedManager::newInstance();
+<br/>ADLSearchManager::newInstance();
+<br/>
+<br/>These start a new instance of that class/object right? What does that actually mean its doing? It loads something into memory or starts a thread? How do these communicate to each other? How do they react to events? 
+<br/>
+<br/>This information would help me understand the structure of what is going on. I am familiar with C but C++ and windows programming are new to me. I keep seeing throw() statements in the code.... what does that mean? I understand most of the code but I just cant quite fathom how it all hangs together. I am nearly there... I can almost taste it... can you give me some clues to aid my understanding?
+<br/>
+<br/>Appreciate any help...
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7591">
+<div class="inner">
+<dl class="postprofile" id="profile7591">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7591">
+<h3><a href="#p7591"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-13 13:10
+			</p>
+<div class="content">DC++ seems to be pretty darn good about inheritance, etc.  If you're unfamiliar with C++, be prepared to do some browsing or reading to get up to speed.
+<br/>
+<br/>If you look further, you'll see Listener and Speaker classes, and some classes inheriting from other *Listener classes.  These, along with the fire(...) and onAction(...) functions, are actually how the most of the pieces communicate with each other.
+<br/>
+<br/>A mini-example of this is that when a download completes, the DownloadManager fires a message that says it completed an upload.  The FinishedManager, which is a listener of the DownloadManager class, gets that, and acts on the second parameter (the details of the finished download), and adds it to its list of finished downloads.  It then sends a message saying it added an entry, and the FinishedFrm, which is a listener of the FinishedManager class, sees that message and adds it to the window that shows the finished downloads.
+<br/>
+<br/>I suggest you pick some feature out of the feature requests tracker on sourceforge, and try to implement it.  You'll learn a lot about the code you come into contact with, as well as furthering DC++ as project. <img alt=";-)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>  That's what I'm still doing!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7648">
+<div class="inner">
+<dl class="postprofile" id="profile7648">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7648">
+<h3><a href="#p7648">Re: Understanding....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-13 21:16
+			</p>
+<div class="content"><blockquote><div><cite>rtfmoz wrote:</cite>[snip new instances]<br/>These start a new instance of that class/object right? What does that actually mean its doing? It loads something into memory or starts a thread? How do these communicate to each other? How do they react to events?</div></blockquote><br/>Each of these instantiates an object (creates it). As each of the classes instantiate are a Singleton (i.e. only one instance (object) of the class exists at any given time) some of them start running their own threads... but most just listen to events. GargoyleMT explained those.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>This information would help me understand the structure of what is going on. I am familiar with C but C++ and windows programming are new to me. I keep seeing throw() statements in the code.... what does that mean?</div></blockquote><br/>try, catch (as well as finally) and throw are part of a new shiny thing in the C++ world - exceptions. An exception is a way for a method to say "OK, this stinks to high heaven and someone needs to take note of it".<br/>For example, in many object-oriented languages, trying to access a reference to a structure/object results in a NullPointerException being throw (example is taken from Java). This gives the coder a way to say "<em class="text-italics">Well, if the data becomes null I can pop up a window telling the user that something has happened and shut down the app in a good way</em>" or "<em class="text-italics">Heck, who cares if the Version data got shafted? Let's press on!</em>".<br/>Depending on how serious an exception is (it can range from the dread NullPointerException to the rather mild IndexOutOfBoundsException) you can, as a programmer either a) ignore/"swallow" it (bad idea), b) handle it (good idea) or c) not handle it (often a good idea, and done by throwing it to the next fellow on the try...catch ladder).<br/>The way exceptions are handled is this (well, somewhat) :<br/>Imagine that the whole program is surrounded by a gigantic try block. If the program throws an exception (it is not handled by a try...catch statement on a lower level of the program) the program will terminate with the dreaded "Unhandled Exception" error message.<br/>When you create a try...catch statement you put the code you wish to "try" in the try part and the exception you wish to catch in the catch part. Neat, huh? But wait, there's more (Ginsu knives and nail polish not included)! You can catch several exceptions after one another, and an exception is a class which can inherit from other classes, and... perhaps an example is in order:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>bool sendStuff()<br/>{<br/>   Socket* s = NULL;<br/>   try<br/>   {<br/>      s = new Socket();<br/>      s-&gt;connect("localhost", 31337);<br/>      s-&gt;send(buffer, bufferSize, 0);<br/>      try<br/>      {<br/>         s-&gt;close();<br/>      }<br/>      catch(...)<br/>      {<br/>         // using ... means catch *everything*.<br/>         // this is not a good way to do things, but since some languages <br/>         // (&lt;cough&gt; Java &lt;cough&gt;) forces you to catch everything but <br/>         // runtime exceptions, getting used to catching stuff around<br/>         // close() methods will be good for you :)<br/>         <br/>         // here we do nothing... we don't care if the close() methods fails<br/>         // horribly since we only do it to be nice.<br/>      }<br/>   }<br/>   catch(SocketConnectionException ex)<br/>   {<br/>      // does not really exist buf if it would have, it would handle the <br/>      // exceptions that may happen when you try to connect to something<br/>      return false;<br/>   }<br/>   catch(SocketException ex)<br/>   {<br/>      // socketexception is thrown when something goes wrong with the socket<br/>      // the "SocketConnectionException" has inherited from SocketException<br/>      // so we could handle it here, but since we're being very OO in this <br/>      // example, we'll assume we've connected but something went wrong with <br/>      // the send() method<br/>      try<br/>      {<br/>         s-&gt;close();<br/>      }<br/>      catch(...)<br/>      {<br/>         // yada yada yada<br/>      }<br/>      return false;<br/>   }<br/>   catch(IOException ex)<br/>   {<br/>      // IOException is thrown when something goes wrong with the I/O.<br/>      // Duh. :)<br/>      // I can't think of anything to do here, but sockets are evil,<br/>      // mean things that like to throw exceptions faster than you<br/>      // can write "NotEnoughMemoryException".<br/>      try<br/>      {<br/>         s-&gt;close();<br/>      }<br/>      catch(...)<br/>      {<br/>         // here we do nothing... as usual<br/>      }<br/>      return false;<br/>   }<br/>   catch(Exception ex)<br/>   {<br/>      // Whoops! An Exception has been thrown (and we've handled all of <br/>      // its family that we care too... Ouch.<br/>      // This means that something is seriously out of whack...<br/>      // mayhap a NullPointerException or something equally bad.<br/>      <br/>      // We'll not handle this; that's for methods with more cunning <br/>      // than us<br/>      <br/>      throw ex;<br/>   }<br/>   return true;<br/>}</code></pre></div><br/>For the inquiring mind, this code <strong class="text-strong">should</strong> do the same, and with less lines of code (but it is only guaranteed to work on Java 1.3) :<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>bool sendStuff()<br/>{<br/>   Socket* s = NULL;<br/>   try<br/>   {<br/>      s = new Socket();<br/>      s-&gt;connect("localhost", 31337);<br/>      s-&gt;send(buffer, bufferSize, 0);<br/>   }<br/>   catch(SocketConnectionException ex)<br/>   {<br/>      // yada yada... see above code<br/>      return false;<br/>   }<br/>   catch(SocketException ex)<br/>   {<br/>      // *yawn*<br/>      return false;<br/>   }<br/>   catch(IOException ex)<br/>   {<br/>      // "zzzzzzzz"<br/>      return false;<br/>   }<br/>   catch(Exception ex)<br/>   {<br/>      // "&lt;BONG&gt; Your computer has experienced a serious error, and will now reboot you."<br/>      throw ex;<br/>   }<br/>   finally<br/>   {<br/>      try<br/>      {<br/>         s-&gt;close();<br/>      }<br/>      catch(...)<br/>      {<br/>         // here we do nothing... as usual<br/>      }<br/>   }<br/>   return true;<br/>}</code></pre></div><br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>I understand most of the code but I just cant quite fathom how it all hangs together. I am nearly there... I can almost taste it... can you give me some clues to aid my understanding?</div></blockquote>
+<br/>Hope this helps.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>A man's a man all his life; a woman's sexy until she's your wife!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7690">
+<div class="inner">
+<dl class="postprofile" id="profile7690">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7690">
+<h3><a href="#p7690"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-14 04:33
+			</p>
+<div class="content">Hey guys,
+<br/>
+<br/>Thank you for the advice. It is really appreciated and I mean it. I am a bit of a hot head so if I go off from time to time please excuse me. (in other forums)
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7734">
+<div class="inner">
+<dl class="postprofile" id="profile7734">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7734">
+<h3><a href="#p7734"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-14 13:04
+			</p>
+<div class="content">Not a problem. I never mix topics (well, only sometimes) and I sometimes let my temper get the best of me, too.
+<br/>
+<br/>If you have any further questions about (D)C++, just post it here - I check all topics on the board that are updated about twice daily, so I'll get back to you ASAP.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Despite the high cost of living, it remains a popular item.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7736">
+<div class="inner">
+<dl class="postprofile" id="profile7736">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7736">
+<h3><a href="#p7736"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-14 13:14
+			</p>
+<div class="content"><blockquote><div><cite>rtfmoz wrote:</cite>Thank you for the advice. It is really appreciated and I mean it. I am a bit of a hot head so if I go off from time to time please excuse me. (in other forums)</div></blockquote>
+<br/>
+<br/>Not a problem here either.  I've noticed that I tend to hop on new ideas and figure out what's wrong with them instead of what's right; this is how I handle my own feature ideas too.  You have some good ideas, and I'd like to see them in code, even if they aren't the way I'd like them done - it doesn't matter, since they'd be your creations.
+<br/>
+<br/>Besides, expanding someone's understanding (including my own) about the code is something that has an immediate payoff.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			6 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

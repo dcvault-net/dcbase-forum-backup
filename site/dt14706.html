@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>TriggerBoy Script - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="24" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=24" itemprop="url"><span itemprop="title">adchpp</span></a></span>
+<span class="crumb" data-forum-id="13" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=13" itemprop="url"><span itemprop="title">DCH++ General</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=13&amp;t=14706">TriggerBoy Script</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">DCH++ has been abandoned, this forum serves mainly as an archive<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			14 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p75028">
+<div class="inner">
+<dl class="postprofile" id="profile75028">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-05 05:02</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75028">
+<h3 class="first"><a href="#p75028">TriggerBoy Script</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a></strong> » </span>2005-01-17 07:02
+			</p>
+<div class="content">Ok. I have my hub up and running (thanks again to everyone who helped with that) and I've installed the TriggerBoy script.
+<br/>
+<br/>However, I want to edit it slightly so that it will trigger when i type, say -punch hub --&gt; then displaying "bugayev punches hub".
+<br/>
+<br/>I can get it to do this quite easily - I just added a new variable called [parm] which subsitutes everything EXCEPT the trigger word. 
+<br/>
+<br/>This is great.
+<br/>
+<br/>BUT
+<br/>
+<br/>How can I tell the script to only trigger if -punch appears at the start of a line:
+<br/>
+<br/>so it works for "-punch hub"
+<br/>
+<br/>but not for  "to punch, type -punch followed by the name of the thing you want to hit."
+<br/>
+<br/>(at the moment, it says "bugayev punches followed by the name of the thing you want to hit")
+<br/>
+<br/>Can anyone shed any light on how I can do this?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75029">
+<div class="inner">
+<dl class="postprofile" id="profile75029">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17379">shufty</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-30 08:08</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75029">
+<h3><a href="#p75029"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17379">shufty</a></strong> » </span>2005-01-17 09:32
+			</p>
+<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>local punch = string.sub( msg, 1, 10 )<br/>if punch == "-punch hub" then <br/>dchpp.sendToAll( "* "..client:getNick().." punches hub|" ) <br/>return dchpp.ACTION_STOP <br/>end</code></pre></div>not looked at lua much, but i think this should do it</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75084">
+<div class="inner">
+<dl class="postprofile" id="profile75084">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=672">yakko</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 258</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-27 06:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75084">
+<h3><a href="#p75084"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=672">yakko</a></strong> » </span>2005-01-17 23:56
+			</p>
+<div class="content">there's a Me.lua script on the DCH++ page that does IRC style /me commands. My hub users really like that one.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75107">
+<div class="inner">
+<dl class="postprofile" id="profile75107">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-05 05:02</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75107">
+<h3><a href="#p75107"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a></strong> » </span>2005-01-18 07:37
+			</p>
+<div class="content">Ok, so I tried using the /me script instead. However, when I try and add any more commands, nothing gets parsed..
+<br/>
+<br/>Any LUA/DCH++ gurus got any pointers that I may be missing?
+<br/>
+<br/>Thanks</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75108">
+<div class="inner">
+<dl class="postprofile" id="profile75108">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6758">FleetCmd</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-20 17:19</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75108">
+<h3><a href="#p75108"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6758">FleetCmd</a></strong> » </span>2005-01-18 09:41
+			</p>
+<div class="content"><blockquote><div><cite>bugayev wrote:</cite>Ok, so I tried using the /me script instead. However, when I try and add any more commands, nothing gets parsed..<br/><br/>Any LUA/DCH++ gurus got any pointers that I may be missing?<br/><br/>Thanks</div></blockquote>
+<br/>
+<br/>Could you post the script you made?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75145">
+<div class="inner">
+<dl class="postprofile" id="profile75145">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-05 05:02</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75145">
+<h3><a href="#p75145"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a></strong> » </span>2005-01-19 00:45
+			</p>
+<div class="content">sorry, i completely forgot! <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/>
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>--Action script by Ben Carmichael<br/>--Taken from the /me script by Sedulus<br/><br/><br/>dchpp.loadLib( "math" )<br/><br/><br/>function dchpp.clientMessage( client, msg ) <br/>   <br/>   local user = client:getNick()<br/>   local cmd = nil<br/>   local parm = nil<br/><br/>   --substitutes for 3 letter commands<br/>   <br/>   local cmd = string.sub( msg, 1, 4 ) <br/>   <br/>   if cmd == "+me " or cmd == "/me " then <br/>      dchpp.sendToAll( "* "..user.." "..string.sub( msg, 5 ).."|" ) <br/>      return dchpp.ACTION_STOP <br/>   end <br/><br/>   --substitutes for 4 letter commands<br/><br/>   cmd = string.sub( msg, 1, 5 )<br/>   parm = string.sub( msg, 5 )<br/><br/>   local answer<br/>   local action<br/><br/>   if cmd == "-slap " or cmd == "+slap " then<br/>      <br/>      local numberOfOptions = 3<br/><br/>      action = {<br/><br/>      [1] answer = user.." slaps "..parm,<br/>      [2] answer = user.." hits "..parm.." in the face with a rotting fish!",<br/>      [3] answer = user.." spanks "..parm.."!",<br/><br/>      }<br/><br/>      local p = math.random(numberOfOptions)<br/><br/>      action[p]<br/><br/>      answer = user.." slaps "..parm<br/><br/>      dchpp.sendToAll( "* "..user.." slaps "..parm.."|" ) <br/>      return dchpp.ACTION_STOP <br/><br/>   end<br/>   <br/>   if cmd == "-nuke " or cmd == "+nuke " then<br/><br/>      local numberOfOptions = 2<br/><br/>      action = {<br/><br/>      [1] answer = user.." authorises a nuclear strike against "..parm.." and launches missiles!",<br/>      [2] answer = "Forces under the control of "..user.." find "..parm.." and carry out a deadly nuclear strike!",<br/><br/>      }<br/><br/>      local p = math.random(numberOfOptions)<br/><br/>      action[p]<br/>   <br/>   end<br/><br/><br/>   <br/>   <br/>   --substitutes for 5 letter commands<br/><br/>      <br/>   cmd = string.sub( msg, 1, 6 )<br/>   parm = string.sub( msg, 6 )<br/><br/>   if cmd == "-punch " or cmd == "+punch " then<br/><br/>      local numberOfOptions = 2<br/><br/>      action = {<br/><br/>      [1] answer = user.." punches "..parm.." in the nose!",<br/>      [2] answer = user.." punches "..parm.."!",<br/>      }<br/><br/>      local p = math.random(numberOfOptions)<br/><br/>      action[p]<br/><br/>   end<br/><br/><br/>      dchpp.sendToAll( "* "..answer.."|" ) <br/>      return dchpp.ACTION_STOP <br/><br/><br/>end</code></pre></div>
+<br/>
+<br/>It's not the most efficient way of doing it, obviously. The script DOES work when i comment out everything after the /me, but doesnt work for any of the other conditions. I've tried it with /me commented out and other stuff active, but that doesn't work. I'm completely stumped.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75151">
+<div class="inner">
+<dl class="postprofile" id="profile75151">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75151">
+<h3><a href="#p75151"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2005-01-19 01:40
+			</p>
+<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>   if cmd == "-slap " or cmd == "+slap " then<br/>      <br/>      local numberOfOptions = 3<br/><br/>      action = {<br/><br/>      [1] answer = user.." slaps "..parm,<br/>      [2] answer = user.." hits "..parm.." in the face with a rotting fish!",<br/>      [3] answer = user.." spanks "..parm.."!",<br/><br/>      }<br/><br/>      local p = math.random(numberOfOptions)<br/><br/>      action[p]<br/><br/>      answer = user.." slaps "..parm<br/><br/>      dchpp.sendToAll( "* "..user.." slaps "..parm.."|" ) <br/>      return dchpp.ACTION_STOP <br/><br/>   end<br/></code></pre></div><br/><br/>I don't know what you're trying to do here, but that sure as hell looks like incorrect lua code to me.  Try this:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if cmd == "-slap " or cmd == "+slap " then<br/><br/>   local action = {<br/>      user.." slaps "..parm,<br/>      user.." hits "..parm.." in the face with a rotting fish!",<br/>      user.." spanks "..parm.."!",<br/>   }<br/><br/>   local p = math.random( table.getn(action) )<br/><br/>   dchpp.sendToAll( "* "..action[p].."|" ) <br/>   return dchpp.ACTION_STOP <br/>end<br/></code></pre></div>
+<br/>You'll need to make the rest look like this code as well, of course. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75156">
+<div class="inner">
+<dl class="postprofile" id="profile75156">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=672">yakko</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 258</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-27 06:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75156">
+<h3><a href="#p75156"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=672">yakko</a></strong> » </span>2005-01-19 03:40
+			</p>
+<div class="content">the /me script appends what the user adds so <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>/me slaps everyone in the hub</code></pre></div> would say <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>*yakko slaps everyone in the hub</code></pre></div>
+<br/>
+<br/>You don't need to add a bunch of stuff then...let the users get creative with it themselves.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75157">
+<div class="inner">
+<dl class="postprofile" id="profile75157">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-05 05:02</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75157">
+<h3><a href="#p75157"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a></strong> » </span>2005-01-19 04:35
+			</p>
+<div class="content">Well, I tried substituting PseudoNymph's LUA for my own and there's still nothing. i even went so far as to put it into a new script, but nothing happened.
+<br/>
+<br/>Is there some kind of restriction on the use of SendToAll which could be stopping the message from being sent?
+<br/>
+<br/>Am I missing some critical piece of code?
+<br/>
+<br/>This is really starting to frustrate me.
+<br/>
+<br/>Yakko - my users do use /me for a lot of the stuff they do to each other! Its a great script, I just want  to provide a few shortcuts and fun ones for them to have without having to type the full sentence. I managed to get it working under SDCH, but that was vbscript and I have to say I'm a lot better at that than LUA!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75163">
+<div class="inner">
+<dl class="postprofile" id="profile75163">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6758">FleetCmd</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-20 17:19</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75163">
+<h3><a href="#p75163"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6758">FleetCmd</a></strong> » </span>2005-01-19 07:42
+			</p>
+<div class="content"><blockquote class="uncited"><div>   cmd = <strong class="text-strong"><span style="color: red">string.sub( msg, 1, 5 )</span></strong><br/>   parm = string.sub( msg, 5 )<br/><br/>   local answer<br/>   local action<br/><br/>   if cmd == <strong class="text-strong">"-slap "</strong> or cmd == "+slap " then <br/></div></blockquote>
+<br/>
+<br/>Your substring is only five characters long (string.sub: 1, 5), but in the if-then-condition, the "-slap " is 6... You should modify the cmd = ... lines to add one more character because of the spaces.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75166">
+<div class="inner">
+<dl class="postprofile" id="profile75166">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-05 05:02</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75166">
+<h3><a href="#p75166"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a></strong> » </span>2005-01-19 12:57
+			</p>
+<div class="content">brilliant!
+<br/>
+<br/>unfortunately, it still doesnt work <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>.
+<br/>
+<br/>for some reason, every time i have more than one set of triggers, NONE of them work. If i comment everything except /me,  then /me works.
+<br/>
+<br/> <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/> <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/> <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/> <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75169">
+<div class="inner">
+<dl class="postprofile" id="profile75169">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75169">
+<h3><a href="#p75169"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2005-01-19 13:21
+			</p>
+<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>-- vim:ts=4:sw=4:noet<br/><br/>dchpp.loadLib( "math" )<br/><br/>local function oneOf( tbl ) return tbl[math.random( table.getn( tbl ) )] end<br/><br/>local Actions = {<br/>    ["+me"] = function( nick, arg )<br/>        return "* " .. nick .. " " .. arg<br/>    end,<br/>    ["/me"] = function( nick, arg )<br/>        return "* " .. nick .. " " .. arg<br/>    end,<br/>    ["+slap"] = function( nick, arg )<br/>        return oneOf( {<br/>            "* " .. nick .. " slaps " .. arg,<br/>            "* " .. nick .. " hits " .. arg .. " in the face with a rotten fish",<br/>            "* " .. nick .. " spanks " .. arg,<br/>        } )<br/>    end,<br/>}<br/><br/>function dchpp.clientMessage( client, msg )<br/>    local ret,_,cmd,arg = string.find( msg, "^(%S+)%s+(.*)$" )<br/>    if not ret then<br/>        return<br/>    end<br/>    if Actions[cmd] then<br/>        dchpp.sendToAll( Actions[cmd]( client:getNick(), arg ) .. "|" )<br/>        return dchpp.ACTION_STOP<br/>    end<br/>end</code></pre></div></div>
+<div class="signature" id="sig75169"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75218">
+<div class="inner">
+<dl class="postprofile" id="profile75218">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-05 05:02</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75218">
+<h3><a href="#p75218"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101057">bugayev</a></strong> » </span>2005-01-20 02:33
+			</p>
+<div class="content">Thanks Sedulus *bows down and worships*
+<br/>
+<br/>That's done the trick nicely!
+<br/>
+<br/>Thanks to everyone who helped me with this one - its greatly appreciated!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75277">
+<div class="inner">
+<dl class="postprofile" id="profile75277">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75277">
+<h3><a href="#p75277"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2005-01-20 20:50
+			</p>
+<div class="content">Showoff <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			14 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=13">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “DCH++ General”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

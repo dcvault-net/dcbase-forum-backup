@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Distributed DC network - Page 1 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=2252&amp;start=10">Distributed DC network</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			73 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=2252&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=2252&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p11962">
+<div class="inner">
+<dl class="postprofile" id="profile11962">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 24</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-19 15:03</dd>
+</dl>
+<div class="postbody">
+<div id="post_content11962">
+<h3 class="first"><a href="#p11962">Security</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a></strong> » </span>2003-04-20 18:06
+			</p>
+<div class="content">My ideas to security issues:
+<br/>
+<br/>1. (The easier one...<img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>: Hubs shouldn't let users/clients be relays, Hub owners should setup relay servers and let some users connect to them.
+<br/>
+<br/>This is easy because: it won't bring up new threats, the trusted one is the Hub in the communication.
+<br/>
+<br/>The clients don't have to support relaying, they just have to be able to connect to a second address, and parse mass-messages coming from there too. It's not a big deal.
+<br/>
+<br/>Writing a HUB relay server is not a big thing too.
+<br/>
+<br/>2. (could be done some time later): Include some two key encoding to the system. A PGP like one. The HUB gives his public key to the client at login. The client connects to a relaying client (to a supernode), and checks every incoming message. (that means, that outgoing mass-messages should be encoded on the Hub's side).
+<br/>
+<br/>My question are:
+<br/>I don't know how much processing power is needed to encode the messages (it should make it faster, that the key can be relatively small - we can change it quite often, say every hour or so).
+<br/>
+<br/>Is there any private/public key encoding implementation that is available to including in OpenSource projects, and can be compiled on both Win32/Linux?
+<br/>
+<br/>2HaArD: we didn't use MHC. Our hakced NMDC hubs went down too often with more than 500 users, and they have always been running with 100% processor usage. 
+<br/>
+<br/>And the linux hub does support HUB linking - you see all the users on the linked HUBs, you can search/download. The problem is, that this implementation is done so, that there is no need to change on the client side. And because of that, the server side got a bit hard to stabilize.
+<br/>
+<br/>With some small changes in the clients, it should be able to achieve the same, and stay more stable.
+<br/>
+<br/>And older/other clients could connect directly to the Hub as now, utilizing the resources available there.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12008">
+<div class="inner">
+<dl class="postprofile" id="profile12008">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12008">
+<h3><a href="#p12008">Re: ddcp</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-20 22:45
+			</p>
+<div class="content"><blockquote><div><cite>seeSharp wrote:</cite>I don't think that the evolution has to go that way. We have been toying with some ratings systems, at the and it came out, that it is a lot of work to do and many users (not only fakers, but good sources too) disliked the idea. Many people hate being "watched".</div></blockquote><br/><br/>No, it doesn't have to go that way, but that way is probably the most efficient, natural way to get from here to there with the most utility being "grown" in the meantime. If you have the time to wait it is definately the right direction to go. If not, it would take more time and so perhaps you're better off jumping right in. However, by jumping right in to distributed hubs you'll be having a less efficient, less scalable system without nearly as many benefits as if you followed the more natural evolutionary path.<br/><br/>Specifically addressing what you said about ratings systems, it isn't a lot of work to do at all, and users dislike the very idea of uploading in the first place. For DC to work sacrifices have to be made, SOMEONE has to upload.  This is similar.<br/><br/><blockquote class="uncited"><div>As for number 2.: that is a different question I think.</div></blockquote>
+<br/>
+<br/>Number two will get you global namespaces, etc, which are very useful in any distributed application.  Multisource downloading will enable the system to scale much better. Without things like this you're going to hit technological walls where the system simply can't grow any further and begins to buckle under its own size. You could say that #1 removes social blockages to expansion while #2 removes technological walls.  See Gnutella for an example of a distributed system that hit these walls and failed.
+<br/>
+<br/>&lt;i&gt;And by the way, I don't want to change the Client/Hub modell at all, I do believe that this is part of the "DC" spirit, and thats the one that makes is so populat, and and makes it WORKING.&lt;/i&gt;
+<br/>
+<br/>To be sure, none of the steps I mention require an overhaul of the core of DC. And then I would disagree with your contention that it is actually working. I see DC as barely limping along, myself, especially considering where it COULD be.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12021">
+<div class="inner">
+<dl class="postprofile" id="profile12021">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12021">
+<h3><a href="#p12021"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-20 23:24
+			</p>
+<div class="content"><blockquote class="uncited"><div>1. (The easier one...: Hubs shouldn't let users/clients be relays, Hub owners should setup relay servers and let some users connect to them. </div></blockquote><br/>Okay, I have no issue with this, but it sounds much more like what I suggested anyway than this system of, for example:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>$Supports ... DDCP| <br/>$ddcReady2Relay 127.0.0.1:1413 30|<br/>$Supports ... DDCP|<br/>$ddcRelayServer 127.0.0.1:1413|<br/>$ddcRelayClient client B|<br/>$ddcRelayConnected nick|</code></pre></div><br/>(and I'm still curious why you don't just make them full hubs, if they're now special nodes trusted by ops anyway.)<br/><blockquote class="uncited"><div>2. (could be done some time later): Include some two key encoding to the system. A PGP like one. The HUB gives his public key to the client at login. The client connects to a relaying client (to a supernode), and checks every incoming message. (that means, that outgoing mass-messages should be encoded on the Hub's side). </div></blockquote><br/>Okay, with basically only other hubs having access to the distribution of messages, I'll agree this isn't strictly necessary - hubs are indeed already trusted. As soon as you bring in "at least 50-100 as trusted" users, though, I wouldn't accept a system without such cryptographic support; I don't believe you can reliably find that many truly trustworthy users.<br/><blockquote class="uncited"><div>And the linux hub does support HUB linking - you see all the users on the linked HUBs, you can search/download. The problem is, that this implementation is done so, that there is no need to change on the client side. And because of that, the server side got a bit hard to stabilize. <br/><br/>With some small changes in the clients, it should be able to achieve the same, and stay more stable.</div></blockquote><br/>I would again point to IRC. Whilst IRC clients are somewhat aware of the distributed nature of the network, they're only vaguely so, as they don't act as relays in any manner. For example, they can message users on a specific server, but the IRC server network actually routes that message, and the client simply sends it to its local server. I still see no need to modify existing clients with competent implemenations of linking.<br/><blockquote class="uncited"><div>However, by jumping right in to distributed hubs you'll be having a less efficient, less scalable system without nearly as many benefits as if you followed the more natural evolutionary path.</div></blockquote><br/>I'm not sure how doing this precludes following the path of evolution you propose, or makes it any more awkward.<br/><blockquote class="uncited"><div>Is there any private/public key encoding implementation that is available to including in OpenSource projects, and can be compiled on both Win32/Linux?</div></blockquote>
+<br/><a class="postlink" href="http://www.eskimo.com/~weidai/cryptlib.html">Crypto++</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12094">
+<div class="inner">
+<dl class="postprofile" id="profile12094">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12094">
+<h3><a href="#p12094"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-21 15:35
+			</p>
+<div class="content">The main bandwidth problem has been said to be searches so here are my views on this excellent conversation.
+<br/>
+<br/>Search request coming from ClientA uses virtually no bandwidth compared to request sent from hub to every user, telling them to return results to ClientA.
+<br/>
+<br/>Simplest solution here is the relay system mentioned above, let's walk trough the ideas presented on this topic again.
+<br/>
+<br/>ClientA: Connects to hub
+<br/>ClientA: Notifies it's compatible with relay listening and/or sending
+<br/>--Hub decides which RelayClient ClientA should connect to or if ClientA should become a RelayClient
+<br/>Hub: Sends mesage "Connect to RelayClientA" or "You are now a RelayClient"
+<br/>Hub: Sends message to RelayClients about new incoming RelayListeners
+<br/>
+<br/>Any search request to hub is then only sent to:
+<br/>Passive users
+<br/>Non Relay compatible clients (hub could allow only compatible clients...)
+<br/>RelayClients (obviously)
+<br/>
+<br/>If my understanding of the search system is correct this would help a lot to lower bandwidth usage on server and not be to hard to implement, but it requeres upgrading of both DC++ and the hub software. 
+<br/>
+<br/>Which means we need Arne and DCH++ on this. =)
+<br/>It's a good start to create larger hubs.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12166">
+<div class="inner">
+<dl class="postprofile" id="profile12166">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 24</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-19 15:03</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12166">
+<h3><a href="#p12166"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a></strong> » </span>2003-04-21 23:54
+			</p>
+<div class="content">Out experience has shown, that it's far from easy to synchronize two big HUBs with eachother. The first and smaller problem is, that both hubs have to be in the same "initial state" - HUB SW version, config, scripts, op logins/passwords.
+<br/>
+<br/>After that, each HUB has to make decissions - with it's own scripts, with it's own requests, state information, and from that, what it gets from the other HUB (or HUBs if we link 3 of them).
+<br/>
+<br/>The root of the problem is the outgoing traffic. And that can be reduced by adding simple relays into the system, which is technicaly a lot simplier to make than syncing 2-3-more HUBs together.
+<br/>
+<br/>Besides, writing a relaying station is not a big deal, and it can be made stable and working. After that, you have to install it, run, and you are ready. You don't have to update your relay station, when you update the HUB. You don't have to reconfigure it so often.
+<br/>
+<br/>And you don't have to stay on the same platform - you can run your HUB on win or linux and connect relay stations running on win AND linux.
+<br/>
+<br/>Iv'e checked Crypto++'s page, it seems to suite the needs. It could be used when (or if ever <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> some clients become relayStations.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12191">
+<div class="inner">
+<dl class="postprofile" id="profile12191">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12191">
+<h3><a href="#p12191"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-22 03:08
+			</p>
+<div class="content">There are some factual issues that need to be clarified, IMO:
+<br/>
+<br/>seeSharp, when one of your hubs is running at its absolute peak, are all of the bottlenecks bandwidth related? How is it doing on CPU and memory?
+<br/>
+<br/>How does the bandwidth usage break down more specifically? About how much is used by each of searching, chat, and administration? Nobody has here has done more than glance off this question.
+<br/>
+<br/>I think there really might be some better solutions than the ones tentatively proposed here; in particular I get a bad feeling that the proposals so far are more client side than they should be.
+<br/>
+<br/>You talk about problems with synchronization in these distributed setups, but I don't see why the things that require synchronization have to be distributed in the first place. Surely chat isn't a big enough load on the hubs that it has to be distributed. The same with authentication and such. Searching itself doesn't really need to be synchronized.
+<br/>
+<br/>Just thinking out loud...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12194">
+<div class="inner">
+<dl class="postprofile" id="profile12194">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12194">
+<h3><a href="#p12194"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-22 04:47
+			</p>
+<div class="content"><blockquote class="uncited"><div>How does the bandwidth usage break down more specifically? About how much is used by each of searching, chat, and administration?</div></blockquote>
+<br/>Argh, stupid Java implementation hung IE on the Mac just now, lost an almost complete post. Anyway, I'll try to do more than glance off the question:
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Total messages:<br/>bunzip2 -c | wc: 1373324 4215281 64489022<br/><br/>Broadcast messages:<br/>bunzip2 -c | grep "^\$Search" | wc: 60268 180818 4601116<br/>bunzip2 -c | grep "^\$Search Hub:" | wc: 22806 68418 1689840<br/>bunzip2 -c | grep "^\$MyINFO" | wc: 38887 30139 366028<br/><br/>Non-broadcast messages:<br/>bunzip2 -c | grep "^\$ConnectToMe" | wc: 869538 2608614 40024878<br/>bunzip2 -c | grep "^\$RevConnectToMe" | wc: 407685 1223055 18293513<br/>bunzip2 -c | grep "^\$MultiConnectToMe" | wc: 36 144 2412</code></pre></div>
+<br/>This was on a hub of 300-400 users; I forget the exact count at the time. Search, to all 300 users, consumes 24 times as much upstream bandwidth as all the ConnectToMe variations combined. This is the basis for my 20:1 ratio cited earlier. I'll see if I can get statistics on main chat from the log now, but I'll post this message to safety first...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12258">
+<div class="inner">
+<dl class="postprofile" id="profile12258">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 24</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-19 15:03</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12258">
+<h3><a href="#p12258"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a></strong> » </span>2003-04-22 14:52
+			</p>
+<div class="content">Well, our synch problems came when we tried to connect two HUBs. This setup wasn't a HUB - RelayServer - Client setup, but simply two HUBs, connected with eachother. 
+<br/>
+<br/>It's been mentioned here before, that is possible, so I wrote, what problems we had with it...
+<br/>
+<br/>By the way, I never told that I want to distribute user management (login, kick, etc...) or private chat. It's only about splitting the mass traffic. 
+<br/>
+<br/>We also have about the same Search requests (maybe a bitt less, 20:1-15:1), there are some search rules, so the HUB is dropping a few of them <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>.
+<br/>
+<br/>And yes, the problem is the outgoing traffic. After forgetting NMDC HUB we have plenty of spare RAM and CPU time... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>) Users simply get disconnected from the HUB under heavy load. On some ocassions we had to reset the router too.
+<br/>
+<br/>And there is two proposal by the way: and the first one won't affect client's too much (just one more socket connection), the trust isn't shifted in any way to them. And I don't know a better load balancing solution (every one I checked needs some client side support - at least consuming commands and connecting to the right server).
+<br/>
+<br/>One more thing I could imagine, and this one won't need any client side modification:
+<br/>With an advanced relayServer it would be possible, that it could act as a HUB. Clients could simply connect to it, every command should be sent over to the HUB, and the HUB should send mass-messages only once.
+<br/>
+<br/>The drawback would be, that the HUB-relayServer traffic would be higher, and we would introduce some latency by letting each command pass the "middleman".</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12264">
+<div class="inner">
+<dl class="postprofile" id="profile12264">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12264">
+<h3><a href="#p12264"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-22 17:17
+			</p>
+<div class="content"><blockquote class="uncited"><div>On some ocassions we had to reset the router too.</div></blockquote><br/>Um, you weren't running the hubs on the same connection, behind the same router, were you? That'd be kind of useless...<br/><blockquote class="uncited"><div>With an advanced relayServer it would be possible, that it could act as a HUB. Clients could simply connect to it, every command should be sent over to the HUB, and the HUB should send mass-messages only once.</div></blockquote><br/>Huh? Isn't that what your previously stated notion of a relay server did too, or have I misunderstood something?<br/><br/>Why not, as I suggested in my first or second post to this thread, simply use a full hub with competent linking capabilites? You haven't stated the need that I can see to make a relay server special, and doing so limits the topologies using which you can connect the relay servers and hubs. True, you need to keep login information synchronized across them, but with any hub software that stores its user information in a separate file (all the one I've personally tried do so), that's pretty trivial. The hubs you tried didn't work so well, but of the three you listed:<br/><br/>-NMDC hub scales poorly anyway, even with one hub, so I wouldn't expect it to be at all usable in a multihub configuration.<br/>-Ptokax doesn't come built in, last I checked, with the level of multihub support you want, so you must've used some script for or extension to it, which could have been programmed poorly.<br/>-I'm most curious about the Linux DC hub software you mention; I know dchub's linking has worked fine for me.<br/><br/>However, none of those working satisfactorily implies only that, well, none of them worked satisfactorily. Two of them (NMDC and Ptokax) don't even have native linking support that works in any real sense, so their failure here doesn't, in my mind, cast doubt on the pure-hub approach.<br/><blockquote class="uncited"><div>And the linux hub does support HUB linking - you see all the users on the linked HUBs, you can search/download. The problem is, that this implementation is done so, that there is no need to change on the client side. And because of that, the server side got a bit hard to stabilize.<br/><br/>With some small changes in the clients, it should be able to achieve the same, and stay more stable.</div></blockquote>
+<br/>I don't see the causal relationship here - please explain how increasing the diversity of the network by adding separate relay servers, or introducing client changes helps stabilize things.
+<br/>
+<br/>Oh, and one final statistic I curiously left out, the number of non-$ commands, i.e. chat messages:
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>bzgrep "^&lt;" messages.txt.bz2 | wc: 18451 135822 954428</code></pre></div>
+<br/>which is not actually 20 times less, but still about 5 times less than the number of searches, as well as potentially containing private messages [for which I'm not going to check, obviously] which aren't broadcast, thus reducing the real bandwidth numbers somewhat.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12635">
+<div class="inner">
+<dl class="postprofile" id="profile12635">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12635">
+<h3><a href="#p12635"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-25 03:36
+			</p>
+<div class="content">I'd like to see what would happen if you could multicast out search requests. If you could get search requests out to the general Internet before they get split to all of the different listeners efficiency could improve drastically.
+<br/>
+<br/>Not that that's horribly possible with today's Internet... but it's not completely out of the question either.
+<br/>
+<br/>As I understand it ip6 has multicasting built in. Perhaps DC++ could be a driving force to get the word out about ip6. Considering the availability of tunnels and 6to4 type things it wouldn't necessarily be a horrible transition either. Only probably <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>But, another solution that keeps in mind the availability of more CPU and memory would be to do some of the tracking on the hub. Some say it's a bad idea legally to track filenames and locations on the hub, but it's very much a grey area. I'd say a good compromise would be to keep track of hashes on the hub and encourage their use. 
+<br/>
+<br/>Anyway, just some thoughts. It kind of sounds like there isn't a huge need for a new architecture right now, more of a need to get the existing one working properly. That you can't seem to get hub linking working now suggests some crappy software.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12636">
+<div class="inner">
+<dl class="postprofile" id="profile12636">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12636">
+<h3><a href="#p12636"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-25 04:02
+			</p>
+<div class="content"><blockquote class="uncited"><div>But, another solution that keeps in mind the availability of more CPU and memory would be to do some of the tracking on the hub. Some say it's a bad idea legally to track filenames and locations on the hub, but it's very much a grey area. I'd say a good compromise would be to keep track of hashes on the hub and encourage their use.</div></blockquote>
+<br/>Well, beyond the legal aspect (which I agree would be solved to my satisfaction by using hashes in place of whole filenames), it would require clients to upload userlists periodically to the hub in order to keep it in sync; this may overcome any bandwidth savings, though it is downstream bandwidth, generally easier to come by.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12709">
+<div class="inner">
+<dl class="postprofile" id="profile12709">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12709">
+<h3><a href="#p12709"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-25 16:28
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>it would require clients to upload userlists periodically to the hub in order to keep it in sync; this may overcome any bandwidth savings, though it is downstream bandwidth, generally easier to come by.</div></blockquote>
+<br/>
+<br/>Good point, though it would be nice if clients would be so kind as to inform the hub to add hash h to its list of hashes. Otherwise, yes, theh ub would have to occasionally request a whole new list.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12811">
+<div class="inner">
+<dl class="postprofile" id="profile12811">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12811">
+<h3><a href="#p12811"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-26 14:00
+			</p>
+<div class="content">I see no reason for the hub to keep the hublists! Then the hub should return searchresults? Nah, won't work.
+<br/>
+<br/>The idea in this thread was to lower the bandwidth used by searching by distributing the load thorugh relaying, let's return to that shall we??</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12812">
+<div class="inner">
+<dl class="postprofile" id="profile12812">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12812">
+<h3><a href="#p12812"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-26 14:06
+			</p>
+<div class="content">The hub could use that information to decide which users to which the search request is forwarded - if a user's known not to have a particular file, then don't send him the search.
+<br/>
+<br/>That said, I do find that direction of discussion odd in a thread title "Distributed DC".</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12814">
+<div class="inner">
+<dl class="postprofile" id="profile12814">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12814">
+<h3><a href="#p12814"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-26 14:14
+			</p>
+<div class="content">Just imagine the amount of string comparing the hub would have to do? I would have to do all the connected clients work. You'd need a 50 GHz cpu to do the job. Not to mention the memory requirements. No, that's not the way to go. Relaying is a lot better and should be pretty easy to implement in both clients and the server. 
+<br/>
+<br/>Arne: Could it be implemented in DCH++?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12819">
+<div class="inner">
+<dl class="postprofile" id="profile12819">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12819">
+<h3><a href="#p12819"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-26 14:35
+			</p>
+<div class="content">Could someone explain again what the role of the client is in relaying? If you want to involve it in any substantial way in this, I'd like to see much more acknowledgement of the security issues.
+<br/>
+<br/>Further, much as it kept getting brought up, I see absolutely no need for any client-side modifications: this should be something handled completely by the hub network.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12829">
+<div class="inner">
+<dl class="postprofile" id="profile12829">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12829">
+<h3><a href="#p12829"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-26 16:24
+			</p>
+<div class="content">There are 2 things that needs to be changed in clients:
+<br/>
+<br/>1: The client must be able to recognize a new command, which states what RelayStation IP and port it should listen to. Any client that does not recognize this command will recieve the search requests from the hub as usual.
+<br/>
+<br/>2: Optionally; the client could incorporate the RelayStation code, meaning the server could ask the client to become a RelayStation. This means that the hubs can grow a lot bigger since every time the bandwidth is starting to get  too saturated, the hub asks a new client to become a RelayStation then asks incoming clients or some already connected clients to connect to the new RelayStation. 
+<br/>
+<br/>Clients can select in the settings whether they will accept the role as RelayStation or not. A modem user should abviously not become a RelayStation...
+<br/>______________________________________________________
+<br/>
+<br/>Change #1 is obviously needed in the client, since in the normal protocol the client only listens to the Server IP. <strong class="text-strong">It is impossible</strong> for another IP(computer/connection)  to send the search request to the client, as they would not be recieved. (not even sent).
+<br/>
+<br/>Change #2 is optional, the hub owner could set up RelayStations on other computers&amp;connections. But having the support in the hub and client alone means that any hub could have RelayStations, even if the owner doesn't have any other connections and computers.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12841">
+<div class="inner">
+<dl class="postprofile" id="profile12841">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12841">
+<h3><a href="#p12841"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-26 18:56
+			</p>
+<div class="content"><blockquote class="uncited"><div>Change #1 is obviously needed in the client, since in the normal protocol the client only listens to the Server IP. It is impossible for another IP(computer/connection) to send the search request to the client, as they would not be recieved. (not even sent). </div></blockquote><br/>Which is as it should be: clients connect to one hub (what exactly is a relay station, besides a castrated hub that can more or less only live in a tree topology?), and all search requests to that client should come through that hub (or relay station).<br/><br/>If you want people to be able to connect to one IP, and still be distributed among different hubs, set up an empty front hub that just redirects based on some criteria (or randomly). People will have an incentive to allow themselves to be redirected because that hub won't itself be part of the network, and so won't have access to its resources. Thus, no client change is necessary.<br/><br/>There has to be some protocol between hubs and relay stations, but any linking configuration must introduce that; further, it should not leak out, and has no reason to do so, to the clients.<br/><blockquote class="uncited"><div>Change #2 is optional, the hub owner could set up RelayStations on other computers&amp;connections. But having the support in the hub and client alone means that any hub could have RelayStations, even if the owner doesn't have any other connections and computers.</div></blockquote>
+<br/>This is a very big change, and demands that clients trust each other, a bad assumption. (If nothing else, not to drop messages intentionally, even provided the message signing/encryption that would become mandatory.)
+<br/>
+<br/>Whilst it has been demonstrated to work to varying degrees, it also makes completely different assumptions about relative trust that would break DC's model - it needs to be much more thought out than I've seen evidence for as of yet.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12847">
+<div class="inner">
+<dl class="postprofile" id="profile12847">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content12847">
+<h3><a href="#p12847"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-04-26 21:42
+			</p>
+<div class="content">I don't see the benefit of the RELAY STATION approach over an improved MULTI-HUB LINKING using Redirection to balance the load.
+<br/>
+<br/>I do see increased Security concerns in having the hub ask users if they want to be relay stations and after they accept other clients connect to them as a trusted source..... I can just imagine the hacked clients that'll take advantage of this... Yikes!
+<br/>
+<br/>HaArD</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12953">
+<div class="inner">
+<dl class="postprofile" id="profile12953">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 24</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-19 15:03</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12953">
+<h3><a href="#p12953"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a></strong> » </span>2003-04-27 21:09
+			</p>
+<div class="content">Hi, back again:)
+<br/>
+<br/>We've been playing around with the newest linux HUB, and it works somehow. We can stay online for almost 24 hours <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> with over 1000 people. There are some stability problems, but it seem to work a bit now:).
+<br/>
+<br/>I've checked out the PtokaX dev. forum too, there was already a thread about HUB linking. The PtokaX guys told, they could imagine the thing, but they also want some client modifications. That idea seems to be more like the first proposal here (1 HUB sw - more relayStations, operated by the HUB owners). They just want to make that HUB SW to be able to operate in two different modes. 
+<br/>
+<br/>Their problem is the same as ours: it is quite hard to synchronize every user and HUB state data between two HUBs, it's much easier to concentrate on mass-messages, and setup a relay channel for them.
+<br/>
+<br/>IPv6 will have some new improvements, which will be good for the DC network, but that way, you will have to make a lot of changes again - and there are a lot of OSs and ISPs not supporting IPv6 yet. So, patience...
+<br/>
+<br/>
+<br/>Something, that wasn't clear I think:
+<br/>
+<br/>Clients should NOT become ralaying agents, unless there is a good protection mechanism (like some PK encoding...). That's why it was a 2nd version at the beginning (v2.0:).
+<br/>
+<br/>
+<br/>One more thing:
+<br/>The PtokaX hub sw already has internally a separate out-queue for messages, acording to their forums, so it wouldn't be too hard to make make the serverside changes there. I don't know how DCH++ works, so maybe a bit more struggle there. DC++ shouldn't be to hard to change... (told by me, who never new C++ <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>. Maybe it's time to learn that one too?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13019">
+<div class="inner">
+<dl class="postprofile" id="profile13019">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13019">
+<h3><a href="#p13019"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-28 10:52
+			</p>
+<div class="content">Many P2P programs use other clients to propagate information.
+<br/>
+<br/>If a RelayStation would just send out searchrequests and hub-chat, I see no real problem with "hacked-clients". What could they do? Send faked search requests? Well, it would become known quickly and the client would be kicked. It's entirely possible to build this into the client/hub as well.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13097">
+<div class="inner">
+<dl class="postprofile" id="profile13097">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13097">
+<h3><a href="#p13097"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-28 22:45
+			</p>
+<div class="content"><blockquote class="uncited"><div>We can stay online for almost 24 hours  with over 1000 people. There are some stability problems, but it seem to work a bit now:).</div></blockquote><br/>This would seem to argue pretty strongly that client knowledge/involvement is not, in fact, necessary.<br/><blockquote class="uncited"><div>The PtokaX guys told, they could imagine the thing, but they also want some client modifications. That idea seems to be more like the first proposal here (1 HUB sw - more relayStations, operated by the HUB owners). They just want to make that HUB SW to be able to operate in two different modes.</div></blockquote><br/>I assume you're referring to <a class="postlink" href="http://lua.bcs-solutions.de/thread.php?boardid=4&amp;threadid=728&amp;page=1#18">this post</a>. (I should note that daniele_dll pretty accurately seems to convey my preferred configuration.)<br/><br/>To answer some of his questions:<br/><blockquote><div><cite>ptaczek wrote:</cite>- how will you solve the private messages, passive searches, etc. in the case above ?</div></blockquote><br/>I assume he's referring to routing within the network - I don't see, in any event, how this can be avoided unless the client is restricted to searching across hubs, rather than chatting across hubs as well.<br/><blockquote><div><cite>ptaczek wrote:</cite>- how you will assure data checking and how you will avoid data duplication (therefore the lowest dataflow poossible) ?</div></blockquote><br/>For broadcast messages, just set up a minimal spanning tree of hubs; each hub can then send out the messages to every hub but that on which it came in. Actual user to user routing is more difficult, but well known algorithms exist to solve it.<br/><blockquote><div><cite>ptaczek wrote:</cite>- how you will check for crash of one linked hub and how you clean the users that were connected to that hub from nicklists of the other hubs?</div></blockquote><br/>First, only neighboring hubs should have to directly discover this fact; they can do so by assuming a hub has died unless it sends them an "I'm alive" message every X seconds.<br/><br/>This information can then be propagated through the network through the usual broadcast means ($HubQuit &lt;some_hub_ID&gt;| or something, never send to clients, but only other hubs), and assuming each foreign user's home hub is tagged, a hub iterates through its currently connected users from that hub and removes them.<br/><br/>It appears they want DC++ to implement $MultiSearch and $MultiConnectToMe, as a search-only hub network is the only way I can see to avoid their concerns about every user appearing in some form on every other hub; that latter situation would seem necessary, along with its incurred bandwidth, memory, and CPU usage costs, if a chat network were being run.<br/><br/>Whilst this isn't necessarily a less valid form of hub linking, it's more restricted/less interesting, and most importantly, isn't transparent to users. I believe it would produce a nicer experience if users could treat the hub network as a single, larger hub, and ensure the hub network maintains that illusion. One can _still_ get significant bandwidth savings per hub over a truly single hub of that size, even with that more feature-complete configuration.<br/><blockquote><div><cite>distiller wrote:</cite>If a RelayStation would just send out searchrequests and hub-chat, I see no real problem with "hacked-clients". What could they do? Send faked search requests?</div></blockquote>
+<br/>It could prevent the search requests from reaching those users who might respond to them (saving those relaying users a significant amount of competition for slots, giving them an incentive to do so), and it might intercept any chat messages from users behind them. Without any other means, necessarily, of contacting ops or somesuch, I don't see how "it would become known quickly and the client would be kicked", for that relay station is in control of most communications by which it would become known.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13182">
+<div class="inner">
+<dl class="postprofile" id="profile13182">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13182">
+<h3><a href="#p13182"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-29 12:18
+			</p>
+<div class="content">You have to agree that it would be simpler for hub owners to get a bigger hub since more clients would also mean more RelayStations (RS). Is in not in any way a beautiful thought?
+<br/>
+<br/>A hubowner has to have several separate computers, and above all several separate internet connections for the hub and relaying, which is hard in a single house. By letting the clients take care of relaying themselves the hub can grow beyond 1000 users easily, without the hub-owner paying half his salary in ISP bills...
+<br/>
+<br/>The sequrity issus are of course important. It might be possible to have a list of accepted nicks that could act like RS in the hub. Say friends that you personally trust. These clients could then become RelayStations as they get online but other ones would not be asked to become RS.
+<br/>
+<br/>I believe hub owners would be quite happy if the hub/clients took care of the relaying themselves instead of the hub owner having to ask his friends to set up RelayStations.
+<br/>
+<br/>If relaying was implemented your way it would seldom be used because of cost, need to trust your friends to be online...
+<br/>
+<br/>If relaying is a part of the clients and hub it would become automatic, and every hub would automatically benefit from the new feature.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13191">
+<div class="inner">
+<dl class="postprofile" id="profile13191">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13191">
+<h3><a href="#p13191"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-29 13:42
+			</p>
+<div class="content"><blockquote><div><cite>distiller wrote:</cite>I see no reason for the hub to keep the hublists! Then the hub should return searchresults? Nah, won't work.<br/><br/>The idea in this thread was to lower the bandwidth used by searching by distributing the load thorugh relaying, let's return to that shall we??</div></blockquote><br/><br/>Relaying is a solution that's to be avoided if possible because it complicates the system. Trying to use relaying to distribute bandwidth in particular is a case where other solutions should be considered first.<br/><br/>Having the hub return results is actually a good thing on many levels. As long as the hub has resources to do it, these searches would necessarily be faster and a heck of a lot more efficient than the current way of doing things.<br/><br/><blockquote class="uncited"><div>Just imagine the amount of string comparing the hub would have to do? I would have to do all the connected clients work. You'd need a 50 GHz cpu to do the job. Not to mention the memory requirements. No, that's not the way to go. Relaying is a lot better and should be pretty easy to implement in both clients and the server.</div></blockquote>
+<br/>
+<br/>Seriously, recheck your algorithms. Searching through an a single optomized list of all files being shared in a hub is not a horrible task. And I'm only suggesting hashes, which would mean even more efficient searches. 
+<br/>
+<br/>On the other hand, no matter what if you're using relaying you will be spending a whole lot more total cpu time, plus requiring more bandwidth, more latency, and more sources for failure.
+<br/>
+<br/>There are reasons not to have hubs doing lookups, but these aren't they. It REALLY sounds like you want relaying just for the sake of having it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13192">
+<div class="inner">
+<dl class="postprofile" id="profile13192">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13192">
+<h3><a href="#p13192"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-29 13:51
+			</p>
+<div class="content"><blockquote><div><cite>HaArD wrote:</cite>I don't see the benefit of the RELAY STATION approach over an improved MULTI-HUB LINKING using Redirection to balance the load.</div></blockquote><br/><br/>Right<br/><br/><blockquote><div><cite>seeSharp wrote:</cite> Their problem is the same as ours: it is quite hard to synchronize every user and HUB state data between two HUBs, it's much easier to concentrate on mass-messages, and setup a relay channel for them. </div></blockquote><br/><br/>What precisely needs to be synchronized? Or more to the point, what that should be distributed needs to be synchronized?<br/><br/><blockquote class="uncited"><div> IPv6 will have some new improvements, which will be good for the DC network, but that way, you will have to make a lot of changes again - and there are a lot of OSs and ISPs not supporting IPv6 yet. So, patience... </div></blockquote>
+<br/>
+<br/>In general, if a program has been written properly within the last three or four years it should make the switch to IPv6 automatically with the OS. Win2000 and on have native IP6 support. The main problem is not with the user's software but with ISP's routing.
+<br/>
+<br/>It seems more and more clear that what people are looking for in this discussion is not a change in technology or the system, but rather higher quality of what's already around.
+<br/>
+<br/>Linking hubs together is the way to go, or havn't you learned the lesson of gnutella?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13238">
+<div class="inner">
+<dl class="postprofile" id="profile13238">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13238">
+<h3><a href="#p13238"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-29 23:25
+			</p>
+<div class="content">Well RS just seemed to be a simple way, but is probably not the best as you say. Sorry... If linking hubs together is the real deal we will need some intelligent hubs I tell you. =) And still, changes are needed in at least the DC++ client.
+<br/>
+<br/>The hub will need to have (for say 500 users/per hub):
+<br/>* Roughly 256 MB of RAM for uncompressed filelists in RAM or
+<br/>* Roughly 50 MB of RAM for bz2-compressed filelists in RAM and a fast CPU for on-the-fly decompressing and searching
+<br/>* Recieve filelists if anyone connects or does a "/refresh"
+<br/>
+<br/>Will recieving everyone's filelists take up more or less bandwidth than the current search system? (probably less but..)
+<br/>
+<br/>The hub will have to:
+<br/>* Recieve search request from other hubs
+<br/>* Search the filelists and send back correct results to the appropiate user (or hub?)
+<br/>* Recieve filelist to RAM for searching (What if RAM runs out, we put a restriction on how MUCH people can share now?  <img alt=":shock:" class="smilies" src="/images/smilies/icon_eek.gif" title="Shocked"/> )
+<br/>
+<br/>The client will have to:
+<br/>* Be able to send files to users not on the local hub (DC++ has no support)
+<br/>* The client will have to be able to use multi-hub-search and recieve files from a linked hub (again no support)
+<br/>* Send filelists to hub when connecting and refreshing (no client has support)
+<br/>
+<br/>All users should be able to see each other even if they are connected to different hubs (that are linked). One might want to download a filelist from a user on another linked hub. So the "multi-hub" concept as known from NMDC is not good enough IMHO.
+<br/>
+<br/>Relaying is something that will make <strong class="text-strong">one computer with one connection</strong> able to support more users than what is currently possible, probably <strong class="text-strong">many</strong> times more.
+<br/>
+<br/>There are issus as has been pointed out, but solutions as well.
+<br/>I don't know what solution is the best, you have my ideas anyway. I'm just trying to help out here, not spread propaganda for a special solution...  <img alt=":lol:" class="smilies" src="/images/smilies/icon_lol.gif" title="Laughing"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13242">
+<div class="inner">
+<dl class="postprofile" id="profile13242">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13242">
+<h3><a href="#p13242"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-30 00:48
+			</p>
+<div class="content"><blockquote class="uncited"><div>The hub will need to have (for say 500 users/per hub): <br/>* Roughly 256 MB of RAM for uncompressed filelists in RAM</div></blockquote><br/>It wouldn't store filelists, per se; what it really needs is a mapping from hash values to lists of users.<br/><blockquote class="uncited"><div>* Recieve filelists if anyone connects or does a "/refresh"</div></blockquote><br/>It should receive a delta from what it previously knew, rather than a complete file list (which would, of course, require support from DC++ to identify which files are new).<br/><br/>However, the above modifications are entirely optional, and a multihub network can be built without them, so that it does not require special client support.<br/><blockquote class="uncited"><div>* Search the filelists and send back correct results to the appropiate user (or hub?)</div></blockquote><br/>Well, or just send the search query to all locally connected users; this is the compatible approach, which even should one to implement volkris's hub hash index, would be a necessary compromise in the meantime, and to support non-hash uploading clients in general.<br/><blockquote class="uncited"><div>* Recieve filelist to RAM for searching (What if RAM runs out, we put a restriction on how MUCH people can share now?  ) </div></blockquote><br/>This is my greatest concern, but I imagine the hub would simply always send searches to those users, should they have too many files for it to want to index.<br/><br/>But I don't care too much either way about the hashes-on-hub thing - it's the client modification requirement claims with which I really disagree. As soon as one accepts that<br/><blockquote class="uncited"><div>All users should be able to see each other even if they are connected to different hubs (that are linked).</div></blockquote><br/>then<br/><blockquote class="uncited"><div>* Be able to send files to users not on the local hub (DC++ has no support) <br/>* The client will have to be able to use multi-hub-search and recieve files from a linked hub (again no support) </div></blockquote><br/>are completely unnecessary, as one has a single, larger virtual hub, and as long as that illusion is maintained, all client functions, even of unmodified clients, will function fine. No $MultiConnectToMe capability, for example, is required: the hubs handle the routing. Your third item,<br/><blockquote class="uncited"><div> Send filelists to hub when connecting and refreshing (no client has support)</div></blockquote><br/>is only necessary if one implements volkris's idea, which I've already acknowledged requires client changes.<br/><br/>However, throughout your post, you conflate the orthogonal ideas of the server holding file hashes and multihub linking. The former requires client modification, whereas the latter does not.<br/><blockquote class="uncited"><div>So the "multi-hub" concept as known from NMDC is not good enough IMHO.</div></blockquote><br/>Oh, hey, look, we agree on something.<br/><blockquote class="uncited"><div>Relaying is something that will make one computer with one connection able to support more users than what is currently possible, probably many times more.</div></blockquote>
+<br/>No, it doesn't.
+<br/>
+<br/>It relies on people being relays.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13249">
+<div class="inner">
+<dl class="postprofile" id="profile13249">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13249">
+<h3><a href="#p13249"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-30 01:36
+			</p>
+<div class="content"><blockquote><div><cite>distiller wrote:</cite>If linking hubs together is the real deal we will need some intelligent hubs I tell you. =) And still, changes are needed in at least the DC++ client.</div></blockquote><br/><br/>Not really. It doesn't take all that much intelligence to route messages to multiple listeners. And why do you say changes are needed in the clients? Hub linking is already done without any changes.<br/><br/><blockquote class="uncited"><div>The hub will need to have (for say 500 users/per hub):<br/>* Roughly 256 MB of RAM for uncompressed filelists in RAM or<br/>* Roughly 50 MB of RAM for bz2-compressed filelists in RAM and a fast CPU for on-the-fly decompressing and searching<br/>* Recieve filelists if anyone connects or does a "/refresh"</div></blockquote>
+<br/>
+<br/>I don't think these numbers are founded at all. Where do you get them?
+<br/>
+<br/>Anyway, one mistake you're making is confusing the distributed issue with the suggestion for searching hashes on the hub. They're two entirely independent issues.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13296">
+<div class="inner">
+<dl class="postprofile" id="profile13296">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content13296">
+<h3><a href="#p13296"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-04-30 11:04
+			</p>
+<div class="content">If multi-hub linking could address this issue then what are the requirements?
+<br/>
+<br/>I think most of this could be done in modifications to the Hub software alone. If mutli-hub protocol extensions were used by different hubs then linking a DCH++--&gt;PkotaX--&gt;OpenDC---&gt;SDCH--&gt;etc should be possible. The users/clients don't need to know or care...
+<br/>
+<br/>Basic functionality...
+<br/>1. Share a common Main Chat with Linked Hubs
+<br/>2. ACTIVE Search Linked Hub Users 
+<br/>3. PASSIVE Search Linked Hub Users (bandwidth issues)
+<br/>4. ACTIVE/PASSIVE Connect to Linked Hub Users (Uploads/Downloads/Filelists)
+<br/>5. "See" Linked Hub Users (Request Filelists and PM's)
+<br/>
+<br/>Op support...
+<br/>Remote Op Commands?
+<br/>OPChat for linked hubs?
+<br/>
+<br/>anything else?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13313">
+<div class="inner">
+<dl class="postprofile" id="profile13313">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13313">
+<h3><a href="#p13313"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-30 16:33
+			</p>
+<div class="content">Ok, I forgot to point out some things I had already realized which led to some confusion, I'm sorry. =) When a client connects to a hub (virtual or real) it will only accept incoming messages from that IP, true?
+<br/>
+<br/>If we have multiple hubs, every hub sends its chat/search/myinfo and whatever to the other hubs, and then that hub has to send that to it's connected clients. Every hub will send out more data, requiring more bandwidth and we have not solved the bandwidth issue, rather the contrary.
+<br/>
+<br/>If we have one hub supporting 500 users or 5 hubs supporting 100 users should be the same but just more complicated.... =)  (don't take those numbers for absolute fact now, it's to give a simple idea, ok...)
+<br/>
+<br/><blockquote><div><cite>volkris wrote:</cite>Anyway, one mistake you're making is confusing the distributed issue with the suggestion for searching hashes on the hub. They're two entirely independent issues.</div></blockquote><br/>They are not entirely separate since if we do not lower the outgoing bandwidth needed per hub we can not link together hubs and have more users in a virtual hub either and then what is the point of linking hubs together? <br/><br/><blockquote><div><cite>cologic wrote:</cite>It wouldn't store filelists, per se; what it really needs is a mapping from hash values to lists of users. </div></blockquote><br/>That would indeed lower memory usage. But then we require hashing, which is not really being worked on. =) And hashes are probably not that much smaller than a filename and it's size, maybee even larger in some cases. Sure:<br/>hash, user, user,user<br/>hash, user, user<br/>hash, user, user, user, user, user<br/>might not use too much mem, but I still guess in the 50's for a 500+ user hub.<br/><br/><blockquote><div><cite>cologic wrote:</cite>However, the above modifications are entirely optional, and a multihub network can be built without them, so that it does not require special client support. </div></blockquote><br/>A multihub network can and has been built, but it's not practical if we want to have more users per virtual hub than we have per real hub today. Have you seen a hub with more than 1500 users?<br/><br/><blockquote><div><cite>distiller wrote:</cite>Relaying is something that will make one computer with one connection able to support more users than what is currently possible, probably many times more. </div></blockquote><br/><blockquote><div><cite>cologic wrote:</cite>No, it doesn't. <br/>It relies on people being relays.</div></blockquote><br/>Well, it does actually make it possible to have larger hubs since outgoing bandwidth requirements are lowered a lot for the hub. But you're right, it relies on people being relays, that was the point anyway, don't shoot me... =)<br/><br/><blockquote><div><cite>volkris wrote:</cite>I don't think these numbers are founded at all. Where do you get them? </div></blockquote>
+<br/>By doing some quick and really rough math. =) My dcList is 500 kB and my bz2-list is 100 Kb and an uncompressed filelist would of course be larger. In the case of bz2-list: 100Kb*500users=49Mb. Ok? But as cologic pointed out, hub only has to keep track of the hashes for the users which requires less memory. (still a lot of mem though)
+<br/>
+<br/>Why are you trying so hard to put down my thoughts instead of reaching the goal? It's supposed to be a fun journey in my opinion.  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13322">
+<div class="inner">
+<dl class="postprofile" id="profile13322">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content13322">
+<h3><a href="#p13322"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-04-30 18:10
+			</p>
+<div class="content">So then the idea of the RS is to create a single destination for the hub to send a string that must be distributed to 'n' clients.
+<br/>
+<br/>The modification to the client is to facilitate that Hub "X" has split it's upstream traffic onto multiple IP's, the one used to connect to the hub and 'n' potential Relay Stations.
+<br/>
+<br/>Hub "X" can now handle unmodified client #1 as it does today, but, in theory, client #2 and hopefully a growing number of clients, would support the RS concept and some traffic to them would be sent once to the RS #1 instead of once to each of those users. (The Hub will obviously have to keep track of which users support RS) As RS #1 starts to hit it's upstream capacity, we add RS #2 and start broadcasting that IP#3 to client #3 when they connect.
+<br/>
+<br/>The effect is to reduce upstream bandwidth usage on Hub "X" and therefore this will permit more users to connect? 
+<br/>
+<br/>Am I getting this right?
+<br/>
+<br/><img alt="Image" class="postimage" src="http://haard.cjb.net/RS.gif"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13333">
+<div class="inner">
+<dl class="postprofile" id="profile13333">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13333">
+<h3><a href="#p13333"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-30 21:31
+			</p>
+<div class="content"><blockquote class="uncited"><div>If we have multiple hubs, every hub sends its chat/search/myinfo and whatever to the other hubs, and then that hub has to send that to it's connected clients. Every hub will send out more data, requiring more bandwidth and we have not solved the bandwidth issue, rather the contrary.</div></blockquote><br/><blockquote class="uncited"><div>A multihub network can and has been built, but it's not practical if we want to have more users per virtual hub than we have per real hub today.</div></blockquote>
+<br/>Actually, multihub would still be an improvement the advantages of which would grow roughly linearly with the number of hubs involved, is thus capable of handling greater numbrs of users. See <a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?p=11878#11878">earlier in this very thread</a> for an analysis of why. (See, next time it might help for people to read the math as opposed to just saying "it's math, oh no, get it away", which more or less summarizes the next couple of responses  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> )
+<br/>
+<br/>Thus, volkris's idea truly is separate. No client modifications are necessary to enable larger virtual hubs by saving each hub's outgoing bandwidth (in essence, because every peered hub replaces all of the users it holds with one virtual user, upload bandwidth-wise).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13346">
+<div class="inner">
+<dl class="postprofile" id="profile13346">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content13346">
+<h3><a href="#p13346"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-05-01 01:05
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>Actually, multihub would still be an improvement the advantages of which would grow roughly linearly with the number of hubs involved, is thus capable of handling greater numbers of users. </div></blockquote><br/><br/>Which is why I said I didn't see an advantage to RS over a functional Multi-Hub Linking.<br/><br/><blockquote><div><cite>cologic wrote:</cite>See, next time it might help for people to read the math as opposed to just saying "it's math, oh no, get it away", which more or less summarizes the next couple of responses  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> </div></blockquote><br/><br/>Touche.  :p<br/><br/><blockquote><div><cite>cologic wrote:</cite>Thus, volkris's idea truly is separate. No client modifications are necessary to enable larger virtual hubs by saving each hub's outgoing bandwidth (in essence, because every peered hub replaces all of the users it holds with one virtual user, upload bandwidth-wise).</div></blockquote>
+<br/>
+<br/>Bingo! That is my preferred approach to this. I rather leave the client out of it.
+<br/>
+<br/>I am trying to understand the RS idea and see its merits... but I keep thinking of the RS as a specialized HUB not as a client which just takes me back to linking hubs again...
+<br/>
+<br/>HaArD</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13348">
+<div class="inner">
+<dl class="postprofile" id="profile13348">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13348">
+<h3><a href="#p13348"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-05-01 02:09
+			</p>
+<div class="content">I've done the math now and it is truely favorable.  <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13367">
+<div class="inner">
+<dl class="postprofile" id="profile13367">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=898">A</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 17</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 10:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13367">
+<h3><a href="#p13367"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=898">A</a></strong> » </span>2003-05-01 09:21
+			</p>
+<div class="content">have you tried ptokax hub software supports alot more users whit less resources</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13383">
+<div class="inner">
+<dl class="postprofile" id="profile13383">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13383">
+<h3><a href="#p13383"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-05-01 12:00
+			</p>
+<div class="content"><blockquote class="uncited"><div>have you tried ptokax hub software supports alot more users whit less resources</div></blockquote>
+<br/>
+<br/>Ok, that Ptokax thing is really getting on my nerves. Just for your info, there's several other hubs than Ptokax that support alot more users <em class="text-italics">with</em> less ressouces. There's even 3 of them that unlike P. support vbs scripting, for people who don't feel like learning LUA from scratch, and a heck of a bunch of them that are open source (which is the spirit of sourceforge, DC++, and to a lesser extent of these boards).
+<br/>Now Ptokax happens to be a good software, but I don't see what gives you guys the right to start that new trend going on for a few weeks and consisting of empty posts just for the sake of plain blattant advertising. Heck, there's even some people posting stuff in the lines of "switch to PtoKax" in answer to VBS scripting questions.
+<br/>
+<br/>  In case you had bothered looking who posted in this thread so far, you would have seen that they're all posters who've been around quite some time and who already suffered dozens of Ptokax shameless advertising, so YES, we do know about it, alright.
+<br/>  And if you had bothered actually reading this very interesting thread before spoiling it with garbage, you would noticed that Haard mentioned Ã‚Â«If mutli-hub protocol extensions were used by different hubs then linking a DCH++--&gt;PkotaX--&gt;OpenDC---&gt;SDCH--&gt;etc should be possible. The users/clients don't need to know or care... Ã‚Â». So yes, we know about it, but we're talking about something completely different than switching to another hub software than NMDC.
+<br/>  Talk about Ptokax all you like, but keep it in relevant threads, and make relevant posts, please.</div>
+<div class="signature" id="sig13383">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13396">
+<div class="inner">
+<dl class="postprofile" id="profile13396">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=898">A</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 17</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 10:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13396">
+<h3><a href="#p13396"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=898">A</a></strong> » </span>2003-05-01 12:22
+			</p>
+<div class="content">as far as i understand this thread it is about nmdc hub or nmdc hacked hubi think that software is just a dead end.
+<br/>
+<br/>i'ts dch or ptokax</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13422">
+<div class="inner">
+<dl class="postprofile" id="profile13422">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13422">
+<h3><a href="#p13422"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-05-01 13:45
+			</p>
+<div class="content">Re-read first lines of the very first post of the thread, all the way at the top :
+<br/>
+<br/><blockquote class="uncited"><div>Background: we are running a semi-closed HUB network, with 900+ users on the biggest hubs. We can't let in more users, we have tried Hacked NMDC HUBs, PtokaX and now a Linux HUB SW. It seems, that the network utilization goes to high with that many users.</div></blockquote>
+<br/>
+<br/>This is a thread about the protocol issues (as you would expect in "Protocol Alley"), not about a specific hub, and definitely not about NMDCH.
+<br/>"Switch to hub software such and such" is definitely out of place, and the fact you missed Ptokax was already mentioned as "not doing the trick" proves you didn't even bother reading the very first post halfway through, but directly jumped in to do some disgustingly irrelevant advertisement simply based on the thread title.
+<br/>
+<br/>The only thing that would really help in the current state of the protocol, is more like some kind of "master" hub that wouldn't accept any user connection, but simply comunicates with "slave hubs" and keeps track of all the users on all the slave hubs, while they take care of the outgoing traffic with clients, sending the bulk (searches) to each other, and the rest to the master hub. To the best of my knowledge, Ptokax doesn't support this (or any other) way of distributed functioning saving bandwidth (Which is the issue here. <span style="text-decoration: underline">Not cpu or ram</span>).
+<br/>The thread itself has more elaborate examples as my own, allowing to effectively use 3 machines as 3 hubs accepting client connections, but they require (a minimum of reading and) a few protocol changes, so it's a good thing to first agree on a standard, common and efficient way to handle the issue if we go that way.
+<br/>I wish the whole thing was as simple as "use software so and so" instead, but so far, all current softwares are an equal dead-end when it comes to handling 900+ users.</div>
+<div class="signature" id="sig13422">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13429">
+<div class="inner">
+<dl class="postprofile" id="profile13429">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13429">
+<h3><a href="#p13429"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-05-01 14:04
+			</p>
+<div class="content">To be a little less blunt than butterflysoul, a lot of the things we're discussing here have nothing to do with specific hubs or implementations. The wall many are hitting is in bandwidth; it doesn't matter how good your software is if the DC protocol itself is choking to death.
+<br/>
+<br/>So we need to find the best ways to do more with our finite bandwidth. Various solutions have been proposed in this thread.
+<br/>
+<br/>To specifically address something butterflysoul said, there's no real reason to demand that a hub can only connect to other hubs. It'd be better to say that the hub should give priority to other hubs, if that's what's wanted, but to make the "only other hubs" rule is to slightly cripple the network.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13433">
+<div class="inner">
+<dl class="postprofile" id="profile13433">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13433">
+<h3><a href="#p13433"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-05-01 14:13
+			</p>
+<div class="content"><blockquote class="uncited"><div>there's no real reason to demand that a hub can only connect to other hubs. It'd be better to say that the hub should give priority to other hubs, if that's what's wanted, but to make the "only other hubs" rule is to slightly cripple the network.</div></blockquote>
+<br/>
+<br/>If I remember properly, the few approaches of distributed hubs so far apparently suffer from an "out of sync" issue after a bit. Having one single hub keep track of all the users on all the slave hubs is the most simple way to fix the issue.
+<br/>However, I'll definitely agree with you that it's not the most elegant =)</div>
+<div class="signature" id="sig13433">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13434">
+<div class="inner">
+<dl class="postprofile" id="profile13434">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=898">A</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 17</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 10:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13434">
+<h3><a href="#p13434"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=898">A</a></strong> » </span>2003-05-01 14:16
+			</p>
+<div class="content">if you want too make changes too protocol you should consider compatiblity with all hub software. 
+<br/>
+<br/>Since the NMDC hub doesnÃ‚Â´t get updates anymore, that one problem, then DC V2 comes out soon i heard (late april they said) what about that compatiblity problems? 
+<br/>
+<br/>You canÃ‚Â´t just discuss in one topic a change of a protocol, The way your all talking is a whole new p2p network.
+<br/>
+<br/>I know te protocol sucks, but it is just really hard too change all of it now.
+<br/>because you need too change hub side and client side.
+<br/>
+<br/>btw: a thought ptokaxhub runs smood with 1500+ users</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13437">
+<div class="inner">
+<dl class="postprofile" id="profile13437">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=898">A</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 17</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 10:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13437">
+<h3><a href="#p13437"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=898">A</a></strong> » </span>2003-05-01 14:27
+			</p>
+<div class="content">but then again bandwidth is the discussion
+<br/>
+<br/>maby itÃ‚Â´s possible too modify the client that it can pass information thru
+<br/>too other clients and then build up some tree.
+<br/>
+<br/>That the hub only have too give 10 users or more or less the information
+<br/>and that they give the information too other clients and so on.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13441">
+<div class="inner">
+<dl class="postprofile" id="profile13441">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-06 11:56</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13441">
+<h3><a href="#p13441"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a></strong> » </span>2003-05-01 14:47
+			</p>
+<div class="content">IMO, since the DC protocol has been published, and new clients have been released, incompatibily with neomodus software is not an issue. If the hub you want to connect to does not support the client you're using, it's up to you to get another client. If J. Hess wants his software to be compliant to the extended protocol (as you may know, the protocol as changed clientside since the release of NMDC), he is free to release as many versions as he wishes. If he wants to stick to his (original) version of the protocol, or extend it in his own way, I think I'll live with it, as I don't use NMDC nor NMDCHub.
+<br/>
+<br/>As long as new clients keep backwards compatibility with old hub software (so that anybody with the latest client could join as many hub as possible), I can't see the point to keep hub software compatible with old clients (upgrading to a new client takes less than a minute when it comes to DC++).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13473">
+<div class="inner">
+<dl class="postprofile" id="profile13473">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1074">aMutex</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-07 20:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13473">
+<h3><a href="#p13473"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1074">aMutex</a></strong> » </span>2003-05-01 20:10
+			</p>
+<div class="content"><blockquote class="uncited"><div>Ok, that Ptokax thing is really getting on my nerves. Just for your info, there's several other hubs than Ptokax that support alot more users with less ressouces.</div></blockquote><br/><br/>Tell me please which hubsoftware have had 1700 users WITHOUT lag (and 1900 users at all) so far - besides ptokax. Btw: i'd expect you name some windows-hubsofts here - as you cant compare linux with windows-hubs. But i guess you're smart enough to understand that.<br/><br/><blockquote class="uncited"><div>And if you had bothered actually reading this very interesting thread before spoiling it with garbage, you would noticed ...</div></blockquote>
+<br/>
+<br/>The starter of that particular thread (seeSharp) wrote something about the background of his post. Have you read that? His opinion was that there is no hubsoftware that can handle more than 900 users. 
+<br/>So i think its only kind of logical that one person posts here, that ptokax CAN handle more than 900 users. So whats your problem here? 
+<br/>
+<br/>Surely - there is a physical limit with the current DC protocol. But i dont think seeSharp expected some new protocol beeing able to deal with 5000++ users. BTW: that would be against the spirit of DC at all. But i guess you dont care for this one anyway. 
+<br/>
+<br/>So before you start some ptokax-flaming-post next time - think any further. 
+<br/>
+<br/>Anyway, good luck with the further discussion about PROTOCOL/CORE-CHANGINGS ...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13477">
+<div class="inner">
+<dl class="postprofile" id="profile13477">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13477">
+<h3><a href="#p13477"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-05-01 20:37
+			</p>
+<div class="content">If you read ButterflySoul's entire post, what he's really annoyed about is the blatant posts about PtoKaX. Spamming is a thing nobody likes....(many posts ptokax are mentioned where it doesn't really have any relevance - even here! =)
+<br/>
+<br/>I agree with one point though. Stop the pointless flaming - and mentioning any hub softwares in particular. We can flame in a thread specific for flaming =)
+<br/>
+<br/>Anyways back to proper topic.....
+<br/>
+<br/>I like the idea of distributing the traffic.....when the ideas become solid, I would gladly begin implementation so we can start getting an idea of how much bandwidth is really saved, etc.</div>
+<div class="signature" id="sig13477"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13481">
+<div class="inner">
+<dl class="postprofile" id="profile13481">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13481">
+<h3><a href="#p13481"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-05-01 21:54
+			</p>
+<div class="content"><blockquote class="uncited"><div>You canÃ‚Â´t just discuss in one topic a change of a protocol, The way your all talking is a whole new p2p network.</div></blockquote><br/>Not if the extra messages among the hubs necessary to maintain the multihub network are filtered out before the users ever see them; in that event, the client can't distinguish this virtual hub from a single, real hub.<br/><blockquote class="uncited"><div>maby itÃ‚Â´s possible too modify the client that it can pass information thru <br/>too other clients and then build up some tree. <br/><br/>That the hub only have too give 10 users or more or less the information <br/>and that they give the information too other clients and so on.</div></blockquote><br/>As the previous couple of people who brought this up so failed to do, please suggest security mechanisms.<br/><br/>Alternatively, just give these few users a hub to run, for it's important that a hub, or relay station (*cough* castrated hub, useless to write/distribute separately) keep running, than a client does, and I worry about those 10 users accidentally closing their clients. I'd avoid commingling client functionaity with hub functionality, for at least this psychological reason.<br/><blockquote><div><cite>Marvin wrote:</cite>I can't see the point to keep hub software compatible with old clients</div></blockquote>
+<br/>Whilst it's not verboten, certainly, to change/add to the DC protocol, I avoid it if something's possible without doing so, such that the greatest number of existing participants in the DC network may benefit. This is one of those cases; no client change is necessary to quite noticeably improve the bandwidth situation, so I avoid such client change.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13490">
+<div class="inner">
+<dl class="postprofile" id="profile13490">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13490">
+<h3><a href="#p13490"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-05-02 01:00
+			</p>
+<div class="content"><blockquote><div><cite>ButterflySoul wrote:</cite>If I remember properly, the few approaches of distributed hubs so far apparently suffer from an "out of sync" issue after a bit. Having one single hub keep track of all the users on all the slave hubs is the most simple way to fix the issue.<br/>However, I'll definitely agree with you that it's not the most elegant =)</div></blockquote>
+<br/>
+<br/>Yes, and I really wonder #1, why they are getting out of sync (it kind of sounds like an implementation problem/bug rather than a problem with the architecture or idea), and #2, exactly what specificially needs to be kept in sync, as I'm pretty sure the things that need sync don't need to be distributed, as you seem to agree.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13505">
+<div class="inner">
+<dl class="postprofile" id="profile13505">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content13505">
+<h3><a href="#p13505"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-05-02 02:56
+			</p>
+<div class="content">I'm glad I missed the campfire.... now that the flames have died down and we're back on topic..
+<br/>
+<br/><blockquote><div><cite>volkris wrote:</cite>Yes, and I really wonder #1, why they are getting out of sync (it kind of sounds like an implementation problem/bug rather than a problem with the architecture or idea), and #2, exactly what specificially needs to be kept in sync, as I'm pretty sure the things that need sync don't need to be distributed, as you seem to agree.</div></blockquote>
+<br/>
+<br/>Exactly! 
+<br/>
+<br/>In order to keep things in Sync the userlist and contents of the Users $MyINFO must be given priority in Hub-Hub exchanges. Following that I would place chat messages or it becomes impossible to follow a conversation, then search requests and PM's.
+<br/>
+<br/>I would have placed search requests higher but we are talking about linking a large hub to allow it to grow further, any delay in broadcasting the request on 'linked' hubs shouldn't cause a big problem since the 'home' hub will have sent it to 'several hundred' users right away anyway..
+<br/>
+<br/>One of the things I have noted is the tendency of some clients (tested with DC++ v.24 and oDC v5.1) to send $MyINFO whenever the user clicks OK on the settings, even if nothing in the $MyINFO string has changed. 
+<br/>
+<br/>It would be preferable for clients to only send $MyINFO when there is a change, but, failing that, hub-hub traffic should not include redundant $MyINFO strings and hubs should not broadcast them (NMDCH does, untested with others)
+<br/>
+<br/>Just some random thoughts on this... I'd like to hear more about the existing implementations of linking, the approach taken and what worked/didn't with that approach.... I haven't heard of a Windows linking beyond NMDC and I'm not a Linux user so I'm unfamiliar with those...
+<br/>
+<br/>HaArD</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13958">
+<div class="inner">
+<dl class="postprofile" id="profile13958">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 24</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-19 15:03</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13958">
+<h3><a href="#p13958"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4891">seeSharp</a></strong> » </span>2003-05-07 23:57
+			</p>
+<div class="content">Back in Business <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>I'm happy to read many new and good ideas. I really like the master/slave HUB concept. That one could solve the bandwidth problems without any client side changes. And it would give a good solution to sync problems too.
+<br/>
+<br/>It's extra bandwidth requirements over a Hub-relay network should be estimated... (maybe I will do it some time later...<img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>.
+<br/>
+<br/>volkris: simple hub linking solution do get out of sync because of bugs in the implementation. The point is, that running a HUB designed for a stand-alone server operation, and hacking it to work in a server tree/pool isn't a nice idea. I remember old times with Win3.x/Win9x, where you never got a really stable system. Just because of the architecture. It wasn't designed to be safe/stable/etc...
+<br/>
+<br/>That's why I would like to see a solution, which isn't the simpliest hack into the system to get it working, but a good one.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p14097">
+<div class="inner">
+<dl class="postprofile" id="profile14097">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content14097">
+<h3><a href="#p14097"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-05-09 14:44
+			</p>
+<div class="content">So it seems to me that hub linking has just never been given a fair trial. 
+<br/>
+<br/>Basically of the two solutions proposed here, linking of hubs and using clients as relays, hub linking is more inline with the needs of DC.
+<br/>
+<br/>The most obvious difference between the two is the exponentially greater complexity of client relaying, which is fine if it's justified, but I don't believe it is here.
+<br/>
+<br/>What it boils down to is that with client-relays you'll have less dependability, less determinism, more security issues, more route flapping, more programming, and significant changes to the client side.
+<br/>
+<br/>With hub linking you don't have any of these problems, the only real negatives being that people have to volunteer to run linked hubs and the RIAA has a slightly better idea of whose door to knock on. Neither of these seem to be significant problems in DC, though (if the RIAA starts taking out hubs it's not going to be stopped by the client-relays anyway).
+<br/>
+<br/>So hub linking is basically the answer.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			73 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=2252&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=2252&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

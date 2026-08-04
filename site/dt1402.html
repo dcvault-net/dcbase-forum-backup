@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Quick fix for GeneralBot and DC++ 0.24 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="26" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=26" itemprop="url"><span itemprop="title">Other</span></a></span>
+<span class="crumb" data-forum-id="8" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=8" itemprop="url"><span itemprop="title">Hubs and scripts</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=8&amp;t=1402">Quick fix for GeneralBot and DC++ 0.24</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Which hub software is the best? Where can I find script XXX? Discuss it here...(no, this is not for advertising your hub...)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			16 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p7191">
+<div class="inner">
+<dl class="postprofile" id="profile7191">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 11:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Finland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7191">
+<h3 class="first"><a href="#p7191">Quick fix for GeneralBot and DC++ 0.24</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a></strong> » </span>2003-03-11 18:11
+			</p>
+<div class="content">New DC++ gives slot amout as H: x/y/z where
+<br/>
+<br/>x is count of hubs where user is normal user
+<br/>y is count of hubs where user is registered user
+<br/>z is count of hubs where user is operator
+<br/>
+<br/>That's why generalbot can't get hub count correctly (VBScript functions can't handle string-&gt;integer conversions if string contains anything else than numbers)
+<br/>
+<br/>So, to correct this like it used to work, find this part from the script (from line #322)
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>        Case "H:"<br/>          aUD(9)=Mid(sDcpp(i),3)+" (at least)"<br/>          iHubs=CDbl(Mid(sDcpp(i),3))</code></pre></div><br/>Add one line after first line:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>        Case "H:"<br/>          If InStr(sDcpp(i),"/")&gt;0 Then sDcpp(i)=Left(sDcpp(i),InStr(sDcpp(i),"/")-1)<br/>          aUD(9)=Mid(sDcpp(i),3)+" (at least)"<br/>          iHubs=CDbl(Mid(sDcpp(i),3))</code></pre></div>
+<br/>This should work with earlier generalbots too.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7197">
+<div class="inner">
+<dl class="postprofile" id="profile7197">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2079">TheRelativ</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-11 15:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7197">
+<h3><a href="#p7197"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2079">TheRelativ</a></strong> » </span>2003-03-11 18:47
+			</p>
+<div class="content">just call the BeforeFirst Function <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>If InStr(sDcpp(i),"/") then sDcpp(i)=BeforeFirst(sDcpp(i),"/")
+<br/>
+<br/>its easier to understand and you dont need to write so much ^^</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7214">
+<div class="inner">
+<dl class="postprofile" id="profile7214">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 11:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Finland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7214">
+<h3><a href="#p7214"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a></strong> » </span>2003-03-11 20:23
+			</p>
+<div class="content">It's slower</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7237">
+<div class="inner">
+<dl class="postprofile" id="profile7237">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7237">
+<h3><a href="#p7237"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-03-11 21:22
+			</p>
+<div class="content">heh, i don't even have these functions in my scripts <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7283">
+<div class="inner">
+<dl class="postprofile" id="profile7283">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7283">
+<h3><a href="#p7283"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-03-11 22:45
+			</p>
+<div class="content">Unless the user is a VIP in your own hub, you might want to count the total hubs as being x+y though, no ?
+<br/>
+<br/>This is what I used in Zeus :
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>      If Instr(aHubsNSlots(0),"/") &gt; 0 Then<br/>         a024Hubs=Split(aHubsNSlots(0),"/")<br/>         aHubsNSlots(0) = a024Hubs(0) + a024Hubs(1)<br/>      End If</code></pre></div>
+<br/><em class="text-italics">(with aHubsNSlots being the resulting array of an earlier split. 0 holds the hubs and 1 holds the slots)</em>
+<br/>
+<br/>I'm not sure how what sDcpp holds exactly, but the Split function seems really adapted to the new hub notation, no matter how you were storing the ratio until now =)
+<br/>
+<br/>I guess some hub owners will probably want to exclude z from the hubs/slots ratio check, and some others will want to include it, but as far as x and y are concerned, according to <a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?t=449">previous discussions on the topic</a> it seems most people will want to include both values, not simply one of them =)</div>
+<div class="signature" id="sig7283">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7345">
+<div class="inner">
+<dl class="postprofile" id="profile7345">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 11:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Finland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7345">
+<h3><a href="#p7345"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a></strong> » </span>2003-03-12 02:09
+			</p>
+<div class="content">I've decided to use only the first value for now, because registered/oped hubs were not counted in earlier versions. Users simply don't use the new version or make their own faked descriptions if it's harder to get in with new tag.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7386">
+<div class="inner">
+<dl class="postprofile" id="profile7386">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 11:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Finland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7386">
+<h3><a href="#p7386"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a></strong> » </span>2003-03-12 08:20
+			</p>
+<div class="content">There is also <a class="postlink" href="http://gadget.no-ip.info">GeneralBot 0.241</a> available:
+<br/>- supports H:x/y/z tag
+<br/>- rules command for users (displays login message)
+<br/>- hub traffic in hubinfo
+<br/>- sunet pinger detection
+<br/>
+<br/>Generalbot-optimized DC++ 0.24 can be found <a class="postlink" href="http://personal.inet.fi/surf/finx/download/DCPlusPlus-0.24-op.exe">here</a>. It has some right-click commands for operators and two new advanced options:
+<br/>- ability to switch to normal H:x tag instead of H:x/y/z. Note that all hubs will be counted, even oped (i.e. H:6 instead of H:1/2/3). This feature is only for backwards compability and i suggest using newer tag in future.
+<br/>- ability to switch narrow tabs on and off</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7398">
+<div class="inner">
+<dl class="postprofile" id="profile7398">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=801">AlleyKat</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 40</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-31 20:37</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7398">
+<h3><a href="#p7398"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=801">AlleyKat</a></strong> » </span>2003-03-12 10:05
+			</p>
+<div class="content">I don't quite get it, ButterflySoul... why would you count x+y but not z? Could it be you're an op a few places? IMHO fair should be fair - if you count the regged, you should also count the ops. <img alt=":!:" class="smilies" src="/images/smilies/icon_exclaim.gif" title="Exclamation"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7420">
+<div class="inner">
+<dl class="postprofile" id="profile7420">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-06 11:56</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7420">
+<h3><a href="#p7420"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a></strong> » </span>2003-03-12 12:41
+			</p>
+<div class="content"><blockquote><div><cite>AlleyKat wrote:</cite>you should also count the ops.</div></blockquote>
+<br/>Maybe the script user should decide this (with a nice little test on a boolean config var)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7431">
+<div class="inner">
+<dl class="postprofile" id="profile7431">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 11:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Finland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7431">
+<h3><a href="#p7431"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a></strong> » </span>2003-03-12 15:21
+			</p>
+<div class="content">I'll add adjustable ratio of each connection type in future versions. i.e. normal hub=1 hub, registered hub=0.5 hubs and oped hub=0 hubs...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7718">
+<div class="inner">
+<dl class="postprofile" id="profile7718">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7718">
+<h3><a href="#p7718"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-03-14 11:19
+			</p>
+<div class="content"><blockquote class="uncited"><div>I don't quite get it, ButterflySoul... why would you count x+y but not z?</div></blockquote><br/><br/>For the same reason as all the pre-0.24 DC++ counted H as being the hubs where you were an user but not the ones where you were an OP =) (actually, where you were a registered user, which is what the discussion that generated this new notation was all about). I don't remember anyone having a problem with OPs not being counted.<br/><br/>In my own hub, the people I choose as OPs are people who have clean shares, are involved in the hub's life, and are giving a lot of their time to answer questions, help newbies, re-explain 10 times a day why people with passive connection can't get any search results with a client in active mode, check potential fake-shares, and all in all, do an important work for the hub that I could never do myself, but that is critical to keeping the hub enjoyable and running fine.<br/>On top of it, they do it as a benevol thing. I don't pay them for that.<br/><br/>I (foolishly maybe ?) assume that other hub owners do the same when picking their OPs, and that someone OPing in a hub isn't mainly in there to download like crazy, but rather to dedicate a decent part of their time helping the community. That's why I exclude z from the hub count in CoZ.<br/><br/><blockquote class="uncited"><div>Could it be you're an op a few places?</div></blockquote>
+<br/>
+<br/>Aside from my own hub, I have an OP account in a small friendly private hub, and in all hubs of the network I joined. However, because running your own hub and properly OPing in other hubs at the same time is very demanding, I seldom connect to more than 3 hubs : My own, the private one, and another hub which I particularly like and which is part of the network.
+<br/>
+<br/>I would tend to agree with you if you meant that H:1/0/10 is abusive, since you can't properly OP in many hubs at the same time *nods*
+<br/>
+<br/>  I have however no personal interest in how hubs are counted in generalbot (or in the rest of the DC community), since the 3 hubs where I hang out is all I need to be happy =)
+<br/>  Furthermore, connecting to additional hubs (even hubs where I'm an OP and where the slot ratio would remain unchanged) means I'll have greater chances of seeing my bandwidth saturated by uploads 24/7 and consequently kill my own hub, since it's running on the same connection. No matter if you include z or not in the hub count, it is against my own interest to connect to many hubs, and it already was before DC++ 0.24
+<br/>
+<br/>  I hope it answers your question...</div>
+<div class="signature" id="sig7718">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7801">
+<div class="inner">
+<dl class="postprofile" id="profile7801">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2290">DV Bandit</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-15 07:06</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7801">
+<h3><a href="#p7801"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2290">DV Bandit</a></strong> » </span>2003-03-15 07:15
+			</p>
+<div class="content">Personnally I thought idea of expanded &lt;++ tag to just piss me off as our hub scripter,u got ur B,`s ur L:`s, and all kinds other new tags sprouten up..makes it a continuous pain in ars to edit or add a line or 2 to ur script to regulate such things....After careful consideration though and the way new tag has been broken down..i like it..I like fact that H: count can monitor registered and op users in your hub..before count didnt go up so if users was registered or op in other hub count didnt go up..which i beleive is a way of cheating,a hub owner has a hub count for a reason,and thus becoming a rule,I beleive that should be respected,and with new hub tag doing so i very much in agreement,just would of been nice that it wasn`t just thrown out there,given hubs time to build a script or tidy up ones they run to handle it,ooh well,thats my novel on the subject..</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7967">
+<div class="inner">
+<dl class="postprofile" id="profile7967">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=801">AlleyKat</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 40</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-31 20:37</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7967">
+<h3><a href="#p7967"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=801">AlleyKat</a></strong> » </span>2003-03-17 01:32
+			</p>
+<div class="content">I see the idea, ButterflySoul... but as you mention, it doesn't do any difference anyway. But - generally - never mind me. I'll just be using an older client if I feel like it anyway. It will be eternities before all hubs have updated their scripts, and there's prolly more changes to come anyway, hehe...
+<br/>It's just nobody's business if/how many private hubs I'm connected to. And so it will remain.  <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7968">
+<div class="inner">
+<dl class="postprofile" id="profile7968">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=801">AlleyKat</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 40</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-31 20:37</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7968">
+<h3><a href="#p7968"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=801">AlleyKat</a></strong> » </span>2003-03-17 01:45
+			</p>
+<div class="content">BTW (OFF TOPIC - I KNOW) - I generally think there are too many lazy ops out there, its not unusual to see ops chat away with eachother, letting users handle help among themselves. I'm quite a bit more active on the assisting side than most ops I know, anyway. I know it's all up to the hub owners... but if so many use the Op way of letting their friends in (look in any Asgard hub - there's at least 10 ops at all times) I think the entire idea of the above is pretty feeble anyway.
+<br/>
+<br/>And don't get all high and mighty over the kicking and sharefakerchecking - I rarely meet a hub where there's more than a few kicks per op per hour. And just as often see users noticing ops of sharefakers. Big respect to those who bother to do it ofcourse!! But don't make it sound like the OP way is better than the Private-way. It'll just increase the Op-begging to intolerable levels imho.
+<br/>
+<br/>I don't op in any public hubs. I can help other users just as good being a user myself.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8024">
+<div class="inner">
+<dl class="postprofile" id="profile8024">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8024">
+<h3><a href="#p8024"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-17 21:11
+			</p>
+<div class="content">Just to do some shameless plugging for my new and improved DC++k version - it has the ability to show the H: "As It Was Meant To Be Shown" (tm) as well as the ability to emulate 0.233 (or, indeed, any other DC++ version) to get past the stupid scripts that block 0.24 because it "looks different". And some other stuff (as always). Just press that www button below... Come on, you know you want to! <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Sarf
+<br/>---
+<br/>"<em class="text-italics"><strong class="text-strong">Jesus</strong> (briefly) <strong class="text-strong">died for your sins</strong></em>" - <strong class="text-strong">Daniel Rutter</strong></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8053">
+<div class="inner">
+<dl class="postprofile" id="profile8053">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 11:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Finland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8053">
+<h3><a href="#p8053"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=306">Gadget</a></strong> » </span>2003-03-18 02:23
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>Just to do some shameless plugging for my new and improved DC++k version</div></blockquote>
+<br/>Looks like a "permban on sight" version of dc++</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			16 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=8">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Hubs and scripts”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

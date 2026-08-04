@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Automatically dropping slow users - Page 1 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=8366&amp;start=20">Automatically dropping slow users</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			52 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=2&amp;t=8366&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=2&amp;t=8366&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p45231">
+<div class="inner">
+<dl class="postprofile" id="profile45231">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45231">
+<h3 class="first"><a href="#p45231"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-12 01:34
+			</p>
+<div class="content"><blockquote><div><cite>xhost+ wrote:</cite>I have no problem with that. How can I do it ? I browsed the Feature Tracking on SourceForge but couldn't find any way to submit an evolution?</div></blockquote>
+<br/>
+<br/>Email to arne, per the <strong class="text-strong">compile.txt</strong> directions above, is the surest way to do it.  You can attach files to a feature request (in your case, <a class="postlink" href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=669593&amp;group_id=40287&amp;atid=427635">this one</a>) only if you're either a tracker admin or the request submitter.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p45328">
+<div class="inner">
+<dl class="postprofile" id="profile45328">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17927">V1ad1m1r</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-02-12 15:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45328">
+<h3><a href="#p45328"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17927">V1ad1m1r</a></strong> » </span>2004-03-12 16:11
+			</p>
+<div class="content">Keep us informed on this one, i have so been looking for just this thing</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47796">
+<div class="inner">
+<dl class="postprofile" id="profile47796">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15453">Simon F-L</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-15 19:23</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47796">
+<h3><a href="#p47796"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15453">Simon F-L</a></strong> » </span>2004-03-31 20:51
+			</p>
+<div class="content">Will we ever see this feature. I'm starting to doubt it.  <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p48257">
+<div class="inner">
+<dl class="postprofile" id="profile48257">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17083">xhost+</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-22 23:01</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> in.the.middle.of.nowhere</dd>
+</dl>
+<div class="postbody">
+<div id="post_content48257">
+<h3><a href="#p48257">That's done</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17083">xhost+</a></strong> » </span>2004-04-03 21:36
+			</p>
+<div class="content">Hello all,
+<br/>
+<br/>The patch has been submitted today.
+<br/>I had to rework it a little bit to make it compatible with 0.401 (it was 0.305 based).
+<br/>Hope it'll be included.
+<br/>
+<br/><strong class="text-strong"><span style="color: red">xhost+</span></strong></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p48284">
+<div class="inner">
+<dl class="postprofile" id="profile48284">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=20079">Tame</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 8</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-04-02 12:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content48284">
+<h3><a href="#p48284"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=20079">Tame</a></strong> » </span>2004-04-04 01:15
+			</p>
+<div class="content">have you heard anything back yet?  Because i really want this feature i was winding up to having a look at the code my self, but it would have involed learning a new language which really i could not be arsed but i was beginning think it would be worth the effort.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p49001">
+<div class="inner">
+<dl class="postprofile" id="profile49001">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16521">dusdus</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-10 14:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content49001">
+<h3><a href="#p49001">yes!</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16521">dusdus</a></strong> » </span>2004-04-10 00:08
+			</p>
+<div class="content">great idea!
+<br/>how can I get this feature in my dc++?
+<br/>(where is it?!)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p49059">
+<div class="inner">
+<dl class="postprofile" id="profile49059">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=20456">Timzone8</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-04-10 14:33</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Australia</dd>
+</dl>
+<div class="postbody">
+<div id="post_content49059">
+<h3><a href="#p49059"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=20456">Timzone8</a></strong> » </span>2004-04-11 05:16
+			</p>
+<div class="content">Sounds like a good idea. You'd have a bit of trouble getting it to accurately drop the source though, especially if the source decides to load a web page or something and the DL speed goes down for a second. Best way is just to monitor it manually. =P</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p49061">
+<div class="inner">
+<dl class="postprofile" id="profile49061">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15306">IntraDream</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-12 19:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> FL,USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content49061">
+<h3><a href="#p49061"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15306">IntraDream</a></strong> » </span>2004-04-11 05:51
+			</p>
+<div class="content">should be setup on a average system or a counting system.. ie if the 10 second avg is less than the minimum selected speed.. or if the minimun is under the min for 10 seconds streight.. ie 1K/s Min.
+<br/>
+<br/>5K,3K,0K,0K(8 more = Drop),3K(Reset counter)
+<br/>or just an timespan average.
+<br/>
+<br/>If that makes any sence at all to anyone.
+<br/>
+<br/>Tim-</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p49372">
+<div class="inner">
+<dl class="postprofile" id="profile49372">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17083">xhost+</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-22 23:01</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> in.the.middle.of.nowhere</dd>
+</dl>
+<div class="postbody">
+<div id="post_content49372">
+<h3><a href="#p49372">Rejected!</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17083">xhost+</a></strong> » </span>2004-04-13 21:56
+			</p>
+<div class="content"><blockquote class="uncited"><div>should be setup on a average system or a counting system.. ie if the 10 second avg is less than the minimum selected speed.. or if the minimun is under the min for 10 seconds streight.. ie 1K/s Min</div></blockquote>
+<br/>
+<br/>Guys... Read the first message... It works on a confirmation window basis whose size you can set.
+<br/>Anyway I got the answer from Arne and it seems my code infringed several coding rules which were not known to me and thus is rejected.
+<br/>Since it would take too much time to have it straight back the way Arne would like it, plus the fact that I do it for fun, my needs and not pride of seing my name appended to the credit list (although that would be nice <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>), I'm afraid you will have to wait 'till someone else does it...
+<br/>
+<br/>In the meantime, you can try out my mod at <a class="postlink" href="http://jdcpp.free.fr">http://jdcpp.free.fr</a>.
+<br/>
+<br/>Its based on 0.401 so it comes with the CPU-and-HD-eating, to-my-point-of-view-totally-useless, hashing capability which I'm very afraid will transform DC into a lame kazaa clone once the multi-source feature is implemented (once you've got hash, guess what'll come next). Well, I'll argue on that somewhere else, promise.
+<br/>
+<br/>Feel free to send your feedback and continue the work...
+<br/>
+<br/><span style="color: red"><strong class="text-strong">xhost+</strong></span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p50120">
+<div class="inner">
+<dl class="postprofile" id="profile50120">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14869">Qba</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-06 13:21</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content50120">
+<h3><a href="#p50120"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14869">Qba</a></strong> » </span>2004-04-19 20:24
+			</p>
+<div class="content">and what about a ban list for downloads. i will tel you a stroy <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>i often download a set of files - like episodes or music - when i do that i download form many users at the same time, (they add through search on the common keyword, ex. futurama for futurama episodes) but... among many, many users that have most of the collection and are added to potential sources for myne download, there are some which are quite slow. when i look through the list i can see the same people "blocking" a file witch would have better hosts to download from, and i have to get rid of them all the time...
+<br/>
+<br/>in esence - if there would be a way to tell dc "well download the files i listed in the download quete but DONT use any of the folowing users do download them from" <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p50155">
+<div class="inner">
+<dl class="postprofile" id="profile50155">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content50155">
+<h3><a href="#p50155"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-04-20 00:24
+			</p>
+<div class="content"><blockquote><div><cite>Qba wrote:</cite>i will tel you a stroy</div></blockquote>
+<br/>
+<br/>No need, it's in the feature tracker already (I ask people to search there in the sticky post at the top of this forum):
+<br/><a class="postlink" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=771569&amp;group_id=40287&amp;atid=427635">[ 771569 ] manually label sources as preferred or to be avoided</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p50239">
+<div class="inner">
+<dl class="postprofile" id="profile50239">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14869">Qba</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-06 13:21</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content50239">
+<h3><a href="#p50239"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14869">Qba</a></strong> » </span>2004-04-20 15:31
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>No need, it's in the feature tracker already (I ask people to search there in the sticky post at the top of this forum):<br/><a class="postlink" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=771569&amp;group_id=40287&amp;atid=427635">[ 771569 ] manually label sources as preferred or to be avoided</a></div></blockquote>
+<br/>i did read it... must have slipped <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+<div class="signature" id="sig50239"><span style="font-size: 84%; line-height: 116%;"><em class="text-italics">Qba</em></span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p51852">
+<div class="inner">
+<dl class="postprofile" id="profile51852">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17083">xhost+</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-22 23:01</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> in.the.middle.of.nowhere</dd>
+</dl>
+<div class="postbody">
+<div id="post_content51852">
+<h3><a href="#p51852">Update</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17083">xhost+</a></strong> » </span>2004-05-03 17:46
+			</p>
+<div class="content">The source distrib at <a class="postlink" href="http://jdcpp.free.fr">http://jdcpp.free.fr</a> was missing QueueFrame.h. It's now fixed.
+<br/>Thanks to Toad for pointing this out.
+<br/>
+<br/><span style="color: red"><strong class="text-strong">xhost+</strong></span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p51905">
+<div class="inner">
+<dl class="postprofile" id="profile51905">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15453">Simon F-L</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-15 19:23</dd>
+</dl>
+<div class="postbody">
+<div id="post_content51905">
+<h3><a href="#p51905"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15453">Simon F-L</a></strong> » </span>2004-05-04 12:49
+			</p>
+<div class="content">Have some probs.
+<br/>
+<br/>When the timer starts to countdown all hubs disconnect and all dl's stops
+<br/>
+<br/>And where are the options (lowest speed) supposed to be saved???</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p51930">
+<div class="inner">
+<dl class="postprofile" id="profile51930">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17083">xhost+</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-22 23:01</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> in.the.middle.of.nowhere</dd>
+</dl>
+<div class="postbody">
+<div id="post_content51930">
+<h3><a href="#p51930"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17083">xhost+</a></strong> » </span>2004-05-04 19:05
+			</p>
+<div class="content"><blockquote class="uncited"><div>When the timer starts to countdown all hubs disconnect and all dl's stops <br/></div></blockquote><br/><br/>Seems strange. I've never experienced that... Did you compile it or did you use the binary?<br/><br/><blockquote class="uncited"><div>And where are the options (lowest speed) supposed to be saved???</div></blockquote>
+<br/>
+<br/>It's explained on the website. In the settings page there is an "Upload Speed Threshold" editbox you'll have to filled with the desired minimum  upload rate.
+<br/>
+<br/><span style="color: red"><strong class="text-strong">xhost+</strong></span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p52083">
+<div class="inner">
+<dl class="postprofile" id="profile52083">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=595">Oddish</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 20:30</dd>
+</dl>
+<div class="postbody">
+<div id="post_content52083">
+<h3><a href="#p52083"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=595">Oddish</a></strong> » </span>2004-05-06 19:29
+			</p>
+<div class="content">Great stuff! But will your version be detected as an illegal/modded version so we'll get banned from our favourite hubs?
+<br/>
+<br/>And another question: which files do you need to replace? I just don't want to go through the hassle of losing my settings and my download queue.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p52091">
+<div class="inner">
+<dl class="postprofile" id="profile52091">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=595">Oddish</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 20:30</dd>
+</dl>
+<div class="postbody">
+<div id="post_content52091">
+<h3><a href="#p52091"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=595">Oddish</a></strong> » </span>2004-05-06 22:08
+			</p>
+<div class="content">Sorry for that second question. <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/> I didn't know there was only one file.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p52095">
+<div class="inner">
+<dl class="postprofile" id="profile52095">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=595">Oddish</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 20:30</dd>
+</dl>
+<div class="postbody">
+<div id="post_content52095">
+<h3><a href="#p52095"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=595">Oddish</a></strong> » </span>2004-05-06 22:34
+			</p>
+<div class="content">Ok, I've tried your modded version and I'm experiencing two problems so far.
+<br/>
+<br/>1.Tthe "Remove source if below download threshold" option doesn't work. I right-click and select it, and the next time I right-click it still says "Remove source if below download threshold".
+<br/>
+<br/>2. I can't manually add sources to files anymore.
+<br/>
+<br/>Good effort, but it needs a little work.
+<br/>
+<br/>EDIT:
+<br/>
+<br/>3. While writing this message. It crashed!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p52464">
+<div class="inner">
+<dl class="postprofile" id="profile52464">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 8</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-18 07:48</dd>
+</dl>
+<div class="postbody">
+<div id="post_content52464">
+<h3><a href="#p52464"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a></strong> » </span>2004-05-11 11:04
+			</p>
+<div class="content">The mod works beatifully for me after I received the missing file... The only change I implemented was to have download control the default.
+<br/>
+<br/>
+<br/>/Toad</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p53762">
+<div class="inner">
+<dl class="postprofile" id="profile53762">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=22706">Trapper</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-05-23 14:25</dd>
+</dl>
+<div class="postbody">
+<div id="post_content53762">
+<h3><a href="#p53762"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=22706">Trapper</a></strong> » </span>2004-05-23 16:00
+			</p>
+<div class="content">I posted something like this here and worked the idea out further:
+<br/><!-- m --><a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?t=10393">http://dcplusplus.sourceforge.net/forum ... hp?t=10393</a><!-- m -->
+<br/>
+<br/>I'd like to be able to choose from which user I'm downloading, rather than DC++ just picking the first one online. It should pick the <strong class="text-strong">fastest</strong> instead. What about a <em class="text-italics">'properties' window </em>for each file in which I can choose/delete/compare users for each file. 
+<br/><span style="text-decoration: underline"><strong class="text-strong">When it's downloading FileLists it can easily compare the speeds for each user. </strong></span>(Now I have to monitor manually which go fastest and then delete every user that is slow by right clicking - 20 times for 20 slow users  <img alt=":?" class="smilies" src="/images/smilies/icon_confused.gif" title="Confused"/> )
+<br/>
+<br/>It could also be set in this properties window that DC++ skips to another user if speed drops below a configurable level. And that being able to adjust for each file. So rare files will get a high speed and common files a low speed.
+<br/>
+<br/>This will all make the queue.xml file a bit longer, but I think it would be great. There are so many fast slots around - it's just very difficult to find them.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p53829">
+<div class="inner">
+<dl class="postprofile" id="profile53829">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=22742">Ace_Beast</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-05-24 02:19</dd>
+</dl>
+<div class="postbody">
+<div id="post_content53829">
+<h3><a href="#p53829"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=22742">Ace_Beast</a></strong> » </span>2004-05-24 02:35
+			</p>
+<div class="content">Great job.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p56295">
+<div class="inner">
+<dl class="postprofile" id="profile56295">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24176">OptiMalXferz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-19 15:59</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56295">
+<h3><a href="#p56295">Better way</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24176">OptiMalXferz</a></strong> » </span>2004-06-19 16:10
+			</p>
+<div class="content">like this?  <img alt=":twisted:" class="smilies" src="/images/smilies/icon_twisted.gif" title="Twisted Evil"/>
+<br/><a class="postlink" href="http://homepage.ntlworld.com/cybernetix/dc_001.jpg">http://homepage.ntlworld.com/cybernetix/dc_001.jpg</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p56297">
+<div class="inner">
+<dl class="postprofile" id="profile56297">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24176">OptiMalXferz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-19 15:59</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56297">
+<h3><a href="#p56297">Babysitting downloads</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24176">OptiMalXferz</a></strong> » </span>2004-06-19 16:29
+			</p>
+<div class="content"><blockquote class="uncited"><div> . .close connection. Search for alternatives. That's all. Good?<br/><br/>Sometimes I leave my computer overnight only to find it downloaded 3% the next morning due to the fact that it was downloading at 11b/s </div></blockquote>
+<br/>
+<br/>I decided to try bogstandard dc++ for a change instead of  dc++ stealth to avoid changing mac address &amp; aliases weekly and the occasional auto-ban hubs, but the lack of auto-disconnect slow user is very much the worst of 2 evils <img alt=":twisted:" class="smilies" src="/images/smilies/icon_twisted.gif" title="Twisted Evil"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p56470">
+<div class="inner">
+<dl class="postprofile" id="profile56470">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56470">
+<h3><a href="#p56470">Re: Babysitting downloads</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-06-22 00:12
+			</p>
+<div class="content"><blockquote><div><cite>OptiMalXferz wrote:</cite>I decided to try bogstandard dc++ for a change instead of  dc++ stealth to avoid changing mac address &amp; aliases weekly and the occasional auto-ban hubs, but the lack of auto-disconnect slow user is very much the worst of 2 evils <img alt=":twisted:" class="smilies" src="/images/smilies/icon_twisted.gif" title="Twisted Evil"/></div></blockquote>
+<br/>Er, did you miss the portion where xhost gave the URL to a DC++ mod that includes his changes?  DC++ without dropping slow users and StealthDC++ with dropping aren't your only two choices.  CZDC and PhantomDC both have dropping users too.
+<br/>
+<br/><strong class="text-strong">If you wanted to use a good client,  you could.</strong></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p56657">
+<div class="inner">
+<dl class="postprofile" id="profile56657">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24176">OptiMalXferz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-19 15:59</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56657">
+<h3><a href="#p56657">Yea</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24176">OptiMalXferz</a></strong> » </span>2004-06-23 20:48
+			</p>
+<div class="content">Sounds good  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p57087">
+<div class="inner">
+<dl class="postprofile" id="profile57087">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24414">Seade</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-24 23:09</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> BorÃƒÂ¥s, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content57087">
+<h3><a href="#p57087">Oh and oh!!!</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24414">Seade</a></strong> » </span>2004-06-28 14:01
+			</p>
+<div class="content">While you're at it, why not change it so that you can prioritize users with a certain string in their nickname, for example that this feature tries out all users that have the [BBB] or [10MBit] tag in front of their names first and then goes on to the next tag in the order of all the ones you can write? Get my drift?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p57093">
+<div class="inner">
+<dl class="postprofile" id="profile57093">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content57093">
+<h3><a href="#p57093">Re: Oh and oh!!!</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-06-28 15:49
+			</p>
+<div class="content"><blockquote><div><cite>Seade wrote:</cite>While you're at it, why not change it so that you can prioritize users with a certain string in their nickname</div></blockquote>
+<br/>That is only a small variation on this existing request:
+<br/><a class="postlink" href="http://sourceforge.net/tracker/?func=detail&amp;aid=771569&amp;group_id=40287&amp;atid=427635">[ 771569 ] manually label sources as preferred or to be avoided</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p57990">
+<div class="inner">
+<dl class="postprofile" id="profile57990">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25173">duckfromhell</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-07-10 12:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content57990">
+<h3><a href="#p57990">download speed feature</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25173">duckfromhell</a></strong> » </span>2004-07-10 12:54
+			</p>
+<div class="content">hey there,
+<br/>
+<br/>just read the threads on this topic and trying the feature now.
+<br/>First of all i like to say that i find it a wonderfull feature which saves me a lot of irritation searching for faster users every time.
+<br/>
+<br/>Second of all i like to make some suggestions to make this feature a little more user friendly;
+<br/>
+<br/>1: is it possible to hook this feature up on the amount of users in your download que? For example that you can set it so that its only (and automatically) used when there are more then a given number of users to download from?
+<br/>If this is possible, you can use it automatically for all the downloads, cause the proggie will not use it automatically when the amount of users which you can dl the file from is lower then your minimum requirement..
+<br/>
+<br/>Another solution that would be great would be that this only works if there are other users with free slots in your queue for that file...In this case the proggie should check if there are more then # users in your queue and more then # from those users have free slots. IF thats the case and the dl is slow, he should disconnect and continue to try the next user.
+<br/>This makes that you basicly will always have the fastest dl...(unless there are more users in queue with free slots that are all below the desired dl speed lol)
+<br/>
+<br/>2: is it possible to let this feature make a log file, so you can see which users are closed for having a slow dl speed? Cause in this way you can check if the feature is doing what its supposed to do
+<br/>
+<br/>greetings and keep up the good work <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>
+<br/>
+<br/>duckfromhell</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p58062">
+<div class="inner">
+<dl class="postprofile" id="profile58062">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content58062">
+<h3><a href="#p58062"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-07-11 04:08
+			</p>
+<div class="content">From another thread:
+<br/><blockquote><div><cite>PseudonympH wrote:</cite>It seems to me that most of these download management features people want will become irrelevant once multisource comes along.  Personally, I'm willing to wait for one big thing to fix all the little ones.</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p60400">
+<div class="inner">
+<dl class="postprofile" id="profile60400">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=26274">carl0s</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-08-02 10:51</dd>
+</dl>
+<div class="postbody">
+<div id="post_content60400">
+<h3><a href="#p60400"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=26274">carl0s</a></strong> » </span>2004-08-02 10:56
+			</p>
+<div class="content">This feature has it's pitfallsa if nopt implemented pproperly
+<br/>
+<br/>please make sure to add verification as i do not want the feature to remove sources from rare files
+<br/>say 5 or less source users online!!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64917">
+<div class="inner">
+<dl class="postprofile" id="profile64917">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29365">alexkaiserlis52</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-23 22:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64917">
+<h3><a href="#p64917"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29365">alexkaiserlis52</a></strong> » </span>2004-09-24 12:24
+			</p>
+<div class="content"><blockquote class="uncited"><div>In the meantime, you can try out my mod at <!-- m --><a class="postlink" href="http://jdcpp.free.fr">http://jdcpp.free.fr</a><!-- m -->.</div></blockquote>
+<br/>
+<br/>Can it work with newer version??
+<br/>If not Will i have any problems??</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p64956">
+<div class="inner">
+<dl class="postprofile" id="profile64956">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64956">
+<h3><a href="#p64956"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-25 00:03
+			</p>
+<div class="content"><blockquote><div><cite>alexkaiserlis52 wrote:</cite>Can it work with newer version??<br/>If not Will i have any problems??</div></blockquote>
+<br/>It is the version it is, if you want it based on a newer DC++, you'll have to get him to make the changes.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			52 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=2&amp;t=8366&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=2&amp;t=8366&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

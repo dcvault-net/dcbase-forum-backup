@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>A minor problem with a script I found - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="26" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=26" itemprop="url"><span itemprop="title">Other</span></a></span>
+<span class="crumb" data-forum-id="8" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=8" itemprop="url"><span itemprop="title">Hubs and scripts</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=8&amp;t=2064">A minor problem with a script I found</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Which hub software is the best? Where can I find script XXX? Discuss it here...(no, this is not for advertising your hub...)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			13 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p10883">
+<div class="inner">
+<dl class="postprofile" id="profile10883">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-09 09:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10883">
+<h3 class="first"><a href="#p10883">A minor problem with a script I found</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a></strong> » </span>2003-04-11 20:17
+			</p>
+<div class="content">I came across a script on a website for hub/slot ratio. The script works great, but it doesn't pm the user, telling them what they were kicked for. Could one of you please take a look at this portion of the script, where I believe the problem lies. If the whole script is needed, please say so.
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>If cInt(slot) &lt; (slotsPerHub * cInt(hub)) then<br/>     index.SendChatMessage cStr(sBotName), cStr("Unfortunately, you have not got enough slots to connect here." &amp; vbCrLf &amp; "You must have at least " &amp; slotsPerHub &amp; " open slot(s) per hub you are connected." &amp; vbCrLf &amp; "Open more slots or disconnect from some hubs before coming back.")<br/>     index.disconnect</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10886">
+<div class="inner">
+<dl class="postprofile" id="profile10886">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-06 11:56</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10886">
+<h3><a href="#p10886"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a></strong> » </span>2003-04-11 20:27
+			</p>
+<div class="content">if <span style="color: green">index</span> is holding the "bad" user, <span style="color: green">index.SendChatMessage</span> should send him a message in the main chat (for his eyes only). Writing <span style="color: green">frmHub.DoEventsForMe</span> before the <span style="color: green">index.disconnect</span> line should solve your problem.
+<br/>
+<br/>Use <span style="color: green">PrivateMessage</span> instead of <span style="color: green">SenChatMessage</span> if you want an PM instead of the main chat warning.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10887">
+<div class="inner">
+<dl class="postprofile" id="profile10887">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-06 11:56</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10887">
+<h3><a href="#p10887"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a></strong> » </span>2003-04-11 20:29
+			</p>
+<div class="content">PS : if this didn't work, there might be a problem with the line setting the <span style="color: green">index</span> object, so we would need the code that handles it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10890">
+<div class="inner">
+<dl class="postprofile" id="profile10890">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-09 09:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10890">
+<h3><a href="#p10890"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a></strong> » </span>2003-04-11 20:53
+			</p>
+<div class="content">That did it. Thank You.  <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10906">
+<div class="inner">
+<dl class="postprofile" id="profile10906">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-09 09:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10906">
+<h3><a href="#p10906"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a></strong> » </span>2003-04-11 22:16
+			</p>
+<div class="content">I had to take the script down. It has major flaws in it. It was kicking people for having too many slots open. For instance, it kicked a user for being in 3 hubs and having 10 slots open. It seems that hub/slot ratio has to match to be allowed in. It also had a max hubs portion in the script. Which I set higher than my other max hub script, so it wouldn't be used. But it was still kicking people, users well within my limit were being kicked and told that they were in too many hubs. I guess I'll have to leave the hub/slot ratio to the ops. If any of you get bored and are interested in taking a look at the script, here it is.
+<br/>
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Dim sBotName<br/>Dim maxHubs<br/>Dim slotsPerHub<br/>Dim minSpeed<br/><br/>Sub Main()<br/>'--------------------------------------------<br/> sBotName = "SlotÃ‚Â Bot"<br/> maxHubs = 20<br/> slotsPerHub = 1<br/> minSpeed = 5<br/>'--------------------------------------------<br/> <br/>End sub<br/><br/>Sub DataArival(index, sCurData)<br/> on Error resume Next<br/><br/>'adds a description and connection to the bot<br/>'--------------------------------------------<br/> If len(sCurData) &gt; 0 then<br/>  If left(sCurData, 8) = "$GetINFO" then<br/>   Dim sReqdUserName<br/>   sReqdUserName = split(sCurData, " ", 3)(1)<br/>   If sReqdUserName = sBotName then index.SendData "$MyINFO $ALL " &amp; sReqdUserName &amp; " DC++ Script$ $Warp 10" &amp; chr(8) &amp; "$ $0$|"<br/>   Exit sub<br/>  End if<br/>'--------------------------------------------<br/><br/>  If left(sCurData, 7) = "$MyINFO" And Not index.bOperator then<br/>   Dim sDescrAndMore<br/>   sDescrAndMore = left(sCurData, inStr(sCurData, "$ $") - 1)<br/>   If right(sDescrAndMore, 1) = "&gt;" then<br/>    Dim tag<br/>    Dim hub, slot, speed<br/>    tag = right(sDescrAndMore, len(sDescrAndMore) - inStr(sDescrAndMore, " V:") - 3)<br/>    hub = BeforeFirst(AfterFirst(tag, ",H:"), ",S:")<br/>    speed = ""<br/>    If inStr(tag, ",O:") &gt; 0 then<br/>     slot = BeforeFirst(AfterFirst(tag, ",S:"), ",O:")<br/>    Elseif inStr(tag, ",B:") &gt; 0 then<br/>     slot = BeforeFirst(AfterFirst(tag, ",S:"), ",B:")<br/>     speed = BeforeFirst(AfterFirst(tag, ",B:"), "&gt;")<br/>    Elseif inStr(tag, ",L:") &gt; 0 then<br/>     slot = BeforeFirst(AfterFirst(tag, ",S:"), ",L:")<br/>     speed = BeforeFirst(AfterFirst(tag, ",L:"), "&gt;")<br/>    Else<br/>     slot = BeforeFirst(AfterFirst(tag, ",S:"), "&gt;")<br/>    End if<br/>    If speed &lt;&gt; "" then<br/>     If cInt(speed) &lt; minSpeed then<br/>      index.PrivateMessage sBotName, cStr("Unfortunately, you are using a bandwith-limiter version of DC++ and have not met the minimum upload speed of " &amp; minSpeed &amp; "kb/s. You may return when you meet this requirement.")<br/>      frmHub.DoEventsForMe<br/>      index.disconnect<br/>     End if<br/>    End if<br/>    If cInt(hub) &gt; maxHubs then<br/>     index.PrivateMessage cStr(sBotName), cStr("Unfortunately, you are exceeding this hub's simultaneous hub connections limit of " &amp; maxHubs &amp; "." &amp; vbCrLf &amp; "You are welcome to come back after disconnecting from some of the other hubs. Try again in 15min.")<br/>     frmHub.DoEventsForMe<br/>     index.kick<br/>    End If<br/>    If cInt(slot) &lt; (slotsPerHub * cInt(hub)) then<br/>     index.PrivateMessage cStr(sBotName), cStr("Unfortunately, you do not have enough slots open to connect to this hub." &amp; vbCrLf &amp; "You must have at least " &amp; slotsPerHub &amp; " open slot per hub you are connected." &amp; vbCrLf &amp; "Open more slots or disconnect from some hubs before coming back.")<br/>     frmHub.DoEventsForMe<br/>     index.disconnect<br/>    End if<br/>   End if<br/>  End if<br/> End if<br/>End sub<br/><br/>Function BeforeFirst(sIn, sFirst)<br/> BeforeFirst = left(sIn, inStr(1, sIn, sFirst) - 1)<br/>End Function<br/><br/>Function AfterFirst(sIn, sFirst)<br/> AfterFirst = right(sIn, len(sIn) - inStr(1, sIn, sFirst) - (len(sFirst) - 1))<br/>End Function</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10908">
+<div class="inner">
+<dl class="postprofile" id="profile10908">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10908">
+<h3><a href="#p10908"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-11 22:44
+			</p>
+<div class="content">Yuck  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Hmmm....well if you'd like me to write one up, give a shout! Course, I DO have a nice one built-into Cerberus (my multi-function script), so it basically would be "ripped" from it.
+<br/>
+<br/>I'm too lazy to write one if you don't care....</div>
+<div class="signature" id="sig10908"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10914">
+<div class="inner">
+<dl class="postprofile" id="profile10914">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-09 09:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10914">
+<h3><a href="#p10914"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a></strong> » </span>2003-04-11 23:03
+			</p>
+<div class="content">I'd love for you to write me one! I didn't want to ask in my previous post because I didn't want to seem like the noob that came in and started demanding stuff. Figured that one script you wrote for me was all I could get away with asking for without seeming pushy. But if you don't mind, I'd be very much grateful!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10915">
+<div class="inner">
+<dl class="postprofile" id="profile10915">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-06 11:56</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10915">
+<h3><a href="#p10915"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a></strong> » </span>2003-04-11 23:05
+			</p>
+<div class="content"><blockquote><div><cite>Animated 0wner wrote:</cite>I had to take the script down. It has major flaws in it.<br/><br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    hub = BeforeFirst(AfterFirst(tag, ",H:"), ",S:")<br/></code></pre></div></div></blockquote>
+<br/>This script doesn't know about the new hub tag (H:x/y/z), that might explain why it doesn't work.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10916">
+<div class="inner">
+<dl class="postprofile" id="profile10916">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-09 09:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10916">
+<h3><a href="#p10916">Sorry for the extra post, I don't see an edit option.</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a></strong> » </span>2003-04-11 23:08
+			</p>
+<div class="content">Mis-read, sorry. If you don't mind giving me the hub/slot portion of your script, I would be very grateful.  <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10918">
+<div class="inner">
+<dl class="postprofile" id="profile10918">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10918">
+<h3><a href="#p10918"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-11 23:23
+			</p>
+<div class="content">I'll leave you to test it....I did a quick test that was all.
+<br/>
+<br/>Don't worry about over stepping yourself. I like to make scripts (I have no life)
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Const RATIO = 25                      'How many slots per hub<br/>Const MAXHUBS = 25               'Max number of hubs a user can be connected to<br/>Const MINBANDWIDTH = 2      'Minimum amount of bandwidth (in kb/s) if using limiter<br/>Const BOTNAME = "DCpp"       'Name of the bot used in PMs<br/><br/>Sub DataArival(curUser, sCurData)<br/>  If LeftB(sCurData, 14) = "$MyINFO" Then<br/>    Dim iPos<br/>  <br/>    sCurData = MidB(sCurData, InStrB(1, sCurData, " ") + 2)<br/>    sCurData = MidB(sCurData, InStrB(1, sCurData, " ") + 2)<br/>    iPos = InStrB(1, sCurData, " ")<br/>    sCurData = MidB(sCurData, iPos + 2, InStrB(iPos, sCurData, "$") - iPos - 2)<br/><br/>    iPos = InStrRev(sCurData, "&lt;++")<br/><br/>    If iPos Then<br/>      '&lt;++ V:*,M:*,H:*,S:*&gt;<br/><br/>      sCurData = Mid(sCurData, iPos + 4, Len(sCurData) - iPos - 4)<br/><br/>      Dim aTag, iHubs, iSlots<br/><br/>      aTag = Split(sCurData, ",")<br/>      iHubs = MidB(aTag(2), 5)<br/>      iSlots = MidB(aTag(3), 5)<br/><br/>      If InStrB(1, iHubs, "/") Then<br/>        Dim aTmp<br/><br/>        aTmp = Split(iHubs, "/")<br/>        iHubs = CInt(aTmp(0)) + CInt(aTmp(1))<br/>      End If<br/><br/>      If CInt(iHubs) &gt; CInt(MAXHUBS) Then<br/>        curUser.PrivateMessage CStr(BOTNAME), "You are connected to too many hubs. Good bye!"<br/>        frmHub.DoEventsForMe<br/>        curUser.Disconnect<br/>        <br/>        Exit Sub<br/>      End If<br/>      <br/>      If (CInt(iSlots) / CInt(iHubs)) &lt; CInt(RATIO) Then<br/>        curUser.PrivateMessage CStr(BOTNAME), "You do not have enough slots open for the number of hubs you are connected to. Good bye!"<br/>        frmHub.DoEventsForMe<br/>        curUser.Disconnect<br/>        <br/>        Exit Sub<br/>      End If<br/><br/>      Dim ub<br/><br/>      ub = UBound(aTag)<br/><br/>      If ub &gt; 3 Then<br/>        Dim i<br/> <br/>        For i = 4 To ub<br/>          Select Case AscW(aTag(i))<br/>            Case 76, 66 'L, B<br/>              If CInt(MidB(aTag(i), 5)) &lt; CInt(MINBANDWIDTH) Then<br/>                curUser.PrivateMessage CStr(BOTNAME), "You do not have enough bandwidth alloted for DC++. Good bye!"<br/>                frmHub.DoEventsForMe<br/>                curUser.Disconnect<br/>                <br/>                Exit Sub<br/>              End If<br/>          End Select<br/>        Next<br/>      End If<br/>    End If<br/>  End If<br/>End Sub<br/></code></pre></div></div>
+<div class="signature" id="sig10918"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10930">
+<div class="inner">
+<dl class="postprofile" id="profile10930">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-09 09:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10930">
+<h3><a href="#p10930">Thx!</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a></strong> » </span>2003-04-12 00:15
+			</p>
+<div class="content">If you don't mind, would you see if you could modify this script. It's the watchbot script, a pretty common script that watches for users and files. I was wondering if it could possibly be edited so that ops can watch for ips.
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>im sBotName<br/>Dim lInterval, lCountDown<br/>Dim oFW, oUW<br/>Dim sConfirmMsg<br/>Dim sFileMsg, sUserMsg, sAddUserMsg, sAddFileMsg<br/>Dim sResetMsg, sUserOnline, sWelcomeMsg<br/><br/>Sub Main()<br/>  Set oFW = CreateObject("Scripting.Dictionary")<br/>  Set oUW = CreateObject("Scripting.Dictionary")<br/><br/>'Set these basic parameters.<br/>  sBotName = "WatchBot"  ' &lt;- name of the bot<br/>  lInterval = 6          ' &lt;- how often to search for files (* 10 seconds)<br/><br/>'The messages sent at different actions.<br/>  sFileMsg = "$usr has files matching '$file'."<br/>  sUserMsg = "$name logged on."<br/>  sAddUserMsg = "Waiting for $name to log on..."<br/>  sAddFileMsg = "Started searching for '$file'..."<br/>  sResetMsg = "Your watch list was cleared."<br/>  sUserOnline = "That user is already online!"<br/>  sWelcomeMsg = "Hi there!  I will watch for users or files which are " &amp; _<br/>   "not here, and then tell you when they come online. Please type the " &amp; _<br/>   "commands in mainchat:" &amp; vcBRLF &amp; vbCRLF &amp; _<br/>   "  watchuser &lt;user_name&gt;" &amp; vbTab &amp; "- adds a user to my list" &amp; vbCRLF &amp; _<br/>   "  watchfile &lt;file_name&gt;" &amp; vbTab &amp; "- adds a file to my list" &amp; vbCRLF &amp; _<br/>   "  watchreset" &amp; vbTab &amp; vbTab &amp; "- clears the list" &amp; vbCRLF<br/>  <br/>  lCountDown = lInterval<br/>  tmrScriptTimer.Interval = 10000<br/>  tmrScriptTimer.Enabled = True<br/>End Sub<br/><br/>Sub TimerMethod()<br/>  Dim sFind<br/><br/>  For Each sFind In oFW.Keys<br/>    colUsers.SendToAll "$Search Hub:" &amp; CStr(sBotName) &amp; " F?F?0?0?" &amp; sFind<br/>    frmHub.DoEventsForMe<br/>  Next<br/>End Sub<br/><br/>Sub DataArival(curUser, sCurData)<br/>  Dim sTheText, lPos<br/>  Dim sUsrName<br/>  Dim sFind, sTmpMsg<br/><br/>  If Left(sCurdata, 1) = "&lt;" Or _<br/>     Left(sCurData, 5 + Len(sBotName)) = "$To: " &amp; sBotName Then<br/><br/>    lPos = InStr(1, sCurData, "&gt;")<br/>    sTheText = Mid(sCurData, lPos + 2)<br/><br/>    sUsrName = CStr(curUser.sName)<br/><br/>    If Left(sTheText, 9) = "watchuser" Then<br/>      sFind = Mid(sTheText, 11)<br/>      If Not colUsers.Online(CStr(sFind)) Then<br/>        If oUW.Exists(sFind) Then<br/>          oUW(sFind) = oUW(sFind) &amp; ":" &amp; sUsrName<br/>        Else<br/>          oUW(sFind) = sUsrName<br/>        End If <br/>        curUser.PrivateMessage CStr(sBotName), _<br/>          Replace(sAddUserMsg, "$name", sFind)<br/>      Else<br/>        curUser.PrivateMessage CStr(sBotName), CStr(sUserOnline)<br/>      End If<br/><br/>    ElseIf Left(sTheText, 9) = "watchfile" Then<br/>      sFind = Mid(sTheText, 11)<br/>      If oFW.Exists(sFind) Then<br/>        oFW(sFind) = oFW(sFind) &amp; ":" &amp; sUsrName<br/>      Else<br/>        oFW(sFind) = sUsrName<br/>      End If <br/>      curUser.PrivateMessage CStr(sBotName), _<br/>        Replace(sAddFileMsg, "$file", sFind)<br/>      frmHub.DoEventsForMe<br/>      Call TimerMethod<br/><br/>    ElseIf sTheText = "watchreset" Then<br/>      For Each sFind In oUW.Keys<br/>        oUW(sFind) = Replace(oUW(sFind), ":" &amp; sUsrName, "")<br/>        If oUW(sFind) = sUsrName Then oUW.Remove(sFind)<br/>      Next<br/>      For Each sFind In oFW.Keys<br/>        oFW(sFind) = Replace(oFW(sFind), ":" &amp; sUsrName, "")<br/>        If oFW(sFind) = sUsrName Then oFW.Remove(sFind)<br/>      Next<br/>      curUser.PrivateMessage CStr(sBotName), CStr(sResetMsg)<br/><br/>    ElseIf sTheText = "watchdump" Then<br/>      For Each sFind In oUW.Keys<br/>        curUser.PrivateMessage CStr(sBotName), _<br/>          sFind &amp; " (" &amp; oUW(sFind) &amp; ")"<br/>        frmHub.DoEventsForMe<br/>      Next<br/>      For Each sFind In oFW.Keys<br/>        curUser.PrivateMessage CStr(sBotName), _<br/>          sFind &amp; " (" &amp; oFW(sFind) &amp; ")"<br/>        frmHub.DoEventsForMe<br/>      Next<br/><br/>    End If<br/><br/>  ElseIf Left(sCurData, 3) = "$SR" Then  'incoming search result<br/>    If Right(sCurData, Len(sBotName)) = CStr(sBotName) Then<br/>      lPos = InStr(5, sCurData, " ")<br/>      sWhatUser = Mid(sCurData, 5, lPos - 5)<br/>      For Each sFind In oFW.Keys<br/>        If InStr(1, LCase(sCurData), LCase(sFind)) &gt; 0 Then<br/>          sTmpMsg = Replace(sFileMsg, "$file", sFind)<br/>          sTmpMsg = Replace(sTmpMsg, "$usr", sWhatUser)<br/>          Call NotifyUsers(oFW(sFind), sTmpMsg)<br/>          Call oFW.Remove(sFind)<br/>        End If<br/>      Next<br/>    End If<br/><br/>  End If<br/><br/>End Sub<br/><br/>Sub NewUserConnected(curUser)<br/>  Dim sUsrName<br/><br/>  sUsrName = CStr(curUser.sName)<br/>  If oUW.Exists(sUsrName) Then<br/>    Call NotifyUsers(oUW(sUsrName), Replace(sUserMsg, "$name", sUsrName))<br/>    Call oUW.Remove(sUsrName)<br/>  End If<br/>  curUser.PrivateMessage CStr(sBotName), CStr(sWelcomeMsg)<br/>End Sub<br/><br/>Sub OpConnected(curUser)<br/>  Call NewUserConnected(curUser)<br/>End Sub<br/><br/>Sub NotifyUsers(sUserList, sMsg)<br/>  Dim aNicks, sNick<br/>  Dim tmpUser<br/><br/>  aNicks = Split(sUserList, ":")<br/>  For Each sNick In aNicks<br/>    If colUsers.Online(CStr(sNick)) Then<br/>      Set tmpUser = colUsers.ItemByName(CStr(sNick))<br/>      tmpUser.PrivateMessage CStr(sBotName), CStr(sMsg)<br/>      frmHub.DoEventsForMe<br/>    End If<br/>  Next<br/>End Sub<br/><br/>Sub tmrScriptTimer_Timer()<br/>  lCountDown = lCountDown - 1<br/>  If lCountDown = 0 Then<br/>    Call TimerMethod<br/>    lCountDown = lInterval<br/>  End If<br/>End Sub</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10933">
+<div class="inner">
+<dl class="postprofile" id="profile10933">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10933">
+<h3><a href="#p10933"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-12 00:53
+			</p>
+<div class="content">Once again....completely untested!  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>It should though have the "watchip" command for ops...(note I did none of the optimizations that I could have done - just added watchip)
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Dim sBotName <br/>Dim lInterval, lCountDown <br/>Dim oFW, oUW, oIW<br/>Dim sConfirmMsg <br/>Dim sFileMsg, sUserMsg, sAddUserMsg, sAddFileMsg <br/>Dim sResetMsg, sUserOnline, sWelcomeMsg <br/><br/>Sub Main() <br/>  Set oFW = CreateObject("Scripting.Dictionary") <br/>  Set oUW = CreateObject("Scripting.Dictionary") <br/>  Set oIW = CreateObject("Scripting.Dictionary")<br/><br/>'Set these basic parameters. <br/>  sBotName = "WatchBot"  ' &lt;- name of the bot <br/>  lInterval = 6          ' &lt;- how often to search for files (* 10 seconds) <br/><br/>'The messages sent at different actions. <br/>  sFileMsg = "$usr has files matching '$file'." <br/>  sUserMsg = "$name logged on." <br/>  sAddUserMsg = "Waiting for $name to log on..." <br/>  sAddFileMsg = "Started searching for '$file'..." <br/>  sResetMsg = "Your watch list was cleared." <br/>  sUserOnline = "That user is already online!" <br/>  sWelcomeMsg = "Hi there!  I will watch for users or files which are " &amp; _ <br/>   "not here, and then tell you when they come online. Please type the " &amp; _ <br/>   "commands in mainchat:" &amp; vcBRLF &amp; vbCRLF &amp; _ <br/>   "  watchuser &lt;user_name&gt;" &amp; vbTab &amp; "- adds a user to my list" &amp; vbCRLF &amp; _ <br/>   "  watchfile &lt;file_name&gt;" &amp; vbTab &amp; "- adds a file to my list" &amp; vbCRLF &amp; _ <br/>   "  watchreset" &amp; vbTab &amp; vbTab &amp; "- clears the list" &amp; vbCRLF <br/>  <br/>  lCountDown = lInterval <br/>  tmrScriptTimer.Interval = 10000 <br/>  tmrScriptTimer.Enabled = True <br/>End Sub <br/><br/>Sub TimerMethod() <br/>  Dim sFind <br/><br/>  For Each sFind In oFW.Keys <br/>    colUsers.SendToAll "$Search Hub:" &amp; CStr(sBotName) &amp; " F?F?0?0?" &amp; sFind <br/>    frmHub.DoEventsForMe <br/>  Next <br/>End Sub <br/><br/>Sub DataArival(curUser, sCurData) <br/>  Dim sTheText, lPos <br/>  Dim sUsrName <br/>  Dim sFind, sTmpMsg <br/><br/>  If Left(sCurdata, 1) = "&lt;" Or _ <br/>     Left(sCurData, 5 + Len(sBotName)) = "$To: " &amp; sBotName Then <br/><br/>    lPos = InStr(1, sCurData, "&gt;") <br/>    sTheText = Mid(sCurData, lPos + 2) <br/><br/>    sUsrName = CStr(curUser.sName) <br/><br/>    If Left(sTheText, 9) = "watchuser" Then <br/>      sFind = Mid(sTheText, 11) <br/>      If Not colUsers.Online(CStr(sFind)) Then <br/>        If oUW.Exists(sFind) Then <br/>          oUW(sFind) = oUW(sFind) &amp; ":" &amp; sUsrName <br/>        Else <br/>          oUW(sFind) = sUsrName <br/>        End If <br/>        curUser.PrivateMessage CStr(sBotName), _ <br/>          Replace(sAddUserMsg, "$name", sFind) <br/>      Else <br/>        curUser.PrivateMessage CStr(sBotName), CStr(sUserOnline) <br/>      End If <br/><br/>    ElseIf Left(sTheText, 9) = "watchfile" Then <br/>      sFind = Mid(sTheText, 11) <br/>      If oFW.Exists(sFind) Then <br/>        oFW(sFind) = oFW(sFind) &amp; ":" &amp; sUsrName <br/>      Else <br/>        oFW(sFind) = sUsrName <br/>      End If <br/>      curUser.PrivateMessage CStr(sBotName), _ <br/>        Replace(sAddFileMsg, "$file", sFind) <br/>      frmHub.DoEventsForMe <br/>      Call TimerMethod <br/><br/>    ElseIf sTheText = "watchreset" Then <br/>      For Each sFind In oUW.Keys <br/>        oUW(sFind) = Replace(oUW(sFind), ":" &amp; sUsrName, "") <br/>        If oUW(sFind) = sUsrName Then oUW.Remove(sFind) <br/>      Next <br/>      For Each sFind In oFW.Keys <br/>        oFW(sFind) = Replace(oFW(sFind), ":" &amp; sUsrName, "") <br/>        If oFW(sFind) = sUsrName Then oFW.Remove(sFind) <br/>      Next <br/>      curUser.PrivateMessage CStr(sBotName), CStr(sResetMsg) <br/><br/>    ElseIf sTheText = "watchdump" Then <br/>      For Each sFind In oUW.Keys <br/>        curUser.PrivateMessage CStr(sBotName), _ <br/>          sFind &amp; " (" &amp; oUW(sFind) &amp; ")" <br/>        frmHub.DoEventsForMe <br/>      Next <br/>      For Each sFind In oFW.Keys <br/>        curUser.PrivateMessage CStr(sBotName), _ <br/>          sFind &amp; " (" &amp; oFW(sFind) &amp; ")" <br/>        frmHub.DoEventsForMe <br/>      Next <br/><br/>    ElseIf Left(sTheText, 7) = "watchip" Then<br/>      If curUser.bOperator Then<br/>        Dim oUser<br/><br/>        sTheText = Mid(sTheText, InStr(1, sTheText, " ") + 1)<br/><br/>        For Each oUser In colUsers<br/>          If oUser.IP = CStr(sTheText) Then<br/>            curUser.PrivateMessage CStr(sBotName), CStr(sTheText) &amp; " is already connected as " &amp; curUser.sName<br/>            Exit Sub<br/>          End If<br/>        Next<br/><br/>        If oIW.Exists(sTheText) Then oIW(sTheText) = oIW(sTheText) &amp; ":" &amp; CStr(sTheText)  Else oIW.Add CStr(sTheText), curUser.sName<br/><br/>        curUser.PrivateMessage CStr(sBotName), "Watching for the ip : " &amp; CStr(sTheText)<br/>      End If<br/>    End If <br/><br/>  ElseIf Left(sCurData, 3) = "$SR" Then  'incoming search result <br/>    If Right(sCurData, Len(sBotName)) = CStr(sBotName) Then <br/>      lPos = InStr(5, sCurData, " ") <br/>      sWhatUser = Mid(sCurData, 5, lPos - 5) <br/>      For Each sFind In oFW.Keys <br/>        If InStr(1, LCase(sCurData), LCase(sFind)) &gt; 0 Then <br/>          sTmpMsg = Replace(sFileMsg, "$file", sFind) <br/>          sTmpMsg = Replace(sTmpMsg, "$usr", sWhatUser) <br/>          Call NotifyUsers(oFW(sFind), sTmpMsg) <br/>          Call oFW.Remove(sFind) <br/>        End If <br/>      Next <br/>    End If <br/><br/>  End If <br/><br/>End Sub <br/><br/>Sub NewUserConnected(curUser) <br/>  Dim sUsrName <br/><br/>  sUsrName = CStr(curUser.sName) <br/>  If oUW.Exists(sUsrName) Then <br/>    Call NotifyUsers(oUW(sUsrName), Replace(sUserMsg, "$name", sUsrName)) <br/>    Call oUW.Remove(sUsrName) <br/>  End If <br/><br/>  sUsrName = curUser.IP<br/><br/>  If oIW.Exists(sUsrName) Then<br/>    Call NotifyUsers(oUW(sUsrName), "IP : " &amp; CStr(sUsrName) &amp; " has connected as " &amp; curUser.sName)<br/>    Call oIW.Remove(sUsrName)<br/>  End If<br/><br/>  If curUser.bOperator Then curUser.PrivateMessage CStr(sBotName), CStr(sWelcomeMessage) &amp; vbCrLf &amp; "  watchip &lt;ip&gt;" &amp; vbTab &amp; vbTab &amp; " - watches for an ip to connect" &amp; vbCrLf _<br/>  Else curUser.PrivateMessage CStr(sBotName), CStr(sWelcomeMsg) <br/>End Sub <br/><br/>Sub OpConnected(curUser) <br/>  Call NewUserConnected(curUser) <br/>End Sub <br/><br/>Sub NotifyUsers(sUserList, sMsg) <br/>  Dim aNicks, sNick <br/>  Dim tmpUser <br/><br/>  aNicks = Split(sUserList, ":") <br/>  For Each sNick In aNicks <br/>    If colUsers.Online(CStr(sNick)) Then <br/>      Set tmpUser = colUsers.ItemByName(CStr(sNick)) <br/>      tmpUser.PrivateMessage CStr(sBotName), CStr(sMsg) <br/>      frmHub.DoEventsForMe <br/>    End If <br/>  Next <br/>End Sub <br/><br/>Sub tmrScriptTimer_Timer() <br/>  lCountDown = lCountDown - 1 <br/>  If lCountDown = 0 Then <br/>    Call TimerMethod <br/>    lCountDown = lInterval <br/>  End If <br/>End Sub<br/></code></pre></div></div>
+<div class="signature" id="sig10933"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10948">
+<div class="inner">
+<dl class="postprofile" id="profile10948">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-09 09:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10948">
+<h3><a href="#p10948"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4095">AnimatedÃ‚Â 0wner</a></strong> » </span>2003-04-12 06:41
+			</p>
+<div class="content">Thank You! I appreciate all the script work you've done for me.  <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			13 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=8">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Hubs and scripts”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

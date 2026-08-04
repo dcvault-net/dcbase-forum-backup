@@ -5,21 +5,22 @@
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>DCBase - Login</title>
-<link href="/app.php/feed?sid=d0aeb43792419a275e7652e896ad37c7" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=d0aeb43792419a275e7652e896ad37c7" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=d0aeb43792419a275e7652e896ad37c7" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=d0aeb43792419a275e7652e896ad37c7" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=d0aeb43792419a275e7652e896ad37c7" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/>
+<title>DCBase - Viewing profile - DataBaseKeeper</title>
+    
+
 <!--
 	phpBB style name: prosilver
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
 	Modified by:
 -->
-<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
 <!--[if lte IE 9]>
 	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
 <![endif]-->
-<link href="overrides.css" rel="stylesheet"/></head>
+<link href="/overrides.css" rel="stylesheet"/></head>
 <body class="nojs notouch section-memberlist ltr" id="phpbb">
 <div class="wrap" id="wrap">
 <a accesskey="t" class="top-anchor" id="top"></a>
@@ -45,6 +46,17 @@
 <div class="pointer"><div class="pointer-inner"></div></div>
 <ul class="dropdown-contents" role="menu">
 <li class="separator"></li>
+<li>
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-group fa-fw"></i><span>Members</span>
+</a>
+</li>
+<li>
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="separator"></li>
 </ul>
 </div>
 </li>
@@ -58,7 +70,12 @@
 <i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
 </a>
 </li>
-</ul>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
 <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
 <li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 <span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
@@ -70,36 +87,121 @@
 </div>
 <a class="anchor" id="start_here"></a>
 <div class="page-body" id="page-body" role="main">
-<form action="#" data-focus="username" id="login" method="post" onsubmit="return false">
-<div class="panel">
+<h2 class="memberlist-title">Viewing profile - DataBaseKeeper</h2>
+<form action="#" id="viewprofile" method="post" onsubmit="return false">
+<div class="panel bg1">
 <div class="inner">
-<div class="content">
-<h2 class="login-title">The board requires you to be registered and logged in to view profiles.</h2>
-<fieldset class="fields1">
-<dl>
-<dt><label for="username">Username:</label></dt>
-<dd><input class="inputbox autowidth" id="username" name="username" size="25" tabindex="1" type="text" value=""/></dd>
+<dl class="left-box details profile-details">
+<dt>Username:</dt>
+<dd>
+<span>DataBaseKeeper</span> </dd>
+<dt>Rank:</dt> <dd>Newbie</dd> <dt>Groups:</dt> <dd><select name="g"><option selected="selected" value="2">Registered users</option></select> <input class="button2" name="submit" type="submit" value="Go"/></dd> <dt>Occupation:</dt> <dd>web developer</dd>
+<dt>Location:</dt> <dd>London</dd>
 </dl>
-<dl>
-<dt><label for="password">Password:</label></dt>
-<dd><input autocomplete="off" class="inputbox autowidth" id="password" name="password" size="25" tabindex="2" type="password"/></dd>
-<dd><a class="inert" href="#" title="Disabled in this archive">I forgot my password</a></dd> </dl>
-<dl>
-<dd><label for="autologin"><input id="autologin" name="autologin" tabindex="4" type="checkbox"/> Remember me</label></dd> <dd><label for="viewonline"><input id="viewonline" name="viewonline" tabindex="5" type="checkbox"/> Hide my online status this session</label></dd>
+</div>
+</div>
+<div class="panel bg2">
+<div class="inner">
+<div class="column1">
+<h3>Contact DataBaseKeeper</h3>
+<dl class="details">
 </dl>
-<input name="redirect" type="hidden" value="./memberlist.php?mode=viewprofile&amp;u=761&amp;sid=d0aeb43792419a275e7652e896ad37c7"/>
-<dl>
-<dt> </dt>
-<dd><input name="sid" type="hidden" value="d0aeb43792419a275e7652e896ad37c7"/>
-<input class="button1" name="login" tabindex="6" type="submit" value="Login"/></dd>
+</div>
+<div class="column2">
+<h3>User statistics</h3>
+<dl class="details">
+<dt>Joined:</dt> <dd>29 Jun 2017, 09:24</dd>
+<dt>Last active:</dt> <dd>29 Jun 2017, 09:30</dd>
+<dt>Total posts:</dt>
+<dd>1 					<br/>(0.04% of all posts / 0.00 posts per day)									</dd>
+<dt>Most active forum:</dt> <dd><strong><a href="/viewforum.php?f=14">Hub Software</a></strong><br/>(1 Post / 100.00% of user’s posts)</dd>
+<dt>Most active topic:</dt> <dd><strong><a href="/viewtopic.php?t=1160">File list</a></strong><br/>(1 Post / 100.00% of user’s posts)</dd>
 </dl>
-</fieldset>
 </div>
 </div>
 </div>
 </form>
+<div class="action-bar actions-jump">
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=9"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=20"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=41"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=56"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=57"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=58"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=59"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=75"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=13"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=26"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=45"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=36"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=83"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=27"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=35"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=37"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=40"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=28"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=29"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=30"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=31"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=32"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=34"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=38"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=74"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=33"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=18"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=55"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=87"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=80"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=81"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=82"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=44"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=50"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=51"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=62"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=63"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=91"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=92"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=93"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
+</ul>
 </div>
-<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+</div>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
 <div class="navbar" role="navigation">
 <div class="inner">
 <ul class="nav-footer linklist" id="nav-footer" role="menubar">
@@ -109,6 +211,16 @@
 <li class="rightside">
 <a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
 <i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-group fa-fw"></i><span>Members</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
 </a>
 </li>
 <li class="rightside" data-last-responsive="true">
@@ -153,7 +265,6 @@
 <div>
 <a accesskey="z" class="anchor" id="bottom"></a>
 </div>
-
 
 
 

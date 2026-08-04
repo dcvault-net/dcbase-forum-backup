@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>TABL - Displaying data in tables - DCBase</title>
+      
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=74" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=19" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="55" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=55" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/viewtopic.php?f=55&amp;t=753">TABL - Displaying data in tables</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for ADC may be presented here for others to review and point out flaws or further improve the idea.<br/></div>
+<div class="rules">
+<div class="inner">
+<strong>Forum rules</strong><br/>
+			If you have an account on the wiki, remember to update the ADC Proposals page for new ideas.<br/>
+<br/>
+<a class="postlink" href="http://dcbase.org/wiki/ADC_Proposals_list">http://dcbase.org/wiki/ADC_Proposals_list</a>
+</div>
+</div>
+<div class="action-bar bar-top">
+<div class="pagination">
+			11 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/viewtopic.php?f=55&amp;t=753&amp;start=10" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/viewtopic.php?f=55&amp;t=753&amp;start=10" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2762">
+<div class="inner">
+<dl class="postprofile" id="profile2762">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 29</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Dec 05, 2010 11:35 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2762">
+<h3 class="first"><a href="#p2762">TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a></strong> » </span>Thu May 12, 2011 4:23 am
+			</p>
+<div class="content">This extension allows the hub and clients to send data in table format to other clients supporting the feature. It uses a slightly modified version of the table formatting portion of HTML. This will greatly help release bots and the like that struggle with formatting using tabs. One value that's a little too long/too short breaks the entire layout.<br/>
+<br/>
+A client must send 'ADTABL' in the initial SUP to signify it supports the extension.<br/>
+<br/>
+This extension will be used as an extension to the 'MSG' command, making it available in mainchat, chatrooms, PMs, etc. It will be used only as a feature broadcast. This will also allow for falling back to using the traditional tabs and newlines to separate data if the client doesn't support the TABL formatting. The sender will have to parse the markup and generate the equivalent table using newlines and tabs and send that as well for the non-TABL supporting clients.<br/>
+<br/>
+Extension: TABL<br/>
+<br/>
+Context: F, T<br/>
+Message type: F<br/>
+<br/>
+Flags:<br/>
+NA | Table name<br/>
+TD | Table data<br/>
+<br/>
+The table name is optional and consists of an escaped string.<br/>
+The table data is the data that the table holds. This will be in traditional HTML formatting with some modifications. Instead of the TH/TR/TD tags, just H,R, and D tags (header, row and data) will be used with an 'E' prefixing them to end the tag. It will be sent as an escaped string and does not need newlines to make the markup human-readable (See example).<br/>
+<br/>
+The data must not contain the characters used in defining the tags. This means that the tag characters ('&lt;' and '&gt;') will have to be escaped. Clients that support the TABL extension must also recognize '\&lt;' and '\&gt;' as valid escaped strings.<br/>
+<br/>
+The hub does not check the table for adherence to standards or verify that the table formatting is correct. The markup will be parsed by clients supporting the TABL extension as best it can (not unlike a web browser does).<br/>
+<br/>
+Example:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>FMSG ASID +TABL NAExample\sTable TD\&lt;R\&gt;\&lt;H\&gt;Header\s1\&lt;EH\&gt;\&lt;H\&gt;Header\s2\&lt;EH\&gt;\&lt;ER\&gt;\&lt;R\&gt;\&lt;D\&gt;Row\s1,Cell\s1\&lt;ED\&gt;\&lt;D\&gt;Row\s1,Cell\s2\&lt;ED\&gt;\&lt;ER\&gt;
+FMSG ASID -TABL Example\sTable:\nHeader\s1[TAB]Header\s2\nRow\s1,Cell\s1[TAB]Row\s1,Cell\s2</code></pre></div>
+<br/>
+Suggestions welcome.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2764">
+<div class="inner">
+<dl class="postprofile" id="profile2764">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=245" style="color: #AEB404;">FlipFlop™</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> Fri Apr 17, 2009 8:29 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2764">
+<h3><a href="#p2764">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=245" style="color: #AEB404;">FlipFlop™</a></strong> » </span>Fri May 13, 2011 2:55 pm
+			</p>
+<div class="content">Finally, nice addition! About time clients supporting at least a limited set of HTML tags (greylink taking the lead here). I don't understand why it would be needed to make a modification to the HTML formatting though. <br/>
+<br/>
+Also, it could be interesting to develop an HTML or RTF extension which would include table formatting among a lot of other formatting options.<br/>
+<br/>
+This isn't just interesting for ADC though, NMDC could benefit from this as well: <a class="postlink" href="http://www.flexhub.org/forum/index.php?topic=190.0">http://www.flexhub.org/forum/index.php?topic=190.0</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2765">
+<div class="inner">
+<dl class="postprofile" id="profile2765">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 29</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Dec 05, 2010 11:35 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2765">
+<h3><a href="#p2765">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a></strong> » </span>Fri May 13, 2011 6:01 pm
+			</p>
+<div class="content">I'm hesitant to recommend that ADC support any and all kinds of formatting for the reason that I could see it getting abused. Nobody wants blinking 32 point bright red text appearing in mainchat (damn &lt;blink&gt; tag). However, I think table formatting doesn't make spamming/getting attention any easier and provides a clear benefit the the users. The way I was imagining it was that it would look pretty much the same as the tab and newline tables, only with properly lined up columns.<br/>
+<br/>
+Also, I modified the HTML spec a bit to cut down on bandwidth (there could be a lot of tags, depending on the table). Per tag this implementation is 1 or 2 bytes better than the HTML spec. The tags remove redundant information from the name (TR = table row, its in the TABL command therefore we know its a table, just need the R for row) and use 'E' instead of the '\\' (escaped '\') to save a byte per closing tag.<br/>
+<br/>
+I've thought about it a bit more and there is still a lot of room for improvement. I'm changing the extension spec so it uses the following format:<br/>
+<br/>
+Opening tags are of the format '&lt;[H/R/D]', while closing tags just use the '&gt;' (closes the most recently opened tag, no matter what it is).<br/>
+<br/>
+Using that style, here is the example from the first post:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>FMSG ASID +TABL NAExample\sTable TD\&lt;R\&lt;HHeader\s1\&gt;\&lt;HHeader\s2\&gt;\&gt;\&lt;R\&lt;DRow\s1,Cell\s1\&gt;\&lt;DRow\s1,Cell\s2\&gt;\&gt;
+</code></pre></div>
+
+Since each '&lt;' always has exactly one identifying character after it, and the '&gt;' always completes to most current tag, this format is still easily parseable, and is 6 bytes smaller per tag set than the previous formatting (in this tiny example it saved 36 bytes). In a table with 10 columns and 50 rows, this would save 3.3KB.<br/>
+<br/>
+I should add that only one table should be sent per MSG, multiple tables require multiple commands.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2766">
+<div class="inner">
+<dl class="postprofile" id="profile2766">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=245" style="color: #AEB404;">FlipFlop™</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> Fri Apr 17, 2009 8:29 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2766">
+<h3><a href="#p2766">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=245" style="color: #AEB404;">FlipFlop™</a></strong> » </span>Fri May 13, 2011 9:54 pm
+			</p>
+<div class="content">Since it won't be pure HTML anyway, to really save bandwidth you might consider using this syntax: <a class="postlink" href="http://www.mediawiki.org/wiki/Extension:SimpleTable">http://www.mediawiki.org/wiki/Extension:SimpleTable</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2768">
+<div class="inner">
+<dl class="postprofile" id="profile2768">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> Thu Feb 18, 2010 5:44 pm</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2768">
+<h3><a href="#p2768">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a></strong> » </span>Sun May 15, 2011 9:01 pm
+			</p>
+<div class="content">If you are going to implement tables then can I suggest that that includes rowspan and colspan as well.<br/>
+<br/>
+As for bandwidth, I suggest that a better longterm solution would be for hubs and clients to implement ZON/ZOFF.  For my hubsoft where everything is sent in UDP packets, we implement this behind the scenes.<br/>
+<br/>
+~Andrew</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2787">
+<div class="inner">
+<dl class="postprofile" id="profile2787">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 29</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Dec 05, 2010 11:35 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2787">
+<h3><a href="#p2787">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a></strong> » </span>Sat Jun 25, 2011 7:21 pm
+			</p>
+<div class="content">ZON and ZOFF would be a good idea for clients that support it, but for the clients that don't (and to a lesser extent, the ones that do), the message size should still be kept as small as possible without sacrificing features.<br/>
+<br/>
+Changes to previous proposal:
+<ul><li>Add parameters to tags</li>
+<li>Remove the &lt;H&gt; tag (just use BT AC params)</li>
+<li>Remove the NM and TD flags (send just table data)</li>
+<li>Put a top-level tag in the data like the &lt;table&gt; tag in html.</li>
+<li>Multiple tables sent per message</li></ul>
+
+Adding parameters to tags:<br/>
+To add support for multiple parameters in tags there needs to be an indication that there are no more parameters and the data is starting. This is why I'm proposing that a closing bracket be added to the opening tag. This would give the opening tags the format '&lt;[R/D][params]&gt; (where params holds a list of space-seperated, single-character flags, much like the ADC protocol)', while closing tags still just use the '&gt;' (closes the most recently opened tag, no matter what it is). This format allows for all the essential information to be communicated as well as allowing for adding multiple parameters.<br/>
+<br/>
+Proposed parameter guide:
+<ul>
+<li>A = align
+	<ul><li>L=left</li>
+<li>R=right</li>
+<li>C=center</li>
+<li>[default]=L</li></ul></li>
+<li>V = valign
+	<ul><li>T=top</li>
+<li>M=middle</li>
+<li>B=bottom</li>
+<li>[default]=T</li></ul></li>
+<li>W = wrap
+	<ul><li>F=False</li>
+<li>T=True</li>
+<li>[default]=T</li></ul></li>
+<li>B = bold
+	<ul><li>F=False</li>
+<li>T=True</li>
+<li>[default]=F</li></ul></li>
+<li>C = colspan
+	<ul><li>[number]</li>
+<li>[default]=1</li></ul></li>
+<li>R = rowspan
+	<ul><li>[number]</li>
+<li>[default]=1</li></ul></li></ul>
+
+Note that all parameters are inherited from the parent tag (except row/colspans) and don't need to be respecified unless they need to be changed (like HTML). Also note that I'm not proposing a graphical table display, just a formatted text-based display so a lot of HTML table tags don't apply.<br/>
+<br/>
+Removing the header tag:<br/>
+Since it is now possible to add parameters to tags, it seems redundant to use a header tag, which just bolds and centers the content. To achieve the same effect, just specify bold=true and align=center in the parameters of a data tag (&lt;H&gt;test&gt;  --&gt; &lt;DBT AC&gt;test&gt;).<br/>
+<br/>
+Removing the flags:<br/>
+Since table titles and other data can just be included within the broadcast (outside a top-level tag), there isn't any point in having them identified by flags. Taking the option away from the client and putting in the hands of the sender means that the table will look more consistent across multiple clients, which is what this extension aims to do.<br/>
+<br/>
+Top-level tag:<br/>
+Having a top-level tag will allow for 'default' table parameters to be set for the entire table. It would have the format '&lt;T[params]&gt;'. This will also allow for multiple tables to sent in one broadcast (which is good for clients that support ZLIF). Nesting tables inside each other(having a new top-level tag inside a table cell) is considered valid. Text that doesn't reside inside a top-level tag should be considered to be just normal text. This means that information that relates to the table, but isn't contained within it (title, footnotes, etc) can be included in the same broadcast as the table itself. A new line is always implied after closing a top-level tag if there is more data to display.<br/>
+<br/>
+<br/>
+<br/>
+Example:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>FMSG ASID +TABL Title\sText\n\&lt;TVM\&gt;\&lt;R\&gt;\&lt;DR2\sBT\sAC\&gt;Header\&gt;\&lt;D\&gt;Cell1*\&gt;\&gt;\&lt;R\&gt;\&lt;DAR\&gt;Cell2\&gt;\&gt;\&gt;*Footnote
+</code></pre></div>
+This is a rough approximation of the HTML code:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Title Text&lt;/br&gt;
+&lt;table align="middle"&gt;
+	&lt;tr&gt;
+		&lt;th rowspan="2"&gt;Header&lt;/th&gt;
+		&lt;td&gt;Cell1*&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td align="right"&gt;Cell2&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/br&gt;
+*Footnote
+</code></pre></div>
+
+Getting better?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2788">
+<div class="inner">
+<dl class="postprofile" id="profile2788">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 29</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Dec 05, 2010 11:35 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2788">
+<h3><a href="#p2788">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a></strong> » </span>Sun Jun 26, 2011 1:15 am
+			</p>
+<div class="content">Pretorian suggested that instead of introducing new escape characters, to just make sure the input is sanitized using XML standards.<br/>
+<br/>
+This means that outside of tags (user text):
+<ul><li>[&lt;] becomes [&lt;]</li>
+<li>[&gt;] becomes [&gt;]</li>
+<li>[&amp;] becomes [&amp;]</li>
+<li>['] becomes [&amp;apos;]</li>
+<li>["] becomes ["]</li></ul>
+
+With this new rule, for clarity I think that the tag parameters should be separated by an '&amp;' instead of a space. This makes it easier to see which characters are parameters, as well as reducing the byte count by one (not really big deal, but the first point is still valid)<br/>
+<br/>
+New example:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>FMSG ASID +TABL Title\sText\n&lt;TVM&gt;&lt;R&gt;&lt;DR2&amp;BT&amp;AC&gt;Header&gt;&lt;D&gt;Cell1*&gt;&gt;&lt;R&gt;&lt;DAR&gt;Cell2&gt;&gt;&gt;*Footnote
+</code></pre></div>
+
+I'm currently working on a HTML &lt;-&gt; TABL format converter</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2791">
+<div class="inner">
+<dl class="postprofile" id="profile2791">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 29</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Dec 05, 2010 11:35 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2791">
+<h3><a href="#p2791">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a></strong> » </span>Wed Jun 29, 2011 4:27 pm
+			</p>
+<div class="content">HTML &lt;-&gt; TABL converter is finished: <a class="postlink" href="http://pastebin.com/hjGmsb7x">http://pastebin.com/hjGmsb7x</a><br/>
+<br/>
+Report any bugs you find</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2792">
+<div class="inner">
+<dl class="postprofile" id="profile2792">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content2792">
+<h3><a href="#p2792">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Thu Jun 30, 2011 7:18 am
+			</p>
+<div class="content">paste it in here dont link either as a txt file or just in a post</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2800">
+<div class="inner">
+<dl class="postprofile" id="profile2800">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 29</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Dec 05, 2010 11:35 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2800">
+<h3><a href="#p2800">Re: TABL - Displaying data in tables</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=380" style="color: #AEB404;">pR0Ps</a></strong> » </span>Mon Jul 04, 2011 2:14 am
+			</p>
+<div class="content">The TABL extension draft documentation has been written (it's changed a lot from the ideas posted in this thread). Until it has been reviewed and accepted, the draft is here: <a class="postlink" href="http://storage.webatu.com/TABL.html">http://storage.webatu.com/TABL.html</a> If you have something to add to it, something you think is wrong or could be done better, post it.<br/>
+<br/>
+Also, a few improvements to the TABLConverter script:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>###################################################
+# TABLConverter v1.2
+#
+# Author: pR0Ps
+# Description: Converts between HTML-formatted tables and TABL-formatted tables
+# TABL formatting draft spec: http://www.adcportal.com/forums/viewtopic.php?f=55&amp;t=753
+#
+# Limitations:
+# -No syntax validation
+# -Doesn't look at inherited tags
+# -Bold tags (&lt;B&gt;&lt;/B&gt;) don't translate from HTML
+#
+# v1.0
+#  -Initial code
+# v1.1
+#  -Forgot to rename a variable (*facepalms*)
+#  -Added missing warning message
+# v1.2
+#  -Added support for bolding when converting to HTML
+#  -Better support for unrecognized HTML tags
+###################################################
+
+import re
+
+def TablEscape (s):
+    t = s.replace ('\n', '\\n')
+    t = t.replace (' ', '\\s')
+    return t
+
+def TablUnEscape(s):
+    start = 0
+    t = ""
+    while start &lt; len(s):
+        i = s.find('\\', start)
+        if i == -1 or i &gt; len(s)-2:
+            t += s[start:]
+            break
+        t += s[start:i]
+        if s[i+1] == 'n' or s[i+1] == 'N':
+            t += '&lt;BR&gt;'
+        elif s[i+1] == 's' or s[i+1] == 'S':
+            t += ' '
+        elif s[i+1] == '\\':
+            t += '\\'
+        else:
+            t += s[i] + s[i+1]
+        start = i+2
+    return t
+    
+
+def tablTagParser (tag):
+    out = ""
+    end = ""
+
+    cen = False
+    bold = False
+        
+    tag = tag.upper()
+    params = tag[2:-1].split("&amp;")
+    tag = tag[0:2]
+
+    #parse params
+    for x in params:
+        if x == '':
+            continue
+        elif len(x) &lt; 2:
+            print("WARNING: Invalid param encountered (length &lt; 2): '" + x + "'")
+        elif x[0] == "A":
+            if x[1] == "L":
+                out += " align='left'"
+            elif x[1] == "R":
+                out += " align='right'"
+            elif x[1] == "C":
+                cen = True
+            else:
+                print("WARNING: Unrecognized value for param '" + x[0] + "': " + x[1])
+        elif x[0] == "V":
+            if x[1] == "T":
+                out += " valign='top'"
+            elif x[1] == "M":
+                out += " valign='middle'"
+            elif x[1] == "B":
+                out += " valign='bottom'"
+            else:
+                print("WARNING: Unrecognized value for param '" + x[0] + "': " + x[1])
+        elif x[0] == "W":
+            if x[1] == "T":
+                out += " wrap"
+            elif x[1] == "F":
+                out += " nowrap"
+            else:
+                print("WARNING: Unrecognized value for param '" + x[0] + "': " + x[1])
+        elif x[0] == "B":
+            if x[1] == "T":
+                bold = True
+            elif x[1] == "F":
+                bold = False
+            else:
+                print("WARNING: Unrecognized value for param '" + x[0] + "': " + x[1])
+        elif x[0] == "C":
+            out += " colspan='" + x[1:] + "'"
+        elif x[0] == "R":
+            out += " rowspan='" + x[1:] + "'"
+        else:
+            print ("WARNING: Unrecognized param: '" + x[0] + "'")
+
+    #parse tag type
+    if tag == "&lt;T":
+        out = "&lt;TABLE border='1' width='100%'" + out + "&gt;"
+        end = "&lt;/TABLE&gt;"
+    elif tag == "&lt;R":
+        out = "&lt;TR" + out + "&gt;"
+        end = "&lt;/TR&gt;"
+    elif tag == "&lt;D":
+        if bold and cen:
+            out = "&lt;TH" + out + "&gt;"
+            end = "&lt;/TH&gt;"
+        elif cen:
+            out = "&lt;TD" + out + " align='center'&gt;"
+            end = "&lt;/TD&gt;"
+        elif bold:
+            out = "&lt;TD" + out + "&gt;&lt;B&gt;"
+            end = "&lt;/B&gt;&lt;/TD&gt;"
+        else:
+            out = "&lt;TD" + out + "&gt;"
+            end = "&lt;/TD&gt;"
+    else:
+        print("WARNING: Invalid tag encountered: '" + tag + "'")
+        out = ""
+
+    return out, end 
+
+def htmlTagParser (tag):
+    out = ""
+    tag = tag.upper()
+
+    #parse tag type
+    i = tag.find(' ')
+    if i == -1:
+        i = tag.find('&gt;')
+    if tag[:i] == "&lt;TABLE":
+        out = "&lt;T"
+    elif tag[:i] == "&lt;TR":
+        out = "&lt;R"
+    elif tag[:i] == "&lt;TD":
+        out = "&lt;D"
+    elif tag[:i] ==  "&lt;TH":
+        out = "&lt;DAC&amp;BT" #doesn't check for inherited values
+    elif tag[:i] == "&lt;BR":
+        return "\\n"
+    else:
+       print ("WARNING: Unrecognized tag: " + tag)
+       return ""
+
+    #parse tag params
+    params = re.findall(r" +([a-zA-Z]+) *= *([\'\"])([a-zA-Z0-9_]+)\2", tag)
+    for x in params:
+        if x[0] == "ALIGN":
+            if x[2] == "LEFT":
+                out += "&amp;AL"
+            elif x[2] == "RIGHT":
+                out += "&amp;AR"
+            elif x[2] == "CENTER":
+                out += "&amp;AC"
+            else:
+                print("WARNING: Unrecognized value for param '" + x[0] + "': " + x[2])
+        elif x[0] == "VALIGN":
+            if x[2] == "TOP":
+                out += "&amp;VT"
+            elif x[2] == "MIDDLE":
+                out += "&amp;VM"
+            elif x[2] == "BOTTOM":
+                out += "&amp;VB"
+            else:
+                print("WARNING: Unrecognized value for param '" + x[0] + "': " + x[2])
+        elif x[0] == "WRAP":
+            out += "&amp;WT"
+        elif x[0] == "NOWRAP":
+            out += "&amp;WF"
+        elif x[0] == "COLSPAN":
+            out += "&amp;C" + x[2]
+        elif x[0] == "ROWSPAN":
+            out += "&amp;R" + x[2]
+        else:
+            print("WARNING: Unrecognized parameter: '" + x[0] + "'")
+
+        if len(out) &gt; 2 and out[2] == '&amp;': #messy, but works
+            out = out[:2] + out[3:]
+        
+    return out + "&gt;"
+
+
+def toHtml (tabl):
+    tags = []
+    parsed = 0 #chars gone through
+    out = ""
+    while parsed &lt; len(tabl):
+        start = tabl.find("&lt;", parsed)
+        end = tabl.find("&gt;", parsed)
+        if end == -1:
+            out += TablUnEscape(tabl[parsed:])
+            break
+        elif start == -1 or end &lt; start: #tag is ending
+            out += TablUnEscape(tabl[parsed:end]) + tags.pop()
+        else: #starting a new tag       
+            out += TablUnEscape(tabl[parsed:start])
+            end = tabl.find("&gt;", parsed) #find end of tag start
+
+            #add converted tag to output
+            temp1, temp2 = tablTagParser(tabl[start:end+1])
+            tags.append(temp2)
+            out += temp1
+            
+        parsed = end+1;
+    
+    return out
+
+def toTabl (html):
+    out = ""
+    ignoreNext = False
+    parsed = 0
+    while parsed &lt; len(html):
+        start = html.find("&lt;", parsed)
+        end = html.find("&gt;", parsed)
+        if start == -1 or end == -1:
+            out += html[parsed:]
+            break
+        elif html[start+1] == "/": #end tag
+            out += html[parsed:start]
+            if not ignoreNext:
+                out += "&gt;"
+            else:
+                ignoreNext = False
+        else:
+            temp = htmlTagParser(html[start:end+1])
+            if temp == "":
+                ignoreNext = True
+            out += html[parsed:start] + temp
+
+        parsed = end+1
+
+    return TablEscape(out)
+        
+def main():
+    infile = input ("Enter the filename to convert from: ")
+
+    #read data
+    try:
+        f = open(infile, "r")
+        data = f.read()
+        f.close
+    except Exception as e:
+        print (e)
+        return
+    outfile = input ("Enter the filename to write to: ")
+    temp = ""         
+    while temp != "1" and temp != "2": 
+        temp = input ("Convert options:\n(1) HTML to TABL\n(2) TABL to HTML\n")
+    if temp == "1":
+        data = toTabl(data)
+    else:
+        data = toHtml(data)
+
+    #debug
+    #print (data + '\n')
+    
+    #write data
+    try:
+        f = open(outfile, "w")
+        f.write(data)
+        f.close()
+        print ("Output written to",outfile)
+    except Exception as e:
+        print (e)
+    
+main()
+print("Exiting...");
+</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			11 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/viewtopic.php?f=55&amp;t=753&amp;start=10" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/viewtopic.php?f=55&amp;t=753&amp;start=10" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/viewforum.php?f=55">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Ideas”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=9"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=20"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=41"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=56"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=57"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=58"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=59"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=75"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=13"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=26"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=45"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=36"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=83"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=27"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=35"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=37"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=40"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=28"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=29"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=30"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=31"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=32"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=34"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=38"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=74"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=33"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=18"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=55"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=87"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=80"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=81"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=82"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=44"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=50"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=51"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=62"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=63"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=91"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=92"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=93"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

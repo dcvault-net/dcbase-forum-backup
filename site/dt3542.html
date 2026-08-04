@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Client to Client protocol and DC++ implementation of it - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=3542">Client to Client protocol and DC++ implementation of it</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			6 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p18790">
+<div class="inner">
+<dl class="postprofile" id="profile18790">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8154">seer_tenedos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-15 06:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content18790">
+<h3 class="first"><a href="#p18790">Client to Client protocol and DC++ implementation of it</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8154">seer_tenedos</a></strong> » </span>2003-06-15 06:33
+			</p>
+<div class="content">I am having problems with client to client communications with DC++ clients (when my client makes a connection to a DC++ client).  I have had a look at serveral documents on the client to client documentation but the best i have seen is the following
+<br/>
+<br/>	Client &lt;-&gt; Client Communication in DC. 11-05-2002. By aDe 
+<br/>	---------------------------------------------------------- 
+<br/>
+<br/>	ACTIVE FILE DOWNLOAD 
+<br/>	---------------------- 
+<br/>	D = downloader 
+<br/>	U = uploader 
+<br/>	H = hub 
+<br/>
+<br/>	D&gt;H: $ConnectToMe &lt;U's username&gt; &lt;D's IP and port&gt;|
+<br/>	H&gt;U: $ConnectToMe &lt;U's username&gt; &lt;D's IP and port&gt;|
+<br/>	U&gt;D: Connection
+<br/>	U&gt;D: $MyNick &lt;U's nick&gt;|$Lock &lt;new lock with pk&gt;|
+<br/>	D&gt;U: $MyNick &lt;D's nick&gt;|$Lock &lt;new lock with pk&gt;|$Direction Download &lt;anumber&gt;|$Key &lt;key for U's lock&gt;|
+<br/>	U&gt;D: $Key &lt;key for D's lock&gt;|
+<br/>	D&gt;U: $Get &lt;filepath + filename in exact case&gt;$&lt;start at byte (1=beginning of file)&gt;|
+<br/>	U&gt;D: $FileLength &lt;length of the requested file&gt;|
+<br/>	D&gt;U: $Send|
+<br/>	U&gt;D: Data, in many chunks.
+<br/>	D&gt;U: $Send|       &lt;- when 40906 bytes are sent, ask for more
+<br/>
+<br/>My main problem is that no matter what i do the DC++ client never sends the $Get command.  There are 2 possible problems that i can see.  One is someone mentioned that multiple commands need to be send in one packet and another person said it was the order of the command.  
+<br/>
+<br/>i am basing mine off the order of commands as i don't currently have control over how many commands go in each packet.  Is this a problem?
+<br/>
+<br/>Also i found that the DC++ client will no send any commands to my client if i send my nick and then the lock.  instead to get the DC++ client to respond i had to send my nick but no send my lock till i got he lock off the DC++ client.  If i did that everything worked up to the $Get command.
+<br/>
+<br/>Peopel have said that DC++ is cammand order sensitive maybe the order in the above Client to client protocol is incorrect for DC++.  in which case does someone know the correct order?
+<br/>
+<br/>I am really stuck on this as nothing i do will get DC++ to send the $get request.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p18792">
+<div class="inner">
+<dl class="postprofile" id="profile18792">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8154">seer_tenedos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-15 06:21</dd>
+</dl>
+<div class="postbody">
+<div id="post_content18792">
+<h3><a href="#p18792"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=8154">seer_tenedos</a></strong> » </span>2003-06-15 07:36
+			</p>
+<div class="content">solved part of the problem with the communication stuffing up when i send botht he nick and lock at the start.  Found out in another post tht the ver of DC++ i was running had a problem with dual processors.  I am now connecting to a PC without dual processors but i am still getting stuck when it comes to the $Get request.
+<br/>
+<br/>just solved the last part.  the protocol doc is missing the second direction command.  it only slows one direction command been send but both sides need to send a direction command.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p18809">
+<div class="inner">
+<dl class="postprofile" id="profile18809">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content18809">
+<h3><a href="#p18809"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-06-15 10:07
+			</p>
+<div class="content">There is a 100% complete DC protocol document somewhere. but i can't remember the web address <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p18810">
+<div class="inner">
+<dl class="postprofile" id="profile18810">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content18810">
+<h3><a href="#p18810"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2003-06-15 10:12
+			</p>
+<div class="content"><blockquote><div><cite>OLDoMiNiON wrote:</cite>There is a 100% complete DC protocol document somewhere. but i can't remember the web address <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/></div></blockquote>
+<br/><a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?t=2523">Here?</a></div>
+<div class="signature" id="sig18810">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p18811">
+<div class="inner">
+<dl class="postprofile" id="profile18811">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content18811">
+<h3><a href="#p18811"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-06-15 10:13
+			</p>
+<div class="content">No, <a class="postlink" href="http://www.1stleg.com/">Here</a> <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p18812">
+<div class="inner">
+<dl class="postprofile" id="profile18812">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content18812">
+<h3><a href="#p18812"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-06-15 10:14
+			</p>
+<div class="content">Well, technically Yes, but mine was a direct link <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			6 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

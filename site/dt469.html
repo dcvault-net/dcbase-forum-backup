@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Downloading file from user - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=469">Downloading file from user</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			14 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2148">
+<div class="inner">
+<dl class="postprofile" id="profile2148">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2148">
+<h3 class="first"><a href="#p2148">Downloading file from user</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-27 15:15
+			</p>
+<div class="content">Hi its me (again) i have few questions
+<br/>1)How to use $Direction especialy number at end of this command
+<br/>2)How to "decode' downloaded MyList file
+<br/>3)Does &lt;filename&amp;path&gt; in $Get and $SR are the same ?
+<br/>It always shows File not awaliable
+<br/>Thats all for now 
+<br/>Bye</div>
+<div class="signature" id="sig2148">Sorry for my ENG , but i hope u'll understand me.GreetZ</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2160">
+<div class="inner">
+<dl class="postprofile" id="profile2160">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2160">
+<h3><a href="#p2160">Re: Downloading file from user</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-01-27 17:32
+			</p>
+<div class="content"><blockquote><div><cite>r4v3 wrote:</cite>1)How to use $Direction especialy number at end of this command</div></blockquote>
+<br/>the number is a random number.
+<br/>when both clients want to download from eachother, the one with the highest number wins. iirc</div>
+<div class="signature" id="sig2160"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2206">
+<div class="inner">
+<dl class="postprofile" id="profile2206">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=580">qqzm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 47</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 12:08</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2206">
+<h3><a href="#p2206">Re: Downloading file from user</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=580">qqzm</a></strong> » </span>2003-01-28 09:11
+			</p>
+<div class="content"><blockquote><div><cite>r4v3 wrote:</cite>Hi its me (again) i have few questions<br/>1)How to use $Direction especialy number at end of this command<br/>2)How to "decode' downloaded MyList file<br/>3)Does &lt;filename&amp;path&gt; in $Get and $SR are the same ?<br/>It always shows File not awaliable<br/>Thats all for now <br/>Bye</div></blockquote>
+<br/>
+<br/>1) Exactly as pointed out above.
+<br/>2) The original Neo-Modus uses Huffman encoding. DC++ uses BZIP2 compression.
+<br/>3) They are identical. They are case sensitive though. Other than this check for things like trailing backslashes etc...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2222">
+<div class="inner">
+<dl class="postprofile" id="profile2222">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2222">
+<h3><a href="#p2222"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-28 11:56
+			</p>
+<div class="content">Heh its not wiorking ,when i send:
+<br/>$Search ....AAA
+<br/>Server respond with $SR &lt;ownname&gt; &lt;filenamewithpath&gt;&lt;filesizeinbytes&gt; &lt;current openslots&gt;/&lt;allopenslots&gt;&lt;hubname&gt;
+<br/>so i take &lt;filenamewithpath&gt; and send  $Get &lt;filenamewithpath&gt; (after Key , lock etc...) and client respond with File not Avaliable 
+<br/>Its strange beacouse ther isn't drive letter in some responds.And how client knows withch file upload ?
+<br/>For example
+<br/>I have 2 files:
+<br/>C:\Dir\file.txt
+<br/>D:\Dir\file.txt
+<br/>And clients sends to me : $Get Dir\file.txt , witch file shoul i upload ?.
+<br/>DC protocal is strange... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig2222">Sorry for my ENG , but i hope u'll understand me.GreetZ</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2232">
+<div class="inner">
+<dl class="postprofile" id="profile2232">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2232">
+<h3><a href="#p2232"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-28 14:26
+			</p>
+<div class="content">If you're sharing the complete drive, you should include the drive letter in the name - so if you share C:\Dir\file.txt and D:\Dir\file.txt, and the user requests Dir\file.txt, you should answer with 'File not shared'...
+<br/>OTOH, if you just shared the 'Dir' folder from both drives, you'll have to add a suffix to one of them (DC++ adds a to the second, b to the third etc.; NMDC doesn't allow you to share two folders with identical names).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2235">
+<div class="inner">
+<dl class="postprofile" id="profile2235">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2235">
+<h3><a href="#p2235"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-01-28 14:34
+			</p>
+<div class="content"><blockquote><div><cite>r4v3 wrote:</cite>[snip]<br/>Its strange because there isn't drive letter in some responds. And how [does the] client knows which file [to] upload?<br/>For example<br/>I have 2 files:<br/>C:\Dir\file.txt<br/>D:\Dir\file.txt<br/>And clients send to me : $Get Dir\file.txt , which file should i upload ?.<br/>DC protocol is strange... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote>
+<br/>The drive letter is not used by DC++.
+<br/>
+<br/>DC++ would share those two directories as
+<br/>Dir\file.txt (-&gt; C:\Dir\file.txt)
+<br/>Dira\file.txt (-&gt; D:\Dir\file.txt)
+<br/>
+<br/>In this way the problem you describe does not appear. 
+<br/>
+<br/>Sarf
+<br/>---
+<br/>I like people, but I like myself better.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2246">
+<div class="inner">
+<dl class="postprofile" id="profile2246">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2246">
+<h3><a href="#p2246"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-28 17:25
+			</p>
+<div class="content">Ok i understand.Now evrything is working</div>
+<div class="signature" id="sig2246">Sorry for my ENG , but i hope u'll understand me.GreetZ</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2254">
+<div class="inner">
+<dl class="postprofile" id="profile2254">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2254">
+<h3><a href="#p2254"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2003-01-28 19:04
+			</p>
+<div class="content">remember that the filename in the dc-list doesn't have to anything with the name/path where it is actually stored. All you need is a map between "called on dc" to "path/name"</div>
+<div class="signature" id="sig2254">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2260">
+<div class="inner">
+<dl class="postprofile" id="profile2260">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2260">
+<h3><a href="#p2260"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-28 20:26
+			</p>
+<div class="content">thanx , now i can download files but i have problem with saving it to disk.
+<br/>Jm writtening my client with Java and i have no problems with *.txt files - evrything is ok , but when I download *.jpg , *.mp3 and other binary files i cant open them.
+<br/>This is how I do this:
+<br/>Connection to user:
+<br/>try{
+<br/>        ss = new ServerSocket(port);
+<br/>        s = ss.accept();
+<br/>        }catch(UnknownHostException uhe)
+<br/>        {
+<br/>            return;
+<br/>        }catch(IOException ioe)
+<br/>        {
+<br/>            return;
+<br/>        }
+<br/>        try{
+<br/>        br = new BufferedReader(new InputStreamReader(s.getInputStream()));
+<br/>        os = s.getOutputStream();
+<br/>
+<br/>        }catch(IOException ioe)
+<br/>        {
+<br/>            return;
+<br/>        }
+<br/>
+<br/>Afther $Send command :
+<br/>int znak= br.read();
+<br/>fos.write(znak);
+<br/>
+<br/>where  fos is FileoutputStream; ex. new FileOutputStream("File.dat" , true);
+<br/>
+<br/>I thing there is a problem with outputstream maybe i shoud use some other stream ? (like DataOutputStream) 
+<br/>
+<br/>Afther download :
+<br/>fos.close();
+<br/>
+<br/>Thats all , if samoe could help me (once again)
+<br/>Thanx</div>
+<div class="signature" id="sig2260">Sorry for my ENG , but i hope u'll understand me.GreetZ</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2262">
+<div class="inner">
+<dl class="postprofile" id="profile2262">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2262">
+<h3><a href="#p2262"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-01-28 21:37
+			</p>
+<div class="content"><blockquote><div><cite>r4v3 wrote:</cite>thanx , now i can download files but i have problem with saving it to disk.</div></blockquote>
+<br/>Just one thing, enclose your code within code brackets to preserve your formatting.
+<br/>
+<br/>You should not use the BufferedReader. It is inappropriate, and might cause errors.
+<br/>
+<br/>I read somewhere about a fixed limit after which the clients have to acknowledge each other - but I am probably wrong.
+<br/>
+<br/>Here's my code that might fix your problem (as well as a few others along the way - as usual I do not know when to stop <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> ):
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>protected static int sReadBufferSize = 16384;<br/><br/>public synchronized static int getReadBufferSize()<br/>{<br/>   return sReadBufferSize;<br/>}<br/><br/>public synchronized static void setReadBufferSize(int bufferSize)<br/>{<br/>   sReadBufferSize = bufferSize;<br/>}<br/><br/>public static void handleStreams(InputStream is, OutputStream os)<br/>   throws IOException<br/>{<br/>// use assertions here instead<br/>   if(is == null) throw new NullPointerException("inputstream may not be null");<br/>   if(os == null) throw new NullPointerException("outputstream may not be null");<br/>// the only reason not to do a os.write(is.read()) is that it is *very* slow to do that many calls<br/>   byte[] buffer = new byte[getReadBufferSize()];<br/>   int bytesRead = 0;<br/>   try<br/>   {<br/>      while(true)<br/>      {<br/>         bytesRead = is.read(buffer);<br/>         os.write(buffer, 0, bytesRead);<br/>      }<br/>   }<br/>   catch(IOException ex)<br/>   {<br/>      flush(os);<br/>      throw ex;<br/>   }<br/>}<br/><br/>void flush(OutputStream os)<br/>{<br/>   try<br/>   {<br/>      os.flush();<br/>   }<br/>   catch(IOException ex) {   }<br/>}<br/><br/>void close(OutputStream os)<br/>{<br/>   try<br/>   {<br/>      os.close();<br/>   }<br/>   catch(IOException ex) { }<br/>}<br/><br/>void receiveDataToFile(InputStream is, FileOutputStream fos)<br/>{<br/>   BufferedInputStream bis = new BufferedInputStream(is);<br/>   BufferedOutputStream bos = new BufferedOutputStream(fos);<br/><br/>   try<br/>   {<br/>      handleStreams(is, os);<br/>   }<br/>   catch(IOException ex)<br/>   {<br/>   }<br/>   flush(bos);<br/>}<br/><br/><br/>void handleConnection(Socket s)<br/>   throws ConnectionException<br/>{<br/>   /* After $Send command : */<br/>// fos is a FileOutputStream<br/>   receiveDataToFile(s.getInputStream(), fos);<br/>   close(fos);<br/>}<br/><br/><br/>protected boolean mShouldBlock;<br/><br/>protected synchronized boolean getShouldBlock()<br/>{<br/>   return mShouldBlock;<br/>}<br/><br/>protected synchronized void setShouldBlock(boolean shouldBlock)<br/>{<br/>   mShouldBlock = shouldBlock;<br/>}<br/><br/>void setUpConnection()<br/>   throws ConnectionException<br/>{<br/>   try <br/>   {<br/>        ss = new ServerSocket(port);<br/>// this here code makes sure we won't wait forever for a connection<br/>        ss.setSoTimeout(1000);<br/>        do<br/>      {<br/>           try<br/>           {<br/>              s = ss.accept();<br/>// put handleconnection in a thread to handle multiple clients<br/>              handleConnection(s);<br/>         }<br/>          catch(SocketTimeoutException ex)<br/>          {<br/>          }<br/>        } while(getShouldBlock())<br/>        <br/>    }<br/>    catch(BindException ex)<br/>    {<br/>       throw new ConnectionException("could not bind to port " + port + " - it was already taken");<br/>    }<br/>    catch(UnknownHostException ex)<br/>    {<br/>       throw new ConnectionException("could not get IP of host");<br/>    }<br/>    catch(IOException ex)<br/>    {<br/>       throw new ConnectionException("unspecified error", ex);<br/>    }<br/>}<br/></code></pre></div>
+<br/>
+<br/>Hope you understand it.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>A liberal is a conservative who has been arrested.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2436">
+<div class="inner">
+<dl class="postprofile" id="profile2436">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2436">
+<h3><a href="#p2436"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-30 09:36
+			</p>
+<div class="content">Now evrything is working it was problem with BufferedInputStream I changed to InputStream and now is working.Thx for help.</div>
+<div class="signature" id="sig2436">Sorry for my ENG , but i hope u'll understand me.GreetZ</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2460">
+<div class="inner">
+<dl class="postprofile" id="profile2460">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2460">
+<h3><a href="#p2460"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-30 15:50
+			</p>
+<div class="content">One more question (i coudnt find answer in few protocol documentations) 
+<br/>How to resume disconnected downloads ?
+<br/>$Get &lt;filename&gt;$number
+<br/>
+<br/>what number is this i hered that is a number of resumes.
+<br/>Maybe it is a number of byte I want to start download ?</div>
+<div class="signature" id="sig2460">Sorry for my ENG , but i hope u'll understand me.GreetZ</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2461">
+<div class="inner">
+<dl class="postprofile" id="profile2461">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2461">
+<h3><a href="#p2461"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-30 16:15
+			</p>
+<div class="content">IIRC, it's a random number when both clients want to download, the bigger number wins... Check the <a class="postlink" href="http://sourceforge.net/docman/?group_id=36589">docs</a> here...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2465">
+<div class="inner">
+<dl class="postprofile" id="profile2465">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2465">
+<h3><a href="#p2465"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-01-30 16:49
+			</p>
+<div class="content"><blockquote><div><cite>r4v3 wrote:</cite>$Get &lt;filename&gt;$number</div></blockquote>
+<br/>yes, <em class="text-italics">number</em> is the byte offset (starting at 1, not 0)</div>
+<div class="signature" id="sig2465"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			14 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

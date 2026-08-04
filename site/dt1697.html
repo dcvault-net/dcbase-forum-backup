@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Between2First Function - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="26" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=26" itemprop="url"><span itemprop="title">Other</span></a></span>
+<span class="crumb" data-forum-id="8" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=8" itemprop="url"><span itemprop="title">Hubs and scripts</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=8&amp;t=1697">Between2First Function</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Which hub software is the best? Where can I find script XXX? Discuss it here...(no, this is not for advertising your hub...)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			26 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p8917">
+<div class="inner">
+<dl class="postprofile" id="profile8917">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8917">
+<h3 class="first"><a href="#p8917">Between2First Function</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-03-28 23:51
+			</p>
+<div class="content">I was doing some spring cleaning in a script, and put the function together anyway so I thought I'd share it, since BeforeFirst and AfterFirst seem popular in lill scripts people make =)
+<br/>
+<br/>The idea is to avoid resorting to :
+<br/>BeforeFirst(AfterFirst(sIn, sFirst), sSecond)
+<br/>and to use instead :
+<br/>Between2First(sIn, sFirst, sSecond)
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Function Between2First(sIn, sFirst, sSecond)<br/>   Dim iStartPos : iStartPos=InStr(sIn, sFirst)+Len(sFirst)<br/>   Between2First = Mid(sIn, iStartPos, InStr(iStartPos, sIn, sSecond)-iStartPos)<br/>End Function</code></pre></div>
+<br/>
+<br/>Between2First("chocochocolatpistachevanilleframboise", "chocolat", "vanille") would for example be equal to "pistache"
+<br/>
+<br/>Yummy ! =)</div>
+<div class="signature" id="sig8917">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8918">
+<div class="inner">
+<dl class="postprofile" id="profile8918">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8918">
+<h3><a href="#p8918"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-03-28 23:56
+			</p>
+<div class="content">BeforeFirst and AfterFirst are slow.....mind you, this is coming from an optimization freak  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> .</div>
+<div class="signature" id="sig8918"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8919">
+<div class="inner">
+<dl class="postprofile" id="profile8919">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8919">
+<h3><a href="#p8919"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-03-29 00:04
+			</p>
+<div class="content"><blockquote class="uncited"><div>BeforeFirst and AfterFirst are slow.....mind you, this is coming from an optimization freak</div></blockquote>
+<br/>
+<br/>I know they are =) I try to avoid them too (instead, I resort to a Split whenever possible. I'm not sure what other people do, maybe there's a better way).
+<br/>For this specific case though, the function above is the best I could think of. Improvements are of course welcomed =p</div>
+<div class="signature" id="sig8919">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8920">
+<div class="inner">
+<dl class="postprofile" id="profile8920">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8920">
+<h3><a href="#p8920"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-03-29 00:08
+			</p>
+<div class="content">Slow / Originals
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Function BeforeFirst(sIn, sFirst) <br/>    BeforeFirst = Left(sIn, InStr(1, sIn, sFirst) - 1)<br/>End Function<br/><br/>Function AfterFirst(sIn, sFirst)  <br/>    AfterFirst = Right(sIn, Len(sIn) - InStr(1, sIn, sFirst) - (Len(sFirst) - 1))<br/>End Function<br/><br/>Function AfterLast(sFrom, sAfterLast)<br/>    If InStr(1, sFrom, sAfterLast) Then<br/>        AfterLast = Right(sFrom, Len(sFrom) - InStrRev(sFrom, sAfterLast) - (Len(sAfterLast) - 1))<br/>    Else<br/>        AfterLast = ""<br/>    End If<br/>End Function<br/><br/>Function BeforeLast(sFrom, sBeforeLast)<br/>    If InStr(1, sFrom, sBeforeLast) Then<br/>        BeforeLast = Left (sFrom , InStrRev(sFrom, sBeforeLast) - Len(sBeforeLast))<br/>    Else<br/>        BeforeLast = ""<br/>    End If<br/>End Function<br/><br/>Function Between2First(sIn, sFirst, sSecond) <br/>   Dim iStartPos : iStartPos=InStr(sIn, sFirst)+Len(sFirst) <br/>   Between2First = Mid(sIn, iStartPos, InStr(iStartPos, sIn, sSecond)-iStartPos) <br/>End Function<br/></code></pre></div><br/><br/>Faster/Mine (based on byte functions)<br/><br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Function BeforeFirst(sIn, sFirst) <br/>    BeforeFirst = LeftB(sIn, InStrB(1, sIn, sFirst) - 1)<br/>End Function<br/><br/>Function AfterFirst(sIn, sFirst)<br/>  AfterFirst = RightB(sIn, LenB(sIn) - InStrB(1, sIn, sFirst) - LenB(sFirst) + 1)<br/>End Function<br/><br/>Function AfterLast(sFrom, sAfterLast)<br/>    If InStrB(1, sFrom, sAfterLast) Then<br/>        AfterLast = Right(sFrom, Len(sFrom) - InStrRev(sFrom, sAfterLast) - (Len(sAfterLast) - 1))<br/>    Else<br/>        AfterLast = ""<br/>    End If<br/>End Function<br/><br/>Function BeforeLast(sFrom, sBeforeLast)<br/>    If InStrB(1, sFrom, sBeforeLast) Then<br/>        BeforeLast = Left(sFrom , InStrRev(sFrom, sBeforeLast) - Len(sBeforeLast))<br/>    Else<br/>        BeforeLast = ""<br/>    End If<br/>End Function<br/><br/>Function Between2First(sIn, sFirst, sSecond) <br/>   Dim iStartPos<br/><br/>   iStartPos = InStrB(sIn, sFirst) + LenB(sFirst)<br/>   Between2First = MidB(sIn, iStartPos, InStrB(iStartPos, sIn, sSecond) - iStartPos) <br/>End Function<br/></code></pre></div></div>
+<div class="signature" id="sig8920"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8921">
+<div class="inner">
+<dl class="postprofile" id="profile8921">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8921">
+<h3><a href="#p8921"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-03-29 00:10
+			</p>
+<div class="content">Best of all, these are simple replacements. No changes need to be made to the code besides replacing the actual functions. Now I think they work....I might use the byte functions a lot, but they still confuse me sometimes  <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/> .</div>
+<div class="signature" id="sig8921"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8922">
+<div class="inner">
+<dl class="postprofile" id="profile8922">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8922">
+<h3><a href="#p8922"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-03-29 00:13
+			</p>
+<div class="content">Another monologue.....well at least it's me!
+<br/>
+<br/>It's faster to assign vbNullString than "". Also I don't use byte functions as much in these functions because there is no InStrRevB....(I cound make one, but the performance gain would probably be lost...)
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Function AfterLast(sFrom, sAfterLast) <br/>    If InStrB(1, sFrom, sAfterLast) Then <br/>        AfterLast = Right(sFrom, Len(sFrom) - InStrRev(sFrom, sAfterLast) - (Len(sAfterLast) - 1)) <br/>    Else <br/>        AfterLast = vbNullString<br/>    End If <br/>End Function <br/><br/>Function BeforeLast(sFrom, sBeforeLast) <br/>    If InStrB(1, sFrom, sBeforeLast) Then <br/>        BeforeLast = Left(sFrom , InStrRev(sFrom, sBeforeLast) - Len(sBeforeLast)) <br/>    Else <br/>        BeforeLast = vbNullString<br/>    End If <br/>End Function <br/></code></pre></div></div>
+<div class="signature" id="sig8922"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8924">
+<div class="inner">
+<dl class="postprofile" id="profile8924">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8924">
+<h3><a href="#p8924"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-03-29 00:35
+			</p>
+<div class="content"><blockquote class="uncited"><div>Now I think they work....I might use the byte functions a lot, but they still confuse me sometimes</div></blockquote>
+<br/>
+<br/>That's way better than me. They confuse me all the time =p I never learned programming at school, and I pretty much gathered from the docs I read so far that byte comparison basically means "case sensitive"; but I still have no clue how byte counting works, or what the difference between Right and RightB is, for example.
+<br/>
+<br/>That said, beforelast doesn't work. BeforeLast("chocochocolatpistachevanilleframboise", "choco") returns "c" and it should return "choco"
+<br/>The other 4 work great, thx =)
+<br/>-Personally, I never found a use for beforelast, but I guess someone might like it-</div>
+<div class="signature" id="sig8924">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8929">
+<div class="inner">
+<dl class="postprofile" id="profile8929">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8929">
+<h3><a href="#p8929"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-03-29 02:00
+			</p>
+<div class="content">Oops  <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/>  it should be this :
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Function BeforeLast(sFrom, sBeforeLast) <br/>    If InStrB(1, sFrom, sBeforeLast) Then <br/>        BeforeLast = Left(sFrom , InStrRev(sFrom, sBeforeLast) - 1)<br/>    Else <br/>        BeforeLast = vbNullString <br/>    End If <br/>End Function<br/></code></pre></div>
+<br/>
+<br/><blockquote class="uncited"><div> but I still have no clue how byte counting works, or what the difference between Right and RightB is, for example. <br/></div></blockquote>
+<br/>
+<br/>Well look at this 
+<br/>
+<br/>Right("hello", 2) = "lo"
+<br/>RightB("hello", 2) = "o"
+<br/>
+<br/>The B means the length is in bytes. Each character is 2 bytes long.
+<br/>
+<br/>But the main thing is that it's faster. I myself normally have to test each MidB, LeftB and RightB before putting it in my code, when using InStrB with it. (InStrB + 1 = InStr * 2     -   that gets old quickly  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  )</div>
+<div class="signature" id="sig8929"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8930">
+<div class="inner">
+<dl class="postprofile" id="profile8930">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8930">
+<h3><a href="#p8930"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-03-29 02:06
+			</p>
+<div class="content">All that said, if you looked at the source code (VB6) for my client / script on my website, you might understand better......
+<br/>
+<br/>One fine day I might make a little tutorial on them (so people looking at my sources might actually understand  <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/> ).
+<br/>
+<br/>
+<br/>But here's a general rule. If the function ends in B, double the length it normally would be.</div>
+<div class="signature" id="sig8930"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8932">
+<div class="inner">
+<dl class="postprofile" id="profile8932">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8932">
+<h3><a href="#p8932"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-03-29 03:10
+			</p>
+<div class="content"><blockquote class="uncited"><div>Each character is 2 bytes long</div></blockquote>
+<br/>
+<br/>Oh, oki =) That's pretty simple, not sure why they didn't put a lill note in the vbs doc on msdn... According to some other code you had already posted, it seemed indeed each character was several bytes long, but I wasn't sure how many, and more importantly, if it was always the same lenght or if it depended on the character (with microsoft, you never know =p )
+<br/>
+<br/>Thankee so much for the info !
+<br/> *heads off to put lill Bs everywhere*</div>
+<div class="signature" id="sig8932">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9027">
+<div class="inner">
+<dl class="postprofile" id="profile9027">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9027">
+<h3><a href="#p9027"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-03-30 02:11
+			</p>
+<div class="content"><blockquote class="uncited"><div>That's pretty simple, not sure why they didn't put a lill note in the vbs doc on msdn</div></blockquote>
+<br/>
+<br/>MSDN and almost any VB site I've ever visited never mention anything about these, or just have a passing interest in them....
+<br/>
+<br/>I think they are mentioned once on MSDN though. A one line comment say there are alternatives to Left, blah blah.
+<br/>
+<br/>Besides, since when did MS fully document anything  <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/> ?
+<br/>
+<br/>
+<br/>
+<br/>Just noticed a few more rules that might help you/anybody else out :
+<br/>
+<br/>RightB(String, Length)
+<br/>LeftB(String, Length)
+<br/>MidB(String, Start, Length)
+<br/>
+<br/>Length for all of them is ALWAYS an even number. Start for MidB is ALWAYS an odd number. If they aren't, you'll get a string full of question marks.</div>
+<div class="signature" id="sig9027"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10912">
+<div class="inner">
+<dl class="postprofile" id="profile10912">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10912">
+<h3><a href="#p10912"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-11 22:57
+			</p>
+<div class="content">Sorry to bring a dead post back from the grave but.....
+<br/>
+<br/><a class="postlink" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=719985&amp;group_id=71384&amp;atid=548851">http://sourceforge.net/tracker/index.php?func=detail&amp;aid=719985&amp;group_id=71384&amp;atid=548851</a>
+<br/>
+<br/>I've speeded up one of the functions, etc. These are faster than the alternatives, and work properly (no side effects by replacing your old functions with these). I've even got it properly organized now  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> .
+<br/>
+<br/>Hopefully somebody finds it useful.</div>
+<div class="signature" id="sig10912"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12461">
+<div class="inner">
+<dl class="postprofile" id="profile12461">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12461">
+<h3><a href="#p12461"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-04-23 22:45
+			</p>
+<div class="content">I've run a test on the bytes version, in VB. Here are the results for 1 000 000 loops :
+<br/>
+<br/>BigString = BeforeFirst(AfterFirst("chocochocolatpistachevanilleframboise", "chocolat"), "vanille") took 5.4922 seconds to assign
+<br/>BigString = Between2First("chocochocolatpistachevanilleframboise", "chocolat", "vanille") took 4.2891 seconds to assign
+<br/>
+<br/>The difference should be even more noticeable in VBS, since VBS works with variants, not real strings. In case you were still suspicious about the performance gain, you can now update your code safely =)</div>
+<div class="signature" id="sig12461">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12521">
+<div class="inner">
+<dl class="postprofile" id="profile12521">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:29</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12521">
+<h3><a href="#p12521"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a></strong> » </span>2003-04-24 11:41
+			</p>
+<div class="content"><blockquote><div><cite>ButterflySoul wrote:</cite>I've run a test on the bytes version, in VB. Here are the results for 1 000 000 loops :<br/><br/>BigString = BeforeFirst(AfterFirst("chocochocolatpistachevanilleframboise", "chocolat"), "vanille") took 5.4922 seconds to assign<br/>BigString = Between2First("chocochocolatpistachevanilleframboise", "chocolat", "vanille") took 4.2891 seconds to assign<br/></div></blockquote>
+<br/>This is a <strong class="text-strong">wrong</strong> way to analyse a algorithm (in windows and other multi processes OS's)  it might give you a hint on with one is faster then the other, but you can't realy be sure <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/></div>
+<div class="signature" id="sig12521">For the newest release of MulTiBoT visit <a class="postlink" href="http://www.cwain.dk/">www.cwain.dk</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12522">
+<div class="inner">
+<dl class="postprofile" id="profile12522">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12522">
+<h3><a href="#p12522"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-24 11:46
+			</p>
+<div class="content">What is the right way then? I've never had any problems with slowing down my programs testing this way...(it's better than guessing!)</div>
+<div class="signature" id="sig12522"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12536">
+<div class="inner">
+<dl class="postprofile" id="profile12536">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12536">
+<h3><a href="#p12536"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-24 12:43
+			</p>
+<div class="content">Besides if you keep your system conditions fairly constant (i.e I run most tests on a comp running nothing Win98 - it's the only that thing running). Assuming you don't run anything like music or games, etc, the tests should remain fairly constant.</div>
+<div class="signature" id="sig12536"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12544">
+<div class="inner">
+<dl class="postprofile" id="profile12544">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:29</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12544">
+<h3><a href="#p12544"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a></strong> » </span>2003-04-24 12:58
+			</p>
+<div class="content"><blockquote><div><cite>TasMan wrote:</cite>What is the right way then?</div></blockquote>
+<br/>from "Data Structures and Algorithms in Java":
+<br/><ol style="list-style-type: decimal"><li>Code up the algorithm in some high-level computer language (like java)</li><li>Compile the program into some low-level executable language (like the bytecode language of the Java Virtuel Machine)</li><li>Determine, for each instruction i of the low-level language, the time ti needed to execute the instruction.</li><li>Determine, for each instruction i of the low-level language, the number of times ni that instruction i gets executed when the algorithm is run.</li><li>Sum up the products ni * ti over all the instructions, which yields the running time of the algorithm.</li></ol>This approach can often give us an accurate estimate of the running time, but it is very complicated to pursue since it requires a detailed understanding of the low-level language generated by a program's compilation and the environment in which it is to run.<br/>So, instead, we perform our analysis directly on the high-level code or pseudocode. We define a set of high-level <em class="text-italics"><strong class="text-strong">primitive operations</strong></em> that are largely independent from the programming language used and can be identified also in the pseudocode. Primitive operations include the following:<ul><li>Assigning a value to a variable</li><li>Calling a method</li><li>Performing an arithmectic operation (for example, adding two numbers)</li><li>Comparing two numbers</li><li>indexing into an array</li><li>Following an object reference</li><li>Returning from a method</li></ul></div>
+<div class="signature" id="sig12544">For the newest release of MulTiBoT visit <a class="postlink" href="http://www.cwain.dk/">www.cwain.dk</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12545">
+<div class="inner">
+<dl class="postprofile" id="profile12545">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:29</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12545">
+<h3><a href="#p12545"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a></strong> » </span>2003-04-24 13:00
+			</p>
+<div class="content"><blockquote><div><cite>TasMan wrote:</cite>Besides if you keep your system conditions fairly constant (i.e I run most tests on a comp running nothing Win98 - it's the only that thing running). Assuming you don't run anything like music or games, etc, the tests should remain fairly constant.</div></blockquote>
+<br/>This is also the method I normally uses <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig12545">For the newest release of MulTiBoT visit <a class="postlink" href="http://www.cwain.dk/">www.cwain.dk</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12549">
+<div class="inner">
+<dl class="postprofile" id="profile12549">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12549">
+<h3><a href="#p12549"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-24 13:08
+			</p>
+<div class="content">I'm still learning my C++ and now to to test things in VB I should go with Java?  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>*dripping with sarcasm*</div>
+<div class="signature" id="sig12549"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12576">
+<div class="inner">
+<dl class="postprofile" id="profile12576">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12576">
+<h3><a href="#p12576"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-04-24 16:29
+			</p>
+<div class="content"><blockquote class="uncited"><div>This is a wrong way to analyse a algorithm (in windows and other multi processes OS's)</div></blockquote>
+<br/>
+<br/>I absolutely agree with you, it is a wrong way, this is why I ran the test several times for each function before posting =)
+<br/>The 3 last decimals were different on each test, but both results stayed proportional one to another after each test "batch".
+<br/>
+<br/>Also, the variation from one test to another (after my successive tests) suggests that the other processes running on the machine can make the execution time vary by about 1/10th of a second between 2 runs for the same function. However, the difference between the running time of the 2 functions is over a second, so it's significant enough to consider the difference due to "background load" as irrelevant; as the background load can only explain for -at most- 2/10th of a second worth of variation between the 2 functions (the rest of the difference, which is still over a second, has to come from the code difference itself, unless I'm missing something).
+<br/>
+<br/>So indeed, it's not the best and most accurate way to test them, but since background processes can only explain for about 5-10% of the difference, the remaining difference is large enough to make the test valid.
+<br/>(I originally included all the decimals because they're part of the same test batch, so the proportion from one to another is right, eventhough each value taken individually doesn't mean anything).
+<br/>
+<br/>It's faster I tell you... Upgrade your Stimbots, UserIp, and other scripts already... geeze =p lol</div>
+<div class="signature" id="sig12576">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12583">
+<div class="inner">
+<dl class="postprofile" id="profile12583">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:29</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12583">
+<h3><a href="#p12583"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a></strong> » </span>2003-04-24 17:27
+			</p>
+<div class="content">I am not sure but I have read that
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if 1 = 2 then <br/>  statement1<br/>end if<br/>if 1 &lt;&gt; 2 then<br/>  statement2<br/>end if</code></pre></div>is faster then<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if 1 = 2 then <br/>  statement1<br/>else<br/>  statement2<br/>end if</code></pre></div>
+<br/>Is there anybody there can validate that ?</div>
+<div class="signature" id="sig12583">For the newest release of MulTiBoT visit <a class="postlink" href="http://www.cwain.dk/">www.cwain.dk</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12584">
+<div class="inner">
+<dl class="postprofile" id="profile12584">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12584">
+<h3><a href="#p12584"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-24 17:36
+			</p>
+<div class="content">Argh!! Makes me want to learn VB Scripting just so I can put in some fancy code too <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> *L*
+<br/>
+<br/>You have a good test there really ONLY if the runtime growth of the algorithims are equal.  Thus you are only finding the x constant of xO(*).  Also if they have diffrent growth rates (IE: depends on the string size in this case?)  You should run the tests on first a small string and then a really big string.  If they are they same growth then you should get about the same proportion for each test...  However if it is diffrent growths, then it is likely you will see a big diffrence if your string length becomes long enough.  In this case... you find out who has the better run time on small strings vs long strings.  Then you can save some major time by making sure you are using the right algorithim for the really long strings <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>However, in this case.. it looks like that both of these functions should run in O(NlnN) time so there should be hardly any porpotionality change with really long strings (not to mention the string size of what you are searching for)... Soo.. that being that and me saying, ahh yeah you are prob right because they both prob have the same runtime growth.. I have to ask... why the heck did I post this in the first place?  *L*  Keep up the optimizations!  I personally think that you could prob right a 'faster' algorithim then the ones provided in stock VBS.  Faster.. meaning smaller x *L* 
+<br/>
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12593">
+<div class="inner">
+<dl class="postprofile" id="profile12593">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12593">
+<h3><a href="#p12593"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-04-24 19:25
+			</p>
+<div class="content"><blockquote class="uncited"><div>You have a good test there really ONLY if the runtime growth of the algorithims are equal.</div></blockquote>
+<br/>
+<br/>Actually, they are not. My algo has a fixed cost which is diming a variable, then a proportional growth depending on the string lenght. The other algo (which is essentially a combination of 2 other algos) has a proportional growth all along.
+<br/>Also, mine seeks a position first to "limit the damage", while the other algo hacks a bit away then passes a huge chunck of string to the second algo to play with. Since the methods are so different, there's no way they'll have the same growth...
+<br/>
+<br/>In other words, the longer the string, the faster my single algo will be compared to the classic combination of 2 algos; eventhough it already performs faster on relatively short strings.
+<br/>
+<br/>I get your point... I should have made the test by passing the bible as an argument and ask both functions to return the stuff in between chapter 5 and chapter 7 =p</div>
+<div class="signature" id="sig12593">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12629">
+<div class="inner">
+<dl class="postprofile" id="profile12629">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12629">
+<h3><a href="#p12629"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-25 02:06
+			</p>
+<div class="content"><blockquote><div><cite>ButterflySoul wrote:</cite>Actually, they are not. My algo has a fixed cost which is diming a variable, then a proportional growth depending on the string lenght. The other algo (which is essentially a combination of 2 other algos) has a proportional growth all along.<br/>Also, mine seeks a position first to "limit the damage", while the other algo hacks a bit away then passes a huge chunck of string to the second algo to play with. Since the methods are so different, there's no way they'll have the same growth...<br/></div></blockquote>
+<br/>
+<br/>*L* Perhaps we shouldn't get in a analaysis of algorithims debate, but the growth of any comparison based function can be at the very least O(NlnN).  Two comparison functions can have the same growth but oen could be x1O(NlnN) and the other x2O(NlnN)... where their growth is identical but it just takes |x1 - x2| times more instructions to excute one more than the other at any length N.  Hehe .  Usually with string comparisons N is a combo of the length of the string being searched and the substring being looked for.  It doesn't matter if you are Diming one variable or two, it isn't going to change the growth.. and the only the growth can be diffrent is that one (or both) methods can have a worst growth.. like O(n^2) or some much worst polynomial run time growth *blech*  
+<br/>
+<br/>Lets just say, its not so easy as saying what growth is better.. just attempt to get at the the proven lowest level of growth at NlnN and thats practically good enough! *L*  It is also harder than just looking at the code and giving it an assement like you did... Analysis takes a bit more work than that... sad but true, but hey, that's computer science for you!
+<br/>
+<br/><img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>  Keep on working at getting that X1 down!  Now... if you want to have a non-comparison algo  then you can get it down to linear time.. and they haven't proven that you can't even get it down to less than linear, so that is even a possibility.  However, inpratical for  a VBScript *L*
+<br/>
+<br/>Forgive me... but I just had to get that crap out of my system (flash back of Analysis Of Algorithims in College)
+<br/>
+<br/>Oh yeah, that was my point, to get a more accurate runtime.. take the bible, do a search, blah blah.. so ignore everything I just said.  <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12640">
+<div class="inner">
+<dl class="postprofile" id="profile12640">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12640">
+<h3><a href="#p12640"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-04-25 05:43
+			</p>
+<div class="content">ok, I didn't have a text version of the bible, so I did with the Egytian Book of the Dead, saved to a nice txt file of 241KB. It's not as long as the bible, but it make a reasonably long string nonetheless
+<br/>I also checked, re-checked, double checked and triple checked (and re-rechecked once more to really be sure) the code.. There is no 0 missing or extra 0 in either loop...
+<br/>
+<br/>I assigned the variable with a seperate button, because the first time you open the file system object to read stuff, there's a small delay that you don't have the next time you read stuff. So the book was already loaded and assigned to sText before either function started looping. Considering the size of string, I only looped 10000 times instead of a milion, because I didn't want to sit there all night.
+<br/>
+<br/>To assign 10000 times : BigString = BeforeFirst(AfterFirst(sText, "The Fifth Arit"), "The Seventh Arit") : 35.8750 seconds
+<br/>To assign 10000 times : BigString = Between2First(sText, "The Fifth Arit", "The Seventh Arit") : 2.2969 seconds
+<br/>
+<br/>Here are the values of a few extra runs, so you can see the variation due to the background load :
+<br/>36.2969 / 2.3594
+<br/>36.1406 / 2.3125
+<br/>35.9219 / 2.3047
+<br/>
+<br/>Comments ?</div>
+<div class="signature" id="sig12640">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12784">
+<div class="inner">
+<dl class="postprofile" id="profile12784">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12784">
+<h3><a href="#p12784"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-26 06:50
+			</p>
+<div class="content">Hey me again *s*  Sorry to be such an annoyance... I do have a comment.  Yeah those comparisons are DRASTIC... makes you think there is something funky going on... Well there is.
+<br/>
+<br/>I went back and looked at the BeforeFirst and AfterLast functions and this is why I think the runtimes were so drastic......
+<br/>
+<br/>BeforeFirst uses the Left function.  Your functions just use the InStr function... so.. It appears to me (even though I don't have the text) that the first accurance of this inBetween is fairly close to the beganing of the loaded string (book).  At least a great deal closer to the beganning the end.  Since BeforeFirst is:  (using your sped up version) :
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Function BeforeFirst(sIn, sFirst)<br/>    BeforeFirst = LeftB(sIn, InStrB(1, sIn, sFirst) - 1)<br/>End Function<br/></code></pre></div><br/><br/>What happens here is that, yes it first searches forward in the string, but then its like ok...Lets use LeftB and lets start at InStrB(blah) - 1....  Well, the problem with this one big strings is that VB is iterating througgh the string BACKWARDS to get to the Position variable.  So in this case since the string is very long it takes a while to do that.  Yes, very ineffecient compared to yours which uses just the InStr function... which parses FORWARD through the string.   In this case it would of been a better solution to do <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>BeforeFirst = Mid(sIn, 1, InStrB(1, sIn, sFirst) )</code></pre></div>  Forgive me if I have any slight syntax errors as I don't really know ifthere is a MidB or even use VB.. (I'm a C man *L*).
+<br/>
+<br/>Anyway, my point here?  That if the first accurance in your test happened near the END of the string data (book) then the outcome of your tests most likely would of been reversed, your's being the slower one by 20+ seconds.  (I am giving you credit that your implementation is faster anyway, but I really don't know). 
+<br/>
+<br/>Probably an even better implentation of a faster algo would get the Length of the string to be searched, and compared the position to .5*fullStringLength and if its lower use the implentation you have now, but if it is higher to use the one that incorporates LeftB.  Yes, thats a tad (just a smidgeon) more overhead... but doing it that way would speed up your implentation when strings are near the end.
+<br/>
+<br/>Ok.. I'll be quiet now  <img alt=":lol:" class="smilies" src="/images/smilies/icon_lol.gif" title="Laughing"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			26 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=8">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Hubs and scripts”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

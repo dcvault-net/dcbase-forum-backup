@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Hub Feature: Passive Hub Connect - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=1843">Hub Feature: Passive Hub Connect</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			13 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p9685">
+<div class="inner">
+<dl class="postprofile" id="profile9685">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9685">
+<h3 class="first"><a href="#p9685">Hub Feature: Passive Hub Connect</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-03 18:35
+			</p>
+<div class="content">I know this feature sounds 'weird' but I think it would be a good idea.....
+<br/>
+<br/>I'll explain the feature first then give the good reasons later (for those who read only the first few lines of a message).
+<br/>
+<br/>The Feature:  Have the hubs act as a 'web server' on port 80 or maybe even port 8080.  If someone can not connect to the default hub port then they can simply make some sort of request on port 80 on the server.  The request would contain a port number that is open on the client side that is accepting hub initiated sessions.  Once the hub receives the request on port 80 it connects TO the client.  The client would accept the hub connection and from there  the protocol stays the same.   
+<br/>
+<br/>I really think this is feasiable (even if I can't spell).  The hubs passive request port can even be added to the hub lists in one of those spared delimited spots.  
+<br/>
+<br/>I know we can't change all the hubs out there... but perhaps at least DCH++ can support it.
+<br/>
+<br/>Now the reasons why:
+<br/>
+<br/>As everyone knows ISP's just love to block them common hub ports.  (412 and sometimes 411 and maybe some others).
+<br/>
+<br/>Up to now the only real ways to get around that is to be fortunate enough to have access to a Sock proxy, or find a hub that doesn't use those ports (and in rare instances know a tunnel that the hub admin has setup).  
+<br/>
+<br/>Making a way for the hub to initiate the connection to the client is A. simple and B. can get us around this simple form of port blocking.
+<br/>
+<br/>Let me know what you think!
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9696">
+<div class="inner">
+<dl class="postprofile" id="profile9696">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3274">slurm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 8</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 22:56</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9696">
+<h3><a href="#p9696"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3274">slurm</a></strong> » </span>2003-04-03 19:05
+			</p>
+<div class="content">I don't know whether your idea is technically possible, but even if it is there's another solution: different port number. It is all up to hub owners though, so if they want to allow users whose ISP is blocking 411 or 412 they move a hub to another port - it's more simple than setting up such 'web server'.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9697">
+<div class="inner">
+<dl class="postprofile" id="profile9697">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9697">
+<h3><a href="#p9697"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-03 19:25
+			</p>
+<div class="content">I just used the words 'web server' because ISP's don't block port 80 (at least not many  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> )
+<br/>
+<br/>What I suggest is definetly possible, and it is quite easy to do too.  At least in C it is easy to do.. and if it is easy to do in C and it has to do with sockets...  well I am sure it is easier to do with almost any other commonly used language out there today.
+<br/>
+<br/>Thanks for your input slurm!
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9735">
+<div class="inner">
+<dl class="postprofile" id="profile9735">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9735">
+<h3><a href="#p9735"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-04 01:44
+			</p>
+<div class="content">Some hub servers may already be running both a web server and a web cache.  <img alt=":twisted:" class="smilies" src="/images/smilies/icon_twisted.gif" title="Twisted Evil"/>
+<br/>
+<br/>Now, you obviously need a standard port to have the hub software also listen on, what's to prevent ISPs from blocking that as well, unless you pick a port used for something else, in which case you might have collisions between services?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9739">
+<div class="inner">
+<dl class="postprofile" id="profile9739">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9739">
+<h3><a href="#p9739"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-04 02:06
+			</p>
+<div class="content">NACK!  *L* It looks like you didn't read all of my post.
+<br/>The point is the port SHOULD be set that would normally be a diffrent service.  I explained (I thought so anyway *L*) that a hub would be able to choose the passive port.  The clients would know the passive port for the hub by the hublist, which has many spare (reserved for future use) data segmants (you know the server attributes are a | delimited list).  The hubs would just report this port to the hublist, and anyone getting the hublist knows what port is configured to be the "passive" port on the hub.  
+<br/>
+<br/>It seems to be straight forward to me.  Yes, it would require the hub software, the hub list software, and the clients to be modified, but only slightly.  Also, the way things are setup with the DC protocol if any of the three programs don't support it then, yes it won't work but it shouldn't break anything either.. That is what happens to new features, they have growing pains being implemented.. but if it is a good feature (and I think this one is) it would gain acceptance and be programmed into more clients/hubs/lists.
+<br/>
+<br/>Thanks for your response GargoyleMT, but I really do think I answered your questions in my first post, I just reinstated the answers here, in hopes it will make it clearer if I was too ambiguous before.
+<br/>
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10281">
+<div class="inner">
+<dl class="postprofile" id="profile10281">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10281">
+<h3><a href="#p10281"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-04-07 16:35
+			</p>
+<div class="content">This is a possible solution to the problem. It requires the modification of hub software, the software that interprets the hublist and the software that connects to a hub.
+<br/>
+<br/>By using "port tunneling" on the server that the hub is run on (so that connecting to, say, port 80 or 21 gets your data forwarded to the hub at port 411 automatically) you need to modify one thing : the computer that the hub is run on (or rather, you need to run another program on it, if the hub software does not support it).
+<br/>
+<br/>I prefer the solution that means the least amount of work for all involved, especially since there is relatively little gain compared to the additional amount of work. Besides, if hub owners can't get worked up enough to get port-bouncing up and running, they probably don't want my share anyhow. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>I would appreciate some sort of built-in port forwarding in DCH++, though (off by default) so that the hub owners wouldn't have to do something really advanced, like using <a class="postlink" href="http://www.r00t3d.org.uk/bin/">bouncer</a> or, Eris forbid, <a class="postlink" href="http://www.boutell.com/rinetd/">RINETD</a>.
+<br/>
+<br/>Sorry, I had to get that out of my system. Rant not directed against Moch or arnetheduck (or anyone except those evil, lazy hub operators out there! <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> ).
+<br/>
+<br/>Sarf
+<br/>---
+<br/>'Tis an ill wind that blows no minds.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10311">
+<div class="inner">
+<dl class="postprofile" id="profile10311">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10311">
+<h3><a href="#p10311"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-04-07 20:16
+			</p>
+<div class="content">Don't ISPs usually only block lower ports (&lt; 1024)?  Perhaps if a higher port were used, it would be less likely to be blocked on most ISPs?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10345">
+<div class="inner">
+<dl class="postprofile" id="profile10345">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10345">
+<h3><a href="#p10345"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-08 01:33
+			</p>
+<div class="content">Sarf, I understand your POV.  
+<br/>
+<br/>   I know its a 'bit' of work... but its not alot, just a little in three diffrent places <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>  Making things easier for people to use is usally the bulk load of work.  However, it is worth it.. there is much faster growth in a system that is easier to use.  Look at AOL for example.  Ok bad example.  Ease of use doesn't mean high quality.. but I think this feature would be a high quality item. 
+<br/>
+<br/>   Hehe, hub operators stop being lazy?  Why do you think that most of them are operators and the majority of the hubs have &lt;20 users?  Laziness my friend.. cause so many people want to be operators and, in my opinion (which surely can be wrong) not have to share because they are hosting the hub.  Ok done with my rant hehe... 
+<br/>
+<br/>   Thanks for your response Sarf!
+<br/>     ~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10402">
+<div class="inner">
+<dl class="postprofile" id="profile10402">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10402">
+<h3><a href="#p10402"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-04-08 15:30
+			</p>
+<div class="content"><blockquote><div><cite>Moch wrote:</cite>[snippity]I know its a 'bit' of work... but its not alot, just a little in three diffrent places <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div></blockquote>
+<br/>Ah, but this means <strong class="text-strong">three</strong> places to update/change whenever something merits it. It is not feasible to try to get people to update three things every time something changes (and please, do not try to make the case that if it "was done right" it would never need to change - I <strong class="text-strong">know</strong> that sooner or later, someone, somewhere will change the way it works <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> ).
+<br/>There is also a problem of abuse - once you can request the hub server to connect to you, you can easily tie up its resources.
+<br/>Another problem is that the lusers^H^H^H^H^H^H^H less computer-wise users would probably find a way to whine about this ("<em class="text-italics">waaah! why cannt i cnnct to uber-leet hub #23! it says im firewalled! waaaaah! help me NOW dammit!! plz</em>").
+<br/>
+<br/>So. This feature is not, in my opinion, easy to implement, it is not easy to use (it requires people to know if they're firewalled or not, and as can be seen daily on the boards, they don't, and they definitely do not know what to do about it nor want to do it themselves) and it brings, currently, too little benefit compared to the use of a simple port forwarding proggy.
+<br/>While coding "for the future" sounds fine on paper, I have converted to the following of the maxim "if you ain't gonna use it, don't do it". If (and, according to some, when) we need this functionality, let us add it then. Until that time... let's make an easy to use Nullsoft Installer that installs a port forwarding program, setting it up to run when the hub runs and to open a specified port to another specified port. Preferably by checking what port the hubs is set up to run at.
+<br/>If the hub users won't use that, they sure won't be using another, new hub software, learning how it works and setting it up to run with some strange "blocked user port" activated. At least, that's what I think. I may be wrong.
+<br/>
+<br/>Hope you understand why I consider this a waste of time... that said, just submit a patch to DC++ which supports this and arnetheduck may incorporate it... submit a request to sandos so that he allows hubs to send their "blocked user port" and you have two out of three... then convince the PtokaX gang to implement the "blocked user port" as well as submitting that information to their hub lists, and your idea will become a standard. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Sarf
+<br/>---
+<br/>"<em class="text-italics">I've realised that users are not just a good way of holding down office furniture which might otherwise blow away.</em>" - <strong class="text-strong">Daniel Rutter</strong></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10431">
+<div class="inner">
+<dl class="postprofile" id="profile10431">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3976">CarXor</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-07 23:09</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10431">
+<h3><a href="#p10431"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3976">CarXor</a></strong> » </span>2003-04-08 19:04
+			</p>
+<div class="content">What you might be forgetting is that most ISP redirect traffic going to destination port 80 to their http cache proxy. And if the traffic does not correspond to the http, then most of ISP cache's will close the connection.
+<br/>
+<br/>Also, like said, asking a hub to connect to you is a bad choice for many reasons.
+<br/>
+<br/>So for that to work in all cases, a new protocol should be re-written (dc over http), and even then, the ISP could block the connection by using a cache rule (altought unlikely). Unless the ISP blocks all ports except HTTP, FTP, etc... is far more difficult for them to control at which ports you can't connect.
+<br/>
+<br/>In conclusion: If you can, change to a ISP that doesn't censure traffic <img alt=":?" class="smilies" src="/images/smilies/icon_confused.gif" title="Confused"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10437">
+<div class="inner">
+<dl class="postprofile" id="profile10437">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10437">
+<h3><a href="#p10437"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-08 19:18
+			</p>
+<div class="content">Sheesh next time I won't use port 80 as an example!  Also I will try not to post so much explanation because it doesn't seem like anyone reads it all before they reply *shakes head sadly*
+<br/>
+<br/>However, as always, thanks for the reply anyway! *L*
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10727">
+<div class="inner">
+<dl class="postprofile" id="profile10727">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3976">CarXor</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-07 23:09</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10727">
+<h3><a href="#p10727"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3976">CarXor</a></strong> » </span>2003-04-10 22:44
+			</p>
+<div class="content">I don't know, maybe I didn't understood you, but I took the time to re-read your posts and if you didn't meant the http port (or protocol for that mater) then I really can't see any advantage in what you suggest.
+<br/>
+<br/>What you described is in fact part of the file transfer protocol (FTP):
+<br/>
+<br/><ul>You connect to the server and the server connects back to you to a port you specified.<br/><strong class="text-strong">Problem:</strong> It won't work for users behind firewalls </ul>
+<br/>
+<br/>Also if you cannot connect to the hub default port, why do think you could connect to that other port?
+<br/>
+<br/>Keep in mind that the hub owner could easily choose another port (like 80 although in that port it might not work because of transparent http caches)
+<br/>
+<br/>I <strong class="text-strong">have</strong> read your posts, and I really would like to understand your idea.
+<br/>
+<br/>Perhaps what you would like is that hub owners install a port converger (every traffic coming to the machine, in any port, goes to the default port)
+<br/>that way, you could connect to any port in that machine and it would work, but I believe that many would not like to do such configuration.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10756">
+<div class="inner">
+<dl class="postprofile" id="profile10756">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10756">
+<h3><a href="#p10756"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-11 00:17
+			</p>
+<div class="content">The point of saying port 80 was to get the idea across that it should be a port that would not commonly blocked by an ISP, so if it was setup (by the hub administrator) to a port like this not many people would have a problem.  I just picked port 80 becasue I couldn't imagine what ISP would block connections to this port.  The web caching is a problem, but lets just say that if this was implemented to emulate a connection with a webserver, than shouldn't the cahce not affect outgoing (emulated) post data from the client so the hub would still know how to connect back to the client.
+<br/>
+<br/>Yes, I am proposing something very similar to what FTP does for passive transfers... That is the same to comparing this to the passive transfers already in the DC protocol though.  This is slightly diffrent as in it is a method to tell the hub to connect to you that would hopefully not be an easy thing for an ISP to block.
+<br/>
+<br/>Yes, it wouldn't work for NAT users that DO NOT know how to configure NAT to forward their ports. 
+<br/>
+<br/>Yes there are no guarantee's that I would be able to connect to any ports at all.  I am just trying to think of ways that would make it so more people would have the chance to connect though. 
+<br/>
+<br/>I really liked your suggestion about a "port converger".  That is an idea, but not so that the hub manager would have  to configure a router or NAT tables to do it.... Instead of my unpopular idea of setting it up as a passive connection request through a port.. what if the hub software would just open 2 or 3 random ports that also accept connections?  These ports would have to be reported to the hublist and the clients would have to be able to parse the new hublist (not to mention the hublist software would have to be changed to accept the multiple port list).  
+<br/>
+<br/>I know what someone will say... they will say why not just make the hub open one random port and use the current system?  Well.. because there should be one 'default' port for a server to always run on, that way people who are not being blocked on that port can still use the favorites *L*
+<br/>
+<br/>Well, sorry if I came off sounding a bit harsh, I get kinda grumpy sometimes <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>
+<br/>
+<br/>Thanks for the response CarXor,
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			13 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

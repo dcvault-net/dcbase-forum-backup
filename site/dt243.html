@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Problem with loggin into server - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=243">Problem with loggin into server</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			25 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p1119">
+<div class="inner">
+<dl class="postprofile" id="profile1119">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1119">
+<h3 class="first"><a href="#p1119">Problem with loggin into server</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-14 21:41
+			</p>
+<div class="content">Hello im writening a DC client but 1 have one problem with loggin in.
+<br/>This is how I try to do this:
+<br/>H-Hub C-Client
+<br/>
+<br/>1)HUB-&gt;Lock
+<br/>2)C-&gt;Key
+<br/>3)H-&gt;HubName.........
+<br/>4)C-&gt;ValidateNick .........
+<br/>5)H-&gt;&lt;Hub-Security&gt; ............
+<br/>
+<br/>Thats all , hub dont send any more messages.But when i write a small DC Hub and connected to it with DC++ it seems a little diferend:
+<br/>
+<br/>1)H-&gt;Lock
+<br/>2)H-&gt;HubName.........
+<br/>3)H-&gt;&lt;Hub-Security&gt; ............
+<br/>4)C-&gt;Key
+<br/>5)C-&gt;ValidateNick .........
+<br/>
+<br/>So i tryed to do the same with my client but with no results.. <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>
+<br/>If samone can help me it would be nice <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> , and i have 2 questions :
+<br/>1)Why everyhub sends &lt;Hub-Security&gt;........... ?
+<br/>2)Whitch ports uses clients with client-to-client connection ?
+<br/>
+<br/>My lock-&gt;key function works with no problems , so i dont know what should I change.
+<br/>Sorry for my English
+<br/>GreetZ
+<br/>Rave</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1121">
+<div class="inner">
+<dl class="postprofile" id="profile1121">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1121">
+<h3><a href="#p1121"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-01-14 22:22
+			</p>
+<div class="content">Well this works for me <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>H -&gt; $Lock &lt;something&gt;|<br/>C -&gt; $Key &lt;decodedfromlock&gt;|$ValidateNick &lt;myname&gt;|<br/><br/>Hub may send if registered<br/><br/>H -&gt; $GetPass|<br/>C -&gt; $MyPass &lt;mypass&gt;|<br/>H -&gt; $LogedIn &lt;yourname&gt;|$Hello &lt;yourname&gt;|<br/><br/>        ^ (maybe $Hello is before $LogedIn but it doesn't matter)<br/><br/>otherwise it should send to everybody (including yourself)<br/><br/>H -&gt; $Hello &lt;yourname&gt;|<br/></code></pre></div>
+<br/>
+<br/>You're including the | and $ right? And your name in ValidateNick right? These are the only things that *should* be messing it up.....
+<br/>
+<br/>Anyways if that didn't help, here's the rest of the answers to your q's...
+<br/>
+<br/>The hub sends &lt;Hub-Security&gt;.... just to tell the user what's going on. It's a main chat message (e.x &lt;Hub-Security&gt; Your name is registered, please supply the password.|$GetPass| )
+<br/>
+<br/>The client to client connection port vaires. NMDC uses 412 by default and DC++ 1412 (used to)...it doesn't matter though...it's the port you're listening for connection requests and search results (active mode only).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1122">
+<div class="inner">
+<dl class="postprofile" id="profile1122">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1122">
+<h3><a href="#p1122">Re: Problem with loggin into server</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-01-14 22:22
+			</p>
+<div class="content"><blockquote><div><cite>r4v3 wrote:</cite>1)HUB-&gt;Lock<br/>2)C-&gt;Key<br/>3)H-&gt;HubName.........<br/>4)C-&gt;ValidateNick .........<br/>5)H-&gt;&lt;Hub-Security&gt; ............</div></blockquote><br/>in my experience, it doesn't really matter.<br/>as soon as you get the Key, reply with the $Lock+$ValidateNick in one packet. after that, send the $MyINFO when you are logged in (i.e. get the $Hello). if I'm not mistaken, the whole thing is rather state-less. (note that you may get a $ValidateDenide or a $GetPass, after which you'll have to reply appropriately)<br/><br/><blockquote><div><cite>r4v3 wrote:</cite>1)Why everyhub sends &lt;Hub-Security&gt;........... ?</div></blockquote><br/>afaik this is just a chat message... the neo-modus guys chose to call the sender Hub-Security.<br/><blockquote><div><cite>r4v3 wrote:</cite>2)Whitch ports uses clients with client-to-client connection ?</div></blockquote>
+<br/>this depends on the $ConnectToMe's, and may be any one of the 64k ports.</div>
+<div class="signature" id="sig1122"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1123">
+<div class="inner">
+<dl class="postprofile" id="profile1123">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1123">
+<h3><a href="#p1123"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-01-14 22:24
+			</p>
+<div class="content">ehe.. swap the `Key' and `Lock' in my post :-/</div>
+<div class="signature" id="sig1123"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1125">
+<div class="inner">
+<dl class="postprofile" id="profile1125">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1125">
+<h3><a href="#p1125">thx</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-14 23:48
+			</p>
+<div class="content">Thx for fast reply , i'll try it tommorow and i'll give you sign.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1174">
+<div class="inner">
+<dl class="postprofile" id="profile1174">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=212">Sid</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 23:13</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1174">
+<h3><a href="#p1174">Similer Problem</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=212">Sid</a></strong> » </span>2003-01-15 19:09
+			</p>
+<div class="content">I have had a similer problem to that.  Most of the time my client logs in wiht out a problem but every now and again it hangs and the hub tempbans me.  best i can come up with is there is a bug in the nmdc hub software.
+<br/>
+<br/>-Sid</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1178">
+<div class="inner">
+<dl class="postprofile" id="profile1178">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1178">
+<h3><a href="#p1178">Re: Similer Problem</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-01-15 19:25
+			</p>
+<div class="content"><blockquote><div><cite>Sid wrote:</cite>I have had a similer problem to that.  Most of the time my client logs in wiht out a problem but every now and again it hangs and the hub tempbans me.  best i can come up with is there is a bug in the nmdc hub software.<br/><br/>-Sid</div></blockquote>
+<br/>
+<br/>Happens to me aswell.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1179">
+<div class="inner">
+<dl class="postprofile" id="profile1179">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1179">
+<h3><a href="#p1179"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-01-15 19:31
+			</p>
+<div class="content">You're probably using luke-jr's lock2key sub.. 
+<br/>
+<br/>it fails sometimes - resulting in the hub dropping and tempbanning you.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1180">
+<div class="inner">
+<dl class="postprofile" id="profile1180">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=57">Atomic Jo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 08:50</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> QuÃƒÂ©bec, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1180">
+<h3><a href="#p1180"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=57">Atomic Jo</a></strong> » </span>2003-01-15 19:57
+			</p>
+<div class="content">Indeed I noted too some dysfunctions in the routine of luke-jr. I
+<br/>preferred the routine of SuxXx which is exact especially in the
+<br/>calculation of the bits shift.
+<br/>
+<br/>Protocol by SuxXx coming with opendcd:
+<br/><a class="postlink" href="http://opendcd.sourceforge.net/">http://opendcd.sourceforge.net/</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1282">
+<div class="inner">
+<dl class="postprofile" id="profile1282">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1282">
+<h3><a href="#p1282"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-16 19:03
+			</p>
+<div class="content">Its ma again , i have the same problem as 2 they ago 
+<br/>When (H - hub , C - client)
+<br/>H $Lock ........|
+<br/>C $Key ..........|
+<br/>H $HubName........|
+<br/>C &lt;do nothing&gt;
+<br/>H &lt;HubSecurity&gt;.................|
+<br/>C &lt;do nothing&gt;
+<br/>
+<br/>and this is all , hub dont send mi $Hello ....|
+<br/>Me lock-&gt;key algoritm is ok (checked with DC++)
+<br/>This problem is only with Neo Modus hub Software ,rest (except few others) login me normally.
+<br/>Im trying to fix this for 3 days but i doesnt work
+<br/>Im looking for some help... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>Hub doesnt ban mi it just disconnect (exactly i dont know is it disconnecting or just sending still the same value about 6500)
+<br/>
+<br/>Im writenig in Java (SDK 1.4)
+<br/>
+<br/>I dont know C++ but i heared that string "abc" in java is
+<br/>[a][b][c] but in c++ is [a][b][c][0] , maybe this is the problem ? 
+<br/>
+<br/>And one more question is this difference with :
+<br/>send("abc|"); 
+<br/>send("def|");
+<br/>AND
+<br/>send("abc|def|");
+<br/>
+<br/>Uff thats all</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1283">
+<div class="inner">
+<dl class="postprofile" id="profile1283">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1283">
+<h3><a href="#p1283"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-16 19:20
+			</p>
+<div class="content">you must send $ValidateNick after the $Key, after that, the hub will either answer with $ValidateDenide (the nickname is taken or it contains invalid characters), $GetPass (the nickname is password-protected), or $Hello.
+<br/>
+<br/>BTW: there are two open-source Java clients out there already, you can learn from them: <a class="postlink" href="http://javadc.sf.net/">JavaDC</a> and <a class="postlink" href="http://sourceforge.net/project/showfiles.php?group_id=36589&amp;release_id=118209">JavaOpenDC</a>.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1284">
+<div class="inner">
+<dl class="postprofile" id="profile1284">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1284">
+<h3><a href="#p1284"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-16 19:30
+			</p>
+<div class="content">ok so now im doing it this way:
+<br/>H:$Lock
+<br/>C:$Key
+<br/>H:$HubName
+<br/>C:$ValidateNick
+<br/>H:&lt;Hub-Security&gt;...
+<br/>
+<br/>And hub doesnt send me $Hello...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1285">
+<div class="inner">
+<dl class="postprofile" id="profile1285">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1285">
+<h3><a href="#p1285"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-16 20:09
+			</p>
+<div class="content">Read another line from the hub - this is what I get if I connect to a hub with telnet (without sending anything):
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>$Lock a?Kl0(@2X\nk(=?\@Lx;k+znDdA)AD,5+zubQnys.cbqO&gt;bvy+r'C1IjE5.J]13gHmFNIV3Jv+ Pk=JIm4@X+I'J%Vuik^|$HubName Test|&lt;Hub-Security&gt; This hub is running version 1.0.25 of Luke-Jr's DC Hub (1500 max) Software.|||||</code></pre></div>As you see, $Lock, $HubName and the chat message are sent immediately (Luke-jr's hub is just a hacked version of the Neo-modus hub - it behaves the same).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1291">
+<div class="inner">
+<dl class="postprofile" id="profile1291">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1291">
+<h3><a href="#p1291"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-01-16 21:29
+			</p>
+<div class="content">well no.. you must actually type the nickname you want after validatenick
+<br/>this is how it looks when it works
+<br/>
+<br/>H $Lock ........| 
+<br/>H $HubName........| 
+<br/>H &lt;HubSecurity&gt;.................| 
+<br/>C $Key ..........| 
+<br/>C $ValidateNick thenickname|
+<br/>H $Hello thenickname|</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1292">
+<div class="inner">
+<dl class="postprofile" id="profile1292">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1292">
+<h3><a href="#p1292"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-16 22:28
+			</p>
+<div class="content">I do this exactly as u wrote but this f**** neo-modus hubs dont send me $Hello , they are closing connection(only neo - modus hubs) , but they dont ban me
+<br/>
+<br/>I have next questions : <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>
+<br/>
+<br/>1)Each command must ends with "|" , but how should end whole message to hub for example
+<br/>$abc|$def| ?
+<br/>
+<br/>2)Does it difference between 
+<br/>$abc|
+<br/>$def|
+<br/>And
+<br/>$abc|def| ?
+<br/>
+<br/>Maybe hubs disconnects me beacouse Java and C++ sockets are different ? (I so DC clients in Java...)
+<br/>If samone is programming in Java(SDK) please help
+<br/>
+<br/>PS Did u all have as many problems as I with "stupid" client -&gt; server communication ?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1293">
+<div class="inner">
+<dl class="postprofile" id="profile1293">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1293">
+<h3><a href="#p1293"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-01-16 22:35
+			</p>
+<div class="content">1.) just use the | after each command. no need to terminate the whole string. (but you must terminate the last command)!
+<br/>
+<br/>2.) no, it should not matter. I don't know for sure.. it seems it <em class="text-italics">does</em> matter when trying to handshake a dc++ client.. but thats different..</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1295">
+<div class="inner">
+<dl class="postprofile" id="profile1295">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1295">
+<h3><a href="#p1295"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-16 22:43
+			</p>
+<div class="content">so now i really dont know what shoul i fix...
+<br/>I written small DC+ hub - it shows everything what clients sends and i connected to it with my DC and DC++ and everything was the same.
+<br/>I thing that it must be same problem with sockets so i should find someone who knows Java...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1309">
+<div class="inner">
+<dl class="postprofile" id="profile1309">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1309">
+<h3><a href="#p1309"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-01-17 00:15
+			</p>
+<div class="content"><blockquote><div><cite>r4v3 wrote:</cite>so now i really dont know what shoul i fix...<br/>I written small DC+ hub - it shows everything what clients sends and i connected to it with my DC and DC++ and everything was the same.<br/>I thing that it must be same problem with sockets so i should find someone who knows Java...</div></blockquote>
+<br/>
+<br/>Ive done dc-programming in java, no problems whatsoever. Dont worry abouts sockets being different, they arent. 
+<br/>
+<br/>One thing to look our for though, mitht be character encoding. Java supports lots of differents ones, so when you are converting to bytes to send onto the network, it might be you are using a default encoding of ascii, which wont work. It should be "iso-8859-1" instead. Default encoding is different depending on locale on your computer I think.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1334">
+<div class="inner">
+<dl class="postprofile" id="profile1334">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1334">
+<h3><a href="#p1334"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-17 09:12
+			</p>
+<div class="content">Actually it should be Windows-1252, which difers a little from ISO-8859-1...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1356">
+<div class="inner">
+<dl class="postprofile" id="profile1356">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1356">
+<h3><a href="#p1356"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-17 11:06
+			</p>
+<div class="content">I'd like to thanx all of u , especially Sandos : u had right it was problem with bad encoding , now everything is ok and im so happy beacouse i can start writtening my DC .</div>
+<div class="signature" id="sig1356">Sorry for my ENG , but i hope u'll understand me.GreetZ</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1370">
+<div class="inner">
+<dl class="postprofile" id="profile1370">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1370">
+<h3><a href="#p1370"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-01-17 12:57
+			</p>
+<div class="content"><blockquote><div><cite>ender wrote:</cite>Actually it should be Windows-1252, which difers a little from ISO-8859-1...</div></blockquote>
+<br/>
+<br/>Thats weird, since all is fine using iso-8859-1 in java. I dont think there is any windows-1252 even. Hmm. :)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1375">
+<div class="inner">
+<dl class="postprofile" id="profile1375">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1375">
+<h3><a href="#p1375"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-17 14:11
+			</p>
+<div class="content">Windows-1252 is the Western Windows codepage. It differs from ISO-8859-1 in chatacters with codes from 128 to 160 (they're used in Win1252 but not in iso). Anyway, I'm only saying that this codepage should be used, since most people using DC use it. The only real difference will be seen with users who use special characters in their nicknames (to make them look stupid)... In theory, any single-byte codepage which has codes 0-127 the same as US-ASCII should work.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1392">
+<div class="inner">
+<dl class="postprofile" id="profile1392">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-14 21:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1392">
+<h3><a href="#p1392"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=393">r4v3</a></strong> » </span>2003-01-17 23:25
+			</p>
+<div class="content">Yeap , im from Poland and im using Windows-1252 ,and in my alphabet are few leters that aren't "standard".</div>
+<div class="signature" id="sig1392">Sorry for my ENG , but i hope u'll understand me.GreetZ</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1396">
+<div class="inner">
+<dl class="postprofile" id="profile1396">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1396">
+<h3><a href="#p1396"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-18 01:00
+			</p>
+<div class="content">Interestng, I'm using Windows-1250 (Central-European, I'm from Slovenia), thought Poland uses the same...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			25 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

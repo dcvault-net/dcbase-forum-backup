@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>MP3 Bitrate/Track Length Algorithm Improvement - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=4413">MP3 Bitrate/Track Length Algorithm Improvement</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			5 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p23744">
+<div class="inner">
+<dl class="postprofile" id="profile23744">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23744">
+<h3 class="first"><a href="#p23744">MP3 Bitrate/Track Length Algorithm Improvement</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-07-27 02:02
+			</p>
+<div class="content">OK, I currently have a function that will read the bitrate and track length from an MP3 file, but it, unfortunately takes a significant amount of time to work.  I am using it to create a modified file list with bitrate and track length included (for use on private hubs with access from only this client...).  Difference in boot time:  a list of 100 GB of MP3 files, 1 minute without bitrate turned on.  a list of 100 GB of MP3 files, 7 minutes, with bitrate and track length turned on. I don't expect anywhere near equal boot times between grabbing bitrates and not; that would be very unrealistic.  What I <strong class="text-strong">am</strong> looking for is a shorter load time.  If anyone can improve on this algorithm (or submit a totally different one), it would be much appreciated!
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>// added by Zc<br/>// *** start of modifications ***<br/>int Util::GetMp3Informations(string FileName, int* BitRate, int* TrackLength)<br/>{<br/>   unsigned char szBuffer[4096];<br/>   int i =0;<br/>   long FileSize;<br/>   unsigned char mp3Informations[2];<br/>   <br/>   FILE* mFile;<br/>   <br/>   if ((mFile = fopen(FileName.c_str(),"rb")) != NULL)<br/>   {<br/>      FileSize = filelength(fileno(mFile));<br/>      fread(szBuffer,sizeof(char),4096,mFile);<br/>      fclose(mFile);<br/><br/>      do <br/>      {<br/>         if (((((szBuffer[i] &amp; 0xFF) &amp; (szBuffer[i+1] &amp; 0xF0)) == 0xF0) <br/>            &amp;&amp; (szBuffer[i+2] &amp; 0xF0) != 0xF0) &amp;&amp; (szBuffer[i+2] &amp; 0xD) != 0x0D)<br/>         {<br/>            mp3Informations[0] = (szBuffer[i+1]&lt;&lt;4 | szBuffer[i+2]&gt;&gt;4) &amp; 0xFF;<br/>            mp3Informations[1] = (szBuffer[i+2]&lt;&lt;4 | szBuffer[i+3]&gt;&gt;4) &amp; 0xFF;<br/>            break;<br/>         }<br/>         i++;<br/>      } while (i &lt; 4055);<br/><br/>      if (i != 4055)<br/>      {<br/>         int mp3_id = (0x80 &amp; mp3Informations[0]) / 128;<br/>         int mp3_layer = (0x60 &amp; mp3Informations[0]) / 32;<br/>         int mp3_bitrate = 0xf &amp; mp3Informations[0];<br/>         int actual_bitrate = iBitRateLookup[(mp3_id * 4) | mp3_layer][mp3_bitrate];<br/>         int mp3_freq = 0xc0 &amp; mp3Informations[1];<br/>         // :?<br/>         if (mp3_freq == 64)<br/>            mp3_freq = 1;<br/>         //<br/>         int mp3_pad = (0x20 &amp; mp3Informations[1]) / 2;<br/><br/>         <br/>         int sample_rate = 0;<br/>         switch ((mp3_id * 4) | mp3_freq)<br/>         {<br/>            case 0:sample_rate = 22050;break;<br/>            case 1:sample_rate = 24000;break;<br/>            case 2:sample_rate = 16000;break;<br/>            case 4:sample_rate = 44100;break;<br/>            case 5:sample_rate = 48000;break;<br/>            case 6:sample_rate = 32000;break;<br/>         }<br/><br/>         double track_length = 0;<br/>         if (sample_rate != 0)<br/>         {<br/>            double framesize = ((144 * 1000 * actual_bitrate) / sample_rate) + mp3_pad;<br/>            double total_frames = FileSize / framesize;<br/>            track_length = total_frames / 38.5;<br/>         }<br/>         *BitRate = actual_bitrate;<br/>         *TrackLength = (int)track_length;<br/>         return 0;<br/>      }<br/>      *BitRate = 0;<br/>      *TrackLength = 0;<br/>      return -1;<br/>   }<br/>   return -1;<br/>}<br/>// *** end of modifications ***<br/></code></pre></div>
+<br/>
+<br/>-Gratch06</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23762">
+<div class="inner">
+<dl class="postprofile" id="profile23762">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23762">
+<h3><a href="#p23762"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2003-07-27 10:27
+			</p>
+<div class="content">i recomend you save it, so that only has to be run once. And next time you run the app, it will use the old calculated bitrates. Regarding the algorithm you can always take a sneak at id3lib, <!-- m --><a class="postlink" href="http://id3lib.sourceforge.net/">http://id3lib.sourceforge.net/</a><!-- m --></div>
+<div class="signature" id="sig23762">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23797">
+<div class="inner">
+<dl class="postprofile" id="profile23797">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23797">
+<h3><a href="#p23797"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-27 15:50
+			</p>
+<div class="content"><blockquote><div><cite>ivulfusbar wrote:</cite>i recomend you save it, so that only has to be run once. And next time you run the app, it will use the old calculated bitrates. Regarding the algorithm you can always take a sneak at id3lib, <!-- m --><a class="postlink" href="http://id3lib.sourceforge.net/">http://id3lib.sourceforge.net/</a><!-- m --></div></blockquote>
+<br/>
+<br/>ID3Lib is a bit... bloated.  For any serious ID3 tag reading/writing, I think the tagging library included as part of <a class="postlink" href="http://www.underbit.com/products/mad/">MAD</a> is good.  It's what JT/dieselmachine uses in his mod (source is linked in the features forum).
+<br/>
+<br/>If you're trying to deal with VBR MP3s, parse the Xing header instead.
+<br/>
+<br/>Note that there's another format for VBR headers: VBRI - used by the FhG encoder - though possibly not currently.  I think this is more common than un-tagged VBR mp3s (ie. mp3s where the frames just vary, with no XING header).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23820">
+<div class="inner">
+<dl class="postprofile" id="profile23820">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23820">
+<h3><a href="#p23820"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-07-27 17:05
+			</p>
+<div class="content"><blockquote><div><cite>ivulfusbar wrote:</cite>i recomend you save it, so that only has to be run once. And next time you run the app, it will use the old calculated bitrates. </div></blockquote><br/>Will look into this solution!  thanks for the idea....<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>It's what JT/dieselmachine uses in his mod (source is linked in the features forum). </div></blockquote>
+<br/>
+<br/>err....where exactly?  I found a link to two screenshots, but that appears to be it...and it appears to be a mod based on DC++k, rather than a mod which would include MP3 support.
+<br/>
+<br/>-Gratch06</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23862">
+<div class="inner">
+<dl class="postprofile" id="profile23862">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23862">
+<h3><a href="#p23862"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-27 19:05
+			</p>
+<div class="content"><blockquote><div><cite>Gratch06 wrote:</cite>err....where exactly?  I found a link to two screenshots, but that appears to be it...and it appears to be a mod based on DC++k, rather than a mod which would include MP3 support.</div></blockquote>
+<br/>
+<br/>Exact link?  Well, his mention is in <a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?t=2312&amp;start=50">this thread</a> and code is <a class="postlink" href="http://www.while1.net/~jt/DCPlusPlus(JT).rar">here</a>.  If it's gone, I have it in my share - drop by the <a class="postlink inert" href="#" title="Disabled in this archive">dev hub</a>.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			5 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

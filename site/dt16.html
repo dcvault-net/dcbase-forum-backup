@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>DC++ Slot script - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="26" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=26" itemprop="url"><span itemprop="title">Other</span></a></span>
+<span class="crumb" data-forum-id="8" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=8" itemprop="url"><span itemprop="title">Hubs and scripts</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=8&amp;t=16">DC++ Slot script</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Which hub software is the best? Where can I find script XXX? Discuss it here...(no, this is not for advertising your hub...)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			17 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p42">
+<div class="inner">
+<dl class="postprofile" id="profile42">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 17:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content42">
+<h3 class="first"><a href="#p42">DC++ Slot script</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a></strong> » </span>2003-01-03 22:21
+			</p>
+<div class="content">even works with that O:
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>dim firsttimer<br/>dim secondtimer<br/>Sub DataArival(index, sCurData)<br/>dim seb<br/>dim hub<br/>dim slot<br/>dim maxhubs<br/>dim minslotperhub<br/>dim maxslots<br/>dim kick<br/>Dim botname<br/>if index.boperator = true then exit sub<br/>botname = "Subzero"<br/>maxhubs = 5<br/>minslotperhub = 1<br/>maxslots = 15<br/>kick = "false"<br/>if instr(lcase(scurdata),lcase("$MyInfo")) &lt;&gt; 0 then<br/>seb = left(scurdata,instr(scurdata,"$ $") -1)<br/>if right(seb,1) = "&gt;" then<br/><br/>seb = right(seb,len(seb) - instr(scurdata,"&lt;++ ") -3)<br/>do while true<br/>if instr(seb, "&lt;++") = 0 then <br/>exit do<br/>end if<br/>seb = right(seb,len(seb) - instr(seb,"&lt;++")-3)<br/>loop<br/>hub = left(seb,instr(seb, ",S:") -1)<br/>hub = right(hub, len(hub) - instr(hub, "H:") -1)<br/>if instr(seb, "O:") then<br/>slot= left(seb,instr(seb, "O") -1)<br/>else<br/>slot= left(seb,instr(seb, "&gt;") -1)<br/>end if<br/>slot = right(slot, len(slot) - instr(slot, "S:") -1)<br/><br/>if int(hub) &gt; maxhubs then<br/>index.SendChatMessage cstr(botname), "The hub limit is " &amp; maxhubs &amp; ". You are in " &amp; hub &amp; ".That's too much, so close some before you get back"<br/>kick = "true"<br/>end if<br/>if int(slot) &gt; maxslots then<br/>index.SendChatMessage cstr(botname), "The slot limit is " &amp; maxslots &amp; ". You have " &amp; slot &amp; ".That's too much, so close some before you get back"<br/>kick = "true"<br/>end if<br/>seb1 = int(hub)<br/>seb2 = int(slot)<br/>if seb2/seb1 &lt; minslotperhub  then<br/>index.SendChatMessage cstr(botname), "You are suppossed to have " &amp; minslotperhub &amp; " slots per hub, but you are in " &amp; hub &amp; " hub and only have " &amp; slot &amp; " slots open. So open " &amp; minslotperhub * hub &amp; " slots and try again!"<br/>kick = "true"<br/>end if<br/>if kick = "true" then<br/>if instr(firsttimer, "|" &amp; index.sname &amp; "|") &lt;&gt; 0 then<br/>firsttimer = Replace(firsttimer, index.sname, "", 1, -1, 1)<br/>secondtimer = secondtimer &amp; "|" &amp; index.sname &amp; "|"<br/>elseif instr(secondtimer, "|" &amp; index.sname &amp; "|") &lt;&gt; 0 then<br/>secondtimer = Replace(secondtimer, index.sname, "", 1, -1, 1)<br/>index.SendChatMessage cstr(botname), "This is your third offense, therefore, you get a permban!"<br/>frmHub.lstPermBan.addItem index.ip<br/>else<br/>firsttimer = firsttimer &amp; "|" &amp; index.sname &amp; "|"<br/>end if<br/>frmhub.DoEventsForMe<br/>index.kick<br/>else<br/>index.SendChatMessage cstr(botname), "Welcome " &amp; index.sname &amp; "! You are using DC++ and are in " &amp; hub &amp; " hubs and have " &amp; slot  &amp; " slots open."<br/>end if<br/>end if<br/>end if<br/>end sub<br/></code></pre></div><br/>and for all you SBHub users <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/><br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>dim firsttimer<br/>dim secondtimer<br/>Sub DataArival(index, sCurData)<br/>dim seb<br/>dim hub<br/>dim slot<br/>dim maxhubs<br/>dim minslotperhub<br/>dim maxslots<br/>dim kick<br/>Dim botname<br/>if index.boperator = true then exit sub<br/>botname = "Subzero"<br/>maxhubs = 5<br/>minslotperhub = 1<br/>maxslots = 15<br/>kick = "false"<br/>if instr(lcase(scurdata),lcase("$MyInfo")) &lt;&gt; 0 then<br/>seb = left(scurdata,instr(scurdata,"$ $") -1)<br/>if right(seb,1) = "&gt;" then<br/><br/>seb = right(seb,len(seb) - instr(scurdata,"&lt;++ ") -3)<br/>do while true<br/>if instr(seb, "&lt;++") = 0 then <br/>exit do<br/>end if<br/>seb = right(seb,len(seb) - instr(seb,"&lt;++")-3)<br/>loop<br/>hub = left(seb,instr(seb, ",S:") -1)<br/>hub = right(hub, len(hub) - instr(hub, "H:") -1)<br/>if instr(seb, "O:") then<br/>slot= left(seb,instr(seb, "O") -1)<br/>else<br/>slot= left(seb,instr(seb, "&gt;") -1)<br/>end if<br/>slot = right(slot, len(slot) - instr(slot, "S:") -1)<br/><br/>if int(hub) &gt; maxhubs then<br/>index.SendChatMessage cstr(botname), "The hub limit is " &amp; maxhubs &amp; ". You are in " &amp; hub &amp; ".That's too much, so close some before you get back"<br/>kick = "true"<br/>end if<br/>if int(slot) &gt; maxslots then<br/>index.SendChatMessage cstr(botname), "The slot limit is " &amp; maxslots &amp; ". You have " &amp; slot &amp; ".That's too much, so close some before you get back"<br/>kick = "true"<br/>end if<br/>seb1 = int(hub)<br/>seb2 = int(slot)<br/>if seb2/seb1 &lt; minslotperhub  then<br/>index.SendChatMessage cstr(botname), "You are suppossed to have " &amp; minslotperhub &amp; " slots per hub, but you are in " &amp; hub &amp; " hub and only have " &amp; slot &amp; " slots open. So open " &amp; minslotperhub * hub &amp; " slots and try again!"<br/>kick = "true"<br/>end if<br/>if kick = "true" then<br/>if instr(firsttimer, "|" &amp; index.sname &amp; "|") &lt;&gt; 0 then<br/>firsttimer = Replace(firsttimer, index.sname, "", 1, -1, 1)<br/>secondtimer = secondtimer &amp; "|" &amp; index.sname &amp; "|"<br/>elseif instr(secondtimer, "|" &amp; index.sname &amp; "|") &lt;&gt; 0 then<br/>secondtimer = Replace(secondtimer, index.sname, "", 1, -1, 1)<br/>index.SendChatMessage cstr(botname), "This is your third offense, therefore, you get a permban!"<br/>frmHub.BanIP index.ip<br/>else<br/>firsttimer = firsttimer &amp; "|" &amp; index.sname &amp; "|"<br/>end if<br/>index.kick<br/>else<br/>index.SendChatMessage cstr(botname), "Welcome " &amp; index.sname &amp; "! You are using DC++ and are in " &amp; hub &amp; " hubs and have " &amp; slot  &amp; " slots open."<br/>end if<br/>end if<br/>end if<br/>end sub<br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p46">
+<div class="inner">
+<dl class="postprofile" id="profile46">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content46">
+<h3><a href="#p46"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-03 23:10
+			</p>
+<div class="content">What's SBhub? Another hub with VBScript support?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p50">
+<div class="inner">
+<dl class="postprofile" id="profile50">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 17:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content50">
+<h3><a href="#p50"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a></strong> » </span>2003-01-03 23:31
+			</p>
+<div class="content">yep exactly, made by litttle me =D</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p53">
+<div class="inner">
+<dl class="postprofile" id="profile53">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=26">[DK][TIC]Icemanâ„¢</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:04</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content53">
+<h3><a href="#p53">Do I know you SBSoftEA *LOL*</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=26">[DK][TIC]Icemanâ„¢</a></strong> » </span>2003-01-04 00:55
+			</p>
+<div class="content">Hey M8 nice to see you here too <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+<div class="signature" id="sig53">Regards IcemanÃ¢â€žÂ¢ from icewife.no-ip.org</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64">
+<div class="inner">
+<dl class="postprofile" id="profile64">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64">
+<h3><a href="#p64"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-04 11:00
+			</p>
+<div class="content">Where can we get it? <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p122">
+<div class="inner">
+<dl class="postprofile" id="profile122">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=57">Atomic Jo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 08:50</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> QuÃƒÂ©bec, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content122">
+<h3><a href="#p122"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=57">Atomic Jo</a></strong> » </span>2003-01-05 07:09
+			</p>
+<div class="content"><!-- m --><a class="postlink" href="http://www.sbhub.tk/">http://www.sbhub.tk/</a><!-- m --></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p279">
+<div class="inner">
+<dl class="postprofile" id="profile279">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=133">Roxita</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 03:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content279">
+<h3><a href="#p279"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=133">Roxita</a></strong> » </span>2003-01-06 05:11
+			</p>
+<div class="content">When I try to acces to <!-- m --><a class="postlink" href="http://www.sbhub.tk/">http://www.sbhub.tk/</a><!-- m --> the page is white. Only sais:
+<br/>Boe! 
+<br/>
+<br/>I have a los of problemm with the redirection .tk, could you post a mirror?
+<br/>
+<br/>Thanks</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p281">
+<div class="inner">
+<dl class="postprofile" id="profile281">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=133">Roxita</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 03:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content281">
+<h3><a href="#p281"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=133">Roxita</a></strong> » </span>2003-01-06 05:14
+			</p>
+<div class="content">Sorry, I mean a lot of problems</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p296">
+<div class="inner">
+<dl class="postprofile" id="profile296">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=57">Atomic Jo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 62</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 08:50</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> QuÃƒÂ©bec, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content296">
+<h3><a href="#p296"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=57">Atomic Jo</a></strong> » </span>2003-01-06 09:15
+			</p>
+<div class="content"><a class="postlink" href="http://www.subdimension.com/userpages/subversion/seabass/index.htm">http://www.subdimension.com/userpages/subversion/seabass/index.htm</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p399">
+<div class="inner">
+<dl class="postprofile" id="profile399">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=133">Roxita</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 03:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content399">
+<h3><a href="#p399"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=133">Roxita</a></strong> » </span>2003-01-06 18:58
+			</p>
+<div class="content">Thanks, I'll try it  <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p475">
+<div class="inner">
+<dl class="postprofile" id="profile475">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=184">RobbeZ</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 17</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 05:09</dd>
+</dl>
+<div class="postbody">
+<div id="post_content475">
+<h3><a href="#p475"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=184">RobbeZ</a></strong> » </span>2003-01-07 14:24
+			</p>
+<div class="content">both URLs work just fine over here  <img alt=":o" class="smilies" src="/images/smilies/icon_surprised.gif" title="Surprised"/>
+<br/>
+<br/><!-- m --><a class="postlink" href="http://www.subdimension.com/userpages/subversion/seabass/index.htm">http://www.subdimension.com/userpages/s ... /index.htm</a><!-- m -->
+<br/><!-- m --><a class="postlink" href="http://www.sbhub.tk/">http://www.sbhub.tk/</a><!-- m -->
+<br/>
+<br/>very nice btw  <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/></div>
+<div class="signature" id="sig475">Codito Ergo Sum</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p493">
+<div class="inner">
+<dl class="postprofile" id="profile493">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content493">
+<h3><a href="#p493"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-01-07 17:05
+			</p>
+<div class="content">yeh, there was a problem with almost all .tk address' recently... nothing to do with the website itself..</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p500">
+<div class="inner">
+<dl class="postprofile" id="profile500">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 17:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content500">
+<h3><a href="#p500"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a></strong> » </span>2003-01-07 17:45
+			</p>
+<div class="content"><!-- m --><a class="postlink" href="http://sbhub.no-ip.org">http://sbhub.no-ip.org</a><!-- m --> works as well
+<br/>but the current version is not that good, compared to the next one i am making =D
+<br/>No majaor GUI changes, but the speed.... =D
+<br/>wait and see</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p507">
+<div class="inner">
+<dl class="postprofile" id="profile507">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=21">[MASTER]Spookie</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 42</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 15:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content507">
+<h3><a href="#p507"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=21">[MASTER]Spookie</a></strong> » </span>2003-01-07 18:34
+			</p>
+<div class="content">IÃ‚Â´m waiting so i can post you some bug reports <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p570">
+<div class="inner">
+<dl class="postprofile" id="profile570">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=133">Roxita</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 03:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content570">
+<h3><a href="#p570"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=133">Roxita</a></strong> » </span>2003-01-08 05:27
+			</p>
+<div class="content">I like a lot your hub, SBSoftEA
+<br/>Very Good work
+<br/>I had problems with my firewall when I tested it, so I couldn't proof the memory as I wanted ...
+<br/>I'm Really impatient for the next version  <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1184">
+<div class="inner">
+<dl class="postprofile" id="profile1184">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 17:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1184">
+<h3><a href="#p1184"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a></strong> » </span>2003-01-15 20:29
+			</p>
+<div class="content">well might still take a while longer, since i still have a few problems getting things the way i want em, but once i get it working, i promise it will be better then ever!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1557">
+<div class="inner">
+<dl class="postprofile" id="profile1557">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 17:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1557">
+<h3><a href="#p1557"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a></strong> » </span>2003-01-20 13:38
+			</p>
+<div class="content">if anyone is interested, we are running a test hub @ seabass.no-ip.org:413 today (monday the 20th of january) to test the new networking code. So if you wanna come, you are welcome   <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>  . But don't redirect any users there <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> my connection is slow. The hub is not permanet, probably only up today and maybe this weekend, but still come!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			17 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=8">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Hubs and scripts”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

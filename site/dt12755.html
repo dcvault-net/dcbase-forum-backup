@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unresolved external symbol errors when compiling. - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=12755">Unresolved external symbol errors when compiling.</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			4 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p65132">
+<div class="inner">
+<dl class="postprofile" id="profile65132">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29519">Dr. Sunglasses</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-26 17:08</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65132">
+<h3 class="first"><a href="#p65132">Unresolved external symbol errors when compiling.</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29519">Dr. Sunglasses</a></strong> » </span>2004-09-26 17:15
+			</p>
+<div class="content">I'm trying to compile from the BCDC 0.4032 source (I haven't changed anything yet).  After installing STLport and WTL7.1 (and setting them in my include paths per compile.txt), I get the following errors:
+<br/>------ Build started: Project: DCPlusPlus, Configuration: Debug Win32 ------
+<br/>
+<br/>Linking...
+<br/>UsersFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>TransferView.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>UCPage.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>UploadPage.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>UploadQueueFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>PublicHubsFrm.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>SpyFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>MainFrm.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>PropertiesDlg.obj : error LNK2019: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A) referenced in function "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall ResourceManager::getString(enum ResourceManager::Strings)const " (?getString@ResourceManager@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@W4Strings@1@@Z)
+<br/>PropPage.obj : error LNK2019: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A) referenced in function "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall ResourceManager::getString(enum ResourceManager::Strings)const " (?getString@ResourceManager@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@W4Strings@1@@Z)
+<br/>FinishedFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>FinishedULFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>main.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>ADLSearchFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>ADLSProperties.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>DirectoryListingFrm.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>FavoritesFrm.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; * ResourceManager::strings" (?strings@ResourceManager@@0PAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>ADLSearchFrame.obj : error LNK2019: unresolved external symbol "public: void __thiscall ADLSearchManager::Save(void)" (?Save@ADLSearchManager@@QAEXXZ) referenced in function "public: long __thiscall ADLSearchFrame::onClose(unsigned int,unsigned int,long,int &amp;)" (?onClose@ADLSearchFrame@@QAEJIIJAAH@Z)
+<br/>Advanced3Page.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const * const SettingsManager::clientEmulations" (?clientEmulations@SettingsManager@@2QBV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>FavHubProperties.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const * const SettingsManager::clientEmulations" (?clientEmulations@SettingsManager@@2QBV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>TransferView.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>UploadQueueFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>UsersFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>NotepadFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A) referenced in function "public: __thiscall File::File(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,int)" (??0File@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@HH@Z)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>PublicHubsFrm.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>Advanced3Page.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>DirectoryListingFrm.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A)
+<br/>MainFrm.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; Util::emptyString" (?emptyString@Util@@2V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@A) referenced in function __unwindfunclet$??0MainFrame@@QAE@XZ$0
+<br/>CommandDlg.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::validateMessage(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,bool,bool)" (?validateMessage@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V23@_N1@Z) referenced in function "public: long __thiscall CommandDlg::OnInitDialog(unsigned int,unsigned int,long,int &amp;)" (?OnInitDialog@CommandDlg@@QAEJIIJAAH@Z)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::validateMessage(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,bool,bool)" (?validateMessage@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V23@_N1@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: void __thiscall DirectoryListing::loadFile(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?loadFile@DirectoryListing@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_N@Z) referenced in function "public: __thiscall DirectoryListingFrame::DirectoryListingFrame(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class Pointer&lt;class User&gt; const &amp;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (??0DirectoryListingFrame@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV?$Pointer@VUser@@@@0@Z)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall User::getClientName(void)const " (?getClientName@User@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ)
+<br/>TransferView.obj : error LNK2001: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall User::getClientName(void)const " (?getClientName@User@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ)
+<br/>UsersFrame.obj : error LNK2001: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall User::getClientName(void)const " (?getClientName@User@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall User::getClientName(void)const " (?getClientName@User@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ) referenced in function "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __thiscall User::getFullNick(void)const " (?getFullNick@User@@QBE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ)
+<br/>MainFrm.obj : error LNK2001: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall User::getClientName(void)const " (?getClientName@User@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ)
+<br/>PrivateFrame.obj : error LNK2019: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall User::getClientName(void)const " (?getClientName@User@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ) referenced in function "void __cdecl debugTrace(char const *,...)" (?debugTrace@@YAXPBDZZ)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __thiscall User::getClientName(void)const " (?getClientName@User@@QBEABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "public: __thiscall StringTokenizer::StringTokenizer(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,char)" (??0StringTokenizer@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@D@Z)
+<br/>TransferView.obj : error LNK2001: unresolved external symbol "public: __thiscall StringTokenizer::StringTokenizer(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,char)" (??0StringTokenizer@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@D@Z)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "public: __thiscall StringTokenizer::StringTokenizer(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,char)" (??0StringTokenizer@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@D@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: __thiscall StringTokenizer::StringTokenizer(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,char)" (??0StringTokenizer@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@D@Z) referenced in function "public: long __thiscall DirectoryListingFrame::OnCreate(unsigned int,unsigned int,long,int &amp;)" (?OnCreate@DirectoryListingFrame@@QAEJIIJAAH@Z)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: __thiscall StringTokenizer::StringTokenizer(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,char)" (??0StringTokenizer@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@D@Z)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "public: __thiscall StringTokenizer::StringTokenizer(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,char)" (??0StringTokenizer@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@D@Z)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "public: __thiscall StringTokenizer::StringTokenizer(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,char)" (??0StringTokenizer@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@D@Z)
+<br/>TransferView.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>UploadPage.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>MainFrm.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>StatsFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z) referenced in function "public: long __thiscall DirectoryListingFrame::OnCreate(unsigned int,unsigned int,long,int &amp;)" (?OnCreate@DirectoryListingFrame@@QAEJIIJAAH@Z)
+<br/>FinishedFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>FinishedULFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatBytes(__int64)" (?formatBytes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: __int64 __thiscall DirectoryListing::Directory::getTotalSize(bool)" (?getTotalSize@Directory@DirectoryListing@@QAE_J_N@Z) referenced in function "public: __int64 __thiscall DirectoryListing::getTotalSize(bool)" (?getTotalSize@DirectoryListing@@QAE_J_N@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: int __thiscall DirectoryListing::Directory::getTotalFileCount(bool)" (?getTotalFileCount@Directory@DirectoryListing@@QAEH_N@Z) referenced in function "public: int __thiscall DirectoryListing::getTotalFileCount(bool)" (?getTotalFileCount@DirectoryListing@@QAEH_N@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Util::toAcp(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toAcp@Util@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@AAV23@@Z) referenced in function "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp; __cdecl Util::toAcp(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toAcp@Util@@SAABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@AAV23@@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: void __thiscall DirectoryListing::download(class DirectoryListing::File *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?download@DirectoryListing@@QAEXPAVFile@1@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_N@Z) referenced in function "public: long __thiscall DirectoryListingFrame::onDoubleClickFiles(int,struct tagNMHDR *,int &amp;)" (?onDoubleClickFiles@DirectoryListingFrame@@QAEJHPAUtagNMHDR@@AAH@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: void __thiscall DirectoryListing::download(class DirectoryListing::Directory *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?download@DirectoryListing@@QAEXPAVDirectory@1@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z) referenced in function "public: long __thiscall DirectoryListingFrame::onDownloadDir(unsigned short,unsigned short,struct HWND__ *,int &amp;)" (?onDownloadDir@DirectoryListingFrame@@QAEJGGPAUHWND__@@AAH@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::validateFileName(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?validateFileName@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V23@@Z) referenced in function "public: void __thiscall DirectoryListingFrame::downloadList(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?downloadList@DirectoryListingFrame@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_N@Z)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::validateFileName(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?validateFileName@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V23@@Z)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::validateFileName(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?validateFileName@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V23@@Z)
+<br/>WinUtil.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::validateFileName(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?validateFileName@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V23@@Z) referenced in function "public: long __thiscall LineDlg::OnInitDialog(unsigned int,unsigned int,long,int &amp;)" (?OnInitDialog@LineDlg@@QAEJIIJAAH@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: int __thiscall QueueManager::matchListing(class DirectoryListing *)" (?matchListing@QueueManager@@QAEHPAVDirectoryListing@@@Z) referenced in function "public: long __thiscall DirectoryListingFrame::onMatchQueue(unsigned short,unsigned short,struct HWND__ *,int &amp;)" (?onMatchQueue@DirectoryListingFrame@@QAEJGGPAUHWND__@@AAH@Z)
+<br/>UsersFrame.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>SpyFrame.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>TransferView.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>MainFrm.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>PublicHubsFrm.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>DirectoryListingFrm.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>ExListViewCtrl.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>FinishedFrame.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>FinishedULFrame.obj : error LNK2001: unresolved external symbol "private: static signed char (* Util::cmpi)[256]" (?cmpi@Util@@0PAY0BAA@CA)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: void __thiscall QueueManager::FileQueue::find(class _STL::vector&lt;class QueueItem *,class _STL::allocator&lt;class QueueItem *&gt; &gt; &amp;,__int64,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?find@FileQueue@QueueManager@@QAEXAAV?$vector@PAVQueueItem@@V?$allocator@PAVQueueItem@@@_STL@@@_STL@@_JABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@4@@Z) referenced in function "public: void __thiscall QueueManager::getTargetsBySize(class _STL::vector&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,class _STL::allocator&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt; &gt; &amp;,__int64,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?getTargetsBySize@QueueManager@@QAEXAAV?$vector@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V?$allocator@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@2@@_STL@@_JABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@3@@Z)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "public: void __thiscall QueueManager::FileQueue::find(class _STL::vector&lt;class QueueItem *,class _STL::allocator&lt;class QueueItem *&gt; &gt; &amp;,__int64,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?find@FileQueue@QueueManager@@QAEXAAV?$vector@PAVQueueItem@@V?$allocator@PAVQueueItem@@@_STL@@@_STL@@_JABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@4@@Z)
+<br/>QueueFrame.obj : error LNK2019: unresolved external symbol "private: static char * Util::lower" (?lower@Util@@0PADA) referenced in function "private: void __thiscall QueueFrame::setSearchStringForSelected(void)" (?setSearchStringForSelected@QueueFrame@@AAEXXZ)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "private: static char * Util::lower" (?lower@Util@@0PADA)
+<br/>WinUtil.obj : error LNK2019: unresolved external symbol "private: static char * Util::lower" (?lower@Util@@0PADA) referenced in function "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatPlaytime(__int64)" (?formatPlaytime@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_J@Z)
+<br/>DirectoryListingFrm.obj : error LNK2001: unresolved external symbol "private: static char * Util::lower" (?lower@Util@@0PADA)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "private: static char * Util::lower" (?lower@Util@@0PADA)
+<br/>MainFrm.obj : error LNK2001: unresolved external symbol "private: static char * Util::lower" (?lower@Util@@0PADA)
+<br/>PublicHubsFrm.obj : error LNK2001: unresolved external symbol "private: static char * Util::lower" (?lower@Util@@0PADA)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Util::toUtf8(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toUtf8@Util@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@AAV23@@Z) referenced in function "public: void __thiscall DirectoryListingFrame::findFile(bool)" (?findFile@DirectoryListingFrame@@QAEX_N@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: static void __cdecl Encoder::fromBase32(char const *,unsigned char *,unsigned int)" (?fromBase32@Encoder@@SAXPBDPAEI@Z) referenced in function "public: __thiscall HashValue&lt;class TigerHash&gt;::HashValue&lt;class TigerHash&gt;(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (??0?$HashValue@VTigerHash@@@@QAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "public: static void __cdecl Encoder::fromBase32(char const *,unsigned char *,unsigned int)" (?fromBase32@Encoder@@SAXPBDPAEI@Z)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Encoder::toBase32(unsigned char const *,unsigned int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toBase32@Encoder@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEIAAV23@@Z)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Encoder::toBase32(unsigned char const *,unsigned int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toBase32@Encoder@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEIAAV23@@Z)
+<br/>TransferView.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Encoder::toBase32(unsigned char const *,unsigned int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toBase32@Encoder@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEIAAV23@@Z)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Encoder::toBase32(unsigned char const *,unsigned int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toBase32@Encoder@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEIAAV23@@Z)
+<br/>DirectoryListingFrm.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Encoder::toBase32(unsigned char const *,unsigned int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toBase32@Encoder@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEIAAV23@@Z) referenced in function "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Encoder::toBase32(unsigned char const *,unsigned int)" (?toBase32@Encoder@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEI@Z)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Encoder::toBase32(unsigned char const *,unsigned int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toBase32@Encoder@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEIAAV23@@Z) referenced in function "int __cdecl textUnderCursor(struct tagPOINT,class WTL::CRichEditCtrlT&lt;class ATL::CWindow&gt; &amp;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?textUnderCursor@@YAHUtagPOINT@@AAV?$CRichEditCtrlT@VCWindow@ATL@@@WTL@@AAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z)
+<br/>main.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Encoder::toBase32(unsigned char const *,unsigned int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toBase32@Encoder@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEIAAV23@@Z)
+<br/>PrivateFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp; __cdecl Encoder::toBase32(unsigned char const *,unsigned int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &amp;)" (?toBase32@Encoder@@SAAAV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PBEIAAV23@@Z) referenced in function "public: void __thiscall PrivateFrame::sendMessage(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?sendMessage@PrivateFrame@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "public: static class FastCriticalSection FastAllocBase::cs" (?cs@FastAllocBase@@2VFastCriticalSection@@A)
+<br/>DirectoryListingFrm.obj : error LNK2001: unresolved external symbol "public: static class FastCriticalSection FastAllocBase::cs" (?cs@FastAllocBase@@2VFastCriticalSection@@A)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: static class FastCriticalSection FastAllocBase::cs" (?cs@FastAllocBase@@2VFastCriticalSection@@A)
+<br/>MainFrm.obj : error LNK2019: unresolved external symbol "public: static class FastCriticalSection FastAllocBase::cs" (?cs@FastAllocBase@@2VFastCriticalSection@@A) referenced in function "public: long __thiscall MainFrame::onTrayIcon(unsigned int,unsigned int,long,int &amp;)" (?onTrayIcon@MainFrame@@QAEJIIJAAH@Z)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "public: static class FastCriticalSection FastAllocBase::cs" (?cs@FastAllocBase@@2VFastCriticalSection@@A)
+<br/>UsersFrame.obj : error LNK2001: unresolved external symbol "public: void __thiscall HubManager::save(void)" (?save@HubManager@@QAEXXZ)
+<br/>FavHubProperties.obj : error LNK2019: unresolved external symbol "public: void __thiscall HubManager::save(void)" (?save@HubManager@@QAEXXZ) referenced in function "public: long __thiscall FavHubProperties::OnCloseCmd(unsigned short,unsigned short,struct HWND__ *,int &amp;)" (?OnCloseCmd@FavHubProperties@@QAEJGGPAUHWND__@@AAH@Z)
+<br/>FavoritesFrm.obj : error LNK2001: unresolved external symbol "public: void __thiscall HubManager::save(void)" (?save@HubManager@@QAEXXZ)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: void __thiscall HubManager::save(void)" (?save@HubManager@@QAEXXZ)
+<br/>UCPage.obj : error LNK2019: unresolved external symbol "public: void __thiscall HubManager::save(void)" (?save@HubManager@@QAEXXZ) referenced in function __ehhandler$?onAddMenu@UCPage@@QAEJGGPAUHWND__@@AAH@Z
+<br/>FavoritesFrm.obj : error LNK2019: unresolved external symbol "public: void __thiscall HubManager::removeFavorite(class FavoriteHubEntry *)" (?removeFavorite@HubManager@@QAEXPAVFavoriteHubEntry@@@Z) referenced in function "public: long __thiscall FavoriteHubsFrame::onRemove(unsigned short,unsigned short,struct HWND__ *,int &amp;)" (?onRemove@FavoriteHubsFrame@@QAEJGGPAUHWND__@@AAH@Z)
+<br/>FavoritesFrm.obj : error LNK2019: unresolved external symbol "public: void __thiscall HubManager::addFavorite(class FavoriteHubEntry const &amp;)" (?addFavorite@HubManager@@QAEXABVFavoriteHubEntry@@@Z) referenced in function "public: long __thiscall FavoriteHubsFrame::onNew(unsigned short,unsigned short,struct HWND__ *,int &amp;)" (?onNew@FavoriteHubsFrame@@QAEJGGPAUHWND__@@AAH@Z)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: void __thiscall HubManager::addFavorite(class FavoriteHubEntry const &amp;)" (?addFavorite@HubManager@@QAEXABVFavoriteHubEntry@@@Z)
+<br/>PublicHubsFrm.obj : error LNK2001: unresolved external symbol "public: void __thiscall HubManager::addFavorite(class FavoriteHubEntry const &amp;)" (?addFavorite@HubManager@@QAEXABVFavoriteHubEntry@@@Z)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatTime(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,long)" (?formatTime@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@J@Z)
+<br/>UsersFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatTime(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,long)" (?formatTime@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@J@Z)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatTime(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,long)" (?formatTime@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@J@Z)
+<br/>FinishedFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatTime(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,long)" (?formatTime@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@J@Z) referenced in function "private: void __thiscall FinishedFrame::addEntry(class FinishedItem *)" (?addEntry@FinishedFrame@@AAEXPAVFinishedItem@@@Z)
+<br/>FinishedULFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatTime(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,long)" (?formatTime@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@J@Z) referenced in function "private: void __thiscall FinishedULFrame::addEntry(class FinishedItem *)" (?addEntry@FinishedULFrame@@AAEXPAVFinishedItem@@@Z)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatTime(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,long)" (?formatTime@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@J@Z)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatTime(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,long)" (?formatTime@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@J@Z)
+<br/>GeneralPage.obj : error LNK2019: unresolved external symbol "public: static void __cdecl Socket::socksUpdated(void)" (?socksUpdated@Socket@@SAXXZ) referenced in function "public: virtual void __thiscall GeneralPage::write(void)" (?write@GeneralPage@@UAEXXZ)
+<br/>GeneralPage.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const * const SettingsManager::connectionBandwidths" (?connectionBandwidths@SettingsManager@@2QBV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>GeneralPage.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const * const SettingsManager::connectionSpeeds" (?connectionSpeeds@SettingsManager@@2QBV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: class Client * __thiscall ClientManager::getClient(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?getClient@ClientManager@@QAEPAVClient@@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z) referenced in function "private: __thiscall HubFrame::HubFrame(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (??0HubFrame@@AAE@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@000H0@Z)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: void __thiscall ClientManager::putClient(class Client *)" (?putClient@ClientManager@@QAEXPAVClient@@@Z) referenced in function "private: virtual __thiscall HubFrame::~HubFrame(void)" (??1HubFrame@@EAE@XZ)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::convertCEscapes(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?convertCEscapes@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V23@@Z) referenced in function "public: void __thiscall HubFrame::onEnter(void)" (?onEnter@HubFrame@@QAEXXZ)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __thiscall Client::getLocalIp(void)const " (?getLocalIp@Client@@QBE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ) referenced in function "public: void __thiscall HubFrame::onEnter(void)" (?onEnter@HubFrame@@QAEXXZ)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: bool __thiscall ClientScriptInstance::onHubFrameEnter(class Client *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?onHubFrameEnter@ClientScriptInstance@@QAE_NPAVClient@@ABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z) referenced in function "public: void __thiscall HubFrame::onEnter(void)" (?onEnter@HubFrame@@QAEXXZ)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: bool __thiscall User::isFavoriteUser(void)const " (?isFavoriteUser@User@@QBE_NXZ) referenced in function "public: long __thiscall HubFrame::onSpeaker(unsigned int,unsigned int,long,int &amp;)" (?onSpeaker@HubFrame@@QAEJIIJAAH@Z)
+<br/>MainFrm.obj : error LNK2001: unresolved external symbol "public: bool __thiscall User::isFavoriteUser(void)const " (?isFavoriteUser@User@@QBE_NXZ)
+<br/>UploadQueueFrame.obj : error LNK2001: unresolved external symbol "public: void __thiscall QueueManager::add(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,__int64,class Pointer&lt;class User&gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,struct HashValue&lt;class TigerHash&gt; const *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,enum QueueItem::Priority,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?add@QueueManager@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_JV?$Pointer@VUser@@@@0PBU?$HashValue@VTigerHash@@@@0HW4Priority@QueueItem@@0_N@Z)
+<br/>WinUtil.obj : error LNK2001: unresolved external symbol "public: void __thiscall QueueManager::add(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,__int64,class Pointer&lt;class User&gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,struct HashValue&lt;class TigerHash&gt; const *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,enum QueueItem::Priority,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?add@QueueManager@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_JV?$Pointer@VUser@@@@0PBU?$HashValue@VTigerHash@@@@0HW4Priority@QueueItem@@0_N@Z)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: void __thiscall QueueManager::add(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,__int64,class Pointer&lt;class User&gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,struct HashValue&lt;class TigerHash&gt; const *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,enum QueueItem::Priority,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?add@QueueManager@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_JV?$Pointer@VUser@@@@0PBU?$HashValue@VTigerHash@@@@0HW4Priority@QueueItem@@0_N@Z) referenced in function "public: void __thiscall QueueManager::addList(class Pointer&lt;class User&gt; const &amp;,int,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?addList@QueueManager@@QAEXABV?$Pointer@VUser@@@@HABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "public: void __thiscall QueueManager::add(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,__int64,class Pointer&lt;class User&gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,struct HashValue&lt;class TigerHash&gt; const *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,enum QueueItem::Priority,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?add@QueueManager@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_JV?$Pointer@VUser@@@@0PBU?$HashValue@VTigerHash@@@@0HW4Priority@QueueItem@@0_N@Z)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "public: void __thiscall QueueManager::add(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,__int64,class Pointer&lt;class User&gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,struct HashValue&lt;class TigerHash&gt; const *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,enum QueueItem::Priority,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?add@QueueManager@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_JV?$Pointer@VUser@@@@0PBU?$HashValue@VTigerHash@@@@0HW4Priority@QueueItem@@0_N@Z)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "public: void __thiscall QueueManager::add(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,__int64,class Pointer&lt;class User&gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,struct HashValue&lt;class TigerHash&gt; const *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,enum QueueItem::Priority,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?add@QueueManager@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_JV?$Pointer@VUser@@@@0PBU?$HashValue@VTigerHash@@@@0HW4Priority@QueueItem@@0_N@Z)
+<br/>UploadQueueFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const QueueManager::USER_LIST_NAME" (?USER_LIST_NAME@QueueManager@@0V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>WinUtil.obj : error LNK2019: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const QueueManager::USER_LIST_NAME" (?USER_LIST_NAME@QueueManager@@0V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B) referenced in function "public: long __thiscall ATL::CRegKey::QueryStringValue(char const *,char *,unsigned long *)" (?QueryStringValue@CRegKey@ATL@@QAEJPBDPADPAK@Z)
+<br/>HubFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const QueueManager::USER_LIST_NAME" (?USER_LIST_NAME@QueueManager@@0V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const QueueManager::USER_LIST_NAME" (?USER_LIST_NAME@QueueManager@@0V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>QueueFrame.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const QueueManager::USER_LIST_NAME" (?USER_LIST_NAME@QueueManager@@0V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>SearchFrm.obj : error LNK2001: unresolved external symbol "private: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const QueueManager::USER_LIST_NAME" (?USER_LIST_NAME@QueueManager@@0V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@B)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __thiscall ClientScriptInstance::formatChatMessage(class Client *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?formatChatMessage@ClientScriptInstance@@QAE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PAVClient@@V23@@Z) referenced in function "public: void __thiscall HubFrame::addLine(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?addLine@HubFrame@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::getShortTimeString(void)" (?getShortTimeString@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ) referenced in function "public: void __thiscall HubFrame::addLine(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?addLine@HubFrame@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z)
+<br/>MainFrm.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::getShortTimeString(void)" (?getShortTimeString@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ)
+<br/>PrivateFrame.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::getShortTimeString(void)" (?getShortTimeString@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ)
+<br/>WinUtil.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatParams(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class _STL::hash_map&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,struct _STL::hash&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt;,struct _STL::equal_to&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt;,class _STL::allocator&lt;struct _STL::pair&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const ,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &amp;)" (?formatParams@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@AAV?$hash_map@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V12@U?$hash@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@2@U?$equal_to@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V12@@_STL@@@2@@3@@Z) referenced in function "public: static void __cdecl WinUtil::parseMagnetUri(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,bool)" (?parseMagnetUri@WinUtil@@SAXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@_N@Z)
+<br/>HubFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatParams(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class _STL::hash_map&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,struct _STL::hash&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt;,struct _STL::equal_to&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt;,class _STL::allocator&lt;struct _STL::pair&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const ,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &amp;)" (?formatParams@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@AAV?$hash_map@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V12@U?$hash@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@2@U?$equal_to@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V12@@_STL@@@2@@3@@Z) referenced in function "public: void __thiscall HubFrame::addLine(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;)" (?addLine@HubFrame@@QAEXABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@@Z)
+<br/>PrivateFrame.obj : error LNK2019: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::formatParams(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class _STL::hash_map&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;,struct _STL::hash&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt;,struct _STL::equal_to&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt;,class _STL::allocator&lt;struct _STL::pair&lt;class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const ,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &amp;)" (?formatParams@Util@@SA?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@ABV23@AAV?$hash_map@V?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@V12@U?$hash@V?$basic_string@DV?$char_traits@D</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65133">
+<div class="inner">
+<dl class="postprofile" id="profile65133">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29519">Dr. Sunglasses</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-26 17:08</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65133">
+<h3><a href="#p65133"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29519">Dr. Sunglasses</a></strong> » </span>2004-09-26 17:22
+			</p>
+<div class="content">Hmmm, it cut me off.  How nice.  There were a total of 278 errors (and this line, which seems redundant: .\App/DCPlusPlus.exe : fatal error LNK1120: 118 unresolved externals)
+<br/>
+<br/>Anyway, I'm using VS .NET 2003.  Some people say this problem was caused by having VS6 stuff in their include paths; I have none in mine.
+<br/>
+<br/>By the way, some people may know me (most likely Garg) as GenericLoser.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65166">
+<div class="inner">
+<dl class="postprofile" id="profile65166">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65166">
+<h3><a href="#p65166"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-27 01:57
+			</p>
+<div class="content"><blockquote class="uncited"><div>MainFrm.obj : error LNK2001: unresolved external symbol "public: static class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __cdecl Util::getShortTimeString(void)" </div></blockquote>
+<br/>
+<br/>Ok, so it's complaining about not finding the code for STLPort's basic_string.  STLPort must not be installed correctly.  Remove your existing changes under the <strong class="text-strong">Includes </strong>dropdown in <strong class="text-strong">Tools &gt; Options &gt; Projects &gt; VC++ Directories</strong>, and start anew.
+<br/>
+<br/>Are you using .NET 2003, or still .NET 2002?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65250">
+<div class="inner">
+<dl class="postprofile" id="profile65250">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29519">Dr. Sunglasses</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-26 17:08</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65250">
+<h3><a href="#p65250"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29519">Dr. Sunglasses</a></strong> » </span>2004-09-29 00:26
+			</p>
+<div class="content"><blockquote><div><cite>Dr. Sunglasses wrote:</cite>Anyway, I'm using VS .NET 2003. </div></blockquote>
+<br/>OK, I'll start over.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			4 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

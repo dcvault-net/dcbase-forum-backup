@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>VC6 &amp; 0.301 + v7.0 + stlport 4.5.3 + Errors :) - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=6141">VC6 &amp; 0.301 + v7.0 + stlport 4.5.3 + Errors :)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p32687">
+<div class="inner">
+<dl class="postprofile" id="profile32687">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13361">SKIL</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-10 11:50</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32687">
+<h3 class="first"><a href="#p32687">VC6 &amp; 0.301 + v7.0 + stlport 4.5.3 + Errors :)</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13361">SKIL</a></strong> » </span>2003-11-10 14:18
+			</p>
+<div class="content">I like your program very much, but i would like to develop it further on my own. Therefore, i have downloaded the sourcecode, the source extras, and start compiling.
+<br/>
+<br/>A terrible error has come in my way in thread.h, at some _STL constants. Unfortunatly, it does not look like anyother errors posted here, so no topics helped me in solving this.
+<br/>
+<br/>Operating System: Windows 2003 Server Trial + .NET 1.1 + .NET SDK 1.1</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p32713">
+<div class="inner">
+<dl class="postprofile" id="profile32713">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32713">
+<h3><a href="#p32713"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-11-10 17:36
+			</p>
+<div class="content">It would benefit you if you were specific.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p32944">
+<div class="inner">
+<dl class="postprofile" id="profile32944">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13361">SKIL</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-10 11:50</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32944">
+<h3><a href="#p32944"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13361">SKIL</a></strong> » </span>2003-11-13 09:58
+			</p>
+<div class="content">There are the errors:
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>--------------------Configuration: client - Win32 Debug--------------------<br/>Compiling...<br/>stdinc.cpp<br/>NOTE: WINVER has been defined as 0x0500 or greater which enables<br/>Windows NT 5.0 and Windows 98 features. When these headers were released,<br/>Windows NT 5.0 beta 1 and Windows 98 beta 2.1 were the current versions.<br/>For this release when WINVER is defined as 0x0500 or greater, you can only<br/>build beta or test applications.  To build a retail application,<br/>set WINVER to 0x0400 or visit http://www.microsoft.com/msdn/sdk<br/>to see if retail Windows NT 5.0 or Windows 98 headers are available.<br/>See the SDK release notes for more information.<br/>c:\inc2\stlport\cstddef(40) : error C2039: 'ptrdiff_t' : is not a member of '`global namespace''<br/>c:\inc2\stlport\cstddef(40) : error C2873: 'ptrdiff_t' : symbol cannot be used in a using-declaration<br/>c:\inc2\stlport\cstdlib(42) : error C2039: 'div_t' : is not a member of '`global namespace''<br/>c:\inc2\stlport\cstdlib(42) : error C2873: 'div_t' : symbol cannot be used in a using-declaration<br/>c:\inc2\stlport\cstdlib(43) : error C2039: 'ldiv_t' : is not a member of '`global namespace''<br/>c:\inc2\stlport\cstdlib(43) : error C2873: 'ldiv_t' : symbol cannot be used in a using-declaration<br/>c:\inc2\stlport\stl\_iterator_base.h(222) : error C2143: syntax error : missing ';' before '*'<br/>c:\inc2\stlport\stl\_iterator_base.h(222) : error C2433: 'ptrdiff_t' : 'inline' not permitted on data declarations<br/>c:\inc2\stlport\stl\_iterator_base.h(222) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>c:\inc2\stlport\stl\_iterator_base.h(222) : error C2059: syntax error : ';'<br/>c:\inc2\stlport\stl\_iterator_base.h(222) : error C2143: syntax error : missing ',' before '*'<br/>c:\inc2\stlport\stl\_iterator_base.h(222) : error C2059: syntax error : '*'<br/>c:\inc2\stlport\stl\_iterator_base.h(230) : error C2954: template definitions cannot nest<br/>c:\inc2\stlport\stl\_iterator_base.h(315) : error C2143: syntax error : missing ';' before '__cdecl'<br/>c:\inc2\stlport\stl\_iterator_base.h(315) : error C2433: 'ptrdiff_t' : 'inline' not permitted on data declarations<br/>c:\inc2\stlport\stl\_iterator_base.h(315) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>c:\inc2\stlport\stl\_iterator_base.h(315) : error C2086: 'ptrdiff_t' : redefinition<br/>c:\inc2\stlport\stl\_iterator_base.h(315) : error C2059: syntax error : ';'<br/>c:\inc2\stlport\stl\_iterator_base.h(316) : error C2143: syntax error : missing ',' before '&amp;'<br/>c:\inc2\stlport\stl\_iterator_base.h(316) : error C2059: syntax error : '&amp;'<br/>c:\inc2\stlport\stl\_iterator_base.h(353) : error C2954: template definitions cannot nest<br/>c:\inc2\stlport\stl\_iterator_base.h(354) : error C2143: syntax error : missing ';' before '__cdecl'<br/>c:\inc2\stlport\stl\_iterator_base.h(354) : error C2433: 'ptrdiff_t' : 'inline' not permitted on data declarations<br/>c:\inc2\stlport\stl\_iterator_base.h(354) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>c:\inc2\stlport\stl\_iterator_base.h(354) : error C2086: 'ptrdiff_t' : redefinition<br/>c:\inc2\stlport\stl\_iterator_base.h(354) : error C2059: syntax error : ';'<br/>c:\inc2\stlport\stl\_iterator_base.h(355) : error C2143: syntax error : missing ',' before '&amp;'<br/>c:\inc2\stlport\stl\_iterator_base.h(355) : error C2059: syntax error : '&amp;'<br/>c:\inc2\stlport\stl\_iterator_base.h(360) : error C2954: template definitions cannot nest<br/>c:\inc2\stlport\stl\_iterator_base.h(361) : error C2143: syntax error : missing ';' before '__cdecl'<br/>c:\inc2\stlport\stl\_iterator_base.h(361) : error C2433: 'ptrdiff_t' : 'inline' not permitted on data declarations<br/>c:\inc2\stlport\stl\_iterator_base.h(361) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>c:\inc2\stlport\stl\_iterator_base.h(361) : error C2086: 'ptrdiff_t' : redefinition<br/>c:\inc2\stlport\stl\_iterator_base.h(361) : error C2059: syntax error : ';'<br/>c:\inc2\stlport\stl\_iterator_base.h(362) : error C2143: syntax error : missing ',' before '&amp;'<br/>c:\inc2\stlport\stl\_iterator_base.h(362) : error C2059: syntax error : '&amp;'<br/>c:\inc2\stlport\stl\_iterator_base.h(368) : error C2954: template definitions cannot nest<br/>c:\inc2\stlport\stl\_algobase.h(183) : error C2146: syntax error : missing ';' before identifier '_Num'<br/>c:\inc2\stlport\stl\_algobase.h(183) : error C2734: 'ptrdiff_t' : const object must be initialized if not extern<br/>c:\inc2\stlport\stl\_algobase.h(183) : error C2065: '_Num' : undeclared identifier<br/>c:\inc2\stlport\stl\_algobase.h(493) : error C2146: syntax error : missing ';' before identifier '__len1'<br/>c:\inc2\stlport\stl\_algobase.h(493) : error C2734: 'ptrdiff_t' : const object must be initialized if not extern<br/>c:\inc2\stlport\stl\_algobase.h(493) : error C2065: '__len1' : undeclared identifier<br/>c:\inc2\stlport\stl\_algobase.h(494) : error C2146: syntax error : missing ';' before identifier '__len2'<br/>c:\inc2\stlport\stl\_algobase.h(494) : error C2734: 'ptrdiff_t' : const object must be initialized if not extern<br/>c:\inc2\stlport\stl\_algobase.h(494) : error C2086: 'ptrdiff_t' : redefinition<br/>c:\inc2\stlport\stl\_algobase.h(494) : error C2065: '__len2' : undeclared identifier<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2146: syntax error : missing ';' before identifier 'count'<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2433: 'ptrdiff_t' : 'inline' not permitted on data declarations<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2086: 'ptrdiff_t' : redefinition<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2059: syntax error : ';'<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2065: '_InputIter' : undeclared identifier<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2146: syntax error : missing ')' before identifier '__first'<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2501: 'count' : missing storage-class or type specifiers<br/>c:\inc2\stlport\stl\_algobase.h(524) : error C2059: syntax error : ')'<br/>c:\inc2\stlport\stl\_algobase.h(536) : error C2954: template definitions cannot nest<br/>c:\inc2\stlport\new(44) : error C2039: 'bad_alloc' : is not a member of 'std'<br/>c:\inc2\stlport\new(44) : error C2873: 'bad_alloc' : symbol cannot be used in a using-declaration<br/>c:\inc2\stlport\new(45) : error C2039: 'nothrow_t' : is not a member of 'std'<br/>c:\inc2\stlport\new(45) : error C2873: 'nothrow_t' : symbol cannot be used in a using-declaration<br/>c:\inc2\stlport\new(46) : error C2039: 'nothrow' : is not a member of 'std'<br/>c:\inc2\stlport\new(46) : error C2873: 'nothrow' : symbol cannot be used in a using-declaration<br/>c:\inc2\stlport\new(49) : error C2039: 'new_handler' : is not a member of '`global namespace''<br/>c:\inc2\stlport\new(49) : error C2873: 'new_handler' : symbol cannot be used in a using-declaration<br/>c:\inc2\stlport\new(50) : error C2039: 'set_new_handler' : is not a member of '`global namespace''<br/>c:\inc2\stlport\new(50) : error C2873: 'set_new_handler' : symbol cannot be used in a using-declaration<br/>c:\inc2\stlport\stl\_tempbuf.h(46) : error C2974: 'pair' : invalid template argument for '_T2', type expected<br/>        c:\inc2\stlport\stl\_pair.h(57) : see declaration of 'pair'<br/>c:\inc2\stlport\stl\_tempbuf.h(47) : error C2061: syntax error : identifier 'ptrdiff_t'<br/>c:\inc2\stlport\stl\_tempbuf.h(52) : error C2974: 'pair' : invalid template argument for '_T2', type expected<br/>        c:\inc2\stlport\stl\_pair.h(57) : see declaration of 'pair'<br/>c:\inc2\stlport\stl\_tempbuf.h(52) : error C2061: syntax error : identifier 'ptrdiff_t'<br/>c:\inc2\stlport\stl\_tempbuf.h(63) : error C2974: 'pair' : invalid template argument for '_T2', type expected<br/>        c:\inc2\stlport\stl\_pair.h(57) : see declaration of 'pair'<br/>c:\inc2\stlport\stl\_tempbuf.h(64) : error C2061: syntax error : identifier 'ptrdiff_t'<br/>c:\inc2\stlport\stl\_tempbuf.h(66) : error C2995: 'get_temporary_buffer' : template function has already been defined<br/>        c:\inc2\stlport\stl\_tempbuf.h(52) : see declaration of 'get_temporary_buffer'<br/>c:\inc2\stlport\stl\_tempbuf.h(79) : error C2146: syntax error : missing ';' before identifier '_M_original_len'<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(79) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(79) : error C2501: '_M_original_len' : missing storage-class or type specifiers<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(80) : error C2146: syntax error : missing ';' before identifier '_M_len'<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(80) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(80) : error C2501: '_M_len' : missing storage-class or type specifiers<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(104) : error C2146: syntax error : missing ';' before identifier 'size'<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(104) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(104) : warning C4183: 'size': member function definition looks like a ctor, but name does not match enclosing class<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(105) : error C2146: syntax error : missing ';' before identifier 'requested_size'<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(105) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.h(105) : warning C4183: 'requested_size': member function definition looks like a ctor, but name does not match enclosing class<br/>        c:\inc2\stlport\stl\_tempbuf.h(134) : see reference to class template instantiation '_STL::_Temporary_buffer&lt;_ForwardIterator,_Tp&gt;' being compiled<br/>c:\inc2\stlport\stl\_tempbuf.c(36) : error C2974: 'pair' : invalid template argument for '_T2', type expected<br/>        c:\inc2\stlport\stl\_pair.h(57) : see declaration of 'pair'<br/>c:\inc2\stlport\stl\_tempbuf.c(37) : error C2061: syntax error : identifier 'ptrdiff_t'<br/>c:\inc2\stlport\stl\_algo.h(72) : error C2146: syntax error : missing ';' before identifier 'count_if'<br/>c:\inc2\stlport\stl\_algo.h(72) : error C2433: 'ptrdiff_t' : 'inline' not permitted on data declarations<br/>c:\inc2\stlport\stl\_algo.h(72) : error C2501: 'ptrdiff_t' : missing storage-class or type specifiers<br/>c:\inc2\stlport\stl\_algo.h(72) : error C2086: 'ptrdiff_t' : redefinition<br/>c:\inc2\stlport\stl\_algo.h(72) : error C2059: syntax error : ';'<br/>c:\inc2\stlport\stl\_algo.h(72) : error C2146: syntax error : missing ')' before identifier '__first'<br/>c:\inc2\stlport\stl\_algo.h(72) : error C2501: 'count_if' : missing storage-class or type specifiers<br/>c:\inc2\stlport\stl\_algo.h(72) : error C2059: syntax error : ')'<br/>c:\inc2\stlport\stl\_algo.h(84) : error C2143: syntax error : missing ';' before '{'<br/>c:\inc2\stlport\stl\_algo.h(84) : error C2447: missing function header (old-style formal list?)<br/>c:\inc2\stlport\stl\_algo.h(97) : error C2954: template definitions cannot nest<br/>c:\inc2\stlport\stl\_algo.h(121) : error C2373: 'count' : redefinition; different type modifiers<br/>        c:\inc2\stlport\stl\_algobase.h(524) : see declaration of 'count'<br/>c:\inc2\stlport\stl\_algo.h(130) : error C2373: 'count_if' : redefinition; different type modifiers<br/>        c:\inc2\stlport\stl\_algo.h(72) : see declaration of 'count_if'<br/>c:\inc2\stlport\stl\_threads.h(116) : error C2733: second C linkage of overloaded function 'InterlockedIncrement' not allowed<br/>        c:\inc2\stlport\stl\_threads.h(116) : see declaration of 'InterlockedIncrement'<br/>c:\inc2\stlport\stl\_threads.h(117) : error C2733: second C linkage of overloaded function 'InterlockedDecrement' not allowed<br/>        c:\inc2\stlport\stl\_threads.h(117) : see declaration of 'InterlockedDecrement'<br/>c:\inc2\stlport\stl\_threads.h(117) : fatal error C1003: error count exceeds 100; stopping compilation<br/>Error executing cl.exe.<br/><br/>DCPlusPlus.exe - 102 error(s), 2 warning(s)<br/></code></pre></div>
+<br/>
+<br/>I absolutely have no ideea.
+<br/>
+<br/>I've included in path the v7.0 + stlport 4.5.3</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p32945">
+<div class="inner">
+<dl class="postprofile" id="profile32945">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32945">
+<h3><a href="#p32945"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2003-11-13 10:05
+			</p>
+<div class="content">You should use stlport 4.5.1020 avialble in the files section at <a class="postlink" href="http://www.sourceforge.net/projects/dcplusplus">http://www.sourceforge.net/projects/dcplusplus</a>
+<br/>Also, download the latest core sdk from <a class="postlink" href="http://www.microsoft.com/msdownload/platformsdk/sdkupdate">http://www.microsoft.com/msdownload/platformsdk/sdkupdate</a>and see if it helps.
+<br/>Have you added wtl to your includepath? If not, do so.</div>
+<div class="signature" id="sig32945"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p32975">
+<div class="inner">
+<dl class="postprofile" id="profile32975">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32975">
+<h3><a href="#p32975"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-11-13 17:23
+			</p>
+<div class="content"><blockquote class="uncited"><div><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>For this release when WINVER is defined as 0x0500 or greater, you can only<br/>build beta or test applications.  To build a retail application,<br/>set WINVER to 0x0400 or visit http://www.microsoft.com/msdn/sdk<br/>to see if retail Windows NT 5.0 or Windows 98 headers are available.<br/>See the SDK release notes for more information.</code></pre></div></div></blockquote>
+<br/>This seems to indicate that you need a new platform SDK.  If you run VS6, you will need one.  If you're on VS7+ (which you are not) a new Platform SDK is not necessary.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p32991">
+<div class="inner">
+<dl class="postprofile" id="profile32991">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13361">SKIL</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-10 11:50</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32991">
+<h3><a href="#p32991"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13361">SKIL</a></strong> » </span>2003-11-13 18:56
+			</p>
+<div class="content">I have the latest sdk .NET SDK 1.1 downloaded from <!-- w --><a class="postlink" href="http://www.microsoft.com">www.microsoft.com</a><!-- w --> and .NET Framework 1.1.
+<br/>
+<br/>I've set up all include paths, but, that's the life. It doesnt compile!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p32993">
+<div class="inner">
+<dl class="postprofile" id="profile32993">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content32993">
+<h3><a href="#p32993"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-11-13 18:58
+			</p>
+<div class="content"><blockquote><div><cite>SKIL wrote:</cite>I have the latest sdk .NET SDK 1.1 downloaded from <!-- w --><a class="postlink" href="http://www.microsoft.com">www.microsoft.com</a><!-- w --> and .NET Framework 1.1.</div></blockquote>
+<br/>
+<br/>The .NET SDK is <em class="text-italics">not</em> the same as the Platform SDK that is required for DC++ compilation.
+<br/>
+<br/>It may be called "Core SDK" now, per some othe people's posts.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

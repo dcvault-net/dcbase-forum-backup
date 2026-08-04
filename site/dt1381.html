@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Slot Memory [TM] - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=1381">Slot Memory [TM]</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			22 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p7032">
+<div class="inner">
+<dl class="postprofile" id="profile7032">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7032">
+<h3 class="first"><a href="#p7032">Slot Memory [TM]</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-11 05:25
+			</p>
+<div class="content">Well not trademark really but (this has probably been presented a thousand times before) here goes...
+<br/>
+<br/>A real problem with DC++ is it does not remember jack shit. I propose the following modifications and I will write the patch myself. I just want to get some feedback from the developers on the idea.
+<br/>
+<br/>A client wants to get a file. It generates a random large number as a key for each file and saves this to disk as part of the request queue. The client then requests the file with its key.  The server saves the client request with the key and if a slot is free starts the upload to the client. If a slot is not free the server queues the file in its upload queue and saves this to disk.
+<br/>
+<br/>If an upload ends prematurely, the server waits a few seconds and then starts the next file in the queue. If previous queued client returns to the server and presents the correct key the server will close most recently started download and resume the previous one. If a clients connection is closed during a download it should retry at normal timer interval. Inactive queued downloads expire in seven days 
+<br/>.
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7153">
+<div class="inner">
+<dl class="postprofile" id="profile7153">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7153">
+<h3><a href="#p7153">Re: Slot Memory [TM]</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-11 15:35
+			</p>
+<div class="content">Ehm... what is the problem that this solution solves?
+<br/>
+<br/>If it is an upload queue you are looking for then the client might remember the IP and nick of the user instead.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Everything you know is wrong!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7325">
+<div class="inner">
+<dl class="postprofile" id="profile7325">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7325">
+<h3><a href="#p7325"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-12 00:39
+			</p>
+<div class="content">Well the idea is that it remembers the people who have queued a download. DC++ does not do this presently. It can tell you who is waiting but not in any specific order. This will queue them in order and if they go away and come back it will continue their download if the file was incomplete. It also prevents people hijacking queue positions by using a keyed downloads known only by original the server and client. IPs change and so do peoples nicks. This way they dont lose their queued downloads.
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7333">
+<div class="inner">
+<dl class="postprofile" id="profile7333">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7333">
+<h3><a href="#p7333"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-12 00:51
+			</p>
+<div class="content">Let me add some more on this, when they initially request the file DC++ should remember the username, filename, and key and their order in the queue if no slots are free. If the user is not online when a slot is free it skips them but keeps their place in the queue. If they try to connect again with the right key and filename and the are in front fo any exisitng downloads it will close the most recently started download and resume the one with the user.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7451">
+<div class="inner">
+<dl class="postprofile" id="profile7451">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7451">
+<h3><a href="#p7451"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-12 17:20
+			</p>
+<div class="content">The whole upload queue thingy can be solved by "reverse connecting" (an idea that someone on the boards submitted) to the client who is supposed to get the slot. 
+<br/>
+<br/>More information about this can be found by searching the boards. It's a very neat way to solve the problem with backwards compatibility, since only the client which does the uploading needs to use it.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Time's fun when you're having flies</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7482">
+<div class="inner">
+<dl class="postprofile" id="profile7482">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7482">
+<h3><a href="#p7482"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-12 20:36
+			</p>
+<div class="content">It doesnt really, 
+<br/>
+<br/>Only the downloading client knows when its ready to connect and not the uploading one. So if I go offline and my slot comes up then what happens? I lose the slot or does the uploading client keep polling for me? That does not sound very practical.
+<br/>
+<br/>My way the client can re-identify itself as the owner of a queue position if the IP and/or Nick has changed because it will have the original key and full path for that download. The idea is if they reconnect and request the file using the same key it will match them up with their original queue position if it still exists. If they are in front of any of the present downloaders then it will start their download immediately and close the mos recent download. 
+<br/>
+<br/>The idea is to preserve the first in first served order which IMHO the only way that is fair.
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7542">
+<div class="inner">
+<dl class="postprofile" id="profile7542">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7542">
+<h3><a href="#p7542"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-13 03:43
+			</p>
+<div class="content">Ummm, sarf is right.
+<br/>
+<br/>And what you're describing seems to be an upload queue, except perhaps persistent across runs of DC++.  I personally think that if a client wants to download from me, and they go offline, then they forfeit their spot in line.
+<br/>
+<br/>BCDC++ already has this, though I haven't had the rationale behind the half-connect explained to me, since it seems that a normal $ConnectToMe would work just as well.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7549">
+<div class="inner">
+<dl class="postprofile" id="profile7549">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7549">
+<h3><a href="#p7549"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-13 04:54
+			</p>
+<div class="content">Well thats is total crap. 
+<br/>
+<br/>This *is* an upload queue proposal. But when I want to use my connection I turn off DC++ because it chews too much bandwidth. Why should I lose my queue slot? I was their first mate and frankly, if I come back, I would like the slot back. Some of us dont live online 24x7. Its only fair.
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7550">
+<div class="inner">
+<dl class="postprofile" id="profile7550">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7550">
+<h3><a href="#p7550"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-13 04:55
+			</p>
+<div class="content">And bcdc++ queueing is not persistant hence my proposal. Sorry if I appear to be rude. Not intentional.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7585">
+<div class="inner">
+<dl class="postprofile" id="profile7585">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7585">
+<h3><a href="#p7585"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-13 12:50
+			</p>
+<div class="content"><blockquote><div><cite>rtfmoz wrote:</cite>But when I want to use my connection I turn off DC++ because it chews too much bandwidth. Why should I lose my queue slot? I was their first mate and frankly, if I come back, I would like the slot back. Some of us dont live online 24x7. Its only fair.</div></blockquote>
+<br/>
+<br/>Well, it's the way things normally work when you stand in a line in real life.  If you step out of line, you lose your spot.  If you come back and try to get in the same spot, that won't be well received by people who were behind you.
+<br/>
+<br/>If you don't agree, that's fine, but I think that's probably the opinion of many (right or wrong), and you need to account for that if you're going to implement this feature.
+<br/>
+<br/>As an aside, if DC++ uses too much (upload) bandwidth, shame on you for not finding one of the technical solutions to the problem.  My computer is on 24/7 (I assume you have broadband as well?), there's no excuse to turn it off because I like sharing files with people.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7590">
+<div class="inner">
+<dl class="postprofile" id="profile7590">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1710">[A&amp;AM]Fireball</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 08:47</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> germany</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7590">
+<h3><a href="#p7590"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1710">[A&amp;AM]Fireball</a></strong> » </span>2003-03-13 13:05
+			</p>
+<div class="content">1) if you want to save bandwith for something else it's your problem ... 
+<br/>2) users with lots of wanted files (&gt;500 GB good share <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> will end up with a huge key file
+<br/>3) someone with REALLY slow download speed (sometimes a connection is just plain slow, or some modem user) will block the slot virtually forever
+<br/>4) ppl with a slot from someone with fast upload speed could (theoretically) give the key away bevore completing the file (getting the last few MB's elsewhere) and someone else could use the key to get a top position at that fast user's queue .. *urks*</div>
+<div class="signature" id="sig7590">learn more about the [A&amp;AM]Hubs: <a class="postlink" href="http://animeandasianmovies.de.vu">AnimeAndAsianMovies.de.vu</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7630">
+<div class="inner">
+<dl class="postprofile" id="profile7630">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7630">
+<h3><a href="#p7630"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-13 19:09
+			</p>
+<div class="content">1) if you want to save bandwith for something else it's your problem ... 
+<br/>
+<br/>Crap. You live on a 512/128 connection and see if you still have that opinion. 
+<br/>
+<br/>2) users with lots of wanted files (&gt;500 GB good share  will end up with a huge key file 
+<br/>
+<br/>Yes but key files are not tha large in the first place and it expires over time.
+<br/>
+<br/>3) someone with REALLY slow download speed (sometimes a connection is just plain slow, or some modem user) will block the slot virtually forever 
+<br/>
+<br/>Block the slot? There is no blocking, if they are not using it someone else takes it. If they are using it its theirs, no different to now.
+<br/>
+<br/>4) ppl with a slot from someone with fast upload speed could (theoretically) give the key away bevore completing the file (getting the last few MB's elsewhere) and someone else could use the key to get a top position at that fast user's queue .. *urks*
+<br/>
+<br/>Simple, dont tell em what the key is. Its under the hood so the user does not need to know. Dont say "they will modify it" cause they can modify it now. 
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7639">
+<div class="inner">
+<dl class="postprofile" id="profile7639">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7639">
+<h3><a href="#p7639"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-13 19:23
+			</p>
+<div class="content"><blockquote class="uncited"><div>Well, it's the way things normally work when you stand in a line in real life. If you step out of line, you lose your spot. If you come back and try to get in the same spot, that won't be well received by people who were behind you. </div></blockquote><br/><br/>Thats a load of crap. If you go away to get something you leave a friend in the queue for you. If you have to do something you put a friend in the queue for you. Just because you are not always around it does not mean you should lose your posiiton. This is REAL life and time is limited. Using up all resources standing in a queue is a waste of time and money.<br/><br/><blockquote class="uncited"><div>If you don't agree, that's fine, but I think that's probably the opinion of many (right or wrong), and you need to account for that if you're going to implement this feature. </div></blockquote><br/><br/>I think a lot of people would welcome the benefits this feature would bring. If you connection dies for some reason, if you have to upload a file to someone and you need the bandwidth, if you cant leave your computer on 24x7, if you want to play an online game,  you dont lose your position in the queue. There is NOTHING worse than downloading a 600MB file to find that your connection died while you were away and you have to wait another three days before a slot is free.<br/><br/><blockquote class="uncited"><div>As an aside, if DC++ uses too much (upload) bandwidth, shame on you for not finding one of the technical solutions to the problem. My computer is on 24/7 (I assume you have broadband as well?), there's no excuse to turn it off because I like sharing files with people</div></blockquote>
+<br/>
+<br/>Again thats complete crap. Shame on me? LOL I have tried all the technical solutions and they do not work well at all. My computer is on 24x7 but I cannot leave DC++ on all the time as it eats up the bandwidth of my connection. What about when I want to USE my connection? The world does not revolve about DC++! When I close it down I lose ALL my slots and position in any queues. Some people are charged by volume for their downloads so they cant afford to leave DC++ running all the time.
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7651">
+<div class="inner">
+<dl class="postprofile" id="profile7651">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7651">
+<h3><a href="#p7651"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-13 21:41
+			</p>
+<div class="content"><blockquote><div><cite>rtfmoz wrote:</cite>Thats a load of crap. If you go away to get something you leave a friend in the queue for you. If you have to do something you put a friend in the queue for you. Just because you are not always around it does not mean you should lose your posiiton. This is REAL life and time is limited. Using up all resources standing in a queue is a waste of time and money.</div></blockquote><br/>No... but then perhaps you should employ a "friend" application which does nothing but stand in the queues you are in. Preferably this should be done from another computer than the one you use so any reboots/et cetera would not affect the "friend" application.<br/><br/>Since the current slot gathering model of DC is accepted by all (if not liked) having an upload queue would by a tremendous step forward. I dislike the idea of a person going into a hub and requesting an upload queue key of every person on the hub, only to be able to download anything he/she might want later on. This is something I personally would recode the client to do, since it has a benefit for me.<br/>Having a non-persistent upload queue is good enough, and ensures that people will not have hundreds of clients waiting for "their" slot.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>I think a lot of people would welcome the benefits this feature would bring. If your connection dies for some reason, if you have to upload a file to someone and you need the bandwidth, if you cant leave your computer on 24x7, if you want to play an online game,  you dont lose your position in the queue. There is NOTHING worse than downloading a 600MB file to find that your connection died while you were away and you have to wait another three days before a slot is free.</div></blockquote><br/>In the "three day wait"-case I'd recommend you to contact the person with the file you need and ask to be granted a slot. A non-persistent upload queue would ensure that, since it is non-persistent, there would be less people waiting for their slots ahead of you. If the file is that important to you, then I'd expect you to sacrifice something for it... such as time spent waiting to get a slot or spent trying to get a slot granted to you.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>Again thats complete crap. Shame on me? LOL I have tried all the technical solutions and they do not work well at all. My computer is on 24x7 but I cannot leave DC++ on all the time as it eats up the bandwidth of my connection.</div></blockquote><br/>Ah... GargoyleMT meant, in translatation, to use an "upload limited" client or to make your own. You would thus be able to control your bandwidth.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>What about when I want to USE my connection? The world does not revolve about DC++! When I close it down I lose ALL my slots and position in any queues.</div></blockquote><br/>Umm... there's an inherent contradiction here. If DC++ is not that important to you, then you should not care when you lose your slots/position in queues and so on... or is it merely that you wish to retain the good things without suffering for it?<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>Some people are charged by volume for their downloads so they cant afford to leave DC++ running all the time.</div></blockquote><br/>Again, an "upload limited" client could (and would) help them.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite><blockquote><div><cite>[A&amp;AM]Fireball wrote:</cite>2) users with lots of wanted files (&gt;500 GB good share will end up with a huge key file</div></blockquote>Yes but key files are not tha large in the first place and it expires over time.</div></blockquote><br/>Well, how much would the overhead for the "big sharers" be in CPU and I/O? If it is significant it should be known.<br/>Let's say the key files are persistent for seven days. Let's say the big sharer is on three hubs, each with 500 users. Every day, the big sharer get 1000 requests. Of those, half is handled, the rest are queued (simplifying a bit here, of course people would get queued one day and handled the next, but anyhow). Over the course of seven days, the number of key files would grow to 3500, and be constantly at that size since new key files would be added as the old files are pruned.<br/>Maintaining 3500 files, pruning them when appropriate and searching through them (not very hard, but...) would take some overhead... though mainly in the maintaining part.<br/><br/>Of course, this example was taken from thin air, but extreme cases should be considered since if they are not people would simply uncheck the "maintain upload queue" option (I hope you're not going to force people to use it). The other side would have to be considered too, since clients usually have a rather large number of other clients they may need to maintain a key file for.<br/><br/><br/><blockquote><div><cite>rtfmoz wrote:</cite><blockquote><div><cite>[A&amp;AM]Fireball wrote:</cite>4) ppl with a slot from someone with fast upload speed could (theoretically) give the key away bevore completing the file (getting the last few MB's elsewhere) and someone else could use the key to get a top position at that fast user's queue .. *urks*</div></blockquote><br/>Simple, dont tell em what the key is. Its under the hood so the user does not need to know. Dont say "they will modify it" cause they can modify it now.</div></blockquote>
+<br/>But this raises an issue... though not especially important - the key should be unique and perhaps only good for a number of files/amount of data/time/whatever? It'd be more of a ticket then, rather than just being a queue-number with bells on. Thus the uploading client could choose to use the rating (tm) of the user that wants data from it and handle the "ticket" accordingly, or it could use the connection type of the client, or the current phase of the moon or whatever. The point is, it could be used to minimize any abuse of the place it secures (the slot).
+<br/>
+<br/>That's something that I could imagine being implemented... but there is still no real reason not to just implement this on the uploading client and work like a normal DC++ client for all other intents and purposes.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Think "<strong class="text-strong">HONK</strong>" if you're a telepath!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7683">
+<div class="inner">
+<dl class="postprofile" id="profile7683">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7683">
+<h3><a href="#p7683"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-14 02:37
+			</p>
+<div class="content">Sarf, as usual, you've done an excellent job of bringing up the issues that are involved in this line of reasoning.  My only addition is below:
+<br/>
+<br/><blockquote><div><cite>sarf wrote:</cite><blockquote><div><cite>rtfmoz wrote:</cite>Again thats complete crap. Shame on me? LOL I have tried all the technical solutions and they do not work well at all. </div></blockquote><br/>Ah... GargoyleMT meant, in translatation, to use an "upload limited" client or to make your own. You would thus be able to control your bandwidth.<br/></div></blockquote>
+<br/>
+<br/>Yes, this is exactly what I mean.  The simplest technical solution to me, in terms of work, is to use a upload limiting/throttling client.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7689">
+<div class="inner">
+<dl class="postprofile" id="profile7689">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7689">
+<h3><a href="#p7689"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-14 04:18
+			</p>
+<div class="content"><blockquote class="uncited"><div>No... but then perhaps you should employ a "friend" application which does nothing but stand in the queues you are in. Preferably this should be done from another computer than the one you use so any reboots/et cetera would not affect the "friend" application.</div></blockquote><br/><br/>Ok there appears to be some misunderstanding here. Probably because I am not very clear about it. The downloader only needs to present a unique'ish key with every file requested. Nothing else changes in regards to downloads. There is a different key for <strong class="text-strong">each</strong> file you want - a large random number will do. <br/><br/>The uploader takes that filespec and key as a unique pair that represents the download from that user. It stores it in a queue if their is no slots free. That queue entry will expire in seven days if no activitity has occured. By activity I mean that some data has been downloaded or it has been re-requested.<br/><br/><br/><blockquote class="uncited"><div>I dislike the idea of a person going into a hub and requesting an upload queue key of every person on the hub, only to be able to download anything he/she might want later on.</div></blockquote><br/><br/>No-one can request a key. When a someone wants to download from you they present a key <strong class="text-strong">per file</strong><br/><br/><blockquote class="uncited"><div> ensures that people will not have hundreds of clients waiting for "their" slot. </div></blockquote><br/><br/>This is how it is now! I am not changing anything I am just saying if someone is in the upload queue ahead of you on that specific user then they get preference! <br/><br/><blockquote class="uncited"><div>In the "three day wait"-case I'd recommend you to contact the person with the file you need and ask to be granted a slot. A non-persistent upload queue would ensure that, since it is non-persistent, there would be less people waiting for their slots ahead of you.</div></blockquote><br/><br/>No-one is left waiting. If the slot is not in use it gets used by the next person in the queue... and the next... and the next... until you return to continue the download.<br/><br/><blockquote class="uncited"><div>Ah... GargoyleMT meant, in translatation, to use an "upload limited" client or to make your own. You would thus be able to control your bandwidth.</div></blockquote><br/><br/>I know he did but so many hubs kick you when you upload limit so thats no solution.<br/><br/><blockquote class="uncited"><div>If DC++ is not that important to you, then you should not care when you lose your slots/position in queues and so on... or is it merely that you wish to retain the good things without suffering for it?</div></blockquote><br/><br/>Crap! When you see a problem you fix it. This is a problem and I am fixing it. What I like or dont like is irrelevant. The world does not revolve around the USA and many other countries cannot stay online indefinately. People with this issue are disadvantaged. It will not affect people who dont have this problem. <br/><br/>I mean come-on... You are telling me that uploading in DC++ is a completed feature? If you have a download queue then why haven't you implemented an upload queue... it appears that it has never been finished.<br/><br/><blockquote class="uncited"><div>Again, an "upload limited" client could (and would) help them.</div></blockquote><br/><br/>How does an upload limit help volume quota? It doesnt, the file is the same size. Turning off the client is the only solution that stops you using bandwidth.<br/><br/><blockquote class="uncited"><div>Well, how much would the overhead for the "big sharers" be in CPU and I/O? If it is significant it should be known.</div></blockquote><br/><br/>It should be one file. Probably a seperate queue.xml file with the upload queue information. Since when does a 1MB file cause any problems? As for the extreme case I see your point. Initially that may be so but things can be tuned as we progress.<br/><br/><blockquote class="uncited"><div> Maintaining 3500 files, pruning them when appropriate and searching through them (not very hard, but...) would take some overhead... though mainly in the maintaining part.</div></blockquote><br/><br/>Assuming it is one key file, efficient searching will make light work of this.<br/><br/><blockquote class="uncited"><div>Of course, this example was taken from thin air, but extreme cases should be considered since if they are not people would simply uncheck the "maintain upload queue" option</div></blockquote><br/><br/>I agree and I would never <strong class="text-strong">force</strong> people to use it.<br/><br/><blockquote class="uncited"><div> ppl with a slot from someone with fast upload speed could (theoretically) give the key away bevore completing the file (getting the last few MB's elsewhere) and someone else could use the key to get a top position at that fast user's queue .. *urks*</div></blockquote><br/><br/>I am sure we can some up with something...<br/><br/><blockquote class="uncited"><div>But this raises an issue... though not especially important - the key should be unique and perhaps only good for a number of files/amount of data/time/whatever? </div></blockquote><br/><br/>The idea is keys are unique per file requested.<br/><br/><blockquote class="uncited"><div>That's something that I could imagine being implemented... but there is still no real reason not to just implement this on the uploading client and work like a normal DC++ client for all other intents and purposes.</div></blockquote>
+<br/>
+<br/>I agree but since the upload and downloading client are the same thing then its a moot point.
+<br/>
+<br/>Personal Opinion Below.
+<br/>
+<br/>Christ!!! Do all you people have blinkers on or what? Are you people so stuck in a rut that you cannot see the obvious advantages. Please can you <strong class="text-strong">try</strong> and look at it from the advantages that it brings and discuss how it might work
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7719">
+<div class="inner">
+<dl class="postprofile" id="profile7719">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7719">
+<h3><a href="#p7719"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-14 12:04
+			</p>
+<div class="content"><blockquote><div><cite>rtfmoz wrote:</cite>[friend quote]<br/>Ok there appears to be some misunderstanding here. Probably because I am not very clear about it. The downloader only needs to present a unique'ish key with every file requested. Nothing else changes in regards to downloads. There is a different key for <strong class="text-strong">each</strong> file you want - a large random number will do.</div></blockquote><br/>Ah. Now we're talking business here. FYI, what I meant was that comparing the queue system with the real world was doomed since we do not have a "friend" in some form, shape or color to use in DC++... though that cold be changed.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>This is how it is now! I am not changing anything I am just saying if someone is in the upload queue ahead of you on that specific user then they get preference!</div></blockquote><br/>Yes. My point is simply that it is a) simpler to implement "uploading side" queue handling and b) ensures that it works for everyone - a system where both clients need to be of a specific version/type is less efficient (overall) than one that needs only to be supported on one end to work.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>No-one is left waiting. If the slot is not in use it gets used by the next person in the queue... and the next... and the next... until you return to continue the download.</div></blockquote><br/>Yes, this was understood, but what was meant was the comment made about having to wait three days for a file if the other client used a non-persistent upload queue OR used the current "queue" system.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>I know he did but so many hubs kick you when you upload limit so thats no solution.</div></blockquote><br/>Well, there are clients that do not report that you use an upload limiting client. For instance, you can modify the code yourself.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>Crap! When you see a problem you fix it. This is a problem and I am fixing it. What I like or dont like is irrelevant.</div></blockquote><br/>Apperently it is not irrelevant to you, since it seemed to be something you felt.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>The world does not revolve around the USA and many other countries cannot stay online indefinately. People with this issue are disadvantaged. It will not affect people who dont have this problem.</div></blockquote><br/>It will affect people without the problem because clients will be changing their behaviour - as a user of an unlimited 10-megabit line you can "afford" to hammer for a slot in the current system. I do not say that this is better in any way, just that it <strong class="text-strong">will</strong> affect others.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>I mean come-on... You are telling me that uploading in DC++ is a completed feature?</div></blockquote><br/>I am not telling you that it is finished. I am telling you that, because of "political" reasons, arnetheduck will never include upload limiting in his version since it currently would mean that DC++ would be banned in a large percentage of hubs.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>If you have a download queue then why haven't you implemented an upload queue... it appears that it has never been finished.</div></blockquote><br/>The reason? Because NM DC does not have one. The upload queue has never had been even started on in DC++.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>How does an upload limit help volume quota? It doesnt, the file is the same size. Turning off the client is the only solution that stops you using bandwidth.</div></blockquote><br/>Ehm... with an upload limited client they could decide how much upload they wish to use, thus giving them more time online (since their volume would be used up at a rate they decide).<br/>Besides, if the only thing that helps them is to turn off the client, then they will not be helped by anything you or I can do.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>Assuming it is one key file, efficient searching will make light work of this.</div></blockquote><br/>Yes, thank you for clearing this issue. Since you were talking about key <strong class="text-strong">files</strong> I got confused.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>The idea is keys are unique per file requested.</div></blockquote><br/>An important design decision is then how many files (and thus keys) each user is allowed to have at the same time on one particular client.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>I agree but since the upload and downloading client are the same thing then its a moot point.</div></blockquote><br/>No, not when people are using NM DC / oDC / pDC / BCDC++ / blue / et cetera clients.<br/><br/><blockquote><div><cite>rtfmoz wrote:</cite>Christ!!! Do all you people have blinkers on or what? Are you people so stuck in a rut that you cannot see the obvious advantages. Please can you <strong class="text-strong">try</strong> and look at it from the advantages that it brings and discuss how it might work</div></blockquote>
+<br/>I think it has advantages. I think it is more advantageous to do a pure "uploading side" client-fix since then it would work for all. I also think that having two ways of handling upload queues is a Bad Thing (tm).
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Sometimes a cigar is just a cigar.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7721">
+<div class="inner">
+<dl class="postprofile" id="profile7721">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7721">
+<h3><a href="#p7721"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-14 12:17
+			</p>
+<div class="content"><blockquote class="uncited"><div> think it is more advantageous to do a pure "uploading side" client-fix since then it would work for all. I also think that having two ways of handling upload queues is a Bad Thing (tm). </div></blockquote>
+<br/>
+<br/>OK you lost me here. When you say a pure "Uploading side" I am thinking a modification of DC++ that adds the upload queueing functonality. Now as for the two ways of handling upload queueing, I am not suggesting their will be two ways.
+<br/>
+<br/>If you have a upload queueing turned on then DC++ can fudge a key if the downloading client does not present one. This means upload queueing still works regardless if the other end presents a key or not. They dont  however get the advantages of having presented their own key.
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7724">
+<div class="inner">
+<dl class="postprofile" id="profile7724">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 25</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 07:14</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7724">
+<h3><a href="#p7724"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=226">rtfmoz</a></strong> » </span>2003-03-14 12:21
+			</p>
+<div class="content"><blockquote class="uncited"><div>Yes. My point is simply that it is a) simpler to implement "uploading side" queue handling and b) ensures that it works for everyone - a system where both clients need to be of a specific version/type is less efficient (overall) than one that needs only to be supported on one end to work. </div></blockquote>
+<br/>
+<br/>I agree totally! The only problem I see is highjacking of queue slots hence the idea of the key system. If it is simpler to just used nick then that can be the basis for the queueing but it is open to abuse. I was suggesting a *key* would prevent this type of abuse.
+<br/>
+<br/>rtfmoz</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7726">
+<div class="inner">
+<dl class="postprofile" id="profile7726">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1710">[A&amp;AM]Fireball</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 08:47</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> germany</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7726">
+<h3><a href="#p7726"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1710">[A&amp;AM]Fireball</a></strong> » </span>2003-03-14 12:26
+			</p>
+<div class="content">i'm on 768/128 ... and i still have the opinion <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig7726">learn more about the [A&amp;AM]Hubs: <a class="postlink" href="http://animeandasianmovies.de.vu">AnimeAndAsianMovies.de.vu</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7730">
+<div class="inner">
+<dl class="postprofile" id="profile7730">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7730">
+<h3><a href="#p7730"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-14 12:43
+			</p>
+<div class="content"><blockquote><div><cite>rtfmoz wrote:</cite>I agree totally! The only problem I see is highjacking of queue slots hence the idea of the key system. If it is simpler to just used nick then that can be the basis for the queueing but it is open to abuse. I was suggesting a *key* would prevent this type of abuse.</div></blockquote>
+<br/>
+<br/>If this is the problem that the key solution is intended to fix, there are other ways of approaching it.  For instance, clients check in every so often (50/60 seconds) to see if there is a new slot.  If someone has gotten offline, or hasn't checked in in a specific interval, you could see if someone's "entry" time into the queue matches up, and if they have the same IP or are in the same IP block.
+<br/>
+<br/>I don't think that nick changing would be worth, if it was my time doing the programming, implementing the whole key solution.  Instead, the fix that I just mentioned would handle most of those cases, with only a little complexity on the uploader's system.
+<br/>
+<br/>The issue of how many keys a client can have in an uploader's queue is a scenario not likely to be encoutered much in the real world.  DC++ is deterministic in how it picks which file to transfer, unless you're constantly changing priorities of the files in the queue (or adding new ones with highest priority), it should present the same file all the time.  Right...? (Check the code.)
+<br/>
+<br/>And thank you for making clear you were talking about per-file unique IDs.  It sounded like you were just giving out IDs for a slot.  Not doing so makes  your system much less abusable.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7740">
+<div class="inner">
+<dl class="postprofile" id="profile7740">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content7740">
+<h3><a href="#p7740"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-03-14 13:49
+			</p>
+<div class="content">I've read through this because some sort of "Who's trying to download from me" queue inside the client would be great. but, as has been stated it must be compatible with all clients out there. This necessitates it being a Uploading Client side solution.
+<br/>
+<br/>I grabbed the latest BCDC and it does show who's waiting but I can't find any more information about how it works/what it does. Can someone explain that or point me somewhere?
+<br/>
+<br/>I've done some testing within my hub, using a script and I think I know how it works... it listens to $ConnectToMe and $RevConnectToMe and if they continue to come (every 1 or 3 minutes from my testing) then it adds that user to the Q.
+<br/>
+<br/>Is priority given to the first person in that list when a slot becomes available? The way DC++ works now it's the first person who sends a connection request, which means that $ConnecToMe/$RevConnecToMe flooding IS an effective way to increase your chances of getting a slot, which is not good.
+<br/>
+<br/>I like the idea of having a queue, so I can see and manage who's in line, I'd like to be able to"
+<br/>
+<br/>Re-order the Q
+<br/>Bump someone to the top of the list
+<br/>Grant a slot but only for 'n' specific files (ever Get a PM "Can you grant me a slot so I can get the last 3 files of..."?)
+<br/>
+<br/>I totally disagree with the idea that the place in line should be held for the downloader if they decide to go away for the weekend and shutdown DC. Your place in line can be held, <strong class="text-strong">while you are in line, you leave = you lose.</strong>
+<br/>
+<br/>Having people stay online in the hubs is a good thing for DC, creating a situation where disconnecting has no 'cost' goes against that.
+<br/>
+<br/>I understand the u/l limits of users and the bandwidth cap's and the asynchronous connection issue and therefore I allow bandwidth throttling in my hub and have supported it being included in the client. 
+<br/>
+<br/>Unfortunately the politics of this issue are well known, it has been debated many, many, many time... the Swede's with their subsidized 10mBit connections couldn't care less about the rest of us and don't want b/w throttling, so it'll never happen in DC++. C'est la vie. Find more reasonable hub-owners that will allow other clients.
+<br/>
+<br/>Tolerance should be built in of say 10-15 minutes to account for power failures/system crashes/hub disconnects etc. This should be "persistent" ie written to disk, because it might be my machine that crashes and I want to give the slots back to the people who had them before once I am up and running again (It's only fair...)
+<br/>
+<br/>I would not want some huge file of every leecher who Q'd half my share on every hub I every popped into for the past 7 days sitting on my machine getting trimmed one file at a time...hugely inefficient.
+<br/>
+<br/>But, that's just my opinion... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>HaArD</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			22 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

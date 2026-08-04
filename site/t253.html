@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Decentralized StrongDC++ network Draft - DCBase</title>
+      
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="9" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=9" itemprop="url"><span itemprop="title">Site &amp; Forum</span></a></span>
+<span class="crumb" data-forum-id="10" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=10" itemprop="url"><span itemprop="title">Site News</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/viewtopic.php?f=10&amp;t=253">Decentralized StrongDC++ network Draft</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Site Announcements<br/></div>
+<div class="action-bar bar-top">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p673">
+<div class="inner">
+<dl class="postprofile" id="profile673">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content673">
+<h3 class="first"><a href="#p673">Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Sat Jul 19, 2008 7:49 pm
+			</p>
+<div class="content">Author: BigMuscle<br/>
+<br/>
+1                  Introduction<br/>
+<br/>
+The main goal of this network is to provide decentralized communication between StrongDC++ clients. It’s not a new protocol. The advantage is that clients will be able to communicate (download, upload and search) with clients who are connected to different hubs. This draft won’t describe ADC protocol, neither process of file transfers, because it’s exactly the same as in ADC.<br/>
+<br/>
+The feature will be optional. Since it can bring some privacy problems, especially in private hubs, user will have a choice to disable it. Such client will behave as normal client without support, it means no decentralized downloads, uploads nor searches.<br/>
+<br/>
+2                  Connecting a new client<br/>
+<br/>
+When a new client connects to network, it has to create a node list. It’s a list of all users connected to the network. This operation is called bootstrapping. The only request is that user has to connect to some existing Direct Connect hub. It’s the only situation when hub interaction is needed. The bootstrapping client (= new connected) should indicate decentralized network support in $MyInfo (NMDC) or INF (ADC) command:<br/>
+<br/>
+NMDC =&gt; flag 0x20<br/>
+<br/>
+ADC =&gt; param D4&lt;udp port&gt;<br/>
+<br/>
+It’s not a goal of this draft to describe how should bootstrapping procedure be implemented. Every client can implement it in its own way, so it should be guaranteed that bootstrapping doesn’t require any special support from client side. The recommended ways could be:<br/>
+<br/>
+·        send node list to ADC node when D4 param is detected in INF<br/>
+<br/>
+·        download node list from some URL<br/>
+<br/>
+·        send node list to NMDC node when it has flag 0x20 in $MyInfo and $SR command comes from this client<br/>
+<br/>
+When bootstrapping is done, the client doesn’t need to be connected to any hub.<br/>
+<br/>
+3                  Node list<br/>
+<br/>
+The node list is a list which contains all known clients connected to the network. It has to content user’s CID, IP address and UDP ports for receiving decentralized messages. The created list will be saved to disk and loaded on every startup. Recommended format is binary form (cid1, ip1, udp1, cid2, ip2, udp2 …). When this file doesn’t exist, bootstrapping will occur. Node list available in INF command is attached to parameter NL in binary form.<br/>
+<br/>
+The main problem is that node list can contain obsolete nodes which aren’t connected to network anymore. Due to this negative, the bootstrapping procedure will be repeated in settable time. Users will be able to set maximum size of node list. Also, when there are less than 100 clients in the list, bootstrapping will be executed on connection to any Direct Connect hub. Nodes that haven’t been online for certain time should be removed from node list.<br/>
+<br/>
+4                  Communication<br/>
+<br/>
+Whole network has no own protocol and it will use existing ADC commands. Hub-like communication will be processed via UDP port and transfers normally via TCP port. Passive clients will not be able to use this network, because they can’t receive anything via these ports.<br/>
+<br/>
+All TCP communication can be (if client has generated certificates) encrypted using SSLv3/TLS mechanism. UDP communication should be encrypted too, but I haven’t found a clear solution to do it yet. DTLS provides encrypting over UDP sockets, but it needs to create connection and do handshake for every single command.<br/>
+<br/>
+Since there’s no hub in the network, clients will serve as hubs alone.<br/>
+<br/>
+4.1       Joining the network<br/>
+<br/>
+When a client joins the network (after creating node list) he will send INF command to all nodes on its node list. Connected nodes receive this command and reply to it with their INF. Receiving INF command means that node will be marked as online. INF command has exactly the same format as in ADC protocol but it adds following new parameters:<br/>
+<br/>
+T4<br/>
+<br/>
+<br/>
+16-bit unsigned integer<br/>
+<br/>
+<br/>
+Node’s TCP port.<br/>
+<br/>
+RE<br/>
+<br/>
+<br/>
+8-bit unsigned integer<br/>
+<br/>
+<br/>
+Requirements to node to send us his INF. 0 = no, 1= yes, 2 = yes with node list.<br/>
+<br/>
+NL<br/>
+<br/>
+<br/>
+Binary string<br/>
+<br/>
+<br/>
+Node list in binary form &lt;CID, IP, UDP&gt;.<br/>
+<br/>
+<br/>
+4.2       Leaving the network<br/>
+<br/>
+When a client wants to leave the network, it must send QUI command to all online nodes. Such client will be marked as offline.<br/>
+<br/>
+4.3       Searching<br/>
+<br/>
+When search request is done, the SCH command will be sent to all online nodes. These nodes should respond with maximally 10 results (same limit as in ADC/NMDC). When search request contain TTH, nodes should also provide results from partial file sharing feature.<br/>
+<br/>
+4.4       Private messaging<br/>
+5         Extensions<br/>
+5.1       ZLIB compression<br/>
+<br/>
+Every UDP packet can be compressed using ZLIB library. Clients must support receiving compressed and uncompressed packets; therefore a single mark will be added at the beginning of every compressed packet to differentiate it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p678">
+<div class="inner">
+<dl class="postprofile" id="profile678">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">3dfx</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content678">
+<h3><a href="#p678">Re: Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">3dfx</span></strong> » </span>Mon Jul 21, 2008 10:11 am
+			</p>
+<div class="content">interesting,gonna test it <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p679">
+<div class="inner">
+<dl class="postprofile" id="profile679">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content679">
+<h3><a href="#p679">Re: Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Mon Jul 21, 2008 10:25 am
+			</p>
+<div class="content">hasn't been released yet this is just a draft not implemented</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p682">
+<div class="inner">
+<dl class="postprofile" id="profile682">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=120" style="color: #AEB404;">Big Muscle</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 39</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 01, 2008 7:27 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content682">
+<h3><a href="#p682">Re: Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=120" style="color: #AEB404;">Big Muscle</a></strong> » </span>Mon Jul 21, 2008 1:30 pm
+			</p>
+<div class="content">The first implementation has already been commited to StrongDC++ SVN  <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p683">
+<div class="inner">
+<dl class="postprofile" id="profile683">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content683">
+<h3><a href="#p683">Re: Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Mon Jul 21, 2008 5:16 pm
+			</p>
+<div class="content">Wonder if RSX++ and ApexDC++ and AirDC++ are aslo gonna implement this feature</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p684">
+<div class="inner">
+<dl class="postprofile" id="profile684">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=62" style="color: #AEB404;">adrian_007</a> </dt>
+<dd class="profile-rank">Senior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 126</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Jan 06, 2008 1:00 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content684">
+<h3><a href="#p684">Re: Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=62" style="color: #AEB404;">adrian_007</a></strong> » </span>Mon Jul 21, 2008 5:58 pm
+			</p>
+<div class="content">of course... at least rsx++ inherit it, anyway.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p685">
+<div class="inner">
+<dl class="postprofile" id="profile685">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">3dfx</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content685">
+<h3><a href="#p685">Re: Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">3dfx</span></strong> » </span>Mon Jul 21, 2008 6:24 pm
+			</p>
+<div class="content"><blockquote><div><cite>adrian_007 wrote:</cite>of course... at least rsx++ inherit it, anyway.</div></blockquote>
+
+thats great to know <img alt=":D" class="smilies" height="17" src="/images/smilies/icon_e_biggrin.gif" title="Very Happy" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p686">
+<div class="inner">
+<dl class="postprofile" id="profile686">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content686">
+<h3><a href="#p686">Re: Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Mon Jul 21, 2008 6:52 pm
+			</p>
+<div class="content">Well it doesnt have too one could take out the code if its an unwanted feature</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p688">
+<div class="inner">
+<dl class="postprofile" id="profile688">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=120" style="color: #AEB404;">Big Muscle</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 39</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 01, 2008 7:27 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content688">
+<h3><a href="#p688">Re: Decentralized StrongDC++ network Draft</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=120" style="color: #AEB404;">Big Muscle</a></strong> » </span>Tue Jul 22, 2008 1:30 pm
+			</p>
+<div class="content">If you have any proposal about this feature, please write it here... I also think that downloading from decentralized network should be allowed only when user share some amount of data.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/viewforum.php?f=10">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Site News”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=9"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=20"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=41"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=56"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=57"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=58"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=59"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=75"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=13"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=26"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=45"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=36"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=83"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=27"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=35"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=37"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=40"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=28"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=29"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=30"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=31"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=32"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=34"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=38"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=74"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=33"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=18"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=55"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=87"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=80"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=81"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=82"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=44"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=50"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=51"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=62"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=63"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=91"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=92"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=93"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

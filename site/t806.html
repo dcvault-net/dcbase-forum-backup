@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>[ADC 1.0.2] State in ADC - DCBase</title>
+      
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=74" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=19" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="55" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=55" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+<span class="crumb" data-forum-id="87" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=87" itemprop="url"><span itemprop="title">Pushed ideas</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/viewtopic.php?f=87&amp;t=806">[ADC 1.0.2] State in ADC</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div class="action-bar bar-top">
+<div class="pagination">
+			14 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/viewtopic.php?f=87&amp;t=806&amp;start=10" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/viewtopic.php?f=87&amp;t=806&amp;start=10" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2930">
+<div class="inner">
+<dl class="postprofile" id="profile2930">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2930">
+<h3 class="first"><a href="#p2930">[ADC 1.0.2] State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Tue Dec 18, 2012 9:10 pm
+			</p>
+<div class="content">The following is a suggested outline of the state in ADC. The text should simply be a rephrasing and restructuring of the state management in ADC and should not contain any modification to the actual state sequence. This does not take into account cologic's proposed changes.<br/>
+<blockquote class="uncited"><div>The connecting party is known as the client and the other is known as the server. <br/>
+<br/>
+State is shared between the client and the server while the server (implicitly) controls state transitions.<br/>
+<br/>
+The states, in login order, are PROTOCOL (feature support discovery), IDENTIFY (user identification, static checks), VERIFY (password check), NORMAL (normal operation), and DATA (for binary transfers).<br/>
+<br/>
+A command is valid only in NORMAL unless noted otherwise.<br/>
+<br/>
+The VERIFY state for C-C connections is not mandated by this specification and should be announced as an extension.<br/>
+<br/>
+It is always the client that sends the first CTM/RCM command that is given control of the connection once the NORMAL state has been reached.<br/>
+<br/>
+Successful commands sent after a state transition indicate that the next state has been reached. For example, PROTOCOL begins a connection and state changes to IDENTIFY once the hub has sent the SID.<br/>
+<br/>
+State description<br/>
+|PROTOCOL |Feature support recovery<br/>
+|IDENTIFY |User identification and static checks<br/>
+|VERIFY |Password check (does not exist in C-C communication unless announced by an extension)<br/>
+|NORMAL |Normal operation (end state)<br/>
+|DATA |Binary transfers. The state changes back to NORMAL once the transfer is complete.<br/>
+<br/>
+State always transitions from PROTOCOL to IDENTIFY and never from IDENTIFY to PROTOCOL. Likewise apply between IDENTIFY, VERIFY and NORMAL. This does not apply between NORMAL and DATA.<br/>
+<br/>
+A STA is valid in all states (except DATA) and may require that messages are resent (i.e. that the state transition does not occur).<br/>
+<br/>
+Any party may disconnect the connection if they receive invalid data or insufficient data. All implementations must therefore be prepared for a potential disconnection following each command, meaning that the following state is not achieved. A disconnection should be preceded by a STA or a QUI to indicate what was wrong.<br/>
+<br/>
+Note that the hub's INF is not required to be sent in IDENTIFY. The hub's INF shall be sent in IDENTIFY or as its first command in NORMAL.<br/>
+<br/>
+States<br/>
+PROTOCOL<br/>
+When the hub receives a SUP, it should reply with its own SUP followed by SID assignment. The hub transitions the state then to IDENTIFY. <br/>
+<br/>
+When the server party receives a SUP in the client-client connection, it should reply with its own SUP. The server transitions the state then to IDENTIFY.<br/>
+<br/>
+IDENTIFY<br/>
+The hub may initiate this state by sending its own INF in this state but is not required. The client shall send its INF whereby the hub shall verify the PD and ID fields and other required fields deemed necessary by the hub. The hub transitions the state then to VERIFY if the user is registered or NORMAL if not.<br/>
+<br/>
+The server party in the client-client connection shall send its INF whereby the client party shall send its INF. The server transitions the state then to NORMAL (or VERIFY if an extension implements this).<br/>
+<br/>
+VERIFY<br/>
+The hub shall send a GPA whereby the client will respond with a PAS. The server transitions the state then to NORMAL.<br/>
+<br/>
+Client-client support for VERIFY must be signaled as an extension.<br/>
+<br/>
+NORMAL<br/>
+The hub shall send its INF if not done already. The server shall send the INF of all connected clients whereby the connecting client's INF shall be last. Normal operation may then commence with chatting and file sharing.<br/>
+<br/>
+Normal operation may commence immediately in a client-client connection. Typically, the downloading party sends a GET whereby the other party sends a SND followed with a stream of data.</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2931">
+<div class="inner">
+<dl class="postprofile" id="profile2931">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2931">
+<h3><a href="#p2931">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Wed Dec 19, 2012 10:08 pm
+			</p>
+<div class="content">Addendums:
+<ul>
+<li>Added initialization of state machine</li>
+<li>Added DATA state</li>
+<li>Changed the use of "whereby" to "whereupon" as it is probably easier to understand.</li>
+</ul>
+
+Changes are listed in bold. This does not take into account cologic's proposed changes.<br/>
+<blockquote class="uncited"><div>
+The connecting party is known as the client and the other is known as the server. <br/>
+<br/>
+State is shared between the client and the server while the server (implicitly) controls state transitions.<br/>
+<br/>
+The states, in login order, are PROTOCOL (feature support discovery), IDENTIFY (user identification, static checks), VERIFY (password check), NORMAL (normal operation) and DATA (for binary transfers).<br/>
+<br/>
+A command is valid only in NORMAL unless noted otherwise.<br/>
+<br/>
+The VERIFY state for C-C connections is not mandated by this specification and should be announced as an extension.<br/>
+<br/>
+It is always the client <strong class="text-strong">in a client-client connection</strong> that sends the first CTM/RCM command that is given control of the connection once the NORMAL state has been reached.<br/>
+<br/>
+Successful commands sent after a state transition indicate that the next state has been reached. For example, PROTOCOL begins a connection and state changes to IDENTIFY once the hub has sent the SID.<br/>
+<br/>
+State description<br/>
+|PROTOCOL |Feature support recovery<br/>
+|IDENTIFY |User identification and static checks<br/>
+|VERIFY |Password check (does not exist in C-C communication unless announced by an extension)<br/>
+|NORMAL |Normal operation (end state)<br/>
+|DATA |Binary transfers. The state changes back to NORMAL once the transfer is complete.<br/>
+<br/>
+State always transitions from PROTOCOL to IDENTIFY and never from IDENTIFY to PROTOCOL. Likewise apply between IDENTIFY, VERIFY and NORMAL. This does not apply between NORMAL and DATA.<br/>
+<br/>
+A STA is valid in all states (except DATA) and may require that messages are resent (i.e. that the state transition does not occur).<br/>
+<br/>
+Any party may disconnect the connection if they receive invalid data or insufficient data. All implementations must therefore be prepared for a potential disconnection following each command, meaning that the following state is not achieved. A disconnection should be preceded by a STA or a QUI to indicate what was wrong.<br/>
+<br/>
+Note that the hub's INF is not required to be sent in IDENTIFY. The hub's INF shall be sent in IDENTIFY or as its first command in NORMAL.<br/>
+<br/>
+<strong class="text-strong">The client initiates the connection and state machine by sending its own SUP.</strong><br/>
+<br/>
+States<br/>
+PROTOCOL<br/>
+When the hub receives a SUP, it should reply with its own SUP followed by SID assignment. The hub transitions the state then to IDENTIFY. <br/>
+<br/>
+When the server party receives a SUP in the client-client connection, it should reply with its own SUP. The server transitions the state then to IDENTIFY.<br/>
+<br/>
+IDENTIFY<br/>
+The hub may initiate this state by sending its own INF in this state but is not required. The client shall send its INF <strong class="text-strong">whereupon </strong>the hub shall verify the PD and ID fields and other required fields deemed necessary by the hub. The hub transitions the state then to VERIFY if the user is registered or NORMAL if not.<br/>
+<br/>
+The server party in the client-client connection shall send its INF <strong class="text-strong">whereupon </strong>the client party shall send its INF. The server transitions the state then to NORMAL (or VERIFY if an extension implements this).<br/>
+<br/>
+VERIFY<br/>
+The hub shall send a GPA <strong class="text-strong">whereupon </strong>the client will respond with a PAS. The server transitions the state then to NORMAL.<br/>
+<br/>
+Client-client support for VERIFY must be signaled as an extension.<br/>
+<br/>
+NORMAL<br/>
+The hub shall send its INF if not done already. The server shall send the INF of all connected clients <strong class="text-strong">whereupon </strong>the connecting client's INF shall be last. Normal operation may then commence with chatting and file sharing.<br/>
+<br/>
+Normal operation may commence immediately in a client-client connection. Typically, the downloading party sends a GET <strong class="text-strong">whereupon</strong> the other party sends a SND followed with a stream of data.<br/>
+<br/>
+<strong class="text-strong">DATA<br/>
+The client and hub may engage in a data transfer, usually required if the data is too large to send in basic commands. The state is initiated by GET from either party, followed by a SND from the opposite party and then the data. Once the data transfer is complete, the state moves back to NORMAL.<br/>
+<br/>
+The DATA state functions similarly in client-client communication.</strong>
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2932">
+<div class="inner">
+<dl class="postprofile" id="profile2932">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2932">
+<h3><a href="#p2932">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Wed Dec 19, 2012 10:18 pm
+			</p>
+<div class="content">I was a bit too quick when it came to the DATA state. The following is a new change to it.<br/>
+<blockquote class="uncited"><div>NORMAL<br/>
+The hub shall send its INF if not done already. The server shall send the INF of all connected clients whereupon the connecting client's INF shall be last. Normal operation may then commence with chatting and file sharing.<br/>
+<br/>
+Normal operation may commence immediately in a client-client connection. Typically, the downloading party sends a GET whereupon the other party sends a SND <strong class="text-strong">followed by a transition to the DATA state.<br/>
+<br/>
+DATA<br/>
+The DATA state is an actual binary transfer state, it does not have any commands or other content beyond streaming data.<br/>
+<br/>
+The DATA state exist only in the client-client communication, an extension can be used to add binary transfers between a client and a hub. The DATA state commence after a SND command.</strong></div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2933">
+<div class="inner">
+<dl class="postprofile" id="profile2933">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2933">
+<h3><a href="#p2933">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Wed Dec 19, 2012 10:47 pm
+			</p>
+<div class="content">cologic's proposed changes:<br/>
+<blockquote class="uncited"><div>
+IDENTIFY<br/>
+The hub may initiate this state by sending its own INF in this state but is not required. The client shall send its INF whereupon the hub shall verify the PD and ID fields and other required fields deemed necessary by the hub. The hub transitions the state then to VERIFY if the user is registered or NORMAL if not.<br/>
+<br/>
+The <strong class="text-strong">client</strong> party in the client-client connection shall send its INF whereupon the <strong class="text-strong">server</strong> party shall send its INF. The server transitions the state then to NORMAL (or VERIFY if an extension implements this).
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2934">
+<div class="inner">
+<dl class="postprofile" id="profile2934">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2934">
+<h3><a href="#p2934">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Wed Dec 19, 2012 10:49 pm
+			</p>
+<div class="content">As I noted on the dev hub, my intention is to remove all mentioning of the state in commands, which would mean that any ambiguity is removed.<br/>
+<br/>
+Additionally, the example for the C-C connection needs to be updated to be according to cologic's proposed changes (switch place with the INF order).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2944">
+<div class="inner">
+<dl class="postprofile" id="profile2944">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 78</dd> <dd class="profile-joined"><strong>Joined:</strong> Wed Nov 26, 2008 5:04 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2944">
+<h3><a href="#p2944">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a></strong> » </span>Fri Dec 21, 2012 2:26 pm
+			</p>
+<div class="content">i feel there is some repetition between the "State description" table and §3. i would prefer if the table were moved in the place of §3 (along with the paragraph that follows the table, since it is also part of the generic description of the state machine).<br/>
+<br/>
+to go even further, i would move the bottom part (which details the various states) after that paragraph; and group other, more specific remarks (about STA, CTM etc) in an "Other notes" section.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2945">
+<div class="inner">
+<dl class="postprofile" id="profile2945">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 78</dd> <dd class="profile-joined"><strong>Joined:</strong> Wed Nov 26, 2008 5:04 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2945">
+<h3><a href="#p2945">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a></strong> » </span>Fri Dec 21, 2012 2:29 pm
+			</p>
+<div class="content">about DATA, it would be useful to explicitly state when the transition from DATA back to NORMAL happens. is it when a null char is encountered, when bytes specified in a previous command have been consumed, when a timemout has expired?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2946">
+<div class="inner">
+<dl class="postprofile" id="profile2946">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2946">
+<h3><a href="#p2946">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Sat Dec 22, 2012 12:31 pm
+			</p>
+<div class="content">Some editorial changes, incorporating poy's suggested changes. Added a small disclaimer in the top as well... Included an end state to DATA -- I don't know if it's applicable also with a timeout specified (what does current implementations do?).<br/>
+<blockquote class="uncited"><div>
+ADC defines a state machine to control flow and processing of messages. The state machine described should be considered as best-effort. The receiving end must ensure, according to the state machine, that it does not parse or drop messages while it is in the process of another state where the message might be invalid.<br/>
+<br/>
+State description<br/>
+|PROTOCOL |Feature support recovery<br/>
+|IDENTIFY |User identification and static checks<br/>
+|VERIFY |Password check (does not exist in C-C communication unless announced by an extension)<br/>
+|NORMAL |Normal operation (end state)<br/>
+|DATA |Binary transfers. The state changes back to NORMAL once the transfer is complete.<br/>
+<br/>
+The states presented are the login order, from top to bottom.<br/>
+<br/>
+States<br/>
+PROTOCOL<br/>
+When the hub receives a SUP, it should reply with its own SUP followed by SID assignment. The hub transitions the state then to IDENTIFY. <br/>
+<br/>
+When the server party receives a SUP in the client-client connection, it should reply with its own SUP. The server transitions the state then to IDENTIFY.<br/>
+<br/>
+IDENTIFY<br/>
+The hub may initiate this state by sending its own INF in this state but is not required. The client should send its INF whereupon the hub shall verify the PD and ID fields and other required fields. The hub transitions the state then to VERIFY if the user is registered or NORMAL if not.<br/>
+<br/>
+The client party in the client-client connection shall send its INF whereupon the server party shall send its INF. The server transitions the state then to NORMAL (or VERIFY if an extension implements this).<br/>
+<br/>
+VERIFY<br/>
+The hub shall send a GPA whereupon the client will respond with a PAS. The server transitions the state then to NORMAL.<br/>
+<br/>
+Client-client support for VERIFY must be signaled as an extension.<br/>
+<br/>
+NORMAL<br/>
+The hub should send its INF if not done already. The server shall send the INF of all connected clients whereupon the connecting client's INF shall be last. Normal operation may then commence with chatting and file sharing.<br/>
+<br/>
+Normal operation may commence immediately in a client-client connection. Typically, the downloading party sends a GET whereupon the other party sends a SND followed by a transition to the DATA state.<br/>
+<br/>
+DATA<br/>
+The DATA state is an actual binary transfer state, it does not have any commands or other content beyond streaming data.<br/>
+<br/>
+The DATA state exist only in the client-client communication, an extension can be used to add binary transfers between a client and a hub. The DATA state commence after a SND command.<br/>
+<br/>
+The state transitions back to NORMAL once the correct amount of bytes are transferred (specified by a previous command).<br/>
+<br/>
+Notes<br/>
+State always transitions from PROTOCOL to IDENTIFY and never from IDENTIFY to PROTOCOL. Likewise apply between IDENTIFY, VERIFY and NORMAL. This does not apply between NORMAL and DATA.<br/>
+<br/>
+Successful commands sent after a state transition indicate that the next state has been reached. For example, PROTOCOL begins a connection and state changes to IDENTIFY once the hub sends the SID.<br/>
+<br/>
+The state is shared between the client and the server while the server (implicitly) controls state transitions.<br/>
+<br/>
+The connecting party is known as the client and the other is known as the server (or hub). The client initiates the connection and state machine by sending its own SUP.<br/>
+<br/>
+A command is valid only in NORMAL unless noted otherwise.<br/>
+<br/>
+A STA is valid in all states (except DATA) and may require that messages are resent (i.e. that the state transition does not occur).<br/>
+<br/>
+It is always the client party in a client-client connection that sent the connection request (CTM/RCM) command that is given control of the connection once the NORMAL state has been reached.<br/>
+<br/>
+Any party may disconnect the connection if they receive invalid data or insufficient data. All implementations must therefore be prepared for a potential disconnection following each command, meaning that the following state is not achieved. A disconnection should be preceded by a STA or a QUI to indicate what was wrong.<br/>
+<br/>
+The hub's INF is optionally sent in IDENTIFY or in NORMAL.
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2948">
+<div class="inner">
+<dl class="postprofile" id="profile2948">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 78</dd> <dd class="profile-joined"><strong>Joined:</strong> Wed Nov 26, 2008 5:04 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2948">
+<h3><a href="#p2948">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a></strong> » </span>Sat Dec 22, 2012 2:30 pm
+			</p>
+<div class="content"><blockquote><div><cite>Pretorian wrote:</cite>Included an end state to DATA -- I don't know if it's applicable also with a timeout specified (what does current implementations do?).</div></blockquote>
+i've never seen a timeout transition from DATA back to NORMAL, and there's no reason to assume there would be one since the spec doesn't mention it. as far as i know, implementations simply disconnect if they encounter a timeout.<br/>
+<blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>The state machine described should be considered as best-effort.</div></blockquote></div></blockquote>
+i don't like this mention: makes it sound like this state description isn't absolute (which it really is). i understand the meaning (that one should be prepared to receive wrong commands) but would prefer a different phrasing.<br/>
+<blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>The connecting party is known as the client and the other is known as the server (or hub).</div></blockquote></div></blockquote>
+confusing. server or hub? i would just leave it as "server" here. imagine if an extension were to allow a "c-c" connection between a client &amp; a hub where the hub is the connecting party...<br/>
+<blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>A command is valid only in NORMAL unless noted otherwise.</div></blockquote></div></blockquote>
+since the intention is to remove state specs from individual message descriptions, let's specify them here. STA is mentioned, but not the rest. i can see the following messages which are valid outside of NORMAL: SUP, SID, INF, GPA, PAS, QUI.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2949">
+<div class="inner">
+<dl class="postprofile" id="profile2949">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2949">
+<h3><a href="#p2949">Re: State in ADC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Sat Dec 22, 2012 2:55 pm
+			</p>
+<div class="content"><blockquote><div><cite>poy wrote:</cite><blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>The state machine described should be considered as best-effort.</div></blockquote></div></blockquote>
+i don't like this mention: makes it sound like this state description isn't absolute (which it really is). i understand the meaning (that one should be prepared to receive wrong commands) but would prefer a different phrasing.</div></blockquote> Hm, perhaps one can remove that sentence as the same section already describe that implementations shall be prepared to manage this...<br/>
+<blockquote><div><cite>poy wrote:</cite><blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>The connecting party is known as the client and the other is known as the server (or hub).</div></blockquote></div></blockquote>
+confusing. server or hub? i would just leave it as "server" here. imagine if an extension were to allow a "c-c" connection between a client &amp; a hub where the hub is the connecting party... </div></blockquote> 1. I just added 'hub' as that's used elsewhere, perhaps the text should entirely use server, even in a client-hub context. 2. A "C-C" doesn't make sense from a C-H perspective... You'd just do a normal IGET/HGET etc. <br/>
+<blockquote><div><cite>poy wrote:</cite><blockquote><div><cite>Pretorian wrote:</cite><blockquote class="uncited"><div>A command is valid only in NORMAL unless noted otherwise.</div></blockquote></div></blockquote>
+since the intention is to remove state specs from individual message descriptions, let's specify them here. STA is mentioned, but not the rest. i can see the following messages which are valid outside of NORMAL: SUP, SID, INF, GPA, PAS, QUI.</div></blockquote> Well, my intention was to keep each message's "State: IDENTIFY, NORMAL", just remove all the descriptive text regarding state. From that perspective I think the sentence shall be kept. Potentially we could add a "State: NORMAL" to all other commands. All extensions must be accordingly updated to indicate that they are valid in state NORMAL (unless they do so already). Otherwise, how about something like:
+<blockquote class="uncited"><div>
+Messages are valid in the following states.<br/>
+|PROTOCOL |SUP, SID, STA<br/>
+|IDENTIFY |INF, STA<br/>
+|NORMAL |INF, STA, GET, SND
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			14 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/viewtopic.php?f=87&amp;t=806&amp;start=10" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/viewtopic.php?f=87&amp;t=806&amp;start=10" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/viewforum.php?f=87">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Pushed ideas”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=9"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=20"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=41"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=56"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=57"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=58"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=59"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=75"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=13"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=26"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=45"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=36"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=83"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=27"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=35"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=37"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=40"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=28"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=29"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=30"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=31"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=32"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=34"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=38"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=74"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=33"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=18"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=55"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=87"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=80"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=81"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=82"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=44"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=50"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=51"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=62"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=63"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=91"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=92"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=93"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title># Hashing--TTH - Page 1 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=12424&amp;start=10"># Hashing--TTH</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			44 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p63855">
+<div class="inner">
+<dl class="postprofile" id="profile63855">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content63855">
+<h3 class="first"><a href="#p63855"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-09-10 14:38
+			</p>
+<div class="content"><blockquote class="uncited"><div> I decided to change the name of the incomplete temp file, and then write a feature that will scan a given directory, pick out the incomplete DC++ files, and make a queue of their original names and hashes.  This will be implemented in an upcoming version of DC++, as will the "Preview partial file" menu choice, which address the two biggest concerns about my change.</div></blockquote>
+<br/>
+<br/>Me thinks the file name at the beginning with a junk tail is well off for checking files as they download! Since you are writing a well defined program for it you could as well leave the file extensions intact.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p63860">
+<div class="inner">
+<dl class="postprofile" id="profile63860">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content63860">
+<h3><a href="#p63860"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-10 15:57
+			</p>
+<div class="content"><blockquote><div><cite>nagan wrote:</cite>Since you are writing a well defined program for it you could as well leave the file extensions intact.</div></blockquote>
+<br/>.dctmp will stay on the end - it prevents incomplete files, if shared, from being returned with regular search hits (it's the extension that determines the type -  an .avi.dctmp file will not be returned for Video searches, but a *dctmp.*.avi file will be)  The preview function will work on the embedded extension, so I don't see any reason why incompletes should be changed in the filesystem as well.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p63921">
+<div class="inner">
+<dl class="postprofile" id="profile63921">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content63921">
+<h3><a href="#p63921"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-09-11 12:25
+			</p>
+<div class="content">Thnks Gargoyle for the reply. But in the future versions cant you make an incomplete folder mandatory and an algorithm to prevent it from being shared? Simple?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p63938">
+<div class="inner">
+<dl class="postprofile" id="profile63938">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content63938">
+<h3><a href="#p63938"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-11 16:07
+			</p>
+<div class="content"><blockquote><div><cite>nagan wrote:</cite>Thnks Gargoyle for the reply. But in the future versions cant you make an incomplete folder mandatory and an algorithm to prevent it from being shared? Simple?</div></blockquote>
+<br/>DC++ already has a mandatory incomplete folder and refuses to share your <strong class="text-strong">current</strong> incomplete folder.
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code> -- 0.4032 2004-08-08 --<br/>* Unfinished files now have a slightly different naming scheme (thanks garg)<br/>* Added default unfinished folder (thanks garg)<br/><br/> -- 0.302 2003-11-14 --<br/>* Temporary downloads folder no longer shared</code></pre></div>
+<br/>So sharing incomplete files isn't normally a problem.  However, you can share old incomplete folders, and incomplete files moved out of the incomplete folder.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64279">
+<div class="inner">
+<dl class="postprofile" id="profile64279">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64279">
+<h3><a href="#p64279"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-09-16 16:50
+			</p>
+<div class="content"><img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> Ok nailed!! But you may consider having the file name at the beginning.
+<br/>While on this subject ,it is common rule that dwnloaded files need to be sorted as per convenience that entails relegating files to different directories from the default download folder.Of course they will be shared.Now comes the issue! DC as per norms checks for any duplicate in the default dwnld directory.I may end up downloading ABC.mpeg  again (which has already been dwnld and moved to another folder).With TTH in force can you perform a check on all the shared directories so as to quell duplicates?Herculean task?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p64298">
+<div class="inner">
+<dl class="postprofile" id="profile64298">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64298">
+<h3><a href="#p64298"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-09-16 20:10
+			</p>
+<div class="content"><blockquote><div><cite>nagan wrote:</cite>Now comes the issue! DC as per norms checks for any duplicate in the default dwnld directory.I may end up downloading ABC.mpeg  again (which has already been dwnld and moved to another folder).With TTH in force can you perform a check on all the shared directories so as to quell duplicates?Herculean task?</div></blockquote>
+<br/>
+<br/>This has been requested before, and is probably already in the bug tracker.  If for some reason it's not, feel free to add it; I'll vote for it.
+<br/>
+<br/>If I'm reading the recent CVS code right, the incomplete file naming scheme has indeed been switched around to $filename.$ext.$tth.dctmp
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>string QueueManager::getTempName(const string&amp; aFileName, const TTHValue* aRoot) {<br/>   string tmp(aFileName);<br/>   if(aRoot != NULL) {<br/>      TTHValue tmpRoot(*aRoot);<br/>      tmp += "." + tmpRoot.toBase32();<br/>   }<br/>   tmp += TEMP_EXTENSION;<br/>   return tmp;<br/>}</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64310">
+<div class="inner">
+<dl class="postprofile" id="profile64310">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64310">
+<h3><a href="#p64310"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-16 23:50
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>If I'm reading the recent CVS code right, the incomplete file naming scheme has indeed been switched around to $filename.$ext.$tth.dctmp</div></blockquote>
+<br/>True, it was changed <a class="postlink" href="http://cvs.sourceforge.net/viewcvs.py/dcplusplus/dcplusplus/client/QueueManager.cpp?r1=1.98&amp;r2=1.99">last Saturday</a>.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p64441">
+<div class="inner">
+<dl class="postprofile" id="profile64441">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64441">
+<h3><a href="#p64441"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-09-18 17:41
+			</p>
+<div class="content"><img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/> Can you explain  and abbreviate CVS.Do we expect to see the implementation in the later versions or a patch can be made up?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64454">
+<div class="inner">
+<dl class="postprofile" id="profile64454">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=685">BSOD2600</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 503</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-27 23:47</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64454">
+<h3><a href="#p64454"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=685">BSOD2600</a></strong> » </span>2004-09-18 18:52
+			</p>
+<div class="content">" CVS -- or Concurrent Versioning System -- is a system for managing simultaneous development of files. It is in common use in large programming projects, and is also useful to system administrators, technical writers, and anyone who needs to manage files."
+<br/>
+<br/>"CVS stores files in a central repository, set (using standard Unix permissions) to be accessible to all users of the files. Commands are given to "check out" a copy of a file for development, and "commit" changes back to the repository. It also scans the files as they are moved to and from the repository, to prevent one person's work from overwriting another's."
+<br/>
+<br/>"This system ensures that a history of the file is retained..."
+<br/>
+<br/>
+<br/>You can browse the CVS here: <!-- m --><a class="postlink" href="http://cvs.sourceforge.net/viewcvs.py/dcplusplus/dcplusplus/">http://cvs.sourceforge.net/viewcvs.py/d ... cplusplus/</a><!-- m --></div>
+<div class="signature" id="sig64454"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dslreports.com/faq/dc">My DC++ FAQ</a>
+<br/><img alt="Image" class="postimage" src="http://imagegen.last.fm/lastfmrecent3v1/recenttracks/5/BSOD2600.gif"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p64455">
+<div class="inner">
+<dl class="postprofile" id="profile64455">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64455">
+<h3><a href="#p64455"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-09-18 18:54
+			</p>
+<div class="content">CVS is the place there the lateset source code is beeing stored. This source is often unstable, contains bugs or half-iplemented features and thats why it's just stored in the CVD respitory. And then arne feels that the code is ready for a new binary realease he releases it.</div>
+<div class="signature" id="sig64455"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64530">
+<div class="inner">
+<dl class="postprofile" id="profile64530">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64530">
+<h3><a href="#p64530"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-19 19:34
+			</p>
+<div class="content"><blockquote><div><cite>joakim_tosteberg wrote:</cite>his source is often unstable, contains bugs or half-iplemented</div></blockquote>
+<br/>Let's just say it's usually got big changes, and putting those changes in CVS allows other people to test it.  (It nearly always compiles and runs, just doesn't work the same way a release does.)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p64747">
+<div class="inner">
+<dl class="postprofile" id="profile64747">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64747">
+<h3><a href="#p64747"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-09-22 16:37
+			</p>
+<div class="content"><img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> While on this subject:-
+<br/>1.I find that files hashed  on starting DC++ dont find a place in the file list cause the file list is refreshed later--- embarassing!! If I had to sort files and rearrange them into directories and then start DC++ hashing takes place and it excludes those files from the share and it could affect the share size.Same is the case when the user runs 403 for the first time, after hashing te file list will show zero bytes!!.He has to restart it to get all the files reflected in the share.Why not make DC++ a little courteous to remind the user <em class="text-italics"><strong class="text-strong"><span style="font-size: 150%; line-height: 116%;">on the start of DC++</span></strong></em>whether he intends refreshing file list in case there is hashing (necessiated due to above reasons).
+<br/>
+<br/>2.Is there some sort of a log file for hashing to know only which files are indeed duplicates, to have them removed from the disk as well?
+<br/>
+<br/>3.Can hashing (refreshing) be done as user list refreshing by the user?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64756">
+<div class="inner">
+<dl class="postprofile" id="profile64756">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64756">
+<h3><a href="#p64756"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-22 19:12
+			</p>
+<div class="content"><blockquote><div><cite>nagan wrote:</cite>1.I find that files hashed  on starting DC++ dont find a place in the file list cause the file list is refreshed late ... He has to restart it to get all the files reflected in the share.</div></blockquote><br/>Any refreshes in &gt;= 0.4032 will list files that have been hashed since the last refresh, there's no need to restart.  The development version updates your file list up to every 15 minutes to include files that have been hashed recently.  So, there's nothing more to be done for the next version on that front.<br/><br/><blockquote><div><cite>nagan wrote:</cite>2.Is there some sort of a log file for hashing to know only which files are indeed duplicates, to have them removed from the disk as well?</div></blockquote><br/>Yes, this has been in DC++ for a while now - enable the "Log System Messages" in Logs and Sounds.<br/><br/><blockquote><div><cite>nagan wrote:</cite>3.Can hashing (refreshing) be done as user list refreshing by the user?</div></blockquote>
+<br/>Yes, See point 1.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p64832">
+<div class="inner">
+<dl class="postprofile" id="profile64832">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64832">
+<h3><a href="#p64832"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-09-23 15:37
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>Any refreshes in &gt;= 0.4032 will list files that have been hashed since the last refresh, there's no need to restart.  The development version updates your file list up to every 15 minutes to include files that have been hashed recently.  So, there's nothing more to be done for the next version on that front.<br/></div></blockquote>
+<br/>
+<br/>Well what is the point if the user is not able to connect to the hubs for 15 minutes in case he runs it for the first time or he happens to rearrange files that could affect the share until refreshed?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64860">
+<div class="inner">
+<dl class="postprofile" id="profile64860">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64860">
+<h3><a href="#p64860"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-09-23 20:26
+			</p>
+<div class="content">He should twiddle his thumbs for 15 minutes, what else?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p64952">
+<div class="inner">
+<dl class="postprofile" id="profile64952">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64952">
+<h3><a href="#p64952"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-24 23:35
+			</p>
+<div class="content"><blockquote><div><cite>nagan wrote:</cite>Well what is the point if the user is not able to connect to the hubs for 15 minutes in case he runs it for the first time or he happens to rearrange files that could affect the share until refreshed?</div></blockquote>
+<br/>Given that DC++ is sharing only hashed files, what do you expect the solution to be?  At 10-30 megabytes per second, 9,000 - 27,000 mb will be done in those initial minutes.
+<br/>
+<br/>I'd suggest writing an email to an old friend, going outside for a breath of fresh air, or registering to vote.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p64962">
+<div class="inner">
+<dl class="postprofile" id="profile64962">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7686">Xan1977</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 627</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-06 01:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64962">
+<h3><a href="#p64962"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7686">Xan1977</a></strong> » </span>2004-09-25 00:17
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>or registering to vote.</div></blockquote>
+<br/>hear, hear!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p64964">
+<div class="inner">
+<dl class="postprofile" id="profile64964">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content64964">
+<h3><a href="#p64964"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-25 00:26
+			</p>
+<div class="content"><blockquote><div><cite>Xan1977 wrote:</cite>hear, hear!</div></blockquote>
+<br/>Two quips I saw today, one for each party: 
+<br/>"Boots or Flip-Flops?"
+<br/>"Stop mad cowboy disease, vote for Kerry"
+<br/>
+<br/> know the USA is one of the worst countries for voter turnout, but none of them are spectacular - so my original advice stands. <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65200">
+<div class="inner">
+<dl class="postprofile" id="profile65200">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65200">
+<h3><a href="#p65200"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-09-28 16:53
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>Given that DC++ is sharing only hashed files, what do you expect the solution to be?  At 10-30 megabytes per second, 9,000 - 27,000 mb will be done in those initial minutes.<br/>I'd suggest writing an email to an old friend, going outside for a breath of fresh air, or registering to vote.</div></blockquote>
+<br/>
+<br/>Appreciate your way of making things clear that this point is not to be considered now!!
+<br/>Well shares need to be so large 9000 -27000 mb ?.........Hmm....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65224">
+<div class="inner">
+<dl class="postprofile" id="profile65224">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65224">
+<h3><a href="#p65224"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-09-28 18:19
+			</p>
+<div class="content"><blockquote><div><cite>nagan wrote:</cite>Well shares need to be so large 9000 -27000 mb ?.........Hmm....</div></blockquote>
+<br/>9 - 27 gigabytes is not a large share, and that's what DC++ will hash in 15 minutes on an average system.  (at 10-30 mb/s)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65356">
+<div class="inner">
+<dl class="postprofile" id="profile65356">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65356">
+<h3><a href="#p65356"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-09-30 13:06
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>nagan wrote:</cite>Well shares need to be so large 9000 -27000 mb ?.........Hmm....</div></blockquote><br/>9 - 27 gigabytes is not a large share, and that's what DC++ will hash in 15 minutes on an average system.  (at 10-30 mb/s)</div></blockquote>
+<br/>
+<br/>Well for people with lesser shares hashing of which completes in 5 to 10 min ,they might have to wait for some time or restart DC++ again.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65379">
+<div class="inner">
+<dl class="postprofile" id="profile65379">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65379">
+<h3><a href="#p65379"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-09-30 19:26
+			</p>
+<div class="content">Or they could be clueful and use /refresh (assuming you're not talking about 0.4033, which is a little different)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65397">
+<div class="inner">
+<dl class="postprofile" id="profile65397">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65397">
+<h3><a href="#p65397"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-10-01 00:10
+			</p>
+<div class="content">It was my understanding that we <span style="text-decoration: underline">were</span> talking about the changes in CVS that became 0.4033.
+<br/>
+<br/>
+<br/>For people with smaller shares who finish hashing in 5-10 minutes, refreshing is positively not an issue, if you've been paying attention to what I've been saying....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65748">
+<div class="inner">
+<dl class="postprofile" id="profile65748">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65748">
+<h3><a href="#p65748"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-10-05 14:14
+			</p>
+<div class="content">You have got a point!! Why not bring the "refresh"  button to the main screen. That way the new users will have a "clue".</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65764">
+<div class="inner">
+<dl class="postprofile" id="profile65764">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65764">
+<h3><a href="#p65764"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-10-05 18:41
+			</p>
+<div class="content">Maybe because it's already a menu option, a /command, and a keyboard shortcut?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65782">
+<div class="inner">
+<dl class="postprofile" id="profile65782">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65782">
+<h3><a href="#p65782"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2004-10-06 04:30
+			</p>
+<div class="content">No, I agree with Nagan; those provides too little clue. I propose:
+<br/><img alt="Image" class="postimage" src="http://utrum.dyndns.org:8000/ref1.png"/>
+<br/><img alt="Image" class="postimage" src="http://utrum.dyndns.org:8000/ref2.png"/>
+<br/>In fact, not one, but fully five of my toolbar icons are "Refresh".</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65786">
+<div class="inner">
+<dl class="postprofile" id="profile65786">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65786">
+<h3><a href="#p65786"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2004-10-06 08:07
+			</p>
+<div class="content">I propose we put in a nag-screen every 10 minutes that asks if the user wants to refresh.</div>
+<div class="signature" id="sig65786"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65805">
+<div class="inner">
+<dl class="postprofile" id="profile65805">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65805">
+<h3><a href="#p65805"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-10-06 15:25
+			</p>
+<div class="content">Posted by gargoyle on 22-09-04
+<br/><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>nagan wrote:</cite>2.Is there some sort of a log file for hashing to know only which files are indeed duplicates, to have them removed from the disk as well?</div></blockquote><br/>Yes, this has been in DC++ for a while now - enable the "Log System Messages" in Logs and Sounds.</div></blockquote>
+<br/>System logs grow in size daily with lots of average data ,dup files have to be searched for. Some log showing only the duplicate files will be more purposeful?Rather than a report (which may get deleted) if it is interactive (taking the details from the "Hash Data" ) on request it would be useful?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65807">
+<div class="inner">
+<dl class="postprofile" id="profile65807">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65807">
+<h3><a href="#p65807"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-10-06 15:57
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>Maybe because it's already a menu option, a /command, and a keyboard shortcut?</div></blockquote><br/>Hear, hear.<br/><br/><blockquote><div><cite>nagan wrote:</cite>Some log showing only the duplicate files will be more purposeful?Rather than a report (which may get deleted)</div></blockquote>
+<br/>If you delete the file that contains the information you want, that's too bad.
+<br/>
+<br/>Eventually, the system log may have "areas" within it (anyone who has read /var/log/messages knows what I'm talking about), but splitting duplicates out into a separate log file is absolutely ludicrous - it's the exact opposite of the purpose of system.log.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65879">
+<div class="inner">
+<dl class="postprofile" id="profile65879">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65879">
+<h3><a href="#p65879"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-10-07 14:33
+			</p>
+<div class="content"><blockquote><div><cite>Gargoyle wrote:</cite><blockquote><div><cite>PseudonympH wrote:</cite>Maybe because it's already a menu option, a /command, and a keyboard shortcut?</div></blockquote><br/>Hear, hear..</div></blockquote><br/>Might as well hear the comment (with proof) just 2 posts earlier.<br/><blockquote><div><cite>Gargoyle wrote:</cite>If you delete the file that contains the information you want, that's too bad.Eventually, the system log may have "areas" within it (anyone who has read /var/log/messages knows what I'm talking about), but splitting duplicates out into a separate log file is absolutely ludicrous - it's the exact opposite of the purpose of system.log.</div></blockquote>
+<br/>Agreed.After every refresh all the duplicates are listed at the end.What I was talking of was a function to list all the duplicate files along with a checkbox The user can check them and DC can  directly consign it to recycle bin .
+<br/>
+<br/>As of the log messages rather than list all the files hashed (which is expected and obvious) can those which went contrary alone be listed ,ofcourse with the other necessary logs! If a user could read any useful data out of the log of 1000's of files hashed ,well no complaints.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p66489">
+<div class="inner">
+<dl class="postprofile" id="profile66489">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content66489">
+<h3><a href="#p66489"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-10-12 15:02
+			</p>
+<div class="content"><blockquote><div><cite>nagan wrote:</cite>Might as well hear the comment (with proof) just 2 posts earlier.</div></blockquote><br/>I saw nothing that would convince me.  Want to repeat it?<br/><blockquote><div><cite>nagan wrote:</cite>What I was talking of was a function to list all the duplicate files along with a checkbox The user can check them and DC can  directly consign it to recycle bin .</div></blockquote>
+<br/>Why add another feature to DC++ when specialized applications do the same thing, and do a better job of it?
+<br/><a class="postlink" href="http://www.kewlit.com/duplic8/">Duplic8 - Duplicate File finder and manager</a>
+<br/>
+<br/>If users wanted to remove the duplicates from their share, a proper tool is only a google search away...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p66526">
+<div class="inner">
+<dl class="postprofile" id="profile66526">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content66526">
+<h3><a href="#p66526"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-10-12 17:01
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite> I saw nothing that would convince me.  Want to repeat it?</div></blockquote><br/>Well ,the post from 'Cologic" on 6-10-04 (dd-mm-yy).<br/><blockquote><div><cite>GargoyleMT wrote:</cite> Why add another feature to DC++ when specialized applications do the same thing, and do a better job of it.If users wanted to remove the duplicates from their share, a proper tool is only a google search away...</div></blockquote>
+<br/>Gee thanks Gargoyle! So long as the technology employed by the other tool is as perfect as hashing ,so that it does not contradict DC++.
+<br/>
+<br/>Meanwhile I posted a request to Bugzilla with the theme "Resume function for file lists" as DC++ always starts dwnloading of file lists from the beginning even  incase of interruption or disconnection. .Am not able to locate its status</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p66561">
+<div class="inner">
+<dl class="postprofile" id="profile66561">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content66561">
+<h3><a href="#p66561"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-10-12 19:10
+			</p>
+<div class="content"><blockquote><div><cite>nagan wrote:</cite>Well ,the post from 'Cologic" on 6-10-04 (dd-mm-yy).</div></blockquote><br/>He was mocking you, with the hope of making you see how rediculous your request was.<br/><blockquote><div><cite>nagan wrote:</cite>Gee thanks Gargoyle! So long as the technology employed by the other tool is as perfect as hashing ,so that it does not contradict DC++.</div></blockquote><br/>Gee, if you want more bloat added to DC++, feel free to try to get arne to code <span style="text-decoration: underline">that</span> feature for you.<br/><br/><blockquote><div><cite>nagan wrote:</cite>Meanwhile I posted a request to Bugzilla with the theme "Resume function for file lists" as DC++ always starts dwnloading of file lists from the beginning even  incase of interruption or disconnection. .Am not able to locate its status</div></blockquote>
+<br/>Bug 194: <a class="postlink" href="http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=194">Resume file list transfers</a>?
+<br/>
+<br/>It's in bugzilla.  What more do you want to know?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p67904">
+<div class="inner">
+<dl class="postprofile" id="profile67904">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 28</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-05 17:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content67904">
+<h3><a href="#p67904"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28290">nagan</a></strong> » </span>2004-10-22 10:28
+			</p>
+<div class="content">Thanks cologic for taking pains to prove a point.But I stil feel adding a refresh file list icon to the toolbar icons will add more "Beauty" to the "Brain (dc++)"</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			44 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

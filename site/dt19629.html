@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ADC 0.12 open issues - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=19629">ADC 0.12 open issues</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			8 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p97241">
+<div class="inner">
+<dl class="postprofile" id="profile97241">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5675">FarCry</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 34</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-01 15:49</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97241">
+<h3 class="first"><a href="#p97241">ADC 0.12 open issues</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5675">FarCry</a></strong> » </span>2006-12-23 20:51
+			</p>
+<div class="content">Most of the issues and open questions regarding the current ADC protocol draft (V0.12) have already been discussed on the developer's hub, but I'd like to repeat them here, where they are less likely to be forgotten and perhaps reach others to comment on them:<br/>
+<br/>
+2.4.1 Session ID<br/>
+"The hub may reuse SIDs  as they become free when clients disconnect." - This sentence can probably be removed, since it is already sufficiently clear from "They identify a unique user on a single hub". I'm mentioning it, because it is an implementation hint which can be misleading without further explanation. Too greedy reuse of SIDs by the hub can lead to problems in the form of race conditions, where a command sent by one client reaches the wrong target because the intended target was disconnected and the SID reclaimed for a newly connected client. Suggesting precautions against such problems is beyond the scope of the protocol specs, and so I'd prefer the implementation hint be removed completely.<br/>
+<br/>
+2.4.2 Private ID<br/>
+The suggested way of generating PIDs is too complicated compared to its value for the security of the protocol. DC++ does not use it and other implementations will probably also revert to alternative methods of generating a random PID. The specs should not provoke such violations by being overly complicated. It would however be nice to be able to specify some minimum level of randomness of a PID. Perhaps some math expert could help us out here.<br/>
+<br/>
+4 BASE messages<br/>
+The message constraints have been changed in one of the last revisions from direct specification of allowed types for each command to a loose context grouping. This may have made editing the draft easier when types were added or changed, but it's not clear enough as a guideline for implementations anymore. I don't think it should be left up to a hub implementation wether it forwards commands like BRCM or BCTM, as that opens the doors for abuse and puts client implementers in a difficult position.<br/>
+<br/>
+4.3.1 STA<br/>
+"43 Required INF field missing/bad, flag “FL” specifies the name of field." should probably be split into "field missing" and "field bad" and made independent of the "INF" context, so we have two independent generic errors for wrong or missing parameters which a client could in some cases handle automatically.<br/>
+<br/>
+4.3.5 INF<br/>
+"For OP, AW, BO, HI and HU, unspecified values are reserved for the future." - This should either be refined or removed, as it leaves the question open how those reserved values should be treated and thus renders the specified values useless. If an extended client sends "OP2" in the future, should a BASE client read that as "OP" (empty or 0) or "OP1"? The reserved values fail to deliver the information of the original values.<br/>
+It would also perhaps be interesting to put the information carried by OP, RG, BO and HI into one single field (like CT for Client Type).<br/>
+<br/>
+4.3.5 MSG<br/>
+The purpose of the PM field and &lt;group-SID&gt; parameter is not sufficiently explained. The description also seems to suggest that a chat-room bot should use the SID of the clients from which the message originated as the my_sid of the underlying message layout and put its own SID into the PM field for forwarding. I think that is putting the (perceived) layering of the protocol on its head, as the basic (type-related) parameters should be verifyable without looking at the transported command type. The my_sid should always be the SID of the client that sends the (ADC) message.<br/>
+<br/>
+4.3.8 CTM and 4.3.9 CTM<br/>
+It's not consistent with the rest of the protocol that a named parameter should be in the list of mandatory parameters. The token for these commands should either be an unnamed mandatory parameter or a named optional parameter.<br/>
+<br/>
+4.3.13 DSC<br/>
+It has been discussed to remove this command and if I remember correctly, arnetheduck agreed to do so. I'm mentioning it just to make sure <img alt=";)" class="smilies" height="15" src="/images/smilies/icon_wink.gif" title="Wink" width="15"/><br/>
+<br/>
+6.3.1 ZLIB-FULL<br/>
+ZOF is not needed.<br/>
+<br/>
+There are certainly some things I have forgotten. I remember at least one problem in the Message syntax section, but I couldn't find it in a quick review. I hope others will complete this list. I didn't use the Wiki in hope for a wider audience and more input (I personally never check the Wiki unless someone points me to it). Once the currently known issues are resolved, I think arnetheduck should post a "release candidate" revision and perhaps post a last "call for suggestions" here with a proper deadline, so that ADC gets a V1.0 protocol specification soon.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p97242">
+<div class="inner">
+<dl class="postprofile" id="profile97242">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97242">
+<h3><a href="#p97242"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-12-23 21:38
+			</p>
+<div class="content">I'd like to remove the following, based on that I don't think the protocol should explicitly state what clients or hubs should or shouldn't do (or be able to). The line between a mere suggestion and a demand is thin, which makes me hesitant to (not) include certain parts of the current draft. <blockquote class="uncited"><div>Applications should be prepared to handle at least 64-bit signed integers and 64-bit floating point numbers.</div></blockquote><blockquote class="uncited"><div>Hubs should not discriminate agains clients based on their VE tag but instead rely on SUP when it comes to which clients should be allowed (for example, “we only want regex clients”). </div></blockquote> <blockquote class="uncited"><div>When sent for hub, this is the nick that should be displayed before messages from the hub</div></blockquote> <blockquote class="uncited"><div>When sent by hub, this string should be displayed in the window title of the hub window (if one exists).</div></blockquote></div>
+<div class="signature" id="sig97242"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p97314">
+<div class="inner">
+<dl class="postprofile" id="profile97314">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5675">FarCry</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 34</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-01 15:49</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97314">
+<h3><a href="#p97314"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5675">FarCry</a></strong> » </span>2006-12-27 19:59
+			</p>
+<div class="content">Unless I have missed the obvious, there is also a problem with client-to-client download connections, especially from the perspective of passive mode clients.<br/>
+<br/>
+With an active mode client (AC) as source and a passive mode client (PC) as downloader, the connection request always looks like this over the hub connection:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    PC -&gt; AC DRCM...
+    AC -&gt; PC DCTM...
+</code></pre></div>
+After that, the passive mode client connects to the specified port of the active  mode client, which always puts him in the role of the client in the client-to-client handshake:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    PC -&gt; AC CSUP...
+    AC -&gt; PC CSUP... CINF...
+    PC -&gt; AC CINF...
+</code></pre></div>
+That's where the protocol specification ends. The example at the bottom of the draft suggests that it's now the server's (active mode client's) turn to respond. This doesn't work well for the PC, as there is no clean way for the AC to pass control to the PC. Having the order undefined and just letting both sides send a CGET concurrently is not a good solution. A CSTA could be used to pass control, but there still could be a lot of unnecessary roundtrips for each attempt, as the AC will always start with CGETs from his side, if it also wants files from the PC.<br/>
+<br/>
+Alternatively, the connection token could be used to determine which client is supposed to speak first after the handshake - whoever issued the token requested the connection and should thus be allowed to send the CGET first. In this case, the token cannot be optional in RCM and CTM, of course.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p97317">
+<div class="inner">
+<dl class="postprofile" id="profile97317">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97317">
+<h3><a href="#p97317"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2006-12-27 21:53
+			</p>
+<div class="content">2.4.1 - changed (also added that 0 is always the hub itself).<br/>
+2.4.2 - changed to no longer mandate it.<br/>
+4 - I believe it should be up to the implementation - I'd also suggest a wiki page with annotations to the spec where implementation suggestions are added. <br/>
+4.3.1 - split into "FM" and "FB".<br/>
+4.3.5 - Removed. Merged some of them.<br/>
+4.3.8 - Removed "TO".<br/>
+4.3.13 - Removed.<br/>
+6.3.1 - Removed.<br/>
+<br/>
+Passive clients:
+<blockquote class="uncited"><div>It is always the client that sends the first CTM/RCM command that is given control of the connection once the NORMAL state has been reached.</div></blockquote>
+
+I still need to think about the PM's, but one can argue that the sender of a message is the client of the user that actually wrote the message, while the PM field contains just a reply-to address, much like a mailing list. This of course makes sense if groups are implemented on the hub side, not by a bot or something like that...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p97329">
+<div class="inner">
+<dl class="postprofile" id="profile97329">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97329">
+<h3><a href="#p97329"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2006-12-28 07:58
+			</p>
+<div class="content"><blockquote><div><cite>FarCry wrote:</cite>
+Alternatively, the connection token could be used to determine which client is supposed to speak first after the handshake - whoever issued the token requested the connection and should thus be allowed to send the CGET first. In this case, the token cannot be optional in RCM and CTM, of course.</div></blockquote>
+
+This is what i have always thought would be the best solution. To use the TO-token to remove the direction-battle. <br/>
+<br/>
+As a server in c-c connections, I think its in the servers interest to get a token since its the only information used to identify the party in a secure manner.</div>
+<div class="signature" id="sig97329">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p97403">
+<div class="inner">
+<dl class="postprofile" id="profile97403">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=102884">Jove</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-10-12 17:22</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97403">
+<h3><a href="#p97403"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=102884">Jove</a></strong> » </span>2006-12-31 15:12
+			</p>
+<div class="content"><blockquote><div><cite>arnetheduck wrote:</cite>I still need to think about the PM's, but one can argue that the sender of a message is the client of the user that actually wrote the message, while the PM field contains just a reply-to address, much like a mailing list. This of course makes sense if groups are implemented on the hub side, not by a bot or something like that...</div></blockquote>
+
+An interesting question: Should the group support (ie, the PM parameter) be part of base? If not, then this supports FarCry's suggestion and the PM parameter can be moved to an extension.<br/>
+<br/>
+Also allowing groups to be implemented by bots is sensible too.It adds to the flexibility of the protocol. <br/>
+Personally i would love to see those annoying trivia bots running in their own seperate room...<br/>
+<blockquote><div><cite>ivulfusbar wrote:</cite>
+As a server in c-c connections, I think its in the servers interest to get a token since its the only information used to identify the party in a secure manner.</div></blockquote>
+
+I agree.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p97404">
+<div class="inner">
+<dl class="postprofile" id="profile97404">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5675">FarCry</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 34</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-01 15:49</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97404">
+<h3><a href="#p97404"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5675">FarCry</a></strong> » </span>2006-12-31 15:40
+			</p>
+<div class="content"><blockquote><div><cite>arnetheduck wrote:</cite>2.4.1 - changed (also added that 0 is always the hub itself).</div></blockquote>
+
+We've been there before, haven't we? What does the hub need an SID for?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p97719">
+<div class="inner">
+<dl class="postprofile" id="profile97719">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5675">FarCry</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 34</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-01 15:49</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97719">
+<h3><a href="#p97719"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5675">FarCry</a></strong> » </span>2007-01-10 08:07
+			</p>
+<div class="content">The distinction between U4 and U6 for INF fields seems to be redundant, because using both is impractical and the (verifiable) protocol version is already given by I4/I6. The port field could simply be UP for "UDP port".</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			8 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

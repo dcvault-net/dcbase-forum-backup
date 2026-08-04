@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Problem connecting to adch - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="24" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=24" itemprop="url"><span itemprop="title">adchpp</span></a></span>
+<span class="crumb" data-forum-id="20" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=20" itemprop="url"><span itemprop="title">adchpp general</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=20&amp;t=19149">Problem connecting to adch</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">General adchpp discussion<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			23 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p95821">
+<div class="inner">
+<dl class="postprofile" id="profile95821">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content95821">
+<h3 class="first"><a href="#p95821">Problem connecting to adch</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-11-12 17:50
+			</p>
+<div class="content">Having trouble connecting to the adchpp.  Other people can get in fine, but when i connect i have to either use localhost or my lanip addy.<br/>
+When using my external i get <br/>
+[17:46:46] *** No connection could be made because the target machine actively refused it.<br/>
+<br/>
+When using localhost<br/>
+[17:45:01] *** Connecting to adc://127.0.0.1:2780...<br/>
+[17:45:01] *** Connected<br/>
+[17:45:01] &lt;ADCH&gt; Your ip is 127.0.0.1<br/>
+[17:45:01] *** An existing connection was forcibly closed by the remote host.<br/>
+<br/>
+Lanip (192.168.0.1) gives something very similar to that.  Any ideas ?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p95823">
+<div class="inner">
+<dl class="postprofile" id="profile95823">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content95823">
+<h3><a href="#p95823"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-11-12 21:10
+			</p>
+<div class="content">Could it just be that your router doesn't loop connection attempts if you try your external IP?  You should be able to see it with wireshark, so you can test my hypothesis.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p95854">
+<div class="inner">
+<dl class="postprofile" id="profile95854">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content95854">
+<h3><a href="#p95854"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-11-13 19:05
+			</p>
+<div class="content">Nice, didn't know ethereal had been updated. <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/><br/>
+However i not really sure what to look for ?  I figured my router didn't support loop back a while ago, when connecting to my nmdc hubs.<br/>
+But i could connect to them using localhost, whereas adchpp disconnects me when i try using that.  <img alt=":cry:" class="smilies" height="15" src="/images/smilies/icon_cry.gif" title="Crying or Very sad" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p95898">
+<div class="inner">
+<dl class="postprofile" id="profile95898">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content95898">
+<h3><a href="#p95898"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-11-15 01:21
+			</p>
+<div class="content">Oh my, sorry, I had this problem myself, but I didn't recognize it from your initial description (which should have been enough).  Since you're NATed, you've probably force an IP in DC++.   This IP won't match what adch++ sees you connecting with, so it disconnects you.  Maybe one of the lua gurus can script around this behavior - it's why NMDC hubs have exceptions to the IP checking.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p95930">
+<div class="inner">
+<dl class="postprofile" id="profile95930">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content95930">
+<h3><a href="#p95930"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-11-15 09:45
+			</p>
+<div class="content">hehe, okay, or alternatively since you, I and probably others suffer from this, i could submit a patch to adchpp ?.<br/>
+(Just have a skip allowed ip's, to skip this check, in the config file ?, or just get it to ignore Localhost, and the standard LAN ip ranges)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p95991">
+<div class="inner">
+<dl class="postprofile" id="profile95991">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105408">Quattro</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 166</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-11 14:23</dd>
+</dl>
+<div class="postbody">
+<div id="post_content95991">
+<h3><a href="#p95991"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105408">Quattro</a></strong> » </span>2006-11-16 15:56
+			</p>
+<div class="content">DCH++ had a plugin to correct this behaviour...<br/>
+maybe that could be ported to adch++? just like all the others (if appropriate) should be ^^</div>
+<div class="signature" id="sig95991">You can send a message around the world in 1/7 of a second; yet it may take several years to move a simple idea through a 1/4 inch of human skull.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p95992">
+<div class="inner">
+<dl class="postprofile" id="profile95992">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content95992">
+<h3><a href="#p95992"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-11-16 17:44
+			</p>
+<div class="content">Simple patch to sort it.  <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Index: adchpp/trunk/adchpp/ClientManager.cpp
+===================================================================
+--- adchpp/trunk/adchpp/ClientManager.cpp	(revision 86)
++++ adchpp/trunk/adchpp/ClientManager.cpp	(working copy)
+@@ -288,7 +288,7 @@
+ 	for(StringIter j = cmd.getParameters().begin(); j != cmd.getParameters().end(); ++j) {
+ 		if(j-&gt;compare(0, 2, "I4") == 0) {
+ 			dcdebug("%s verifying ip\n", AdcCommand::fromSID(c.getSID()).c_str());
+-			if(j-&gt;size() == 2) {
++			if(j-&gt;size() == 2 || (c.getIp() == "127.0.0.1")) {
+ 				// Clearing is ok
+ 			} else if(j-&gt;compare(2, j-&gt;size()-2, "0.0.0.0") == 0) {
+ 				c.setField("I4", c.getIp());
+</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p96052">
+<div class="inner">
+<dl class="postprofile" id="profile96052">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96052">
+<h3><a href="#p96052"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-11-19 20:08
+			</p>
+<div class="content">Good patch for your problem.  There will be others behind a NAT running adchpp on a different machine, so eventually the hub needs to be take that into account.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96074">
+<div class="inner">
+<dl class="postprofile" id="profile96074">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96074">
+<h3><a href="#p96074"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-11-20 00:20
+			</p>
+<div class="content">That's why i initially suggested adding some settings for it.  Decided against doing it that way for now, since i figured querying the xml everytime an IP wanted checking might decrease performance. <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/><br/>
+Obviously that patch can be modded to permit specified lan ip's easy enough for other people, but i figure that'll do me for now, until a nicer way turns up.<br/>
+Suggestions are welcome, and i'll have a go at doing some. <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p96402">
+<div class="inner">
+<dl class="postprofile" id="profile96402">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 99</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-15 22:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96402">
+<h3><a href="#p96402"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a></strong> » </span>2006-12-01 18:55
+			</p>
+<div class="content">I guess I need this patch because I can't join my own hub: <br/>
+<br/>
+[18:49:49] *** Connecting to adc://127.0.0.1:2780...<br/>
+[18:49:49] *** Connected<br/>
+[18:49:50] Your ip is 127.0.0.1<br/>
+[18:49:50] *** An existing connection was forcibly closed by the remote host.<br/>
+<br/>
+How can a retard like me get in his own hub?<br/>
+<br/>
+BTW cheers very much Pothead, other people are able to join, so I assume it's working well.</div>
+<div class="signature" id="sig96402">"Every Englishman must have a hobby. Some like to collect the stamp, some like to make the jam, but the most fun is to a kill a little animal with a shotgun or rip them up with wild dog."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96405">
+<div class="inner">
+<dl class="postprofile" id="profile96405">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96405">
+<h3><a href="#p96405"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-12-01 19:50
+			</p>
+<div class="content"><a class="postlink" href="http://www.freetohost.co.uk/mike/adchpp/adchpp-svn86-localhost-patch.rar">http://www.freetohost.co.uk/mike/adchpp ... -patch.rar</a> <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p96406">
+<div class="inner">
+<dl class="postprofile" id="profile96406">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 99</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-15 22:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96406">
+<h3><a href="#p96406"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a></strong> » </span>2006-12-01 19:59
+			</p>
+<div class="content">Thanks mate, you are very kind, it's working. I guess most of this will require plugins, but is there a way to register for the hublist, and to add Ops, and to create an MOTD, and to set min share/max hubs?</div>
+<div class="signature" id="sig96406">"Every Englishman must have a hobby. Some like to collect the stamp, some like to make the jam, but the most fun is to a kill a little animal with a shotgun or rip them up with wild dog."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96426">
+<div class="inner">
+<dl class="postprofile" id="profile96426">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96426">
+<h3><a href="#p96426"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-12-02 02:41
+			</p>
+<div class="content">You can register on the adc hublist website. <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/><br/>
+How i sorted Op accounts out was using the !regme command, then manually editing the users.txt file.  Probably a better way in access.lua. <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/><br/>
+I sure there is some way to set MOTD, not cannot think of it at the moment.<br/>
+No idea about min share / max hubs, again worth looking through the adchpp.xml and access.lua files. <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p96428">
+<div class="inner">
+<dl class="postprofile" id="profile96428">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 99</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-15 22:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96428">
+<h3><a href="#p96428"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a></strong> » </span>2006-12-02 03:10
+			</p>
+<div class="content">I tried at <a class="postlink" href="http://www.adchublist.org/?p=addhub">http://www.adchublist.org/?p=addhub</a> using hubaddress:portnumber and adc://hubaddress:portnumber<br/>
+<br/>
+and got:<br/>
+<br/>
+The hub in address &lt;hub&gt; didn't answer. Maybe there is no hub or the hub is full. Check the address and try again.<br/>
+Error 110: Connection timed out<br/>
+<br/>
+Sod it. Anyway, cheers for your other help once again <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/></div>
+<div class="signature" id="sig96428">"Every Englishman must have a hobby. Some like to collect the stamp, some like to make the jam, but the most fun is to a kill a little animal with a shotgun or rip them up with wild dog."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96829">
+<div class="inner">
+<dl class="postprofile" id="profile96829">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114964">newborn</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-12-10 23:31</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96829">
+<h3><a href="#p96829"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114964">newborn</a></strong> » </span>2006-12-11 23:05
+			</p>
+<div class="content"><blockquote><div><cite>imb wrote:</cite>I tried at <a class="postlink" href="http://www.adchublist.org/?p=addhub">http://www.adchublist.org/?p=addhub</a> using hubaddress:portnumber and adc://hubaddress:portnumber<br/>
+<br/>
+and got:<br/>
+<br/>
+The hub in address &lt;hub&gt; didn't answer. Maybe there is no hub or the hub is full. Check the address and try again.<br/>
+Error 110: Connection timed out<br/>
+</div></blockquote>
+<br/>
+ditto   <img alt=":?" class="smilies" height="15" src="/images/smilies/icon_confused.gif" title="Confused" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p96832">
+<div class="inner">
+<dl class="postprofile" id="profile96832">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 99</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-15 22:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96832">
+<h3><a href="#p96832"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a></strong> » </span>2006-12-11 23:55
+			</p>
+<div class="content">This is a shambles really. They're promoting ADC, no make that imposing ADC, when ADC isn't sufficiently ready. If you get the hubsoft running, only lord knows how to get on the hublist, this is reflected by the some 6 hubs still on the adchublist.org. As this hublist isn't in the main client it doesn't matter anyway since no one will connect to your hub. and all the while your DC hub decline further and further, 111 users in it at the moment, it used to be more than double that at this time. Shit happens, but these policies are blatantly absurd and are slowly but surely destroying DC. <br/>
+<br/>
+Enjoy your ADC network with 6 hubs and a bunch of fucked over DC hub owners.</div>
+<div class="signature" id="sig96832">"Every Englishman must have a hobby. Some like to collect the stamp, some like to make the jam, but the most fun is to a kill a little animal with a shotgun or rip them up with wild dog."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96833">
+<div class="inner">
+<dl class="postprofile" id="profile96833">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 99</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-15 22:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96833">
+<h3><a href="#p96833"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a></strong> » </span>2006-12-11 23:59
+			</p>
+<div class="content">And this problem is further perpetuated by an issue that can easily be solved, by removing the monopoly powers of the default hublists. DC has been at the mercy of hublists since the dawn of DC++, and still the issue hasn't been resolved once and for all. Absolutely pathetic.</div>
+<div class="signature" id="sig96833">"Every Englishman must have a hobby. Some like to collect the stamp, some like to make the jam, but the most fun is to a kill a little animal with a shotgun or rip them up with wild dog."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p96837">
+<div class="inner">
+<dl class="postprofile" id="profile96837">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96837">
+<h3><a href="#p96837"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-12-12 00:21
+			</p>
+<div class="content">As a side note, isn't adchublist.org one of the websites that is vying to become popular?  It borrows style from hublist.org, but it is not the same.  Shouldn't they get at least a share of your vitriol, for making something that caused you more than a minute's worth of work?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96839">
+<div class="inner">
+<dl class="postprofile" id="profile96839">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 99</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-15 22:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96839">
+<h3><a href="#p96839"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a></strong> » </span>2006-12-12 00:36
+			</p>
+<div class="content">Generally hub owners and users don't care about hublist and dcdev politics, aslong as they have a hublist that works.</div>
+<div class="signature" id="sig96839">"Every Englishman must have a hobby. Some like to collect the stamp, some like to make the jam, but the most fun is to a kill a little animal with a shotgun or rip them up with wild dog."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p96842">
+<div class="inner">
+<dl class="postprofile" id="profile96842">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114964">newborn</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-12-10 23:31</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96842">
+<h3><a href="#p96842"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114964">newborn</a></strong> » </span>2006-12-12 00:59
+			</p>
+<div class="content">well I think they should, its important we all think about whats best for the future and also stand by our morals.   Its also good to support the people that spend all this time and effort coding and running services for us.  Otherwise we would still be using original NMDC (and most likely have disappeared into obscurity many years ago).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96857">
+<div class="inner">
+<dl class="postprofile" id="profile96857">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96857">
+<h3><a href="#p96857"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-12-12 02:42
+			</p>
+<div class="content"><blockquote><div><cite>imb wrote:</cite>Generally hub owners and users don't care about hublist and dcdev politics, aslong as they have a hublist that works.</div></blockquote>
+adchublist.org failed to register your ADC hub.  Isn't that a problem?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p96892">
+<div class="inner">
+<dl class="postprofile" id="profile96892">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 99</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-15 22:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96892">
+<h3><a href="#p96892"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a></strong> » </span>2006-12-12 19:17
+			</p>
+<div class="content"><blockquote><div><cite>newborn wrote:</cite>well I think they should, its important we all think about whats best for the future and also stand by our morals.   Its also good to support the people that spend all this time and effort coding and running services for us.  Otherwise we would still be using original NMDC (and most likely have disappeared into obscurity many years ago).</div></blockquote>
+
+Sure there has to be the correct balance between morals and practicalities. But these policies have little to do with morals, more with pushing a protocol forward prematurely and favouritism in terms of which hublists to display. and in terms of non xml hublists apparently it's better to have no hublist than a non xml one.</div>
+<div class="signature" id="sig96892">"Every Englishman must have a hobby. Some like to collect the stamp, some like to make the jam, but the most fun is to a kill a little animal with a shotgun or rip them up with wild dog."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96893">
+<div class="inner">
+<dl class="postprofile" id="profile96893">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 99</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-15 22:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96893">
+<h3><a href="#p96893"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=24031">imb</a></strong> » </span>2006-12-12 19:33
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>imb wrote:</cite>Generally hub owners and users don't care about hublist and dcdev politics, aslong as they have a hublist that works.</div></blockquote>
+adchublist.org failed to register your ADC hub.  Isn't that a problem?</div></blockquote>
+
+Sorry I don't understand, am I supposed to be some kind of advocate of adchublist.org?</div>
+<div class="signature" id="sig96893">"Every Englishman must have a hobby. Some like to collect the stamp, some like to make the jam, but the most fun is to a kill a little animal with a shotgun or rip them up with wild dog."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			23 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=20">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “adchpp general”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

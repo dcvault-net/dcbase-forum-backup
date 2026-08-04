@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>0.402 info(tth leaf transfers and no bz2list support) - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=10401">0.402 info(tth leaf transfers and no bz2list support)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			26 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p53797">
+<div class="inner">
+<dl class="postprofile" id="profile53797">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content53797">
+<h3 class="first"><a href="#p53797">0.402 info(tth leaf transfers and no bz2list support)</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2004-05-23 19:03
+			</p>
+<div class="content">Ok, for those interested, the next version will support tth leaf transfers using an adc-like command, you can look in the cvs for details...
+<br/>
+<br/>Oh, and bz2-filelist support has been dropped in favor for xml.bz2...remember, no free slots given for nmdc-style .dclst filelists, not even for op's if I remember things correctly...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p53812">
+<div class="inner">
+<dl class="postprofile" id="profile53812">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content53812">
+<h3><a href="#p53812"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2004-05-23 21:01
+			</p>
+<div class="content">Ah, great to hear from you Arnie, Thanks for the info!
+<br/>
+<br/>Regards</div>
+<div class="signature" id="sig53812">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p54002">
+<div class="inner">
+<dl class="postprofile" id="profile54002">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=22894">Harhs</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-05-25 19:01</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54002">
+<h3><a href="#p54002"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=22894">Harhs</a></strong> » </span>2004-05-25 20:23
+			</p>
+<div class="content">So what will this ADC and DC++ v. 0.402 mean regarding the compatibility with other clients and the DC protocol in general? Will it be fully "transparent" so that things work as before?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p54005">
+<div class="inner">
+<dl class="postprofile" id="profile54005">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54005">
+<h3><a href="#p54005"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-05-25 20:45
+			</p>
+<div class="content"><blockquote><div><cite>Harhs wrote:</cite>Will it be fully "transparent" so that things work as before?</div></blockquote>
+<br/>No, it's not fully transparent because the option to refresh the user list is gone.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p54027">
+<div class="inner">
+<dl class="postprofile" id="profile54027">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54027">
+<h3><a href="#p54027"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-05-26 01:14
+			</p>
+<div class="content">Ahh... can't wait to get reported to ops for having DC++ and not having open slots for the file list <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>  Still sounds great though; more reasons for people to upgrade to TTH-capable clients.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p54049">
+<div class="inner">
+<dl class="postprofile" id="profile54049">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-02 16:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54049">
+<h3><a href="#p54049"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a></strong> » </span>2004-05-26 06:55
+			</p>
+<div class="content">I've already been baned for life one time because I was using DC++ 0.402 (Or rather the CVS version). "you are using a client with nonstandard supports....". Think I'll see what happens when 0.402 get released, it's going to be interesting <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="notice">
+					Last edited by <a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a> on 2004-05-26 08:03, edited 1 time in total.
+									</div>
+<div class="signature" id="sig54049">Thanks to all open source programmers!
+<br/>They enable the rest of us to learn a lot!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p54055">
+<div class="inner">
+<dl class="postprofile" id="profile54055">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-30 06:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54055">
+<h3><a href="#p54055"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a></strong> » </span>2004-05-26 07:56
+			</p>
+<div class="content"><blockquote><div><cite>Naga wrote:</cite>Think I'll see what happens when 0.402 get released, it's going to be interesting <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote>
+<br/>
+<br/>Indeed, the CDM's and other op-modded clients are going to be plenty confused when 402 hits the playing fields...Atleast for a while.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p54083">
+<div class="inner">
+<dl class="postprofile" id="profile54083">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54083">
+<h3><a href="#p54083"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-05-26 14:48
+			</p>
+<div class="content"><blockquote><div><cite>Naga wrote:</cite>I've already been baned for life one time because I was using DC++ 0.402 (Or rather the CVS version). "you are using a client with nonstandard supports....". </div></blockquote>You're not alone <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+<div class="signature" id="sig54083"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p54091">
+<div class="inner">
+<dl class="postprofile" id="profile54091">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54091">
+<h3><a href="#p54091"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-05-26 16:03
+			</p>
+<div class="content"><blockquote><div><cite>joakim_tosteberg wrote:</cite><blockquote><div><cite>Naga wrote:</cite>I've already been baned for life one time because I was using DC++ 0.402 (Or rather the CVS version). "you are using a client with nonstandard supports....". </div></blockquote>You're not alone <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div></blockquote>
+<br/>Not by a long shot. Anything which doesn't conform is automatically "bad" as far as some people are concerned. :sigh:</div>
+<div class="signature" id="sig54091">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p54251">
+<div class="inner">
+<dl class="postprofile" id="profile54251">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=22894">Harhs</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-05-25 19:01</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54251">
+<h3><a href="#p54251"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=22894">Harhs</a></strong> » </span>2004-05-27 17:35
+			</p>
+<div class="content">The new DC++ just needs to be compatible enough, so that searches, file list transfers and file transfers work like before with other Direct Connect clients, too. This is my main concern.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p54252">
+<div class="inner">
+<dl class="postprofile" id="profile54252">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content54252">
+<h3><a href="#p54252"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-05-27 18:32
+			</p>
+<div class="content"><blockquote><div><cite>Harhs wrote:</cite>The new DC++ just needs to be compatible enough, so that searches, file list transfers and file transfers work like before with other Direct Connect clients, too. This is my main concern.</div></blockquote>
+<br/>As far as I can tell, the core has been split into NMDC stuff and ADC stuff. There should therefore be no loss in functionality with existing hubs.</div>
+<div class="signature" id="sig54252">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p55536">
+<div class="inner">
+<dl class="postprofile" id="profile55536">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=23847">Gargol</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-06-12 05:13</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55536">
+<h3><a href="#p55536"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=23847">Gargol</a></strong> » </span>2004-06-12 05:20
+			</p>
+<div class="content"><blockquote><div><cite>joakim_tosteberg wrote:</cite><blockquote><div><cite>Naga wrote:</cite>I've already been baned for life one time because I was using DC++ 0.402 (Or rather the CVS version). "you are using a client with nonstandard supports....". </div></blockquote>You're not alone <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div></blockquote>
+<br/>
+<br/>The big problem was dc++k CDM out at the moment belived DC++ cvs 402 to be BCDC and thats why many OPs banned it.
+<br/>Fixed in dc++k CDM 3.0
+<br/>version 3.1 fixes no fillist. (Last version of dc++k CDM)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p55648">
+<div class="inner">
+<dl class="postprofile" id="profile55648">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55648">
+<h3><a href="#p55648"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-06-13 14:01
+			</p>
+<div class="content"><blockquote><div><cite>Gargol wrote:</cite>The big problem was dc++k CDM out at the moment belived DC++ cvs 402 to be BCDC and thats why many OPs banned it.<br/>Fixed in dc++k CDM 3.0<br/>version 3.1 fixes no fillist. (Last version of dc++k CDM)</div></blockquote>
+<br/>
+<br/><img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> CDMs have their place, but this is a prime example of their shortcomings.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p55784">
+<div class="inner">
+<dl class="postprofile" id="profile55784">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=43">PPK</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55784">
+<h3><a href="#p55784"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=43">PPK</a></strong> » </span>2004-06-14 18:06
+			</p>
+<div class="content"><blockquote><div><cite>Gargol wrote:</cite>version 3.1 fixes no fillist. (Last version of dc++k CDM)</div></blockquote>
+<br/>Fix without testing =&gt; not fixed and 3.1 always kicking people for DC++ without slot for filelist <img alt=":lol:" class="smilies" src="/images/smilies/icon_lol.gif" title="Laughing"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p55811">
+<div class="inner">
+<dl class="postprofile" id="profile55811">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1838">psf8500</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 23:51</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55811">
+<h3><a href="#p55811"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1838">psf8500</a></strong> » </span>2004-06-14 23:02
+			</p>
+<div class="content"><blockquote><div><cite>PPK wrote:</cite>Fix without testing =&gt; not fixed and 3.1 always kicking people for DC++ without slot for filelist </div></blockquote><br/><br/>erm. yeh it was tested. 3.1 will not consider a DC++ client without "BZList" in it's supports to be cheating if it does not give a slot for file list...<br/><br/><blockquote><div><cite>DC++k CDM 3.1 wrote:</cite>else if( (d-&gt;isSet(Download::FLAG_USER_LIST)) &amp;&amp; (client-&gt;getOp()) &amp;&amp; (user-&gt;isSet(User::DCPLUSPLUS)) <br/>				&amp;&amp; <strong class="text-strong">(user-&gt;getSupports().find("BZList") != string::npos)</strong> &amp;&amp; (client-&gt;getClientFavNoSlotsDcpp()) ) {<br/>// some code to deal with people who don't give a slot for filelist...<br/>}</div></blockquote>
+<br/>
+<br/>Maybe there using an older version....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p55833">
+<div class="inner">
+<dl class="postprofile" id="profile55833">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=43">PPK</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:11</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55833">
+<h3><a href="#p55833"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=43">PPK</a></strong> » </span>2004-06-15 02:36
+			</p>
+<div class="content">Bad testing, if client have XmlBZList supports is kicked and DC++ have it from 0.307 <img alt=":lol:" class="smilies" src="/images/smilies/icon_lol.gif" title="Laughing"/>
+<br/><blockquote class="uncited"><div>&amp;&amp; (user-&gt;getSupports().find("BZList") != string::npos) &amp;&amp;  // &lt;=  BUG </div></blockquote><br/><br/>This work better <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> <br/><blockquote class="uncited"><div>else if( (d-&gt;isSet(Download::FLAG_USER_LIST)) &amp;&amp; (client-&gt;getOp()) &amp;&amp; (user-&gt;isSet(User::DCPLUSPLUS)) <br/>&amp;&amp; <strong class="text-strong">(aSource-&gt;isSet(UserConnection::FLAG_SUPPORTS_BZLIST)) </strong>&amp;&amp; (client-&gt;getClientFavNoSlotsDcpp()) )<br/>{</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p55841">
+<div class="inner">
+<dl class="postprofile" id="profile55841">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1838">psf8500</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 23:51</dd>
+</dl>
+<div class="postbody">
+<div id="post_content55841">
+<h3><a href="#p55841"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1838">psf8500</a></strong> » </span>2004-06-15 06:04
+			</p>
+<div class="content">OK. Point taken. Maybe some more testing was needed (losing interest in DC++k CDM now).
+<br/>I'll fix it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p56214">
+<div class="inner">
+<dl class="postprofile" id="profile56214">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12616">norti</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 34</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-10-22 19:42</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56214">
+<h3><a href="#p56214"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12616">norti</a></strong> » </span>2004-06-18 13:35
+			</p>
+<div class="content">garg:
+<br/>
+<br/> <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>* Removed full-row-select option</code></pre></div>
+<br/>
+<br/>Why?  <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/> <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig56214">.: Norti :.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p56219">
+<div class="inner">
+<dl class="postprofile" id="profile56219">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56219">
+<h3><a href="#p56219"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-06-18 16:15
+			</p>
+<div class="content">Because you touch yourself at night.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p56223">
+<div class="inner">
+<dl class="postprofile" id="profile56223">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56223">
+<h3><a href="#p56223"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-06-18 17:04
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>Because you touch yourself at night.</div></blockquote>lol, this thread is beginnning to go oftopic I think but I'll let it be left to see if anything more intressting happens <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+<div class="signature" id="sig56223"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p56258">
+<div class="inner">
+<dl class="postprofile" id="profile56258">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56258">
+<h3><a href="#p56258"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-06-19 03:18
+			</p>
+<div class="content"><blockquote><div><cite>norti wrote:</cite>Why?  <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/> <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote>
+<br/>Should I read that as a serious question, or as sarcasm?  I'll bet you saw the other thread on the subject. <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p56294">
+<div class="inner">
+<dl class="postprofile" id="profile56294">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12616">norti</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 34</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-10-22 19:42</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56294">
+<h3><a href="#p56294"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12616">norti</a></strong> » </span>2004-06-19 15:45
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>norti wrote:</cite>Why?  <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/> <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote><br/>Should I read that as a serious question, or as sarcasm?  I'll bet you saw the other thread on the subject. <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div></blockquote>
+<br/>
+<br/>Haven't seen anything yet  <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/>  Is there another 0.402 topic, I wasn't reading this forum for weeks <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/> Sarcasm of course <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> but I'd be interested why it was removed? I always turn it on if it is supported in software <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/><em class="text-italics">PseudonympH: no comment...</em></div>
+<div class="signature" id="sig56294">.: Norti :.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p56366">
+<div class="inner">
+<dl class="postprofile" id="profile56366">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56366">
+<h3><a href="#p56366"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2004-06-20 18:10
+			</p>
+<div class="content">er.. the option is removed, the functionality is not
+<br/>it's now enabled wether you like it or not</div>
+<div class="signature" id="sig56366"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p56474">
+<div class="inner">
+<dl class="postprofile" id="profile56474">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56474">
+<h3><a href="#p56474"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-06-22 00:24
+			</p>
+<div class="content"><blockquote><div><cite>norti wrote:</cite>Is there another 0.402 topic, I wasn't reading this forum for weeks <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/> Sarcasm of course <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> but I'd be interested why it was removed</div></blockquote>
+<br/>The previous thread:
+<br/><!-- m --><a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?t=10867">http://dcplusplus.sourceforge.net/forum ... hp?t=10867</a><!-- m --></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p56562">
+<div class="inner">
+<dl class="postprofile" id="profile56562">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12616">norti</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 34</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-10-22 19:42</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56562">
+<h3><a href="#p56562"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12616">norti</a></strong> » </span>2004-06-22 21:04
+			</p>
+<div class="content">Thx 
+<br/>
+<br/>One note: I don't think "Current CVS version" name for a topic would be good for future reading, say in 6 months <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>DD
+<br/>
+<br/> And I think "0.402 info..." would fit better to these questions. But that's my opinion <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig56562">.: Norti :.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p56564">
+<div class="inner">
+<dl class="postprofile" id="profile56564">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content56564">
+<h3><a href="#p56564"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-06-22 22:13
+			</p>
+<div class="content"><blockquote><div><cite>norti wrote:</cite>I don't think "Current CVS version" name for a topic would be good for future reading, say in 6 months <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>DD</div></blockquote>
+<br/>Heh. Unfortunately people don't think in that way. That would require them to actually think about how what they do affects others.</div>
+<div class="signature" id="sig56564">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			26 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

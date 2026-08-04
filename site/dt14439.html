@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>match queue not working after source removed - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=14439">match queue not working after source removed</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p73615">
+<div class="inner">
+<dl class="postprofile" id="profile73615">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-28 00:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73615">
+<h3 class="first"><a href="#p73615">match queue not working after source removed</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a></strong> » </span>2004-12-28 23:32
+			</p>
+<div class="content">After I get "File not available" from a user or after I remove him as a source from the queue, match queue doesn't put him as a source (without restarting DC++). I came across it in 0.666 (after "File not available"). The user had a TTH filelist.
+<br/>
+<br/>And it also occurs in 0.668. This time I did Match queue on a user and he was added as a new source (with the same nickname, not a space of difference). So his nickname appeared twice as a source for the files that he had (but with different source directories for the files in his share, as I saw in Queue.xml). Then I deleted him as a source (both occurences of his nickname). And then I did Match queue again - with no result (I checked the Queue.xml file to be certain, because the download queue window isn't always refreshed). The files were in his share, I added a few of them as a source manually.
+<br/>
+<br/>In both cases I was able to readd the source manually - either from the search window or from the user's filelist.
+<br/>
+<br/>I added this to Bugzilla: <a class="postlink" href="http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=404">http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=404</a>.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73642">
+<div class="inner">
+<dl class="postprofile" id="profile73642">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73642">
+<h3><a href="#p73642"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-12-29 07:21
+			</p>
+<div class="content">Then DC++ gets "File not available" (or some other error) it removes  the user as queue for this file. Right click the file in download queue thenexpand  Re-add source in the manu and click on the user you want to re-add. This is expected behavior.</div>
+<div class="signature" id="sig73642"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73660">
+<div class="inner">
+<dl class="postprofile" id="profile73660">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73660">
+<h3><a href="#p73660">Re: match queue not working after source removed</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-12-29 17:06
+			</p>
+<div class="content"><blockquote><div><cite>paka wrote:</cite>And it also occurs in 0.668. This time I did Match queue on a user and he was added as a new source (with the same nickname, not a space of difference).</div></blockquote>
+<br/>Was the hub the same?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73693">
+<div class="inner">
+<dl class="postprofile" id="profile73693">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-28 00:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73693">
+<h3><a href="#p73693"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a></strong> » </span>2004-12-29 23:53
+			</p>
+<div class="content"><blockquote><div><cite>joakim_tosteberg wrote:</cite>Right click the file in download queue thenexpand  Re-add source in the manu and click on the user you want to re-add.</div></blockquote><br/><br/>I'm not sure if I understood you correctly, but I couldn't simply readd the source in the queue because the user changed the source directories in his share. So I did Match queue. Besides, there were far too many files to do it manually.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Was the hub the same?</div></blockquote>
+<br/>
+<br/>It might be not the same. Sorry, I can't remember.
+<br/>
+<br/>BTW, I think that the user (if his nickname is the same on more than one hub) should be written once as a source for the file in the queue and DC++ would choose dynamically a hub that the user is on. I mean, when I turn DC++ off and on and the user is found on another hub, two occurences of the same source for the file in the queue seem to be useless, don't they? In the second situation that I described above, there are two occurences of the same source (with a different source directory in the user's share, though... however, one of these sources must have been wrong and should have been removed with "File not available" displayed).
+<br/>
+<br/>The first situation (with Match queue not working after File not available) should be easier to investigate because I didn't do so many things that complicated the reproduction of the bug as in the second case. The steps for this one would be:
+<br/>
+<br/>1. Enqueue some files from a user.
+<br/>2. The user changes the directories' names of the source files and his filelist is refreshed.
+<br/>3. Receive "File not available" on the queued files.
+<br/>4. Do Match queue on the user.
+<br/>5. Match queue doesn't work (TTHs are the same, directories are different, but the filelist was refreshed after changes).
+<br/>
+<br/>Hope it will be as easy to reproduce as it looks here... AFAIR there was no such problem in 0.401.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73733">
+<div class="inner">
+<dl class="postprofile" id="profile73733">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73733">
+<h3><a href="#p73733"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-12-30 17:58
+			</p>
+<div class="content"><blockquote><div><cite>paka wrote:</cite>BTW, I think that the user (if his nickname is the same on more than one hub) should be written once as a source for the file in the queue and DC++ would choose dynamically a hub that the user is on.</div></blockquote><br/>ADC makes it easy to know that two users on different hubs are the same (matching CID), but guessing about that in the NMDC protocol  might be what is causing your problem.  It may not be helped with the $MyINFO changes (share size may be used to help determine if two users are the same).<br/><br/>I'm sure there's something to go on, I'm just not sure where one would start.<br/><br/><blockquote class="uncited"><div>1. Enqueue some files from a user.<br/>2. The user changes the directories' names of the source files and his filelist is refreshed.<br/>3. Receive "File not available" on the queued files.</div></blockquote>
+<br/>As a side note, you won't receive that error on 0.402+, which requests files by TTH instead of path.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73751">
+<div class="inner">
+<dl class="postprofile" id="profile73751">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-28 00:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73751">
+<h3><a href="#p73751"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a></strong> » </span>2004-12-30 20:18
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>ADC makes it easy to know that two users on different hubs are the same (matching CID), but guessing about that in the NMDC protocol  might be what is causing your problem.  It may not be helped with the $MyINFO changes (share size may be used to help determine if two users are the same).</div></blockquote><br/><br/>This is the problem of distinguishing users (I've mentioned it because it was one of the steps in the second case - with 0.668), but how about Match queue not working when the source user has already been removed (either with "File not available" or by "Remove user from queue")? In both cases that I described, the final situation was no source for the files and no reaction for Match queue.<br/><br/><blockquote class="uncited"><div>As a side note, you won't receive that error on 0.402+, which requests files by TTH instead of path.</div></blockquote>
+<br/>
+<br/>How should I understand this? The situation with "File not available+Match queue not working after filelist refreshed" won't happen in 0.402+ or will I get the file successfully because the filelist of the remote user will be refreshed automatically when requesting the given file (AFAIK now it's refreshed only upon filelist requests)? I'm using 0.668.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73917">
+<div class="inner">
+<dl class="postprofile" id="profile73917">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73917">
+<h3><a href="#p73917"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-01-02 20:46
+			</p>
+<div class="content"><blockquote><div><cite>paka wrote:</cite>How should I understand this? The situation with "File not available+Match queue not working after filelist refreshed" won't happen in 0.402+ or will I get the file successfully because the filelist of the remote user will be refreshed automatically when requesting the given file (AFAIK now it's refreshed only upon filelist requests)? I'm using 0.668.</div></blockquote>
+<br/>It means what it says: when DC++ 0.402+ asks for the file, it does so by TTH.  If the user has moved the files, but not refreshed his list, DC++ will return file not available.  If the user has moved the files and refreshed his list, you will get the file.
+<br/>
+<br/>You're confusing file share refreshing with file list generation - they're separate actions, though the list generation can depend on share refreshing.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75635">
+<div class="inner">
+<dl class="postprofile" id="profile75635">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-28 00:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75635">
+<h3><a href="#p75635"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a></strong> » </span>2005-01-28 02:27
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>You're confusing file share refreshing with file list generation - they're separate actions, though the list generation can depend on share refreshing.</div></blockquote><br/>Right, that was my habit to consider those two actions together as they were carried out in older versions. However, the problem is that I do a Match queue on the user and get no hits. Then I add the updated source from the same filelist manually and the download is resumed. I wonder how this problem is related to the change in 0.4032:<blockquote><div><cite>arnetheduck wrote:</cite> * When matching queue, users marked with file not available are readded (thanks farcry)</div></blockquote>
+<br/>To make this bug easier to confirm, I'll suggest this set of steps (they work for me):
+<br/>
+<br/>1. Start two instances of DC++ (can be DC++ and BCDC++ if there's a problem with only one instance allowed) and connect to the same hub as users A and B. In my case: client A was BCDC++ 0.401b (and was sharing files) and client B was DC++ 0.668 (and was downloading files).
+<br/>2. Enqueue some files from user A on user B's client. Start the downloads.
+<br/>3. Disconnect (with Close connection) user B on user A's client, remove the shared directory in Settings. User B gets "File not available" on the queued files.
+<br/>4. Readd the directory to user A's share (can be under the same location in the share as before).
+<br/>5. Do a match queue for user A on user B's client. 0 files matched.
+<br/>6. Open the filelist (downloaded with Match queue) and readd the files manually. The downloads are resumed.
+<br/>
+<br/>Of course, autosearch should be turned off on user B's client during the test.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75788">
+<div class="inner">
+<dl class="postprofile" id="profile75788">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-28 00:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75788">
+<h3><a href="#p75788"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a></strong> » </span>2005-02-02 06:31
+			</p>
+<div class="content">Oops, this bug seems to be a duplicate of <a class="postlink" href="http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=240">http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=240</a>.
+<br/>
+<br/>The problem remains unsolved, though.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

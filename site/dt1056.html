@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>some ideas (not mine!) to discuss ... - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="12" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=12" itemprop="url"><span itemprop="title">Developer's resort</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=12&amp;t=1056">some ideas (not mine!) to discuss ...</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">A private forum for us Super-Humans, I even trust you to be able to edit your own posts =)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			11 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p5145">
+<div class="inner">
+<dl class="postprofile" id="profile5145">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=62">Zc</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 11:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5145">
+<h3 class="first"><a href="#p5145">some ideas (not mine!) to discuss ...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=62">Zc</a></strong> » </span>2003-02-21 19:10
+			</p>
+<div class="content">Segmented downloads/compression
+<br/>If I have all understand good, it seems when you will implement Zlib compression stuff, you can request a particular part of file and adler32 will be a crc ... so, you have solved correctly segmented downloads and added a on fly compression.
+<br/>
+<br/>Metadata
+<br/>I haven't seen a good way for this time but this feature can be very interresting.
+<br/>
+<br/>Rating
+<br/>All stuff was tell about that, but I thing rating must be for one hub (communauty) and not a part of client itself. So it's for DCH++ <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> (btw Sapporo comment on that is very interressting ... for begining)
+<br/>
+<br/>It's the more interessing ideas I have seen, but if you have another we can discuss about it (we are here for that, no?!)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5151">
+<div class="inner">
+<dl class="postprofile" id="profile5151">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5151">
+<h3><a href="#p5151">Re: some ideas (not mine!) to discuss ...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-02-21 20:20
+			</p>
+<div class="content"><blockquote><div><cite>Zc wrote:</cite>Segmented downloads/compression<br/>If I have all understand good, it seems when you will implement Zlib compression stuff, you can request a particular part of file and adler32 will be a crc ... so, you have solved correctly segmented downloads and added a on fly compression.</div></blockquote><br/>No, not directly (but indirectly you are correct). There are currently no feature for searching for adler32 values of files which would be needed - otherwise you'd have to download parts of the file and verify them.<br/><br/><blockquote><div><cite>Zc wrote:</cite>Metadata<br/>I haven't seen a good way for this time but this feature can be very interesting.</div></blockquote><br/>Yes, but it needs to be handled in a generic, thoroughly thought out manner. For all I know it could be done with a $GetMetaData command or somesuch, though, to keep all clients happy.<br/><br/><blockquote><div><cite>Zc wrote:</cite>Rating<br/>All stuff was tell about that, but I thing rating must be for one hub (communauty) and not a part of client itself. So it's for DCH++ <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> (btw Sapporo's comment on that is very interesting ... for [a] beginning)</div></blockquote><br/>The rating system does not have to be one rating server per hub. In fact, there are times when that is unwanted and rather stupid. What is necessary are ways in which to grant benefits to highly rated clients, and the rest will (speaking with an infinite timeframe in mind) come.<br/><br/><blockquote><div><cite>Zc wrote:</cite>It's the more interesting ideas I have seen, but if you have another we can discuss about it (we are here for that, no?!)</div></blockquote>
+<br/>Well, I hope so!
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Time is a spiral, space is a curve, I know you get dizzy but try not to lose your nerve</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5161">
+<div class="inner">
+<dl class="postprofile" id="profile5161">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=62">Zc</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 11:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5161">
+<h3><a href="#p5161"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=62">Zc</a></strong> » </span>2003-02-21 21:55
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>The rating system does not have to be one rating server per hub</div></blockquote>
+<br/>but rating must be by community, all comunity don't have same rules and hubs aren't interessed by the same quality of client</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5164">
+<div class="inner">
+<dl class="postprofile" id="profile5164">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5164">
+<h3><a href="#p5164">Re: some ideas (not mine!) to discuss ...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-02-22 00:43
+			</p>
+<div class="content"><blockquote><div><cite>Zc wrote:</cite>Segmented downloads/compression<br/>If I have all understand good, it seems when you will implement Zlib compression stuff, you can request a particular part of file and adler32 will be a crc ... so, you have solved correctly segmented downloads and added a on fly compression.</div></blockquote><br/><br/><a class="postlink" href="http://www.lowertech.net/pdcpp/">pDC++</a> is working on this feature - I don't think he'll submit it back to the main DC++ on his own though.  It seems pretty primitive so far.... The first thing I'd do is work on:<br/><br/><blockquote class="uncited"><div>Metadata<br/>I haven't seen a good way for this time but this feature can be very interresting.</div></blockquote>
+<br/>
+<br/>Hashes.  Hashes.  Hashes and MP3 info.
+<br/>
+<br/>It seems that an XML of sorts might be really nice to give information on a file - hash, hash of just the audio part of mp3s (so people who retag [like me] can still be alternate sources), possibly ID3 tag information, AVI codecs, bitrates, image resolution, etc.  It seems like there might be a huge range of info that people will want or that emerging file formats might like, so XML seems to make a bit of sense.  I've never done protocol design, so if someone with actual experience or whatever can comment...  
+<br/>
+<br/>And I think that it should just be a command listed in $Supports and would normally be used prior to transfering a file - normally to get the file hash for verification.  But you could, way way down the road, support a feature like "get ID3 tags from this person and retag my files" or "what tags do people with this mp3 have on it?" <img alt=":-D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>
+<br/>
+<br/>I think when hashes are supported, a "get byte range" feature should be supported too.  Someone asked about it in a thread about encryption, but I think it got lost....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5171">
+<div class="inner">
+<dl class="postprofile" id="profile5171">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5171">
+<h3><a href="#p5171">Re: some ideas (not mine!) to discuss ...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-02-22 03:00
+			</p>
+<div class="content"><blockquote class="uncited"><div>Hashes.  Hashes.  Hashes and MP3 info.<br/><br/>It seems that an XML of sorts might be really nice to give information on a file - hash, hash of just the audio part of mp3s (so people who retag [like me] can still be alternate sources), possibly ID3 tag information, AVI codecs, bitrates, image resolution, etc.  It seems like there might be a huge range of info that people will want or that emerging file formats might like, so XML seems to make a bit of sense.  I've never done protocol design, so if someone with actual experience or whatever can comment...</div></blockquote>
+<br/>
+<br/>There are lots of interesting metadata to extract: Relatable fingerprint for audio, identifies even differently encoded mp3:s of the same song, I tried this, I was very impressed that it worked. Its used by the musicbrainz intiative, and bitzi has support for it. <a class="postlink" href="http://www.musicbrainz.org/">http://www.musicbrainz.org/</a>
+<br/>
+<br/>There is one problem though: Clients doesnt gain anything on giving out metadata, the cpu and memory consumption will raise by using that, so it might be an idea to only give out metadata that the other client has, this way all clients will want to implement as much metadata as possible. Its evil and ugly, but...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5263">
+<div class="inner">
+<dl class="postprofile" id="profile5263">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5263">
+<h3><a href="#p5263"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-02-23 14:05
+			</p>
+<div class="content"><blockquote><div><cite>Zc wrote:</cite>but rating must be by community, all comunity don't have same rules and hubs aren't interessed by the same quality of client</div></blockquote>
+<br/>No. The rating server stores all information about a transfer. You, as a client, then selects what parts you wish to mark as important.
+<br/>There is thought to allow OPs to artificially "bump" ratings on users that are especially appreciated in their hub, but it would be an option for the requesting client to include bumped rating.
+<br/>
+<br/>More discussion about the rating system should be done in that thread.
+<br/>
+<br/>About hashes and metadata... Hashing files should be general. Yes, it would be nice to have "fingerprinted" MP3/OGG/PNK files, but since DC is built with small building blocks (hubs) rather than a global building block, people are likely to have the same file as other people. This is why "search for alternates" work at all in the current system.
+<br/>
+<br/>Retagging MP3-files is evil, but not as evil as some of the tagging that people do &lt;shudder&gt;. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>As to "get ID3 tags from this person" and such features they can all be implemented client side (simply "request part X of file Y and do Z with it") - this does not have to be implemented in the protocol and thus should stay very far away from the protocol lest it gets it grubby little fingers whacked with a Mallet of Infinite FeatureCreeping.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>What do you want me to do, learn to stutter?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5299">
+<div class="inner">
+<dl class="postprofile" id="profile5299">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5299">
+<h3><a href="#p5299"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-02-23 18:44
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>About hashes and metadata... Hashing files should be general. Yes, it would be nice to have "fingerprinted" MP3/OGG/PNK files, but since DC is built with small building blocks (hubs) rather than a global building block, people are likely to have the same file as other people. This is why "search for alternates" work at all in the current system.<br/>Retagging MP3-files is evil, but not as evil as some of the tagging that people do &lt;shudder&gt;. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/></div></blockquote><br/><br/>But it <span style="text-decoration: underline">doesn't</span> work very well in the VGM hub I'm a part of, at least not for MP3s.  There are ~ 60 - 80 people with ~ 1.5 - 3.5 tb of music, and you're lucky if there are three sources for the same file.  Everyone has their own styles of tagging, and, quite honestly, since some of the releases by the "official" mp3 groups contain simple typographical errors, re-tagging is necessary.  I also use iTunes for my iPod, and it relies heavily on correct (or at least uniform) tags to organize music, and more generally, function properly.<br/><br/><blockquote class="uncited"><div>As to "get ID3 tags from this person" and such features they can all be implemented client side (simply "request part X of file Y and do Z with it") - this does not have to be implemented in the protocol and thus should stay very far away from the protocol lest it gets it grubby little fingers whacked with a Mallet of Infinite FeatureCreeping.</div></blockquote>
+<br/>
+<br/>Well, I'm certainly not going to count on anyone else implementing this.  I think that DC can be a good network for trading MP3s, but to be great for trading them, some things may be needed.  The tag exchange is one of the more out there ideas, but fingerprinting just the audio portion of the mp3s is not.  WinMX does this to an extent, by ignoring the last 128 bytes of the MP3.  Fetching the variable length, prepended, ID3v2 tags would be very difficult to do client side.
+<br/>
+<br/>BTW I envisioned something like this being exchanged between clients, when asking for meta-information:
+<br/>
+<br/>&lt;SharedFile Filename="whatever.mp3" artist="some damn person" album="steal this album" year="2010" filehash="some hash value" audiohash="another hash value" audiorange="2000-5000000" ... &gt;
+<br/>
+<br/>That's it.  With XML, if someone doesn't want to parse tags (or there hasn't been enough spare CPU cycles to do it), you could leave those fields out.  This could also be largely in the same format as the meta-information cache on disk, absent the real file path and modification times (and perhaps search hit count, download count, and bytes trasferred [for multi-source downloads]).  Re-tagging wouldn't be elegant, because that'd be another dependency (libmad's tagger, perhaps, since libid3 doesn't support v2.4.0 tags yet).  But it's not outrageous, at least to me.
+<br/>
+<br/>Honestly, I can't think of another file type other than MP3 that has so much end-user modification involved (while keeping the actual data untouched).  MP3s are the driving force behind many P2P applications, and I think they deserve a little special attention.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5362">
+<div class="inner">
+<dl class="postprofile" id="profile5362">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5362">
+<h3><a href="#p5362"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2003-02-24 09:37
+			</p>
+<div class="content">Well, I've considered switching to xml for some time, it's quite easy to do, and then I could add whatever I want to the file listing without breaking old clients, the only thing that might concern me is that loading an xml file probably takes 3-4 times as long as the ones used now...that's without any data added...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5394">
+<div class="inner">
+<dl class="postprofile" id="profile5394">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5394">
+<h3><a href="#p5394"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-02-24 20:22
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>[snipped quote]<br/>But it <span style="text-decoration: underline">doesn't</span> work very well in the VGM hub I'm a part of, at least not for MP3s.  There are ~ 60 - 80 people with ~ 1.5 - 3.5 tb of music, and you're lucky if there are three sources for the same file.  Everyone has their own styles of tagging, and, quite honestly, since some of the releases by the "official" mp3 groups contain simple typographical errors, re-tagging is necessary.  I also use iTunes for my iPod, and it relies heavily on correct (or at least uniform) tags to organize music, and more generally, function properly.</div></blockquote><br/>I am sorry to hear this, but I do not want feature/protocol bloating being introduced into DC++. It is better to solve this outside the protocol, because, once more, what if people a) disables this and b) uses a non-DC++ client.<br/><br/>This would (in my opinion at least) be better if solved by another application who took an audio "fingerprint" and retrieved the information from some kind of global server. This way, nothing would be needed to add to DC++ and you could still get your audio files with the correct tags et cetera.<br/><br/>Yes, I know, creating a whole new program/project is a bit daunting but imagine how much you would gain by it - a P2P independent retagging system!<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>[snipped quote]<br/>Well, I'm certainly not going to count on anyone else implementing this.  I think that DC can be a good network for trading MP3s, but to be great for trading them, some things may be needed.  The tag exchange is one of the more out there ideas, but fingerprinting just the audio portion of the mp3s is not.  WinMX does this to an extent, by ignoring the last 128 bytes of the MP3.  Fetching the variable length, prepended, ID3v2 tags would be very difficult to do client side.</div></blockquote><br/>Hmmm... well, you could make few special cases for MP3 files in DC++, I guess, to handle the ID3v1 tags (which are, I think, appended to the end... or am I wrong in this, too?). If you make a some more code in the client it could scan the file for ID3v2 tags too, I think.<br/><br/>However, never forget that while you might download and upload your fully legal MP3 files, others might be sending documents (PDF/DOC/TXT/LIT), movies and even (gasp!) pictures.<br/>Thus, your problem is a problem, but it should be solved along with all the others. If we keep an audio "fingerprint", why not do the same for the different streams in AVI files? What about the chunks in JPEG files? And so on and so forth...<br/>This would quickly bloat DC++ since it would become a content manager in addition to being a filesharing application... and I dislike combination programs - they seldom do anything as good as program coded for just one purpose.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>[snipped example]<br/>That's it.  With XML, if someone doesn't want to parse tags (or there hasn't been enough spare CPU cycles to do it), you could leave those fields out. This could also be largely in the same format as the meta-information cache on disk, absent the real file path and modification times (and perhaps search hit count, download count, and bytes trasferred [for multi-source downloads]).  Re-tagging wouldn't be elegant, because that'd be another dependency (libmad's tagger, perhaps, since libid3 doesn't support v2.4.0 tags yet).  But it's not outrageous, at least to me.</div></blockquote><br/>Where/when would this information be transmitted?<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Honestly, I can't think of another file type other than MP3 that has so much end-user modification involved (while keeping the actual data untouched).  MP3s are the driving force behind many P2P applications, and I think they deserve a little special attention.</div></blockquote>
+<br/>I can think of a few, among them video files which are being ripped to different formats (I don't want to download a movie in MPEG format which I already have as an AVI/DIVX file, for instance).
+<br/>The redeeming quality of MP3/audio files are that they are (relatively speaking) small, much smaller than video files, while at the same time being large enough to stop the GIF/JPEG/PNG "megadirectory" thingy where thousands of pictures are shoved into one directory - simply put, such a directory would be... very large.
+<br/>By the by, are we forgetting about the OGG files? The WMA files?
+<br/>I dislike adding features that "cry out" for even more features to be added.
+<br/>
+<br/>If this was done as a plugin of some sort I would have no problem with it (even if the plugin was bundled with the default distribution of DC++) but it should be kept and developed seperate from the main DC++ code and arnetheduck. I would prefer him to work on <strong class="text-strong">my</strong> nifty features, thank you very much. <img alt=":lol:" class="smilies" src="/images/smilies/icon_lol.gif" title="Laughing"/>
+<br/>
+<br/>Adding "only" MP3 file handling would lead to yet more feature requests "hey, why don't you support the Nifty FileFormat?! its really k00l! totally! fix it plz".
+<br/>I dislike making the feature request spammers tasks even easier than they are.
+<br/>
+<br/>Give me one file format independent meta-data solution, and I'm all for it. It could even be supported by DC++ but powered by plugins files written by people whom live and breathe their own private file format.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Oh dear, I've gone and inflated my ego.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5477">
+<div class="inner">
+<dl class="postprofile" id="profile5477">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5477">
+<h3><a href="#p5477"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-02-25 17:05
+			</p>
+<div class="content">Before this gets too much more off topic (too late), let me explain... no, sum up.
+<br/>
+<br/>Meta information could be collected from shared files by a separate thread that uses something like libextractor (google, it looks weak at the moment, but it can be extended).  This could be used to agument the shared file listing (and added to a cache that gets written to disk, so scanning doesn't happen every startup).  Any client that supported meta-information would add a tag in $Supports, as well as a client to client command.  The remote client could request the meta-information on a specific file, then the remote side would send a little XML structure with the meta-information in it.
+<br/>
+<br/>This information would be useful, and would, at the minimum, I'd hope, have a Tiger Tree Hash (dunno how many leaves to include) of the file.  Then the transfer could proceed as normal, except now the remote client could verify that the file data it got was non-corrupt, as the transfer goes on.  It might be nice to have a "cancel" and "get byte range" command too, but... later,
+<br/>
+<br/>Now: MP3s.  Once encoded, people can and do modify the MP3 file without altering the audio data inside.  Even just adding (or removing) a RIFF header (80 bytes or so) at the beginning of a file (perhaps so it will play on a portable player) makes someone a non-viable alternate source for people downloading the same MP3.  I think this is a shortcoming.  If DC++ recognized the audio data inside as an immutable piece of data, and that the tags on the file are transitory, it could generate a hash for just the audio data (in addition to the more typical full file hash).  If someone was already downloading the MP3 and had the file (and audio data portion) hash, even if the local copy was re-tagged, DC++ could, if smart enough, act as an alternate source.  This requires a little bit of leg work, like keeping track of the start and end of the audio data, as well as (on the remote end) keeping track of the tags that were on the original source  mp3.
+<br/>
+<br/>Unlike other files, RARs, ISOs, AVIs, the data in the MP3 file doesn't get messed with when it's tagged.  The _closest_ I can think of is a commented GIF/JPEG (one supports comments) - the image isn't recompressed.  So I can't see any reason why people will (validly) request this treatment for other file types.
+<br/>
+<br/>Anyway, if clients will give out meta-data for any file they're sharing, and you can retrieve hits based on searching for a hash, you could then "gather" meta-data from other clients and use it, inside or outside the client, to modify your source.  A simplistic example is that eMule will let you see the remote filenames of anything you're currently transferring, and let you rename your local copy inside the application.  Allowing fetching of remote meta-information seems like a pretty "neat" thing, and if people get used to it, it might just become an indispensible feature of DC++.
+<br/>
+<br/>I think that if someone has a big enough patch that goes into DC++, they should maintain it...  If it was Arne's "baby", it wouldn't have needed to be coded by someone else.  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9803">
+<div class="inner">
+<dl class="postprofile" id="profile9803">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9803">
+<h3><a href="#p9803"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-04-04 15:35
+			</p>
+<div class="content">I've played a bit with hashing; as of a week and a half ago or so, I'd gotten as far as <a class="postlink" href="http://utrum.dyndns.org:8000/tth.tar.bz2">this</a>. I'm further at this point, but unfortunately I hadn't had much time to work on it, so it's only now significantly developing (i.e. being integrated into a client) again.
+<br/>
+<br/>As far as XML filelists... I'd just say it should be transparently compressed with the bzip2 library or zlib; I'm not sure how readily the current DC++ XML parser can be extended to handle this, but if it can, great. Support for metadata would be nice too, though of lesser importance to me.
+<br/>
+<br/>Hashes should still be stored in a separate file, as a client won't request a list of all hashes, but a hash of one file. I'm so far using an <a class="postlink" href="http://switch.dl.sourceforge.net/sourceforge/pdonkey/eDonkey-protocol-0.6.html">eMule-like format</a> for it so far, but compressed XML would be nice, if it were easy within DC++ to use a compressed XML stream, but doesn't seem to hold any compelling advantages (the format is extensible through metalists).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			11 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=12">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Developer's resort”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

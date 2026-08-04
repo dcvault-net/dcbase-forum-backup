@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question to Arne about original design of DC - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=198">Question to Arne about original design of DC</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			26 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p894">
+<div class="inner">
+<dl class="postprofile" id="profile894">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=321">jan banan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 20:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content894">
+<h3 class="first"><a href="#p894">Question to Arne about original design of DC</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=321">jan banan</a></strong> » </span>2003-01-11 20:24
+			</p>
+<div class="content">Hi!
+<br/>
+<br/>Good work on DC++!
+<br/>
+<br/>Just wondering, now that you have made your own version of DC, and is working on a hubb. If you would have started from scratch today with a new DC2, what would you have made different? Any big flaws in the design of DC?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p897">
+<div class="inner">
+<dl class="postprofile" id="profile897">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content897">
+<h3><a href="#p897"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-11 21:23
+			</p>
+<div class="content">Are there any big flaws in DC protocol? Better ask "Is there anything in DC protocol that isn't flawed?" <img alt=":mrgreen:" class="smilies" src="/images/smilies/icon_mrgreen.gif" title="Mr. Green"/>
+<br/>The whole protocol is one big mess - just look for the QuickList proposed by Nev, it's trying to fix one of the big flaws... and there are others...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p898">
+<div class="inner">
+<dl class="postprofile" id="profile898">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=253">eHast</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 18</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-09 07:36</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Lund, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content898">
+<h3><a href="#p898"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=253">eHast</a></strong> » </span>2003-01-11 21:29
+			</p>
+<div class="content">Heh, yeah it reminds me of one of the funny posts I saw on lichlord. (I think it was one of Arne's too.) It was regarding the lock-key system. It was summarised as:
+<br/>
+<br/>Server: Hi, I'm stupid
+<br/>Client: Hi, I'm also stupid</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1010">
+<div class="inner">
+<dl class="postprofile" id="profile1010">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=37">Nev</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 40</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 18:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1010">
+<h3><a href="#p1010"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=37">Nev</a></strong> » </span>2003-01-13 06:56
+			</p>
+<div class="content">lol@eHast
+<br/>
+<br/>... and we must not forget all 'em GetINFOs that are totally unneccesary...</div>
+<div class="signature" id="sig1010"><a class="postlink inert" href="#" title="Disabled in this archive"><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong">ancient.myftp.org - </strong></span><span style="color: red"><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong">[BBB][Sunet][Tele2] ONLY!</strong></span></span><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong"> @ 20GB (ISP/IP/Share Scripted)</strong></span></a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5064">
+<div class="inner">
+<dl class="postprofile" id="profile5064">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5064">
+<h3><a href="#p5064"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-02-20 23:23
+			</p>
+<div class="content">and $hello's, and not to mention the "denide" sp mistake  <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5153">
+<div class="inner">
+<dl class="postprofile" id="profile5153">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5153">
+<h3><a href="#p5153"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-02-21 20:30
+			</p>
+<div class="content">How about $LogedIn? <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Prudence is a rich, ugly old maid courted by incapacity.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5674">
+<div class="inner">
+<dl class="postprofile" id="profile5674">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5674">
+<h3><a href="#p5674"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-02-27 10:30
+			</p>
+<div class="content">A few others;
+<br/>-  The protocol doesn't handle certain characters (like: |, $, &lt;, &gt;, character 0x5 or even spaces in some cases) 
+<br/>Need some escaping scheme here, this is done only in the lock computation (for some weird reason!).
+<br/>
+<br/>- The whole network relies on a nickname that can be changed or taken by somebody else (thus your download queue doesn't work)  
+<br/>
+<br/>- Searches are difficult to track (which search result belongs to which search request). Obviously lack of support for multihub capabilities, and this makes automated searches difficult.
+<br/>
+<br/>- In general the protocol doesn't define error conditions. If something weird happens, we either ignore it or close the connection.</div>
+<div class="signature" id="sig5674">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6362">
+<div class="inner">
+<dl class="postprofile" id="profile6362">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 15:39</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6362">
+<h3><a href="#p6362"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a></strong> » </span>2003-03-06 09:17
+			</p>
+<div class="content">You guys take everything for granite.
+<br/>
+<br/>A flawless protocol doesn't exist, right? I imagine the DC protocol was designed on the basis of pure speculation. With as many P2P apps as there are, I find it hard to believe a VB,p.o.s., P2P app would overcome so many others and find it's way into the hands of crackers. Crackers I say, because the DC protocol was never *SO* public, until DC++ surfaced of course.
+<br/>
+<br/>So, just don't use it if you think it has so many flaws. Security wise, yeah it has lots of flaws, but then again, who would've thought DC could turn into what it is now...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6369">
+<div class="inner">
+<dl class="postprofile" id="profile6369">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1710">[A&amp;AM]Fireball</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 23</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 08:47</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> germany</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6369">
+<h3><a href="#p6369"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1710">[A&amp;AM]Fireball</a></strong> » </span>2003-03-06 10:10
+			</p>
+<div class="content">am wondering now ...
+<br/>
+<br/>why isn't arne desinging a new version of the protocol and implementing it in DC++ ...
+<br/>then make it public so other hub developers can use it, and change his how to the new protocol. then, if someone tries to connect using the old protocol just send a message back telling the user why this won't work and disconnecting him ...
+<br/>
+<br/>if you got a client supporting both protocol version you could have a smooth change to it ...
+<br/>
+<br/>
+<br/>so we could have all add-ons we want (like checksum, search identifiers etc.)</div>
+<div class="signature" id="sig6369">learn more about the [A&amp;AM]Hubs: <a class="postlink" href="http://animeandasianmovies.de.vu">AnimeAndAsianMovies.de.vu</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6385">
+<div class="inner">
+<dl class="postprofile" id="profile6385">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=491">Neg</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-19 12:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6385">
+<h3><a href="#p6385"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=491">Neg</a></strong> » </span>2003-03-06 14:58
+			</p>
+<div class="content">I totaly agre with [A&amp;AM]Fireball. Make a improved protocol and switch to it. I think many developers will switch to it to if it have lots of featurs that the original DC protocol dose not have.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6387">
+<div class="inner">
+<dl class="postprofile" id="profile6387">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6387">
+<h3><a href="#p6387"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-03-06 15:04
+			</p>
+<div class="content">I disagree. No need to add bloat to the existing protocol.
+<br/>Make an entirely new protocol based on the same ideas and concepts as DC.
+<br/>
+<br/>Right now there are many different interpretations of the DC protocol, 
+<br/>and you are not guaranteed that something which works with DC++ works with another DC client.
+<br/>
+<br/>Start over again. Add those things missing, create a more 
+<br/>robust and strict protocol, but keep it simple.</div>
+<div class="signature" id="sig6387">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6416">
+<div class="inner">
+<dl class="postprofile" id="profile6416">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1017">goweropolis</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-05 22:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6416">
+<h3><a href="#p6416"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1017">goweropolis</a></strong> » </span>2003-03-06 18:35
+			</p>
+<div class="content">Running a private file sharing hub, I have found DC++ (with ODCH, very stable hub, for small numbers anyway) to be the best option. One of the biggest bonuses with DC is the fact that I can share 120 GB of material and not have huge CPU drags. I tried using Shareaza &amp; Phex (Gnutella clients) to create private networks, but they had problems handling the large number of files that I was sharing. Maybe that was the cost for supporting multisource downloading, something I would love to see in DC, but maybe simple is better. I just wish that searching was more stable, and the active-passive thing was ditched.
+<br/>
+<br/>Anyways, I'm just rambling now. Just wanted to get some thoughts down. I think Arne has created a great client, and I thank him for his efforts.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6428">
+<div class="inner">
+<dl class="postprofile" id="profile6428">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6428">
+<h3><a href="#p6428"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-06 19:33
+			</p>
+<div class="content"><blockquote><div><cite>goweropolis wrote:</cite>Maybe that was the cost for supporting multisource downloading, something I would love to see in DC, but maybe simple is better. I just wish that searching was more stable, and the active-passive thing was ditched.</div></blockquote>
+<br/>
+<br/>How exactly are active and passive mode supposed to be ditched?  It's an echo of the fact that so many people are behind firewalls or routers.  Every P2P application has an equivalent setting, though some just auto-detect and stick you in the mode they guess you belong in.
+<br/>
+<br/>Oh, and for on-topicness: $Supports is a fine way to extend the client to client protocol, the only protocol that Arne has control over.  And what features need to be added to the Server to client protocol?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6462">
+<div class="inner">
+<dl class="postprofile" id="profile6462">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6462">
+<h3><a href="#p6462"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-06 23:34
+			</p>
+<div class="content"><blockquote><div><cite>goweropolis wrote:</cite>One of the biggest bonuses with DC is the fact that I can share 120 GB of material and not have huge CPU drags. I tried using Shareaza &amp; Phex (Gnutella clients) to create private networks, but they had problems handling the large number of files that I was sharing.</div></blockquote>
+<br/>
+<br/>What version of shareaza was that? Im sharing ~10k files, 140Gb, having only G2 enabled. Im seeing lots and lots of searches, but having no problems, when running it in low priority. It is using 40-60% cpu though, on a Athlon 1400. Im seeing 10-30 searches per second. Im still able to game while its running.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6463">
+<div class="inner">
+<dl class="postprofile" id="profile6463">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1017">goweropolis</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-05 22:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6463">
+<h3><a href="#p6463"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1017">goweropolis</a></strong> » </span>2003-03-06 23:39
+			</p>
+<div class="content">GargoyleMT: Yeah, I guess that what I mean, is that it would be nice if the active-passive thing was automatic. More user-friendly and easier to non-techheads to use.
+<br/>
+<br/>Sandos: I think that was Shareaza 1.8. Yeah, the 40-60% CPU power is my problem with it. It inhibits anything I'm doing on my computer. I am surprised you can play games at the same time. I had problems running other progs at a decent speed while running Shareaza. Progs like DC++ &amp; eMule are usually less than 10%, which I would consider more reasonable.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6622">
+<div class="inner">
+<dl class="postprofile" id="profile6622">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-06 11:56</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6622">
+<h3><a href="#p6622"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a></strong> » </span>2003-03-08 12:52
+			</p>
+<div class="content"><blockquote><div><cite>goweropolis wrote:</cite>it would be nice if the active-passive thing was automatic. More user-friendly and easier to non-techheads to use.<br/></div></blockquote>
+<br/>
+<br/>True, but the way it is, you can run dc++ in active mode in some cases wich an auto-detect feature would see as passive. You can configure the port, going through routers or firewalls harder to configure, set the external IP to be in active mode through ICS... And all you have to do if this is to complicated is to click on <em class="text-italics">passive mode</em>.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6952">
+<div class="inner">
+<dl class="postprofile" id="profile6952">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1017">goweropolis</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-05 22:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6952">
+<h3><a href="#p6952"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1017">goweropolis</a></strong> » </span>2003-03-10 19:10
+			</p>
+<div class="content">My concern is that no other P2P prog requires you to figure out your IP address and enter it in the options manually. Maybe a handy feature in DC++ would be for it to configure itself automatically. I know this isn't that complicated but the easier it is, the more users will use it. More active users is a good thing I would think.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6953">
+<div class="inner">
+<dl class="postprofile" id="profile6953">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-06 11:56</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6953">
+<h3><a href="#p6953"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1876">Marvin</a></strong> » </span>2003-03-10 19:21
+			</p>
+<div class="content">Watch <a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?t=230">this topic  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p7371">
+<div class="inner">
+<dl class="postprofile" id="profile7371">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1764">chrish4321</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-02 06:50</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7371">
+<h3><a href="#p7371">Client-Hub Protocol Improvement</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1764">chrish4321</a></strong> » </span>2003-03-12 07:23
+			</p>
+<div class="content">GargoyleMT once wrote:
+<br/><blockquote class="uncited"><div> And what features need to be added to the Server to client protocol?<br/></div></blockquote>
+<br/>
+<br/>Well, for one I'd like at least secure passwords -- so that the admins can't see the cleartext password, so that it can't be grabbed in transit, and so that a compromised password database doesn't automatically compromise the whole system's security without some serious work.  It would be necessary to choose some secure protocol and store only encrypted passwords, such that even the admins couldn't recover them.  
+<br/>
+<br/>This is one of many, many security improvements that could be made, but it seems like a good starting point, since it's simple authentication, increases security quite a bit, and, under some protocols, would result in a key exchange that could be used for later Client-Server encryption.  In my opinion, one of the best options for this feature would be Stanford's SRP Protocol.  See <!-- m --><a class="postlink" href="http://srp.stanford.edu/">http://srp.stanford.edu/</a><!-- m --> for details...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p7548">
+<div class="inner">
+<dl class="postprofile" id="profile7548">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content7548">
+<h3><a href="#p7548">Re: Client-Hub Protocol Improvement</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-13 04:41
+			</p>
+<div class="content"><blockquote><div><cite>chrish4321 wrote:</cite>Well, for one I'd like at least secure passwords -- so that the admins can't see the cleartext password, so that it can't be grabbed in transit, and so that a compromised password database doesn't automatically compromise the whole system's security without some serious work.</div></blockquote>
+<br/>
+<br/>You're serious?
+<br/>
+<br/>Well, I think that client&lt;-&gt;server encryption has been brought up before, with the caveat that it will be very draining on the hub computer's existing resources.
+<br/>
+<br/>But something like CRAM-MD5 could probably be implemented just for passwords... and there's no need to encrypt the rest of the conversation.
+<br/>
+<br/>
+<br/>
+<br/>As an aside, I thought of an answer to my own question the other day: returning specific types of meta-data per search "type/category" - so with an audio search, you could return bitrate, length, etc.  images would give color depth, resolution, movies: audio/video codec, resolution, etc.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p51535">
+<div class="inner">
+<dl class="postprofile" id="profile51535">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content51535">
+<h3><a href="#p51535"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2004-04-30 10:57
+			</p>
+<div class="content">Why hasn't anyone mentioned ADC???
+<br/>
+<br/><!-- m --><a class="postlink" href="http://dcplusplus.sourceforge.net/ADC.htm">http://dcplusplus.sourceforge.net/ADC.htm</a><!-- m -->
+<br/>
+<br/>Speaking of $Quicklist, why is it still a proposal? last time I checked only one Hubsoft (SDCH) offered native support for this capability even though everyone seems to think it's a good thing....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p51536">
+<div class="inner">
+<dl class="postprofile" id="profile51536">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content51536">
+<h3><a href="#p51536"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2004-04-30 11:36
+			</p>
+<div class="content">Hihi, ASH had support aswell. ;))
+<br/>
+<br/>But anyway, why ADC was not mention is probably due to the fact that this thread died a long time ago. Long before ADC came into the picture. ,))</div>
+<div class="signature" id="sig51536">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p51548">
+<div class="inner">
+<dl class="postprofile" id="profile51548">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content51548">
+<h3><a href="#p51548"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2004-04-30 16:33
+			</p>
+<div class="content">I have a shortcut for NEW POSTS (<!-- m --><a class="postlink" href="http://dcplusplus.sourceforge.net/forum/search.php?search_id=newposts">http://dcplusplus.sourceforge.net/forum ... d=newposts</a><!-- m -->) on this forum and it came up, so I just replied to it without checking the dates... I did not go digging around in old threads..... <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/>
+<br/>
+<br/>I wonder why it would show up over a year later as a new post <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/>
+<br/>
+<br/>Maybe it's a bug in phpBB? Weird.... <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p51562">
+<div class="inner">
+<dl class="postprofile" id="profile51562">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content51562">
+<h3><a href="#p51562"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2004-04-30 19:18
+			</p>
+<div class="content">GargoyleMT went around resurrecting threads that had been lost earlier, could be why it showed up.</div>
+<div class="signature" id="sig51562"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p51599">
+<div class="inner">
+<dl class="postprofile" id="profile51599">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content51599">
+<h3><a href="#p51599"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-05-01 01:27
+			</p>
+<div class="content">Could be - I did those all by hand, with no moderator or administrator magic.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p51628">
+<div class="inner">
+<dl class="postprofile" id="profile51628">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content51628">
+<h3><a href="#p51628"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2004-05-01 10:42
+			</p>
+<div class="content">Aaahhh.... that would do it... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			26 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

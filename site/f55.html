@@ -6,21 +6,21 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Protocol Ideas - DCBase</title>
-<link href="/app.php/feed?sid=6daadbd2263f8f7671e8ae9be15cf5eb" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=6daadbd2263f8f7671e8ae9be15cf5eb" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=6daadbd2263f8f7671e8ae9be15cf5eb" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=6daadbd2263f8f7671e8ae9be15cf5eb" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=6daadbd2263f8f7671e8ae9be15cf5eb" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/55?sid=6daadbd2263f8f7671e8ae9be15cf5eb" rel="alternate" title="Feed - Forum - Protocol Ideas" type="application/atom+xml"/>
-<link href="https://forum.dcbase.org/viewforum.php?f=55" rel="canonical"/>
+     
+
 <!--
 	phpBB style name: prosilver
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
 	Modified by:
 -->
-<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
 <!--[if lte IE 9]>
 	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
 <![endif]-->
-<link href="overrides.css" rel="stylesheet"/></head>
+<link href="/overrides.css" rel="stylesheet"/></head>
 <body class="nojs notouch section-viewforum ltr" id="phpbb">
 <div class="wrap" id="wrap">
 <a accesskey="t" class="top-anchor" id="top"></a>
@@ -49,17 +49,22 @@
 </ul>
 </div>
 </li>
-<li data-skip-responsive="true">
+<li data-last-responsive="true">
 <a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
 <i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
 </a>
 </li>
 <li class="rightside" data-skip-responsive="true">
 <a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
 </a>
 </li>
-</ul>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
 <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
 <li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 <span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
@@ -104,14 +109,11 @@
 <dt title="Forum locked">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Pushed ideas" href="/app.php/feed?sid=6daadbd2263f8f7671e8ae9be15cf5eb?f=87">
+								<a class="feed-icon-forum" title="Feed - Pushed ideas" href="/app.php/feed?f=87">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Pushed ideas</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=87">Pushed ideas</a>
-<div class="responsive-show" style="display: none;">
-															Topics: <strong>34</strong>
-</div>
 </div>
 </dt>
 <dd class="topics">34 <dfn>Topics</dfn></dd>
@@ -120,10 +122,7 @@
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=87&amp;p=3144#p3144" title="Re: RDEX - Redirects Extended">Re: RDEX - Redirects Extended</a> <br/>
-																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> <a href="/viewtopic.php?f=87&amp;p=3144#p3144" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>03 Jan 2014, 17:43
+																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> <br/>Fri Jan 03, 2014 5:43 pm
 													</span>
 </dd>
 </dl>
@@ -132,9 +131,6 @@
 </div>
 </div>
 <div class="action-bar bar-top">
-<a class="button inert" href="#" title="Disabled in this archive">
-<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
-</a>
 <div class="pagination">
 				71 topics
 					<ul>
@@ -163,20 +159,14 @@
 <dt style="background-image: url(./images/icons/smile/alert.gif); background-repeat: no-repeat;" title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=721">Reminder: Cross-post to the Wiki</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> « <a href="/viewtopic.php?f=55&amp;t=721&amp;p=2597#p2597" title="Go to last post">02 Jan 2011, 11:46</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> » 02 Jan 2011, 11:46													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> » Sun Jan 02, 2011 11:46 am													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">11755 <dfn>Views</dfn></dd>
+<dd class="views">923 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> <a href="/viewtopic.php?f=55&amp;t=721&amp;p=2597#p2597" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>02 Jan 2011, 11:46
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> <br/>Sun Jan 02, 2011 11:46 am
 					</span>
 </dd>
 </dl>
@@ -186,21 +176,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=1479">DC++ protocol negotiation via ALPN</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=898">Dexo</a> « <a href="/viewtopic.php?f=55&amp;t=1479&amp;p=4021#p4021" title="Go to last post">29 Jan 2019, 13:13</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>2</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=898">Dexo</a> » 03 Jan 2019, 23:53													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=898">Dexo</a> » Thu Jan 03, 2019 11:53 pm													</div>
 </div>
 </dt>
 <dd class="posts">2 <dfn>Replies</dfn></dd>
-<dd class="views">45319 <dfn>Views</dfn></dd>
+<dd class="views">1703 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=898">Dexo</a> <a href="/viewtopic.php?f=55&amp;t=1479&amp;p=4021#p4021" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>29 Jan 2019, 13:13
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=898">Dexo</a> <br/>Tue Jan 29, 2019 1:13 pm
 					</span>
 </dd>
 </dl>
@@ -210,21 +193,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=554">Hash set extension</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=770">iOCTAGRAM</a> « <a href="/viewtopic.php?f=55&amp;t=554&amp;p=3639#p3639" title="Go to last post">21 Oct 2017, 18:53</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>5</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » 10 Aug 2009, 23:19													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » Mon Aug 10, 2009 11:19 pm													</div>
 </div>
 </dt>
 <dd class="posts">5 <dfn>Replies</dfn></dd>
-<dd class="views">27859 <dfn>Views</dfn></dd>
+<dd class="views">3167 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=770">iOCTAGRAM</a> <a href="/viewtopic.php?f=55&amp;t=554&amp;p=3639#p3639" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>21 Oct 2017, 18:53
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=770">iOCTAGRAM</a> <br/>Sat Oct 21, 2017 6:53 pm
 					</span>
 </dd>
 </dl>
@@ -234,21 +210,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=1158">U2F / Yubikey</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> « <a href="/viewtopic.php?f=55&amp;t=1158&amp;p=3624#p3624" title="Go to last post">04 Aug 2016, 19:09</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> » 07 Jul 2016, 18:03													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> » Thu Jul 07, 2016 6:03 pm													</div>
 </div>
 </dt>
 <dd class="posts">1 <dfn>Replies</dfn></dd>
-<dd class="views">12513 <dfn>Views</dfn></dd>
+<dd class="views">473 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <a href="/viewtopic.php?f=55&amp;t=1158&amp;p=3624#p3624" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>04 Aug 2016, 19:09
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <br/>Thu Aug 04, 2016 7:09 pm
 					</span>
 </dd>
 </dl>
@@ -258,20 +227,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=1157">ADC over Websockets</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> « <a href="/viewtopic.php?f=55&amp;t=1157&amp;p=3622#p3622" title="Go to last post">21 Apr 2016, 17:48</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> » 21 Apr 2016, 17:48													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> » Thu Apr 21, 2016 5:48 pm													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">11634 <dfn>Views</dfn></dd>
+<dd class="views">345 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <a href="/viewtopic.php?f=55&amp;t=1157&amp;p=3622#p3622" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>21 Apr 2016, 17:48
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <br/>Thu Apr 21, 2016 5:48 pm
 					</span>
 </dd>
 </dl>
@@ -281,21 +244,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=1121">OS name in INF</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> « <a href="/viewtopic.php?f=55&amp;t=1121&amp;p=3576#p3576" title="Go to last post">13 Oct 2015, 17:07</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>5</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=686">HeavyMetalMichi</a> » 26 Aug 2015, 01:36													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=686">HeavyMetalMichi</a> » Wed Aug 26, 2015 1:36 am													</div>
 </div>
 </dt>
 <dd class="posts">5 <dfn>Replies</dfn></dd>
-<dd class="views">15548 <dfn>Views</dfn></dd>
+<dd class="views">900 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <a href="/viewtopic.php?f=55&amp;t=1121&amp;p=3576#p3576" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>13 Oct 2015, 17:07
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <br/>Tue Oct 13, 2015 5:07 pm
 					</span>
 </dd>
 </dl>
@@ -305,20 +261,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=1129">Retreker another way of nat</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=459">terminator</a> « <a href="/viewtopic.php?f=55&amp;t=1129&amp;p=3540#p3540" title="Go to last post">19 Sep 2015, 17:41</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=459">terminator</a> » 19 Sep 2015, 17:41													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=459">terminator</a> » Sat Sep 19, 2015 5:41 pm													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">11698 <dfn>Views</dfn></dd>
+<dd class="views">428 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=459">terminator</a> <a href="/viewtopic.php?f=55&amp;t=1129&amp;p=3540#p3540" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>19 Sep 2015, 17:41
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=459">terminator</a> <br/>Sat Sep 19, 2015 5:41 pm
 					</span>
 </dd>
 </dl>
@@ -328,21 +278,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=1003">[ADC 1.0.4] UTF-8 encoding clarification</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> « <a href="/viewtopic.php?f=55&amp;t=1003&amp;p=3389#p3389" title="Go to last post">21 Feb 2015, 16:58</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » 20 Jan 2015, 20:57													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » Tue Jan 20, 2015 8:57 pm													</div>
 </div>
 </dt>
 <dd class="posts">1 <dfn>Replies</dfn></dd>
-<dd class="views">13272 <dfn>Views</dfn></dd>
+<dd class="views">551 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <a href="/viewtopic.php?f=55&amp;t=1003&amp;p=3389#p3389" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>21 Feb 2015, 16:58
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <br/>Sat Feb 21, 2015 4:58 pm
 					</span>
 </dd>
 </dl>
@@ -352,21 +295,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=760">[Future ADC-EXT 1.0.9] HH field in the PING extention</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> « <a href="/viewtopic.php?f=55&amp;t=760&amp;p=3388#p3388" title="Go to last post">19 Feb 2015, 20:23</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>3</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=332" style="color: #5F04B4;">Pirre</a> » 16 Jun 2011, 19:35													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=332" style="color: #5F04B4;">Pirre</a> » Thu Jun 16, 2011 7:35 pm													</div>
 </div>
 </dt>
 <dd class="posts">3 <dfn>Replies</dfn></dd>
-<dd class="views">13862 <dfn>Views</dfn></dd>
+<dd class="views">824 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <a href="/viewtopic.php?f=55&amp;t=760&amp;p=3388#p3388" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>19 Feb 2015, 20:23
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <br/>Thu Feb 19, 2015 8:23 pm
 					</span>
 </dd>
 </dl>
@@ -376,20 +312,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=931">Onioncat and garlicat as a way to use ADC with IPv6 over Tor</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> « <a href="/viewtopic.php?f=55&amp;t=931&amp;p=3227#p3227" title="Go to last post">30 Oct 2014, 23:16</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> » 30 Oct 2014, 23:16													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> » Thu Oct 30, 2014 11:16 pm													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">12221 <dfn>Views</dfn></dd>
+<dd class="views">528 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <a href="/viewtopic.php?f=55&amp;t=931&amp;p=3227#p3227" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>30 Oct 2014, 23:16
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <br/>Thu Oct 30, 2014 11:16 pm
 					</span>
 </dd>
 </dl>
@@ -399,20 +329,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=930">ADC over I2P</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> « <a href="/viewtopic.php?f=55&amp;t=930&amp;p=3226#p3226" title="Go to last post">30 Oct 2014, 23:10</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> » 30 Oct 2014, 23:10													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> » Thu Oct 30, 2014 11:10 pm													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">11790 <dfn>Views</dfn></dd>
+<dd class="views">468 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <a href="/viewtopic.php?f=55&amp;t=930&amp;p=3226#p3226" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>30 Oct 2014, 23:10
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <br/>Thu Oct 30, 2014 11:10 pm
 					</span>
 </dd>
 </dl>
@@ -422,21 +346,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=925">OSNR - Only Send No Read</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> « <a href="/viewtopic.php?f=55&amp;t=925&amp;p=3220#p3220" title="Go to last post">13 Oct 2014, 15:55</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>2</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=63" style="color: #AEB404;">blastbeat</a> » 10 Oct 2014, 11:59													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=63" style="color: #AEB404;">blastbeat</a> » Fri Oct 10, 2014 11:59 am													</div>
 </div>
 </dt>
 <dd class="posts">2 <dfn>Replies</dfn></dd>
-<dd class="views">16131 <dfn>Views</dfn></dd>
+<dd class="views">1078 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <a href="/viewtopic.php?f=55&amp;t=925&amp;p=3220#p3220" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>13 Oct 2014, 15:55
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <br/>Mon Oct 13, 2014 3:55 pm
 					</span>
 </dd>
 </dl>
@@ -446,20 +363,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=912">Bundles</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> « <a href="/viewtopic.php?f=55&amp;t=912&amp;p=3205#p3205" title="Go to last post">05 Aug 2014, 11:37</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » 05 Aug 2014, 11:37													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » Tue Aug 05, 2014 11:37 am													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">12099 <dfn>Views</dfn></dd>
+<dd class="views">777 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <a href="/viewtopic.php?f=55&amp;t=912&amp;p=3205#p3205" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>05 Aug 2014, 11:37
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <br/>Tue Aug 05, 2014 11:37 am
 					</span>
 </dd>
 </dl>
@@ -469,20 +380,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=911">Remove "group-SID" from MSG PM</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> « <a href="/viewtopic.php?f=55&amp;t=911&amp;p=3204#p3204" title="Go to last post">05 Aug 2014, 11:31</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » 05 Aug 2014, 11:31													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » Tue Aug 05, 2014 11:31 am													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">11764 <dfn>Views</dfn></dd>
+<dd class="views">545 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <a href="/viewtopic.php?f=55&amp;t=911&amp;p=3204#p3204" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>05 Aug 2014, 11:31
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <br/>Tue Aug 05, 2014 11:31 am
 					</span>
 </dd>
 </dl>
@@ -492,12 +397,8 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=724">CCPM - Client to Client Private Message</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> « <a href="/viewtopic.php?f=55&amp;t=724&amp;p=3166#p3166" title="Go to last post">20 Feb 2014, 19:30</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>14</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » 02 Jan 2011, 13:12													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » Sun Jan 02, 2011 1:12 pm													</div>
 <div class="pagination">
 <span><i aria-hidden="true" class="icon fa-clone fa-fw"></i></span>
 <ul>
@@ -508,12 +409,9 @@
 </div>
 </dt>
 <dd class="posts">14 <dfn>Replies</dfn></dd>
-<dd class="views">59705 <dfn>Views</dfn></dd>
+<dd class="views">29893 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> <a href="/viewtopic.php?f=55&amp;t=724&amp;p=3166#p3166" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>20 Feb 2014, 19:30
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> <br/>Thu Feb 20, 2014 7:30 pm
 					</span>
 </dd>
 </dl>
@@ -523,21 +421,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=866">QS - Query String for Hubs in INF</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> « <a href="/viewtopic.php?f=55&amp;t=866&amp;p=3155#p3155" title="Go to last post">07 Jan 2014, 23:57</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>8</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> » 03 Jan 2014, 04:35													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> » Fri Jan 03, 2014 4:35 am													</div>
 </div>
 </dt>
 <dd class="posts">8 <dfn>Replies</dfn></dd>
-<dd class="views">24063 <dfn>Views</dfn></dd>
+<dd class="views">6536 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> <a href="/viewtopic.php?f=55&amp;t=866&amp;p=3155#p3155" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>07 Jan 2014, 23:57
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> <br/>Tue Jan 07, 2014 11:57 pm
 					</span>
 </dd>
 </dl>
@@ -547,21 +438,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=695">Regular expressions in SCH</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> « <a href="/viewtopic.php?f=55&amp;t=695&amp;p=3141#p3141" title="Go to last post">01 Jan 2014, 20:19</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » 26 Nov 2010, 18:59													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » Fri Nov 26, 2010 6:59 pm													</div>
 </div>
 </dt>
 <dd class="posts">1 <dfn>Replies</dfn></dd>
-<dd class="views">12693 <dfn>Views</dfn></dd>
+<dd class="views">975 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> <a href="/viewtopic.php?f=55&amp;t=695&amp;p=3141#p3141" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>01 Jan 2014, 20:19
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=2" style="color: #B45F04;">Crise</a> <br/>Wed Jan 01, 2014 8:19 pm
 					</span>
 </dd>
 </dl>
@@ -571,21 +455,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=771">HBRI IPv4/6 verification for hybrid hubs</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a> « <a href="/viewtopic.php?f=55&amp;t=771&amp;p=3126#p3126" title="Go to last post">27 Nov 2013, 11:27</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>4</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=332" style="color: #5F04B4;">Pirre</a> » 20 Mar 2012, 20:06													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=332" style="color: #5F04B4;">Pirre</a> » Tue Mar 20, 2012 8:06 pm													</div>
 </div>
 </dt>
 <dd class="posts">4 <dfn>Replies</dfn></dd>
-<dd class="views">24919 <dfn>Views</dfn></dd>
+<dd class="views">10670 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a> <a href="/viewtopic.php?f=55&amp;t=771&amp;p=3126#p3126" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>27 Nov 2013, 11:27
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a> <br/>Wed Nov 27, 2013 11:27 am
 					</span>
 </dd>
 </dl>
@@ -595,21 +472,14 @@
 <dt style="background-image: url(./images/icons/misc/thinking.gif); background-repeat: no-repeat;" title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=861">Hubless client-to-client mode on local networks.</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> « <a href="/viewtopic.php?f=55&amp;t=861&amp;p=3113#p3113" title="Go to last post">06 Oct 2013, 15:55</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=468">Emery</a> » 29 Aug 2013, 16:34													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=468">Emery</a> » Thu Aug 29, 2013 4:34 pm													</div>
 </div>
 </dt>
 <dd class="posts">1 <dfn>Replies</dfn></dd>
-<dd class="views">18743 <dfn>Views</dfn></dd>
+<dd class="views">5590 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <a href="/viewtopic.php?f=55&amp;t=861&amp;p=3113#p3113" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>06 Oct 2013, 15:55
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <br/>Sun Oct 06, 2013 3:55 pm
 					</span>
 </dd>
 </dl>
@@ -619,20 +489,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=859">WebRTC, ICE as the preferred way to transfer files</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=424">OCTAGRAM</a> « <a href="/viewtopic.php?f=55&amp;t=859&amp;p=3097#p3097" title="Go to last post">20 Jul 2013, 20:10</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=424">OCTAGRAM</a> » 20 Jul 2013, 20:10													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=424">OCTAGRAM</a> » Sat Jul 20, 2013 8:10 pm													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">14417 <dfn>Views</dfn></dd>
+<dd class="views">3466 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=424">OCTAGRAM</a> <a href="/viewtopic.php?f=55&amp;t=859&amp;p=3097#p3097" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>20 Jul 2013, 20:10
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=424">OCTAGRAM</a> <br/>Sat Jul 20, 2013 8:10 pm
 					</span>
 </dd>
 </dl>
@@ -642,21 +506,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=856">Multiple per-user connections (MCN1/MCN2)</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a> « <a href="/viewtopic.php?f=55&amp;t=856&amp;p=3096#p3096" title="Go to last post">01 Jul 2013, 20:50</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a> » 27 Jun 2013, 22:14													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a> » Thu Jun 27, 2013 10:14 pm													</div>
 </div>
 </dt>
 <dd class="posts">1 <dfn>Replies</dfn></dd>
-<dd class="views">18297 <dfn>Views</dfn></dd>
+<dd class="views">6367 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a> <a href="/viewtopic.php?f=55&amp;t=856&amp;p=3096#p3096" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>01 Jul 2013, 20:50
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=378">maksis</a> <br/>Mon Jul 01, 2013 8:50 pm
 					</span>
 </dd>
 </dl>
@@ -666,20 +523,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=858">Protocol support hint in STA 41</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> « <a href="/viewtopic.php?f=55&amp;t=858&amp;p=3091#p3091" title="Go to last post">30 Jun 2013, 14:06</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » 30 Jun 2013, 14:06													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » Sun Jun 30, 2013 2:06 pm													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">16073 <dfn>Views</dfn></dd>
+<dd class="views">5189 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <a href="/viewtopic.php?f=55&amp;t=858&amp;p=3091#p3091" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>30 Jun 2013, 14:06
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> <br/>Sun Jun 30, 2013 2:06 pm
 					</span>
 </dd>
 </dl>
@@ -689,21 +540,14 @@
 <dt title="This topic is locked, you cannot edit posts or make further replies.">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=846">LOLI - League of Legends profile Information</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> « <a href="/viewtopic.php?f=55&amp;t=846&amp;p=3054#p3054" title="Go to last post">17 May 2013, 11:54</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>4</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> » 16 May 2013, 18:07													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> » Thu May 16, 2013 6:07 pm													</div>
 </div>
 </dt>
 <dd class="posts">4 <dfn>Replies</dfn></dd>
-<dd class="views">16989 <dfn>Views</dfn></dd>
+<dd class="views">2714 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> <a href="/viewtopic.php?f=55&amp;t=846&amp;p=3054#p3054" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>17 May 2013, 11:54
+<span><dfn>Last post </dfn>by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> <br/>Fri May 17, 2013 11:54 am
 					</span>
 </dd>
 </dl>
@@ -713,20 +557,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=840">DDOS Extension to make DDoS attacks easier</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> « <a href="/viewtopic.php?f=55&amp;t=840&amp;p=3031#p3031" title="Go to last post">01 Apr 2013, 00:02</a>
-</div>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> » 01 Apr 2013, 00:02													</div>
+																					by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> » Mon Apr 01, 2013 12:02 am													</div>
 </div>
 </dt>
 <dd class="posts">0 <dfn>Replies</dfn></dd>
-<dd class="views">11533 <dfn>Views</dfn></dd>
+<dd class="views">776 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <a href="/viewtopic.php?f=55&amp;t=840&amp;p=3031#p3031" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>01 Apr 2013, 00:02
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <br/>Mon Apr 01, 2013 12:02 am
 					</span>
 </dd>
 </dl>
@@ -736,21 +574,14 @@
 <dt title="No unread posts">
 <div class="list-inner">
 <a class="topictitle" href="/viewtopic.php?f=55&amp;t=836">SUP vs. INF SU</a> <br/>
-<div class="responsive-show" style="display: none;">
-							Last post by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> « <a href="/viewtopic.php?f=55&amp;t=836&amp;p=3022#p3022" title="Go to last post">25 Mar 2013, 22:15</a>
-</div>
-<span class="responsive-show left-box" style="display: none;">Replies: <strong>4</strong></span>
 <div class="topic-poster responsive-hide left-box">
-																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » 24 Mar 2013, 14:27													</div>
+																					by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> » Sun Mar 24, 2013 2:27 pm													</div>
 </div>
 </dt>
 <dd class="posts">4 <dfn>Replies</dfn></dd>
-<dd class="views">15423 <dfn>Views</dfn></dd>
+<dd class="views">1404 <dfn>Views</dfn></dd>
 <dd class="lastpost">
-<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <a href="/viewtopic.php?f=55&amp;t=836&amp;p=3022#p3022" title="Go to last post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only"></span>
-</a>
-<br/>25 Mar 2013, 22:15
+<span><dfn>Last post </dfn>by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <br/>Mon Mar 25, 2013 10:15 pm
 					</span>
 </dd>
 </dl>
@@ -759,29 +590,6 @@
 </div>
 </div>
 <div class="action-bar bar-bottom">
-<a class="button inert" href="#" title="Disabled in this archive">
-<span>Locked</span> <i aria-hidden="true" class="icon fa-lock fa-fw"></i>
-</a>
-<form action="#" method="post" onsubmit="return false">
-<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
-<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
-<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
-<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
-</span>
-<div class="dropdown hidden">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<div class="dropdown-contents">
-<fieldset class="display-options">
-<label>Display: <select id="st" name="st"><option selected="selected" value="0">All Topics</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
-<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="r">Replies</option><option value="s">Subject</option><option value="v">Views</option></select></label>
-<label>Direction: <select id="sd" name="sd"><option value="a">Ascending</option><option selected="selected" value="d">Descending</option></select></label>
-<hr class="dashed"/>
-<input class="button2" name="sort" type="submit" value="Go"/>
-</fieldset>
-</div>
-</div>
-</div>
-</form>
 <div class="pagination">
 						71 topics
 							<ul>
@@ -851,6 +659,10 @@
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
 <li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
@@ -860,25 +672,33 @@
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
 </ul>
 </div>
 </div>
 </div>
-<div class="stat-block permissions">
-<h3>Forum permissions</h3>
-<p>You <strong>cannot</strong> post new topics in this forum<br/>You <strong>cannot</strong> reply to topics in this forum<br/>You <strong>cannot</strong> edit your posts in this forum<br/>You <strong>cannot</strong> delete your posts in this forum<br/>You <strong>cannot</strong> post attachments in this forum<br/></p>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
 </div>
 </div>
-<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
 <div class="navbar" role="navigation">
 <div class="inner">
 <ul class="nav-footer linklist" id="nav-footer" role="menubar">
 <li class="breadcrumbs">
 <span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
 <li class="rightside">All times are <span title="UTC">UTC</span></li>
-<li class="rightside">
-<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
 </a>
 </li>
 <li class="rightside" data-last-responsive="true">
@@ -923,7 +743,6 @@
 <div>
 <a accesskey="z" class="anchor" id="bottom"></a>
 </div>
-
 
 
 

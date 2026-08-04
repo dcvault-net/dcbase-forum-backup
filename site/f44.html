@@ -6,20 +6,20 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>DCBase - Resources</title>
-<link href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=a333c491444a06195d560a9cb91eb015" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=a333c491444a06195d560a9cb91eb015" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=a333c491444a06195d560a9cb91eb015" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=a333c491444a06195d560a9cb91eb015" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/>
+    
 <!--
 	phpBB style name: prosilver
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
 	Modified by:
 -->
-<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
 <!--[if lte IE 9]>
 	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
 <![endif]-->
-<link href="overrides.css" rel="stylesheet"/></head>
+<link href="/overrides.css" rel="stylesheet"/></head>
 <body class="nojs notouch section-viewforum ltr" id="phpbb">
 <div class="wrap" id="wrap">
 <a accesskey="t" class="top-anchor" id="top"></a>
@@ -48,17 +48,22 @@
 </ul>
 </div>
 </li>
-<li data-skip-responsive="true">
+<li data-last-responsive="true">
 <a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
 <i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
 </a>
 </li>
 <li class="rightside" data-skip-responsive="true">
 <a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
 </a>
 </li>
-</ul>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
 <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
 <li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 <span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
@@ -91,20 +96,17 @@ We do hope that you the developer get something out of this resource pool.<br/><
 </ul>
 <ul class="topiclist forums">
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Tutorials" href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015?f=50">
+								<a class="feed-icon-forum" title="Feed - Tutorials" href="/app.php/feed?f=50">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Tutorials</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=50">Tutorials</a>
 <br/>Tutorial on API, Functions etc.												
-												<div class="responsive-show" style="display: none;">
-															Topics: <strong>5</strong>
-</div>
-</div>
+											</div>
 </dt>
 <dd class="topics">5 <dfn>Topics</dfn></dd>
 <dd class="posts">5 <dfn>Posts</dfn></dd>
@@ -112,29 +114,23 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=50&amp;p=502#p502" title="[Python]Code Samples for the Live Search API">[Python]Code Samples for the …</a> <br/>
-																	by <span class="username">Toast</span> <a href="/viewtopic.php?f=50&amp;p=502#p502" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>01 Jun 2008, 09:18
+																	by <span class="username">Toast</span> <br/>Sun Jun 01, 2008 9:18 am
 													</span>
 </dd>
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - SDK/Libs" href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015?f=51">
+								<a class="feed-icon-forum" title="Feed - SDK/Libs" href="/app.php/feed?f=51">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - SDK/Libs</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=51">SDK/Libs</a>
 <br/>Post SDK/Libs for development.												
-												<div class="responsive-show" style="display: none;">
-															Topics: <strong>23</strong>
-</div>
-</div>
+											</div>
 </dt>
 <dd class="topics">23 <dfn>Topics</dfn></dd>
 <dd class="posts">24 <dfn>Posts</dfn></dd>
@@ -142,29 +138,23 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=51&amp;p=3170#p3170" title="Freetiger to be merged into systemd">Freetiger to be merged into s…</a> <br/>
-																	by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <a href="/viewtopic.php?f=51&amp;p=3170#p3170" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>01 Apr 2014, 00:20
+																	by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> <br/>Tue Apr 01, 2014 12:20 am
 													</span>
 </dd>
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Documentation" href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015?f=62">
+								<a class="feed-icon-forum" title="Feed - Documentation" href="/app.php/feed?f=62">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Documentation</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=62">Documentation</a>
 <br/>Here is documentation about protocols etc.												
-												<div class="responsive-show" style="display: none;">
-															Topics: <strong>15</strong>
-</div>
-</div>
+											</div>
 </dt>
 <dd class="topics">15 <dfn>Topics</dfn></dd>
 <dd class="posts">26 <dfn>Posts</dfn></dd>
@@ -172,29 +162,23 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=62&amp;p=2311#p2311" title="Re: DC++ Compile howto">Re: DC++ Compile howto</a> <br/>
-																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> <a href="/viewtopic.php?f=62&amp;p=2311#p2311" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>25 Jun 2010, 11:31
+																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> <br/>Fri Jun 25, 2010 11:31 am
 													</span>
 </dd>
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Icon Packs" href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015?f=63">
+								<a class="feed-icon-forum" title="Feed - Icon Packs" href="/app.php/feed?f=63">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Icon Packs</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=63">Icon Packs</a>
 <br/>Here we post free icon packs or licensed icon packs.												
-												<div class="responsive-show" style="display: none;">
-															Topics: <strong>5</strong>
-</div>
-</div>
+											</div>
 </dt>
 <dd class="topics">5 <dfn>Topics</dfn></dd>
 <dd class="posts">5 <dfn>Posts</dfn></dd>
@@ -202,29 +186,23 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=63&amp;p=1530#p1530" title="Blogging Iconset">Blogging Iconset</a> <br/>
-																	by <span class="username">Toast</span> <a href="/viewtopic.php?f=63&amp;p=1530#p1530" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>01 Mar 2009, 18:31
+																	by <span class="username">Toast</span> <br/>Sun Mar 01, 2009 6:31 pm
 													</span>
 </dd>
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Hublists" href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015?f=15">
+								<a class="feed-icon-forum" title="Feed - Hublists" href="/app.php/feed?f=15">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Hublists</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=15">Hublists</a>
 <br/>Discuss features about hublists supports.												
-												<div class="responsive-show" style="display: none;">
-															Topics: <strong>7</strong>
-</div>
-</div>
+											</div>
 </dt>
 <dd class="topics">7 <dfn>Topics</dfn></dd>
 <dd class="posts">26 <dfn>Posts</dfn></dd>
@@ -232,27 +210,21 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=15&amp;p=3168#p3168" title="adc hublist source 2006">adc hublist source 2006</a> <br/>
-																	by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=510">pur</a> <a href="/viewtopic.php?f=15&amp;p=3168#p3168" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>30 Mar 2014, 16:29
+																	by <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=510">pur</a> <br/>Sun Mar 30, 2014 4:29 pm
 													</span>
 </dd>
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Links" href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015?f=84">
+								<a class="feed-icon-forum" title="Feed - Links" href="/app.php/feed?f=84">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Links</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=84">Links</a>
-<div class="responsive-show" style="display: none;">
-															Topics: <strong>1</strong>
-</div>
 </div>
 </dt>
 <dd class="topics">1 <dfn>Topics</dfn></dd>
@@ -261,26 +233,21 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=84&amp;p=2856#p2856" title="Re: DC Development/support hubs">Re: DC Development/support hu…</a> <br/>
-																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=414" style="color: #AEB404;">Ayo</a> <a href="/viewtopic.php?f=84&amp;p=2856#p2856" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>14 Mar 2012, 06:45
+																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=414" style="color: #AEB404;">Ayo</a> <br/>Wed Mar 14, 2012 6:45 am
 													</span>
 </dd>
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Chat logs" href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015?f=86">
+								<a class="feed-icon-forum" title="Feed - Chat logs" href="/app.php/feed?f=86">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Chat logs</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=86">Chat logs</a>
-<div class="responsive-show" style="display: none;">
-</div>
 </div>
 </dt>
 <dd class="topics">0 <dfn>Topics</dfn></dd>
@@ -293,18 +260,15 @@ We do hope that you the developer get something out of this resource pool.<br/><
 </dl>
 </li>
 <li class="row">
-<dl class="row-item forum_read_locked">
-<dt title="Forum locked">
+<dl class="row-item forum_read">
+<dt title="No unread posts">
 <div class="list-inner">
 <!--
-								<a class="feed-icon-forum" title="Feed - Other resources" href="/app.php/feed?sid=a333c491444a06195d560a9cb91eb015?f=85">
+								<a class="feed-icon-forum" title="Feed - Other resources" href="/app.php/feed?f=85">
 									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Other resources</span>
 								</a>
 							-->
 <a class="forumtitle" href="/viewforum.php?f=85">Other resources</a>
-<div class="responsive-show" style="display: none;">
-															Topics: <strong>7</strong>
-</div>
 </div>
 </dt>
 <dd class="topics">7 <dfn>Topics</dfn></dd>
@@ -313,10 +277,7 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <span>
 <dfn>Last post</dfn>
 <a class="lastsubject" href="/viewtopic.php?f=85&amp;p=3187#p3187" title="Re: Research on Direct Connect">Re: Research on Direct Connect</a> <br/>
-																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=414" style="color: #AEB404;">Ayo</a> <a href="/viewtopic.php?f=85&amp;p=3187#p3187" title="View the latest post">
-<i aria-hidden="true" class="icon fa-external-link-square fa-fw icon-lightgray icon-md"></i><span class="sr-only">View the latest post</span>
-</a>
-<br/>24 Jun 2014, 07:49
+																	by <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=414" style="color: #AEB404;">Ayo</a> <br/>Tue Jun 24, 2014 7:49 am
 													</span>
 </dd>
 </dl>
@@ -378,6 +339,10 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
 <li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
@@ -387,21 +352,33 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
 </ul>
 </div>
 </div>
 </div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
 </div>
-<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
 <div class="navbar" role="navigation">
 <div class="inner">
 <ul class="nav-footer linklist" id="nav-footer" role="menubar">
 <li class="breadcrumbs">
 <span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
 <li class="rightside">All times are <span title="UTC">UTC</span></li>
-<li class="rightside">
-<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
 </a>
 </li>
 <li class="rightside" data-last-responsive="true">
@@ -446,7 +423,6 @@ We do hope that you the developer get something out of this resource pool.<br/><
 <div>
 <a accesskey="z" class="anchor" id="bottom"></a>
 </div>
-
 
 
 

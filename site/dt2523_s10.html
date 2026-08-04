@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>DC Protocol Guide (Complete) - Page 1 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=2523&amp;start=10">DC Protocol Guide (Complete)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			15 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p13381">
+<div class="inner">
+<dl class="postprofile" id="profile13381">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=37">Nev</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 40</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 18:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13381">
+<h3 class="first"><a href="#p13381"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=37">Nev</a></strong> » </span>2003-05-01 11:52
+			</p>
+<div class="content"><blockquote class="uncited"><div>NOTE: some hub implementations do not consider a client to be in a logged in state before it has sent a $MyINFO. this is the correct behaviour, and the NMDC hub is flawed in this respect.<br/></div></blockquote>
+<br/>
+<br/>Loved this section. The protocol is obviosuly very forgiving when it comes to the order of things. Hence ValdidateDenide, GetPass, BadPass and LogedIn can be sent from the hub after MyINFO have been sent from the client. Neither nmdc nor dc++ have any problems with that. Maybe you should make a note of that.</div>
+<div class="signature" id="sig13381"><a class="postlink inert" href="#" title="Disabled in this archive"><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong">ancient.myftp.org - </strong></span><span style="color: red"><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong">[BBB][Sunet][Tele2] ONLY!</strong></span></span><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong"> @ 20GB (ISP/IP/Share Scripted)</strong></span></a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13447">
+<div class="inner">
+<dl class="postprofile" id="profile13447">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 27</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 17:58</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Stockholm, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13447">
+<h3><a href="#p13447"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a></strong> » </span>2003-05-01 14:56
+			</p>
+<div class="content">First of all, thank you for the doc, it's great!
+<br/>
+<br/>A few comments though (all in Client2Client):
+<br/>
+<br/>There is no need to re-$Send after 40906 bytes.
+<br/>
+<br/>I don't really like the fixation with what goes in what packet. E.g.
+<br/><blockquote class="uncited"><div>The $Lock is sent immediately after the $MyNick command within the same packet<br/>...<br/>After the $Direction command we must send the $Key command (still with in the $Direction packet) in response to the other clients lock</div></blockquote>Sure, this is the way it is done in NMDC, but it isn't mandatory in any way. The important thing is (and should be) the <span style="text-decoration: underline">order</span> in which the commands are sent, not what TCP packet they are sent in. But please, correct me if I'm wrong here!
+<br/>
+<br/>The part with the $Canceled-command is missing some information.
+<br/>The downloader is the only one who can initiate a Cancel, by sending exactly: "$Cancel". NOTE: Without the ending | char!
+<br/>When the cancellation is recieved, the uploader responds by ending the file transmission and sending "$Canceled" - no ending | here either.
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>D&gt;U: $Send| <br/>U&gt;D: file stream [D saves to disk and doesn't care about any "commands"] <br/>D&gt;U: $Cancel [D stops saving to disk and starts to check for $Canceled commands] <br/>U&gt;D: maybe a few more bytes of file stream [ignored by D] <br/>U&gt;D: $Canceled</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13582">
+<div class="inner">
+<dl class="postprofile" id="profile13582">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13582">
+<h3><a href="#p13582"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-05-02 18:48
+			</p>
+<div class="content">Alright I figured out what's with the NMDCH registration server lock to key.....I set vandel405.dynip.com to 127.0.0.1 in my hosts file and generated random locks and logged the lock/key/port.
+<br/>
+<br/>As it turns out, you are right aDe. It is the local port used to connect to the registration server.
+<br/>
+<br/>However I noticed something else, which is a bug in my Lock to Key function.
+<br/>
+<br/>At first I did this :
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>  h = InStrB(1, Lck, " ")<br/>  If h Then Lck = LeftB$(Lck, h - 1)<br/></code></pre></div><br/><br/>....I assumed that the lock stopped after the first space. But NMDCH actually does it when it finds the first " Pk="<br/><br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>  h = InStrB(1, Lck, " Pk=")<br/>  If h Then Lck = LeftB$(Lck, h - 1)<br/></code></pre></div><br/><br/>And now I generated the exact same keys as NMDCH. Alright!<br/><br/>Thanks for the help aDe =)<br/><br/><br/>And to help you out Sid....with the client-client and client-hub, to the first character equals this (assume h is the first character) :<br/><br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>h = aByte(0) Xor aByte(ub) Xor aByte(ub - 1) Xor 5<br/></code></pre></div><br/><br/>"ub" is the last character byte value, as "ub - 1" is the second last. It Xors 5 for this.<br/><br/>However with the registration server it does this :<br/><br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>h = aByte(0) Xor aByte(ub) Xor aByte(ub - 1) Xor ((wskRegister.LocalPort \ 256) + (wskRegister.LocalPort And 255)) And 255)<br/></code></pre></div>
+<br/>
+<br/>Assume wskRegister to be a winsock control. That is why the first character seems to be determined "randomly"....but no - just different =)</div>
+<div class="signature" id="sig13582"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13583">
+<div class="inner">
+<dl class="postprofile" id="profile13583">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13583">
+<h3><a href="#p13583"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-05-02 19:11
+			</p>
+<div class="content">Btw you should mention in your documention that default port for registration servers (2501) and how often the NMDCH registers (to prevent getting banned from the server - the NM list anyways).
+<br/>
+<br/>Does anybody know how long you stay banned for? Hours, days or permanently?</div>
+<div class="signature" id="sig13583"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13664">
+<div class="inner">
+<dl class="postprofile" id="profile13664">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 17:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13664">
+<h3><a href="#p13664"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=34">SBSoftEA</a></strong> » </span>2003-05-03 21:43
+			</p>
+<div class="content">i also use the local port and my code worked, even before those Mac clients came out
+<br/>key = CreateKey(&amp;(d.SubString(8,d.Length())),_RegisterTCP-&gt;Socket-&gt;Binding-&gt;Port + (_RegisterTCP-&gt;Socket-&gt;Binding-&gt;Port &gt;&gt; <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/>);
+<br/>
+<br/>the functions:
+<br/>
+<br/>int __fastcall TRegister::ns(int *value)
+<br/>{
+<br/>return (((*value &lt;&lt; 4) &amp; 240) | ((*value &gt;&gt; 4) &amp; 15));
+<br/>}
+<br/>
+<br/>AnsiString __fastcall TRegister::CreateKey(AnsiString *Lock,byte xorwith)
+<br/>{
+<br/>AnsiString key,key2,slock;
+<br/>int i;
+<br/>int temp;
+<br/>slock = Lock-&gt;SubString(1,Lock-&gt;Pos("Pk=") - 2);
+<br/>key.SetLength(slock.Length());
+<br/>temp = slock[1] ^ slock[slock.Length()] ^ slock[slock.Length() -1] ^ xorwith;
+<br/>key[1] = ns(&amp;temp);
+<br/>for (i = 2; i &lt;= slock.Length(); i++)
+<br/>{
+<br/>temp = slock[i] ^ slock[i-1];
+<br/>key[i] = ns(&amp;temp);
+<br/>}
+<br/>for (i = 1; i &lt;= key.Length(); i++)
+<br/>{
+<br/> switch(key.operator [](i) )
+<br/> {
+<br/> case 0:
+<br/>        key2 = key2 + "/%DCN000%/";
+<br/>        break;
+<br/> case 5:
+<br/>        key2 = key2 + "/%DCN005%/";
+<br/>        break;
+<br/> case 36:
+<br/>        key2 = key2 + "/%DCN036%/";
+<br/>        break;
+<br/> case 96:
+<br/>        key2 = key2 + "/%DCN096%/";
+<br/>        break;
+<br/> case 124:
+<br/>        key2 = key2 + "/%DCN124%/";
+<br/>        break;
+<br/> case 126:
+<br/>        key2 = key2 + "/%DCN126%/";
+<br/>        break;
+<br/> default:
+<br/>        key2 = key2 + key.operator [] (i);
+<br/>        break;
+<br/> }
+<br/>}
+<br/>return key2;
+<br/>
+<br/>}</div>
+<div class="signature" id="sig13664">SBSoftEA Test Hub ---&gt; seabass.no-ip.org:413
+<br/>Not online 24/7 come by to help us test =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			15 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

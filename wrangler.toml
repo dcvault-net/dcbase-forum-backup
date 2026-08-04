@@ -1,0 +1,11 @@
+# Cloudflare Pages config for the DCBase forum archive.
+# Binds the D1 full-text search database so the _worker.js /api/forum-search
+# endpoint can query it. (database_id is a public identifier, not a secret.)
+name = "dcbase-forum-backup"
+pages_build_output_dir = "site"
+compatibility_date = "2024-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dcbase-forum-search"
+database_id = "1bc5fa18-6cc0-4db9-9a9f-335e273109fa"

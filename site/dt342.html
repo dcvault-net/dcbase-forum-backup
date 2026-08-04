@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>DC++ 0.22 - "User command" bugfix - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=342">DC++ 0.22 - "User command" bugfix</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			8 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p1551">
+<div class="inner">
+<dl class="postprofile" id="profile1551">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=513">MyKee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-20 11:13</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1551">
+<h3 class="first"><a href="#p1551">DC++ 0.22 - "User command" bugfix</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=513">MyKee</a></strong> » </span>2003-01-20 11:55
+			</p>
+<div class="content">There is a bug "User Menu items". It works great as long as you send the commands to the main chat, but If you specify that you want the command to be sent as a PM to a user you keep getting disconnected when choosing the user command.
+<br/>
+<br/>After looking in the source I've found that changing the code
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>HubFrame.cpp - Line: 871,<br/>client-&gt;privateMessage(u-&gt;user, Util::formatParams(uc.getCommand(), sm));<br/></code></pre></div><br/>to<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>string s = "&lt;" + client-&gt;getNick() + "&gt; ";<br/>client-&gt;privateMessage(u-&gt;user, s + Util::formatParams(uc.getCommand(), sm));<br/></code></pre></div>
+<br/>
+<br/>Works great.   <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>It seems like when sending the PM it does not include the username so the client disconnects.
+<br/>I would be great if some developer with write access could fix this, but otherwise DC++ is a great program. Keep the good work up.
+<br/>
+<br/>Thanks, MyKee</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1558">
+<div class="inner">
+<dl class="postprofile" id="profile1558">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4">Djurmamman</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 00:19</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1558">
+<h3><a href="#p1558"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4">Djurmamman</a></strong> » </span>2003-01-20 13:38
+			</p>
+<div class="content">Arne is aware if that and has said he will fix it in the next version.</div>
+<div class="signature" id="sig1558"><a class="postlink inert" href="#" title="Disabled in this archive"><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong">ancient.myftp.org - </strong></span><span style="color: red"><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong">[BBB][Sunet][Tele2] ONLY!</strong></span></span><span style="font-size: 84%; line-height: 116%;"><strong class="text-strong"> @ 20GB (ISP/IP/Share Scripted)</strong></span></a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1858">
+<div class="inner">
+<dl class="postprofile" id="profile1858">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=50">TMM</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 47</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 00:50</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> leeds UK</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1858">
+<h3><a href="#p1858"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=50">TMM</a></strong> » </span>2003-01-24 12:08
+			</p>
+<div class="content">that bug fix dont work for me</div>
+<div class="signature" id="sig1858">ashes to ashes, dust to dust, if the dope dont get you. The acid must</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2172">
+<div class="inner">
+<dl class="postprofile" id="profile2172">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=513">MyKee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-20 11:13</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2172">
+<h3><a href="#p2172"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=513">MyKee</a></strong> » </span>2003-01-27 19:22
+			</p>
+<div class="content"><blockquote><div><cite>TMM wrote:</cite>that bug fix dont work for me</div></blockquote>
+<br/>
+<br/>hmm, so I noticed <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/>
+<br/>It sends the messages to the person you select in the userlist even if you has choosen that the message should go to someone else ... sorry, buggy patch  <img alt=":lol:" class="smilies" src="/images/smilies/icon_lol.gif" title="Laughing"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2625">
+<div class="inner">
+<dl class="postprofile" id="profile2625">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=678">Superbeast</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-27 21:23</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden : VÃƒÂ¤xjÃƒÂ¶</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2625">
+<h3><a href="#p2625"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=678">Superbeast</a></strong> » </span>2003-02-01 00:06
+			</p>
+<div class="content">In 0.23 it works halfway but my scripts can't handle it <img alt=":-(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>
+<br/>When I use the commands the client sends:
+<br/>$To: [reciver]  From: [sender]  $[command]
+<br/>But my scripts wants it in the same way as usual private message:
+<br/>$To: [reciver] From: [sender]  $&lt;[sender]&gt;[command]
+<br/>So I shanged 
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>client-&gt;privateMessage(uc.getNick(), Util::formatParams(uc.getCommand(), sm));</code></pre></div><br/>To:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>client-&gt;privateMessage(uc.getNick(), "&lt;" + client-&gt;getNick() + "&gt;" + Util::formatParams(uc.getCommand(), sm));</code></pre></div>
+<br/>
+<br/>Almost like the trick in the top  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>And this works <img alt=":-)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig2625">\\Superbeast</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2881">
+<div class="inner">
+<dl class="postprofile" id="profile2881">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=449">NattensQje</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-17 18:33</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2881">
+<h3><a href="#p2881"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=449">NattensQje</a></strong> » </span>2003-02-02 20:52
+			</p>
+<div class="content"><blockquote><div><cite>Superbeast wrote:</cite>In 0.23 it works halfway but my scripts can't handle it <img alt=":-(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/><br/>When I use the commands the client sends:<br/>$To: [reciver]  From: [sender]  $[command]<br/>But my scripts wants it in the same way as usual private message:<br/>$To: [reciver] From: [sender]  $&lt;[sender]&gt;[command]<br/>So I shanged <br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>client-&gt;privateMessage(uc.getNick(), Util::formatParams(uc.getCommand(), sm));</code></pre></div><br/>To:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>client-&gt;privateMessage(uc.getNick(), "&lt;" + client-&gt;getNick() + "&gt;" + Util::formatParams(uc.getCommand(), sm));</code></pre></div><br/><br/>Almost like the trick in the top  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> <br/>And this works <img alt=":-)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote>
+<br/>
+<br/>That bug fix don't work for me eather..</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2890">
+<div class="inner">
+<dl class="postprofile" id="profile2890">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=678">Superbeast</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-27 21:23</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden : VÃƒÂ¤xjÃƒÂ¶</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2890">
+<h3><a href="#p2890"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=678">Superbeast</a></strong> » </span>2003-02-02 21:56
+			</p>
+<div class="content">Hmm, seems like I missed a space in "&gt;", it should be like this "&gt; ".
+<br/>If you have done it like this when the client sends it exacly as if it was a private message.</div>
+<div class="signature" id="sig2890">\\Superbeast</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2896">
+<div class="inner">
+<dl class="postprofile" id="profile2896">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:29</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2896">
+<h3><a href="#p2896"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29">FRANKE</a></strong> » </span>2003-02-02 22:15
+			</p>
+<div class="content"><blockquote><div><cite>Superbeast wrote:</cite>In 0.23 it works halfway but my scripts can't handle it <img alt=":-(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/><br/>When I use the commands the client sends:<br/>$To: [reciver]  From: [sender]  $[command]<br/>But my scripts wants it in the same way as usual private message:<br/>$To: [reciver] From: [sender]  $&lt;[sender]&gt;[command]<br/>So I shanged <br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>client-&gt;privateMessage(uc.getNick(), Util::formatParams(uc.getCommand(), sm));</code></pre></div><br/>To:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>client-&gt;privateMessage(uc.getNick(), "&lt;" + client-&gt;getNick() + "&gt;" + Util::formatParams(uc.getCommand(), sm));</code></pre></div><br/><br/>Almost like the trick in the top  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> <br/>And this works <img alt=":-)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote>
+<br/>
+<br/>Lets say you want to use the command "userinfo", then create a menu with this info:
+<br/>
+<br/>Name: Userinfo
+<br/>Command: &lt;%[mynick]&gt;userinfo %[nick]
+<br/>Hub ip/Dns: op
+<br/>PM To: BotName</div>
+<div class="signature" id="sig2896">For the newest release of MulTiBoT visit <a class="postlink" href="http://www.cwain.dk/">www.cwain.dk</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			8 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

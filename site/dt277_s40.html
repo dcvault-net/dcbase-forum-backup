@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Adding file hashes to the protocol - Page 1 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=277&amp;start=40">Adding file hashes to the protocol</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			98 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=277&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=277&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p6142">
+<div class="inner">
+<dl class="postprofile" id="profile6142">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6142">
+<h3 class="first"><a href="#p6142"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-04 10:08
+			</p>
+<div class="content">While complete file hashing has to be done before you start to share (at least in my opinion) file-segment hashing can (and should) be done on the fly, while the user is downloading the file.
+<br/>My reasons for this is that the amount of data that can be saved increases quite rapidly when we start to do file-segment hashing, and if this is done on the fly we can "afford" to use smaller file-segments.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Needling the innocent with dysfunctional logic.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6151">
+<div class="inner">
+<dl class="postprofile" id="profile6151">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6151">
+<h3><a href="#p6151"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-04 12:48
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>While complete file hashing has to be done before you start to share (at least in my opinion) file-segment hashing can (and should) be done on the fly, while the user is downloading the file.<br/>My reasons for this is that the amount of data that can be saved increases quite rapidly when we start to do file-segment hashing, and if this is done on the fly we can "afford" to use smaller file-segments.<br/></div></blockquote>
+<br/>
+<br/>This also makes partial filesharing and "swarming" possible using hashes.
+<br/>
+<br/>I dont know exactly how PFS is done in other systems though, I guess it would be enough to search using the segment hash? What I dont know is if the hash for the entire file is used in anyway to see to that Im downloading off the right file. (In the case there are segment-hash collisions. Yes, should be uncommon, but there will be lots of segments around so its probably not impossible.)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6157">
+<div class="inner">
+<dl class="postprofile" id="profile6157">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6157">
+<h3><a href="#p6157"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-04 13:20
+			</p>
+<div class="content"><strong class="text-strong">Reinventing the wheel?</strong>
+<br/>
+<br/>IMHO these problems have all already been solved by the gnutella community. We should just pick one method to do this and stick to that, maybe even become "compatible" with another system. Shareaza works nicely for me, it checks segments on-the-fly when downloading and supports swarming/PFS. 
+<br/>
+<br/>It calculates both MD5, SHA1, TTH and ED2K hashes (So it can and will grab gnutella, edonkey and magnet URIs). The TTH is calculated using 1024 byte segments, but only 9 levels of the tree are serialized and saved. (This was 8 levels in the previous version). This means files will have a maximum of 256 segments, so the segmentsize is dependent on the filesize. This is only a problem if a 256th of the total downloadtime is a long time, since this is what one can loose when downloading corrupt data. Accessing the TTH is done by using HTTP byteranges, since the TTH format is known from the filesize this makes it possible to download any one part of the TTH tree.
+<br/>
+<br/>This thread is about the protocol though. The most straightforward way I see implementing this is to first implement a more robust way of downloading byteranges (get(Z)Block). Now how do we share and search hashes? 
+<br/>
+<br/><strong class="text-strong">Transferring hashes</strong>
+<br/>
+<br/>Following the tradition of hardcoded filenames with special meanings, this could be done using &lt;filename&gt;.TTHvolume. Just download the file the normal way, or using GetBlock. This is not a very clean solution though.
+<br/>
+<br/>I would much like to see metadata like this transferred over the hub, actually. I, as a passive mode user, might want to get the TTH for a file, or even SHA1, from another passive user, so that I can use that to search.
+<br/>
+<br/>Theres also the option to add metadata to the filelist. I heard Arne mention xml-based filelists, and that sounds very good to me, should make it possible to add arbitrary metadata.
+<br/>
+<br/><strong class="text-strong">Searching for a file with a particular hash</strong>
+<br/>
+<br/>The searching shouldnt be very hard, $Search SHA1:&lt;sha1&gt; TTH:&lt;tth&gt; might work, I think these are ignored by any sane client, even nmdc.
+<br/>
+<br/>I actually dont know how to return results on this. Any ideas? A modified $SR might work, but that might be pushing it. New command?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6159">
+<div class="inner">
+<dl class="postprofile" id="profile6159">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6159">
+<h3><a href="#p6159"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-04 13:25
+			</p>
+<div class="content"><blockquote><div><cite>sandos wrote:</cite>I actually dont know how to return results on this. Any ideas? A modified $SR might work, but that might be pushing it. New command?</div></blockquote>
+<br/>
+<br/>Or we could just return normal $SRs, but thats ambigous: they could be from another, normal search. But if the client doublechecks the hash (explicitly downloads the hash for the file(s) in question), this would work.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6162">
+<div class="inner">
+<dl class="postprofile" id="profile6162">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6162">
+<h3><a href="#p6162"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-03-04 13:41
+			</p>
+<div class="content">sending a invalid search command to a nmdc client makes it send back a ugly error report. like .. 
+<br/>To: Vandel-Debug.. 
+<br/>Error in.. bla bla..
+<br/>2003-02-02 etc..</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6163">
+<div class="inner">
+<dl class="postprofile" id="profile6163">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6163">
+<h3><a href="#p6163"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-04 13:43
+			</p>
+<div class="content">Thank, you Sandos, for bringing the conversation back to sanity.  Hashing the first couple kilobytes of a file defeats one of the primary points of hashing: being able to determine hashes mid stream.  And hashing segments, well that's just making a Merkle Hash Tree/Tiger Tree Hash and keeping a specific depth or number of leafs (exactly what you wrote, but it bears repeating).
+<br/>
+<br/><blockquote><div><cite>sandos wrote:</cite>Following the tradition of hardcoded filenames with special meanings, this could be done using &lt;filename&gt;.TTHvolume. Just download the file the normal way, or using GetBlock. This is not a very clean solution though.</div></blockquote><br/><br/>I'm for some sort of XML exchange (mentioned in another thread), even formatted as a pseudo-filename...  I agree with you that hashes are a form of meta-data, and having that exten\dable makes sense.<br/><br/><blockquote><div><cite>sandos wrote:</cite>The searching shouldnt be very hard, $Search SHA1:&lt;sha1&gt; TTH:&lt;tth&gt; might work, I think these are ignored by any sane client, even nmdc.</div></blockquote><br/><br/>WinMX seems to use a HASH&gt;[blahblah] keyword in a normal search to get search results.  That might be a good idea instead, although "old" clients will try to search for those strings.<br/><br/><blockquote><div><cite>sandos wrote:</cite>I actually dont know how to return results on this. Any ideas? A modified $SR might work, but that might be pushing it. New command?</div></blockquote>
+<br/>
+<br/>This is the problem I initially emailed Arne about, at least for MP3 information.  The problem is that you never establish a real client to client connection, so you don't know the $Supports list of the remote client (if you're sending out hashes to regular search results, this is a problem) to see if they're capable of handling your overloaded $SR.  If you had some sort of flag in the regular search that hash-capable clients would set, that would be one solution, but it has to be something that wouldn't impede getting search results back from non-hash capable clients.  Taking a quick gander at the spec, maybe someone was right in considering the size field.  If both bools are set to F, it might be ignored by most clients.  We could put some type of magic number in there to signal that "this client is hash capable" or maybe a magic string, but that might break a couple clients.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6168">
+<div class="inner">
+<dl class="postprofile" id="profile6168">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6168">
+<h3><a href="#p6168"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-04 14:29
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>I'm for some sort of XML exchange (mentioned in another thread), even formatted as a pseudo-filename...  I agree with you that hashes are a form of meta-data, and having that exten\dable makes sense.</div></blockquote><blockquote class="uncited"><div>WinMX seems to use a HASH&gt;[blahblah] keyword in a normal search to get search results.  That might be a good idea instead, although "old" clients will try to search for those strings.</div></blockquote><br/><br/><blockquote class="uncited"><div>sending a invalid search command to a nmdc client makes it send back a ugly error report. like .. <br/>To: Vandel-Debug.. <br/>Error in.. bla bla.. <br/>2003-02-02 etc..</div></blockquote>
+<br/>
+<br/>Oh, ok. An invalid search is bad. Id go for the HASH&gt;[value] form or something like that, even though it will use cycles in other clients. 
+<br/>
+<br/>Searchresults seems to be a bit messy. Im not suggesting returning hashes in normal results/searches, btw. I actually dont find it necessary to ever return hashes in searchresults. I might be missing something though? I think hash-search results might be best to return in a new command.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6199">
+<div class="inner">
+<dl class="postprofile" id="profile6199">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6199">
+<h3><a href="#p6199"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-04 16:59
+			</p>
+<div class="content"><blockquote><div><cite>sandos wrote:</cite>Oh, ok. An invalid search is bad. Id go for the HASH&gt;[value] form or something like that, even though it will use cycles in other clients. <br/><br/>Searchresults seems to be a bit messy. I'm not suggesting returning hashes in normal results/searches, btw. I actually don't find it necessary to ever return hashes in searchresults. I might be missing something though? I think hash-search results might be best to return in a new command.</div></blockquote>
+<br/>
+<br/>That's pretty sensible to me.  For an active client, we can just hook in and add another known command near where $SR is defined.  A Search that's flagged as being by/for hashes can use that to report a hit instead of $SR.  What about passive clients?  In that case, we pretty much have to overload the command that sends search results back through the hub, as that seems to be the only way you could get a hash from another passive user...
+<br/>
+<br/>So how do we flag a $Search as being for a hash?
+<br/>
+<br/>It seems that downloading would go something like:
+<br/> A normal $Search to find the file.
+<br/> Connect to the other person (if it's not passive&lt;-&gt;passive), see the $Supports flag (metadata? Filehash?  Hash-SHA1? Hash-TTH?), request the file hash, then ask for the file.
+<br/>
+<br/>I think that meta-data should probably use a mini-slot or have an ultra-high priority in the queue.  That way you can get a hash tree from someone who has all their upload slots filled.  Once you have the hash, a client can search, probably twice, for alternate sources; once by filename and size, for non-hash enabled sources; once by hash.  For non-hash enabled sources, the hash can be used to verify whether they are or are not valid alternate sources, and they can be removed or kept as such.  (do failed/removed connections get saved [for a mini-blacklist] in the Queue.xml?)
+<br/>
+<br/>Also, if we're supporting sig2dat, edonkey, etc. hashes, where does that leave us?  I think it'd be "more elegant" to only have one primary hash, for searching, etc.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6204">
+<div class="inner">
+<dl class="postprofile" id="profile6204">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6204">
+<h3><a href="#p6204"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-04 18:53
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>sandos wrote:</cite>Oh, ok. An invalid search is bad. Id go for the HASH&gt;[value] form or something like that, even though it will use cycles in other clients. <br/><br/>Searchresults seems to be a bit messy. I'm not suggesting returning hashes in normal results/searches, btw. I actually don't find it necessary to ever return hashes in searchresults. I might be missing something though? I think hash-search results might be best to return in a new command.</div></blockquote><br/><br/>That's pretty sensible to me.  For an active client, we can just hook in and add another known command near where $SR is defined.  A Search that's flagged as being by/for hashes can use that to report a hit instead of $SR.  What about passive clients?  In that case, we pretty much have to overload the command that sends search results back through the hub, as that seems to be the only way you could get a hash from another passive user...</div></blockquote><br/><br/>Oh yeah, forgot about that minor detail, passive results. But then I guess the same command could be used for active searches, no meaning in havin two commands doing the same thing.<br/><br/><blockquote class="uncited"><div>So how do we flag a $Search as being for a hash?<br/><br/>It seems that downloading would go something like:<br/> A normal $Search to find the file.<br/> Connect to the other person (if it's not passive&lt;-&gt;passive), see the $Supports flag (metadata? Filehash?  Hash-SHA1? Hash-TTH?), request the file hash, then ask for the file.</div></blockquote><br/><br/>Yes, this is probably the most common scenario. An even easier one is using hashes from a website (sharelive, sharereactor) where we start by doing a hash-search and then just download one of the results.<br/><br/><blockquote class="uncited"><div>I think that meta-data should probably use a mini-slot or have an ultra-high priority in the queue.  That way you can get a hash tree from someone who has all their upload slots filled.  Once you have the hash, a client can search, probably twice, for alternate sources; once by filename and size, for non-hash enabled sources; once by hash.  For non-hash enabled sources, the hash can be used to verify whether they are or are not valid alternate sources, and they can be removed or kept as such.  (do failed/removed connections get saved [for a mini-blacklist] in the Queue.xml?)<br/><br/>Also, if we're supporting sig2dat, edonkey, etc. hashes, where does that leave us?  I think it'd be "more elegant" to only have one primary hash, for searching, etc.</div></blockquote>
+<br/>
+<br/>Im also for one primary hash, and I would then go for TTH. My second option would be SHA1+TTH.
+<br/>
+<br/>About saving failes hosts, I dunno. Shouldnt be a big problem in not doing it, if we have TTH. We only need to download 1/256th or 1k of the file to see that its wrong.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6309">
+<div class="inner">
+<dl class="postprofile" id="profile6309">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6309">
+<h3><a href="#p6309"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-05 17:25
+			</p>
+<div class="content"><blockquote><div><cite>sandos wrote:</cite>Oh yeah, forgot about that minor detail, passive results. But then I guess the same command could be used for active searches, no meaning in having two commands doing the same thing.</div></blockquote><br/><br/>Hmm.  Well, we definitely need to be able to return hashes with $Search results sometime, to get the hash to passive clients.  Or do we?  I suppose a passive user might be the only one of many sources of a specific file online at a given time, and you need the hash from him/her to add it to your queue.  Is this a resonable scenario?<br/><br/>When searching by HASH&gt;[value], do we need to return hashes?  The client can just request the hash when we connect to that source and verify that it's the right file.  And non-hash enabled clients shouldn't send back results at all.<br/><br/>Do we need to overload $Search at all?  If we just use the notation above in keywords...<br/><br/><blockquote><div><cite>sandos wrote:</cite>Yes, this is probably the most common scenario. An even easier one is using hashes from a website (sharelive, sharereactor) where we start by doing a hash-search and then just download one of the results.</div></blockquote><br/><br/>This is the problem with the one-true-hash idea, which of the web direct file links have a TT hash as their key?<br/><br/><blockquote><div><cite>sandos wrote:</cite>I'm also for one primary hash, and I would then go for TTH. My second option would be SHA1+TTH.</div></blockquote><br/><br/>Can't you create a Merkle hash tree with SHA1 as well?  Just a random thought.<br/><br/><blockquote><div><cite>sandos wrote:</cite>About saving failes hosts, I dunno. Shouldnt be a big problem in not doing it, if we have TTH. We only need to download 1/256th or 1k of the file to see that its wrong.</div></blockquote>
+<br/>
+<br/>True, but I think saving the "bad" sources is probably a good idea.  It could be reused in at least another feature I've seen, to "switch" to another source if the speed is below a certain threshold.  It also seems like the right thing to do the first time... If someone has a limited number of download slots, then they would probably not appreciate one of those being used to connect to a user that isn't a valid source anyway.
+<br/>
+<br/>I was kinda hoping that someone else would jump into this conversation, but if nobody is, we must have our heads on straight. <img alt=";-)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6328">
+<div class="inner">
+<dl class="postprofile" id="profile6328">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6328">
+<h3><a href="#p6328"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-05 22:20
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>[snip]<br/>Hmm.  Well, we definitely need to be able to return hashes with $Search results sometime, to get the hash to passive clients.  Or do we?  I suppose a passive user might be the only one of many sources of a specific file online at a given time, and you need the hash from him/her to add it to your queue.  Is this a resonable scenario?</div></blockquote><br/>What you mean is that we can get the hash from someone other than the passive user, right? Well, in that case, let's ignore the passive user as a source for hashes. Problem solved (and yes, I have an "active" connection myself <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>)<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>When searching by HASH&gt;[value], do we need to return hashes?  The client can just request the hash when we connect to that source and verify that it's the right file. And non-hash enabled clients shouldn't send back results at all.</div></blockquote><br/>If we search by hash we should never get a different hash back. That'd be like searching for "Britney Spears" and getting search results without "Britney Spears" in their filenames/path, an indication of a faulty client. Thus, we can just assume that the search results returned did, indeed, match the hash we specified, but as we'll check this when we connect and retrieve the file anyway it's no biggie.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Do we need to overload $Search at all?  If we just use the notation above in keywords...</div></blockquote><br/>We might just put this here thingy within the size field and put T and F in the file sizes (or was it F and T) fields... thus allowing other clients to just ignore it. I'd recommend using a new filetype (0xFF would be good) - this would make it really easy for clients just to ignore any filetypes they do not recognize.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>This is the problem with the one-true-hash idea, which of the web direct file links have a TT hash as their key?</div></blockquote><br/>None, as far as I've heard.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>[snip]True, but I think saving the "bad" sources is probably a good idea.  It could be reused in at least another feature I've seen, to "switch" to another source if the speed is below a certain threshold.  It also seems like the right thing to do the first time... If someone has a limited number of download slots, then they would probably not appreciate one of those being used to connect to a user that isn't a valid source anyway.</div></blockquote><br/>There has already been a DC++ clone/branch which implemented a "blacklist" (Operas version, perhaps?) - a variant of that could be used.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>I was kinda hoping that someone else would jump into this conversation, but if nobody is, we must have our heads on straight. <img alt=";-)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div></blockquote><br/>Well, I'm jumping in now, but only since you asked so nicely. <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/><br/><br/>The reason I've not commented on this thread before is that there have not been anything for me to say something about - I have close to none knowledge about hashes, and since the collective "we" decided to dive headlong into TigerTree hashes, Merkle hashes and SHA1 and... well, you get the idea.<br/><br/><blockquote><div><cite>sandos wrote:</cite>I would much like to see metadata like this transferred over the hub, actually. I, as a passive mode user, might want to get the TTH for a file, or even SHA1, from another passive user, so that I can use that to search.</div></blockquote><br/>If metadata was passed over the hub... woweee! Have anyone done any calculations of how much this would increase the bandwidth usage on the hub? Since most hubs seem to put broad-pipe connections on their knees with simple chat+commands, getting them to shuffle XML metadata would be a death stroke... to either them or the clients that try to get the hub to do things it doesn't want to.<br/><br/><blockquote><div><cite>sandos wrote:</cite>Theres also the option to add metadata to the filelist. I heard Arne mention xml-based filelists, and that sounds very good to me, should make it possible to add arbitrary metadata.</div></blockquote><br/>A much better way of handling things... this way one could even add alternates (based on the possible "hash" metadata) in an efficient way.<br/><br/><blockquote><div><cite>sandos wrote:</cite>[snip quote about segment hashing]<br/>This also makes partial filesharing and "swarming" possible using hashes.</div></blockquote>
+<br/>AFAIK swarming is about downloading segments from users... since users in our system are very likely to have a complete file (or at least very unlikely just to have loads of segments lying around their storage medium), we might as well search on complete files. Complete files have a slightly bigger "longevity", too, as unfinished/temporary files are deleted with impunity while people are more likely to store the "MegaLegal MusicMovie from the Group With No Name.avi" which they spent a while collecting, but are not as likely to store the 33rd, 48th and 75th segments of it.
+<br/>
+<br/>My main reasons to support ED2K/sig2dat/mumbojumbo links is that they are useful <strong class="text-strong">in and of themselves</strong> - with such a link I could have DC++ in its current form search for alternates and download the latest releases automatically. Sure it would be <strong class="text-strong">nice</strong> to support the hashes they use, but they <strong class="text-strong">are not necessary</strong> to be useful. Merely helpful.
+<br/>
+<br/>Hope this helps confuse the issue further.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>When you have had all that you can take, put the rest back.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6354">
+<div class="inner">
+<dl class="postprofile" id="profile6354">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6354">
+<h3><a href="#p6354"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-06 08:02
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>This is the problem with the one-true-hash idea, which of the web direct file links have a TT hash as their key?<br/><br/><blockquote><div><cite>sandos wrote:</cite>I'm also for one primary hash, and I would then go for TTH. My second option would be SHA1+TTH.</div></blockquote><br/><br/>Can't you create a Merkle hash tree with SHA1 as well?  Just a random thought.</div></blockquote>
+<br/>
+<br/>Well you can certainly use any hash to make a tree, but using SHA1 wont buy us anything: the tree root-SHA1 hash will not be the same as a entire-file SHA1 hash. I know only of real-world examples for SHA1 for the entire file, and trees using Tiger hash, and the less-good variants: md5, ed2k, fasttrack id, all entire-file (not quite for some, dont remember which). I think ed2k and fasttrack ones are pretty quick to compute, especially if you do it in "parallell" with other hashes so you dont read data from disk multiple times.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6476">
+<div class="inner">
+<dl class="postprofile" id="profile6476">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6476">
+<h3><a href="#p6476">Re: Updates on TTH</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-07 01:33
+			</p>
+<div class="content"><blockquote><div><cite>sandos wrote:</cite>Shareaza 1.8.1.1 has been released, with a new TTH. It adds a 0x00 byte to every 1024 byte chunk of filedata, and a 0x01 byte to every 24 byte hash before feeding into the hash again. The author, Mike, says that this is finalized and is what will be used by bitzi.com aswell.</div></blockquote>
+<br/>
+<br/>Bitzi hasn't updated the tigertree hash on sourceforge.net.  Have you seen diffs against that code yet?  I also haven't seen much in the way of changelogs on Sharaza's 1.8.1.1 version... got a reference with more detail?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6477">
+<div class="inner">
+<dl class="postprofile" id="profile6477">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6477">
+<h3><a href="#p6477"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-03-07 01:37
+			</p>
+<div class="content"><blockquote class="uncited"><div>So how do we flag a $Search as being for a hash?</div></blockquote>
+<br/>
+<br/>You don't have to, just specify the hash as a title search string.
+<br/>I promise you not many people are going to have long filenames of random characters <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>We investigated this on lichlord and it would have worked well.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6482">
+<div class="inner">
+<dl class="postprofile" id="profile6482">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6482">
+<h3><a href="#p6482"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-07 02:06
+			</p>
+<div class="content"><blockquote><div><cite>volkris wrote:</cite><blockquote><div><cite>GargoyleMT wrote:</cite>So how do we flag a $Search as being for a hash?</div></blockquote><br/><br/>You don't have to, just specify the hash as a title search string.<br/>I promise you not many people are going to have long filenames of random characters <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/>We investigated this on lichlord and it would have worked well.</div></blockquote>
+<br/>
+<br/>Well, in that case, it's time for some code instead of all these posts. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Well, some implementation ideas, a quasi-summary:
+<br/><ul> Expanding the structure for each file in the SearchManager to accept a hash<br/> XML saving of the state of the  share manager<br/> XML file lists?<br/> Identification of the HASH&gt;[value] keyword<br/> Some kind of structure to make searching by hash as non-cpu intensive as  possible (stl gurus, want to suggest something?)<br/> $Supports feature adversising<br/> Mini-xml exchange for $MetaInfo &lt;file&gt; or $Get &lt;file&gt;.metainfo/.xml?<br/> Queue item saving of hashes<br/> Auto-search by hash support (is there a way to have only one search per alternative, instead of a normal and hash one?)<br/></ul>
+<br/>
+<br/>Aside, isn't there a not too difficult solution for returning the hash from a passive to passive client?  I don't like putting that in a SEP field (somebody else's problem).  And how about the difficulty of calculating more than one hash at the same problem (searching by non TTH hashes is something I'm comfortable putting in a SEP field)?
+<br/>
+<br/>
+<br/>Well... w00t.  Or something.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6513">
+<div class="inner">
+<dl class="postprofile" id="profile6513">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6513">
+<h3><a href="#p6513"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-07 10:47
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>Well, in that case, it's time for some code instead of all these posts. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote><br/>Yay!<br/><blockquote><div><cite>GargoyleMT wrote:</cite>Well, some implementation ideas, a quasi-summary:</div></blockquote><br/>And some of my notes on each... great initiative, though, GargoyleMT.<br/><blockquote><div><cite>GargoyleMT wrote:</cite>Expanding the structure for each file in the SearchManager to accept a hash</div></blockquote><br/>Or maybe several hashes? Why not support more than one hash - some sort of future hash might be even better as well as having the possibility to support MD4 hashes so that ShareReactor links can be used... but I digress.<br/><blockquote><div><cite>GargoyleMT wrote:</cite>XML saving of the state of the share manager</div></blockquote><br/>What state are you talking about?<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>XML file lists?</div></blockquote><br/>What fields do we need? Size? Date created/changed/used/read by WinAMP? Name (duh!) ? Compressed or not? Data streams associated with it (using this would help enormously for those of use who have NTFS/"modern" operating systems so we could shuffle our files any way we liked) ?<br/><blockquote><div><cite>GargoyleMT wrote:</cite>Identification of the HASH&gt;[value] keyword</div></blockquote><br/>Specification of HASH/"type of hash"&gt;[value] perhaps, so we could support TTH hashing by having the "HASH/TTH&gt;[value]" search command which would be totally disregarded by the clients supporting Sarfs Mega Hashing Thingy which would use "HASH/SMHT&gt;[value]". <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Some kind of structure to make searching by hash as non-cpu intensive as possible (stl gurus, want to suggest something?)</div></blockquote><br/>Use &lt;snicker&gt; hash tables. No, seriously. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>$Supports feature advertising</div></blockquote><br/>Define hash commands and specify what hashes the client supports. Add metadata supports string(s).<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Mini-xml exchange for $MetaInfo &lt;file&gt; or $Get &lt;file&gt;.metainfo/.xml?</div></blockquote><br/>Yes! Use $GetMetaInfo &lt;file&gt; - much more intuitive in my humble opinion.<br/>$GetMetaInfo should not be necessary if you have downloaded the XML list, though, since that file should contain all the data necessary to decide whether you want to download a file or not.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Queue item saving of hashes</div></blockquote><br/>Eh? Saving the hashes of queued files, you mean?<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Auto-search by hash support (is there a way to have only one search per alternative, instead of a normal and hash one?)</div></blockquote><br/>Yes, there is - simply use the fact that a file has a hash to mean that it should not be searched by the normal search for alternatives. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Aside, isn't there a not too difficult solution for returning the hash from a passive to passive client?  I don't like putting that in a SEP field (somebody else's problem).</div></blockquote><br/>If you can't use $GetMetaInfo, you will not get the hash. Why should we code this when DC++ has no support for it?<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>And how about the difficulty of calculating more than one hash at the same problem (searching by non TTH hashes is something I'm comfortable putting in a SEP field)?</div></blockquote><br/>Not hard at all... simply allow the user to specify what hashes they wish to store locally, then calculate all the specified hashes whenever necessary (the TTH would simply store more data than the other hashes).<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Well... w00t.  Or something.</div></blockquote>
+<br/>Hmm... how about "woohooo! more work!" ?
+<br/>
+<br/>Sarf
+<br/>---
+<br/>"<em class="text-italics">Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.</em>" - <strong class="text-strong">Rich Cook</strong></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6667">
+<div class="inner">
+<dl class="postprofile" id="profile6667">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6667">
+<h3><a href="#p6667"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-08 16:44
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>Or maybe several hashes? Why not support more than one hash - some sort of future hash might be even better as well as having the possibility to support MD4 hashes so that ShareReactor links can be used... but I digress.</div></blockquote><br/><br/>I wondered about this.  I'm unfamiliar with the services that Bitzi has, but maybe we can use the hashes from the direct download links you're supporting  to get back a bitprint (and thus TTH) from bitzi?  This (optional) integration might allow us for some other nice features.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>XML saving of the state of the share manager</div></blockquote><br/><br/>Saving of the list of shared files into an XML format.  Strike that, that's the item below.  This bullet must encapsulate the idea of caching the hashes... That's got to be the second thing implemented from a testing point of view, right after calculating the hashes.  The average time I spend running a modded DC++ is on the order of minutes...  I don't want to wait for hashes to complete so I can test another feature of this idea.<br/><br/><blockquote class="uncited"><div><blockquote><div><cite>GargoyleMT wrote:</cite>XML file lists?</div></blockquote><br/>What fields do we need? Size? Date created/changed/used/read by WinAMP? Name (duh!) ? Compressed or not? Data streams associated with it (using this would help enormously for those of use who have NTFS/"modern" operating systems so we could shuffle our files any way we liked) ?</div></blockquote><br/><br/>Well, just a basic name/size/hash is probably good for now.  But I was wondering if something like this would save time (vs. the way the queue is aved)<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>&lt;directory name="parent dir name"&gt;<br/>  &lt;file name="blah"&gt;<br/>    &lt;hash type="TTH" value="[value]"/&gt;<br/>  &lt;/file&gt;<br/>  &lt;directory name="subdir&gt;<br/>     &lt;file name="oh-so-creative"&gt;<br/>     &lt;/file&gt;<br/>   &lt;/directory&gt;<br/>&lt;/directory&gt;<br/></code></pre></div><br/><br/>Note, I don't even know if that's valid XML.  Arne mentioned that XML file lists would be slower, but I don't know how he formatted his, or if he was just using his experience to estimate.<br/><br/>But what's that about being compressed (NTFS Compressed?) and about alternate data streams?  I know about them in theory, but how're they useful to know about in DC++?<br/><br/><blockquote class="uncited"><div><blockquote><div><cite>GargoyleMT wrote:</cite>Identification of the HASH&gt;[value] keyword</div></blockquote><br/>Specification of HASH/"type of hash"&gt;[value] perhaps, so we could support TTH hashing by having the "HASH/TTH&gt;[value]" search command which would be totally disregarded by the clients supporting Sarfs Mega Hashing Thingy which would use "HASH/SMHT&gt;[value]". <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/></div></blockquote><br/><br/>Yes, that's a good and necessary extension.  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote class="uncited"><div><blockquote><div><cite>GargoyleMT wrote:</cite>Some kind of structure to make searching by hash as non-cpu intensive as possible (stl gurus, want to suggest something?)</div></blockquote><br/>Use &lt;snicker&gt; hash tables. No, seriously. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/></div></blockquote><br/><br/>Hahaha, I should've seen that one coming.  I must've guessed that "hashes + hash tables = The End Of Teh[sic] Universe"<br/><br/><blockquote class="uncited"><div>Define hash commands and specify what hashes the client supports. Add metadata supports string(s).<br/><br/>Yes! Use $GetMetaInfo &lt;file&gt; - much more intuitive in my humble opinion.<br/>$GetMetaInfo should not be necessary if you have downloaded the XML list, though, since that file should contain all the data necessary to decide whether you want to download a file or not.<br/></div></blockquote><br/><br/>Ok, I imagine your first suggestion to be something like: "$Supports BZList TTH MD4 SHA1"?  Or a separate command like "$Supports BZList SupportsHash" with $SupportsHash returning a list of hash types... but what does that gain us?<br/><br/>I think a $GetMetaInfo &lt;file&gt; should return a mini-xml centered around the &lt;file&gt; type above... probably with a few things removed, like the real path on disk.<br/><br/><blockquote class="uncited"><div><blockquote><div><cite>GargoyleMT wrote:</cite>Queue item saving of hashes</div></blockquote><br/>Eh? Saving the hashes of queued files, you mean?</div></blockquote><br/><br/>No, just simply that the queue.xml needs to have a hash and hash type in it... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote class="uncited"><div><blockquote><div><cite>GargoyleMT wrote:</cite>Auto-search by hash support (is there a way to have only one search per alternative, instead of a normal and hash one?)</div></blockquote><br/>Yes, there is - simply use the fact that a file has a hash to mean that it should not be searched by the normal search for alternatives. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/>[/quote<br/><br/>Initially, or if the patch never makes it to the main tree, this would limit the usefulness of the hash.  If we can find an identically sized file with a similar name, it's probably a source, and we can verify that with the hash. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  Eventually, I'd that searching by hash might be the only way it makes sense to search for alternatives, but that's after it's been widely accepted.<br/><br/><blockquote class="uncited"><div><blockquote><div><cite>GargoyleMT wrote:</cite>Aside, isn't there a not too difficult solution for returning the hash from a passive to passive client?  I don't like putting that in a SEP field (somebody else's problem).</div></blockquote><br/>If you can't use $GetMetaInfo, you will not get the hash. Why should we code this when DC++ has no support for it?</div></blockquote><br/><br/>Hmmm... yeah.  Too difficult for now.  But it makes me think that those calling for extensions to the client-server protocol aren't very far off... If we had the hash and there was a standard way of returning it, then we could do so.<br/><br/><blockquote class="uncited"><div><blockquote><div><cite>GargoyleMT wrote:</cite>And how about the difficulty of calculating more than one hash at the same problem (searching by non TTH hashes is something I'm comfortable putting in a SEP field)?</div></blockquote><br/>Not hard at all... simply allow the user to specify what hashes they wish to store locally, then calculate all the specified hashes whenever necessary (the TTH would simply store more data than the other hashes).</div></blockquote><br/><br/>Now, too much choice here would be a problem.  There really are only 4 or 6 hashes that might be supported, but since people are going to be unhappy with the performance hit of hashing, I'd like to only calculate one, if possible... ??<br/><br/><blockquote class="uncited"><div><blockquote><div><cite>GargoyleMT wrote:</cite>Well... w00t.  Or something.</div></blockquote><br/>Hmm... how about "woohooo! more work!" ?<br/><br/>---<br/>"<em class="text-italics">Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.</em>" - <strong class="text-strong">Rich Cook</strong></div></blockquote></div></blockquote>
+<br/>
+<br/>Yes, definitely.  Or... Oooh, Ocarina of Time on the Gamecube!  Wheee!
+<br/>
+<br/>And the tagline seems to fit pretty well - unsurprising if you pick them by hand, and surprising if it's a randomly picked one.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6702">
+<div class="inner">
+<dl class="postprofile" id="profile6702">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6702">
+<h3><a href="#p6702"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-08 21:39
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>I wondered about this.  I'm unfamiliar with the services that Bitzi has, but maybe we can use the hashes from the direct download links you're supporting  to get back a bitprint (and thus TTH) from bitzi?  This (optional) integration might allow us for some other nice features.</div></blockquote>
+<br/>
+<br/>You can only lookup files at bitzi by SHA1 or SHA1.TTH, afaik. (not only TTH)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6705">
+<div class="inner">
+<dl class="postprofile" id="profile6705">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=253">eHast</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 18</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-09 07:36</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Lund, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6705">
+<h3><a href="#p6705"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=253">eHast</a></strong> » </span>2003-03-08 21:43
+			</p>
+<div class="content">I know people must hate me for this by now ;-), but do check out what the OCN people have done with Tree Hashes and such. (This is what Tiger Tree Hashes are based on.)<a class="postlink" href="http://open-content.net/specs/">http://open-content.net/specs/</a>.
+<br/>
+<br/>There's stuff for detecting partial files and downloading as well. Although that system is designed for HTTP.
+<br/>
+<br/>And IIRC there was some talk a few months ago on the dev list for OCN that there were vulnerabilities in TTH. Not sure what came out of it in the end though.
+<br/>
+<br/>Nice to see that some of the old crew are still active here with the ideas though. :-)
+<br/>[/url]</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6773">
+<div class="inner">
+<dl class="postprofile" id="profile6773">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6773">
+<h3><a href="#p6773"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-09 08:09
+			</p>
+<div class="content"><blockquote class="uncited"><div>And IIRC there was some talk a few months ago on the dev list for OCN that there were vulnerabilities in TTH. Not sure what came out of it in the end though.</div></blockquote>
+<br/>
+<br/>There is a new draft out, 02 that fixes collisions between internal nodes and leaf nodes. That might be it?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6816">
+<div class="inner">
+<dl class="postprofile" id="profile6816">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6816">
+<h3><a href="#p6816"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-09 15:35
+			</p>
+<div class="content">Main points I want to take up:
+<br/>I prefer to calculate as many hashes as necessary <strong class="text-strong">at the same time</strong> because the CPU hit is really irrelevant - it's the I/O that will take time.
+<br/>
+<br/><blockquote><div><cite>GargoyleMT wrote:</cite>[snip]<br/>I wondered about this.  I'm unfamiliar with the services that Bitzi has, but maybe we can use the hashes from the direct download links you're supporting to get back a bitprint (and thus TTH) from bitzi?  This (optional) integration might allow us for some other nice features.</div></blockquote><br/>Hmmm... I don't think so, but someone (that nice person which is always selected to do the dishes and make dinner) should look into that.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Saving of the list of shared files into an XML format.  Strike that, that's the item below.  This bullet must encapsulate the idea of caching the hashes... That's got to be the second thing implemented from a testing point of view, right after calculating the hashes.  The average time I spend running a modded DC++ is on the order of minutes...  I don't want to wait for hashes to complete so I can test another feature of this idea.</div></blockquote><br/>Heh. Caching hashes is a must, agreed. I hope that no one thought we'd recalculate them everytime DC++ started?<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Well, just a basic name/size/hash is probably good for now.</div></blockquote><br/>Perhaps... but I would like to have the hashes put into file streams - those are associated with the file itself (and are independent of its location) and would make it unnecessary to recalculate the hash when a file is moved... this is not a big issue, but a thing that we could do with this is calulating hashes on downloading files, putting the data a file stream, thus making it easy (= not frustrating for the user) to share downloaded files. This could be done with XML data too (and would have to be since older file systems (FAT/FAT32, for example) does not support file streams). Like this:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>&lt;directory name="parent dir name"&gt; <br/> &lt;file name="blah"&gt; <br/>  &lt;hash type="MD4" value="[value]"/&gt; <br/>  &lt;hash type="MD5" value="[value]"/&gt; <br/>  &lt;hash type="SHA1-TTH" value="[value]"/&gt; <br/>  &lt;hash type="TTH" value="[value]"/&gt; <br/>  &lt;nodehash type="TTH-nodes"&gt;<br/>    &lt;node number="1" value="[value]"/&gt;<br/>    &lt;node number="2" value="[value]"/&gt;<br/>    &lt;node number="3" value="[value]"/&gt;<br/>    &lt;node number="4" value="[value]"/&gt;<br/>  &lt;/nodehash&gt;<br/> &lt;/file&gt; <br/> &lt;directory name="subdir&gt; <br/>   &lt;file name="oh-so-creative-file-with-filestreams"&gt; <br/>     &lt;filestream type="TTH" name="TTH-hash"&gt;<br/>     &lt;filestream type="MD4" name="MD4-hash"&gt;<br/>     &lt;filestream type="MD5" name="MD5-hash"&gt;<br/>     &lt;filestream type="TTH-nodehash" name="TTH-nodehash"&gt;<br/>     &lt;filestream type="SHA1-TTH" name="SHA1-TTH-hash"/&gt; <br/>   &lt;/file&gt; <br/>  &lt;/directory&gt; <br/>&lt;/directory&gt;</code></pre></div><br/>Hope this... umm... helps.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>But I was wondering if something like this would save time (vs. the way the queue is saved)<br/>[snip xml data]</div></blockquote><br/>Yes... I kinda thought that this way would be obvious, though. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Note, I don't even know if that's valid XML.  Arne mentioned that XML file lists would be slower, but I don't know how he formatted his, or if he was just using his experience to estimate.</div></blockquote><br/>XML-stored data require more CPU time to interpret/retrieve than data that is stored according to a specific, fixed way.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>But what's that about being compressed (NTFS Compressed?) and about alternate data streams?  I know about them in theory, but how're they useful to know about in DC++?</div></blockquote><br/>Well, the compressiong part is irrelevant, but DC++ <strong class="text-strong">could</strong> refuse to share NTFS encrypted files (which may be unusable to others)... and as said, store data about the file (such as metadata and hashes) in them to make it independent of where the file is stored.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Ok, I imagine your first suggestion to be something like: "$Supports BZList TTH MD4 SHA1"?  Or a separate command like "$Supports BZList SupportsHash" with $SupportsHash returning a list of hash types... but what does that gain us?</div></blockquote><br/>Other clients may support only TTH hashes. Or (if someone makes a good mldonkey client) only MD4 hashes.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>I think a $GetMetaInfo &lt;file&gt; should return a mini-xml centered around the &lt;file&gt; type above... probably with a few things removed, like the real path on disk.</div></blockquote><br/>Yes... though it would, of course, have to use the real information instead of referring to filestreams. Duh. &lt;bonks own head&gt;<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Initially, or if the patch never makes it to the main tree, this would limit the usefulness of the hash.  If we can find an identically sized file with a similar name, it's probably a source, and we can verify that with the hash. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  Eventually, I'd that searching by hash might be the only way it makes sense to search for alternatives, but that's after it's been widely accepted.</div></blockquote><br/>Also known as the "make it a users choice feature and change the default value when we feel its time". Sure, I'd go for that.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Hmmm... yeah.  Too difficult for now.  But it makes me think that those calling for extensions to the client-server protocol aren't very far off... If we had the hash and there was a standard way of returning it, then we could do so.</div></blockquote><br/>But, as always, this would have to be done through a third-party - and since the hub would not like to be overloaded we'd have to specify a third-party protocol for an active client to act as a "gateway" between the two passive clients... I don't like it. Of course, if we want to be backwards-compatible, we can always support the sending of a private message containing a set string with the data. This would be evil, though, as it would, eventually, overload the hubs.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Now, too much choice here would be a problem.  There really are only 4 or 6 hashes that might be supported, but since people are going to be unhappy with the performance hit of hashing, I'd like to only calculate one, if possible... ??</div></blockquote><br/>As I said, calculating several hashes is not too hard. If we are going to support several hashes, we need to calculate them... just set the different hash methods to "on" by default, and people will never notice. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Yes, definitely.  Or... Oooh, Ocarina of Time on the Gamecube!  Wheee!</div></blockquote><br/>Or rather, "Hmm... that online game looks really good... &lt;chomp&gt; Eeek! Where's my free time?!"<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>And the tagline seems to fit pretty well - unsurprising if you pick them by hand, and surprising if it's a randomly picked one.</div></blockquote>
+<br/>Heh, I always pick them by hand... I just let randomness control it every now and then.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Pro'-gram 1) n. A magical spell cast over a computer which transforms user input into error messages.  2) vt. An activity similar to banging one's head against a wall, but with less opportunity for relief.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6836">
+<div class="inner">
+<dl class="postprofile" id="profile6836">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6836">
+<h3><a href="#p6836"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-03-09 16:41
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>I prefer to calculate as many hashes as necessary <strong class="text-strong">at the same time</strong> because the CPU hit is really irrelevant - it's the I/O that will take time.</div></blockquote>I'm not so sure about this - it took about 10 hours for eDonkey to hash 280 GB of data on my VIA Eden 533 MHz, meaning speed of about 8 MB/s... Then again, I could never get my server to read from those disks faster than ~15 MB/s (and the computer isn't really powerful either).<br/><br/><blockquote><div><cite>sarf wrote:</cite>Perhaps... but I would like to have the hashes put into file streams - those are associated with the file itself (and are independent of its location) and would make it unnecessary to recalculate the hash when a file is moved... this is not a big issue, but a thing that we could do with this is calulating hashes on downloading files, putting the data a file stream, thus making it easy (= not frustrating for the user) to share downloaded files. This could be done with XML data too (and would have to be since older file systems (FAT/FAT32, for example) does not support file streams). Like this:</div></blockquote>IMO, it is enough to transmit only the master hash in the filelists, and to let the clients exchange partial hashes directly on connect. It would make the filelists smaller, and their processing would probably be faster.<br/><br/><blockquote><div><cite>sarf wrote:</cite>Well, the compressiong part is irrelevant, but DC++ <strong class="text-strong">could</strong> refuse to share NTFS encrypted files (which may be unusable to others)... and as said, store data about the file (such as metadata and hashes) in them to make it independent of where the file is stored.</div></blockquote>The NTFS compression &amp; encryption are transparent to programs - I have a number of compressed or encrypted directories on my disk, the programs work just fine with them. DC++ could refuse to share the files it doesn't have permission to read though (they don't have to be encrypted to be unreadable for a user).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6934">
+<div class="inner">
+<dl class="postprofile" id="profile6934">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6934">
+<h3><a href="#p6934"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-10 15:30
+			</p>
+<div class="content"><blockquote><div><cite>ender wrote:</cite>I'm not so sure about this - it took about 10 hours for eDonkey to hash 280 GB of data on my VIA Eden 533 MHz, meaning speed of about 8 MB/s... Then again, I could never get my server to read from those disks faster than ~15 MB/s (and the computer isn't really powerful either).</div></blockquote><br/>Well, I don't think calculating "yesterdays hashes" is too mean. The hashes should be computed once, and the hashing part may be done in the background (yes, we'll loose a few searches this way, but it will be more acceptable by the user).<br/>Ehm... what I mean by this is that if DC++ supports the MD4/MD5/TTH/TTH-SHA1 hashes we're sure to get folks from other networks to go over to DC... as well as setting up a nice way to allow global searching.<br/><br/><blockquote><div><cite>ender wrote:</cite>IMO, it is enough to transmit only the master hash in the filelists, and to let the clients exchange partial hashes directly on connect. It would make the filelists smaller, and their processing would probably be faster.</div></blockquote><br/>Hmm... well, the reason I wanted all the data to be transferred in the filelist is that a) then people will start downloading the filelists of other people which will hopefully lead to arne implementing a "search downloaded filelists for alternate sources", b) people would not waste bandwidth by sending $GetMetaInfo back and forth all the time and c) with  good compression, having a wee bit more data in the filelist will not matter... though when I think about it, the nodehashes does not have to be included in the filelist. Aw, what the heck, why not? It's not like you re-download the filelist every hour or anything.<br/><br/><blockquote><div><cite>ender wrote:</cite>The NTFS compression &amp; encryption are transparent to programs - I have a number of compressed or encrypted directories on my disk, the programs work just fine with them. DC++ could refuse to share the files it doesn't have permission to read though (they don't have to be encrypted to be unreadable for a user).</div></blockquote>
+<br/>Ummm... what's the reason to have encrypted files if any program can read them? Oh well, that's M$ thinking for you.
+<br/>
+<br/>Sarf
+<br/>---
+<br/><strong class="text-strong">HELP</strong>: <em class="text-italics">The feature that assists in generating more questions. When the Help feature is used correctly, users are able to navigate through a series of Help screens and end up where they started from without learning a damn thing.</em> - <strong class="text-strong">Computer Definitions</strong></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6937">
+<div class="inner">
+<dl class="postprofile" id="profile6937">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6937">
+<h3><a href="#p6937"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-03-10 16:09
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>Ummm... what's the reason to have encrypted files if any program can read them? Oh well, that's M$ thinking for you.</div></blockquote>Well, if you have two or more administrative users, and want to prevent them from viewing your files...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6945">
+<div class="inner">
+<dl class="postprofile" id="profile6945">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6945">
+<h3><a href="#p6945"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-03-10 18:32
+			</p>
+<div class="content"><blockquote><div><cite>ender wrote:</cite><blockquote><div><cite>sarf wrote:</cite>Ummm... what's the reason to have encrypted files if any program can read them? Oh well, that's M$ thinking for you.</div></blockquote>Well, if you have two or more administrative users, and want to prevent them from viewing your files...</div></blockquote>
+<br/>
+<br/>Couldnt they just change eachothers password and login using the other account? Anyway, I think the biggest reason is to have the data encrypted on the disk, so that even if you boot a linuxfloppy with NTFS reading abilities you wont be able to read the data, or if you steal the HDD. Also, reading encrypted files from a fileserver wont leak information to someone sniffing the network.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6967">
+<div class="inner">
+<dl class="postprofile" id="profile6967">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6967">
+<h3><a href="#p6967"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-03-10 20:53
+			</p>
+<div class="content"><blockquote><div><cite>sandos wrote:</cite>Also, reading encrypted files from a fileserver wont leak information to someone sniffing the network.</div></blockquote>Actually, it will, as the data is decrypted before sent over the network (isn't Micro$oft great?:twisted:)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22789">
+<div class="inner">
+<dl class="postprofile" id="profile22789">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9650">3ddA</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-18 12:41</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22789">
+<h3><a href="#p22789">Hashing is great but it will not solve all the problems....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9650">3ddA</a></strong> » </span>2003-07-19 08:30
+			</p>
+<div class="content">Great that you have been discussing hashing and segmenting of file, wich must be apart of DC soon, but there is one thing that still needs to be discussed in my opinion.
+<br/>
+<br/>With hashing I can only verify that the individual file is correct/complete, the point of SFV is to verify that I can verify that a group of files correct/complete.
+<br/>
+<br/>When you discuss hashing I also think that it should be taken into consideration when you discuss hashing that inventing or using any other scheme than CRC will loose one important point. The problem when I do have the SFV-file, but one file is missing. I want to take that CRC-code and download the file. Using any other hash-code will make this impossible and will force me to download a file with the same name (which maybe turns out to be the same song but not the same version that I wanted).
+<br/>
+<br/>I hope you really can work this out, hash would be a big step forward, with some compability with SFV it could be great.
+<br/>
+<br/>By the way don't think so much about hashing performance just make sure that the program can give a decent guesstimate of how long it will take and show it with a progressbar to the user. Later on when we have hashing we can discuss performance problems (Any user with 100GB+ of files will understand that it takes time to hash it).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p22803">
+<div class="inner">
+<dl class="postprofile" id="profile22803">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22803">
+<h3><a href="#p22803">Re: Hashing is great but it will not solve all the problems.</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-07-19 11:46
+			</p>
+<div class="content"><blockquote><div><cite>3ddA wrote:</cite>When you discuss hashing I also think that it should be taken into consideration when you discuss hashing that inventing or using any other scheme than CRC will loose one important point. The problem when I do have the SFV-file, but one file is missing. I want to take that CRC-code and download the file. Using any other hash-code will make this impossible and will force me to download a file with the same name (which maybe turns out to be the same song but not the same version that I wanted).</div></blockquote>
+<br/>
+<br/>The problems is basically that of keeping "collection" information. There are several ways to do this. 1) Archive all the files and send out the hash of that. You dont NEED to split files up into .rars anymore with hashes and multi-source parallel downloading. 2) Use collection files. The author of shareaza said he would introduce collection files, basically XML files listing files and theire hashes. This was some time ago, dont know what happened with it. 3) Use another collection format, winamp playlists for example.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23988">
+<div class="inner">
+<dl class="postprofile" id="profile23988">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=965">Da8add1e</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-04 18:17</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Saddams Bunker :)</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23988">
+<h3><a href="#p23988"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=965">Da8add1e</a></strong> » </span>2003-07-29 02:54
+			</p>
+<div class="content">i think
+<br/>
+<br/>1/ hashes should be on demand, lots of stuff i share never gets downloaded due to the number of other people sharing the same file or other peoples lack of good taste <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/>
+<br/>
+<br/>2/ simple hashes should be good enough as dc++ already has file size checking and files tend to from the same origins a good sa1 system should be enough
+<br/>
+<br/>3/ XML tables or good old txt files for the previously requested files would save them being done again but that causes the update annomally to be taken into consideration and deliberate tampering of the XML/txt files and the client would be a problem, therefore plain txt hashes in an encrypted file or in stored in memory would be only way to secure it from the hax0r5
+<br/>
+<br/>4/ just do it - the sooner its done the quicker we can have multiple sources, its only a matter of time b4 the DC++ clones get multi sourcing and if they don't someone will come up with another p2p that does, yeh dc++ is good but that doesn't mean its perfect it WOULD be better with multi-sourcing
+<br/>
+<br/>Done <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig23988">Need NOT Greed (don't abuse poor countries)
+<br/>Pay the Poor (increase minimum wage)
+<br/>Tax the Rich (100% SuperTax rate)
+<br/>(Do ya think thats maybe a little left-wing?)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p24070">
+<div class="inner">
+<dl class="postprofile" id="profile24070">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content24070">
+<h3><a href="#p24070"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-30 00:28
+			</p>
+<div class="content">Your items one and two don't really relate.  Even on the fastest system, on-demand hashing isn't possible without lag (think CD sized files on a non Ultra-320/SATA drive).  "On demand"  doesn't make much sense if we work out how to return hashes with search results, as well.
+<br/>
+<br/>The concept of "simple" hashes doesn't relate either - the implementation thus far uses a mathematically proven and pre-existing algorithm - the Tiger hash.
+<br/>
+<br/>Be patient, please.
+<br/>
+<br/>Multi-source is already in other DC clients (there are no DC++ clones as far as I've seen) - specifically the DCTC library under linux (used in DCGUI-QT), and the DCPro client under Windows.  Neither of those has enough "market share" (so to speak) as DC++, and neither has offered a solution for hashes and file integrity</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p24448">
+<div class="inner">
+<dl class="postprofile" id="profile24448">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content24448">
+<h3><a href="#p24448"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-08-03 02:49
+			</p>
+<div class="content">Just wanted to tell you that I have started to read up on hashing and will do what I can to help you out with hashing and segmented downloads.
+<br/>
+<br/>Most of the ideas/problems have been discussed in this thread already. 
+<br/>
+<br/>Let's make a sum up and  decide in what direction to go. If Arne doesn't want to make those of course. =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p24453">
+<div class="inner">
+<dl class="postprofile" id="profile24453">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content24453">
+<h3><a href="#p24453"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-08-03 05:57
+			</p>
+<div class="content">I should probably mention now that I wrote tigertree hashing code for my DC++ mod several months ago and have been playing with it since. It correctly calculates an hash trees to an arbitrary depth, stores them in a file for later retrieval, updates that file (albeit inefficiently), searches based on the resulting root hashes (and runs up against DC++'s incoming search result filtering: if the search term was a hash string, it will filter an apparently unrelated unrelated search result, even though it is in fact a correct search result. JT's id3 mod relies on a stupid parsing trick that shouldn't be relied upon in DC++, nevermind other clients.), and can map hashes to filenames and vice versa using the /filetohash and /hashtofile commands.
+<br/>
+<br/>The current problem I'm having is transferring hash trees: DC++ isn't equipped to use its file transfer mechanisms to send or receive anything except files, and using a set of plain files for a hash database would be silly, IMO.
+<br/>
+<br/>This requires a different mechanism to transfer data, up to maybe 50kB practically. The most obvious choice is using the Base32 encoding that's apparently become standard for this sort of hash, bandwidth-inefficient as that is (the total amount of data is small, so a little inefficiency in the client-client connection doesn't particularly matter), and sending it as a standard client-client command, complete with the $ and | initiation and termination tokens.
+<br/>
+<br/>The potential difficulty with this, which I haven't tested, is that different clients may not react to exceptionally large client commands gracefully.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25646">
+<div class="inner">
+<dl class="postprofile" id="profile25646">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25646">
+<h3><a href="#p25646"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-08-15 09:30
+			</p>
+<div class="content">I'd really love to take a look at your work so far cologic, you have a URL for the source?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25817">
+<div class="inner">
+<dl class="postprofile" id="profile25817">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25817">
+<h3><a href="#p25817"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-08-17 13:48
+			</p>
+<div class="content"><!-- m --><a class="postlink" href="http://utrum.dyndns.org:8000/">http://utrum.dyndns.org:8000/</a><!-- m -->
+<br/>
+<br/>Look in related. I think this includes hashing stuff.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p26025">
+<div class="inner">
+<dl class="postprofile" id="profile26025">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10680">YaRi</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 18</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-19 15:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26025">
+<h3><a href="#p26025"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10680">YaRi</a></strong> » </span>2003-08-19 15:54
+			</p>
+<div class="content"><blockquote><div><cite>sandos wrote:</cite>http://utrum.dyndns.org:8000/<br/><br/>Look in related. I think this includes hashing stuff.</div></blockquote>
+<br/>Too bad there isn't <span style="text-decoration: underline">any</span> documentation about hash-feature, it's just mentioned in preferences.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26343">
+<div class="inner">
+<dl class="postprofile" id="profile26343">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26343">
+<h3><a href="#p26343"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-08-22 01:37
+			</p>
+<div class="content"><blockquote><div><cite>YaRi wrote:</cite><blockquote><div><cite>sandos wrote:</cite>http://utrum.dyndns.org:8000/<br/><br/>Look in related. I think this includes hashing stuff.</div></blockquote><br/>Too bad there isn't <span style="text-decoration: underline">any</span> documentation about hash-feature, it's just mentioned in preferences.</div></blockquote>
+<br/>
+<br/>It doesnt imo need documentation? Or do you mean the sourcecode?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p29502">
+<div class="inner">
+<dl class="postprofile" id="profile29502">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10680">YaRi</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 18</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-19 15:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29502">
+<h3><a href="#p29502"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10680">YaRi</a></strong> » </span>2003-09-30 11:35
+			</p>
+<div class="content"><blockquote><div><cite>sandos wrote:</cite>It doesnt imo need documentation? Or do you mean the sourcecode?</div></blockquote>
+<br/>So it has hashing, then what? It hashes all my shares? 
+<br/>Are these hashes used in any way? Where are they stored? Is multi-source downloading going to happen any time soon? 
+<br/>These are just some questions I'd like to have some answers, please.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p29503">
+<div class="inner">
+<dl class="postprofile" id="profile29503">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10680">YaRi</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 18</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-19 15:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29503">
+<h3><a href="#p29503"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10680">YaRi</a></strong> » </span>2003-09-30 11:40
+			</p>
+<div class="content">OK, I found some answers already and other topics about this subject. 
+<br/>Editing posts seems to be disabled <img alt=":o" class="smilies" src="/images/smilies/icon_surprised.gif" title="Surprised"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p39214">
+<div class="inner">
+<dl class="postprofile" id="profile39214">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16302">_Cennet_</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-05 01:59</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39214">
+<h3><a href="#p39214">Hashing</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16302">_Cennet_</a></strong> » </span>2004-01-05 03:11
+			</p>
+<div class="content">Ok, nice discussion you have going here! <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/>
+<br/>
+<br/>First of all, the discussion seems to fade, when the amount of hashing is introduced. I think that it must be pointed out that there are two reasons for hashing the file. One has actually the same use as the CRC, and is applied to the whole file. This hash or CRC can the be used to locate a precise match (especially if it is paired with filesize).
+<br/>
+<br/>The second reason for using hashing is, to detect errors in the file transfer.
+<br/>
+<br/>These two methods imply different approaches.
+<br/>
+<br/>To locate the file through CRC or hash, requires that all files are pre-hashed before a search arrives, and thus needs to be performed at startup (or when files are added to the share).
+<br/>It would be nice to have this "overall" hash in different formats, so DC++ users can benefit from sites that post hashes in different formats. I would call this a <strong class="text-strong">filehash</strong> because it is a hash for the entire file.
+<br/>
+<br/>It is obvious that it is extremly annoying to download a large file, and then discover that the hash does not match. Thus the need for hash trees (or perhaps just a simple "partial-chunk-hash" list) comes into play. I would call this a <strong class="text-strong">detailhash</strong>.
+<br/>The size of this <strong class="text-strong">detailhash</strong> should be very dependant on the filesize. IMO a depth of 8 seems fair enough, since a 700 mb file, would consist of 2,7 mb segements. On the other hand a 3 mb file should not be split up in 256 parts. So my idea is that the minimum size for a segment is 1 mb (ea. less segments), and the maximum number of segments should be 256.
+<br/>
+<br/>IMO it should NOT be possible to search for a partial chunk in DC++. I base this on the fact that slots are a limited resource, and if everyone open connections for seperate chunks, it will become very difficult to get a slot. Furthermore afaik most users they will have maxed out their line at 7-10 connections, and any further connections, will only result in decreased performance.
+<br/>
+<br/>Both hash types should be cached, to minimize load. I dont know excatly how you cache them if you want them to follow a moved/renamed file, but if you now the <strong class="text-strong">filehash</strong> for a file, another file with the same size and <strong class="text-strong">filehash</strong>, will have the same <strong class="text-strong">detailhash</strong>.
+<br/>
+<br/>From my experience, creating a MD5 digest from a 1GB file takes less than a second (on a 700 mhz laptop). I haven't tried anything with the trees.
+<br/>
+<br/>So, basically I'm proposing:
+<br/>Build (multiple-) <strong class="text-strong">filehashes</strong> on startup
+<br/>Build <strong class="text-strong">detailhashes</strong> (ea. trees) on demand
+<br/>
+<br/>
+<br/>If it is certain that any client will ignore any command that it does not know, searching for a <strong class="text-strong">filehash</strong> is actually trivial, since a new command can be created. 
+<br/>Clients who does not support the command, does not support the <strong class="text-strong">filehash</strong> either, so asking them for a filehash is a waste time/bandwith.
+<br/>Also getting the <strong class="text-strong">detailhash</strong> from a user can be implemented with a new command. Here it might come in handy to know what users did respond to a search for a <strong class="text-strong">filehash</strong>, as these will know the <strong class="text-strong">detailhash</strong> also, and the user who has an open slot might not.
+<br/>
+<br/>
+<br/>If a new command cannot be introduced, the following would be my opinon:
+<br/>
+<br/>Searching for the <strong class="text-strong">filehash</strong> should be done by introducing a new file-type, as that is somewhat consistent with it's current use (IMO), and compatible with the protocol (afaik). As mentioned earlier, I would not like to see segment downloading implemented as a feature in DC.
+<br/>
+<br/>Retreving the <strong class="text-strong">detailhash</strong>, should be done like retrieving the filelist (mylist.dclst), a client would reply "file not found" if it does not support this feature.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p39239">
+<div class="inner">
+<dl class="postprofile" id="profile39239">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39239">
+<h3><a href="#p39239">Re: Hashing</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-01-05 14:31
+			</p>
+<div class="content"><blockquote><div><cite>_Cennet_ wrote:</cite>Ok, nice discussion you have going here! <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/></div></blockquote><br/>Thanks for reviving it. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>One has actually the same use as the CRC, and is applied to the whole file. This hash or CRC can the be used to locate a precise match (especially if it is paired with filesize).<br/>The second reason for using hashing is, to detect errors in the file transfer.<br/>These two methods imply different approaches.</div></blockquote><br/>Perhaps.  However, with a suitable algorithm, the root hash of the tree can be used as the unique file identifier.<br/><br/>A couple things have changed since my last post.  Cologic has gone on to create a fairly complete hashing system in BCDC based on the Tiger (Tree) Hash algorithm.  Reverse connect has started a system based on eDonkey2000 hashes.  DC:Pro has adopted TTH hashing.<br/>There have also been a few fairly complete specicifications of possible successors to the DC protocol.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>To locate the file through CRC or hash, requires that all files are pre-hashed before a search arrives, and thus needs to be performed at startup (or when files are added to the share).</div></blockquote><br/>The current (or future) system need not block startup until file hashing is complete.  Nothing (logically) should prevent a client from returning search results for non-hashed files (though logically it will also prefer search results with hashes over others).<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>It would be nice to have this "overall" hash in different formats, so DC++ users can benefit from sites that post hashes in different formats. I would call this a <strong class="text-strong">filehash</strong> because it is a hash for the entire file.</div></blockquote><br/>This is certainly something I believed.  You could either always search for the same hash (eg. sha1) that you have a direct link to, or you could do a search for the purpose of converting that into the native hash for the DC network (eg. tth).  However, searches are not cheap for large hubs.  Sticking to one format and making it part of the protocol will avoid traffic and make for a more pleasant entry point for new clients.  (Even if it means not being able to use sites such as sharereactor.)<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>IMO it should NOT be possible to search for a partial chunk in DC++. I base this on the fact that slots are a limited resource, and if everyone open connections for seperate chunks, it will become very difficult to get a slot.</div></blockquote><br/>Searching for a segment is a very specific case of Partial File Sharing (PFS as it's known in Gnutella).  Agree upon a convention for indicating "partial file" in a search result, and agree on a client to client part exchange ( + perhaps same-hub source exchange), and you don't need the ugliness of searching for segments.<br/><br/>About slot usage: in my mind, I've always paired multisource downloading with a complex upload queue.  I think the way the system currently works is quite archaic.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>Both hash types should be cached, to minimize load. I dont know excatly how you cache them if you want them to follow a moved/renamed file, but if you now the <strong class="text-strong">filehash</strong> for a file, another file with the same size and <strong class="text-strong">filehash</strong>, will have the same <strong class="text-strong">detailhash</strong>.</div></blockquote><br/>True.  BCDC uses <a class="postlink" href="http://qdbm.sourceforge.net/">QDBM</a> as a database to store hashes, plus some necessary information for determining if the file has changed.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>From my experience, creating a MD5 digest from a 1GB file takes less than a second (on a 700 mhz laptop). I haven't tried anything with the trees.</div></blockquote><br/>That file must be cached in memory, otherwise you have a disk subsystem to be feared.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>If it is certain that any client will ignore any command that it does not know, searching for a <strong class="text-strong">filehash</strong> is actually trivial, since a new command can be created. </div></blockquote><br/>True, but <strong class="text-strong">hubs</strong> will not ignore any command they do not know, and they will not broadcast unknown cpmmands.  Searches are sent to the hubs, so the ability to create new client commands doesn't gain us anything.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>Clients who does not support the command, does not support the <strong class="text-strong">filehash</strong> either, so asking them for a filehash is a waste time/bandwith.<br/>Also getting the <strong class="text-strong">detailhash</strong> from a user can be implemented with a new command. Here it might come in handy to know what users did respond to a search for a <strong class="text-strong">filehash</strong>, as these will know the <strong class="text-strong">detailhash</strong> also, and the user who has an open slot might not.</div></blockquote><br/>BCDC advertises "TTH" in $Supports to indicate its hashing support.  It returns root hashes in search results in the "Hub Name" field in the form: "TTH:&lt;hash&gt;".  It supports exchange of the full tree in client to client with "$GetMeta TTH;&lt;levels&gt; &lt;filename&gt;"<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>Searching for the <strong class="text-strong">filehash</strong> should be done by introducing a new file-type, as that is somewhat consistent with it's current use (IMO), and compatible with the protocol (afaik). As mentioned earlier, I would not like to see segment downloading implemented as a feature in DC.</div></blockquote>
+<br/>Searching by hash is enabled in BCDC with a data-type of 9 (folders is number 8 ).
+<br/>
+<br/>Sidenote: eDonkey2000 hash support is probably not wise, because of its basis on the MD4 hash.  Cologic has brought up numerous papers with attacks that can create a collsion with that algorithm.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p39451">
+<div class="inner">
+<dl class="postprofile" id="profile39451">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16302">_Cennet_</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-05 01:59</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39451">
+<h3><a href="#p39451"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16302">_Cennet_</a></strong> » </span>2004-01-07 23:34
+			</p>
+<div class="content">Quotes are from GargoyleMT, can't get it to display properly  <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>
+<br/>
+<br/><blockquote class="uncited"><div>...with a suitable algorithm, the root hash of the tree can be used as the unique file identifier...</div></blockquote><br/>True. My suggestion was that these were unrelated, to avoid a complex hashing at startup. However, if the main problem with hashing seems to be disk transfer speeds, that idea would actually worsen the situation, as files would potentionally read twice. Also, my idea only works, if searching for segements is not a possibility.<br/><br/><blockquote class="uncited"><div>The current (or future) system need not block startup until file hashing is complete. Nothing (logically) should prevent a client from returning search results for non-hashed files (though logically it will also prefer search results with hashes over others). </div></blockquote><br/>Of course. What I meant was, that it would have to be hashed, before any results with hash, could be returned. My post was unclear, sorry.<br/><br/><blockquote class="uncited"><div>I think the way the system currently works is quite archaic. </div></blockquote><br/>I can see your point. I just worry that downloading segements will cause the entire DC network to stall, if people start downloading from many more sources, than they do today. Today, a user downloading a file will use up one slot. If he can get a segement from four other users, he will use five in the proposed system. One could argue that he will finish his download faster, but I belive that many people will go a little over the edge, and download from more sources than necessary. If you believe that hub operators will require more slots open, I see the system entering a state where transfer speeds are around the same as on the eDonkey or Kazaa. <br/>But then, that is a whole other discussion. I believe there was one about it on the old site?.<br/><br/><blockquote class="uncited"><div>hubs will not ignore any command they do not know</div></blockquote><br/>I see, I hadn't thought of that, but of course it does.<br/>I guess that leaves only the option of filetype 9. Too bad, since this will probally increase hub load, when all users search twice, first for hash, then for file, in order to get the most results.<br/><br/><blockquote class="uncited"><div>It supports exchange of the full tree</div></blockquote>
+<br/>What algorithm does the BCDC use to build the tiger tree?
+<br/>
+<br/>I suppose that one of eDonkey's hashes are the complete file hash? It would be nice to support just that one anyway. Do you have links to these papers? Any links to the alleged flaw in the sourceforge tiger tree, would be nice also.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p39479">
+<div class="inner">
+<dl class="postprofile" id="profile39479">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39479">
+<h3><a href="#p39479"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-01-08 03:28
+			</p>
+<div class="content"><blockquote><div><cite>_Cennet_ wrote:</cite>Quotes are from GargoyleMT, can't get it to display properly  <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/> </div></blockquote>Try Quote="username"<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>However, if the main problem with hashing seems to be disk transfer speeds, that idea would actually worsen the situation, as files would potentionally read twice. Also, my idea only works, if searching for segements is not a possibility.</div></blockquote><br/>Indeed, disk speeds are the real limitation currently.  <a class="postlink" href="http://utrum.dyndns.org:8000/">BCDC++</a> uses quite a bit of processing power during hashing, but it is still disk I/O bound.<br/><br/>Well, using two algorithms does make some kind of sense.  In particular, if you want to use <a class="postlink" href="http://magnet-uri.sourceforge.net/">Magnet</a> direct file links.  There is a schema for SHA1 hashes, and a schema that uses bitprints - which contain both a SHA1 and TTH root hash.  However, the SHA1 only one is far more common on the websites that offer such links.<br/><br/>I think that using the existing $Search facility, though novel (I hadn't thought about it) is particularly wasteful.  I see you didn't respond to the alternative scheme, but it roughly parallels that in other P2P systems.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>Of course. What I meant was, that it would have to be hashed, before any results with hash, could be returned. My post was unclear, sorry.</div></blockquote><br/>Oh, true.  Some people seem to think hashing should/would have to be finished before search results could be returned (or before hubs could be joined).  I just assumed you had the same thoughts.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>I can see your point. I just worry that downloading segements will cause the entire DC network to stall <strong class="text-strong">...</strong> I see the system entering a state where transfer speeds are around the same as on the eDonkey or Kazaa. <br/><br/>But then, that is a whole other discussion. I believe there was one about it on the old site?.<br/></div></blockquote><br/>Well, aren't transfers speeds on eDonkey and Kazaa both very good?  Your concern about slots is... appreciated.  I was never around for the old lichlord forums, but I think there's another thread in this one where Sarf had some good arguments about the usage of slots, and potential benefit to the DC network of multi-source downloading.  If you want to talk about that subject, let's find and revive that thread (as well).  <img alt=":mrgreen:" class="smilies" src="/images/smilies/icon_mrgreen.gif" title="Mr. Green"/><br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>I see, I hadn't thought of that, but of course it does.<br/>I guess that leaves only the option of filetype 9. Too bad, since this will probally increase hub load, when all users search twice, first for hash, then for file, in order to get the most results.</div></blockquote><br/>I don't think that Ptokax (the strictest hub I know) parses $Searches for validity.  I know DCH++ doesn't have a problem with Type 9 = Hash.<br/><br/>But until hashes are widespread, you do have the problem where you need to search for alternates the normal way (to get potentially compatible files) and also by hash (for definitely compatible files).  After all, you cannot both include the Hash as the search term (and flag it with type 9) and include the normal search terms (plus the size and type constraints) and still get results back from legacy clients.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>What algorithm does the BCDC use to build the tiger tree?</div></blockquote><br/>Tiger is the name of the algorithm.  One reference is in Bitzi.com's bitcollider project: <a class="postlink" href="http://cvs.sourceforge.net/viewcvs.py/bitcollider/bitcollider/lib/tiger.c?rev=1.3&amp;view=markup">tiger.c</a>.    The "Tree" part describes a Merkle Hash Tree.  A little bit more information can be found in the <a class="postlink" href="http://members.verizon.net/todd.pederzani/dc++/draft-jchapweske-thex-02.html">THEX Draft</a> (seemingly 404, hence my personal mirror).<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>I suppose that one of eDonkey's hashes are the complete file hash? It would be nice to support just that one anyway.</div></blockquote><br/>No, it wouldn't be particularly nice.  Come up with a hash exchange (in finding a tth root hash for a given ed2k hash) mechanism that isn't wasteful, and I'll reverse my position.  The last thing the DC network needs is more hopeless searches, which are what supporting arbitrary (sig2dat, ed2k, md5, sha1) hashes would imply.  There needs to be One True Hash for the whole network.<br/><br/><blockquote><div><cite>_Cennet_ wrote:</cite>Do you have links to these papers? Any links to the alleged flaw in the sourceforge tiger tree, would be nice also.</div></blockquote>
+<br/><a class="postlink" href="http://utrum.dyndns.org:8000/00629999.pdf">Here's a link</a> to one of the papers on the MD4 algorithm collisions.  There is no flaw in Tiger as of yet, though the construction of the original tiger hash trees was flawed by not properly weighting/shifting some of the leaves (more information on this can be found on the p2p-hackers mailing list from a while back - it's since been fixed in the THEX draft listed above.)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p41234">
+<div class="inner">
+<dl class="postprofile" id="profile41234">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41234">
+<h3><a href="#p41234"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-01-25 18:28
+			</p>
+<div class="content">Do I get this wrong or has arne begun to implement hashing?
+<br/><blockquote class="uncited"><div> -- 0.307 --<br/>* Fixed full name being displayed in user commands with submenus<br/>* Bloom filters dramatically improve search efficiency (if you have a large share)<br/><strong class="text-strong">* Merkle trees and tiger hashing added</strong><br/>* Auto match results shown in status bar</div></blockquote></div>
+<div class="signature" id="sig41234"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p41268">
+<div class="inner">
+<dl class="postprofile" id="profile41268">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41268">
+<h3><a href="#p41268"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-01-25 20:43
+			</p>
+<div class="content"><blockquote><div><cite>joakim_tosteberg wrote:</cite>Do I get this wrong or has arne begun to implement hashing?</div></blockquote>
+<br/>You read that correctly.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p41320">
+<div class="inner">
+<dl class="postprofile" id="profile41320">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41320">
+<h3><a href="#p41320"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-01-26 06:10
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>joakim_tosteberg wrote:</cite>Do I get this wrong or has arne begun to implement hashing?</div></blockquote><br/>You read that correctly.</div></blockquote> <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+<div class="signature" id="sig41320"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p41328">
+<div class="inner">
+<dl class="postprofile" id="profile41328">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12911">liny</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-01 14:18</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41328">
+<h3><a href="#p41328"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12911">liny</a></strong> » </span>2004-01-26 10:22
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>joakim_tosteberg wrote:</cite>Do I get this wrong or has arne begun to implement hashing?</div></blockquote><br/>You read that correctly.</div></blockquote>
+<br/>
+<br/>Really a good news.
+<br/>Is there any tools that can generate TTH for a file?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p41370">
+<div class="inner">
+<dl class="postprofile" id="profile41370">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41370">
+<h3><a href="#p41370"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2004-01-27 02:14
+			</p>
+<div class="content"><blockquote><div><cite>liny wrote:</cite>Really a good news.<br/>Is there any tools that can generate TTH for a file?</div></blockquote>
+<br/>I went ahead and dug some out for you.
+<br/>
+<br/><a class="postlink" href="http://www.slavasoft.com/hashcalc/">HashCalc</a> seems to do the job nicely. Simple GUI and it works for a lot of different hashes.
+<br/>
+<br/>There are also some commandline types, that could be useful for making sites with hashes, or generating a hash-check file (could be used for confirming file integrity perhaps).
+<br/>
+<br/><a class="postlink" href="http://www.slavasoft.com/fsum/">Fsum</a>
+<br/><a class="postlink" href="http://rehash.sourceforge.net/">ReHash</a></div>
+<div class="signature" id="sig41370"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p41372">
+<div class="inner">
+<dl class="postprofile" id="profile41372">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12911">liny</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-01 14:18</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41372">
+<h3><a href="#p41372"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12911">liny</a></strong> » </span>2004-01-27 03:40
+			</p>
+<div class="content">Thanks for your reply. These tools are very helpful.
+<br/>They can do tiger hash. But how to get tiger tree hash? 
+<br/>
+<br/><blockquote><div><cite>Todi wrote:</cite><blockquote><div><cite>liny wrote:</cite>Really a good news.<br/>Is there any tools that can generate TTH for a file?</div></blockquote><br/>I went ahead and dug some out for you.<br/><br/><a class="postlink" href="http://www.slavasoft.com/hashcalc/">HashCalc</a> seems to do the job nicely. Simple GUI and it works for a lot of different hashes.<br/><br/>There are also some commandline types, that could be useful for making sites with hashes, or generating a hash-check file (could be used for confirming file integrity perhaps).<br/><br/><a class="postlink" href="http://www.slavasoft.com/fsum/">Fsum</a><br/><a class="postlink" href="http://rehash.sourceforge.net/">ReHash</a></div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p41396">
+<div class="inner">
+<dl class="postprofile" id="profile41396">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15306">IntraDream</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-12 19:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> FL,USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41396">
+<h3><a href="#p41396">Re: Hashing</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15306">IntraDream</a></strong> » </span>2004-01-27 12:31
+			</p>
+<div class="content">I would like to know why Tiger was chosen? SHA1 from what I have read can process hashes 2X as fast as Tiger (on a 32 bit platform). THEX/SHA1 would be very secure for a hash tree and easier for me to add to my client  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> . but as im sure this has been pointed out this Tree structure wont stop "hollow eggs"(fake files) as it were because the origional source could have a corrupt hash(or a valid hash for a file name with 3MB*chr(0) named The_File_You_Want.MP3) . but i think this will eventually be noticable when multisource becomes more prevelent and valid sources show a high amount of matches with the same hash.  Anyway i think we should set a standard im just not ready to vote for TTH just because someone has already added it to a client.
+<br/>
+<br/>Tim-</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p41592">
+<div class="inner">
+<dl class="postprofile" id="profile41592">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41592">
+<h3><a href="#p41592">Re: Hashing</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2004-01-29 16:14
+			</p>
+<div class="content"><blockquote><div><cite>IntraDream wrote:</cite>but as im sure this has been pointed out this Tree structure wont stop "hollow eggs"(fake files) as it were because the origional source could have a corrupt hash(or a valid hash for a file name with 3MB*chr(0) named The_File_You_Want.MP3)</div></blockquote>
+<br/>
+<br/>Corrupt hashes doesnt happen in a good implementation, you check the hash as you download a new file. The problem, as I think youre saying, is you need to somehow know what hashes to trust. I think that will mostly be done by looking at the number of sources, hopefully fake files will have a less number of sources than the good files, and secondly itll be done by clicking a link on a webpage that you trust.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			98 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=277&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=277&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CIDM - Client Implementation Debug Mode - DCBase</title>
+      
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=74" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=19" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="55" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=55" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/viewtopic.php?f=55&amp;t=722">CIDM - Client Implementation Debug Mode</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for ADC may be presented here for others to review and point out flaws or further improve the idea.<br/></div>
+<div class="rules">
+<div class="inner">
+<strong>Forum rules</strong><br/>
+			If you have an account on the wiki, remember to update the ADC Proposals page for new ideas.<br/>
+<br/>
+<a class="postlink" href="http://dcbase.org/wiki/ADC_Proposals_list">http://dcbase.org/wiki/ADC_Proposals_list</a>
+</div>
+</div>
+<div class="action-bar bar-top">
+<div class="pagination">
+			5 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2598">
+<div class="inner">
+<dl class="postprofile" id="profile2598">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2598">
+<h3 class="first"><a href="#p2598">CIDM - Client Implementation Debug Mode</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Sun Jan 02, 2011 12:56 pm
+			</p>
+<div class="content">While digging through old logs and code, I found an extension that had been dubbed CIDM. I've slightly modified the text since it's original incarnation.
+<blockquote class="uncited"><div>CIDM - Client Implementation Debug Mode<br/>
+<br/>
+If a client signals support for CIDM to the hub, the hub should treat the client in a special debug mode, and not kick the client; even if it's violating something that may warrant a kick.<br/>
+<br/>
+Flag CIDM in SUP and in the INF's SU field.</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2603">
+<div class="inner">
+<dl class="postprofile" id="profile2603">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> Thu Feb 18, 2010 5:44 pm</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2603">
+<h3><a href="#p2603">Re: CIDM - Client Implementation Debug Mode</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a></strong> » </span>Sun Jan 02, 2011 3:27 pm
+			</p>
+<div class="content">This is just open for abuse.  What happens if a client wants to make trouble and send CIDM as a guarentee that it wont get kicked?<br/>
+<br/>
+My view would be that this would be better as a PID whitelist in the hub, rather than a client saying "honest gov. im not here to intentionally cause problems"<br/>
+<br/>
+~Andrew</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2606">
+<div class="inner">
+<dl class="postprofile" id="profile2606">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> </dt>
+<dd class="profile-rank">Senior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Dec 30, 2008 2:59 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2606">
+<h3><a href="#p2606">Re: CIDM - Client Implementation Debug Mode</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>Sun Jan 02, 2011 4:27 pm
+			</p>
+<div class="content">I think the barrier to entry with ADC is low enough that you can avoid getting yourself kicked after a short amount of time. If you do get kicked, you're probably doing something wrong and will be greatful for the debugging message that getting kicked gives you.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2607">
+<div class="inner">
+<dl class="postprofile" id="profile2607">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content2607">
+<h3><a href="#p2607">Re: CIDM - Client Implementation Debug Mode</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Sun Jan 02, 2011 4:59 pm
+			</p>
+<div class="content">imho reject this extension since the abuse risk is too high</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2745">
+<div class="inner">
+<dl class="postprofile" id="profile2745">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2745">
+<h3><a href="#p2745">Re: CIDM - Client Implementation Debug Mode</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Thu Apr 21, 2011 1:56 pm
+			</p>
+<div class="content">Dug up quotes;<br/>
+<blockquote class="uncited"><div>[2007-11-04 17:12:46] &lt;Pretorian&gt; arne: Perhaps add another STA code? "Search performed too soon. Flag "TL" is an integer specifying the number of seconds left until it's allowed again"<br/>
+- [2007-11-04 17:14:39] &lt;FarCry&gt; if at all then a more general "Server Busy" with a retry timeout<br/>
+[2011-01-02 22:57:05] &lt;Pretorian&gt; Some additional interesting things;<br/>
+[2011-01-02 22:57:07] &lt;Pretorian&gt; <br/>
+- [2007-11-04 17:12:46] &lt;Pretorian&gt; arne: Perhaps add another STA code? "Search performed too soon. Flag "TL" is an integer specifying the number of seconds left until it's allowed again"<br/>
+- [2007-11-04 17:14:21] &lt;pur&gt; atleast i can do somethiing else while downloading the lastest from arne <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+- [2007-11-04 17:14:39] &lt;FarCry&gt; if at all then a more general "Server Busy" with a retry timeout<br/>
+- [2007-11-04 17:15:54] &lt;fusbar&gt; as with email?<br/>
+- [2007-11-04 17:16:53] &lt;fusbar&gt; smtp<br/>
+- [2007-11-04 17:16:59] &lt;fusbar&gt; hasen't it got something similar<br/>
+- [2007-11-04 17:17:11] &lt;Pretorian&gt; Though, then flag also the FOURCC.<br/>
+- [2007-11-04 17:18:06] &lt;FarCry&gt; I'm not sure the protocol should support "be nice, I'm broken" messages at all<br/>
+- [2007-11-04 17:20:16] &lt;PseudonympH&gt; but they're going to be needed anyway; i don't see search timeouts going away<br/>
+- [2007-11-04 17:21:05] &lt;fusbar&gt; farcry: yes, the question is if it gets more complicated than it gives.<br/>
+- [2007-11-04 17:21:05] &lt;PseudonympH&gt; so we might as well make a clean way to do it instead of it just sending an IMSG<br/>
+- [2007-11-04 17:21:13] &lt;fusbar&gt; i.e., complexity with no use whatsoever<br/>
+- [2007-11-04 17:21:15] &lt;FarCry&gt; you can add flags to generic STA codes and let clients and hubs handle them on a different level<br/>
+- [2007-11-04 17:21:42] &lt;FarCry&gt; that's the idea behind extensibility<br/>
+- [2007-11-04 17:22:02] &lt;FarCry&gt; (if that's a word <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/>)<br/>
+- [2007-11-04 17:24:02] &lt;pur&gt; might want to standardize the STA a bit though<br/>
+- [2007-11-04 17:24:16] &lt;pur&gt; but thats somewhat done already<br/>
+- [2007-11-04 17:24:43] &lt;arnetheduck&gt; http has a server busy code<br/>
+- [2007-11-04 17:25:08] &lt;FarCry&gt; you could have a general retry timeout after which sending the same message that caused an error might make sense again<br/>
+- [2007-11-04 17:25:12] &lt;fusbar&gt; would dc++ care about a to busy code? <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/>)<br/>
+- [2007-11-04 17:25:46] &lt;arnetheduck&gt; in a distant future =)<br/>
+- [2007-11-04 17:25:53] &lt;PseudonympH&gt; well, people might complain that they're searching and nothing is happening if it ignores it <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+- [2007-11-04 17:26:15] &lt;FarCry&gt; for a search, the client gets the echo anyway and if it doesn't, it'll know the search was not relayed<br/>
+- [2007-11-04 17:26:26] &lt;PseudonympH&gt; you have a point<br/>
+- [2007-11-04 17:26:40] &lt;fusbar&gt; farcry: yes, but it doesnt know the PING-time<br/>
+- [2007-11-04 17:26:44] &lt;fusbar&gt; one coule argue against that<br/>
+- [2007-11-04 17:26:53] &lt;FarCry&gt; a client can provide visual feedback for that echo<br/>
+- [2007-11-04 17:28:07] &lt;fusbar&gt; btw, a none-trivial thing not stated in the protocol<br/>
+- [2007-11-04 17:28:12] &lt;fusbar&gt; which one might want to say<br/>
+- [2007-11-04 17:28:24] &lt;fusbar&gt; is that messages should be handled in order<br/>
+- [2007-11-04 17:29:03] &lt;fusbar&gt; the hub shouldn't (or should if you think that) be allowed to rearrange messages in the order they have arrived<br/>
+- [2007-11-04 17:29:59] &lt;FarCry&gt; would that be a general rule or one specific to certain command types?<br/>
+- [2007-11-04 17:30:12] &lt;FarCry&gt; I know it's important for MSG<br/>
+- [2007-11-04 17:30:36] &lt;fusbar&gt; not sure on which level, but i guess it should be mentioned somewhere<br/>
+- [2007-11-04 17:30:44] &lt;pur&gt; if the source is the same, they always arrive in the same order they are sended<br/>
+- [2007-11-04 17:31:00] &lt;fusbar&gt; people will probably want to B-casts to have smaller amounts of packets<br/>
+- [2007-11-04 17:31:01] &lt;PseudonympH&gt; a passive search won't get the echo, though<br/>
+- [2007-11-04 17:31:07] &lt;PseudonympH&gt; since it will only be sent to active users<br/>
+- [2007-11-04 17:31:23] &lt;fusbar&gt; pur: yes, but a hub can rearrange them<br/>
+- [2007-11-04 17:31:29] &lt;fusbar&gt; priotorize for example<br/>
+- [2007-11-04 17:31:35] &lt;fusbar&gt; MSG before SCH et.c.<br/>
+- [2007-11-04 17:31:50] &lt;fusbar&gt; or vise versa<br/>
+- [2007-11-04 17:32:19] &lt;pur&gt; ye but, the one sending is in control of that,<br/>
+- [2007-11-04 17:32:33] &lt;pur&gt; since tcp.ip handles the ordering for you<br/>
+- [2007-11-04 17:32:43] &lt;FarCry&gt; no, not necessarily<br/>
+- [2007-11-04 17:32:58] &lt;pur&gt; and if the client wants it different, there's nothing you can do about it<br/>
+- [2007-11-04 17:33:07] &lt;FarCry&gt; the protocol doesn't say that the receive order should be kept for forwarding<br/>
+- [2007-11-04 17:33:11] &lt;pur&gt; it can just aswel ignore any higher protocol agreements<br/>
+- [2007-11-04 17:33:34] &lt;fusbar&gt; pur: you are looking at this at the wrong level<br/>
+- [2007-11-04 17:33:38] &lt;fusbar&gt; see farcry<br/>
+- [2007-11-04 17:34:30] &lt;FarCry&gt; I think it's only important for MSG and perhaps QUI should mention it also<br/>
+- [2007-11-04 17:34:48] &lt;FarCry&gt; otherwise there's nothing in BASE which requires any kind of order<br/>
+- [2007-11-04 17:35:03] &lt;fusbar&gt; exactly<br/>
+- [2007-11-04 17:35:33] &lt;fusbar&gt; handshake is ordered ofcourse<br/>
+- [2007-11-04 17:35:37] &lt;fusbar&gt; by definiton<br/>
+- [2007-11-04 17:35:40] &lt;fusbar&gt; but after that<br/>
+- [2007-11-04 17:36:01] &lt;FarCry&gt; handshake is point to point - the transport layer handles the order<br/>
+- [2007-11-04 17:37:14] &lt;pur&gt; the handshake gets it order kinda by the messages that may be sended in every state<br/>
+- [2007-11-04 17:37:36] &lt;fusbar&gt; yes, but back to the point<br/>
+- [2007-11-04 17:37:46] &lt;fusbar&gt; maybe its over-defining things<br/>
+- [2007-11-04 17:37:59] &lt;fusbar&gt; and setting to much up in stone to define an order<br/>
+- [2007-11-04 17:38:09] &lt;fusbar&gt; most probably will try to maintain it<br/>
+- [2007-11-04 17:38:37] &lt;pur&gt; it think it's to much<br/>
+- [2007-11-04 17:39:17] &lt;pur&gt; or rather<br/>
+- [2007-11-04 17:39:26] &lt;pur&gt; hcum ot s'ti kniht ti<br/>
+- [2007-11-04 17:39:28] &lt;pur&gt; =)<br/>
+- [2007-11-04 17:40:08] &lt;FarCry&gt; if you consider the specification as something by which you can verify an implementation, something should be mentioned in MSG<br/>
+- [2007-11-04 17:41:53] &lt;fusbar&gt; pur: i think you still have not understood what we discuss. <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/>)<br/>
+- [2007-11-04 17:43:35] &lt;FarCry&gt; is right<br/>
+- [2007-11-04 17:43:38] &lt;FarCry&gt; is wrong<br/>
+- [2007-11-04 17:43:43] &lt;FarCry&gt; fusbar<br/>
+- [2007-11-04 17:43:44] &lt;FarCry&gt; pur<br/>
+- [2007-11-04 17:43:51] &lt;FarCry&gt; <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/><br/>
+- [2007-11-04 17:45:16] &lt;FarCry&gt; well, there's also "it doesn't show up in searches" <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/><br/>
+- [2007-11-04 17:46:18] &lt;pur&gt; i understood fusbar, <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/> i just overdid it one step more <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+- [2007-11-04 17:47:01] &lt;pur&gt; you can't order messages coming from more than 1 source anyway<br/>
+- [2007-11-04 17:47:12] &lt;pur&gt; and it's silly to do it, if it comes from 1 source<br/>
+- [2007-11-04 17:47:30] &lt;FarCry&gt; you can<br/>
+- [2007-11-04 17:47:44] &lt;FarCry&gt; but I don't think we want to<br/>
+- [2007-11-04 17:49:12] &lt;FarCry&gt; you can postulate accurate timers, define a synchronization point and add timestamps to messages<br/>
+- [2007-11-04 17:49:47] &lt;FarCry&gt; I guess you'd need "tick messages" too<br/>
+- [2007-11-04 17:50:01] &lt;pur&gt; how would you handle a very delayed message?<br/>
+- [2007-11-04 17:50:35] &lt;pur&gt; a delay of 1 second would mess it up already<br/>
+- [2007-11-04 17:50:51] &lt;pur&gt; unless you want to see new messages arrive every 5 minutes<br/>
+- [2007-11-04 17:51:09] &lt;FarCry&gt; not if you have a timeout of 5 minutes and implement that as a natural delay<br/>
+- [2007-11-04 17:51:12] &lt;PseudonympH&gt; turn chat into a mailing list <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+- [2007-11-04 17:51:51] &lt;FarCry&gt; there's nothing that prohibits insertion into the chat display, either <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/><br/>
+- [2007-11-04 17:51:59] &lt;pur&gt; haha,<br/>
+- [2007-11-04 17:52:03] &lt;FarCry&gt; I already said we don't want that<br/>
+- [2007-11-04 17:53:27] &lt;pur&gt; maby we should ask cerf into the hub, he resigned last week anyways <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+- [2007-11-04 17:53:43] &lt;FarCry&gt; should there be a recommendation for implementations to process messages as fast as possible?<br/>
+- [2007-11-04 17:55:12] &lt;FarCry&gt; seeing that $MyINFO delays already cause some confusion
+</div></blockquote>
+<blockquote class="uncited"><div>
+- [2007-01-21 17:04:46] &lt;FarCry&gt; btw: I hereby declare the SUP fourcc "CIDM" occupied<br/>
+- [2007-01-21 17:05:40] &lt;FarCry&gt; should probably add that to the Wiki instead<br/>
+- [2007-01-21 17:07:31] &lt;Pretorian&gt; What is it?<br/>
+- [2007-01-21 17:08:49] &lt;FarCry&gt; my hub won't disconnect on any problems when the client includes this in the support set and will try to strictly parse every message and send verbose ISTAs<br/>
+- [2007-01-21 17:09:00] &lt;FarCry&gt; "Client Implementation Debug Mode"<br/>
+- [2007-01-21 17:11:13] &lt;Pretorian&gt; Sounds "dangerous".<br/>
+- [2007-01-21 17:11:52] &lt;FarCry&gt; well, you can let only privileged users use it<br/>
+- [2007-01-21 17:12:18] &lt;FarCry&gt; looks like I'm too noobish to add an extension to the wiki <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/><br/>
+- [2007-01-21 17:13:16] &lt;Pretorian&gt; Why not instead have a ticket system? "if user does something that warrents a kick, increase the ticket by one. if ticket is x, kick".<br/>
+- [2007-01-21 17:14:13] &lt;FarCry&gt; I do that for ordinary connections<br/>
+- [2007-01-21 17:15:58] &lt;FarCry&gt; it's mainly to allow testing clients even when not everything is working correctly<br/>
+- [2007-01-21 17:16:10] &lt;FarCry&gt; and to get some more feedback<br/>
+- [2007-01-21 17:16:11] &lt;Pretorian&gt; If only privileged users should use CIDM, the ticket system could instead have an infinite amount of tickets for those users.<br/>
+- [2007-01-21 17:16:33] &lt;FarCry&gt; yes, but that doesn't handle the strict parsing and verbose ISTAs<br/>
+- [2007-01-21 17:16:54] &lt;Pretorian&gt; Crash and burn is probably better than "oh, this was seriously fucked up but I'll let you be here anyway". <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/><br/>
+- [2007-01-21 17:17:33] &lt;FarCry&gt; I don't know, it virtually comes for free and so I decided to implement it<br/>
+- [2007-01-21 17:18:04] &lt;Pretorian&gt; Hm... I guess I'll add it to Elise, then. <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/><br/>
+- [2007-01-21 17:18:05] &lt;FarCry&gt; it works both ways, of course - I can use it to check if the hub's parser works correctly too
+</div></blockquote>
+<blockquote class="uncited"><div>
+- [2007-01-21 18:45:49] &lt;Pret&gt; Though, for once I agree; It sounds too close to CID. Like CID Management or something.<br/>
+- [2007-01-21 18:47:07] &lt;fusbar&gt; Aren't you after some "verbose" and "strict" mode?<br/>
+- [2007-01-21 18:47:17] &lt;fusbar&gt; can't you borrow something from all those gcc flags?<br/>
+- [2007-01-21 18:50:33] &lt;FarCry&gt; CDBG?<br/>
+- [2007-01-21 20:03:27] &lt;Pret&gt; Why add a new field? Can't you just do STA 100 &lt;msg&gt;?<br/>
+- [2007-01-21 20:04:40] &lt;FarCry&gt; Client Debug, that's all<br/>
+- [2007-01-21 20:05:08] &lt;FarCry&gt; perhaps DBGM for DeBuG Mode would be better, so it can be used independently<br/>
+- [2007-01-21 20:05:42] &lt;FarCry&gt; and the message can become rather long if I include the original message, so I'd rather have it in a separate parameter<br/>
+- [2007-01-21 20:08:01] &lt;Pret&gt; For possible future parameters, or what?<br/>
+- [2007-01-21 20:08:56] &lt;FarCry&gt; no<br/>
+- [2007-01-21 20:10:11] &lt;FarCry&gt; why is there FL, FC and IP when you can simply include that in the message?
+</div></blockquote>
+What I said when I posted this in DCDev Public;
+<blockquote class="uncited"><div>
+[2011-01-03 17:36:24] &lt;Pretorian&gt; "give me verbose error messages", essentially.<br/>
+[2011-01-03 18:22:12] &lt;Pretorian&gt; Any other reference is that I re-stating above, basically, and that there should be an implementation in Aegaeon.<br/>
+[2011-01-03 18:22:37] &lt;Pretorian&gt; (I have no idea where you can find a copy of Aegaeon nowadays, though. It used to be on BerliOS.)
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			5 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/viewforum.php?f=55">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Ideas”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=9"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=20"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=41"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=56"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=57"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=58"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=59"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=75"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=13"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=26"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=45"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=36"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=83"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=27"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=35"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=37"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=40"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=28"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=29"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=30"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=31"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=32"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=34"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=38"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=74"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=33"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=18"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=55"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=87"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=80"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=81"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=82"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=44"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=50"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=51"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=62"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=63"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=91"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=92"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=93"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

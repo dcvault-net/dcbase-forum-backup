@@ -6,21 +6,21 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Parsers Specification thoughts during implementation - Page 2 - DCBase</title>
-<link href="/app.php/feed?sid=9afd8ba85cad3928e7784296e3b8ce0d" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=9afd8ba85cad3928e7784296e3b8ce0d" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=9afd8ba85cad3928e7784296e3b8ce0d" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=9afd8ba85cad3928e7784296e3b8ce0d" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=9afd8ba85cad3928e7784296e3b8ce0d" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/55?sid=9afd8ba85cad3928e7784296e3b8ce0d" rel="alternate" title="Feed - Forum - Protocol Ideas" type="application/atom+xml"/> <link href="/app.php/feed/topic/635?sid=9afd8ba85cad3928e7784296e3b8ce0d" rel="alternate" title="Feed - Topic - Parsers Specification thoughts during implementation" type="application/atom+xml"/>
-<link href="https://forum.dcbase.org/viewtopic.php?t=635&amp;start=10" rel="canonical"/>
+      
+
 <!--
 	phpBB style name: prosilver
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
 	Modified by:
 -->
-<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
 <!--[if lte IE 9]>
 	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
 <![endif]-->
-<link href="overrides.css" rel="stylesheet"/></head>
+<link href="/overrides.css" rel="stylesheet"/></head>
 <body class="nojs notouch section-viewtopic ltr" id="phpbb">
 <div class="wrap" id="wrap">
 <a accesskey="t" class="top-anchor" id="top"></a>
@@ -49,14 +49,14 @@
 </ul>
 </div>
 </li>
-<li data-skip-responsive="true">
+<li data-last-responsive="true">
 <a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
 <i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
 </a>
 </li>
 <li class="rightside" data-skip-responsive="true">
 <a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
 </a>
 </li>
 <li class="rightside" data-skip-responsive="true">
@@ -64,7 +64,7 @@
 <i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
 </a>
 </li>
-</ul>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
 <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
 <li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 <span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
@@ -91,25 +91,6 @@
 </div>
 </div>
 <div class="action-bar bar-top">
-<a class="button inert" href="#" title="Disabled in this archive">
-<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
-</a>
-<div class="dropdown-container dropdown-button-control topic-tools">
-<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
-<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
-<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
-</span>
-<div class="dropdown">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<ul class="dropdown-contents">
-<li>
-<a accesskey="p" href="/viewtopic.php?f=55&amp;t=635&amp;start=10" title="Print view">
-<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
 <div class="pagination">
 			19 posts
 							<ul>
@@ -127,23 +108,14 @@
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a> </dt>
 <dd class="profile-rank">Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 78</dd> <dd class="profile-joined"><strong>Joined:</strong> 26 Nov 2008, 17:04</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 78</dd> <dd class="profile-joined"><strong>Joined:</strong> Wed Nov 26, 2008 5:04 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2215">
 <h3 class="first"><a href="#p2215">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a></strong> » </span>31 Mar 2010, 14:42
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=197" style="color: #AEB404;">poy</a></strong> » </span>Wed Mar 31, 2010 2:42 pm
 			</p>
 <div class="content"><blockquote><div><cite>udoprog wrote:</cite>Named vs Positional parameters are too disambiguous to be parsed and validated in a formal (context-unaware) manner.</div></blockquote>
 
@@ -169,23 +141,14 @@ the general definition in the beginning is probably just to give the global idea
 </div>
 <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a> </dt>
 <dd class="profile-rank">Newbie</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Mar 2010, 22:11</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Mar 30, 2010 10:11 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2216">
 <h3><a href="#p2216">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>31 Mar 2010, 17:18
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>Wed Mar 31, 2010 5:18 pm
 			</p>
 <div class="content">I have the following protocol proposition to make.<br/>
 <ul>
@@ -196,7 +159,7 @@ type: a three letter <em class="text-italics">simple_alpha</em> declaration of t
 key: a two letter, <em class="text-italics">simple_alpha</em> and <em class="text-italics">simple_alphanum</em> declaration of the parameter name.<br/>
 value: an escape sequence<br/>
 <br/>
-For details, example implementation, and updated grammar, see; <a class="postlink" href="https://github.com/udoprog/python-adc/tree/type-test">http://github.com/udoprog/python-adc/tree/type-test</a><br/>
+For details, example implementation, and updated grammar, see; <a class="postlink" href="http://github.com/udoprog/python-adc/tree/type-test">http://github.com/udoprog/python-adc/tree/type-test</a><br/>
 <br/>
 These are some of the strong points for having a type system like this:<br/>
 <ul>
@@ -204,7 +167,7 @@ These are some of the strong points for having a type system like this:<br/>
 <li> Library authors for any language can convert the different types to native (or custom types) when applicable, the conversion will be transparent to the application layer which will never be affected by minor protocol changes.</li>
 <li> Types can easily be extended in future definitions, since the parsers takes the value as an escape sequence (basically; anything), and the type/key are fixed values.</li></ul>
 
-Radical changes, but luck favours the bold  <img alt=";)" class="smilies" height="17" src="images/smilies/icon_e_wink.gif" title="Wink" width="15"/> .</div>
+Radical changes, but luck favours the bold  <img alt=";)" class="smilies" height="17" src="/images/smilies/icon_e_wink.gif" title="Wink" width="15"/> .</div>
 </div>
 </div>
 <div class="back2top">
@@ -224,24 +187,15 @@ Radical changes, but luck favours the bold  <img alt=";)" class="smilies" height
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a> </dt>
 <dd class="profile-rank">Junior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> Thu Feb 18, 2010 5:44 pm</dd>
 <dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2220">
 <h3><a href="#p2220">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a></strong> » </span>01 Apr 2010, 15:31
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a></strong> » </span>Thu Apr 01, 2010 3:31 pm
 			</p>
 <div class="content">Hmm - Interesting idea.<br/>
 <br/>
@@ -250,7 +204,7 @@ I have to say that I quite like the proposal, even if I am unsure whether it is 
 One point, on gitit you say INT has to match the grammar " '1' [0-9]*"<br/>
 Why does an integer have to start with a 1?  What if I want to send the number 2?  What is wrong with the grammar "[0-9]+"?<br/>
 <br/>
-About python being slow at base32 transformations, what does it matter?  If you are looking for speed in a program then you write in C/C++, not in a scripting language which is going to be slow anyway.  I am not saying that using a scripting language is bad - i am saying that speed is not a valid argument in this case.  Even base32 in a scripting language is plenty fast enough for these purposes on modern computers <img alt=":P" class="smilies" height="17" src="images/smilies/icon_razz.gif" title="Razz" width="15"/><br/>
+About python being slow at base32 transformations, what does it matter?  If you are looking for speed in a program then you write in C/C++, not in a scripting language which is going to be slow anyway.  I am not saying that using a scripting language is bad - i am saying that speed is not a valid argument in this case.  Even base32 in a scripting language is plenty fast enough for these purposes on modern computers <img alt=":P" class="smilies" height="17" src="/images/smilies/icon_razz.gif" title="Razz" width="15"/><br/>
 <br/>
 ~Andrew</div>
 </div>
@@ -272,23 +226,14 @@ About python being slow at base32 transformations, what does it matter?  If you 
 </div>
 <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a> </dt>
 <dd class="profile-rank">Newbie</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Mar 2010, 22:11</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Mar 30, 2010 10:11 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2221">
 <h3><a href="#p2221">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>01 Apr 2010, 20:16
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>Thu Apr 01, 2010 8:16 pm
 			</p>
 <div class="content"><blockquote><div><cite>andyhhp wrote:</cite>One point, on gitit you say INT has to match the grammar " '1' [0-9]*"<br/>
 Why does an integer have to start with a 1?  What if I want to send the number 2?  What is wrong with the grammar "[0-9]+"?</div></blockquote>
@@ -317,23 +262,14 @@ I will be revisiting the document after easter.</div>
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> </dt>
 <dd class="profile-rank">Senior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Dec 2008, 14:59</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Dec 30, 2008 2:59 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2222">
 <h3><a href="#p2222">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>02 Apr 2010, 02:16
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>Fri Apr 02, 2010 2:16 am
 			</p>
 <div class="content">It's nice to see people discussing the protocol.. it's been a bit quiet on here for a few months. I might ask that one of the moderators setup a wiki page to propose and discuss ideas towards ADC/2.0, similar to how we have the Proposed Extensions page.</div>
 </div>
@@ -358,18 +294,9 @@ I will be revisiting the document after easter.</div>
 <div class="postbody">
 <div id="post_content2223">
 <h3><a href="#p2223">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>02 Apr 2010, 13:40
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Fri Apr 02, 2010 1:40 pm
 			</p>
 <div class="content">drakklor: should u have access to the wiki to do that yourself ? or did i forgot to give you an acc ?</div>
 </div>
@@ -391,24 +318,15 @@ I will be revisiting the document after easter.</div>
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a> </dt>
 <dd class="profile-rank">Junior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> Thu Feb 18, 2010 5:44 pm</dd>
 <dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2224">
 <h3><a href="#p2224">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a></strong> » </span>02 Apr 2010, 14:12
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a></strong> » </span>Fri Apr 02, 2010 2:12 pm
 			</p>
 <div class="content">How about:<br/>
 <br/>
@@ -444,23 +362,14 @@ This allows for negative numbes and optional exponentials which might be able to
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> </dt>
 <dd class="profile-rank">Senior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Dec 2008, 14:59</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Dec 30, 2008 2:59 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2225">
 <h3><a href="#p2225">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>03 Apr 2010, 03:32
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>Sat Apr 03, 2010 3:32 am
 			</p>
 <div class="content">@Toast: Yeah I went in and tried, but nah seems I never got around to asking you for an account.</div>
 </div>
@@ -485,18 +394,9 @@ This allows for negative numbes and optional exponentials which might be able to
 <div class="postbody">
 <div id="post_content2226">
 <h3><a href="#p2226">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread" href="/viewtopic.php?p=2226#p2226" title="Post">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>03 Apr 2010, 09:17
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Sat Apr 03, 2010 9:17 am
 			</p>
 <div class="content">All done now details are sent to you</div>
 </div>
@@ -511,45 +411,6 @@ This allows for negative numbes and optional exponentials which might be able to
 </div>
 <hr class="divider"/>
 <div class="action-bar bar-bottom">
-<a class="button inert" href="#" title="Disabled in this archive">
-<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
-</a>
-<div class="dropdown-container dropdown-button-control topic-tools">
-<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
-<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
-<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
-</span>
-<div class="dropdown">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<ul class="dropdown-contents">
-<li>
-<a accesskey="p" href="/viewtopic.php?f=55&amp;t=635&amp;start=10" title="Print view">
-<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<form action="#" method="post" onsubmit="return false">
-<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
-<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
-<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
-<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
-</span>
-<div class="dropdown hidden">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<div class="dropdown-contents">
-<fieldset class="display-options">
-<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
-<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
-<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
-<hr class="dashed"/>
-<input class="button2" name="sort" type="submit" value="Go"/>
-</fieldset>
-</div>
-</div>
-</div>
-</form>
 <div class="pagination">
 			19 posts
 							<ul>
@@ -618,6 +479,10 @@ This allows for negative numbes and optional exponentials which might be able to
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
 <li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
@@ -627,21 +492,33 @@ This allows for negative numbes and optional exponentials which might be able to
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
 </ul>
 </div>
 </div>
 </div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
 </div>
-<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
 <div class="navbar" role="navigation">
 <div class="inner">
 <ul class="nav-footer linklist" id="nav-footer" role="menubar">
 <li class="breadcrumbs">
 <span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
 <li class="rightside">All times are <span title="UTC">UTC</span></li>
-<li class="rightside">
-<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
 </a>
 </li>
 <li class="rightside" data-last-responsive="true">
@@ -686,7 +563,6 @@ This allows for negative numbes and optional exponentials which might be able to
 <div>
 <a accesskey="z" class="anchor" id="bottom"></a>
 </div>
-
 
 
 

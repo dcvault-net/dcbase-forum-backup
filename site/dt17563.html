@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>DC++ Hub/Client LAN only - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="26" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=26" itemprop="url"><span itemprop="title">Other</span></a></span>
+<span class="crumb" data-forum-id="10" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=10" itemprop="url"><span itemprop="title">Other Direct Connect tools</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=10&amp;t=17563">DC++ Hub/Client LAN only</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Know of something that might be useful to the DC community? Post it here! (Still, no advertising)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			12 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p88944">
+<div class="inner">
+<dl class="postprofile" id="profile88944">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-31 01:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content88944">
+<h3 class="first"><a href="#p88944">DC++ Hub/Client LAN only</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a></strong> » </span>2006-06-11 20:34
+			</p>
+<div class="content">DC++ is indeed a very nice piece of software for filesharing purposes. The chat features are also very useful. But using DC++ on the Internet or in a LAN implicates different requirements. (at least for me)<br/>
+<br/>
+For use on the LAN I'd like to have a DC++ mod where most bugs from old versions are fixed, up-to-date features are implemented and that comes with optimized code for LAN use. What I'm thinking about is:<br/>
+<br/>
+- Remove support for safe and compressed transfer<br/>
+- reliable Upload/Download Limiting at LAN speeds (100/1000+ MBit)<br/>
+- Possibility to switch off hashing features<br/>
+<br/>
+Is there any DC mod that would come close to these wishes? Can you recommend any tool that does?<br/>
+<br/>
+Anyway, I don't want to start a discussion about the sense of my suggestions. Apart from that any useful post would be appreciated <img alt=";)" class="smilies" height="15" src="/images/smilies/icon_wink.gif" title="Wink" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p88950">
+<div class="inner">
+<dl class="postprofile" id="profile88950">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content88950">
+<h3><a href="#p88950">Re: DC++ Hub/Client LAN only</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-06-11 21:16
+			</p>
+<div class="content"><blockquote><div><cite>Dooble wrote:</cite>- Remove support for safe and compressed transfer</div></blockquote> Disable "Enable safe and compressed transfers" under Settings -&gt; Advanced.
+<blockquote><div><cite>Dooble wrote:</cite>- reliable Upload/Download Limiting at LAN speeds (100/1000+ MBit)</div></blockquote> Will never happen with DC++. BCDC++ has a limiting feature.
+<blockquote><div><cite>Dooble wrote:</cite>- Possibility to switch off hashing features</div></blockquote> How incredibly stupid. You basically want corrupted files. How incredibly stupid.</div>
+<div class="signature" id="sig88950"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p88996">
+<div class="inner">
+<dl class="postprofile" id="profile88996">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-31 01:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content88996">
+<h3><a href="#p88996"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a></strong> » </span>2006-06-12 21:39
+			</p>
+<div class="content"><blockquote class="uncited"><div> Disable "Enable safe and compressed transfers" under Settings -&gt; Advanced. </div></blockquote>
+I already know how to disable this manually...<br/>
+<blockquote class="uncited"><div> Will never happen with DC++. BCDC++ has a limiting feature. </div></blockquote>
+This is why the thread was opened in "Other Direct Connect Tools"...
+<blockquote class="uncited"><div> How incredibly stupid. You basically want corrupted files. How incredibly stupid.</div></blockquote>
+You don't have to repeat a statement that is basically useless...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89004">
+<div class="inner">
+<dl class="postprofile" id="profile89004">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89004">
+<h3><a href="#p89004"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-06-13 00:07
+			</p>
+<div class="content"><blockquote><div><cite>Dooble wrote:</cite>I already know how to disable this manually...  </div></blockquote>Then... What?
+<blockquote><div><cite>Dooble wrote:</cite>This is why the thread was opened in "Other Direct Connect Tools"... </div></blockquote>Ah, sorry. Forgot to put on my mind reading hat. Oh shit, Harry got it... Damn!
+<blockquote><div><cite>Dooble wrote:</cite>You don't have to repeat a statement that is basically useless...</div></blockquote> It's still true regardless if you think the statement is useless.</div>
+<div class="signature" id="sig89004"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89010">
+<div class="inner">
+<dl class="postprofile" id="profile89010">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 83</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-04-03 20:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89010">
+<h3><a href="#p89010"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a></strong> » </span>2006-06-13 02:54
+			</p>
+<div class="content">ullner: i've downloaded a lot and even when the comp got blue screens and stuff, i've never had a corrupted download, so i think TTH mismatches are really rare. on LANs, they are even more rare. <br/>
+<br/>
+Dooble: you could try DCDM++, but you will need to be able to recompile it by yourself if you want do disable hashing; look in the beginning of HashManager.cpp, it is very easy to disable hashing in DC++ 0.401 based clients.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89016">
+<div class="inner">
+<dl class="postprofile" id="profile89016">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89016">
+<h3><a href="#p89016">Re: DC++ Hub/Client LAN only</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-06-13 03:22
+			</p>
+<div class="content"><blockquote><div><cite>ullner wrote:</cite>BCDC++ has a limiting feature.</div></blockquote>
+It uses regular timers, which means that the limiting at high speeds dont' work so well (100ms granularity on the timer).  I used multimedia timers in my mod for a while, but people complained that it interfered with playback in WinAmp.  It ultimately wasn't worth it to maintain, since what I wasn't one of the users I was targeting.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89173">
+<div class="inner">
+<dl class="postprofile" id="profile89173">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-31 01:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89173">
+<h3><a href="#p89173"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a></strong> » </span>2006-06-14 23:11
+			</p>
+<div class="content">Thanks Gargoyle for your reply, that is what I was thinking about when I wrote "reliable" limiting... is there any client you know of which can handle this much better?<br/>
+<br/>
+I agree that hashing is a useful feature with a lot of users sharing a lot of files for a long time in a (slow) WAN. But just as poy said, errors are quite rare. And if there would be an error, downloading a file twice is no problem on a highspeed LAN.<br/>
+<br/>
+I know the R2++ client, which is based on 0401 and which supports disabling the hashing features, but it hasn't got a limiter.<br/>
+<br/>
+I'm into programming and I would like to create my own client, but I haven't had enough time yet to start such a project :-/<br/>
+<br/>
+Maybe there is another interesting, not DC++ based tool for file exchange on a LAN that would be worth a glance? Just tell me if you know one that you could recommend <img alt=";)" class="smilies" height="15" src="/images/smilies/icon_wink.gif" title="Wink" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89177">
+<div class="inner">
+<dl class="postprofile" id="profile89177">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 83</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-04-03 20:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89177">
+<h3><a href="#p89177"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a></strong> » </span>2006-06-15 03:13
+			</p>
+<div class="content">maybe you could use FTP? but this would remove the whole "IRC" part. however, this depends on the LAN; on a small one with friends, the chats are not very useful when you can use your voice to talk to your friend  <img alt=":D" class="smilies" height="15" src="/images/smilies/icon_biggrin.gif" title="Very Happy" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89217">
+<div class="inner">
+<dl class="postprofile" id="profile89217">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110259">confuciou</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-06-15 16:08</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89217">
+<h3><a href="#p89217"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110259">confuciou</a></strong> » </span>2006-06-15 17:02
+			</p>
+<div class="content">The main problem with hashing is that it takes a long time, so when someone comes to the lan and installs DC++, their share often hasn't finished hashing even at the end of the lan.  Hashing also eats up valuable cpu time which could be better spent transferring more data.<br/>
+<br/>
+<blockquote><div><cite>ullner wrote:</cite>How incredibly stupid. You basically want corrupted files. How incredibly stupid.</div></blockquote>
+The data DC++ is recieving has already been verified (TCP checks the data to ensure it is correct before giving it to the application).  It is still possible to get a corrupt file, but it is very rare, especially when both computers are at most 3 hops away from each other.<br/>
+<br/>
+<blockquote><div><cite>Dooble wrote:</cite>reliable Upload/Download Limiting at LAN speeds (100/1000+ MBit)</div></blockquote>
+Why do you want to limit your network speed?  If DC++ is hogging your cpu then ctrl+alt+del and set it to a lower priority.  If you need to limit your speed on the network then a program like <a class="postlink" href="http://www.netlimiter.com/">net limiter</a> would probably work better than something built into DC++.<br/>
+<br/>
+<blockquote><div><cite>poy wrote:</cite>maybe you could use FTP?</div></blockquote>
+There are several reasons for not using FTP at a lan party...<br/>
+1) There is no lan-wide search function.<br/>
+2) It is rather difficult and time consuming to set up an FTP server on every computer at the lan.<br/>
+3) You would also need some way of advertising the FTP servers eg. IRC or a web server with phpbb<br/>
+4) You can't enforce a minimum share limit, so there will be lots of people with plenty of stuff that aren't sharing anything.<br/>
+<br/>
+Most of these aren't a very big problem at a small lan party, but once you have 20 users or more FTP becomes too impractical.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89231">
+<div class="inner">
+<dl class="postprofile" id="profile89231">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-31 01:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89231">
+<h3><a href="#p89231"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a></strong> » </span>2006-06-15 18:49
+			</p>
+<div class="content">I agree to most points confuciou mentioned.<br/>
+<br/>
+Filesharing shouldn't consume too much CPU Power and it also shouldn't completely eat up the network speed. This way it would be possible for all users at a LAN to share files and participate in gaming at the same time.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89247">
+<div class="inner">
+<dl class="postprofile" id="profile89247">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89247">
+<h3><a href="#p89247"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-06-15 22:37
+			</p>
+<div class="content"><blockquote><div><cite>confuciou wrote:</cite>The data DC++ is recieving has already been verified (TCP checks the data to ensure it is correct before giving it to the application). </div></blockquote> Eh? Please look up what hashing does. Because it has nothing to do with TCP's advantages.</div>
+<div class="signature" id="sig89247"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89263">
+<div class="inner">
+<dl class="postprofile" id="profile89263">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89263">
+<h3><a href="#p89263"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-06-16 01:35
+			</p>
+<div class="content"><blockquote><div><cite>Dooble wrote:</cite>Maybe there is another interesting, not DC++ based tool for file exchange on a LAN that would be worth a glance?</div></blockquote>
+I try not to keep up with clients derived from DC++ - I tend to feel like I'd like some of them to contribute their work back, instead of duplicating effort just to have a client they can stamp with their pseudonym.<br/>
+<br/>
+But in any case, I haven't heard of a limiting client based on my code that kept my multimedia timers.  Without them, you just can't limit higher than 1 MiB/s or so (this figure is off the top of my head, so it's liable to be wrong).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			12 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=10">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Other Direct Connect tools”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

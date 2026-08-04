@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ECID  Elliptic curve based CID - DCBase</title>
+      
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=74" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=19" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="55" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=55" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/viewtopic.php?f=55&amp;t=788">ECID  Elliptic curve based CID</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for ADC may be presented here for others to review and point out flaws or further improve the idea.<br/></div>
+<div class="rules">
+<div class="inner">
+<strong>Forum rules</strong><br/>
+			If you have an account on the wiki, remember to update the ADC Proposals page for new ideas.<br/>
+<br/>
+<a class="postlink" href="http://dcbase.org/wiki/ADC_Proposals_list">http://dcbase.org/wiki/ADC_Proposals_list</a>
+</div>
+</div>
+<div class="action-bar bar-top">
+<div class="pagination">
+			4 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2892">
+<div class="inner">
+<dl class="postprofile" id="profile2892">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Nov 14, 2010 1:06 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2892">
+<h3 class="first"><a href="#p2892">ECID  Elliptic curve based CID</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a></strong> » </span>Thu Oct 11, 2012 9:14 pm
+			</p>
+<div class="content">ECID's propossal text is currently defined in <a class="postlink" href="http://www.dcbase.org/wiki/ECID">http://www.dcbase.org/wiki/ECID</a> I'm opening this thread for discussion before I try to get it approved as an official extension.<br/>
+<br/>
+So, any question/complain?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2897">
+<div class="inner">
+<dl class="postprofile" id="profile2897">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=414" style="color: #AEB404;">Ayo</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 27</dd> <dd class="profile-joined"><strong>Joined:</strong> Wed Feb 23, 2011 1:50 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2897">
+<h3><a href="#p2897">Re: ECID  Elliptic curve based CID</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=414" style="color: #AEB404;">Ayo</a></strong> » </span>Fri Oct 12, 2012 7:09 am
+			</p>
+<div class="content">Some notes:<br/>
+<blockquote class="uncited"><div>Clients supporting ECID will have aside from the normal hash based PID/CID set a PID corresponding to a valid curve25519 private key and a CID corresponding to the public curve25519 key matching this PID</div></blockquote>
+Aside? Or instead? The proposal suggests that the curve-based keys <strong class="text-strong">replace</strong> the old hash-based PID/CID values on a supported hub. Does this "aside" refer to the fact that a client still needs to maintain the hash-based PID/CID values for non-supporting hubs, or is it envisioned that a client will have two CIDs on a single hub?<br/>
+<blockquote class="uncited"><div>INF parameter adition [..] ECH</div></blockquote>
+Parameters must be two characters.<br/>
+<blockquote class="uncited"><div>HMAC_k is the result of the HMAC function with the session hash algorithm with the key number x from the key derivation table</div></blockquote>
+I don't get this one. What, exactly, is the key derivation table? I don't currently see <strong class="text-strong">how</strong> the extension provides any added security, and I suspect it has to do with me not understanding this part. <img alt=":-)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+<br/>
+<br/>
+I inferred that the goal of this extension is to provide both:<br/>
+- Reliable identities (i.e. CIDs that can be verified and can't be stolen)<br/>
+- Authenticated connections<br/>
+<br/>
+As for the latter, what advantage does it have over KEYP? Besides that it also works for non-TLS connections; but we can just force TLS, can't we? Since every TLS-supporting client (i.e. every client) already has its own TLS key pair, wouldn't it be easier to just make the CID a hash of the public key? That, too, will allow clients and hubs to verify that the client is the true owner of the CID. Or am I missing something?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2899">
+<div class="inner">
+<dl class="postprofile" id="profile2899">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Nov 14, 2010 1:06 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2899">
+<h3><a href="#p2899">Re: ECID  Elliptic curve based CID</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a></strong> » </span>Fri Oct 12, 2012 1:50 pm
+			</p>
+<div class="content"><blockquote><div><cite>Ayo wrote:</cite><blockquote class="uncited"><div>Clients supporting ECID will have aside from the normal hash based PID/CID set a PID corresponding to a valid curve25519 private key and a CID corresponding to the public curve25519 key matching this PID</div></blockquote>
+Aside? Or instead? The proposal suggests that the curve-based keys <strong class="text-strong">replace</strong> the old hash-based PID/CID values on a supported hub. Does this "aside" refer to the fact that a client still needs to maintain the hash-based PID/CID values for non-supporting hubs, or is it envisioned that a client will have two CIDs on a single hub?</div></blockquote>
+Yes, it refers to the fact that the old hash-based PID/CID values are still needed for non supporting hubs, at least for the team being.<br/>
+<blockquote><div><cite>Ayo wrote:</cite><blockquote class="uncited"><div>INF parameter adition [..] ECH</div></blockquote>
+Parameters must be two characters.
+</div></blockquote>
+Oki, my fault I fixed that the parameter will be EC then <br/>
+<blockquote><div><cite>Ayo wrote:</cite><blockquote class="uncited"><div>HMAC_k is the result of the HMAC function with the session hash algorithm with the key number x from the key derivation table</div></blockquote>
+I don't get this one. What, exactly, is the key derivation table? I don't currently see <strong class="text-strong">how</strong> the extension provides any added security, and I suspect it has to do with me not understanding this part. <img alt=":-)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/></div></blockquote>
+The key derivation table is a table and method used to provide per client keys to extensions, it is defined in the PIDK extension.<br/>
+<br/>
+<blockquote><div><cite>Ayo wrote:</cite>I inferred that the goal of this extension is to provide both:<br/>
+- Reliable identities (i.e. CIDs that can be verified and can't be stolen)<br/>
+- Authenticated connections<br/>
+<br/>
+As for the latter, what advantage does it have over KEYP? Besides that it also works for non-TLS connections; but we can just force TLS, can't we? Since every TLS-supporting client (i.e. every client) already has its own TLS key pair, wouldn't it be easier to just make the CID a hash of the public key? That, too, will allow clients and hubs to verify that the client is the true owner of the CID. Or am I missing something?</div></blockquote>
+Well, there are a few problems with hashing the certificate, the first coming to mind is the risk of reuse in old hubs if the hash is tiger. Also there is the problem that said hash is not the public key and can't be used for offline key derivation as this protocol allows (this feature will make more sense later when I start with SUD1).<br/>
+<br/>
+Lastly the main advantage over KEYP is that this doesn't depends at all on the hub to distribute the authentication tokens and can be used on systems like the DHT network.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2900">
+<div class="inner">
+<dl class="postprofile" id="profile2900">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a> </dt>
+<dd class="profile-rank">Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> Sun Nov 14, 2010 1:06 pm</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2900">
+<h3><a href="#p2900">Re: ECID  Elliptic curve based CID</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=376">klondike</a></strong> » </span>Fri Oct 12, 2012 1:56 pm
+			</p>
+<div class="content"><blockquote class="uncited"><div>[2012-10-12 15:20] &lt;cologic&gt; klondike: well, I'm unsure what my dcbase forum login is (or if I have one) - so I won't respond in a particularly detailed manner since the forum is better for that...<br/>
+<br/>
+1) <a class="postlink" href="https://bugs.php.net/bug.php?id=62924">https://bugs.php.net/bug.php?id=62924</a> is an example of a language [much as I dislike PHP, it is common...] which doesn't have Curve25519 support, even if there's a Java version, etc. I'm slightly wary, I guess, of anything that's not in standard crypto toolkits for this purpose, but haven't come found any terribly damning things about Curve25519 per se, so that's something.<br/>
+<br/>
+2) The use of HMAC as the key heavy lifting step in <a class="postlink" href="http://www.dcbase.org/wiki/ECID">http://www.dcbase.org/wiki/ECID</a> is (nonsarcastically) confidence-inspiring.<br/>
+<br/>
+5) HKDF, per RFC 5869, looks superficially reasonable, but is probably beyond my expertise to review in any way beyond observing such. I will say this is the first time I've heard of it, so I have no pre-existing biases (positive or negative) to it, sans a naturally somewhat conservative approach to security.<br/>
+<br/>
+6) My read of <a class="postlink" href="http://www.dcbase.org/wiki/ECID">http://www.dcbase.org/wiki/ECID</a> is that a hub could fairly easily support multiple such schemes simultaneously (indeed, it will have to from the start: the current version and ECID) so I'm not hugely concerned with getting that absolutely perfect, because it's unlikely to turn into a terrible perpetual support burden so long as ADC BASE is somewhat acceptable.<br/>
+<br/>
+7) ECID-over-non-SSL is almost more compelling than ECID-over-SSL because it cuts out a larger portion of threats (network monitoring). Just a random thought...<br/>
+<br/>
+8) I'm unsure if the A/B order anti-symmetry in "HMAC_k3(MSK+CID_A+CID_B+ECH_A+ECH_B)" vs "M2=HMAC_k4(MSK+M1+CID_B+CID_A+ECH_B+ECH_A)" is particularly principled or whether it actually adds to security.<br/>
+[2012-10-12 15:22] &lt;cologic&gt; <a class="postlink" href="http://sourceforge.net/apps/trac/cryptopp/ticket/10">http://sourceforge.net/apps/trac/cryptopp/ticket/10</a> doesn't support curve25519 nor does OpenSSL nor etc. So, if maintained code exists for one's preferred development environment, that's great, but it seems like it could be relatively easily 'orphaned'.<br/>
+[2012-10-12 15:23] &lt;cologic&gt; AFAICT, that means C and Java are probably good. Anything else is iffy medium-term.<br/>
+[2012-10-12 15:24] &lt;klondike&gt; Ok cologic will post that to the forums on your behalf then<br/>
+[2012-10-12 15:24] &lt;cologic&gt; I'll also just admit a slightly potentially irrational phobia of being drawn into djb's orbit :p
+</div></blockquote>
+
+Comments:<br/>
+The curve25519 algorithm is public so implementations for other languages can be provided, also the fact there is a pure C implementation allows interfacing with many languages (including PHP).<br/>
+<br/>
+The asymmetry is inferred from the SRP key proof and is used to prevent some replay issues.<br/>
+<br/>
+And well djb I don't like that much either, but his algorithms tend to be pwoerful <img alt=":P" class="smilies" height="17" src="/images/smilies/icon_razz.gif" title="Razz" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			4 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/viewforum.php?f=55">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Ideas”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=9"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=20"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=41"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=56"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=57"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=58"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=59"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=75"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=13"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=26"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=45"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=36"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=83"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=27"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=35"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=37"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=40"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=28"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=29"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=30"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=31"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=32"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=34"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=38"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=74"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=33"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=18"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=55"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=87"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=80"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=81"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=82"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=44"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=50"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=51"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=62"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=63"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=91"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=92"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=93"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

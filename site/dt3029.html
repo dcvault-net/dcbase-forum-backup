@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Ignore List - Implementation Help - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=3029">Ignore List - Implementation Help</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			14 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p15934">
+<div class="inner">
+<dl class="postprofile" id="profile15934">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content15934">
+<h3 class="first"><a href="#p15934">Ignore List - Implementation Help</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-05-25 06:58
+			</p>
+<div class="content">I know this is really not the best way to code things usually, but I want to create a global variable.  Where would I stick the declaration for it?  (Sorry, I'm still learning C++, and by no means an expert.)
+<br/>
+<br/>The reason for this is that I want to add an ignore option for PM's, and I need to be able to both add to and remove names from that list, as well as keeping that list readily available in memory (rather than reading it from a file every time).  Doing it smartly involving the proper scope is going to take a major reworking of a LOT of functions.  I plan to create an array of string variables for the purpose of holding a list of names.  I can do most of the code once I actually get the global variable.  Any help(or other suggestions on how to do this a bit more wisely) would be MUCH appreciated.
+<br/>
+<br/>Thanks,
+<br/>Gratch06</div>
+<div class="notice">
+					Last edited by <a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> on 2003-05-29 02:48, edited 1 time in total.
+									</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p15946">
+<div class="inner">
+<dl class="postprofile" id="profile15946">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content15946">
+<h3><a href="#p15946"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-05-25 11:19
+			</p>
+<div class="content">imho you should add the ignored-users to the Favorites.xml through HubManager
+<br/>
+<br/>make a User::List&amp; HubManager::getIgnoredUsers()
+<br/>look at how the favorite users are implemented, and add a IgnorePM attribute</div>
+<div class="signature" id="sig15946"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p16468">
+<div class="inner">
+<dl class="postprofile" id="profile16468">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content16468">
+<h3><a href="#p16468"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-05-29 02:48
+			</p>
+<div class="content">OK, I've went in and looked at some of that code, still not sure exactly how you mean to implement.  I'm still fairly new to messing with the DC++ source...I can make a function User::List&amp; HubManager::getIgnoredUsers()  like you reccommended, but I'm not quite sure how to go about the lists.  Are you talking about adding a totally different listing, another frame similar to favorites users frame based off of the source for the favs, OR are you talking about adding in an extra parameter on favorite users...I'm kind of lost as to which implentation you're looking at.  If it's something totally different, I'd by all means be glad to learn =).
+<br/>
+<br/>Things I need to work the list as I see it:
+<br/>1) ignore/unignore right click menus on userlist (addressed in another post already)
+<br/>2) A place to stick the blocker (right now that is in PrivateFrame::gotMessage)
+<br/>3) A readout somewhere that shows the list of ignored names (I figure I can steal the frame stuff from another frame like favorite users, but again, suggestions would be welcomed)
+<br/>4) (This post) How to implement the list of names.  I don't need IPs, anything like that, just going based exclusively on screennames.
+<br/>
+<br/>- Gratch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p16735">
+<div class="inner">
+<dl class="postprofile" id="profile16735">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content16735">
+<h3><a href="#p16735"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-05-30 21:05
+			</p>
+<div class="content">Here's the code I have done so far in my attempt to implement the ignore feature:
+<br/>
+<br/>Added stringdefs, and those show up correctly.
+<br/>resource.h
+<br/>#define IDC_IGNORE                      1099  
+<br/>#define IDC_UNIGNORE                    1100
+<br/>
+<br/>
+<br/>hubframe.cpp:
+<br/>//handlers for the menus 
+<br/>userMenu.AppendMenu(MF_STRING, IDC_IGNORE, CSTRING(IGNORE_USER));
+<br/>userMenu.AppendMenu(MF_STRING, IDC_UNIGNORE, CSTRING(UNIGNORE_USER));
+<br/>
+<br/>
+<br/>LRESULT onIgnore(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/)
+<br/>{
+<br/>//insert code to add a user to the ignore list
+<br/>}
+<br/>
+<br/>LRESULT onUnignore(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/)
+<br/>{
+<br/>//insert code to remove a user from the ignore list
+<br/>}
+<br/>
+<br/>PrivateFrame.cpp
+<br/>in PrivateFrame::gotMessage(/*insert args here*/){
+<br/>    //add code to check if the aUser-&gt;getNick() matches one on our list, if so, simply return to the main, skipping the rest of the function.
+<br/>}
+<br/>
+<br/>
+<br/>The actual implementation of the list has me stuck.  I played with doing the array of strings (as I had first thought of), but that caused me some scoping issues.
+<br/>
+<br/><blockquote class="uncited"><div>User::List&amp; HubManager::getIgnoredUsers()</div></blockquote>
+<br/>
+<br/>This function would handle saving and retrieving from a file it appears after a closer look.  That is definitely necessary, but I'm trying to get the actual implementation of the list down first, then will worry about saving and other necessary features.
+<br/>
+<br/>Thanks for the help yet again!
+<br/>
+<br/>- Gratch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p16789">
+<div class="inner">
+<dl class="postprofile" id="profile16789">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content16789">
+<h3><a href="#p16789"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-05-31 08:54
+			</p>
+<div class="content">Hmm... well, here's how you do it :
+<br/>
+<br/>Add "User::List ignoredUsers;" to the private part of the HubManager class.
+<br/>
+<br/>Add this to the public part of the class:<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>// This method is... well... unnecessary for most things <br/>// (except if some other class than HubManager has the responsability to save the ignored user list).<br/>User::List&amp; getIgnoredUsers() {<br/>   return ignoredUsers;<br/>}<br/>void addIgnoredUser(User::Ptr userToIgnore) {<br/>   // check to see that we haven't already ignored this fella<br/>   User::Iter userIter = find(ignoredUsers.begin(), ignoredUsers.end(), userToIgnore);<br/>   if(userIter == ignoredUsers.end()) {<br/>      ignoredUsers.push_back(userToIgnore);<br/>   }<br/>}<br/>void removeIgnoredUser(User::Ptr userToListenToAgain) {<br/>   // get the "index" of the user to remove<br/>   User::Iter userIter = find(ignoredUsers.begin(), ignoredUsers.end(), userToListenToAgain);<br/>   // if there actually *is* such a user, let's remove him/her from the list<br/>   if(userIter != ignoredUsers.end()) {<br/>      ignoredUsers.erase(userIter);<br/>   }<br/>}</code></pre></div>I hope this helps you out somewhat.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Cut the conversation, just open your mouth</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p16966">
+<div class="inner">
+<dl class="postprofile" id="profile16966">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content16966">
+<h3><a href="#p16966"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-06-01 07:12
+			</p>
+<div class="content">OK, added all functions, implemented calls, etc.
+<br/>
+<br/>Presumably, I should now be able to add users to the list and remove them from the list.  Trying to get AT the userlist is a bit of a problem for me.  I need to check received PM's to see if they are from a user on the ignore list, then ignore them if so.  The place I am trying to implement the actual use of the ignore list is in PrivateFrame::gotMessage.
+<br/>
+<br/><blockquote class="uncited"><div>	Code:<br/>//need to call from an instance of Hubframe since variable isn't static.<br/>User::Iter userIter = find((HubFrame::ignoredUsers).begin(), (HubFrame::ignoredUsers).end(), aUser); <br/>if(userIter != (HubFrame::ignoredUsers).end()) return;<br/><br/>OR<br/><br/>//ignoredUsers is not defined, obviously.<br/>User::Iter userIter = find(ignoredUsers.begin(), ignoredUsers.end(), aUser); <br/>if(userIter != ignoredUsers.end()) return;<br/><br/>OR<br/><br/>//need to call from an instance of HubFrame since not static<br/>User::List templist = HubFrame.getIgnoredUsers();<br/>User::Iter userIter = find(templist.begin(), templist.end(), aUser); <br/>if(userIter != templist.end()) return;<br/></div></blockquote>
+<br/>
+<br/>Those were my attempts to make it work, just missing something that should be right before my face...  If there is a better place to put it than in the PrivateFrame::gotMessage (didn't see anything relating to it in HubFrame), please let me know.
+<br/>
+<br/> I know this is really an elementary C++ question, but I'm still learning it here at college.  Adding this feature in for someone else who has less of a clue than I do.
+<br/>
+<br/>Thanks again,
+<br/>- Gratch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p16978">
+<div class="inner">
+<dl class="postprofile" id="profile16978">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content16978">
+<h3><a href="#p16978"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-06-01 09:33
+			</p>
+<div class="content">I'd recommend adding a method to HubManager and then calling that method from the gotMessage... and this is how you do it:
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>// add this to HubManager...<br/>bool isUserIgnored(User::Ptr userToCheck)<br/>{<br/>   return (find(ignoredUsers.begin(), ignoredUsers.end(), userToCheck) != ignoredUsers.end());<br/>}<br/><br/>// add this code to your gotMessage <br/>   if(HubManager::getInstance()-&gt;isUserIgnored(aUser))<br/>   {<br/>      return;<br/>   }</code></pre></div>
+<br/>I hope this was the push in the right direction that you were looking for.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>The Bible contains six admonishments to homosexuals and three hundred sixty-two admonishments to heterosexuals. That doesn't mean that God doesn't love heterosexuals. It's just that they need more supervision.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17033">
+<div class="inner">
+<dl class="postprofile" id="profile17033">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17033">
+<h3><a href="#p17033"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-06-01 17:09
+			</p>
+<div class="content">OK, got it all to compile, but I'm only suffering from one little problem...the list isn't actually ignoring people.
+<br/>1) The list is disappearing before I can check it (out of scope)
+<br/>2) The onIgnore/onUnignorearen't calling the addIgnoredUser/removeIgnoredUser functions properly
+<br/>3) The list is not correctly being read from
+<br/>4) The list is not correctly being written to
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>LRESULT HubFrame::onIgnore(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/)<br/>{<br/>   int i = -1;<br/>   while((i = ctrlUsers.GetNextItem(i, LVNI_SELECTED)) != -1) {<br/>      HubManager::getInstance()-&gt;addIgnoredUser(((UserInfo*)ctrlUsers.GetItemData(i))-&gt;user);<br/>   }<br/>   return 0;<br/>}<br/><br/>LRESULT HubFrame::onUnignore(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/)<br/>{ <br/>   int i = -1;<br/>   while((i = ctrlUsers.GetNextItem(i, LVNI_SELECTED)) != -1) {<br/>      HubManager::getInstance()-&gt;removeIgnoredUser(((UserInfo*)ctrlUsers.GetItemData(i))-&gt;user);<br/>   }<br/>   return 0;<br/>}<br/></code></pre></div>
+<br/>
+<br/>
+<br/>As I have been working with the command line primarily in college courses, is there a similar "poor man's debugger" (like cout &lt;&lt; randomdata;) available in Visual C++?  It would just be a temporary debugging tool to see what values the list held when.  I don't care WHERE it actually shows up, so long as it actually does (i.e. a dialogue box, the status bar, wherever).
+<br/>
+<br/>All code has been implemented as written in above posts, with the addition of the code listed in this post.
+<br/>
+<br/>Thanks for the help yet again guys...
+<br/>
+<br/>- Gratch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17183">
+<div class="inner">
+<dl class="postprofile" id="profile17183">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17183">
+<h3><a href="#p17183"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-06-02 12:05
+			</p>
+<div class="content">To get some debug output :
+<br/>
+<br/>Add the following code right after the "addLine("*** " + WinUtil::commands + ", /join &lt;hub-ip&gt;, /clear, /ts, /showjoins, /close, /userlist, /connection, /favorite");" in HubFrame.cpp
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>         } else if(Util::stricmp(s.c_str(), "showignored") == 0) {<br/>            //User::List ignoredUserList = HubManager::getInstance()-&gt;getIgnoredUsers();<br/>            User::List ignoredUserList;<br/>            if(ignoredUserList.size() &gt; 0)<br/>            {<br/>               addLine("--- Currently ignoring the following users:");<br/>               for(User::Iter userIter = ignoredUserList.begin() ; userIter != ignoredUserList.end() ; userIter++)<br/>               {<br/>                  addLine((*userIter)-&gt;getNick());<br/>               }<br/>               addLine("--- User ignore list ENDS");<br/>            }<br/>            else<br/>            {<br/>               addLine("--- Currently not ignoring anyone");<br/>            }<br/>         } else if(Util::stricmp(s.c_str(), "ignore") == 0) {<br/>            User::Ptr user = ClientManager::getInstance()-&gt;getUser(param);<br/>            if(HubManager::getInstance()-&gt;isUserIgnored(user))<br/>            {<br/>               addLine("Removing " + user-&gt;getNick() + " from the ignored list.");<br/>               HubManager::getInstance()-&gt;removeIgnoredUser(user);<br/>            } else {<br/>               addLine("Adding " + user-&gt;getNick() + " to the ignored list.");<br/>               HubManager::getInstance()-&gt;addIgnoredUser(user);<br/>            }</code></pre></div>
+<br/>This will allow you to use /showignored and /ignore &lt;nick&gt; as commands, and may help you with the debug.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>So long, and thanks for all the fish.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17269">
+<div class="inner">
+<dl class="postprofile" id="profile17269">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17269">
+<h3><a href="#p17269"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-06-02 23:11
+			</p>
+<div class="content">OK, gone back through and debugged somewhat, here's where I'm at...
+<br/>
+<br/><blockquote class="uncited"><div>[15:16] --- Currently not ignoring anyone  &lt;&lt;&lt; fresh, before doing anything<br/>[15:16] Adding [10mbt]Gratch06 to the ignored list.  &lt;&lt;&lt; /ignore [10mbt]Gratch06<br/>[15:17] --- Currently not ignoring anyone  &lt;&lt;&lt; after /ignore<br/></div></blockquote><br/><br/>Appears to be one of two things:<br/>1) List is going out of scope.  I don't know how GetInstance works with scoping really...It just seems that the list is vanishing before I can do anything with it.<br/>2) The list isn't actually getting added to.<br/><br/>I would keep on beating on this some more, but I think this might be tied to something totally different...After accessing the ignore list through /ignore, then quitting the program, I get this error:<br/><br/><blockquote class="uncited"><div>The instruction at "0x004ce87b" referenced memory at "0x409942bf".  The memory could not be "written".</div></blockquote>
+<br/>
+<br/>Memory error, but why it would show up when the program is closing, and not while writing to or reading from the List?  Is there something possibly going on with the Iterators that is causing this memory error?  (they aren't my strong point, only touched on them briefly in class a few weeks back).
+<br/>
+<br/>- Gratch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17360">
+<div class="inner">
+<dl class="postprofile" id="profile17360">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17360">
+<h3><a href="#p17360"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-06-03 15:31
+			</p>
+<div class="content">I found <strong class="text-strong">one</strong> problem with my code (stupid me forgot to remove a comment when I got the code out of Visual Studio) <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/> :
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>        //User::List ignoredUserList = HubManager::getInstance()-&gt;getIgnoredUsers(); <br/>        User::List ignoredUserList;</code></pre></div>should be<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>        User::List ignoredUserList = HubManager::getInstance()-&gt;getIgnoredUsers();</code></pre></div>
+<br/>
+<br/>The memory access error might be due to some function accessing the ignoredUsers after it is deleted, but... I don't know.
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Those who can, do; those who can't, simulate.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17380">
+<div class="inner">
+<dl class="postprofile" id="profile17380">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17380">
+<h3><a href="#p17380"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-06-03 19:12
+			</p>
+<div class="content">Doh...I should have looked closer, would have seen that one.  *makes note to examine source he's given a lot more closely next time*
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>User::List ignoredUserList = HubManager::getInstance()-&gt;getIgnoredUsers();</code></pre></div><br/><br/>Adjusting that line yields a "memory at ...... cannot be 'written'" error.<br/>I've tested it out and declaring the variable is clean, calling the function is clean, but assigning the list to ignoredUserList causes the issues.  Is a list by default not writeable?  What about the assignment operator for the list...what kind of overloading is there with that (couldn't find that in the source anywhere)<br/><br/>Replacing all instances of ignoredUserList with (HubManager::getInstance()-&gt;getIgnoredUsers()) yields:<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>else if(Util::stricmp(s.c_str(), "showignored") == 0) {<br/>                    if((HubManager::getInstance()-&gt;getIgnoredUsers()).size() &gt; 0){ <br/>                        addLine("--- Currently ignoring the following users:"); <br/>                        for(User::Iter userIter = (HubManager::getInstance()-&gt;getIgnoredUsers()).begin() ; userIter != (HubManager::getInstance()-&gt;getIgnoredUsers()).end() ; userIter++) <br/>                  { <br/>                            addLine((*userIter)-&gt;getNick()); <br/>                  } <br/>                        addLine("--- User ignore list ENDS"); <br/>               } <br/>                    else<br/>               { <br/>                  addLine("--- Currently not ignoring anyone"); <br/>               }<br/><br/>            }<br/></code></pre></div>
+<br/>
+<br/>This code segment yields a memory could not be READ error.  I never did like memory errors, but this one is throwing me for a loop.
+<br/>
+<br/>Now the important information that is going to come into play next:
+<br/>Compiled using MS VC++ 6
+<br/>Based off of v. .181 source code (due to other non related modifications to the source)
+<br/>Windows XP Professional
+<br/>
+<br/>Sorry to keep being a bother on this one....If it would be easier to discuss in a chat rather than a forum, just let me know...would be glad to swap IM's or meet you in a hub of your choosing.
+<br/>
+<br/>Thanks for all the help!
+<br/>
+<br/>- Gratch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17520">
+<div class="inner">
+<dl class="postprofile" id="profile17520">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17520">
+<h3><a href="#p17520"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-06-04 14:56
+			</p>
+<div class="content">Hmm... well, it seems like you can't make a direct reference to another list. Try using User::List* and returning a pointer or something like that - it might work. You can also copy the list (but that means some memory management).
+<br/>
+<br/>Sarf
+<br/>---
+<br/>The sharks can smell blood in the water - make sure that its theirs.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p18120">
+<div class="inner">
+<dl class="postprofile" id="profile18120">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content18120">
+<h3><a href="#p18120"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-06-09 07:20
+			</p>
+<div class="content">After toying with an implementation using User::List* and another using a stack and getting very similar errors, I decided to just to give up on implementing this on the .181 codebase and start bumping the other source updates into .251.  I haven't actually hit implementing this yet, so I can't confirm it works.  I'll get back to you with whether any of these methods works using the most recent source or not.
+<br/>
+<br/>Many thanks!
+<br/>- Gratch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			14 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

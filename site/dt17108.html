@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>How to deal with a nasty exploit ? - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="12" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=12" itemprop="url"><span itemprop="title">Developer's resort</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=12&amp;t=17108">How to deal with a nasty exploit ?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">A private forum for us Super-Humans, I even trust you to be able to edit your own posts =)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			8 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p86848">
+<div class="inner">
+<dl class="postprofile" id="profile86848">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content86848">
+<h3 class="first"><a href="#p86848">How to deal with a nasty exploit ?</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-04-21 00:58
+			</p>
+<div class="content">Flow84 has found a serious exploit, which effects both 0.674 and the latest svn build (not tested on earlier versions yet).  He doesn't feel comfortable with posting how it works on a forum or anything like that. 
+<br/>He has explained briefly to me about what it can do, and where the problem is located, and it does seem pretty nasty. <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>
+<br/>So just looking for some advice of how to deal with it, like email arnetheduck or gargoylemt  (or anyone else) about the details of it, contact them via dc in pm, or any other suggestions ?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p86852">
+<div class="inner">
+<dl class="postprofile" id="profile86852">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content86852">
+<h3><a href="#p86852"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2006-04-21 05:13
+			</p>
+<div class="content">I would suggest that he/she contacts Gargoyle and arnetheduck. Include a small proof-of-concept.</div>
+<div class="signature" id="sig86852">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p86855">
+<div class="inner">
+<dl class="postprofile" id="profile86855">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content86855">
+<h3><a href="#p86855"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2006-04-21 08:10
+			</p>
+<div class="content">Also there is a degree of "nasty" and "exploit". Basicly three degrees of exploits:
+<br/>
+<br/>1) Will it be possible, or chance to take over the computer and or run code of the exploiters choice.
+<br/>
+<br/>2) Will it spam the computer into a useless state. (Harddrive-space (due to excessive logging), 100 cpu, DoS et.c.)
+<br/>
+<br/>3) Will it crash the client.
+<br/>
+<br/>
+<br/>For (2) and (3) there are already quasi-public ways of acheving it.</div>
+<div class="signature" id="sig86855">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p86856">
+<div class="inner">
+<dl class="postprofile" id="profile86856">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content86856">
+<h3><a href="#p86856"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-04-21 09:45
+			</p>
+<div class="content"><blockquote><div><cite>ivulfusbar wrote:</cite>I would suggest that he/she contacts Gargoyle and arnetheduck. Include a small proof-of-concept.</div></blockquote>thanks. I'll pass the message on. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote><div><cite>ivulfusbar wrote:</cite>Also there is a degree of "nasty" and "exploit". Basicly three degrees of exploits:<br/>1) Will it be possible, or chance to take over the computer and or run code of the exploiters choice.<br/>2) Will it spam the computer into a useless state. (Harddrive-space (due to excessive logging), 100 cpu, DoS et.c.)<br/>3) Will it crash the client.</div></blockquote>
+<br/>1. Not sure about take over, but some evil minded person could run some code through it.
+<br/>2. No, but it could kill windows, into a useless state.
+<br/>3. Nope.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p86969">
+<div class="inner">
+<dl class="postprofile" id="profile86969">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content86969">
+<h3><a href="#p86969"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-04-23 16:04
+			</p>
+<div class="content">Has this gone anywhere?  Was this part of the chat I glossed over on the private hub about file requests and crashing clients?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p86972">
+<div class="inner">
+<dl class="postprofile" id="profile86972">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content86972">
+<h3><a href="#p86972"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-04-23 16:14
+			</p>
+<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>[2006-04-21 15:36:49] &lt;fusbar&gt; so Pothead, what was the famous exploit then? ;))<br/>[2006-04-21 15:38:32] &lt;Pothead&gt; basically make folders / files anywhere on harddisk<br/>[2006-04-21 15:38:39] &lt;Pothead&gt; corrupting files if already exist<br/>[2006-04-21 15:40:22] &lt;Pothead&gt; apparently it can also make a File &amp; Folder hybrid, which don't sound good :P<br/>[2006-04-21 15:41:19] &lt;fusbar&gt; UTF8-based?<br/>[2006-04-21 15:41:25] &lt;Trem&gt; yay another way to enforce client restitrictions to get rid of old client =)<br/>[2006-04-21 15:42:16] &lt;Pothead&gt; no idea about utf8-based,  don't really know about stuff like that :P<br/>[2006-04-21 15:42:23] &lt;cologic&gt; The neat thing is that unlike the other one that appeared recently, according to Pothead's description 0.674 - the last one safe from previously announced vulnerabilities - is vulnerable to this one. ;)<br/>[2006-04-21 15:42:24] &lt;Pothead&gt; hehe, good plan Trem :)<br/>[2006-04-21 15:42:39] &lt;Pothead&gt; even lastest SVN has it<br/>[2006-04-21 15:42:40] &lt;Pothead&gt; :P<br/>[2006-04-21 15:44:08] &lt;Pothead&gt; but, hehe, i totally agree with that "Client too old, not supported" :)<br/>[2006-04-21 15:44:36] &lt;fusbar&gt; since dc++ only create files when downloading (except xml-setting-files) ;))<br/>[2006-04-21 15:44:58] &lt;Pothead&gt; nope<br/>[2006-04-21 15:45:08] &lt;Pothead&gt; and the other occurance . . . .<br/>[2006-04-21 15:45:15] &lt;Pothead&gt; which is where the problem lies<br/>[2006-04-21 15:45:20] &lt;cologic&gt; logging?<br/>[2006-04-21 15:45:31] &lt;Pothead&gt; yup :)<br/>[2006-04-21 15:45:32] &lt;fusbar&gt; Well logging aswell.<br/>[2006-04-21 15:45:47] &lt;cologic&gt; Is it basically "I'm the user ..\..\foo"? ;)<br/>[2006-04-21 15:46:02] &lt;fusbar&gt; haven't that been addressed before?<br/>[2006-04-21 15:46:10] &lt;fusbar&gt; when we did the same with sharelists?<br/>[2006-04-21 15:46:16] &lt;Pothead&gt; good guess cologic<br/>[2006-04-21 15:46:18] &lt;Pothead&gt; :)<br/>[2006-04-21 15:46:19] &lt;cologic&gt; (twice ;) )<br/>[2006-04-21 15:46:22] &lt;Pothead&gt; but the issue still exists<br/>[2006-04-21 15:46:36] &lt;fusbar&gt; i wonder if it was never fixed last time.<br/>[2006-04-21 15:46:47] &lt;fusbar&gt; when utf8 introduced it again.<br/>[2006-04-21 15:47:02] &lt;cologic&gt; fusbar, 0.674 fixed the unicode version.<br/>[2006-04-21 15:47:08] &lt;cologic&gt; Supposedly, anyway.<br/>[2006-04-21 15:47:11] &lt;fusbar&gt; logs aswell?<br/>[2006-04-21 15:47:16] &lt;cologic&gt; Oh. No idea.<br/>[2006-04-21 15:47:16] &lt;fusbar&gt; or sharelist?<br/>[2006-04-21 15:47:21] &lt;cologic&gt; Sharelist.<br/>[2006-04-21 15:47:33] &lt;fusbar&gt; lets check changelogs.<br/>[2006-04-21 15:47:41] &lt;cologic&gt; This is a much better exploit that that, though. ;)<br/>[2006-04-21 15:47:55] &lt;cologic&gt; (1) no dealing with rollback. (2) PMs can be sent without the target requesting them.<br/>[2006-04-21 15:48:22] &lt;Pothead&gt; (3) PM's can be sent to everyone on a 10000 user hub, in one go<br/>[2006-04-21 15:48:31] &lt;fusbar&gt; (filelists aswell)<br/>[2006-04-21 15:48:50] &lt;fusbar&gt; (if matchqueue)<br/>[2006-04-21 15:49:15] &lt;cologic&gt; fusbar,<br/>-- 0.674 2005-04-10 --<br/>*** WARNING ***<br/>  This version fixes a security bug, upgrade unless you want to risk losing data<br/>  anywhere on your drive, this error affects all clients from 0.307 to date (thanks cologic for finding it)<br/>*** WARNING ***<br/>[2006-04-21 15:49:37] &lt;cologic&gt; That was the unicode variation on the 0.300 bug.<br/>[2006-04-21 15:49:51] &lt;fusbar&gt; yes, but did we look into the filelogs there?<br/>[2006-04-21 15:50:15] &lt;cologic&gt; No. Basically I and FarCry verified it existed, but no one else really.<br/>[2006-04-21 15:50:23] &lt;cologic&gt; (that I know of)<br/>[2006-04-21 15:50:30] &lt;cologic&gt; And we only did sharelists.<br/>[2006-04-21 15:50:48] &lt;cologic&gt; So I don't know that arne would necessarrily have gone after logging/filelists.<br/>[2006-04-21 15:50:54] &lt;cologic&gt; From that.<br/>[2006-04-21 15:51:06] &lt;Pothead&gt; Proof of concept thingy, flow did . . .  http://flow84.no-ip.org/pictures/dcpp/exploit3.png <br/>[2006-04-21 15:51:37] &lt;sandos&gt; its kinda amazing how long these can go undetected in clients =)<br/>[2006-04-21 15:51:40] &lt;fusbar&gt; when was the first exploit?<br/>[2006-04-21 15:51:45] &lt;cologic&gt; Also, put enough ".."s in and one just stays at the root.<br/>[2006-04-21 15:51:55] &lt;cologic&gt; Which means it works no matter where DC++ is.<br/>[2006-04-21 15:52:19] &lt;cologic&gt; <br/> -- 0.300 2003-10-27 --<br/>*** WARNING ***<br/>  Security update, upgrade unless you want to risk losing files anywhere<br/>  on your hd (this is for all versions prior to this one) (thanks fusbar for bringing <br/>  it to my attention) <br/>*** WARNING ***<br/>[2006-04-21 15:52:21] &lt;fusbar&gt; yes...<br/>[2006-04-21 15:52:28] &lt;fusbar&gt; set the botname in here into something ;))<br/>[2006-04-21 15:52:30] &lt;Pothead&gt; well, sandos, i found sommit similar in Recovery Console last week <br/>[2006-04-21 15:52:43] &lt;fusbar&gt; and "inform you" ;))<br/>[2006-04-21 15:53:07] &lt;sandos&gt; its not like DC++ is used only by a few thousand users.. it has literally millions of downloads.. dont anyone try do anything malicious with DC? ;)<br/>[2006-04-21 15:57:54] &lt;fusbar&gt; it seems that part was never fixed in 0.300<br/>[2006-04-21 15:58:32] &lt;cologic&gt; fusbar: those bugs were about files within filelists. This is apparently about the filelist and/or logfiles themselves.<br/>[2006-04-21 15:58:39] &lt;cologic&gt; Which is a different codepath.<br/>[2006-04-21 15:59:06] &lt;fusbar&gt; I know this has been discussed with nicknames aswell.<br/>[2006-04-21 15:59:40] &lt;fusbar&gt; I will check my log-files tomorrow.<br/>[2006-04-21 16:00:09] &lt;fusbar&gt; i think we checked that hubs with [ISPS] in nicknames would not be affected<br/>[2006-04-21 16:00:16] &lt;fusbar&gt; and made some remark about that.<br/>[2006-04-21 16:45:05] &lt;Pothead&gt; think maybe located problem<br/>[2006-04-21 16:45:19] &lt;Pothead&gt; if nick starts with ..\<br/>[2006-04-21 16:45:45] &lt;Pothead&gt; that don't get checked in Validate filename, by looks of it<br/>[2006-04-21 16:51:34] &lt;Pothead&gt; meh, but i not really good at stuff like that.  off out for a bit. i'll try exploiting myself when i get in, and see if i can see how it going wrong :)<br/>[2006-04-21 18:25:40] &lt;fusbar&gt; yes, only in QueueManager validateFilename was checked in 0.3000</code></pre></div></div>
+<div class="signature" id="sig86972"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p87002">
+<div class="inner">
+<dl class="postprofile" id="profile87002">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content87002">
+<h3><a href="#p87002"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-04-23 17:51
+			</p>
+<div class="content">Thanks.  And: <span style="font-size: 200%; line-height: 116%;">wheee.</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p87016">
+<div class="inner">
+<dl class="postprofile" id="profile87016">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content87016">
+<h3><a href="#p87016"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-04-23 18:59
+			</p>
+<div class="content">hehe, he cannot remember how he got out of log directory, or changed the extensions, so still trying to duplicate that one at moment. . . . <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>Another problem is a pm from username
+<br/>..\\\pip..\\\pippi 
+<br/>
+<br/>makes a kind of file / directory hyrid, which cannot be removed by any normal means. (i had to rd logs /s /q)
+<br/>Stopping directorys from ending in . (windows gui don't let you make them with that anyway) is one possible way of sorting that one
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>   // Directory names cannot end with a . <br/>   i = 0; <br/>   while( ((i = tmp.find(".\\", i)) != string::npos) ) { <br/>      tmp[i] = '_'; <br/>   } <br/>   i = 0; <br/>   while( ((i = tmp.find("./", i)) != string::npos) ) { <br/>      tmp[i] = '_'; <br/>   } <br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			8 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=12">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Developer's resort”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

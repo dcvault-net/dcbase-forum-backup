@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>C4355  / C2668 | I don't get it, simple as that. - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=14531">C4355  / C2668 | I don't get it, simple as that.</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			6 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p74067">
+<div class="inner">
+<dl class="postprofile" id="profile74067">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100981">jsq-1</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-04 01:10</dd>
+</dl>
+<div class="postbody">
+<div id="post_content74067">
+<h3 class="first"><a href="#p74067">C4355  / C2668 | I don't get it, simple as that.</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100981">jsq-1</a></strong> » </span>2005-01-04 01:25
+			</p>
+<div class="content">Ok, just trying to compile a fresh and untouched DC++ v0.668 Source.
+<br/>
+<br/>WTL: 7.5.5002.0
+<br/>STL: 4.6.2 (from dcplusplus.com)
+<br/>
+<br/>Using Visual C++ .NET 7.1.3088 on a winXP machine, with stlport and the includes from wtl included in that order. I've also added natupnp.h / natupnp.idl to the includes.
+<br/>
+<br/>And yes this is probably a problem which has been discussed a million times before, so instead of bitching I hope someone will just paste a link to somewhere this has been resolved, because I couldn't find it.
+<br/>
+<br/>Thanks, love your work.
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>c:\DCPlusPlus\client\NmdcHub.cpp(37): warning C4355: 'this' : used in base member initializer list<br/>c:\DCPlusPlus\windows\WinUtil.cpp(209): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=false<br/>        ]<br/>c:\DCPlusPlus\windows\WinUtil.cpp(213): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=false<br/>        ]<br/>c:\DCPlusPlus\windows\WinUtil.cpp(215): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=false<br/>        ]<br/>c:\DCPlusPlus\windows\WinUtil.cpp(235): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=false<br/>        ]<br/>c:\DCPlusPlus\windows\WinUtil.cpp(250): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=false<br/>        ]<br/>c:\DCPlusPlus\windows\WinUtil.cpp(259): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=false<br/>        ]<br/>c:\DCPlusPlus\windows\WinUtil.cpp(263): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=false<br/>        ]<br/>c:\DCPlusPlus\windows\TransferView.cpp(69): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\SearchFrm.cpp(867): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\SearchFrm.cpp(873): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\SearchFrm.cpp(891): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\SearchFrm.cpp(906): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\HubFrame.cpp(637): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\DirectoryListingFrm.cpp(499): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\DirectoryListingFrm.cpp(535): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\DirectoryListingFrm.cpp(541): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\DirectoryListingFrm.cpp(580): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]<br/>c:\DCPlusPlus\windows\DirectoryListingFrm.cpp(587): error C2668: 'WTL::CMenuT&lt;t_bManaged&gt;::AppendMenuW' : ambiguous call to overloaded function<br/>        with<br/>        [<br/>            t_bManaged=true<br/>        ]</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p74101">
+<div class="inner">
+<dl class="postprofile" id="profile74101">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content74101">
+<h3><a href="#p74101"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2005-01-04 15:24
+			</p>
+<div class="content">I'm using WTL 7.5.4.2.9.1 and I can compile with no trouble(haven't been any changes to the changelog or compile.txt so I haven't upgraded more). Try and find that release. If you can't, PM me your e-mail and I'll send the .zip-file to you.</div>
+<div class="signature" id="sig74101"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p74107">
+<div class="inner">
+<dl class="postprofile" id="profile74107">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content74107">
+<h3><a href="#p74107"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-01-04 17:10
+			</p>
+<div class="content">When I compile with 7.5.5002, I also get those errors.  The previous release for WTL is here:  <!-- m --><a class="postlink" href="http://prdownloads.sourceforge.net/wtl/wtl75_4291.zip">http://prdownloads.sourceforge.net/wtl/wtl75_4291.zip</a><!-- m --></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p74117">
+<div class="inner">
+<dl class="postprofile" id="profile74117">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content74117">
+<h3><a href="#p74117"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-01-04 18:44
+			</p>
+<div class="content">Or this patch...
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>diff -urd DCPlusPlus-cvs-src.orig/windows/DirectoryListingFrm.cpp DCPlusPlus-cvs-src.patch/windows/DirectoryListingFrm.cpp<br/>--- DCPlusPlus-cvs-src.orig/windows/DirectoryListingFrm.cpp   Tue Jan  4 12:40:32 2005<br/>+++ DCPlusPlus-cvs-src.patch/windows/DirectoryListingFrm.cpp   Tue Jan  4 13:28:54 2005<br/>@@ -498,7 +498,7 @@<br/>                targetMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_FAVORITE_DIRS + n, Text::toT(i-&gt;second).c_str());<br/>                n++;<br/>             }<br/>-            targetMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+            targetMenu.AppendMenu(MF_SEPARATOR);<br/>          }<br/> <br/>          n = 0;<br/>@@ -536,13 +536,13 @@<br/>                targetMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_FAVORITE_DIRS + n, Text::toT(i-&gt;second).c_str());<br/>                n++;<br/>             }<br/>-            targetMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+            targetMenu.AppendMenu(MF_SEPARATOR);<br/>          }<br/> <br/>          n = 0;<br/>          targetMenu.AppendMenu(MF_STRING, IDC_DOWNLOADTO, CTSTRING(BROWSE));<br/>          if(WinUtil::lastDirs.size() &gt; 0) {<br/>-            targetMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+            targetMenu.AppendMenu(MF_SEPARATOR);<br/>             for(TStringIter i = WinUtil::lastDirs.begin(); i != WinUtil::lastDirs.end(); ++i) {<br/>                targetMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_TARGET + (++n), i-&gt;c_str());<br/>             }<br/>@@ -583,14 +583,14 @@<br/>                targetDirMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_WHOLE_FAVORITE_DIRS + n, Text::toT(i-&gt;second).c_str());<br/>                n++;<br/>             }<br/>-            targetDirMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+            targetDirMenu.AppendMenu(MF_SEPARATOR);<br/>          }<br/> <br/>          n = 0;<br/>          targetDirMenu.AppendMenu(MF_STRING, IDC_DOWNLOADDIRTO, CTSTRING(BROWSE));<br/> <br/>          if(WinUtil::lastDirs.size() &gt; 0) {<br/>-            targetDirMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+            targetDirMenu.AppendMenu(MF_SEPARATOR);<br/>             for(TStringIter i = WinUtil::lastDirs.begin(); i != WinUtil::lastDirs.end(); ++i) {<br/>                targetDirMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_TARGET_DIR + (++n), i-&gt;c_str());<br/>             }<br/>diff -urd DCPlusPlus-cvs-src.orig/windows/HubFrame.cpp DCPlusPlus-cvs-src.patch/windows/HubFrame.cpp<br/>--- DCPlusPlus-cvs-src.orig/windows/HubFrame.cpp   Mon Jan  3 15:27:17 2005<br/>+++ DCPlusPlus-cvs-src.patch/windows/HubFrame.cpp   Tue Jan  4 13:31:04 2005<br/>@@ -641,7 +641,7 @@<br/>    POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };        // location of mouse click <br/>    tabMenuShown = true;<br/>    prepareMenu(tabMenu, ::UserCommand::CONTEXT_HUB, Text::toT(client-&gt;getAddressPort()), client-&gt;getOp());<br/>-   tabMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+   tabMenu.AppendMenu(MF_SEPARATOR);<br/>    tabMenu.AppendMenu(MF_STRING, IDC_CLOSE_WINDOW, CTSTRING(CLOSE));<br/>    tabMenu.TrackPopupMenu(TPM_LEFTALIGN | TPM_BOTTOMALIGN | TPM_RIGHTBUTTON, pt.x, pt.y, m_hWnd);<br/>    tabMenu.DeleteMenu(tabMenu.GetMenuItemCount()-1, MF_BYPOSITION);<br/>diff -urd DCPlusPlus-cvs-src.orig/windows/SearchFrm.cpp DCPlusPlus-cvs-src.patch/windows/SearchFrm.cpp<br/>--- DCPlusPlus-cvs-src.orig/windows/SearchFrm.cpp   Mon Jan  3 15:27:20 2005<br/>+++ DCPlusPlus-cvs-src.patch/windows/SearchFrm.cpp   Tue Jan  4 13:31:04 2005<br/>@@ -920,13 +920,13 @@<br/>             targetMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_FAVORITE_DIRS + n, Text::toT(i-&gt;second).c_str());<br/>             n++;<br/>          }<br/>-         targetMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+         targetMenu.AppendMenu(MF_SEPARATOR);<br/>       }<br/> <br/>       n = 0;<br/>       targetMenu.AppendMenu(MF_STRING, IDC_DOWNLOADTO, CTSTRING(BROWSE));<br/>       if(WinUtil::lastDirs.size() &gt; 0) {<br/>-         targetMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+         targetMenu.AppendMenu(MF_SEPARATOR);<br/>          for(TStringIter i = WinUtil::lastDirs.begin(); i != WinUtil::lastDirs.end(); ++i) {<br/>             targetMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_TARGET + n, i-&gt;c_str());<br/>             n++;<br/>@@ -944,7 +944,7 @@<br/>          }<br/> <br/>          if(targets.size() &gt; 0) {<br/>-            targetMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+            targetMenu.AppendMenu(MF_SEPARATOR);<br/>             for(StringIter i = targets.begin(); i != targets.end(); ++i) {<br/>                targetMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_TARGET + n, Text::toT(*i).c_str());<br/>                n++;<br/>@@ -959,7 +959,7 @@<br/>             targetDirMenu.AppendMenu(MF_STRING, IDC_DOWNLOAD_WHOLE_FAVORITE_DIRS + n, Text::toT(i-&gt;second).c_str());<br/>             n++;<br/>          }<br/>-         targetDirMenu.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+         targetDirMenu.AppendMenu(MF_SEPARATOR);<br/>       }<br/> <br/>       n = 0;<br/>diff -urd DCPlusPlus-cvs-src.orig/windows/TransferView.cpp DCPlusPlus-cvs-src.patch/windows/TransferView.cpp<br/>--- DCPlusPlus-cvs-src.orig/windows/TransferView.cpp   Mon Jan  3 15:27:20 2005<br/>+++ DCPlusPlus-cvs-src.patch/windows/TransferView.cpp   Tue Jan  4 13:31:04 2005<br/>@@ -66,7 +66,7 @@<br/>    appendUserItems(transferMenu);<br/>    transferMenu.AppendMenu(MF_STRING, IDC_FORCE, CTSTRING(FORCE_ATTEMPT));<br/>    transferMenu.AppendMenu(MF_STRING, IDC_COPY_NICK, CTSTRING(COPY_NICK));<br/>-   transferMenu.AppendMenu(MF_SEPARATOR, 0, (LPTSTR)NULL);<br/>+   transferMenu.AppendMenu(MF_SEPARATOR);<br/>    transferMenu.AppendMenu(MF_STRING, IDC_REMOVE, CTSTRING(CLOSE_CONNECTION));<br/>    transferMenu.SetMenuDefaultItem(IDC_PRIVATEMESSAGE);<br/> <br/>diff -urd DCPlusPlus-cvs-src.orig/windows/WinUtil.cpp DCPlusPlus-cvs-src.patch/windows/WinUtil.cpp<br/>--- DCPlusPlus-cvs-src.orig/windows/WinUtil.cpp   Mon Jan  3 15:27:22 2005<br/>+++ DCPlusPlus-cvs-src.patch/windows/WinUtil.cpp   Tue Jan  4 13:31:04 2005<br/>@@ -206,13 +206,13 @@<br/>    file.AppendMenu(MF_STRING, IDC_OPEN_OWN_LIST, CTSTRING(MENU_OPEN_OWN_LIST));<br/>    file.AppendMenu(MF_STRING, IDC_REFRESH_FILE_LIST, CTSTRING(MENU_REFRESH_FILE_LIST));<br/>    file.AppendMenu(MF_STRING, IDC_OPEN_DOWNLOADS, CTSTRING(MENU_OPEN_DOWNLOADS_DIR));<br/>-   file.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+   file.AppendMenu(MF_SEPARATOR);<br/>    file.AppendMenu(MF_STRING, ID_FILE_QUICK_CONNECT, CTSTRING(MENU_QUICK_CONNECT));<br/>    file.AppendMenu(MF_STRING, IDC_FOLLOW, CTSTRING(MENU_FOLLOW_REDIRECT));<br/>    file.AppendMenu(MF_STRING, ID_FILE_RECONNECT, CTSTRING(MENU_RECONNECT));<br/>-   file.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+   file.AppendMenu(MF_SEPARATOR);<br/>    file.AppendMenu(MF_STRING, ID_FILE_SETTINGS, CTSTRING(MENU_SETTINGS));<br/>-   file.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+   file.AppendMenu(MF_SEPARATOR);<br/>    file.AppendMenu(MF_STRING, ID_APP_EXIT, CTSTRING(MENU_EXIT));<br/> <br/>    mainMenu.AppendMenu(MF_POPUP, (UINT_PTR)(HMENU)file, CTSTRING(MENU_FILE));<br/>@@ -232,7 +232,7 @@<br/>    view.AppendMenu(MF_STRING, IDC_NET_STATS, CTSTRING(MENU_NETWORK_STATISTICS));<br/>    view.AppendMenu(MF_STRING, IDC_NOTEPAD, CTSTRING(MENU_NOTEPAD));<br/>    view.AppendMenu(MF_STRING, IDC_HASH_PROGRESS, CTSTRING(MENU_HASH_PROGRESS));<br/>-   view.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+   view.AppendMenu(MF_SEPARATOR);<br/>    view.AppendMenu(MF_STRING, ID_VIEW_TOOLBAR, CTSTRING(MENU_TOOLBAR));<br/>    view.AppendMenu(MF_STRING, ID_VIEW_STATUS_BAR, CTSTRING(MENU_STATUS_BAR));<br/>    view.AppendMenu(MF_STRING, ID_VIEW_TRANSFER_VIEW, CTSTRING(MENU_TRANSFER_VIEW));<br/>@@ -248,7 +248,7 @@<br/>    window.AppendMenu(MF_STRING, ID_WINDOW_ARRANGE, CTSTRING(MENU_ARRANGE));<br/>    window.AppendMenu(MF_STRING, ID_WINDOW_MINIMIZE_ALL, CTSTRING(MENU_MINIMIZE_ALL));<br/>    window.AppendMenu(MF_STRING, ID_WINDOW_RESTORE_ALL, CTSTRING(MENU_RESTORE_ALL));<br/>-   window.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+   window.AppendMenu(MF_SEPARATOR);<br/>    window.AppendMenu(MF_STRING, IDC_CLOSE_DISCONNECTED, CTSTRING(MENU_CLOSE_DISCONNECTED));<br/> <br/>    mainMenu.AppendMenu(MF_POPUP, (UINT_PTR)(HMENU)window, CTSTRING(MENU_WINDOW));<br/>@@ -257,11 +257,11 @@<br/>    help.CreatePopupMenu();<br/> <br/>    help.AppendMenu(MF_STRING, IDC_HELP_CONTENTS, CTSTRING(MENU_CONTENTS));<br/>-   help.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+   help.AppendMenu(MF_SEPARATOR);<br/>    help.AppendMenu(MF_STRING, IDC_HELP_README, CTSTRING(MENU_README));<br/>    help.AppendMenu(MF_STRING, IDC_HELP_CHANGELOG, CTSTRING(MENU_CHANGELOG));<br/>    help.AppendMenu(MF_STRING, ID_APP_ABOUT, CTSTRING(MENU_ABOUT));<br/>-   help.AppendMenu(MF_SEPARATOR, 0, (LPCTSTR)NULL);<br/>+   help.AppendMenu(MF_SEPARATOR);<br/>    help.AppendMenu(MF_STRING, IDC_HELP_HOMEPAGE, CTSTRING(MENU_HOMEPAGE));<br/>    help.AppendMenu(MF_STRING, IDC_HELP_DOWNLOADS, CTSTRING(MENU_HELP_DOWNLOADS));<br/>    help.AppendMenu(MF_STRING, IDC_HELP_TRANSLATIONS, CTSTRING(MENU_HELP_TRANSLATIONS));<br/></code></pre></div>
+<br/>
+<br/>It'll probably be in CVS soon, so if you're intrepid...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p74118">
+<div class="inner">
+<dl class="postprofile" id="profile74118">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content74118">
+<h3><a href="#p74118"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2005-01-04 18:52
+			</p>
+<div class="content">Aha, well, to see the actual diff is nice anyway
+<br/>
+<br/>Thanks!</div>
+<div class="signature" id="sig74118">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p74134">
+<div class="inner">
+<dl class="postprofile" id="profile74134">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100981">jsq-1</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-04 01:10</dd>
+</dl>
+<div class="postbody">
+<div id="post_content74134">
+<h3><a href="#p74134"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100981">jsq-1</a></strong> » </span>2005-01-04 22:56
+			</p>
+<div class="content">Thanks <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			6 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

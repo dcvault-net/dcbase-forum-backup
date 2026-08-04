@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>How to make hashing more practical - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=14754">How to make hashing more practical</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			22 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p75230">
+<div class="inner">
+<dl class="postprofile" id="profile75230">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-04 23:02</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75230">
+<h3 class="first"><a href="#p75230">How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a></strong> » </span>2005-01-20 10:55
+			</p>
+<div class="content">TTH is a nice feature , but im sure many like me , are getting tired of having your computer being buttfucked by hashing everytime you do something in DC++ . 
+<br/>
+<br/>So this is an attempt at an serious thread about how to make TTH hashing a bit more practical in DC++.
+<br/>
+<br/>
+<br/>
+<br/>A few things that is'nt very practical with TTH .
+<br/>
+<br/><ul>hashdata.dat</ul>( a huge file that just keeps growing as it adds TTH's ,  ( /rebuild can remove old TTH's shrinking it a bit )) <br/>Just what is this file good for? , does it actualy have any practical use?<br/><br/><ul>renaming = rehashing</ul>renaming a file or an dir makes DC++ rehash.<br/><br/><ul>not being able to download to... if the other file has different TTH</ul>
+<br/>Something that used to work. 
+<br/>Yes, we DO know its a different file , but we dont give a dmn , for whatever reason I think people should be able to download whatever they want , thats what filesharing is about. 
+<br/>
+<br/>
+<br/>lets suggest practical solutions.</div>
+<div class="signature" id="sig75230"><img alt="Image" class="postimage" src="http://lagmonster.dontexist.com/w-ls-logga.gif"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75232">
+<div class="inner">
+<dl class="postprofile" id="profile75232">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75232">
+<h3><a href="#p75232">Re: How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2005-01-20 11:50
+			</p>
+<div class="content">Have you actually looked in Hashdata.dat?
+<br/><blockquote><div><cite>LordSqueak wrote:</cite>renaming = rehashing<br/>renaming a file or an dir makes DC++ rehash.</div></blockquote> How else should DC++ know it's the same file?<br/><blockquote><div><cite>LordSqueak wrote:</cite>not being able to download to... if the other file has different TTH<br/>Something that used to work. <br/>Yes, we DO know its a different file , but we dont give a dmn , for whatever reason I think people should be able to download whatever they want</div></blockquote> Sure. Go ahead. Download the file separetly. Don't destroy the community by adding yet another file that is different. It comes down to file integrity.</div>
+<div class="signature" id="sig75232"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75233">
+<div class="inner">
+<dl class="postprofile" id="profile75233">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-02 16:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75233">
+<h3><a href="#p75233">Re: How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a></strong> » </span>2005-01-20 11:53
+			</p>
+<div class="content"><blockquote><div><cite>LordSqueak wrote:</cite><ul>hashdata.dat</ul>( a huge file that just keeps growing as it adds TTH's ,  ( /rebuild can remove old TTH's shrinking it a bit )) <br/>Just what is this file good for? , does it actualy have any practical use?</div></blockquote><br/>It holds the TTH leafs (if I'm not mistaken)<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>renaming a file or an dir makes DC++ rehash.</div></blockquote><br/>How can DC++ know it's the same file if it doesn't rehash it?<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite><ul>not being able to download to... if the other file has different TTH</ul>Something that used to work. <br/>Yes, we DO know its a different file , but we dont give a dmn , for whatever reason I think people should be able to download whatever they want , thats what filesharing is about. </div></blockquote>
+<br/>Why on earth would you want to download a two different files into one?
+<br/>
+<br/><span style="font-size: 75%; line-height: 116%;">Edit: Damn Ullner, posting while I'm typing <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/> </span></div>
+<div class="signature" id="sig75233">Thanks to all open source programmers!
+<br/>They enable the rest of us to learn a lot!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75249">
+<div class="inner">
+<dl class="postprofile" id="profile75249">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75249">
+<h3><a href="#p75249">Re: How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-01-20 18:26
+			</p>
+<div class="content"><blockquote><div><cite>LordSqueak wrote:</cite>TTH is a nice feature , but im sure many like me , are getting tired of having your computer being buttfucked by hashing everytime you do something in DC++ .</div></blockquote><br/>If you're having perfomance/usability issues, try following the suggestions to improve your computer's I/O performance: <!-- m --><a class="postlink" href="http://www.dslreports.com/faq/9677">http://www.dslreports.com/faq/9677</a><!-- m --><br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>Just what is this file good for? , does it actualy have any practical use?</div></blockquote><br/>It stores the leaves of the files in your share, and the leaves of the files you're downloading.  The leaves are transferred between clients and allow sections of the file to be verified independent of the whole.<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>renaming a file or an dir makes DC++ rehash.</div></blockquote><br/>NTFS seems to have a persistent ID, but this seems to be for internal use, and is impossible to get at, so it cannot be used.  Guessing by filesize, name, and timestamp is not foolproof, and may lead to your DC++ thinking a file has a different hash than it actually does.  When someone tries to request it remotely, they'll end up repeatedly requesting the same file from you, because it will fail its integrity check.<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>Yes, we DO know its a different file , but we dont give a dmn , for whatever reason I think people should be able to download whatever they want , thats what filesharing is about. </div></blockquote>
+<br/>Well, hashing is intended to preserve file integrity.  Allowing you to download an incompatible file to an existing one may be supported at some point in the future, but it will end up throwing out the portions that aren't the same as the original - due to the aforementioned TTH leaf checking.  This on-the-fly file repair is a ways off, since it's not a feature people will use every day - and it will require user interaction.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75278">
+<div class="inner">
+<dl class="postprofile" id="profile75278">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-04 23:02</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75278">
+<h3><a href="#p75278">Re: How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a></strong> » </span>2005-01-20 23:10
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>LordSqueak wrote:</cite>TTH is a nice feature , but im sure many like me , are getting tired of having your computer being buttfucked by hashing everytime you do something in DC++ .</div></blockquote><br/>If you're having perfomance/usability issues, try following the suggestions to improve your computer's I/O performance: <!-- m --><a class="postlink" href="http://www.dslreports.com/faq/9677">http://www.dslreports.com/faq/9677</a><!-- m --></div></blockquote><br/>Not since i got a new puter , but the old one repeatedly got buttfcked by the tth gimp =)<br/>it seems to me that the TTH checking could be optimized. <br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>LordSqueak wrote:</cite>Just what is this file good for? , does it actualy have any practical use?</div></blockquote><br/>It stores the leaves of the files in your share, and the leaves of the files you're downloading.  The leaves are transferred between clients and allow sections of the file to be verified independent of the whole.</div></blockquote><br/>A good answer. <br/>but does dc++ as it is now , actualy have any use for this? <br/>does dc++ realy check the "portions" of the file it downloads? <br/>This seems mostly like a feature intended for multisource downloads.<br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>LordSqueak wrote:</cite>renaming a file or an dir makes DC++ rehash.</div></blockquote><br/>NTFS seems to have a persistent ID, but this seems to be for internal use, and is impossible to get at, so it cannot be used.  Guessing by filesize, name, and timestamp is not foolproof, and may lead to your DC++ thinking a file has a different hash than it actually does.  When someone tries to request it remotely, they'll end up repeatedly requesting the same file from you, because it will fail its integrity check.</div></blockquote>
+<br/>again , a good answer.
+<br/>I would suggest a feature in dc++ to rename files/dirs , that way dc++ would know its the same file without having to rehash.
+<br/>
+<br/><span style="font-size: 59%; line-height: 116%;"><em class="text-italics">Edit: fixed the lack of [quote] tags -GMT</em></span></div>
+<div class="signature" id="sig75278"><img alt="Image" class="postimage" src="http://lagmonster.dontexist.com/w-ls-logga.gif"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75280">
+<div class="inner">
+<dl class="postprofile" id="profile75280">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-04 23:02</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75280">
+<h3><a href="#p75280"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a></strong> » </span>2005-01-20 23:30
+			</p>
+<div class="content">As for downloading 2 different sources to one file ......
+<br/>
+<br/>its not like it going to destroy the community if i went and downloaded , for example ,,, 2 mp3's with different tags.
+<br/>infact , the "community" isnt bothered by this at all , atleast not until i decide to share the file. 
+<br/>
+<br/>there are many examples of why you'd want to "download to file...." without the tth checking. 
+<br/>Try searching the forums....
+<br/>
+<br/>It used to be possible to do this , now its being blocked because the other source has a different tth.
+<br/>
+<br/>How about an setting in configuration that lets you disable the tth blocking.
+<br/>of course the blocking would be on as default. 
+<br/>
+<br/>
+<br/>
+<br/>Finaly , I have been reading TTH threads , and basicaly , they all boil down to ...
+<br/><blockquote class="uncited"><div>Complainer: TTH sucks!<br/>Fanboy: TTH is the greatest thing since sliced bread!!<br/>Complainer: But i wanna slice my bread myself!!!!<br/>Fanboy: NO!!! that would ruin the whole TTH concept!!!!!!<br/></div></blockquote>
+<br/>you get the idea i hope.
+<br/>
+<br/>This thread is intended to discuss the issues people have , and to comeup with practical solutions.  
+<br/>( suggesting that someone should read the hashdata.dat is like suggesting that someone should read the phonecatalog when they lament that they are calling a busy number.)
+<br/>So please , if the fanboys doesnt have anything useful to say , dont say anything at all. dont ruin this thread.</div>
+<div class="signature" id="sig75280"><img alt="Image" class="postimage" src="http://lagmonster.dontexist.com/w-ls-logga.gif"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75282">
+<div class="inner">
+<dl class="postprofile" id="profile75282">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75282">
+<h3><a href="#p75282"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2005-01-21 00:02
+			</p>
+<div class="content"><blockquote><div><cite>LordSqueak wrote:</cite>its not like it going to destroy the community if i went and downloaded , for example ,,, 2 mp3's with different tags.</div></blockquote> Yes it will. Not if one person does it, but if a second, a third, a forth and so on it will destroy the community.</div>
+<div class="signature" id="sig75282"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75283">
+<div class="inner">
+<dl class="postprofile" id="profile75283">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75283">
+<h3><a href="#p75283"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2005-01-21 00:11
+			</p>
+<div class="content"><blockquote><div><cite>LordSqueak wrote:</cite>So please , if the fanboys doesnt have anything useful to say , dont say anything at all. dont ruin this thread.</div></blockquote>
+<br/>Going slightly off topic, how are you differentiating between advocacy and "fanboy-ism" ?</div>
+<div class="signature" id="sig75283">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75284">
+<div class="inner">
+<dl class="postprofile" id="profile75284">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-28 00:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75284">
+<h3><a href="#p75284">Re: How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a></strong> » </span>2005-01-21 00:12
+			</p>
+<div class="content"><blockquote><div><cite>LordSqueak wrote:</cite><blockquote><div><cite>GargoyleMT wrote:</cite>The leaves are transferred between clients and allow sections of the file to be verified independent of the whole.</div></blockquote><br/>but does dc++ as it is now , actualy have any use for this?</div></blockquote><br/>Yes. The development version 0.669 makes use of segment checking:<br/><blockquote><div><cite>arnetheduck wrote:</cite>* Added advanced resume that detects and tries to repair rollback inconsistencies using tiger trees</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75298">
+<div class="inner">
+<dl class="postprofile" id="profile75298">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75298">
+<h3><a href="#p75298">Re: How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-01-21 17:18
+			</p>
+<div class="content"><blockquote><div><cite>LordSqueak wrote:</cite>it seems to me that the TTH checking could be optimized. </div></blockquote><br/>It's been adjusted a couple times, and I honestly don't see it on my slowest computer, a P3/866.  I suspect that's rather low-end hardware compared to the computers of some of the people complaining, so I think that the aforementioned FAQ and computer optimization is probably good for any user to do.<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>A good answer. <br/>but does dc++ as it is now , actualy have any use for this? <br/>does dc++ realy check the "portions" of the file it downloads? <br/>This seems mostly like a feature intended for multisource downloads.</div></blockquote><br/>Yes the leaves and HashData.dat are used.  DC++ exchanges the leaves between 0.402+ clients, and uses them to check the file.  It also serves the leaves up to any client that asks, and that includes ReverseConnect and its multisource clients, which use them to make multisource downloading safe.  The CVS version goes a bit further with its use of the leaves.<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>again , a good answer.<br/>I would suggest a feature in dc++ to rename files/dirs , that way dc++ would know its the same file without having to rehash.</div></blockquote><br/>That's a fine suggestion.  Once there is a "My library" window, that will certainly be an option, and will/should let DC++ avoid rehashing the files - assuming they weren't moved between drives (which is possible even if the drive letter doesn't change, thanks to NTFS junctions and mount points).<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>its not like it going to destroy the community if i went and downloaded , for example ,,, 2 mp3's with different tags.<br/>infact , the "community" isnt bothered by this at all , atleast not until i decide to share the file. </div></blockquote><br/>It was my impression that this problem was largely video files.  MP3 tags can drastically change the offsets of the data inside the file, especially when ID3v2 tags are used - since they're used at the beginning of the file, and a lot of programs change the amount of padding.<br/><br/>Video files, on the other hand, are nearly always identical lengths, but can be corrupted anywhere.  If you look at the archives of the forum, there've been a number of threads about intelligent file repair - which is work, as I've said, but may eventually be implemented.<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>How about an setting in configuration that lets you disable the tth blocking.</div></blockquote><br/>It is true that this "reduces" (for some clever redefinition) the number of sources you can have for a file, since they're not actually the same file, but doesn't help file integrity.  File integrity is pretty important, and without quality files, what user wants to use any file sharing network (Kazaa)?<br/><br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>( suggesting that someone should read the hashdata.dat is like suggesting that someone should read the phonecatalog when they lament that they are calling a busy number.) </div></blockquote><br/>I think Ullner suggested you look at it (and HashData.xml) so you had an idea on your own.  He's curious, and likes trying to discover things on his own.  It was a helpful suggestion, not a "OMG, here is answer, STFU idiot" answer.<br/><br/><blockquote><div><cite>LordSqueak wrote:</cite>So please , if the fanboys doesnt have anything useful to say , dont say anything at all. dont ruin this thread.</div></blockquote>
+<br/>Er... yeah.  Well, I don't think there has been any "fanboy"ism in this thread.  If you keep the discussion highbrow enough, they don't jump in, and the very same people post thoughtful responses.  Trying to ward them off this way is just rude.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75403">
+<div class="inner">
+<dl class="postprofile" id="profile75403">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-04 23:02</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75403">
+<h3><a href="#p75403"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a></strong> » </span>2005-01-23 12:48
+			</p>
+<div class="content"><blockquote><div><cite>ullner wrote:</cite><blockquote><div><cite>LordSqueak wrote:</cite>its not like it going to destroy the community if i went and downloaded , for example ,,, 2 mp3's with different tags.</div></blockquote> Yes it will. Not if one person does it, but if a second, a third, a forth and so on it will destroy the community.</div></blockquote>
+<br/>Not, unless they decide to share the offending file. 
+<br/>[irony]Then the community is going to be destroyed , everyone is going to share their own TTH , and DC is going to die in favor of BT. [/irony]
+<br/>seriously!!!, TTH is a new thing , and the "community" has done ok this far.</div>
+<div class="signature" id="sig75403"><img alt="Image" class="postimage" src="http://lagmonster.dontexist.com/w-ls-logga.gif"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75404">
+<div class="inner">
+<dl class="postprofile" id="profile75404">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-04 23:02</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75404">
+<h3><a href="#p75404">Re: How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13123">LordSqueak</a></strong> » </span>2005-01-23 13:09
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite><blockquote><div><cite>LordSqueak wrote:</cite>again , a good answer.<br/>I would suggest a feature in dc++ to rename files/dirs , that way dc++ would know its the same file without having to rehash.</div></blockquote><br/>That's a fine suggestion.  Once there is a "My library" window, that will certainly be an option, and will/should let DC++ avoid rehashing the files - assuming they weren't moved between drives (which is possible even if the drive letter doesn't change, thanks to NTFS junctions and mount points).<br/></div></blockquote>
+<br/>Perhaps it could even be taken one step further and include a tool for moving files, even between HD's (or any other storage media for that matter)
+<br/>
+<br/>
+<br/>Another thing that has been slightly annoying me.
+<br/>Before TTH , you used to be able to see from what hub you qued files ,  this is no longer so.
+<br/>Appart from no long being able to "remember" what hub the file was qued from,,
+<br/> it makes me wonder if it could possibly confuse 2 users with the same nick on 2 different hubs.</div>
+<div class="signature" id="sig75404"><img alt="Image" class="postimage" src="http://lagmonster.dontexist.com/w-ls-logga.gif"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75413">
+<div class="inner">
+<dl class="postprofile" id="profile75413">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75413">
+<h3><a href="#p75413"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2005-01-23 18:14
+			</p>
+<div class="content"><blockquote><div><cite>LordSqueak wrote:</cite>Not, unless they decide to share the offending file. <br/>[irony]... snip silly, even in irony, strawman ...[/irony]<br/>seriously!!!, TTH is a new thing , and the "community" has done ok this far.</div></blockquote>
+<br/>I rue my deletion of those screenshots showing such gems as 5 TTHes across the six instances of a large file found on a hub every time this comes up.  I had thought people had realized TTH's value by now...
+<br/>
+<br/>The 'community', loathe as I am to use that word for a (largely) loosely affiliated group of filesharers, had been destroyed, insofar as save proper RAR releases and the like one had no assurance of a noncorrupted file, and because of this corrupted files did spread and mutate. I count that as destroyed in a filesharing (*gag*) community. TTH can help fix it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75436">
+<div class="inner">
+<dl class="postprofile" id="profile75436">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75436">
+<h3><a href="#p75436"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2005-01-24 10:22
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite><blockquote><div><cite>LordSqueak wrote:</cite>Not, unless they decide to share the offending file. <br/>[irony]... snip silly, even in irony, strawman ...[/irony]<br/>seriously!!!, TTH is a new thing , and the "community" has done ok this far.</div></blockquote><br/>I rue my deletion of those screenshots showing such gems as 5 TTHes across the six instances of a large file found on a hub every time this comes up.  I had thought people had realized TTH's value by now...<br/></div></blockquote>
+<br/>
+<br/>Wouldn't most the leaves of the tth be the same though? I thought that was part of the port of using that particular hashing scheme so that if 90% of the file was the same dc++ could use both as sources for the parts that were the same, the parts that are different it picks one of the sources (likely the one with the most matching TTHs).  I presume this is a more advanced feature that hasn't made it into dc++ yet, however I think it is a fairly good solution to what most people seem to be complaining about.  
+<br/>
+<br/>Just because a file is partially corrupt does not mean it is totally useless.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75453">
+<div class="inner">
+<dl class="postprofile" id="profile75453">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75453">
+<h3><a href="#p75453"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2005-01-24 16:50
+			</p>
+<div class="content">However, that would require writing code to download and check arbitrary parts of files, which is a decent percentage of the work needed for multisource.  Because of this, it probably won't be implemented until multisource downloads are.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75457">
+<div class="inner">
+<dl class="postprofile" id="profile75457">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75457">
+<h3><a href="#p75457">Re: How to make hashing more practical</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-01-24 17:26
+			</p>
+<div class="content"><blockquote><div><cite>LordSqueak wrote:</cite>Another thing that has been slightly annoying me.<br/>Before TTH , you used to be able to see from what hub you qued files ,  this is no longer so.<br/>Appart from no long being able to "remember" what hub the file was qued from,,<br/> it makes me wonder if it could possibly confuse 2 users with the same nick on 2 different hubs.</div></blockquote><br/>Yes, users can be confused between hubs - that's part of where the idea for the CID in ADC came from.  DC++ has always lost the hub that a user was on between instances - if you'd like it changed, vote for: <br/><br/><a class="postlink" href="http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=209">[Bug 209] Remember and display hub each source was seen in</a><br/><br/>(It had nothing to do with TTH being added, it's just coincidence that you noticed it then.)<br/><br/><br/><blockquote><div><cite>cologic wrote:</cite>I rue my deletion of those screenshots showing such gems as 5 TTHes across the six instances of a large file</div></blockquote><br/>I have that picture, I believe, just not on my laptop.  I'll check my desktop when I am able.<br/><br/><br/><blockquote><div><cite>Twink wrote:</cite>Wouldn't most the leaves of the tth be the same though?</div></blockquote>
+<br/>Yes, and your idea is a sound one - and has been talked about before.  Adding such sources to a file must remain a manual thing (or completely discouraged, once DC++ has the ability to take advantage of such sources), because then we're back to the era of autosearches taking up more CPU time, which is already a problem for some.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75552">
+<div class="inner">
+<dl class="postprofile" id="profile75552">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=27122">-=Mr B=-</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-08-19 00:43</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75552">
+<h3><a href="#p75552"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=27122">-=Mr B=-</a></strong> » </span>2005-01-26 17:02
+			</p>
+<div class="content">I even tried sugesting an option for files with there own checksums allready included, one that has been used longer then the TTH, and i got pretty much shouted at for even sugesting it. I still belive the TTH checking needs to be reworked, specificly for files going to a dir with a *.sfv present, IF a file is verifyed agenst the sfv, it dosent match and is discarded, why on earth would you grab a second identical file to download? The TTH is apperently the tth of a bad file, and will never validate agenst the sfv no mater how many times its checked, then for heavens sake, REMOVE the TTH,or better yet, add it to a list of what TTH's NOT to get for a specific file, once down, and passing the sfv check,  trash the info and move on. But nooooo. "If your so freaking stoopid that you add a corrupt file to download suite ya self" That was basicly the response i got the last time i sugested it.. Right, like you know its a corrupted file, you grab a file list, you add the folder struckture you want downloaded, you DONT walk around comparing all the TTH's to different sources.
+<br/>
+<br/>Yes, it agitates me. 
+<br/>
+<br/>A second thought, IF a file is qued, and the source goes away, after a specifyed time, there should be a automated search, adding the file with the same name, and the most comon TTH insted of the old entry, and offcourse, restarting download.
+<br/>The source of the first download might very well be a guy who removes his file due to noticing his is corrupt, then your darn sure out of luck, anyhow, if a file has the same name, IDENTICAL, its "pretty likely" that the user downloading wont ever notice its been a switch other in the way that he actually got it down.
+<br/>
+<br/>Im prolly going to get shouted at again. Tough luck.
+<br/>B!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75564">
+<div class="inner">
+<dl class="postprofile" id="profile75564">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75564">
+<h3><a href="#p75564"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-01-26 18:17
+			</p>
+<div class="content"><blockquote><div><cite>-=Mr B=- wrote:</cite>I even tried sugesting an option for files with there own checksums allready included, one that has been used longer then the TTH</div></blockquote><br/>I'm not sure which you suggested, was it CRC32 or MD5?  You can construct duplicate files with identical CRC32s easily, and from the math papers that cologic has mentioned, you can attack MD4 (and probably MD5) in the same way.  Tiger hasn't had any such problems, but if it does, then the effort to move to another hash algorithm will be worth it (DC++'s hashing code is written in an changable manner).<br/><br/><blockquote><div><cite>-=Mr B=- wrote:</cite>I still belive the TTH checking needs to be reworked, specificly for files going to a dir with a *.sfv present, IF a file is verifyed agenst the sfv, it dosent match and is discarded, why on earth would you grab a second identical file to download?</div></blockquote><br/>If someone shares files that don't check against the .SFV, you'll have problems whether you're using TTH or not.  If you don't use the TTH for identifying files, then all your non-SFV downloads break...<br/><br/><blockquote><div><cite>-=Mr B=- wrote:</cite>Right, like you know its a corrupted file, you grab a file list, you add the folder struckture you want downloaded, you DONT walk around comparing all the TTH's to different sources.</div></blockquote><br/>True, but you can make a fairly good check by searching for just one file of the set, and sorting by the number of users.  If a corrupt file ends up having 5 - 20, etc. users, then that bodes poorly for the quality of files on the DC network.<br/><br/><blockquote><div><cite>-=Mr B=- wrote:</cite>its "pretty likely" that the user downloading wont ever notice its been a switch other in the way that he actually got it down.</div></blockquote>
+<br/>Anything like this should really be done with the user's consent, so they know what's happened, and if something unexpected happens, they'll kow why...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75573">
+<div class="inner">
+<dl class="postprofile" id="profile75573">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-28 00:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75573">
+<h3><a href="#p75573"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a></strong> » </span>2005-01-26 20:15
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>However, that would require writing code to download and check arbitrary parts of files, which is a decent percentage of the work needed for multisource.  Because of this, it probably won't be implemented until multisource downloads are.....</div></blockquote>
+<br/>Please read my previous post in this topic. The development version uses TTH for checking parts of a file when it comes across rollback problems. So it's probably only a matter of porting this code for the purpose of searching and downloading partially damaged files.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75587">
+<div class="inner">
+<dl class="postprofile" id="profile75587">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75587">
+<h3><a href="#p75587"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2005-01-27 03:19
+			</p>
+<div class="content">Based on my reading of the code (DownloadManager::getResumePos() or similar), it only checks the most recently-downloaded chunk and only checks the ones before it if the check fails, continuing until it finds a valid chunk.  Of course, at some point the code never actually called that function, but it's the intent that counts. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p75600">
+<div class="inner">
+<dl class="postprofile" id="profile75600">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75600">
+<h3><a href="#p75600"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-01-27 17:26
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>Based on my reading of the code (DownloadManager::getResumePos() or similar), it only checks the most recently-downloaded chunk and only checks the ones before it if the check fails, continuing until it finds a valid chunk.</div></blockquote>
+<br/>Indeed, this feature is written with the assumption that the file's contents are downloaded in sequence.  It could be adapted to create an array of good or bad segments of the file, but the QueueManager and DownloadManager aren't cut out to make use of such lists.  It'd be more than just a little reworking.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p75621">
+<div class="inner">
+<dl class="postprofile" id="profile75621">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-28 00:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content75621">
+<h3><a href="#p75621"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100627">paka</a></strong> » </span>2005-01-27 22:06
+			</p>
+<div class="content">Right, not that easy then. My mistake that I haven't analysed how the new resume works... Thanks for checking it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			22 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

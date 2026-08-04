@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>compile error :( - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=14330">compile error :(</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			23 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p72927">
+<div class="inner">
+<dl class="postprofile" id="profile72927">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100209">d0t</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-16 06:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content72927">
+<h3 class="first"><a href="#p72927">compile error :(</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100209">d0t</a></strong> » </span>2004-12-16 06:43
+			</p>
+<div class="content">well after battling with the source i got most of the compile errors fixed... but i still get these:
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1438) : error C2664: 'MDITabChildWindowImpl&lt;T,C&gt;::Create' : cannot convert parameter 2 from 'WTL::_U_RECT' to 'ATL::_U_RECT'<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            C=16776960<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1428) : while compiling class-template member function 'HWND WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;::CreateEx(HWND,WTL::_U_RECT,LPCTSTR,DWORD,DWORD,LPVOID)'<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\FlatTabCtrl.h(635) : see reference to class template instantiation 'WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;' being compiled<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\PrivateFrame.h(37) : see reference to class template instantiation 'MDITabChildWindowImpl&lt;T,C&gt;' being compiled<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            C=16776960<br/>        ]<br/>UPnP.cpp<br/>TreePropertySheet.cpp<br/>c:\DCPPSrc\windows\TreePropertySheet.h(33) : error C2664: 'WTL::CPropertySheetImpl&lt;T&gt;::CPropertySheetImpl(WTL::_U_STRINGorID,UINT,HWND)' : cannot convert parameter 1 from 'ATL::_U_STRINGorID' to 'WTL::_U_STRINGorID'<br/>        with<br/>        [<br/>            T=TreePropertySheet<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>TextFrame.cpp<br/>c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1438) : error C2664: 'MDITabChildWindowImpl&lt;T&gt;::Create' : cannot convert parameter 2 from 'WTL::_U_RECT' to 'ATL::_U_RECT'<br/>        with<br/>        [<br/>            T=TextFrame<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1428) : while compiling class-template member function 'HWND WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;::CreateEx(HWND,WTL::_U_RECT,LPCTSTR,DWORD,DWORD,LPVOID)'<br/>        with<br/>        [<br/>            T=TextFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\FlatTabCtrl.h(635) : see reference to class template instantiation 'WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;' being compiled<br/>        with<br/>        [<br/>            T=TextFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\TextFrame.h(30) : see reference to class template instantiation 'MDITabChildWindowImpl&lt;T&gt;' being compiled<br/>        with<br/>        [<br/>            T=TextFrame<br/>        ]<br/>SearchFrm.cpp<br/>c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1438) : error C2664: 'MDITabChildWindowImpl&lt;T,C&gt;::Create' : cannot convert parameter 2 from 'WTL::_U_RECT' to 'ATL::_U_RECT'<br/>        with<br/>        [<br/>            T=SearchFrame,<br/>            C=16744319<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1428) : while compiling class-template member function 'HWND WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;::CreateEx(HWND,WTL::_U_RECT,LPCTSTR,DWORD,DWORD,LPVOID)'<br/>        with<br/>        [<br/>            T=SearchFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\FlatTabCtrl.h(635) : see reference to class template instantiation 'WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;' being compiled<br/>        with<br/>        [<br/>            T=SearchFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\SearchFrm.h(41) : see reference to class template instantiation 'MDITabChildWindowImpl&lt;T,C&gt;' being compiled<br/>        with<br/>        [<br/>            T=SearchFrame,<br/>            C=16744319<br/>        ]<br/>QueueFrame.cpp<br/>c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1438) : error C2664: 'MDITabChildWindowImpl&lt;T,C&gt;::Create' : cannot convert parameter 2 from 'WTL::_U_RECT' to 'ATL::_U_RECT'<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            C=16776960<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1428) : while compiling class-template member function 'HWND WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;::CreateEx(HWND,WTL::_U_RECT,LPCTSTR,DWORD,DWORD,LPVOID)'<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\FlatTabCtrl.h(635) : see reference to class template instantiation 'WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;' being compiled<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\PrivateFrame.h(37) : see reference to class template instantiation 'MDITabChildWindowImpl&lt;T,C&gt;' being compiled<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            C=16776960<br/>        ]<br/>PropertiesDlg.cpp<br/>c:\DCPPSrc\windows\TreePropertySheet.h(33) : error C2664: 'WTL::CPropertySheetImpl&lt;T&gt;::CPropertySheetImpl(WTL::_U_STRINGorID,UINT,HWND)' : cannot convert parameter 1 from 'ATL::_U_STRINGorID' to 'WTL::_U_STRINGorID'<br/>        with<br/>        [<br/>            T=TreePropertySheet<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>PrivateFrame.cpp<br/>c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1438) : error C2664: 'MDITabChildWindowImpl&lt;T,C&gt;::Create' : cannot convert parameter 2 from 'WTL::_U_RECT' to 'ATL::_U_RECT'<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            C=16776960<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1428) : while compiling class-template member function 'HWND WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;::CreateEx(HWND,WTL::_U_RECT,LPCTSTR,DWORD,DWORD,LPVOID)'<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\FlatTabCtrl.h(635) : see reference to class template instantiation 'WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;' being compiled<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\PrivateFrame.h(37) : see reference to class template instantiation 'MDITabChildWindowImpl&lt;T,C&gt;' being compiled<br/>        with<br/>        [<br/>            T=PrivateFrame,<br/>            C=16776960<br/>        ]<br/>MainFrm.cpp<br/>c:\DCPPSrc\windows\TreePropertySheet.h(33) : error C2664: 'WTL::CPropertySheetImpl&lt;T&gt;::CPropertySheetImpl(WTL::_U_STRINGorID,UINT,HWND)' : cannot convert parameter 1 from 'ATL::_U_STRINGorID' to 'WTL::_U_STRINGorID'<br/>        with<br/>        [<br/>            T=TreePropertySheet<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>main.cpp<br/>HubFrame.cpp<br/>c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1438) : error C2664: 'MDITabChildWindowImpl&lt;T&gt;::Create' : cannot convert parameter 2 from 'WTL::_U_RECT' to 'ATL::_U_RECT'<br/>        with<br/>        [<br/>            T=HubFrame<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1428) : while compiling class-template member function 'HWND WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;::CreateEx(HWND,WTL::_U_RECT,LPCTSTR,DWORD,DWORD,LPVOID)'<br/>        with<br/>        [<br/>            T=HubFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\FlatTabCtrl.h(635) : see reference to class template instantiation 'WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;' being compiled<br/>        with<br/>        [<br/>            T=HubFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\HubFrame.h(41) : see reference to class template instantiation 'MDITabChildWindowImpl&lt;T&gt;' being compiled<br/>        with<br/>        [<br/>            T=HubFrame<br/>        ]<br/>DirectoryListingFrm.cpp<br/>c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1438) : error C2664: 'MDITabChildWindowImpl&lt;T,C&gt;::Create' : cannot convert parameter 2 from 'WTL::_U_RECT' to 'ATL::_U_RECT'<br/>        with<br/>        [<br/>            T=DirectoryListingFrame,<br/>            C=16711935<br/>        ]<br/>        No constructor could take the source type, or constructor overload resolution was ambiguous<br/>        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\atlframe.h(1428) : while compiling class-template member function 'HWND WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;::CreateEx(HWND,WTL::_U_RECT,LPCTSTR,DWORD,DWORD,LPVOID)'<br/>        with<br/>        [<br/>            T=DirectoryListingFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\FlatTabCtrl.h(635) : see reference to class template instantiation 'WTL::CMDIChildWindowImpl&lt;T,TBase,TWinTraits&gt;' being compiled<br/>        with<br/>        [<br/>            T=DirectoryListingFrame,<br/>            TBase=WTL::CMDIWindow,<br/>            TWinTraits=ATL::CMDIChildWinTraits<br/>        ]<br/>        c:\DCPPSrc\windows\DirectoryListingFrm.h(39) : see reference to class template instantiation 'MDITabChildWindowImpl&lt;T,C&gt;' being compiled<br/>        with<br/>        [<br/>            T=DirectoryListingFrame,<br/>            C=16711935<br/></code></pre></div>
+<br/>
+<br/>I am using VS .NET 2003</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p72928">
+<div class="inner">
+<dl class="postprofile" id="profile72928">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content72928">
+<h3><a href="#p72928"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2004-12-16 06:54
+			</p>
+<div class="content">read compile.txt once more.</div>
+<div class="signature" id="sig72928">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p72930">
+<div class="inner">
+<dl class="postprofile" id="profile72930">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100209">d0t</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-16 06:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content72930">
+<h3><a href="#p72930"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100209">d0t</a></strong> » </span>2004-12-16 06:58
+			</p>
+<div class="content">If youre talking about WTL i got the latest version from sf.net/projects/wtl and put it into the wtl folder and my includes.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p72968">
+<div class="inner">
+<dl class="postprofile" id="profile72968">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content72968">
+<h3><a href="#p72968"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-12-16 16:55
+			</p>
+<div class="content">atlframe.h from WTL isn't being used, per your error message, it's using the WTL 3.1 version that comes with Visual C++ .NET 2003.  Check that you put the include\ files from the wtl source in the right place - perhaps you just extracted the whole thing without noticing that there were subdirectories?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73024">
+<div class="inner">
+<dl class="postprofile" id="profile73024">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100209">d0t</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-16 06:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73024">
+<h3><a href="#p73024"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100209">d0t</a></strong> » </span>2004-12-16 22:41
+			</p>
+<div class="content">Nope...  its 7.5. I replaced all my atlframe.h because when I double clicked on the error to go the line, and scrolled up:
+<br/>
+<br/>// Windows Template Library - WTL version 7.5
+<br/>// Copyright (C) Microsoft Corporation. All rights reserved.
+<br/>//
+<br/>// This file is a part of the Windows Template Library.
+<br/>// The use and distribution terms for this software are covered by the
+<br/>// Common Public License 1.0 (<!-- m --><a class="postlink" href="http://opensource.org/licenses/cpl.php">http://opensource.org/licenses/cpl.php</a><!-- m -->)
+<br/>// which can be found in the file CPL.TXT at the root of this distribution.
+<br/>// By using this software in any fashion, you are agreeing to be bound by
+<br/>// the terms of this license. You must not remove this notice, or
+<br/>// any other, from this software.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73025">
+<div class="inner">
+<dl class="postprofile" id="profile73025">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73025">
+<h3><a href="#p73025"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2004-12-17 00:00
+			</p>
+<div class="content">Replaced? You need the separate WTL installed in a separate dir from VS.NET's</div>
+<div class="signature" id="sig73025">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73026">
+<div class="inner">
+<dl class="postprofile" id="profile73026">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100209">d0t</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-16 06:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73026">
+<h3><a href="#p73026"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100209">d0t</a></strong> » </span>2004-12-17 00:14
+			</p>
+<div class="content">OK I restored the .NET headers, and added the WTL header folder to top of include directories. Same thing.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73055">
+<div class="inner">
+<dl class="postprofile" id="profile73055">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73055">
+<h3><a href="#p73055"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-12-17 19:00
+			</p>
+<div class="content"><blockquote><div><cite>d0t wrote:</cite>OK I restored the .NET headers, and added the WTL header folder to top of include directories. </div></blockquote>
+<br/>If you got the same error, WTL 7.5 is not being referenced before the built in WTL 3.1, which points to an include error.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73082">
+<div class="inner">
+<dl class="postprofile" id="profile73082">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73082">
+<h3><a href="#p73082"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2004-12-18 07:12
+			</p>
+<div class="content">as i have already said before in this thread.. read compile.txt again. The order of the different paths in the compile-path is of importance.</div>
+<div class="signature" id="sig73082">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73086">
+<div class="inner">
+<dl class="postprofile" id="profile73086">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73086">
+<h3><a href="#p73086"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-12-18 10:02
+			</p>
+<div class="content">There should be no need to setup include path with the latest versions, instead just put a folder called wtl in the source dir containing the contents of the <strong class="text-strong">include</strong> dir (not the dir itself just the content) in the wtl package.</div>
+<div class="signature" id="sig73086"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73248">
+<div class="inner">
+<dl class="postprofile" id="profile73248">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-20 14:54</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73248">
+<h3><a href="#p73248"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a></strong> » </span>2004-12-20 15:14
+			</p>
+<div class="content">I just recently downloaded the source and DID in fact need to add the path to the include directory in the wtl project files to the list of include directories.  
+<br/>
+<br/>For those new to the process, if you're using VS.Net 2003 go to:
+<br/>
+<br/>Tools &gt; Options &gt; Projects &gt; VC++ Directories
+<br/>
+<br/>And add the path to the wtl\include directory (e.g. "c:\DC++\wtl\include").
+<br/>
+<br/>
+<br/>As an aside:  I understand that the "regulars" on here probably get bombarded with "idiot" questions all the time.  Still, no reason for pithy "holier-than-thou" responses.  The compile.txt file DID NOT contain any instructions to add to the include directory list.  Perhaps thats elementary to veteran DC++ people, but for initiates it might be less obvious... especially when its NOT in the directions you keep on referencing.  Arent collaberative projects supposed to be INCLUSIVE rather than EXCLUSIVE?  Just a thought.
+<br/>
+<br/>Anyway, can't wait to dig into this thing!
+<br/>
+<br/>Cheers,
+<br/>
+<br/>Marc</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73250">
+<div class="inner">
+<dl class="postprofile" id="profile73250">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73250">
+<h3><a href="#p73250"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2004-12-20 15:29
+			</p>
+<div class="content">No one wants to be rude but have you done a search for this in here?. There is ALOT of posts about this 'problem'.
+<br/>
+<br/>Anyway, it's nice that you dig into the code and create and understanding of it.
+<br/>
+<br/>But........a tip: It's the searching and investigation that will actually teach you how things work. Try, try, try until you're fed up - then come back and ask <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig73250">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73259">
+<div class="inner">
+<dl class="postprofile" id="profile73259">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73259">
+<h3><a href="#p73259"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-12-20 16:53
+			</p>
+<div class="content">No, you shouldn't have to add the folders to your include path. I'm running vs .net 2003 here and I haven't doen it. Just create one folder called stlport and one folder called wtl in the same directory as the dcplusplus source and then unzip the contents of stlport to the stlport folder and to the wtl folder extract the contents of the include foler in the wtl packages so that he wtl folder only contains .h files.  This setup works like a charm for me.</div>
+<div class="signature" id="sig73259"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73266">
+<div class="inner">
+<dl class="postprofile" id="profile73266">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73266">
+<h3><a href="#p73266"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-12-20 17:14
+			</p>
+<div class="content"><blockquote><div><cite>mstac11 wrote:</cite>As an aside:  I understand that the "regulars" on here probably get bombarded with "idiot" questions all the time.  Still, no reason for pithy "holier-than-thou" responses.  Arent collaberative projects supposed to be INCLUSIVE rather than EXCLUSIVE?  Just a thought.</div></blockquote>
+<br/>If you'd like to contribute by helping people here, because you can provide a higher quality of support than others, we'd love to have you.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73267">
+<div class="inner">
+<dl class="postprofile" id="profile73267">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-20 14:54</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73267">
+<h3><a href="#p73267"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a></strong> » </span>2004-12-20 17:14
+			</p>
+<div class="content">Well, at least you used the word "shouldn't" instead of flat out telling me i "didn't" have to add to the include paths.
+<br/>
+<br/>I assure you i followed the compile instructions to the letter... downloaded and created directories like i was told.  When i tried to compile, i got the error that a lot of folks are writing about on here... I.e.
+<br/>
+<br/>Compiling...
+<br/>stdafx.cpp
+<br/>c:\DC++\windows\stdafx.h(46) : fatal error C1083: Cannot open include file: 'atlapp.h': No such file or directory
+<br/>
+<br/>Once i added the include directories, the error went away.
+<br/>
+<br/>So... not sure what is different about our configurations.  Perhaps, as you suggest, you are charmed.  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73269">
+<div class="inner">
+<dl class="postprofile" id="profile73269">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73269">
+<h3><a href="#p73269"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-12-20 17:23
+			</p>
+<div class="content">When reading the compile.txt now I see one thing that really might be an error, it tells you to extract everything in the wtl pckage to the wtl folder but this is not correct. The only files that should go into the wtl folder is the include files. The files that should be in the wtl folder is the following: <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>atlapp.h<br/>atlcrack.h<br/>atlctrls.h<br/>atlctrlw.h<br/>atlctrlx.h<br/>atlddx.h<br/>atldlgs.h<br/>atlframe.h<br/>atlgdi.h<br/>atlmisc.h<br/>atlprint.h<br/>atlres.h<br/>atlresce.h<br/>atlscrl.h<br/>atlsplit.h<br/>atltheme.h<br/>atluser.h<br/>atlwinx.h</code></pre></div></div>
+<div class="signature" id="sig73269"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73271">
+<div class="inner">
+<dl class="postprofile" id="profile73271">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-20 14:54</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73271">
+<h3><a href="#p73271"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a></strong> » </span>2004-12-20 17:33
+			</p>
+<div class="content">joakim:  good catch!  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  If thats the case, that'll save some of the "this wont compile" posts.
+<br/>
+<br/>Gargoyle:  I'm sure its annoying to hear the same questions over and over.  I never said anything about the quality of, nor anything about my ability to provide help.  I was only commenting on the general "tone".  If my feedback offended you, i apologize.  I was in no way attempting to impugn your expertise or role as a DC++ guru.
+<br/>
+<br/>Peace.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73272">
+<div class="inner">
+<dl class="postprofile" id="profile73272">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73272">
+<h3><a href="#p73272"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2004-12-20 17:52
+			</p>
+<div class="content">Obviously this is due to a "new" Project setting in "C/C++" -&gt; General, which has "$(SolutionDir)\stlport";"$(SolutionDir)\wtl" in it. I use the old way. The good thing is that you're free to choose  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig73272">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73281">
+<div class="inner">
+<dl class="postprofile" id="profile73281">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73281">
+<h3><a href="#p73281"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-12-22 17:31
+			</p>
+<div class="content"><blockquote><div><cite>mstac11 wrote:</cite>If my feedback offended you, i apologize.  I was in no way attempting to impugn your expertise or role as a DC++ guru.</div></blockquote>
+<br/>I'm not a guru, I'm just a guy who likes to help other people.  And your complaint is valid, though hopefully the tone is good in most of the posts.
+<br/>
+<br/>
+<br/>So, if the instructions are unclear, either compile.txt needs to talk about the contents of the include\ directory (or perhaps "header files").  Doing that is better than patching the .vcproj files to reference ".\wtl\include" - since undoubtely some people have it working fine that way.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73334">
+<div class="inner">
+<dl class="postprofile" id="profile73334">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-20 14:54</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73334">
+<h3><a href="#p73334"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a></strong> » </span>2004-12-23 14:44
+			</p>
+<div class="content"><blockquote class="uncited"><div>So, if the instructions are unclear, either compile.txt needs to talk about the contents of the include\ directory (or perhaps "header files"). Doing that is better than patching the .vcproj files to reference ".\wtl\include" - since undoubtely some people have it working fine that way.</div></blockquote>
+<br/>
+<br/>Agreed.  At least mentioning the include path issue would save you a bunch of "can't compile" posts here.  At least... one would hope.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73534">
+<div class="inner">
+<dl class="postprofile" id="profile73534">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73534">
+<h3><a href="#p73534"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-12-27 20:19
+			</p>
+<div class="content"><blockquote><div><cite>mstac11 wrote:</cite>Agreed.  At least mentioning the include path issue would save you a bunch of "can't compile" posts here.  At least... one would hope.</div></blockquote>
+<br/>Would this have helped you?
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>1) Dowload the source and STLPort from the download site. Download WTL from http://sf.net/projects/wtl.  <br/>   Unpack the source, then create two more directories under there, "stlport" and "wtl". Unpack stlport <br/>   into the stlport directory, and extract the contents of the wtl's include directory into wtl\.  If <br/>   you're brave, you can try compiling without STLPort, see config.h (I don't maintain it though)<br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p73573">
+<div class="inner">
+<dl class="postprofile" id="profile73573">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-12-20 14:54</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73573">
+<h3><a href="#p73573"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=100396">mstac11</a></strong> » </span>2004-12-28 16:19
+			</p>
+<div class="content">Yes, most definitely.  The problem was that the instructions didnt work as expressly written... and folks on here kept telling people with compile problems to go reread the instructions.  Catch-22.  That tweak should fix the inconsistency.
+<br/>
+<br/>Thanks.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p73664">
+<div class="inner">
+<dl class="postprofile" id="profile73664">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content73664">
+<h3><a href="#p73664"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-12-29 17:30
+			</p>
+<div class="content"><blockquote><div><cite>mstac11 wrote:</cite>That tweak should fix the inconsistency.</div></blockquote>
+<br/>It's in the CVS repository now, so hopefully there'll be less confusion in the future.
+<br/>
+<br/>Or, hopefully, confusion about a different subject, since this is spelled out better.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			23 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

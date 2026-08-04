@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Could somebody please explain the decryption algorith? - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=1716">Could somebody please explain the decryption algorith?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			24 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p9018">
+<div class="inner">
+<dl class="postprofile" id="profile9018">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9018">
+<h3 class="first"><a href="#p9018">Could somebody please explain the decryption algorith?</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-03-29 23:19
+			</p>
+<div class="content">Hi,
+<br/>
+<br/>I've downloaded the source code and I've tried to understand it on my own, but I just couldn't. I've never read or written C++ before so it is really hard for me to understand what is going on. (I only know VB, Java and C# so far, but C++ is on my list)
+<br/>
+<br/>I have also tried looking at the source code of Java Open DC but that uses a couple of text files and some other wierd stuff. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Could somebody please explain to me the algorithm, either in code that I can understand or even just in english? It would be mostly appreciated. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Thank you in advance</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9025">
+<div class="inner">
+<dl class="postprofile" id="profile9025">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9025">
+<h3><a href="#p9025"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-03-30 01:41
+			</p>
+<div class="content">Are you talking about the lock to key decryption (that is the only thing I can think of....I don't think there is any encryption in DC other than that)
+<br/>
+<br/>Well here's a nice VB6 solution
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Public Function LockToKey(ByRef Lck As String, ByVal n As Long) As String<br/>  Dim aByte() As Byte, h As Integer, ub As Integer<br/>  <br/>  'n = 5 for hub and client locks<br/>  <br/>  h = InStrB(1, Lck, " ")<br/>  If h Then Lck = LeftB$(Lck, h - 1)<br/>  'The lock only continues to the first space (Pk= comes after)<br/>  <br/>  'Convert it to a byte array<br/>  ub = Len(Lck) - 1<br/>  ReDim aByte(ub) As Byte<br/>  aByte = StrConv(Lck, vbFromUnicode)<br/>  <br/>  'The first character is handled differently from the others<br/>  h = aByte(0) Xor aByte(ub) Xor aByte(ub - 1) Xor n<br/>  h = ((h * 16) And 240) Or ((h \ 16) And 15)<br/>  'Equivalent of bit shifting four to the left (* 2^4) and four to the right (\ 2^4)<br/><br/>  'Check for illegal characters<br/>  Select Case h<br/>    Case 0, 5, 36, 96, 124, 126<br/>      LockToKey = "/%DCN" &amp; RightB$("00" &amp; h, 6) &amp; "%/"<br/>    Case Else<br/>      LockToKey = Chr$(h)<br/>  End Select<br/>  <br/>  'Now the rest of the characaters in the lock are handled the same<br/>  For n = 1 To ub<br/>    h = aByte(n) Xor aByte(n - 1)<br/>    <br/>    h = ((h * 16) And 240) Or ((h \ 16) And 15)<br/>  <br/>    Select Case h<br/>      Case 0, 5, 36, 96, 124, 126<br/>        LockToKey = LockToKey &amp; "/%DCN" &amp; RightB$("00" &amp; h, 6) &amp; "%/"<br/>      Case Else<br/>        LockToKey = LockToKey &amp; Chr$(h)<br/>    End Select<br/>  Next<br/>End Function<br/></code></pre></div>
+<br/>
+<br/>For more info, goto <a class="postlink" href="http://www.lwave.ca/shasta/protocol.html">http://www.lwave.ca/shasta/protocol.html</a> and scroll to the bottom (Appendix A).</div>
+<div class="signature" id="sig9025"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9037">
+<div class="inner">
+<dl class="postprofile" id="profile9037">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9037">
+<h3><a href="#p9037">Thank you</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-03-30 09:44
+			</p>
+<div class="content">That's the one. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> Thank you.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9830">
+<div class="inner">
+<dl class="postprofile" id="profile9830">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 31</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-04 18:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ontario, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9830">
+<h3><a href="#p9830"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a></strong> » </span>2003-04-04 18:30
+			</p>
+<div class="content">That code for VB6 is that to decrypt or encrypt the DC key?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9842">
+<div class="inner">
+<dl class="postprofile" id="profile9842">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9842">
+<h3><a href="#p9842"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-04 20:16
+			</p>
+<div class="content">Brian, that code is to come up with the key.  You could say it either way that code is decrypting/encrypting the lock to a key.  The point is it is figuring out what key needs to be sent based on the lock given to it.  hope that clarifys things hehe.
+<br/>
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9849">
+<div class="inner">
+<dl class="postprofile" id="profile9849">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 31</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-04 18:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ontario, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9849">
+<h3><a href="#p9849"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a></strong> » </span>2003-04-04 21:41
+			</p>
+<div class="content">I've been programming in VB for about 5-6 years now i'm really good and stuff with encryption algorithims. But DC has confusedme for years now i can finally make my own personal client for DC</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9874">
+<div class="inner">
+<dl class="postprofile" id="profile9874">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9874">
+<h3><a href="#p9874"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-05 00:38
+			</p>
+<div class="content">Hey great.....may be we can work together on some things. I'm making my own client, also in VB. Open source as well. Check out the link in my profile, if you'd like to check it out. Maybe you've got some suggestions that can help me out  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig9874"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9878">
+<div class="inner">
+<dl class="postprofile" id="profile9878">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 31</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-04 18:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ontario, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9878">
+<h3><a href="#p9878"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a></strong> » </span>2003-04-05 01:05
+			</p>
+<div class="content">Cool, i went to the siute its still kinda under construction tho</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9895">
+<div class="inner">
+<dl class="postprofile" id="profile9895">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9895">
+<h3><a href="#p9895"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-05 03:25
+			</p>
+<div class="content">And will be for a long time  <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/>
+<br/>
+<br/>However if you clicked on the SourceForge link, you can download the latest version, etc. I've got the bulk of the features in now except for downloads/uploads/returning search results. I DO have downloading file lists in my current unreleased version, 0.04 though.</div>
+<div class="signature" id="sig9895"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9933">
+<div class="inner">
+<dl class="postprofile" id="profile9933">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 31</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-04 18:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ontario, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9933">
+<h3><a href="#p9933"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a></strong> » </span>2003-04-05 13:32
+			</p>
+<div class="content">Yeah i downloaded it and looked over the code its a very stable code i can tell you that now</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9967">
+<div class="inner">
+<dl class="postprofile" id="profile9967">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9967">
+<h3><a href="#p9967"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-05 15:58
+			</p>
+<div class="content">That means a lot to me, I assure you  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Never had any "formal" training or the dike, so I take (too much?) pride in positive responses about my code.</div>
+<div class="signature" id="sig9967"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9992">
+<div class="inner">
+<dl class="postprofile" id="profile9992">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 31</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-04 18:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ontario, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9992">
+<h3><a href="#p9992"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a></strong> » </span>2003-04-05 19:00
+			</p>
+<div class="content">I just started to make a DC-Bot for my hub and its going very well cept for a few bugs dealing with the op commands..well accually it wont speak or do anything just logs in thats it</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10403">
+<div class="inner">
+<dl class="postprofile" id="profile10403">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10403">
+<h3><a href="#p10403">Hmmm</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-04-08 15:38
+			</p>
+<div class="content">Hmmmm this is a bit strange. Even though my program computes the same key as your VB6 code and the implementation of the Shasta hub
+<br/>
+<br/>Your code: 
+<br/>Ãƒâ€</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10407">
+<div class="inner">
+<dl class="postprofile" id="profile10407">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10407">
+<h3><a href="#p10407">Even more strange!</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-04-08 15:49
+			</p>
+<div class="content">Just tried ShadowDC out, it can connect perfectly fine! I really don't see what I am doing wrong here ...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10410">
+<div class="inner">
+<dl class="postprofile" id="profile10410">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10410">
+<h3><a href="#p10410"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-08 16:20
+			</p>
+<div class="content">Maybe, if you're not doing so already, you can tcpdump / ethereal the packets and compare them byte by byte.  Perhaps you're overlooking something that Shasta's hub isn't.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10413">
+<div class="inner">
+<dl class="postprofile" id="profile10413">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10413">
+<h3><a href="#p10413"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-04-08 16:50
+			</p>
+<div class="content">Thank you for the suggestion GargoyleMT, but I think I have located the problem. I downloaded the ShadowDC source code and stepped through the code (which btw is not the same as the VB6 code posted earlier in the thread).
+<br/>
+<br/>For the lock key:
+<br/>nOAUDpO*0v=e694+&amp;\fUKe&gt;&gt;N[V2m_&lt;w8Mt5, Pk=[YABBA-0.9.70]U2
+<br/>
+<br/>ShadowDC's response is:
+<br/>'ÃƒÂ ACÃƒÂ³VÃ‚Â¡dÃ‚Â´Ã¢â‚¬Â¦5ÃƒÂ°Ãƒ?ÃƒÂ±Ãƒ?Ã‚Â§Ã‚Â£3ÃƒÂ¡ÃƒÂ¢Ã‚Âµ/%DCN000%/QÃƒ?FÃƒÂµ#6Ã‚Â´ÃƒÂ´WÃ¢â‚¬Å“Ã¢â‚¬Ëœ
+<br/>
+<br/>My response is:
+<br/>'ÃƒÂ ACÃƒÂ³VÃ‚Â¡dÃ‚Â´?5ÃƒÂ°Ãƒ?ÃƒÂ±Ãƒ?Ã‚Â¢?ÃƒÂ¡ÃƒÂ¢Ã‚Âµ/%DCN000%/QÃƒ?FÃƒÂµ#6Ã‚Â´ÃƒÂ´W??
+<br/>
+<br/>Instead of Ã‚Â§Ã‚Â£ my response has Ã‚Â¢? and instead of ' at the end mine has ? ... what on earth?? Anyway, here is the code (C#), maybe somebody can spot the mistake. <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code><br/>      public static string GetValidationKey(string lockString) {<br/>         // The lock command is of the format "$Lock &lt;lock&gt; Pk=&lt;pk&gt;" and we are only interested in &lt;lock&gt;<br/>         lockString = lockString.Substring(0, lockString.IndexOf(" "));<br/>         // The lock string as a byte array<br/>         byte[] lockAsBytes = System.Text.UTF8Encoding.UTF8.GetBytes(lockString);<br/>         // The string builder that will build the validation key<br/>         StringBuilder validationKeyBuilder = new StringBuilder();<br/>         // A temporary byte variable used to keep all the intermediate states of the validation key's bytes<br/>         int byteAsInt;         <br/><br/>         // The first key character is calculated from the first lock character and the last two lock characters and 5<br/>         byteAsInt = lockAsBytes[0] ^ lockAsBytes[lockAsBytes.Length - 1] ^ lockAsBytes[lockAsBytes.Length - 2] ^ 5;<br/>         // Every character in the key must be nibble-swapped<br/>         byteAsInt = ((byteAsInt &lt;&lt; 4) &amp; 240) | ((byteAsInt &gt;&gt; 4) &amp; 15);<br/>         /*byteAsInt = (byteAsInt / 16) ^ (byteAsInt * 16);<br/>         while (byteAsInt &gt; 255) {<br/>            byteAsInt -= 256;<br/>         }*/<br/><br/>         // Append it to the response<br/>         AppendByte(byteAsInt, ref validationKeyBuilder);<br/><br/>         // Except for the first, each &lt;key&gt; character is computed from the corresponding &lt;lock&gt; character and the one before it<br/>         for (int i = 1; i &lt; lockAsBytes.Length; i++) {<br/>            byteAsInt = lockAsBytes[i] ^ lockAsBytes[i -1];<br/>            // Every character in the key must be nibble-swapped<br/>            byteAsInt = ((byteAsInt &lt;&lt; 4) &amp; 240) | ((byteAsInt &gt;&gt; 4) &amp; 15);<br/>            /*byteAsInt = (byteAsInt / 16) ^ (byteAsInt * 16);<br/>            while (byteAsInt &gt; 255) {<br/>               byteAsInt -= 256;<br/>            }*/<br/><br/>            // Append it to the response<br/>            AppendByte(byteAsInt, ref validationKeyBuilder);<br/>         }<br/><br/>         return validationKeyBuilder.ToString();<br/>      }<br/><br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10419">
+<div class="inner">
+<dl class="postprofile" id="profile10419">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10419">
+<h3><a href="#p10419"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-08 18:01
+			</p>
+<div class="content">The code that I can see computating the key looks good... but here is my impession of what is going wrong.  A.  you are converting the bytes into UTF8 encoding.. This might not be the snag, but when you do this encoding does it ignore the most significant 8th bit when it returns the bytes?
+<br/>
+<br/>Also another thing to be watch out for.. you are doing a .ToString()  this may also cause the significant bit to be ignored depending on the encoding.  
+<br/>
+<br/>I think what you need to do is just use the raw array of bytes (without doing any kind of conversion them) and then send the key back as an array of bytes, not by converting it back into a string and then sending it.  
+<br/>
+<br/>Even if that isn't the problem... let me know what you did!
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10423">
+<div class="inner">
+<dl class="postprofile" id="profile10423">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 196</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 13:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10423">
+<h3><a href="#p10423"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15">TasMan</a></strong> » </span>2003-04-08 18:33
+			</p>
+<div class="content">Welll...that's the newer version of my lock to key MrGrim....it's about 10-15% faster than the old one. It's the one I use in 0.04 (unreleased as of yet).</div>
+<div class="signature" id="sig10423"><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows Direct Connect Hub</a> - Taking away the light from NMDCH, leaving only shadows.....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10443">
+<div class="inner">
+<dl class="postprofile" id="profile10443">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10443">
+<h3><a href="#p10443"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-04-08 19:51
+			</p>
+<div class="content">You were right Moch, I skipped the parsing to and from strings and now everything works. Does this mean that I can't use any type of character encoding?
+<br/>
+<br/>Anyway, thank you all for your help!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10446">
+<div class="inner">
+<dl class="postprofile" id="profile10446">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10446">
+<h3><a href="#p10446">No edit button?:(</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-04-08 20:01
+			</p>
+<div class="content">Spoken too soon, still doesn't work.  <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/> <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10458">
+<div class="inner">
+<dl class="postprofile" id="profile10458">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 71</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-22 03:29</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10458">
+<h3><a href="#p10458"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2454">Moch</a></strong> » </span>2003-04-08 21:05
+			</p>
+<div class="content">When you use character encoding to and from and to again, you could lose some of the bits if that encoding does not require them.  I think this is what is happenning (even though you say it still doesn't work).  aDe made a nice vb prog that allows you put in a lock and it will print the key back (ASCII and in Hex).  If he could be so kind as to post a link so everyone can use that prog it would definetly help people like you debug your code.
+<br/>
+<br/>I think though, for now, you should get that data into a char *array and parse through it just like in good ol' C.  It seems like the C# Objects are getting in your way here.
+<br/>
+<br/>~Moch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10459">
+<div class="inner">
+<dl class="postprofile" id="profile10459">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-16 01:08</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10459">
+<h3><a href="#p10459"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a></strong> » </span>2003-04-08 21:21
+			</p>
+<div class="content">The problem is definately the character encoding.  You may not realize this, but you are doing at least 2 character encoding conversions.
+<br/>1: UTF8.GetBytes() (converting the lock string to a byte array)
+<br/>2: Your network send code (converting the key string to a byte array)
+<br/>
+<br/>You need to use the character encoding "System.Text.Encoding.Default" (IIRC) for both of these conversions.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10465">
+<div class="inner">
+<dl class="postprofile" id="profile10465">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10465">
+<h3><a href="#p10465"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-04-08 22:43
+			</p>
+<div class="content">Thank you very much for your continious help. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> I will try your suggestions out as soon as I get a chance and I will let you know.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10467">
+<div class="inner">
+<dl class="postprofile" id="profile10467">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-29 23:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10467">
+<h3><a href="#p10467"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2924">MrGrim</a></strong> » </span>2003-04-08 22:54
+			</p>
+<div class="content">Both of you were absolutely right. It was indeed the encoding and switching to System.Text.Encoding.Default solved the problem.
+<br/>
+<br/>Again, thank you very much for your help; much appreciated.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			24 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Reinsert the "small send buffer" function? - Page 1 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="18" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=18" itemprop="url"><span itemprop="title">Proposals</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=18&amp;t=16175&amp;start=10">Reinsert the "small send buffer" function?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Use this forum to flesh out your feature request before you enter it in &lt;a href="<a class="postlink" href="http://dcpp.net/bugzilla/%22%3EBugzilla%3C/a">http://dcpp.net/bugzilla/"&gt;Bugzilla&lt;/a</a>&gt;.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			39 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p82616">
+<div class="inner">
+<dl class="postprofile" id="profile82616">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content82616">
+<h3 class="first"><a href="#p82616"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-01-30 09:29
+			</p>
+<div class="content">No.</div>
+<div class="signature" id="sig82616"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83493">
+<div class="inner">
+<dl class="postprofile" id="profile83493">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-24 14:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83493">
+<h3><a href="#p83493"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a></strong> » </span>2006-02-15 09:10
+			</p>
+<div class="content"><blockquote><div><cite>TheParanoidOne wrote:</cite><blockquote><div><cite>ratsalad wrote:</cite>So I should just put the "64*1024" value, then?</div></blockquote><br/>No, you should leave it alone and it will use the default value.<br/><br/>For that entire settings page, only put values in if you know what the value means and the ramifications of changing them.</div></blockquote>
+<br/>
+<br/>Maybe anybody on ADSL should not bother upgrading to a client that the authors won't/can't tell us how to get to work correctly....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83495">
+<div class="inner">
+<dl class="postprofile" id="profile83495">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 333</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-10 16:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83495">
+<h3><a href="#p83495"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=28534" style="color: #AA0000;">ullner</a></strong> » </span>2006-02-15 09:22
+			</p>
+<div class="content"><blockquote><div><cite>ullner wrote:</cite>Since you know the standard value, try with a smaller value. Repeat until you notice that everything work fine.</div></blockquote> There is no magical value.</div>
+<div class="signature" id="sig83495"><a class="postlink" href="http://dcpp.net/blog">DC++: Just These Guys, Ya Know?</a> | <a class="postlink" href="http://elise.sourceforge.net">Elise</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83496">
+<div class="inner">
+<dl class="postprofile" id="profile83496">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-24 14:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83496">
+<h3><a href="#p83496"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a></strong> » </span>2006-02-15 09:32
+			</p>
+<div class="content">So what was did the checkbox do before? 
+<br/>what value did checking that box insert?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83500">
+<div class="inner">
+<dl class="postprofile" id="profile83500">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83500">
+<h3><a href="#p83500"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2006-02-15 12:41
+			</p>
+<div class="content"><blockquote><div><cite>gemmell1 wrote:</cite>So what was did the checkbox do before? <br/>what value did checking that box insert?</div></blockquote>1024 according to the source.</div>
+<div class="signature" id="sig83500"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83536">
+<div class="inner">
+<dl class="postprofile" id="profile83536">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-24 14:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83536">
+<h3><a href="#p83536"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a></strong> » </span>2006-02-16 09:05
+			</p>
+<div class="content">thank you <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83558">
+<div class="inner">
+<dl class="postprofile" id="profile83558">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83558">
+<h3><a href="#p83558"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2006-02-16 18:44
+			</p>
+<div class="content">The behavior of the old "small send buffer" and the new "socket write buffer" are entirely different.  The old one only limited it to writing a small amount at a time to the socket, the new one actually sets the TCP buffer.  This means that the maximum throughput is the buffer size divided by the latency: set it to 1024 and it'll slow everything to a crawl.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83607">
+<div class="inner">
+<dl class="postprofile" id="profile83607">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29223">Carraya</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 112</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-21 16:43</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83607">
+<h3><a href="#p83607"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29223">Carraya</a></strong> » </span>2006-02-17 07:17
+			</p>
+<div class="content">I was just going to say that... If you have a high speed connecting 1024 is a very very small buffer and will probably do more harm than good...</div>
+<div class="signature" id="sig83607">&lt;random funny comment&gt;</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83713">
+<div class="inner">
+<dl class="postprofile" id="profile83713">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106519">dcjoheb</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-02-11 15:39</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83713">
+<h3><a href="#p83713"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106519">dcjoheb</a></strong> » </span>2006-02-18 20:25
+			</p>
+<div class="content">I just hope that developers will Reinsert the "small send buffer" function...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83717">
+<div class="inner">
+<dl class="postprofile" id="profile83717">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17117">Big Muscle</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 72</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-23 19:45</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83717">
+<h3><a href="#p83717"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17117">Big Muscle</a></strong> » </span>2006-02-18 21:31
+			</p>
+<div class="content"><blockquote><div><cite>dcjoheb wrote:</cite>I just hope that developers will Reinsert the "small send buffer" function...</div></blockquote>
+<br/>but they won't. Read the second post in this topic.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83891">
+<div class="inner">
+<dl class="postprofile" id="profile83891">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-24 14:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83891">
+<h3><a href="#p83891"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a></strong> » </span>2006-02-21 09:06
+			</p>
+<div class="content">ok,
+<br/>
+<br/>so we stick at 0.674 as we know we can use this program.
+<br/>
+<br/>I just can't understand why we have to play with the settings ourselves, when it worked fine before.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83892">
+<div class="inner">
+<dl class="postprofile" id="profile83892">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105408">Quattro</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 166</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-11 14:23</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83892">
+<h3><a href="#p83892"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105408">Quattro</a></strong> » </span>2006-02-21 09:45
+			</p>
+<div class="content">you don't HAVE to play with them... 
+<br/>^^
+<br/>just leaving them alone will have the same effect as not enabling the option in &lt; 0.674</div>
+<div class="signature" id="sig83892">You can send a message around the world in 1/7 of a second; yet it may take several years to move a simple idea through a 1/4 inch of human skull.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83933">
+<div class="inner">
+<dl class="postprofile" id="profile83933">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 26</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-24 14:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83933">
+<h3><a href="#p83933"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14275">gemmell1</a></strong> » </span>2006-02-22 09:26
+			</p>
+<div class="content"><blockquote><div><cite>Quattro wrote:</cite>you don't HAVE to play with them... <br/>^^<br/>just leaving them alone will have the same effect as not enabling the option in &lt; 0.674</div></blockquote>
+<br/>
+<br/>FFS <img alt=":evil:" class="smilies" src="/images/smilies/icon_evil.gif" title="Evil or Very Mad"/> - have you read the thread? I want the option enabled so i can download properly !!!!!!!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83935">
+<div class="inner">
+<dl class="postprofile" id="profile83935">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83935">
+<h3><a href="#p83935"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-02-22 10:56
+			</p>
+<div class="content"><blockquote><div><cite>gemmell1 wrote:</cite>FFS <img alt=":evil:" class="smilies" src="/images/smilies/icon_evil.gif" title="Evil or Very Mad"/> - have you read the thread? I want the option enabled so i can download properly !!!!!!!</div></blockquote>FFS <img alt=":evil:" class="smilies" src="/images/smilies/icon_evil.gif" title="Evil or Very Mad"/> - have you read the thread?  <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/>
+<br/> It is enabled. 1024 is the default value, which is also the value used in older clients, when this option is enabled.
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>#define SMALL_BUFFER_SIZE 1024</code></pre></div>
+<br/>
+<br/>Or put even simpler.
+<br/>The Default setting of newer clients, is EXACTLY the same as having that box ticked in older clients.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83939">
+<div class="inner">
+<dl class="postprofile" id="profile83939">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29223">Carraya</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 112</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-21 16:43</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83939">
+<h3><a href="#p83939"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29223">Carraya</a></strong> » </span>2006-02-22 14:14
+			</p>
+<div class="content">Actually pot it's not, because the buffer size is on recieve buffer as well as I remember, at least it's not exactly the same, but close...</div>
+<div class="signature" id="sig83939">&lt;random funny comment&gt;</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p83945">
+<div class="inner">
+<dl class="postprofile" id="profile83945">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83945">
+<h3><a href="#p83945"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-02-22 16:47
+			</p>
+<div class="content">This deserves to be said again, since he's right:
+<br/>
+<br/><blockquote><div><cite>PseudonympH wrote:</cite>The behavior of the old "small send buffer" and the new "socket write buffer" are entirely different.  The old one only limited it to writing a small amount at a time to the socket, the new one actually sets the TCP buffer.  This means that the maximum throughput is the buffer size divided by the latency: set it to 1024 and it'll slow everything to a crawl.</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p83966">
+<div class="inner">
+<dl class="postprofile" id="profile83966">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29223">Carraya</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 112</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-21 16:43</dd>
+</dl>
+<div class="postbody">
+<div id="post_content83966">
+<h3><a href="#p83966"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29223">Carraya</a></strong> » </span>2006-02-23 08:03
+			</p>
+<div class="content">Weeeeeee I was right... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig83966">&lt;random funny comment&gt;</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89008">
+<div class="inner">
+<dl class="postprofile" id="profile89008">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110181">charly123</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-06-12 23:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89008">
+<h3><a href="#p89008"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110181">charly123</a></strong> » </span>2006-06-13 01:01
+			</p>
+<div class="content">Hi, I'm also having trouble downloading when uploading using the latest release (v0.691), too.<br/>
+Using v0.674's 'Use Small Send Buffer' worked a dream, and my connection (512/256 ADSL) could max out either/or/and any way together, as needed.<br/>
+<br/>
+However, with v0.691 the download speed decreases massively when uploading.<br/>
+So reading from this thread, I gather I don't enter 1024 as the Socket Write Buffer, and that the Socket Write Buffer isn't the same as the previous Use Small Send Buffer feature anyway.<br/>
+<br/>
+So what do I do?<br/>
+<br/>
+Think I'm going to have to go back to v0.674. I don't really want to use a netlimiter as it would slow other people downloading from you, and you can get booted from certain hubs if you use one anyway.<br/>
+<br/>
+Thanks</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89028">
+<div class="inner">
+<dl class="postprofile" id="profile89028">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89028">
+<h3><a href="#p89028"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2006-06-13 05:29
+			</p>
+<div class="content"><blockquote><div><cite>charly123 wrote:</cite>
+I don't really want to use a netlimiter as it would slow other people downloading from you
+</div></blockquote>
+Which is more or less the same thing you do by using a small send buffer, the computer will just not be able to send that much data on the same time as it can with a larger one.
+<blockquote><div><cite>charly123 wrote:</cite>
+, and you can get booted from certain hubs if you use one anyway.
+</div></blockquote>
+The hubs has no way of detecting that you are using netlimiter (if you do have a reasonable limit, usually somehere at 80% of you max upload speed).</div>
+<div class="signature" id="sig89028"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89047">
+<div class="inner">
+<dl class="postprofile" id="profile89047">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110181">charly123</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-06-12 23:20</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89047">
+<h3><a href="#p89047"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110181">charly123</a></strong> » </span>2006-06-13 16:38
+			</p>
+<div class="content"><blockquote><div><cite>joakim_tosteberg wrote:</cite><blockquote><div><cite>charly123 wrote:</cite>
+I don't really want to use a netlimiter as it would slow other people downloading from you
+</div></blockquote>
+Which is more or less the same thing you do by using a small send buffer, the computer will just not be able to send that much data on the same time as it can with a larger one.</div></blockquote>
+
+Thanks for the reply. Although, that's not what I experienced in physical, real-world use. Enabling the UseSmallSendBuffer option caused absolutely no drop in speed for outgoing (uploading) data. It could max out and upload at 30kbytes/s without any effort. The only discernable difference was a substantially increased download speed for me. To re-iterate, upload speed was unaffected, regardless of download traffic.<br/>
+<br/>
+For now, I have reverted back to DC++ v0.674.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89895">
+<div class="inner">
+<dl class="postprofile" id="profile89895">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110566">twilightking</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-06-26 06:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89895">
+<h3><a href="#p89895"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110566">twilightking</a></strong> » </span>2006-06-26 06:14
+			</p>
+<div class="content">It's been a while since I've used DC and I just downloaded the latest version 0.691. Immediately I could tell there was a difference in download speed. I looked for the small send buffer option but couldn't find it so it so I did a google search and landed on this forum. My experience has been the same as charly123. Upload speed (~45k) was never affected with the small send buffer opton enabled.  Now without it, my download speed has taken a sharp decline. Even surfing simple web pages takes a long time to load. Before I didn't mind sitting and idling in hubs to let other users download from me because there was no noticeable difference while surfing the net. I hope the programmers bring that option back or let us know how to optimally set the new options. Until then I'm also reverting back to v0.674</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89896">
+<div class="inner">
+<dl class="postprofile" id="profile89896">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105408">Quattro</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 166</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-11 14:23</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89896">
+<h3><a href="#p89896"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105408">Quattro</a></strong> » </span>2006-06-26 08:20
+			</p>
+<div class="content"><blockquote><div><cite>twilightking wrote:</cite>It's been a while since I've used DC and I just downloaded the latest version 0.691. Immediately I could tell there was a difference in download speed. I looked for the small send buffer option but couldn't find it so it so I did a google search and landed on this forum. My experience has been the same as charly123. Upload speed (~45k) was never affected with the small send buffer opton enabled.  Now without it, my download speed has taken a sharp decline. Even surfing simple web pages takes a long time to load. Before I didn't mind sitting and idling in hubs to let other users download from me because there was no noticeable difference while surfing the net. I hope the programmers bring that option back or let us know how to optimally set the new options. Until then I'm also reverting back to v0.674</div></blockquote>
+
+have you actually read this thread?</div>
+<div class="signature" id="sig89896">You can send a message around the world in 1/7 of a second; yet it may take several years to move a simple idea through a 1/4 inch of human skull.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p90268">
+<div class="inner">
+<dl class="postprofile" id="profile90268">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110566">twilightking</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-06-26 06:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content90268">
+<h3><a href="#p90268"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110566">twilightking</a></strong> » </span>2006-07-05 07:24
+			</p>
+<div class="content"><blockquote><div><cite>Quattro wrote:</cite>
+<br/>
+have you actually read this thread?</div></blockquote>If you wanna be a smartass about it, yes I have read the thread. And no, your claim to leaving the settings alone did not have the same effect as (I'm assuming you meant enabling) enabling the old option. There was a substantial decrease in download bandwidth for me, so much that I couldn't even simply surf the internet. That is why I posted, hoping the programmers would hear more voices and make changes on future versions.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p90273">
+<div class="inner">
+<dl class="postprofile" id="profile90273">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=626">Asc3nti0n</a> </dt>
+<dd class="profile-rank">Account Disabled Due to Policy</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 15</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-25 02:42</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> AUST</dd>
+</dl>
+<div class="postbody">
+<div id="post_content90273">
+<h3><a href="#p90273">Wow, so much arguement between the people who have no idea</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=626">Asc3nti0n</a></strong> » </span>2006-07-05 08:02
+			</p>
+<div class="content">Not saying I do know anything, but taking this from a completely third party stance on the issue (I'm on a LAN only internet networked hub of 200 odd users)<br/>
+<br/>
+Qn to Moderators/Admin:  Is there still a function inside the Settings of DC++ that replicates the effectiveness of "Small Send Buffer" or was it really a placebo function in previous clients?</div>
+<div class="signature" id="sig90273">coz MacsRBest</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92495">
+<div class="inner">
+<dl class="postprofile" id="profile92495">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=112033">winthorpejones</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-08-31 20:28</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92495">
+<h3><a href="#p92495">Re: Wow, so much arguement between the people who have no id</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=112033">winthorpejones</a></strong> » </span>2006-08-31 20:42
+			</p>
+<div class="content"><blockquote><div><cite>Asc3nti0n wrote:</cite>
+Qn to Moderators/Admin:  Is there still a function inside the Settings of DC++ that replicates the effectiveness of "Small Send Buffer" or was it really a placebo function in previous clients?</div></blockquote>
+<br/>
+This still seems to be an eminently reasonable question unanswered in the thread.<br/>
+<br/>
+Using .674 with "use small send buffers" selected, everything works great. Using .691 lacking that option, my Web surfing slows to an absolute crawl. It's almost unusable. I have tested with .691 running and not running many times. It's definitely DC++ .691, and .674 exhibits the same problem if I don't have "use small send buffers" checked.<br/>
+<br/>
+So the question remains: are there any settings to use in .691 that duplicate "use small send buffers" from .674?<br/>
+<br/>
+Many thanks in advance for feedback. Seems it could be helpful to many.<br/>
+<br/>
+</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92504">
+<div class="inner">
+<dl class="postprofile" id="profile92504">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92504">
+<h3><a href="#p92504">Re: Wow, so much arguement between the people who have no id</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-08-31 23:57
+			</p>
+<div class="content"><blockquote><div><cite>winthorpejones wrote:</cite>So the question remains</div></blockquote>
+Some people believed that the socket read and write buffers would duplicate the option, but they do not (see earlier in the thread).  There are no other features that would be even remotely similar.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p93233">
+<div class="inner">
+<dl class="postprofile" id="profile93233">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=111725">toejam</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-08-19 21:45</dd>
+</dl>
+<div class="postbody">
+<div id="post_content93233">
+<h3><a href="#p93233"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=111725">toejam</a></strong> » </span>2006-09-15 21:47
+			</p>
+<div class="content">We really need "use small send buffer" function back! After I installed 0.691 my DC++ uploads goto absolute max and my Internet surfing suffers really bad. I can download pretty much normally in DC++ though.<br/>
+I tried to set "Socket write buffer" to 4096 and some other values but the uploads just went really low or died completely. <br/>
+Since no-one wants to inform us 0.691 users about what to insert in "Socket write buffer" and only suggest leaving that untouched there is only one option left, go back to 0.674.<br/>
+<br/>
+ADSL 1024/512</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p93239">
+<div class="inner">
+<dl class="postprofile" id="profile93239">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7686">Xan1977</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 627</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-06 01:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content93239">
+<h3><a href="#p93239"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7686">Xan1977</a></strong> » </span>2006-09-15 22:33
+			</p>
+<div class="content"><blockquote><div><cite>toejam wrote:</cite>go back to 0.674.</div></blockquote>
+The other choice is to manage your bandwidth with some third party application.  Uploads saturating your internet connection is not a problem that is unique to DC++.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p97442">
+<div class="inner">
+<dl class="postprofile" id="profile97442">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=111200">dj christian</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-07-27 03:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content97442">
+<h3><a href="#p97442"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=111200">dj christian</a></strong> » </span>2007-01-02 13:15
+			</p>
+<div class="content"><blockquote><div><cite>TheParanoidOne wrote:</cite>
+Note that in 0.6811 this item is now a configurable value. See <em class="text-italics">Settings -&gt; Advanced -&gt; Experts Only -&gt; Socket write buffer</em>.</div></blockquote>
+
+What value should i put in it? Im using a 2mbit/500kb line.<br/>
+<br/>
+My downloads tends to slow down a lot in newer versions so the only option is to go back to 0.674 with "send small buffer" option enabled. <br/>
+<br/>
+The newer versions are very bad <img alt=":(" class="smilies" height="15" src="/images/smilies/icon_sad.gif" title="Sad" width="15"/>.<br/>
+<br/>
+Ive read through the whole thread atleast 10 times.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			39 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=18">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Proposals”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

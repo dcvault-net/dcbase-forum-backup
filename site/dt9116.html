@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Hashing slow down computer too much - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=9116">Hashing slow down computer too much</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			38 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p47176">
+<div class="inner">
+<dl class="postprofile" id="profile47176">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17126">Cyborg</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-23 23:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47176">
+<h3 class="first"><a href="#p47176">Hashing slow down computer too much</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17126">Cyborg</a></strong> » </span>2004-03-29 01:48
+			</p>
+<div class="content">When i first installed and started 0.401 i didnt know what was wrong! 
+<br/>The CPU usage went up to 100% and stayed there!
+<br/>I thought it might only last for a while 'til the program had been booting up and "settled down", but after an hour or so, it was still really slow.
+<br/>
+<br/>It wasn't until i searched the forums for a while i found out that the program was hashing my shares (250GB).
+<br/>I couldn't use my computer in any way while hashing! I couldn't even use winamp! it was reeeaally slow! (i've got an AMD XP 2600+ with 512 MB RAM).
+<br/>
+<br/>You should display a popup windows or something similar every time the program starts hashing so the user knows what's going on (it's hard to notice the small statusbar at the bottom of the screen). And i also think you should lower the priority for it so one can use the computer in other ways while hashing.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47197">
+<div class="inner">
+<dl class="postprofile" id="profile47197">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47197">
+<h3><a href="#p47197"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-03-29 06:13
+			</p>
+<div class="content">The hashing thread <strong class="text-strong">is</strong> set to run at low (idle?) priority, so I don't know what your problem is...  The only thing that it should affect is stuff that requires a lot of hard drive access.  Anyway, once the hashing gets done the first time, you'll never have to wait for more than a few seconds at a time while new files are hashed.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47211">
+<div class="inner">
+<dl class="postprofile" id="profile47211">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-30 06:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47211">
+<h3><a href="#p47211">Re: Hashing slow down computer too much</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a></strong> » </span>2004-03-29 07:01
+			</p>
+<div class="content"><blockquote><div><cite>Cyborg wrote:</cite>It wasn't until i searched the forums for a while i found out that the program was hashing my shares (250GB).<br/>I couldn't use my computer in any way while hashing! I couldn't even use winamp! it was reeeaally slow! (i've got an AMD XP 2600+ with 512 MB RAM).</div></blockquote>
+<br/>
+<br/>I've got a similar setup, with a smaller share though (about 50 gigs) and my system wasn't slow by any means during hashing. I didn't even notice it untill I tried opening another program, which opened a bit sluggish. I even had SETI running in the background which keeps CPU-load at full 100% all the time.
+<br/>
+<br/>Maybe you had some other highly HDD intense task running at the same time?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47222">
+<div class="inner">
+<dl class="postprofile" id="profile47222">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47222">
+<h3><a href="#p47222">Re: Hashing slow down computer too much</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2004-03-29 08:25
+			</p>
+<div class="content">I didn't even notice that dc++ was hasing, later i found out there were hash ID's in my share.. 
+<br/>I think a lot of people have configged their windows or hardware bad</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47229">
+<div class="inner">
+<dl class="postprofile" id="profile47229">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47229">
+<h3><a href="#p47229">Re: Hashing slow down computer too much</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-03-29 08:34
+			</p>
+<div class="content"><blockquote><div><cite>Cyborg wrote:</cite>(it's hard to notice the small statusbar at the bottom of the screen).</div></blockquote>
+<br/>How so? The names are constantly flashing across the status bar. It was the first thing I noticed.
+<br/>
+<br/>I also have SETI@Home running on my desktop which is a PIII866. The only way I noticed that it was actually hashing was the flashing names in the status bar. It didn't affect me in any way whatsoever.</div>
+<div class="signature" id="sig47229">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47233">
+<div class="inner">
+<dl class="postprofile" id="profile47233">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19852">crazy_snake</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-29 08:57</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47233">
+<h3><a href="#p47233"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19852">crazy_snake</a></strong> » </span>2004-03-29 09:06
+			</p>
+<div class="content">about hashing. i installed the new version of dc+ yesterday, and my old maxtor 120gig crashed with damaged clusters exactly where dc+ were hashing with difficulties...i think my hd crashed because it was old...but ..but.... groaarrr !!
+<br/>is there a way that hashing damage hd (logical, there are more access but....) ?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47235">
+<div class="inner">
+<dl class="postprofile" id="profile47235">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47235">
+<h3><a href="#p47235"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2004-03-29 09:23
+			</p>
+<div class="content">That people would complain that hashing interferes with their computer use - well, expected, and I'm sure it does for many people. However, I hadn't expected someone to blame DC++ for faulty, failing hardware.
+<br/>
+<br/>This is all quite amusing.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47238">
+<div class="inner">
+<dl class="postprofile" id="profile47238">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47238">
+<h3><a href="#p47238"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2004-03-29 09:31
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>I hadn't expected someone to blame DC++ for faulty, failing hardware.</div></blockquote>Well, this is actually often the case when you have a forum for something. People always take the opportunity to blame something/someone for things that aren't actually related. I've seen this in support-departments for a long time. Something psychological <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> . But I agree with you, it's kinda strange how people can blame DC++ for just about anything</div>
+<div class="signature" id="sig47238">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47244">
+<div class="inner">
+<dl class="postprofile" id="profile47244">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 360</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-16 10:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47244">
+<h3><a href="#p47244">Re: Hashing slow down computer too much</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a></strong> » </span>2004-03-29 09:53
+			</p>
+<div class="content"><blockquote><div><cite>TheParanoidOne wrote:</cite><blockquote><div><cite>Cyborg wrote:</cite>(it's hard to notice the small statusbar at the bottom of the screen).</div></blockquote><br/>How so? The names are constantly flashing across the status bar. It was the first thing I noticed.</div></blockquote>
+<br/>
+<br/>Well, not if you have long folder names (like me)... original releases tend to get long and since the only thing that differs between the files is the extension you can't see anything moving down there... maybe the path name could be cut down to fit? Probably hard to know how much space is available though?</div>
+<div class="signature" id="sig47244"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://whyrar.omfg.se">http://whyrar.omfg.se</a> - Guide to RAR and DC behaviour!<br/><a class="postlink" href="http://bodstrom.omfg.se">http://bodstrom.omfg.se</a> - BodstrÃ¶msamhÃ¤llet, LÃ¤nksamling om hoten mot vÃ¥r personliga integritet</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47261">
+<div class="inner">
+<dl class="postprofile" id="profile47261">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17126">Cyborg</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-23 23:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47261">
+<h3><a href="#p47261">Re: Hashing slow down computer too much</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17126">Cyborg</a></strong> » </span>2004-03-29 13:25
+			</p>
+<div class="content"><blockquote><div><cite>TheParanoidOne wrote:</cite><blockquote><div><cite>Cyborg wrote:</cite>(it's hard to notice the small statusbar at the bottom of the screen).</div></blockquote><br/>How so? The names are constantly flashing across the status bar. It was the first thing I noticed.</div></blockquote>
+<br/>
+<br/>I didnt notice at all..it took dc++ like 1-2 minutes to hash each file.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47264">
+<div class="inner">
+<dl class="postprofile" id="profile47264">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47264">
+<h3><a href="#p47264"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2004-03-29 13:37
+			</p>
+<div class="content">Well, on my computer (Athlon XP 2100+/1.73GHz) DC++ hashes approximately 25-35MB/second depending on conditions. That's about 1.8GB/file to have to hash for a minute. Either your share consists entirely of enormous files, your disk system sucks (DMA mode enabled?), or your filesystem sucks (excessive fragmentation?).
+<br/>
+<br/>Your computer sounds broken, and blaming DC++ is silly.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47272">
+<div class="inner">
+<dl class="postprofile" id="profile47272">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47272">
+<h3><a href="#p47272"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-03-29 14:09
+			</p>
+<div class="content"><blockquote><div><cite>crazy_snake wrote:</cite>is there a way that hashing damage hd (logical, there are more access but....) ?</div></blockquote>
+<br/>Um, no. Hashing is not doing anything wild and wacky to your disk. It is reading the contents of a file, doing a calculation and then moving on to the next file.
+<br/>
+<br/>DC++ would be reading the disk anyway, if people were uploading from you.
+<br/>
+<br/>If your disk has bad clusters, that should be the warning sign for you to buy a new disk. You shouldn't being waiting until it actually stops working.</div>
+<div class="signature" id="sig47272">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47369">
+<div class="inner">
+<dl class="postprofile" id="profile47369">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17126">Cyborg</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-23 23:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47369">
+<h3><a href="#p47369"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17126">Cyborg</a></strong> » </span>2004-03-29 22:49
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>Your computer sounds broken, and blaming DC++ is silly.</div></blockquote>
+<br/>
+<br/>It's not broken! I just baught it and ALL other program/games works just fine! I've also used SiSoft Sandra to check the speeds of all my components and i compared them to average results by other users and they matched really good!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47398">
+<div class="inner">
+<dl class="postprofile" id="profile47398">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47398">
+<h3><a href="#p47398"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2004-03-30 06:36
+			</p>
+<div class="content">Your answer is not really relevant. Try using another similar p2p program and see if it produces the same results, then you might have something to say. New harddisks are sometimes damaged when you get them, it's not that uncommon.</div>
+<div class="signature" id="sig47398"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47413">
+<div class="inner">
+<dl class="postprofile" id="profile47413">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47413">
+<h3><a href="#p47413"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-03-30 09:38
+			</p>
+<div class="content">I don't think it's a case of "broken" but more a case of misconfiguration such as not enabling and/or correctly configuring DMA.</div>
+<div class="signature" id="sig47413">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47476">
+<div class="inner">
+<dl class="postprofile" id="profile47476">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19924">azoapes</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-30 18:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47476">
+<h3><a href="#p47476">Hashing... again....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19924">azoapes</a></strong> » </span>2004-03-30 19:09
+			</p>
+<div class="content">I was thinking about, what's hashing REALLY abaout, like...what's improving whith this feature?
+<br/>The only thing I can think of, is a shorter initializingperiod, but does that overweigh the fact that it takes about three hours to hash a 200GB share?
+<br/>
+<br/>Just a thought...</div>
+<div class="signature" id="sig47476">I'm not stupid, I'm just having unlucky moments while I'm thinking...  ~Pooh Bear, 1998</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47561">
+<div class="inner">
+<dl class="postprofile" id="profile47561">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47561">
+<h3><a href="#p47561">Re: Hashing... again....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-31 02:36
+			</p>
+<div class="content"><blockquote><div><cite>azoapes wrote:</cite>I was thinking about, what's hashing REALLY abaout, like...what's improving whith this feature?</div></blockquote>
+<br/>What's in it for you?
+<br/>
+<br/>Congratulations, you've asked <strong class="text-strong">the most relevant question in the thread</strong>.  (no, not sarcasm)
+<br/>
+<br/>Hashing uniquely fingerprints the contents of a file - change a byte, and the calculated hash changes.  But rename the file, and you can still know it's the same file.  Ever collect videos, where everyone has their own naming scheme?  Finding alternate sources and adding them manually should be a very rare occurence when everyone has hashed their shares.
+<br/>
+<br/>Plus, hashing will enable checking to see if your downloads are being corrupted in transfer (and fix them if they are).
+<br/>
+<br/>It will allow you to search for something, go on the web, and see if other people think it's a complete file, or a fake one.
+<br/>
+<br/>
+<br/>There.  Those are the major points.  If you search around the forum, you may find other nuggets as well.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47571">
+<div class="inner">
+<dl class="postprofile" id="profile47571">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17126">Cyborg</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 41</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-23 23:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47571">
+<h3><a href="#p47571"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17126">Cyborg</a></strong> » </span>2004-03-31 03:20
+			</p>
+<div class="content"><blockquote><div><cite>TheParanoidOne wrote:</cite>I don't think it's a case of "broken" but more a case of misconfiguration such as not enabling and/or correctly configuring DMA.</div></blockquote><br/><br/>Might be. DMA is enabled on my computer, but i dont know how to configure it.<br/><br/><br/><blockquote><div><cite>GargoyleMT wrote:</cite>Hashing uniquely fingerprints the contents of a file - change a byte, and the calculated hash changes.</div></blockquote>
+<br/>
+<br/>Not really. In that case, you've created the most powerful compression one could ever think of. If what you claim is true, that would mean that one could reverse the hashing to get a huge file of just a small set of characters.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47576">
+<div class="inner">
+<dl class="postprofile" id="profile47576">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47576">
+<h3><a href="#p47576"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-31 03:36
+			</p>
+<div class="content"><blockquote><div><cite>Cyborg wrote:</cite>Not really. In that case, you've created the most powerful compression one could ever think of. If what you claim is true, that would mean that one could reverse the hashing to get a huge file of just a small set of characters.</div></blockquote>
+<br/>
+<br/><!-- m --><a class="postlink" href="http://www.cs.technion.ac.il/~biham/Reports/Tiger/tiger/tiger.html">http://www.cs.technion.ac.il/~biham/Rep ... tiger.html</a><!-- m -->
+<br/><!-- m --><a class="postlink" href="http://www.geocities.com/fra_u_d/">http://www.geocities.com/fra_u_d/</a><!-- m --> <em class="text-italics">(caution, this is humor)</em>
+<br/><!-- m --><a class="postlink" href="http://www.md5crk.com/?sec=whatismd5crk">http://www.md5crk.com/?sec=whatismd5crk</a><!-- m -->
+<br/><!-- m --><a class="postlink" href="http://www.iks-jena.de/mitarb/lutz/security/cryptfaq/q99.html">http://www.iks-jena.de/mitarb/lutz/secu ... q/q99.html</a><!-- m -->
+<br/>
+<br/>Please read, or at least skim.
+<br/>
+<br/><span style="font-size: 75%; line-height: 116%;">Hashes do not imply reversibility.<br/>What you're referring to (two files having the same hash) is called a collision.</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47590">
+<div class="inner">
+<dl class="postprofile" id="profile47590">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-31 03:40</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47590">
+<h3><a href="#p47590"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a></strong> » </span>2004-03-31 04:22
+			</p>
+<div class="content"><blockquote><div><cite>TheParanoidOne wrote:</cite>Um, no. Hashing is not doing anything wild and wacky to your disk. It is reading the contents of a file, doing a calculation and then moving on to the next file.</div></blockquote>
+<br/>
+<br/>I'm sure this is fine for all of you users who share less than 19982 files with a total size of 271 GB</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47591">
+<div class="inner">
+<dl class="postprofile" id="profile47591">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47591">
+<h3><a href="#p47591"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2004-03-31 04:26
+			</p>
+<div class="content">Elitism really works better when you're elite.
+<br/>
+<br/>20k files of 271GB total size is not close to special or particularly unusual in DC; I've had twice that, for example, and there were always much larger shares than mine around.
+<br/>
+<br/>Despite that, hashing has worked quite well for me.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47603">
+<div class="inner">
+<dl class="postprofile" id="profile47603">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47603">
+<h3><a href="#p47603"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-31 04:58
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>Elitism really works better when you're elite. </div></blockquote><br/><img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/><br/><br/><blockquote><div><cite>dpm wrote:</cite>I'm sure this is fine for all of you users who share less than 19982 files with a total size of 271 GB</div></blockquote>
+<br/>Works great for me: 39,081  438,95GB.
+<br/>
+<br/>I'm not a huge sharer, but I am a dev.  Hashing my share takes overnight, but even when it's not timed well, I can use my computer just fine.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47607">
+<div class="inner">
+<dl class="postprofile" id="profile47607">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-31 03:40</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47607">
+<h3><a href="#p47607"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a></strong> » </span>2004-03-31 05:29
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>Works great for me: 39,081  438,95GB.<br/><br/>I'm not a huge sharer, but I am a dev.  Hashing my share takes overnight, but even when it's not timed well, I can use my computer just fine.</div></blockquote>
+<br/>
+<br/>So I take it you too are running about 80 or so processes normally?
+<br/>(this is far from the problem.  I run two direct connect hubs, apache/php, mysql, all of the normal programs one uses, etc.  Too many processes is not a problem when there is no hashing)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47609">
+<div class="inner">
+<dl class="postprofile" id="profile47609">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47609">
+<h3><a href="#p47609"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2004-03-31 05:40
+			</p>
+<div class="content">I run a DC hub, Apache/mod_python, MySQL, all the normal programs one uses, etc.
+<br/>
+<br/>And, oh, wait, it works perfectly.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47613">
+<div class="inner">
+<dl class="postprofile" id="profile47613">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-31 03:40</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47613">
+<h3><a href="#p47613"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a></strong> » </span>2004-03-31 06:01
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>I run a DC hub, Apache/mod_python, MySQL, all the normal programs one uses, etc.<br/><br/>And, oh, wait, it works perfectly.</div></blockquote>
+<br/>
+<br/>I don't call 8 GB an hour consuming 30% or, 1 GHz of processing power "fine"</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47617">
+<div class="inner">
+<dl class="postprofile" id="profile47617">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47617">
+<h3><a href="#p47617"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2004-03-31 06:17
+			</p>
+<div class="content">8GB/hour of tiger hashing consuming 30% of (presumably a 3+GHz Pentium 4?) strikes me as implausible. Here's why:
+<br/>
+<br/><a class="postlink" href="http://www.eskimo.com/~weidai/benchmarks.html">This</a> site provides some hash speeds that have proven fairly reasonable in my experience. With that in mind, the 8GB/hour number is equivalent to 2.27MB/s. Compare this with 40MB/s for Crypto++ on a (again, presumably) lesser machine than yours.
+<br/>
+<br/>There's an order of magnitude difference. Can you explain this?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47620">
+<div class="inner">
+<dl class="postprofile" id="profile47620">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-31 03:40</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47620">
+<h3><a href="#p47620"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a></strong> » </span>2004-03-31 06:35
+			</p>
+<div class="content">So far, since 9pm, it appears to have hashed all of 21 GB.
+<br/>
+<br/>This is assuming it hashes alphabetically through my share, recursively, which would lead it to start at Download/250GB/Anime/Chobits/
+<br/>
+<br/>And ack, there seems to be no way to upload a file.
+<br/>
+<br/><img alt="Image" class="postimage" src="http://dpm.resnet.tamu.edu/tasks.png"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47622">
+<div class="inner">
+<dl class="postprofile" id="profile47622">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47622">
+<h3><a href="#p47622"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2004-03-31 06:48
+			</p>
+<div class="content">CPU usage of a dc++ client is dependent on three important factors. The number of users you faces, the number of searches you recieve and the number of files you share. Ofcourse Number of users and number of searches can be considered highly correlated.. Its not the amount in size that is important.. its the number of files.. So your picture are utterly useless.</div>
+<div class="signature" id="sig47622">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47623">
+<div class="inner">
+<dl class="postprofile" id="profile47623">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15112">OrangeSlice</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-10 00:53</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47623">
+<h3><a href="#p47623"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15112">OrangeSlice</a></strong> » </span>2004-03-31 06:49
+			</p>
+<div class="content">dpm, hashing might be going very slow for you because you have all those other processes taking up cpu time and since the hashing thread priority for dc++ is set to low all other processes running on the system get priority over it.
+<br/>
+<br/>see what happens if you close everything else then run dc++</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47627">
+<div class="inner">
+<dl class="postprofile" id="profile47627">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-31 03:40</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47627">
+<h3><a href="#p47627"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a></strong> » </span>2004-03-31 07:05
+			</p>
+<div class="content"><blockquote><div><cite>OrangeSlice wrote:</cite>dpm, hashing might be going very slow for you because you have all those other processes taking up cpu time and since the hashing thread priority for dc++ is set to low all other processes running on the system get priority over it.<br/><br/>see what happens if you close everything else then run dc++</div></blockquote>
+<br/>
+<br/>It's not the slowness that matters to me.  I question the fact that it is running on low priority.  Setting the DCPlusPlus Process itself to a lower priority eliminated the blips I had, along with restricting it to running on just one "processor" (I have HyperThreading)  Closing other programs is hardly an option, as 600 other people depend on my computer being on 24/7  (as you can tell by the two Direct Connect Hubs running)  They also take very little processor power.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47629">
+<div class="inner">
+<dl class="postprofile" id="profile47629">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-30 06:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47629">
+<h3><a href="#p47629"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a></strong> » </span>2004-03-31 07:10
+			</p>
+<div class="content">Ziisas, DPM.
+<br/>
+<br/>You have a whopping 80 processes running and you're complaining about high CPU usage? I don't think I could even find 80 tasks to run on my system... (unless I'd just randomly start up programs unnecessarily)
+<br/>
+<br/>And since DC++ hashing is Low Priority, no surprise it's going to take some time.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47630">
+<div class="inner">
+<dl class="postprofile" id="profile47630">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15112">OrangeSlice</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-10 00:53</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47630">
+<h3><a href="#p47630"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15112">OrangeSlice</a></strong> » </span>2004-03-31 07:10
+			</p>
+<div class="content">acquire dedicated server, problem solved</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47633">
+<div class="inner">
+<dl class="postprofile" id="profile47633">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-30 06:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47633">
+<h3><a href="#p47633"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a></strong> » </span>2004-03-31 07:13
+			</p>
+<div class="content"><blockquote><div><cite>vellu wrote:</cite>Ziisas, DPM.<br/><br/>You have a whopping 80 processes running and you're complaining about high CPU usage? I don't think I could even find 80 tasks to run on my system... (unless I'd just randomly start up programs unnecessarily)<br/><br/>And since DC++ hashing is Low Priority, no surprise it's going to take some time.</div></blockquote>
+<br/>
+<br/>Strike that....sleepy eyes should've read the thread more carefully....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47636">
+<div class="inner">
+<dl class="postprofile" id="profile47636">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-31 03:40</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47636">
+<h3><a href="#p47636"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=19952">dpm</a></strong> » </span>2004-03-31 07:19
+			</p>
+<div class="content"><blockquote><div><cite>vellu wrote:</cite>Ziisas, DPM.<br/><br/>You have a whopping 80 processes running and you're complaining about high CPU usage? I don't think I could even find 80 tasks to run on my system... (unless I'd just randomly start up programs unnecessarily)<br/></div></blockquote>
+<br/>It's easier than you think.
+<br/>
+<br/>There's about 20-30 default Windows processes.  DC processes number another 3.  Of course there is iTunes, which comes with the iPodHelper service, mIrc, Trillian, TorrentStorm (bitorrent) Apache, mySQL, explorer, iExplore, CoolMon, rainlendar, daemon tools, UltraMon, I mean, I don't see how you can have less than 60 processes..</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47639">
+<div class="inner">
+<dl class="postprofile" id="profile47639">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47639">
+<h3><a href="#p47639"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2004-03-31 07:23
+			</p>
+<div class="content">You still haven't answered my post in this thread.. The cpu-usage is not interesting until you have answered it.</div>
+<div class="signature" id="sig47639">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47650">
+<div class="inner">
+<dl class="postprofile" id="profile47650">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-30 06:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47650">
+<h3><a href="#p47650"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a></strong> » </span>2004-03-31 09:10
+			</p>
+<div class="content"><blockquote><div><cite>dpm wrote:</cite>It's easier than you think.<br/><br/>There's about 20-30 default Windows processes.  DC processes number another 3.  Of course there is iTunes, which comes with the iPodHelper service, mIrc, Trillian, TorrentStorm (bitorrent) Apache, mySQL, explorer, iExplore, CoolMon, rainlendar, daemon tools, UltraMon, I mean, I don't see how you can have less than 60 processes..</div></blockquote>
+<br/>
+<br/>True enough...didn't really read through the thread carefully enough before posting earlier...duh.
+<br/>
+<br/>On a typical workstation though 80 is a lot. My system (win xp pro) runs after reboot with firewalls/antivirs/few miscellaneous at 40 processes. To get that up to 80 would require quite the multitasking madness without starting any extra servers/services.
+<br/>
+<br/>Typically my system stays at about 45-48 processes when doing what ever it is I happen to be doing. Hardly ever over 50.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p48530">
+<div class="inner">
+<dl class="postprofile" id="profile48530">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=20256">Yorthen</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-04-05 21:09</dd>
+</dl>
+<div class="postbody">
+<div id="post_content48530">
+<h3><a href="#p48530"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=20256">Yorthen</a></strong> » </span>2004-04-05 21:19
+			</p>
+<div class="content"><blockquote><div><cite>vellu wrote:</cite><blockquote><div><cite>dpm wrote:</cite>It's easier than you think.<br/><br/>There's about 20-30 default Windows processes.  DC processes number another 3 ....... I don't see how you can have less than 60 processes..</div></blockquote><br/><br/>On a typical workstation though 80 is a lot. My system (win xp pro) runs after reboot with firewalls/antivirs/few miscellaneous at 40 processes. To get that up to 80 would require quite the multitasking madness without starting any extra servers/services.<br/><br/>Typically my system stays at about 45-48 processes when doing what ever it is I happen to be doing. Hardly ever over 50.</div></blockquote>
+<br/>
+<br/>It sounds like you both should spend some time going through which services you are running, after that take a look at the other programs you are running, are they all necessary? When my Win 2003 boots up I'm only running 24 processes. Running a lot of programs and/or servers/daemons I might reach 50 but then I wouldn't go complaining if the computer was a bit slow. Expecting anything else is unrealistic.
+<br/>
+<br/>--
+<br/>Edit
+<br/>The bad part about finding post via the search-function is that you might contribute to a dead conversation <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p48587">
+<div class="inner">
+<dl class="postprofile" id="profile48587">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-30 06:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content48587">
+<h3><a href="#p48587"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10950">vellu</a></strong> » </span>2004-04-06 08:17
+			</p>
+<div class="content"><blockquote><div><cite>Yorthen wrote:</cite>It sounds like you both should spend some time going through which services you are running, after that take a look at the other programs you are running, are they all necessary? When my Win 2003 boots up I'm only running 24 processes. Running a lot of programs and/or servers/daemons I might reach 50 but then I wouldn't go complaining if the computer was a bit slow. Expecting anything else is unrealistic.</div></blockquote>
+<br/>
+<br/>Oh no, I'm (we're) not complaining...My system runs perfectly with the processes I have.
+<br/>
+<br/>After a closer look I find the following (currently running 45 procs):
+<br/>
+<br/>There seems to be 22-23 processes that always start. On top of that there are some driver related procs (graphic card, printer, scanner, cdrw packet burning INCD, mouse) which add 8 procs, which gives 30 procs that cannot be avoided. Then it is absolutely necessary to start antivirus and firewall programs, which actually add quite a few processes, 8 total.
+<br/>
+<br/>This would give 38 procs always. After that it's non essentials like DUMeter, Daemon Tools, Seti, DC++, TVS, IExplorer (+taskmgr) for a total of 45 at the moment.
+<br/>
+<br/>And with these running (including Seti which always causes 100% CPU utilization) I hardly noticed the Hashing going on.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			38 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

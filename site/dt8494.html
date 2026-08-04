@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Potential Solution to Bandwidth Capping - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=8494">Potential Solution to Bandwidth Capping</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			10 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p44327">
+<div class="inner">
+<dl class="postprofile" id="profile44327">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18732">MrEcks@netjunkies.org</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-02 14:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44327">
+<h3 class="first"><a href="#p44327">Potential Solution to Bandwidth Capping</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18732">MrEcks@netjunkies.org</a></strong> » </span>2004-03-02 16:50
+			</p>
+<div class="content">OK, we all know bandwith cappers are out there and in some cases they are used ligitimately to reduce connection degredation, especially on ADSL connections which require some overhead for TCP retry's etc... But some people are just leeches and are happy to take all they can get without giving in return...
+<br/>
+<br/>With this in mind I have the following proposal... contribs welcome...
+<br/>
+<br/>In the DC++ client could there be a feature added to test application upload speed by sending about 5 MB of data packets to the local loopback interface of the host thereby determining the amount of upload bandwidth availiable? If there is no capping in place the test should take no more than a few seconds and the reported bandwidth shoud be off scale, if there is capping in place it can be calculated by the 5mb / time taken and sent to the hubs that the client connects to. This gives ops the ability to refuse entry to leechers or modems or can be used to enforce ratios.
+<br/>
+<br/>Ratios? Simple... When the users u/l speed is reported to a hub the hub can report it to other users whom that person is d/l from. The hub can have preset ratios (eg D/L speed = 4 x U/L speed) so when capped client A tries to D/L from client B in hub C, Client B gets the users u/l speed and ratio from hub C and caps u/l to client A at the hubs ratio speed! Make sense? (gcc not found? <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>) If the hubs ratio speed is 4:1 then a user with a 25K upload bandwidth could download from others at a maximum 100K. Geddit? ADSL users could cap at 1K below thier max upload speed and still get fast downlaods without performance degredation! Leechers capping at 1K could get a whopping 4K for thier troubles!
+<br/>
+<br/>Periodic requests by the hub or other clients for an U/L badwidth retest could be sent at random intervals to ensure capping software is not brought into play after initial test is run and will also allow sins to be forgiven if u/l bandwidth is incresed.
+<br/>
+<br/>Thoughts anyone?</div>
+<div class="signature" id="sig44327">Shift Happens....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44348">
+<div class="inner">
+<dl class="postprofile" id="profile44348">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44348">
+<h3><a href="#p44348"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-03-02 19:34
+			</p>
+<div class="content">No need to double post. Other thread removed.</div>
+<div class="signature" id="sig44348">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p44394">
+<div class="inner">
+<dl class="postprofile" id="profile44394">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7756">Qbert</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 73</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-07 08:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44394">
+<h3><a href="#p44394"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7756">Qbert</a></strong> » </span>2004-03-03 12:32
+			</p>
+<div class="content"><blockquote><div><cite>MrEcks@netjunkies.org wrote:</cite>... the following proposal.  In the DC++ client could there be a feature added ... When the users u/l speed is reported to a hub</div></blockquote><br/>There can't be a solution to this which resides completely on the client, because the client can say whatever it wants to whoever it wants.  (And that whatever could be lies.)<br/><br/><blockquote><div><cite>MrEcks@netjunkies.org wrote:</cite>If there is no capping in place the test should take no more than a few seconds and the reported bandwidth shoud be off scale</div></blockquote><br/>Should be yes, even though I'm not going to agree with the term 'off scale'.  But many factors could contribute it into not being as high as you would expect for every given attempt.<br/><br/><blockquote><div><cite>MrEcks@netjunkies.org wrote:</cite>...if there is capping in place it can be calculated...</div></blockquote><br/>If there is capping on the loopback interface or a larger generic domain, such as all network communcations, then maybe.  But most network capping programs can be very specific, being able to distinugish specific ports for specific connections.<br/><br/><blockquote><div><cite>MrEcks@netjunkies.org wrote:</cite>...Client B gets the users u/l speed and ratio from hub C and caps u/l to client A...</div></blockquote>
+<br/>I think its ironic that this solution to capping involves capping.  (But I do not sugguest that that is necessarilly a wrong or bad thing, even if it might be.)</div>
+<div class="signature" id="sig44394">My Visual Studio .NET 2003 is licensed under my name, and the same for my operating system... What about you?
+<br/>I surf on an OC3 without limitations, two to be exact, and I'm not joking.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44411">
+<div class="inner">
+<dl class="postprofile" id="profile44411">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18732">MrEcks@netjunkies.org</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-02 14:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44411">
+<h3><a href="#p44411"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18732">MrEcks@netjunkies.org</a></strong> » </span>2004-03-03 14:47
+			</p>
+<div class="content"><strong class="text-strong">Qbert Wrote:</strong> <blockquote class="uncited"><div>There can't be a solution to this which resides completely on the client, because the client can say whatever it wants to whoever it wants. (And that whatever could be lies.) <br/></div></blockquote>
+<br/>
+<br/>Well yes, the challenge is to provide some sort of validation in that case, perhaps a validation routine on the hub which can vary parameters of the test in order to detect fakes?. Im not too worried about people capable of redeveloping the client or coding to that degree, anyone with brains enough to redevelop the code to that degree is going to want to crack it anyway! 
+<br/>
+<br/>The vast majority of ppl will simply use capping software which will restrict either via application or interface(and no, I wont provide anyone reading this with an example, find it yourself!) which, as it exists outside of the client itself, should allow the client to produce a reliable analysis of its own upload speed.
+<br/>
+<br/>"Off Scale" could be defined as any result which returns higher than a preset value. Any loopbak interface should at least be able to retun a value of 10mbps or more.
+<br/>
+<br/>Network capping is unavoidable but I know a thing or two about network capping and the majority of the capping at the moment is on the client, not the network. I know this because if you do a simple large packet test to the remote ip (or its neigbours on the same segment that respond to such requests) then you notice that you get excellent throughput. Also DC++ uses random ports specifically to combat capping on specific ports(or so I am led to believe, I could, as always, be wrong). [/b]</div>
+<div class="signature" id="sig44411">Shift Happens....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p44716">
+<div class="inner">
+<dl class="postprofile" id="profile44716">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13213">Seisled</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-07 03:31</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44716">
+<h3><a href="#p44716"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13213">Seisled</a></strong> » </span>2004-03-06 23:15
+			</p>
+<div class="content">Rather than going through the difficulties of trying to detect who's capping, wouldn't it be easier to just introduce a capping mechanism into DC++ with a defined UL/DL ratio and then just run searches for known modified cheater clients?  Admittedly, this doesn't detect bandwidth-controlling apps like NetLimiter, but it seems to me that those who are currently cheating will have a much greater incentive to move to an unmodified client if a capping mechanism with a decent ratio is introduced.  I know this has been discussed before ad-nauseum, but it just seems like such a straightforward easy solution.  DC++k's capping mechanism works very well with a 1:4 UL/DL ratio.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44718">
+<div class="inner">
+<dl class="postprofile" id="profile44718">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44718">
+<h3><a href="#p44718"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2004-03-07 00:15
+			</p>
+<div class="content"><blockquote><div><cite>Seisled wrote:</cite>Rather than going through the difficulties of trying to detect who's capping, wouldn't it be easier to just introduce a capping mechanism into DC++ with a defined UL/DL ratio and then just run searches for known modified cheater clients?  Admittedly, this doesn't detect bandwidth-controlling apps like NetLimiter, but it seems to me that those who are currently cheating will have a much greater incentive to move to an unmodified client if a capping mechanism with a decent ratio is introduced.  I know this has been discussed before ad-nauseum, but it just seems like such a straightforward easy solution.  DC++k's capping mechanism works very well with a 1:4 UL/DL ratio.</div></blockquote>
+<br/>
+<br/>most modded clients have a similar ratio to dc++k, infact I think bcdc might be a little more harsh having a lower ratio, which in your opinion seems to make them fair.  I personally think that these are no way near as bad as NetLimiter and that most modded clients dont deserve to be banned.  Client Mods are great in my opinion, not to draw people away from DC++ but to find useful features and test them before they are implemented into DC++ (if they ever are)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p44729">
+<div class="inner">
+<dl class="postprofile" id="profile44729">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13213">Seisled</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-07 03:31</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44729">
+<h3><a href="#p44729"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13213">Seisled</a></strong> » </span>2004-03-07 01:00
+			</p>
+<div class="content"><blockquote class="uncited"><div>I personally think that these are no way near as bad as NetLimiter and that most modded clients dont deserve to be banned.</div></blockquote>
+<br/>
+<br/>I entirely agree with you there.  The cheater clients I was referring to in my previous post are clients specifically modified for the purpose of cheating.  I would NOT in any way consider DC++k or BCDC &amp; etc... to be cheater clients.  Sorry if there was confusion about this.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44736">
+<div class="inner">
+<dl class="postprofile" id="profile44736">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44736">
+<h3><a href="#p44736"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2004-03-07 03:32
+			</p>
+<div class="content"><blockquote><div><cite>Seisled wrote:</cite><blockquote class="uncited"><div>I personally think that these are no way near as bad as NetLimiter and that most modded clients dont deserve to be banned.</div></blockquote><br/><br/>I entirely agree with you there.  The cheater clients I was referring to in my previous post are clients specifically modified for the purpose of cheating.  I would NOT in any way consider DC++k or BCDC &amp; etc... to be cheater clients.  Sorry if there was confusion about this.</div></blockquote>
+<br/>
+<br/>Actually my fault, I forgot to make my main point being that I'd think more people would use NetLimiter for limiting then a cheating client.  I could easily be wrong there, but I was under the impression that NetLimiter was one of the bigger problems.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p44875">
+<div class="inner">
+<dl class="postprofile" id="profile44875">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18732">MrEcks@netjunkies.org</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-02 14:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44875">
+<h3><a href="#p44875">Simplified</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18732">MrEcks@netjunkies.org</a></strong> » </span>2004-03-08 08:57
+			</p>
+<div class="content">The issue at hand has nothing to do with the method of one's bandwidth capping but rather determining a fair way to distribute bandwidth. It only seems fair that users who provide high badwidth should be given the highest possible downloads whilst those who are stingy with thier bandwidth should not enjoy the same luxury.
+<br/>
+<br/>As stated  nicely by QBert:
+<br/>
+<br/><blockquote class="uncited"><div>There can't be a solution to this which resides completely on the client, because the client can say whatever it wants to whoever it wants. (And that whatever could be lies.) <br/></div></blockquote>
+<br/>
+<br/>A well run hub with decent software and capping controls would make the entire dc++ experierience more enjoyable by not only sharing files but also by sharing bandwidth.</div>
+<div class="signature" id="sig44875">Shift Happens....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44941">
+<div class="inner">
+<dl class="postprofile" id="profile44941">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13213">Seisled</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-07 03:31</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44941">
+<h3><a href="#p44941"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13213">Seisled</a></strong> » </span>2004-03-08 21:48
+			</p>
+<div class="content"><blockquote class="uncited"><div>It only seems fair that users who provide high badwidth should be given the highest possible downloads whilst those who are stingy with thier bandwidth should not enjoy the same luxury.</div></blockquote>
+<br/>
+<br/>I agree with you up to a point.  I think it's perfectly reasonable to limit shameless leechers who use massive bandwidth.  The point I might disagree with, however, is when it gets down to essentially punishing (or rewarding) people based upon their connection speed or capability.  This could be conceivably hellish for people who still use modems and already have a tough enough time as it is using direct connect.  Depending on how severe the limitations are, it could also punish ADSL users in what I feel would be an unduly harsh manner.
+<br/>Again, I agree with you to the extent that people not sharing any bandwidth and also people who are sharing very limited bandwidth when they are making use of T1/2/3 (or above) capabilities for downloading should be punished.  However, I think it would be best to try and avoid the sort of exclusionary bandwidth elitism that could possibly arise from capping people based solely on their bandwidth.
+<br/>Now, I'm not in any way opposed to a 1/4 ratio (which, as I mentioned before, I believe is fair), but looking at users with less capability and total bandwidth available and making special circumstances to accomodate them also seems reasonable to me.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			10 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

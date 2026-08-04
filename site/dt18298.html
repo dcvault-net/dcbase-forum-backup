@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>100% CPU load in DC++ v0.691. I need help. - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="27" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=27" itemprop="url"><span itemprop="title">Private Forums</span></a></span>
+<span class="crumb" data-forum-id="11" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=11" itemprop="url"><span itemprop="title">Dump</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=11&amp;t=18298">100% CPU load in DC++ v0.691. I need help.</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Drop a note here when you delete a post and so on so we can keep track of troublemakers...<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			37 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p92262">
+<div class="inner">
+<dl class="postprofile" id="profile92262">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92262">
+<h3 class="first"><a href="#p92262">100% CPU load in DC++ v0.691. I need help.</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-26 14:48
+			</p>
+<div class="content">Hello.<br/>
+<br/>
+I cannot use the new version of DC++ because it take all CPU and never goes down and the window freeze. All other programs are working perfectly in my computer so is not a Windows problem.<br/>
+<br/>
+The old/working version (0.674) takes:<br/>
+CPU    between 0 and 25%<br/>
+MEM   100-160MB<br/>
+PAGE  150-400MB (generally 150).<br/>
+Sometimes even this old version of DC++ jumps to 100% but it came back to normal after few minutes. In addition, if I think that it require too much CPU it set process' [priority to bellow normal, and everything is solved.<br/>
+<br/>
+I have WinXP SP2, 768MB RAM, AMD Athlon 1800+<br/>
+I am connected to 27 hubs. <br/>
+The Queue.xml has 5MB.<br/>
+I share 71GB in 745 files.<br/>
+<br/>
+___________________<br/>
+<br/>
+<br/>
+Please advice.<br/>
+<img alt=":?:" class="smilies" height="15" src="/images/smilies/icon_question.gif" title="Question" width="15"/> <img alt=":!:" class="smilies" height="15" src="/images/smilies/icon_exclaim.gif" title="Exclamation" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92265">
+<div class="inner">
+<dl class="postprofile" id="profile92265">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92265">
+<h3><a href="#p92265"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2006-08-26 15:49
+			</p>
+<div class="content">This sounds like hardware "problems" regarding disk I/O. Search this forum for hardware related info (This has been discussed before)</div>
+<div class="signature" id="sig92265">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92269">
+<div class="inner">
+<dl class="postprofile" id="profile92269">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 61</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-18 20:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92269">
+<h3><a href="#p92269"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a></strong> » </span>2006-08-26 16:01
+			</p>
+<div class="content">Disk I/O or networking related problems. Make sure you have installed the latest divers for your motherboard and network card.</div>
+<div class="signature" id="sig92269">Everyone's got their opinions - They'll tell ya 'bout 'em all the time...   /* Spock's Beard */</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92279">
+<div class="inner">
+<dl class="postprofile" id="profile92279">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92279">
+<h3><a href="#p92279"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-26 22:04
+			</p>
+<div class="content"><blockquote><div><cite>eMTee wrote:</cite>Disk I/O or networking related problems. Make sure you have installed the latest divers for your motherboard and network card.</div></blockquote>
+<br/>
+The drivers are always updated (incuding mainboard BIOS). I'm maniac, I know.<br/>
+<br/>
+But still... are you sure is network/harddrive related since none of the existing applications including the old version of DC++ behave nice?<br/>
+<br/>
+I have some services stopped. Maybe I should try to start all services then to reinstall DC++ ?</div>
+<div class="signature" id="sig92279">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92280">
+<div class="inner">
+<dl class="postprofile" id="profile92280">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 61</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-18 20:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92280">
+<h3><a href="#p92280"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a></strong> » </span>2006-08-26 22:24
+			</p>
+<div class="content">You should not reinstall DC++ you should check what service/software can affect DC++'s network performace by temporarily stopping them. I would start with any security related software you have installed.</div>
+<div class="signature" id="sig92280">Everyone's got their opinions - They'll tell ya 'bout 'em all the time...   /* Spock's Beard */</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92286">
+<div class="inner">
+<dl class="postprofile" id="profile92286">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92286">
+<h3><a href="#p92286"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2006-08-27 02:56
+			</p>
+<div class="content">Is this when your DC++ is hashing files or do you experience it randomly?</div>
+<div class="signature" id="sig92286">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92293">
+<div class="inner">
+<dl class="postprofile" id="profile92293">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92293">
+<h3><a href="#p92293"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-27 08:15
+			</p>
+<div class="content"><blockquote><div><cite>eMTee wrote:</cite>You should not reinstall DC++ you should check what service/software can affect DC++'s network performace by temporarily stopping them. I would start with any security related software you have installed.</div></blockquote>
+
+Zone Alarm and PeerGuardian.<br/>
+Of course I turned them off. Both.<br/>
+They were correctly configured since the old version of DC++ is working.<br/>
+<br/>
+Anyway you give me a new idea: what is diferent/new between version 0674 and 0691. Because that new feature made the new version not to work.<br/>
+If I remember corectly the most important thing will be support for UPnP.<br/>
+Right?<br/>
+<br/>
+<blockquote><div><cite>Guitarm wrote:</cite> <br/>
+No. It hashed all files ok. <br/>
+It does this when it starts (and try to download files).
+</div></blockquote>
+
+OH! Very important. Sorry I forgot about this!!!!<br/>
+I replaced its empty 'Queue.xml' with the one from my old DC++ (5MB).<br/>
+I want to continue my downloads. If this is imposibble then, there is no point in installing the new version.<br/>
+Also I set the temporary folder to the folder already used by the old DC++.</div>
+<div class="signature" id="sig92293">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92298">
+<div class="inner">
+<dl class="postprofile" id="profile92298">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92298">
+<h3><a href="#p92298"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-27 09:32
+			</p>
+<div class="content">OK.<br/>
+I reinstalled the program. Redo the hash. Add the old Queue.xml and connected to my favourite hubs (more than 20). CPU between 40-100% (mostly in 100).<br/>
+<br/>
+I started to disconect and DC++ took 35-96% for 10 hubs connected.<br/>
+I started to disconect more and DC++ took 10-30% for 5 hubs connected.<br/>
+Come on... this is too much for 5 lazy hubs!<br/>
+I think this is because of high number of searches that rich me: 49/sec.<br/>
+This sucks!<br/>
+<br/>
+Can you tell me on how many hubs are you guys connected and your CPU speed and load?</div>
+<div class="signature" id="sig92298">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92302">
+<div class="inner">
+<dl class="postprofile" id="profile92302">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7686">Xan1977</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 627</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-06-06 01:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92302">
+<h3><a href="#p92302"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7686">Xan1977</a></strong> » </span>2006-08-27 11:08
+			</p>
+<div class="content">Connected to 24 hubs for this purpose and CPU is bouncing between 5 and 10 percent for DC++ .694.<br/>
+You mentioned the Queue a few times.  What happens with a new install of DC++ without adding your old queue?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92303">
+<div class="inner">
+<dl class="postprofile" id="profile92303">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92303">
+<h3><a href="#p92303"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2006-08-27 11:15
+			</p>
+<div class="content">This sounds seriously weird. I'm guessing hardware problems anyway...<br/>
+<br/>
+Could you please try a completely clean installation and add hubs (and files) "manually" instead of copying in the "old" XML files? (Just to verify that it's not DC++'s fault).<br/>
+<br/>
+I have a similar setup as you (XP 1800+, normal IDE disks (who actually turned out to be slow when using DC++) and a cheap Thaiwan mobo) and I had some problems with hashing, but that was all I noticed.</div>
+<div class="signature" id="sig92303">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92306">
+<div class="inner">
+<dl class="postprofile" id="profile92306">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 61</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-18 20:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92306">
+<h3><a href="#p92306"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a></strong> » </span>2006-08-27 14:27
+			</p>
+<div class="content"><blockquote><div><cite>fedra wrote:</cite>
+Anyway you give me a new idea: what is diferent/new between version 0674 and 0691. Because that new feature made the new version not to work.</div></blockquote>Main differences are the rewritten socket code and moving towards to a new communication protocol called <a class="postlink" href="http://dcpp.net/faq/index.php?action=artikel&amp;cat=6&amp;id=4&amp;artlang=en&amp;highlight=adc">ADC</a>. And ofcourse a tons of new features. The complete changelog : <a class="postlink" href="http://svn.sourceforge.net/viewvc/dcplusplus/dcplusplus/trunk/changelog.txt?revision=641&amp;view=markup">http://svn.sourceforge.net/viewvc/dcplu ... iew=markup</a>
+<blockquote><div><cite>fedra wrote:</cite>If I remember corectly the most important thing will be support for UPnP.Right?</div></blockquote>Nope. Its supported way back since 0.403x<blockquote><div><cite>fedra wrote:</cite>I replaced its empty 'Queue.xml' with the one from my old DC++ (5MB).</div></blockquote>Could be the source of the problem.
+<blockquote><div><cite>fedra wrote:</cite>I want to continue my downloads. If this is imposibble then, there is no point in installing the new version.</div></blockquote>Its not impossible just was made harder. That's why many people dont want to upgrade. There are points to upgrade tough : more features and less bugs...
+<blockquote><div><cite>fedra wrote:</cite>Also I set the temporary folder to the folder already used by the old DC++.</div></blockquote>It can't be a problem if you upgraded from DC++ 0.674 (Could be if you used certain modded version based on 0.674)<br/>
+<br/>
+Testing with empty queue is a good idea. But if your cpu load goes down with closing hubs (means reducing network traffic) it sounds to me the suspicion of network related hardware or software problem.<br/>
+What kind of netconnection you have and how do you connect to the net?<blockquote class="uncited"><div>Can you tell me on how many hubs are you guys connected and your CPU speed and load?</div></blockquote>If I connect to 10 hubs (about 50000 users overall) the cpu load is around 2-3% (A64 3500+ CPU, 1Gb, XPSP2, 3M/384k DSL connection through a router, 115Gb share, almost empty queue)</div>
+<div class="signature" id="sig92306">Everyone's got their opinions - They'll tell ya 'bout 'em all the time...   /* Spock's Beard */</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92317">
+<div class="inner">
+<dl class="postprofile" id="profile92317">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92317">
+<h3><a href="#p92317"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-27 20:22
+			</p>
+<div class="content">Thanks alot for your elaborate answer.<br/>
+<blockquote><div><cite>eMTee wrote:</cite>What kind of netconnection you have and how do you connect to the net?</div></blockquote>
+
+I am connected to Internet using 2Mbit DSL line through a NetGear modem/router.<br/>
+There is another person in this network who uses the same internet connection (but he came recently).<br/>
+<br/>
+I have dinamic IP (it changes 1-3 times per day so I have to check my external IP using this page:<br/>
+<a class="postlink" href="http://bionixwallpaper.com/show-my-ip.php">http://bionixwallpaper.com/show-my-ip.php</a> ,  everytime I start the computer.<br/>
+Then I insert the IP (if changed) into DC++ .<br/>
+DC++ is configured to "Firewall with manual port forwarding"<br/>
+using the ports 8989 TCP/UDP, which are forwarded in router.<br/>
+The old version of DC++ is working without problems under this configuration.<br/>
+UPnP service is disabled in my computer.<br/>
+<br/>
+<br/>
+<br/>
+<blockquote><div><cite>eMTee wrote:</cite>Testing with empty queue is a good idea. But if your cpu load goes down with closing hubs (means reducing network traffic) it sounds to me the suspicion of network related hardware or software problem.</div></blockquote>
+Do you have any idea how to test that.<br/>
+Or do you have an idea where to look for problems.<br/>
+I made a TCP/IP stack reset recently, just in case, but DC++ still take all CPU when connected to more than 5-10 hubs.<br/>
+<br/>
+I hacked my Windows (XP SP2) to accept 200 half-opened connections instead of 10.</div>
+<div class="signature" id="sig92317">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92337">
+<div class="inner">
+<dl class="postprofile" id="profile92337">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 61</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-18 20:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92337">
+<h3><a href="#p92337"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a></strong> » </span>2006-08-28 09:04
+			</p>
+<div class="content">Hard case <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/>  I can only guessing...<br/>
+Have you tried it with empty queue?<br/>
+How does your comp connected to the router (by usb or ethernet)?<br/>
+Have you tried the DC++ setting Safe and Compressed Transfers set off?<br/>
+What happens with the cpu load if you boot up your XP in Safe mode with networking support and run DC++?<br/>
+<br/>
+The XP sockets reset was a good idea. I think the half opened connection setting cannot bother this - AFAIK it is set above 200 by default in XPSP1 and earlier.<br/>
+<br/>
+(offtopic : check out what dynamic DNC provider support built on your router. Chose one and make a ddns account. This way you dont need to type your external IP at each and every start of DC++)</div>
+<div class="signature" id="sig92337">Everyone's got their opinions - They'll tell ya 'bout 'em all the time...   /* Spock's Beard */</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92341">
+<div class="inner">
+<dl class="postprofile" id="profile92341">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92341">
+<h3><a href="#p92341"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 10:01
+			</p>
+<div class="content">&gt; Have you tried it with empty queue?<br/>
+<br/>
+Yes.<br/>
+Empty queue and many hubs = 100% CPU load.<br/>
+Empty queue and no hubs      = 0% CPU load.<br/>
+The CPU is not affected by the queue but only by the number of hubs connected.<br/>
+<br/>
+&gt; How does your comp connected to the router (by usb or ethernet)?<br/>
+Ethernet network using a hub or switch.<br/>
+<br/>
+&gt; Have you tried the DC++ setting Safe and Compressed Transfers set off?<br/>
+I just tried a second ago. The answer is: no change. I still have 100% CPU load.<br/>
+<br/>
+&gt; What happens with the cpu load if you boot up your XP in Safe mode with networking support and run DC++?<br/>
+Didn't tried. I will.<br/>
+<br/>
+<br/>
+&gt; (offtopic : check out what dynamic DNC provider support built on your router. Chose one and make a ddns account. This way you dont need to type your external IP at each and every start of DC++)<br/>
+Thanks!!!<br/>
+<br/>
+------------------------------<br/>
+<br/>
+<br/>
+This new version worked few hours until now (I still use the old version) and in this few hours it downloaded only seven bz2 files in the 'FileLists' folder.</div>
+<div class="signature" id="sig92341">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92342">
+<div class="inner">
+<dl class="postprofile" id="profile92342">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92342">
+<h3><a href="#p92342"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 10:15
+			</p>
+<div class="content">I saw another strange thing:<br/>
+<br/>
+now I am connectet to 11 hubs and the CPU is incredible low, between 7 and 25%.<br/>
+But still, DC++ window respond very late, something like 1 second.<br/>
+If I am in another program and switch to DC++ window, it freeze for 1 second (not repainted).  Also if I press the main menu or other child windows in DC++, theprogram freeze a little bit. No always.<br/>
+<br/>
+No I go to restart Windows in safe mode.<br/>
+I will post the answer later.</div>
+<div class="signature" id="sig92342">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92345">
+<div class="inner">
+<dl class="postprofile" id="profile92345">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92345">
+<h3><a href="#p92345"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 10:48
+			</p>
+<div class="content">Ok. Looks like tooday the CPU load is lower than yesterday but it is still very high.<br/>
+I also observed that the CPU load is much lower without the debug file 'DCPlusPlus.pdb'.<br/>
+<br/>
+-------------<br/>
+<br/>
+Now the experiment with Windows in safe mode.<br/>
+<br/>
+The first picture is the CPU load in Windows in 'normal' mode:<br/>
+<img alt="Image" class="postimage" src="http://www.bionixwallpaper.com/images/DCpp-forum/normal-mode.png"/><br/>
+<br/>
+The second picture is made in Windows in safe mode.<br/>
+<img alt="Image" class="postimage" src="http://www.bionixwallpaper.com/images/DCpp-forum/safe%20mode.png"/><br/>
+<br/>
+As you can see,  in Safe mode, the CPU load is even higher!<br/>
+Strange!!<br/>
+<br/>
+--------------<br/>
+<br/>
+Also strange is that even if DC++ doesn't take all the CPU like yesterday, the applications still respond very late like a program took all the CPU.<br/>
+I think that Task Manager make an average once per second, and in reality for very short time DC++ still take all the CPU.</div>
+<div class="signature" id="sig92345">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92349">
+<div class="inner">
+<dl class="postprofile" id="profile92349">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 61</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-18 20:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92349">
+<h3><a href="#p92349"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a></strong> » </span>2006-08-28 11:23
+			</p>
+<div class="content"><blockquote><div><cite>fedra wrote:</cite>As you can see,  in Safe mode, the CPU load is even higher!<br/>
+Strange!!</div></blockquote>Thats ok. In safe mode key I/O drivers arent loaded.<blockquote><div><cite>fedra wrote:</cite>I think that Task Manager make an average once per second, and in reality for very short time DC++ still take all the CPU.</div></blockquote>Exactly. Also with debug file its normal eating a bit more resources. <br/>
+I hope seeing these information others has more idea what the heck is going on here. I remember there were 3-4 independent posts about the same problem with 0.68x versions in late spring and none of them concluded with a solution. <br/>
+May you can check with a version between 0.674 and the latest. 0.6811 for example. As last resort you need to use 0.674 and check future versions later.   <img alt=":(" class="smilies" height="15" src="/images/smilies/icon_sad.gif" title="Sad" width="15"/></div>
+<div class="signature" id="sig92349">Everyone's got their opinions - They'll tell ya 'bout 'em all the time...   /* Spock's Beard */</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92356">
+<div class="inner">
+<dl class="postprofile" id="profile92356">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92356">
+<h3><a href="#p92356"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2006-08-28 12:12
+			</p>
+<div class="content">Are you using a debug version or what?. The .pdb file is for debugging purposes (program data base) so what does the .pdb file have to do with anything?</div>
+<div class="signature" id="sig92356">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92359">
+<div class="inner">
+<dl class="postprofile" id="profile92359">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92359">
+<h3><a href="#p92359"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 12:22
+			</p>
+<div class="content"><blockquote><div><cite>Guitarm wrote:</cite>Are you using a debug version or what?. The .pdb file is for debugging purposes (program data base) so what does the .pdb file have to do with anything?</div></blockquote>
+
+Nope. I just downloaded 2 days ago the standard (zipped) version from here:<br/>
+<a class="postlink" href="http://prdownloads.sourceforge.net/dcplusplus/DCPlusPlus-0.691.zip?download">http://prdownloads.sourceforge.net/dcpl ... p?download</a><br/>
+It contains the file 'DCPlusPlus.pdb'.<br/>
+<br/>
+<br/>
+<blockquote class="uncited"><div>
+May you can check with a version between 0.674 and the latest. 0.6811 for example. As last resort you need to use 0.674 and check future versions later.</div></blockquote>
+
+I tried several other versions months ago, all of them have this 'bug'.<br/>
+Anyway, I can stick with my old version. After all this, I see no reason for upgrading since 0.674 works without problems.</div>
+<div class="notice">
+					Last edited by <a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> on 2006-08-28 12:27, edited 1 time in total.
+									</div>
+<div class="signature" id="sig92359">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92360">
+<div class="inner">
+<dl class="postprofile" id="profile92360">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92360">
+<h3><a href="#p92360"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2006-08-28 12:25
+			</p>
+<div class="content">Yes, I know that. But why would the .pdb file have anything to do with your problems?</div>
+<div class="signature" id="sig92360">"Nothing really happens fast. Everything happens at such a rate that by the time it happens, it all seems normal."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92361">
+<div class="inner">
+<dl class="postprofile" id="profile92361">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92361">
+<h3><a href="#p92361"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 12:33
+			</p>
+<div class="content"><blockquote><div><cite>Guitarm wrote:</cite>Yes, I know that. But why would the .pdb file have anything to do with your problems?</div></blockquote>
+
+I don't know!<br/>
+I just removed/renamed the file and DC++ takes only half of the memory, less VMemory, loads 2 times faster and take less CPU. Just look in the above screen shots.<br/>
+<br/>
+I don't know the reason for this. I swear. It just happens.<br/>
+<br/>
+PS: I want to remember that I have no problems with other programs I use and my Windows is up to date.</div>
+<div class="signature" id="sig92361">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92366">
+<div class="inner">
+<dl class="postprofile" id="profile92366">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92366">
+<h3><a href="#p92366"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2006-08-28 12:56
+			</p>
+<div class="content">I can't quite follow the logic in that...but anyway. Do you have any other p2p app to test network I/O?. Like Bittorrent or similar?. Would be interresting to know if they behave the same way...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92367">
+<div class="inner">
+<dl class="postprofile" id="profile92367">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92367">
+<h3><a href="#p92367"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 13:15
+			</p>
+<div class="content"><blockquote><div><cite>Guitarm wrote:</cite>I can't quite follow the logic in that...but anyway. </div></blockquote>
+
+Removing that file reduced the CPU load in a vizible way.<br/>
+<br/>
+-----------<br/>
+<br/>
+I tried a new P2P program made in Delphi recently. I don't remember its name (Athena, or something like this...).<br/>
+It worked without loading the CPU. Actually the resource needed was musch under DC++ but the program was pretty new and its network was pretty empty. Not very much sources to download from.<br/>
+<br/>
+The second program is DC++ itself (the old version) which is working perfectly.<br/>
+The same download queue, the same hubs to connect, the same files to share...<br/>
+<br/>
+<img alt="Image" class="postimage" src="http://www.bionixwallpaper.com/images/DCpp-forum/old%20version.png"/></div>
+<div class="signature" id="sig92367">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92368">
+<div class="inner">
+<dl class="postprofile" id="profile92368">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92368">
+<h3><a href="#p92368"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2006-08-28 13:27
+			</p>
+<div class="content"><blockquote class="uncited"><div>The second program is DC++ itself (the old version) which is working perfectly. </div></blockquote> Do you refer to 0.674 or what?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92370">
+<div class="inner">
+<dl class="postprofile" id="profile92370">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92370">
+<h3><a href="#p92370"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 13:41
+			</p>
+<div class="content">Yes. <br/>
+0674 is working.</div>
+<div class="signature" id="sig92370">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92371">
+<div class="inner">
+<dl class="postprofile" id="profile92371">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 61</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-18 20:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92371">
+<h3><a href="#p92371"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a></strong> » </span>2006-08-28 13:43
+			</p>
+<div class="content">Yes he told he has no prob with 0.674  I also thought about mention trying torrents but I didnt wanted to advertise other p2p here. <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/><br/>
+As I mentioned the same probs had a few ppl here before. That time I thought that there is a possibility that the new socket code introduced in 0.68 has problems with certain hw circumstances...   <img alt=":?" class="smilies" height="15" src="/images/smilies/icon_confused.gif" title="Confused" width="15"/></div>
+<div class="signature" id="sig92371">Everyone's got their opinions - They'll tell ya 'bout 'em all the time...   /* Spock's Beard */</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92373">
+<div class="inner">
+<dl class="postprofile" id="profile92373">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92373">
+<h3><a href="#p92373"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 13:55
+			</p>
+<div class="content">Ok.<br/>
+If you want, I can try a diffrent program. But I told you, I already did and it was ok.<br/>
+<br/>
+All versions I tried, above 674, had that high CPU 'bug'.<br/>
+I will wait for the next version and hope it will work.</div>
+<div class="signature" id="sig92373">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92377">
+<div class="inner">
+<dl class="postprofile" id="profile92377">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92377">
+<h3><a href="#p92377"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-28 14:27
+			</p>
+<div class="content">Thanks to everybody for helping me.<br/>
+If you have any ideas please let me know.<br/>
+<br/>
+Also if the programmers of DC++ wants me to make some more tests, I will happy run them.<br/>
+<br/>
+I only hope that the next release will work also for me.<br/>
+<br/>
+<br/>
+Thanks again.</div>
+<div class="signature" id="sig92377">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92480">
+<div class="inner">
+<dl class="postprofile" id="profile92480">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92480">
+<h3><a href="#p92480"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-30 22:08
+			</p>
+<div class="content">Ok.<br/>
+<br/>
+I just reinstalled Windows (to see how much I love DC++ <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/> )<br/>
+There is no diference even if this Windows is 12 hours old.<br/>
+<br/>
+I have no firewall, no antivirus or other application to block the internet connection.</div>
+<div class="signature" id="sig92480">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92483">
+<div class="inner">
+<dl class="postprofile" id="profile92483">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 83</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-04-03 20:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92483">
+<h3><a href="#p92483"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a></strong> » </span>2006-08-31 12:40
+			</p>
+<div class="content">i've not read all the posts, but if it hasn't been suggested, try unchecking "Enable safe and compressed transfers" under Settings &gt; Advanced.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92484">
+<div class="inner">
+<dl class="postprofile" id="profile92484">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 61</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-18 20:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92484">
+<h3><a href="#p92484"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a></strong> » </span>2006-08-31 12:55
+			</p>
+<div class="content"><blockquote><div><cite>fedra wrote:</cite>I just reinstalled Windows (to see how much I love DC++ <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/> )</div></blockquote>Well done <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/>
+<blockquote><div><cite>fedra wrote:</cite>There is no diference even if this Windows is 12 hours old.I have no firewall, no antivirus or other application to block the internet connection.</div></blockquote>Ok. Would you mind to specify your computer hardware and what drivers you installed and from what source (driver cd, url...)? Go to the details as much as possible.</div>
+<div class="signature" id="sig92484">Everyone's got their opinions - They'll tell ya 'bout 'em all the time...   /* Spock's Beard */</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92491">
+<div class="inner">
+<dl class="postprofile" id="profile92491">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92491">
+<h3><a href="#p92491"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-31 14:50
+			</p>
+<div class="content">The mainboard is Gigabyte 8RDA3I with NForce 2 (network integrated).<br/>
+The driver for this is from nvidia web site. The latest version (which I also have it) is 5.10 WHQL. <br/>
+I just download it again, just in case.<br/>
+<br/>
+<br/>
+The Internet connection was in the past from AOL 1Mbps (DON'T BUY FROM FUCKING AOL !!!!!!!!!!!!!!!!! ) and now I use EWETel at 2Mbps.<br/>
+Of course the hardware (modem/router/cable...) is new/diferent.<br/>
+<br/>
+I have a second PCI card to connect (sometimes) in a second network (only my computer and my laptop).<br/>
+<br/>
+I supposed you are not interesed about video card or other hardware that is not Internet/Lan related.<br/>
+------------------<br/>
+<br/>
+I made few speed tests over the years and I have all the time the top speed.<br/>
+AOL blocked some ports like 25, but EWE has no restrictions.</div>
+<div class="signature" id="sig92491">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92492">
+<div class="inner">
+<dl class="postprofile" id="profile92492">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92492">
+<h3><a href="#p92492"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-31 14:53
+			</p>
+<div class="content"><blockquote><div><cite>poy wrote:</cite>i've not read all the posts, but if it hasn't been suggested, try unchecking "Enable safe and compressed transfers" under Settings &gt; Advanced.</div></blockquote>
+
+Thanks.<br/>
+Somebody else sugest it  also.<br/>
+No effect. CPU is the same.</div>
+<div class="signature" id="sig92492">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92493">
+<div class="inner">
+<dl class="postprofile" id="profile92493">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 61</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-18 20:44</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Hungary</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92493">
+<h3><a href="#p92493"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105663">eMTee</a></strong> » </span>2006-08-31 18:47
+			</p>
+<div class="content"><blockquote><div><cite>fedra wrote:</cite>The mainboard is Gigabyte 8RDA3I with NForce 2 (network integrated).The driver for this is from nvidia web site. The latest version (which I also have it) is 5.10 WHQL. </div></blockquote>That version of the driver is 2 years old... nice.. congratulations for nVidia <img alt=":(" class="smilies" height="15" src="/images/smilies/icon_sad.gif" title="Sad" width="15"/> btw you must have an epox mobo there is no such model at gigabyte ( <a class="postlink" href="http://www-old.epox.nl/english/products/motherboard/8rda3i.htm">http://www-old.epox.nl/english/products ... 8rda3i.htm</a> )<br/>
+In the nVidia driver install make sure you not installed the app called nVidia firewall (can come with LAN driver - I'm not sure with this version or not)!!<br/>
+Have you checked if there is a LAN driver update through Windows Update?<br/>
+<blockquote><div><cite>fedra wrote:</cite>I have a second PCI card to connect (sometimes) in a second network (only my computer and my laptop).</div></blockquote>What happens if you disable that connection???<br/>
+<blockquote><div><cite>fedra wrote:</cite>I supposed you are not interesed about video card or other hardware that is not Internet/Lan related.</div></blockquote>Who knows? Maybe a certain hw/sw/driver combination....</div>
+<div class="signature" id="sig92493">Everyone's got their opinions - They'll tell ya 'bout 'em all the time...   /* Spock's Beard */</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92498">
+<div class="inner">
+<dl class="postprofile" id="profile92498">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-28 12:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92498">
+<h3><a href="#p92498"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=106029">fedra</a></strong> » </span>2006-08-31 21:40
+			</p>
+<div class="content">SORRY!<br/>
+<br/>
+Yes. It is an EPOX. Sorry again. DOH.<br/>
+And soory again....<br/>
+<br/>
+Yes, I know the driver is 2 years old but it is the latest one.<br/>
+I supose the driver is stable and good since there was no update in the last 2 years.<br/>
+And I can't complain about it.<br/>
+My computer is very stable. I never ever ever ever had a restart or blue screen except the game Thief - Deadly shadow.<br/>
+<br/>
+<br/>
+<br/>
+<blockquote class="uncited"><div>In the nVidia driver install make sure you not installed the app called nVidia firewall (can come with LAN driver - I'm not sure with this version or not)!!
+</div></blockquote>
+I don't have this option/feature in my driver. <br/>
+<blockquote class="uncited"><div>Have you checked if there is a LAN driver update through Windows Update? </div></blockquote>
+No. I'm going right there!<br/>
+<blockquote class="uncited"><div>What happens if you disable that connection??? 
+</div></blockquote>
+It is disabled and/or cable removed in most cases. <br/>
+I connect  to the laptop only few hours per week to sincronize my files.<br/>
+This second network don't seems to affect the Internet connection/DC++ in any way.<br/>
+<br/>
+<blockquote class="uncited"><div>Who knows? Maybe a certain hw/sw/driver combination....</div></blockquote>
+Ok. There is a picture with my hardware:<br/>
+<img alt="Image" class="postimage" src="http://www.bionixwallpaper.com/images/DCpp-forum/hardware.png"/><br/>
+<br/>
+And a listing of the hardware in XML format: <a class="postlink" href="http://www.bionixwallpaper.com/images/DCpp-forum/GURU_SystemInfo.rar">http://www.bionixwallpaper.com/images/D ... emInfo.rar</a></div>
+<div class="signature" id="sig92498">Bilibonstrocei</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92540">
+<div class="inner">
+<dl class="postprofile" id="profile92540">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92540">
+<h3><a href="#p92540"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-09-01 01:49
+			</p>
+<div class="content">Look at the files uploaded in his screen shots.  And the directories in the visible file list.<br/>
+<br/>
+It's a shame for an active thread like this, but I'm doing it anyway.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p92541">
+<div class="inner">
+<dl class="postprofile" id="profile92541">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 385</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-18 20:38</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92541">
+<h3><a href="#p92541"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16917">Guitarm</a></strong> » </span>2006-09-01 01:54
+			</p>
+<div class="content">Good, If I had thought about it (too much into problem-solving mode) I would have done that too, thanks</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			37 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=11">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Dump”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

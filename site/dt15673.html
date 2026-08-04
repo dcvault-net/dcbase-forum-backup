@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ADC 1.0 specification draft issues. - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="12" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=12" itemprop="url"><span itemprop="title">Developer's resort</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=12&amp;t=15673">ADC 1.0 specification draft issues.</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">A private forum for us Super-Humans, I even trust you to be able to edit your own posts =)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			2 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p79893">
+<div class="inner">
+<dl class="postprofile" id="profile79893">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content79893">
+<h3 class="first"><a href="#p79893">ADC 1.0 specification draft issues.</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2005-12-20 18:15
+			</p>
+<div class="content">This seems a more appropriate place than the wiki.
+<br/>
+<br/>Get some trivialities dealt with, the mass of CSEs in particular:
+<br/><ul><li>"like it to stand for, Advanced DC". Comma splice error.</li><li>"a|b means a or b, either a or b may be used" has another CSE.</li><li>CSE in "port must always be specified, default ports don.t exist"</li><li>"Named parameters, these ". CSE again.</li><li>Sec 3.2: smaller files, for large. CSE.</li><li> "recoverable, if a client gets a recoverable error ". CSE</li><li>"send NTD, otherwise the passive client" CSE</li><li>S4.3.16. "transfer files, this way " CSE</li><li>S4.3.14: "Get File Information, request that ". CSE.</li><li>S6.2, S6.2.2. Zlib vs zlib.</li></ul><br/>Other small grammatical issues/typos:<br/><ul><li>nick.s --&gt; nicks (Sec 2.1)</li><li>"invalid commands, and should dispatch": remove comma.</li><li>"that is not entered by the user, including protocol names, extensions etc": should have an "and foobar" somewhere, for example. Et cetera too vague, in any case. [Not really a CSE, but related.]</li><li>"Since action is separated from the message type" -&gt; "Since a message's action is separate from its type", minimally. See comment about 'is' though.</li><li>"conserve space requirements": a client can conserve space, or it can e.g. respect space requirements. I don't see that it can in this context conserve space requirements (are space requirements a conservable resource?).</li><li>"Clients must always offer the tree regardless of available slots.". Hm. I'd tend to put a comma there.</li><li>S6.3.1. "Name uniquely ...". See comment about declared names becoming essentially proper nouns.</li><li>S6.3: "User commands. User commands are used". Stuttering text?</li><li>"server, to indicate". Comma unnecessary; contributes nothing that I detect.</li><li>S4.3.7. "should just be copied directly". s/just // probably works better.</li><li>"other end actually supports" in S4.3.2. "actually" unnecessary.</li><li>S4.3.3. "Most of these fields are only interesting in the client-hub communication". interesting to, or interesting during, or etc.</li><li>".TTH. is the base32 encoded tth root of the file.". base32 encoded to base32-encoded</li><li>S4.3.3. "such as share size or client version". s/or/and/</li></ul><br/>Then, internal consistency proves an issue:<br/><ul><li>unicode is a proper noun (Sec 2.1)</li><li>TCP-Active --&gt; TCP-active, probably.</li><li>S4.3.13. "Requests for a certain file or binary data to be transmitted." s/for /that //, for example. More broadly, though, there's no consistent tense across the command descriptions. GFI has "request that ..." where SND has no verb at all </li><li>TCP active and TCP-Active/TCP-active both occur. Use consistent hyphenation.</li><li>S4.3.10. "(not Tiger Tree)". Perhaps "(not TTH)"? The document otherwise defines TTH once and drops the expansion.</li><li>("State transition to DATA state"), just from what's visible now. Pick one and use it.</li><li>"depend on the .no slots.". s/the //, but needs rewording anyway. It's already called a "53 Slots full" error; at least use that...</li><li>"Message is sent directly" -&gt; "This message ..." in accordance with others. I'm not overly fond of the whole structure, but *shrug*.</li><li>"Type and identifier are the same as for GET." Declared names ("&lt;type&gt; &lt;identifier&gt;") should probably act as proper nouns and keep their capitalization or lack thereof. Either "The specified type and identifier ..." or "&lt;type&gt; and &lt;identifier&gt;" or somesuch.</li><li>"encoded tth root of the file" and maybe others: pick a consistent capitalization (preferably, the correct one) of TTH. Ditto utf-8 versus UTF-8, except if/when it has to appear in a particular capitalization in some file format illustrated. Also Unicode vs unicode, ZLib vs zlib...</li><li>In discussing message types: A:"Hub must" vs B: "Hub should" vs C: "are sent" vs D: "must always be sent" vs etc. Consistency needed; IETF normative terminology suggsted. Some message types don't even mention the action of sending or transmitting.</li></ul><br/>Implementation makes for a poor specification:<br/><ul><li>S6.1. "(must be compatible with libpcre, <!-- m --><a class="postlink" href="http://www.pcre.org/">http://www.pcre.org/</a><!-- m -->)". Not fond of software-as-specification, though PCRE presumable has documentation here.</li><li>S6.3 "then through the equivalent of the C standard function .strftime., with the current local time specified." See pcre comment.</li></ul><br/>And, finally, miscellany:<br/><ul><li>Lack of whitespace between section and subsection numbers and titles.</li><li>General stylistic issues: overreliance on "is" as a sentence's sole verb. Just look at the first few sentences; A is B. C is D. E &lt;other verb&gt; F. G is H. etc. Numbing.</li><li>'sometimes' and 'conditionally' in "sometimes conditionally mandatory" mostly overlap. Pick one, or otherwise render more precise this.</li><li>pseudo-FOURCC? Either simply define what a FOURCC in ADC is, or otherwise elaborate. As far as I can tell, a FOURCC overwhelmingly refers to the AVI field, with which ADC's, er, pseudo-FOURCCs share little. I don't see this as a helpful analogy, when spelling out its lexical grammar's so easy.</li><li>RFC2732 ([x:x:x:x:x:x:x:x]:port) &lt;--- IIRC, it's more complex, with abbreviated forms, et cetera.</li><li>"Clients must ignore unknown/badly formatted messages completely", rather than partially or grotesquely or ...? Ignore covers it.</li><li>WRT to reference to "keep-alive (a single newline)." in Sec 2.1, should be documented elsewhere if not already done...</li><li>Replace various ad hoc natural language grammar descriptions with BNF, or at least regexes where possible?</li><li>"The connecting party always speaks first"; a specification probably should avoid such metaphor.</li><li>"anything outside brackets is to be sent literally" only applies when sending, not receving/parsing/etc. s/sent/interpreted/, perhaps.</li><li>"one viewable byte" as opposed to "one byte": so, character ::= &lt;non-viewable-byte&gt;&lt;viewable-byte&gt; in a name conforms to ADC?</li><li>"UTF-8 encoding (ASCII codes 33-127)": preferably, express this without reference to ASCII. An ideal client, by my reading of the rest of the document, should behave as if ASCII doesn't exist.</li><li>"The typical message" -&gt; "A typical message". In fact, though, that not only encompasses all messages, rather than merely typical ones, but cannot exist in any specific message, since such would require a message simultaneously to possess types of D and F.</li><li>Message layout's special cases cry out for a more systematic description. e.g.<br/><br/>message_head ::= YYY &lt;myCID&gt;<br/>message_tail ::= [p0] [p1] ... [pn] [AAq0] [BBq1] ... [XXqn]\n<br/>message_type_d ::= D &lt;message_head&gt; &lt;targetCID&gt; &lt;message_tail&gt;<br/>message_type_f ::= F &lt;message_head&gt; &lt;feature&gt; &lt;message_tail&gt;<br/>message_broadcast ::= &lt;message_type&gt; &lt;message_head&gt; &lt;message_tail&gt;<br/><br/>Or something. The current, er, conditionally mandatory fields should at least be marked in the "typical message".<br/></li><li>"Positional parameters, these". One guess... targetCID and feature contain this error too.</li><li>Better define the grammar, such as depicted previously, and such redundancies as "All messages must have the originating CID specified as first parameter. Type D must also have the target CID as second parameter." may be dropped.</li><li>"that the other party interprets" [I don't know what I meant. I'll assume I wasn't too asleep at the time and leave it in.]</li><li>Parenthetical comments should probably be gradually deprecated. Either drop them or integrate them into the text.</li><li>"Simple hubs can treat this type the same as type B." People will do that kind of thing anyway. This would needlessly and unfortunately fork ADC into "simple base ADC" and "base ADC" when the latter's intended to be sufficiently easy to implement anyway.</li><li>"unnamed root ./.; / is a name, arguably.</li><li>".Generator. is for statistical and informative purposes only and should not be used for extra content discovery." Extra content discovery is? (CDMs, I guess?)</li><li>"Only rootless directory names may be requested, for instance ./. and ./share/.. Not actually sure if it's a CSE. But, mostly, / and /share/ are rootless?</li><li>"Error responses should not be sent for obvious errors (a passive client sending a CTM for example).". Whilst I agree, this needs clarification. Does a complete set of obvious errors exist? Can one? An insufficient basis for a standard.</li><li>S5.1. Hub's IINF should show the HI1.</li><li>S6.2.1: "all subsequent message passing will be tunneled in one long zlib stream." This begins, presumably, in the message immediately following the one in which the second client mentions ZLIF?</li><li>S6.3. "Parameters are essentially dictionaries that map one string to another, and each context has its own maps. The strings passed to the hub must first be passed through a dictionary replacement that replaces all keywords in the string," First sentence and first part of second sentence duplicate each other heavily.</li></ul></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p79898">
+<div class="inner">
+<dl class="postprofile" id="profile79898">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content79898">
+<h3><a href="#p79898"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2005-12-20 21:32
+			</p>
+<div class="content">For reference, in case we lose the URL again: <!-- m --><a class="postlink" href="http://dcplusplus.sourceforge.net/ADC-0.10pre.html">http://dcplusplus.sourceforge.net/ADC-0.10pre.html</a><!-- m -->
+<br/>
+<br/>Edit: I'm retarded.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			2 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=12">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Developer's resort”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

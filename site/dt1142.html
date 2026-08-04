@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Upload queuing code. - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=1142">Upload queuing code.</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			3 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p5540">
+<div class="inner">
+<dl class="postprofile" id="profile5540">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5540">
+<h3 class="first"><a href="#p5540">Upload queuing code.</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-02-26 04:37
+			</p>
+<div class="content">I'm not sure of the etiquette of largeish chunks of code here, but I took a diff of my .232 and the stock .232 and extracted what should be the upload queuing parts, as there's been interest expressed in a the ratings server thread about it. There are a couple of other changes interweaved into it, but removing those would be more work than I cared to do at 11:30 at night... Er, I guess I could put it on a web server, too, oh well.
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>diff -burNd DCPlusPlus-0.232-src/client/ClientManager.h DCPlusPlus-0.232-src-bc/client/ClientManager.h<br/>--- DCPlusPlus-0.232-src/client/ClientManager.h   2003-02-03 18:10:00.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/client/ClientManager.h   2003-02-16 13:52:34.000000000 -0500<br/>@@ -107,10 +109,48 @@<br/>       fire(ClientManagerListener::USER_UPDATED, aUser);<br/>    }<br/>    <br/>+   string getNickIP(const string&amp; Nick) const {<br/>+      StringMap::const_iterator it;<br/>+      if ((it = nickList.find(Nick)) != nickList.end())<br/>+         return it-&gt;second;<br/>+      else<br/>+         return Nick;<br/>+   }<br/>+<br/>+   string getIPNick(const string&amp; IP) const {<br/>+      HubNickMap::const_iterator it;<br/>+      if ((it = ipList.find(IP)) != ipList.end() &amp;&amp; !it-&gt;second.nick.empty())<br/>+         return it-&gt;second.nick;<br/>+      else<br/>+         return IP;<br/>+   }<br/>+<br/>+   int getIPClientEmulation(const string&amp; IP) const {<br/>+      HubNickMap::const_iterator it;<br/>+      if ((it = ipList.find(IP)) != ipList.end())<br/>+         return it-&gt;second.clientEmulation;<br/>+      else<br/>+         return SETTING(CLIENT_EMULATION);<br/>+   }<br/>+<br/>+   void setIPNick(const string&amp; IP, const string&amp; Nick) {<br/>+      ipList[IP].nick = Nick;<br/>+      nickList[Nick] = IP;<br/>+   }<br/>+<br/>+   void setIPClientEmulation(const string&amp; IP, int clientEmulation) {<br/>+      ipList[IP].clientEmulation = clientEmulation;<br/>+   }<br/> private:<br/>+   struct HubNick {<br/>+      string nick;<br/>+      int clientEmulation;<br/>+   };<br/>+<br/>    typedef HASH_MULTIMAP&lt;string, User::Ptr&gt; UserMap;<br/>    typedef UserMap::iterator UserIter;<br/>    typedef pair&lt;UserIter, UserIter&gt; UserPair;<br/>+   typedef map&lt;string, HubNick&gt; HubNickMap;<br/> <br/>    Client::List clients;<br/>    CriticalSection cs;<br/>@@ -119,6 +159,9 @@<br/>    UserMap users;<br/>    Socket s;<br/> <br/>+   StringMap nickList;<br/>+   HubNickMap ipList;<br/>+   <br/>    friend class Singleton&lt;ClientManager&gt;;<br/>    ClientManager() : minutes(0) { <br/>       TimerManager::getInstance()-&gt;addListener(this); <br/>@@ -140,6 +183,9 @@<br/>    // TimerManagerListener<br/>    void onAction(TimerManagerListener::Types type, u_int8_t aTick) throw();<br/>    void onTimerMinute(u_int8_t aTick);<br/>+<br/>+   // SearchManagerListener<br/>+   void onAction(SearchManagerListener::Types types, const string &amp;aLine) throw();<br/> };<br/> <br/> #endif // !defined(AFX_CLIENTMANAGER_H__8EF173E1_F7DC_40B5_B2F3_F92297701034__INCLUDED_)<br/>diff -burNd DCPlusPlus-0.232-src/client/ConnectionManager.cpp DCPlusPlus-0.232-src-bc/client/ConnectionManager.cpp<br/>--- DCPlusPlus-0.232-src/client/ConnectionManager.cpp   2003-02-03 18:10:00.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/client/ConnectionManager.cpp   2003-02-18 10:18:24.000000000 -0500<br/>@@ -335,7 +336,12 @@<br/> <br/>    if( aSource-&gt;isSet(UserConnection::FLAG_INCOMING) ) {<br/>       aSource-&gt;myNick(aSource-&gt;getUser()-&gt;getClientNick()); <br/>-      aSource-&gt;lock(CryptoManager::getInstance()-&gt;getLock(), CryptoManager::getInstance()-&gt;getPk());<br/>+      int clientEmu = aSource-&gt;getUser()-&gt;getClientEmulation();<br/>+      aSource-&gt;lock(CryptoManager::getInstance()-&gt;makeLock(clientEmu), CryptoManager::getInstance()-&gt;makePk(clientEmu));<br/>+    } else {<br/>+       //we know the user's IP and port now<br/>+       ClientManager::getInstance()-&gt;setIPNick(aSource-&gt;getRemoteIp(), aNick);<br/>+      ClientManager::getInstance()-&gt;setIPClientEmulation(aSource-&gt;getRemoteIp(), aSource-&gt;getUser()-&gt;getClientEmulation());<br/>    }<br/> <br/>    aSource-&gt;setState(UserConnection::STATE_LOCK);<br/>diff -burNd DCPlusPlus-0.232-src/client/ConnectionManager.h DCPlusPlus-0.232-src-bc/client/ConnectionManager.h<br/>--- DCPlusPlus-0.232-src/client/ConnectionManager.h   2003-02-04 09:45:20.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/client/ConnectionManager.h   2003-02-16 13:28:33.000000000 -0500<br/>@@ -92,6 +92,7 @@<br/>       socket.waitForConnections(aPort);<br/>    }<br/> <br/>+   ServerSocket GetServerSocket() const { return socket; }<br/> private:<br/> <br/>    CriticalSection cs;<br/>diff -burNd DCPlusPlus-0.232-src/client/Socket.cpp DCPlusPlus-0.232-src-bc/client/Socket.cpp<br/>--- DCPlusPlus-0.232-src/client/Socket.cpp   2003-02-03 18:10:00.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/client/Socket.cpp   2003-02-23 22:17:04.000000000 -0500<br/>@@ -44,6 +46,54 @@<br/> <br/> Socket::Stats Socket::stats = { 0, 0, 0, 0 };<br/> <br/>+// Set storage for max_send_bytes and cs<br/>+u_int32_t Socket::max_send_bytes = 0;<br/>+u_int32_t Socket::max_receive_bytes = 0;<br/>+CriticalSection Socket::cs;<br/>+ <br/>+// Set max_send_bytes (make sure access is synchronized)<br/>+// The CriticalSection may not be needed (being cautious)<br/>+void Socket::setSendRate(u_int32_t rate)<br/>+{<br/>+   Socket::cs.enter();<br/>+   Socket::max_send_bytes = rate;<br/>+   Socket::cs.leave();<br/>+}<br/>+<br/>+// Get max_send_bytes (make sure access is synchronized)<br/>+// The CriticalSection may not be needed (being cautious)<br/>+u_int32_t Socket::getSendRate()<br/>+{<br/>+   Socket::cs.enter();<br/>+   u_int32_t i = Socket::max_send_bytes;<br/>+   Socket::cs.leave();<br/>+   return i;<br/>+}<br/>+<br/>+void Socket::setReceiveRate(u_int32_t rate)<br/>+{<br/>+   Socket::cs.enter();<br/>+   Socket::max_receive_bytes = rate;<br/>+   Socket::cs.leave();<br/>+}<br/>+<br/>+u_int32_t Socket::getReceiveRate()<br/>+{<br/>+   Socket::cs.enter();<br/>+   u_int32_t i = Socket::max_receive_bytes;<br/>+   Socket::cs.leave();<br/>+   return i;<br/>+}<br/>+<br/>+string Socket::getRemoteIp() const {<br/>+   sockaddr_in sock_addr;<br/>+   socklen_t len = sizeof(sock_addr);<br/>+   if(getpeername(sock, (sockaddr*)&amp;sock_addr, &amp;len) == 0) {<br/>+      return string(inet_ntoa(sock_addr.sin_addr)) + ":" + string(Util::toString((sock_addr.sin_port &gt;&gt; 8) | (sock_addr.sin_port &lt;&lt; 8 &amp; 0xffff)));<br/>+   }<br/>+   return Util::emptyString;<br/>+}<br/>+<br/> string SocketException::errorToString(int aError) {<br/>    switch(aError) {<br/>    case EWOULDBLOCK:<br/>diff -burNd DCPlusPlus-0.232-src/client/Socket.h DCPlusPlus-0.232-src-bc/client/Socket.h<br/>--- DCPlusPlus-0.232-src/client/Socket.h   2003-02-03 18:25:36.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/client/Socket.h   2003-02-23 22:05:56.000000000 -0500<br/>@@ -214,6 +216,17 @@<br/>    /** When socks settings are updated, this has to be called... */<br/>    static void socksUpdated();<br/> <br/>+    string getRemoteIp() const;<br/>+ <br/>+    static void setSendRate(u_int32_t rate);<br/>+    static u_int32_t getSendRate();<br/>+    static void setReceiveRate(u_int32_t rate);<br/>+    static u_int32_t getReceiveRate();<br/>+ <br/>+    static u_int32_t max_send_bytes;   // Maximum number of bytes to send per second<br/>+    static u_int32_t max_receive_bytes;   // Maximum number of bytes to receive per second<br/>+    static CriticalSection cs;         // Critical section for R/W protection<br/>+<br/>    GETSETREF(string, ip, Ip);<br/> protected:<br/>    SOCKET sock;<br/>diff -burNd DCPlusPlus-0.232-src/client/UploadManager.cpp DCPlusPlus-0.232-src-bc/client/UploadManager.cpp<br/>--- DCPlusPlus-0.232-src/client/UploadManager.cpp   2003-02-04 13:04:04.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/client/UploadManager.cpp   2003-02-15 01:48:15.000000000 -0500<br/>@@ -24,6 +24,7 @@<br/> #include "LogManager.h"<br/> #include "ShareManager.h"<br/> #include "ClientManager.h"<br/>+#include "HubManager.h"<br/> <br/> UploadManager* Singleton&lt;UploadManager&gt;::instance = NULL;<br/> <br/>@@ -80,18 +87,19 @@<br/> <br/>    if( (!aSource-&gt;isSet(UserConnection::FLAG_HASSLOT)) &amp;&amp; <br/>       (getFreeSlots()&lt;=0) &amp;&amp; <br/>-      (ui == reservedSlots.end()) ) <br/>+      (ui == reservedSlots.end()) &amp;&amp; !HubManager::getInstance()-&gt;isFavoriteUser(aSource-&gt;getUser()) ) <br/>    {<br/>       dcdebug("Average speed: %s/s\n", Util::formatBytes(UploadManager::getInstance()-&gt;getAverageSpeed()).c_str());<br/>       if( ((getLastAutoGrant() + 30*1000) &gt; GET_TICK()) || (SETTING(MIN_UPLOAD_SPEED) == 0) || ( (SETTING(MIN_UPLOAD_SPEED)*1024) &lt; UploadManager::getInstance()-&gt;getAverageSpeed() ) ) {<br/>          if( !(smallfile || userlist) ||<br/>             !(aSource-&gt;isSet(UserConnection::FLAG_HASEXTRASLOT) || (getFreeExtraSlots() &gt; 0) || (aSource-&gt;getUser()-&gt;isSet(User::OP)) ) || <br/>-            !(aSource-&gt;getUser()-&gt;isSet(User::DCPLUSPLUS)) <br/>+            (!(aSource-&gt;getUser()-&gt;isSet(User::DCPLUSPLUS)) &amp;&amp; (aSource-&gt;getUser()-&gt;getClientEmulation() != SettingsManager::CLIENT_EMULATION_NMDC))<br/>             ) <br/>          {<br/> <br/>             cs.leave();<br/>             aSource-&gt;maxedOut();<br/>+            addFailedUpload(aSource, aFile);<br/>             removeConnection(aSource);<br/>             return false;<br/>          }<br/>@@ -246,12 +253,59 @@<br/>    removeUpload(u);<br/> }<br/> <br/>+void UploadManager::notifyQueuedUsers()<br/>+{<br/>+   if (!BOOLSETTING(UPLOAD_QUEUING)) return;<br/>+    int freeSlots = getFreeSlots();<br/>+ <br/>+    //while all contacted users may not connect, many probably will; it's fine that the rest are filled with randomly allocated slots<br/>+    while (freeSlots) {<br/>+       //get rid of offline users<br/>+       while (!waitingUsers.empty() &amp;&amp; !waitingUsers.front()-&gt;isOnline()) waitingUsers.pop_front();<br/>+       if (waitingUsers.empty()) break;      //no users to notify<br/>+ <br/>+       waitingUsers.front()-&gt;halfconnect();<br/>+       --freeSlots;<br/>+ <br/>+       waitingUsers.pop_front();<br/>+    }<br/>+}<br/>+ <br/>+void UploadManager::addFailedUpload(UserConnection::Ptr source, string filename)<br/>+{<br/>+    SlotQueue::iterator userPos = find(waitingUsers.begin(), waitingUsers.end(), source-&gt;getUser());<br/>+ <br/>+    if (userPos == waitingUsers.end())<br/>+    {<br/>+       //user is not in queue. add him.<br/>+       waitingUsers.push_back(source-&gt;getUser());<br/>+ <br/>+       //set userPos to point to him for later use<br/>+       userPos = waitingUsers.end() - 1;<br/>+    }<br/>+ <br/>+    //maintain list of files the user's searched for<br/>+    waitingFiles[source-&gt;getUser()].insert(filename);<br/>+}<br/>+ <br/>+void UploadManager::clearUserFiles(UserConnection::Ptr source)<br/>+{<br/>+    //run this when a user's got a slot. It clears the list of files he attempted unsuccessfully download, as well as the user himself from the queue<br/>+ <br/>+    SlotQueue::iterator sit = find(waitingUsers.begin(), waitingUsers.end(), source-&gt;getUser());<br/>+    if (sit != waitingUsers.end()) waitingUsers.erase(sit);<br/>+ <br/>+    FilesMap::iterator fit = waitingFiles.find(source-&gt;getUser());<br/>+    if (fit != waitingFiles.end()) waitingFiles.erase(source-&gt;getUser());<br/>+}<br/>+<br/> void UploadManager::removeConnection(UserConnection::Ptr aConn) {<br/>    dcassert(aConn-&gt;getUpload() == NULL);<br/>    aConn-&gt;removeListener(this);<br/>    if(aConn-&gt;isSet(UserConnection::FLAG_HASSLOT)) {<br/>       running--;<br/>       aConn-&gt;unsetFlag(UserConnection::FLAG_HASSLOT);<br/>+      notifyQueuedUsers();<br/>    } <br/>    if(aConn-&gt;isSet(UserConnection::FLAG_HASEXTRASLOT)) {<br/>       extra--;<br/>diff -burNd DCPlusPlus-0.232-src/client/UploadManager.h DCPlusPlus-0.232-src-bc/client/UploadManager.h<br/>--- DCPlusPlus-0.232-src/client/UploadManager.h   2003-02-03 18:10:00.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/client/UploadManager.h   2003-02-15 01:48:15.000000000 -0500<br/>@@ -94,10 +116,14 @@<br/>       conn-&gt;setState(UserConnection::STATE_GET);<br/>    }<br/> <br/>-   GETSET(int, running, Running);<br/>+   void notifyQueuedUsers();<br/>+   void clearQueue() { waitingUsers.clear(); waitingFiles.clear(); }<br/>+   void setRunning(int _running) { running = _running; notifyQueuedUsers(); }<br/>+   <br/>    GETSET(int, extra, Extra);<br/>    GETSET(u_int32_t, lastAutoGrant, LastAutoGrant);<br/> private:<br/>+   int running;<br/>    Upload::List uploads;<br/>    CriticalSection cs;<br/> <br/>@@ -105,6 +131,20 @@<br/>    typedef SlotMap::iterator SlotIter;<br/>    SlotMap reservedSlots;<br/> <br/>+   //two parallel structures to implement the users-waiting list<br/>+   //this one merely lists the user who are waiting for slots<br/>+   typedef deque&lt;User::Ptr&gt; SlotQueue;<br/>+   SlotQueue waitingUsers;<br/>+ <br/>+   //this keeps track of which files they've requested<br/>+   //set of files which this user's searched for<br/>+   typedef hash_map&lt;User::Ptr, set&lt;string&gt;, User::HashFunction&gt; FilesMap;<br/>+   FilesMap waitingFiles;<br/>+<br/>+   //functions for manipulating waitingFiles and waitingUsers<br/>+   void addFailedUpload(UserConnection::Ptr source, string filename);<br/>+   void clearUserFiles(UserConnection::Ptr source);<br/>+   <br/>    friend class Singleton&lt;UploadManager&gt;;<br/>    UploadManager() throw();<br/>    virtual ~UploadManager() throw();<br/>diff -burNd DCPlusPlus-0.232-src/client/UserConnection.h DCPlusPlus-0.232-src-bc/client/UserConnection.h<br/>--- DCPlusPlus-0.232-src/client/UserConnection.h   2003-02-03 18:10:00.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/client/UserConnection.h   2003-02-23 22:05:35.000000000 -0500<br/>@@ -56,6 +56,7 @@<br/>       MY_NICK,<br/>       TRANSMIT_DONE,<br/>       SUPPORTS,<br/>+      PING,<br/>       FILE_NOT_AVAILABLE<br/>    };<br/> <br/>@@ -164,7 +165,8 @@<br/>       FLAG_HASEXTRASLOT = FLAG_HASSLOT &lt;&lt; 1,<br/>       FLAG_INVALIDKEY = FLAG_HASEXTRASLOT &lt;&lt; 1,<br/>       FLAG_SUPPORTS_BZLIST = FLAG_INVALIDKEY &lt;&lt; 1,<br/>-      FLAG_SUPPORTS_GETZBLOCK = FLAG_SUPPORTS_BZLIST &lt;&lt; 1<br/>+      FLAG_SUPPORTS_GETZBLOCK = FLAG_SUPPORTS_BZLIST &lt;&lt; 1,<br/>+      FLAG_SUPPORTS_ZEBEDEE = FLAG_SUPPORTS_GETZBLOCK &lt;&lt; 1<br/>    };<br/>    <br/>    enum States {<br/>@@ -237,6 +239,7 @@<br/> <br/>    User::Ptr&amp; getUser() { return user; };<br/> <br/>+   string getRemoteIp() const { return socket-&gt;getRemoteIp(); }<br/>    Download* getDownload() { dcassert(isSet(FLAG_DOWNLOAD)); return download; };<br/>    void setDownload(Download* d) { dcassert(isSet(FLAG_DOWNLOAD)); download = d; };<br/>    Upload* getUpload() { dcassert(isSet(FLAG_UPLOAD)); return upload; };<br/>diff -burNd DCPlusPlus-0.232-src/windows/UploadPage.cpp DCPlusPlus-0.232-src-bc/windows/UploadPage.cpp<br/>--- DCPlusPlus-0.232-src/windows/UploadPage.cpp   2003-02-13 22:08:58.000000000 -0500<br/>+++ DCPlusPlus-0.232-src-bc/windows/UploadPage.cpp   2003-02-15 01:48:16.000000000 -0500<br/>@@ -26,6 +26,7 @@<br/> #include "../client/Util.h"<br/> #include "../client/ShareManager.h"<br/> #include "../client/SettingsManager.h"<br/>+#include "../client/UploadManager.h"<br/> <br/> #ifdef _DEBUG<br/> #define new DEBUG_NEW<br/>@@ -79,6 +81,7 @@<br/> <br/>    if(SETTING(SLOTS) &lt; 1)<br/>       settings-&gt;set(SettingsManager::SLOTS, 1);<br/>+   UploadManager::getInstance()-&gt;notifyQueuedUsers();<br/> <br/>    // Do specialized writing here<br/>    ShareManager::getInstance()-&gt;refresh();</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6109">
+<div class="inner">
+<dl class="postprofile" id="profile6109">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6109">
+<h3><a href="#p6109">Re: Upload queuing code.</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-04 01:30
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>I'm not sure of the etiquette of largeish chunks of code here, but I took a diff of my .232 and the stock .232 and extracted what should be the upload queuing parts, as there's been interest expressed in a the ratings server thread about it. There are a couple of other changes interweaved into it, but removing those would be more work than I cared to do at 11:30 at night... Er, I guess I could put it on a web server, too, oh well.<br/></div></blockquote>
+<br/>
+<br/>Could you explain about half-connect, and the need to do the queue by IPs?  If you send an ${Rev}ConnectToMe, will the client not pull a queued download and start transferring when it establishes a connection to you?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25841">
+<div class="inner">
+<dl class="postprofile" id="profile25841">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25841">
+<h3><a href="#p25841"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-08-17 23:17
+			</p>
+<div class="content">bump!
+<br/>
+<br/>I'm curious about GargoyleMT's questions as well, and if there is a "new and improved" upload queueing system that reports the queue position to the client (and then displays it on the client side for clients that support it ).
+<br/>
+<br/><blockquote><div><cite>Sedulus<a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?t=4460">here</a> wrote:</cite>first of all it would require a $Error You are #n in queue|<br/></div></blockquote>
+<br/>Would this handle the reporting issues?
+<br/>
+<br/>-Gratch06</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			3 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Can't get dch++ to register in public - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="24" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=24" itemprop="url"><span itemprop="title">adchpp</span></a></span>
+<span class="crumb" data-forum-id="14" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=14" itemprop="url"><span itemprop="title">Beta Testers</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=14&amp;t=5430">Can't get dch++ to register in public</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Releases and bugs in here...<br/></div>
+<div class="action-bar bar-top">
+<div class="pagination">
+			12 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p28972">
+<div class="inner">
+<dl class="postprofile" id="profile28972">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 01:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content28972">
+<h3 class="first"><a href="#p28972">Can't get dch++ to register in public</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a></strong> » </span>2003-09-24 17:33
+			</p>
+<div class="content">Hello!
+<br/>
+<br/>I have a problem, I donÃ¢â‚¬â„¢t get my hub running dch++ showing in public.
+<br/>
+<br/>I have this stated in dchpp.xml
+<br/>&lt;!-- Hublist registration --&gt;
+<br/>		&lt;!-- Enable/disable hub list registration --&gt;
+<br/>		&lt;RegisterWithServers type="int"&gt;1&lt;/RegisterWithServers&gt;
+<br/>
+<br/>		&lt;!-- The description to use when registering the server on hub lists. --&gt;
+<br/>		&lt;Description type="string"&gt;[Imperial] -3slots- 15 GB-&lt;/Description&gt;
+<br/>
+<br/>		&lt;!-- The ip or dns name of the server. Mandatory if you want hub registration to
+<br/>			 work (no autodetection). Don't add port number, it's automatically appended. --&gt;
+<br/>		&lt;ServerIp type="string"&gt;liberty1.mine.nu&lt;/ServerIp&gt;&gt;
+<br/>&lt;Ã¢â‚¬Â¦Ã¢â‚¬Â¦..&gt;
+<br/>&lt;RegistrationServers&gt;
+<br/>	&lt;Server&gt;vandel405.dynip.com:2501&lt;/Server&gt;
+<br/>	&lt;Server&gt;dc-dreamland.dhs.org:2501&lt;/Server&gt;
+<br/>&lt;/RegistrationServers&gt;
+<br/>
+<br/>Anyone that can se whats wrong?
+<br/>
+<br/>Btw.. 1670users and between 2-5% CPU usage! Arne you are amazing!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p28995">
+<div class="inner">
+<dl class="postprofile" id="profile28995">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=685">BSOD2600</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 503</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-27 23:47</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content28995">
+<h3><a href="#p28995"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=685">BSOD2600</a></strong> » </span>2003-09-25 00:26
+			</p>
+<div class="content">I've noticed that too...Here is the list I'm using
+<br/>
+<br/>		&lt;Server&gt;vandel405.dynip.com:2501&lt;/Server&gt;
+<br/>		&lt;Server&gt;dcreg.mine.nu:2501&lt;/Server&gt;
+<br/>		&lt;Server&gt;dreamland.gotdns.org&lt;/Server&gt;
+<br/>		&lt;Server&gt;dc-dreamland.dhs.org:2501&lt;/Server&gt;
+<br/>		&lt;Server&gt;HubReg.1stleg.com:2501&lt;/Server&gt;</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p29027">
+<div class="inner">
+<dl class="postprofile" id="profile29027">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 01:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29027">
+<h3><a href="#p29027"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a></strong> » </span>2003-09-25 08:00
+			</p>
+<div class="content"><blockquote><div><cite>BSOD2600 wrote:</cite>I've noticed that too...Here is the list I'm using<br/><br/>		&lt;Server&gt;vandel405.dynip.com:2501&lt;/Server&gt;<br/>		&lt;Server&gt;dcreg.mine.nu:2501&lt;/Server&gt;<br/>		&lt;Server&gt;dreamland.gotdns.org&lt;/Server&gt;<br/>		&lt;Server&gt;dc-dreamland.dhs.org:2501&lt;/Server&gt;<br/>		&lt;Server&gt;HubReg.1stleg.com:2501&lt;/Server&gt;</div></blockquote>
+<br/>
+<br/>Thank you! I just realized that the dc-dreamland.dhs.org:2501 I was using does not work (no IP to the dns) and that dcreg.mine.nu and dreamland.gotdns.org goes the same IP. Could it be that the vandel405.* thinks my hub is a fake somehow due to high user count? I have now changed so I get 1stleg.com and the dcreg.mine.nu istead. Is there anyway of refreshing the dchpp.xml file without restarting the hub? or does +refresh also rehashes the dchpp conf file?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p29031">
+<div class="inner">
+<dl class="postprofile" id="profile29031">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29031">
+<h3><a href="#p29031"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-09-25 09:08
+			</p>
+<div class="content">Personally, i'd register with vandel too, as it's still the one that most lists primarily sync from (i think).
+<br/>
+<br/>But still, i've not seen my hub on the list since we started with dch++ i don't think. Maybe i'm just not looking hard enough, OR maybe the lists are timing out on DnsBl when they try to "ping" us. <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p29166">
+<div class="inner">
+<dl class="postprofile" id="profile29166">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29166">
+<h3><a href="#p29166"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-09-26 17:06
+			</p>
+<div class="content">the vandel pinger can't get into your hub without a workaround (which I have in OpComExtra.lua or HublistPingerHelper.lua)
+<br/>..that would require you to run luascript though, so most likely I'll build a small plugin for that soon (if you really need to be on the vandel list)</div>
+<div class="signature" id="sig29166"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p29195">
+<div class="inner">
+<dl class="postprofile" id="profile29195">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 01:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29195">
+<h3><a href="#p29195"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a></strong> » </span>2003-09-26 20:21
+			</p>
+<div class="content">Thank you!
+<br/>No need to rush and make a small plug-in for my sake. I would be very thankful if it was included in the next release of dch++.
+<br/>
+<br/>Btw, the hub seems to get really time-consuming logins and "lagg" in main with about 1700 users, even thou the cpu usage is almost non. It's on a 10mbit connection, so It should handle at least 2200 users (with other softs @ a lot higher cpu usage).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p29196">
+<div class="inner">
+<dl class="postprofile" id="profile29196">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 01:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29196">
+<h3><a href="#p29196"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a></strong> » </span>2003-09-26 20:31
+			</p>
+<div class="content">I noticed that the hub got on the hublist fine on.1stleg (hubreg.1stleg.com) where it even showed the amount of users I had = Ã¢â‚¬Å“hub pingÃ¢â‚¬? works or they have no. But on dreamland (dcreg.mine.nu) I just got in on there list with a -3. So I guess they canÃ¢â‚¬â„¢t get there Ã¢â‚¬Å“hub pingÃ¢â‚¬? working either on dch++.
+<br/>
+<br/>Could be the same problem as with vandel</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p29219">
+<div class="inner">
+<dl class="postprofile" id="profile29219">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29219">
+<h3><a href="#p29219"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-09-27 01:39
+			</p>
+<div class="content">re: hublist:
+<br/>I notices you timed out on my list.. 30 seconds was not enough for the pinger to get the whole bunch of myinfo's it seems (so you were reported as having less users)
+<br/>
+<br/>re: dreamland vs vandel:
+<br/>you're not the only one having problems with dreamland. personally I haven't seen it's pinger around for a couple of days. vandel hasn't shown up either (I started watching all pingers 5 days ago).
+<br/>the problem is not the same as with vandel. vandel's problem is that it doesn't send any MyINFO (or at least, it didn't when I checked), and without myinfo, the pinger won't get any nicklists which it uses to check your hub.
+<br/>
+<br/>re: lag:
+<br/>you could try to disable the WriteTimeout in dchpp.xml, dunno if that helps
+<br/>
+<br/>re: time-consuming login:
+<br/>I'll ask arne to add a "&lt;DCH++&gt; sending userinfo... please wait" ... "&lt;DCH++&gt; done" in there, as it feels a bit odd to sit and wait there while it's seemingly doing nothing (this could also be fixed by a plugin or something)</div>
+<div class="signature" id="sig29219"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p29244">
+<div class="inner">
+<dl class="postprofile" id="profile29244">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 01:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29244">
+<h3><a href="#p29244"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=51">Henrik</a></strong> » </span>2003-09-27 09:06
+			</p>
+<div class="content">Is there anything else to do to get the "pinger" to get the user list faster? I know there are hubs on the same ISP with more users, so obviously there is a faster way to do the login.  I looked over in one of my other hubs when last the pinger payed me a visit from dreamland, I have ISP script there for the only pinger that can connect to me is this one
+<br/>
+<br/>User '[sunet]pinger' is currently offline.  Jah know this...
+<br/>  Status: USER
+<br/>  Password: 
+<br/>  Comment: 
+<br/>  Last e-mail: <!-- m --><a class="postlink" href="http://dreamland.gotdns.org/PublicHubList.config">http://dreamland.gotdns.org/PublicHubList.config</a><!-- m -->
+<br/>  Last IP: 130.243.79.250
+<br/>  Last visit: 2002-12-30 23:37:03
+<br/>  Last speed: LAN(T3)
+<br/>  Last share: 102,00 GB
+<br/>  Last description:  
+<br/>  Number of visits: 10062
+<br/>
+<br/>And as you can c I donÃ¢â‚¬â„¢t think itÃ¢â‚¬â„¢s active anymore <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p29248">
+<div class="inner">
+<dl class="postprofile" id="profile29248">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29248">
+<h3><a href="#p29248"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-09-27 10:02
+			</p>
+<div class="content">I believe sandos changed it's nick to Pinger (no [sunet])</div>
+<div class="signature" id="sig29248"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p29259">
+<div class="inner">
+<dl class="postprofile" id="profile29259">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29259">
+<h3><a href="#p29259"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-09-27 11:59
+			</p>
+<div class="content">is there anyway you could write a plugin that will bypass all plugins/checks for a certain nick/ip?
+<br/>
+<br/>I think it we are only having problems with  the timeout period as you say, but i think the DnsBl doesn't help one bit for my hub - it adds atleast 10s more delay.. however if the hub lists could by-pass it, they may have a chance of getting on <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p29261">
+<div class="inner">
+<dl class="postprofile" id="profile29261">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content29261">
+<h3><a href="#p29261"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-09-27 12:09
+			</p>
+<div class="content">these are the only two pingers i see in my hub:
+<br/>
+<br/>27	030920-130006: 129.125.102.221	[rug.nl]Pinger
+<br/>28	030920-160945: 12.246.138.204	        [1stleg]Pinger
+<br/>
+<br/>(with "ping" in their nicks atleast).
+<br/>
+<br/>I have opcomextra.lua running.
+<br/>
+<br/>________
+<br/>
+<br/><!-- m --><a class="postlink" href="http://www.1stleg.com/PublicHubList.config">http://www.1stleg.com/PublicHubList.config</a><!-- m -->  -- this list has my hub, yet reports that i have 16 users, and has not updated my description, it still thinks i use Ptokax!! <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>
+<br/>
+<br/><!-- m --><a class="postlink" href="http://dreamland.gotdns.org/Publichublist.config.bz2">http://dreamland.gotdns.org/Publichublist.config.bz2</a><!-- m --> - nothing. not even there.
+<br/>
+<br/><!-- m --><a class="postlink" href="http://www.neo-modus.com/PublicHubList.config">http://www.neo-modus.com/PublicHubList.config</a><!-- m -->  -  hah, i'd be so lucky! I do realise the fact that this hub alternates hubs in the list, but i've never seen my hub there while using anything other than Ptokax.
+<br/>
+<br/><!-- m --><a class="postlink" href="http://www.hublist.org/PublicHubList.config.bz2">http://www.hublist.org/PublicHubList.config.bz2</a><!-- m -->  -   seems adament that my hub is online, however reports that i have 0 users everytime it pings me! AND it's still not updated my hub description tag.
+<br/>
+<br/>
+<br/>Over all, not such a good turn out, wouldn't you agree? lol</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			12 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=14">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Beta Testers”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

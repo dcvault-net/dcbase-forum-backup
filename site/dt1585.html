@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>porting DC++ to Linux? - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=1585">porting DC++ to Linux?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			64 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=1585&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=1585&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p8274">
+<div class="inner">
+<dl class="postprofile" id="profile8274">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2434">sploof</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-21 01:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8274">
+<h3 class="first"><a href="#p8274">porting DC++ to Linux?</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2434">sploof</a></strong> » </span>2003-03-21 01:57
+			</p>
+<div class="content">One thing that a friend and i were talking about was porting DC++ to Linux.  I use Linux more often than windows.  Not to mention the countless others who would like to see something like DC++ for Linux.  Well, anyways, I was wondering if there was a project going on to port DC++ to linux.  If not, why not start one?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8275">
+<div class="inner">
+<dl class="postprofile" id="profile8275">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8275">
+<h3><a href="#p8275"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-21 02:25
+			</p>
+<div class="content">The client code compiles cleanly under linux, or did so in the past.  You'd pretty much just be rewriting the source in the windows/ directory.  I think that'd be a great thing for someone to do.  Are you offering to do the port, or suggesting someone else start the project to do it?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8277">
+<div class="inner">
+<dl class="postprofile" id="profile8277">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2434">sploof</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-21 01:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8277">
+<h3><a href="#p8277"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2434">sploof</a></strong> » </span>2003-03-21 02:31
+			</p>
+<div class="content">Well, it would probably have to be someone else.  My experience in c++ is pretty limited... I can write a "hello world" program an add some basic variables and operators... so, it's probably gonna have to be someone else that does the porting.</div>
+<div class="signature" id="sig8277">I am a Nerd.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8283">
+<div class="inner">
+<dl class="postprofile" id="profile8283">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-28 15:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8283">
+<h3><a href="#p8283">Porting it...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a></strong> » </span>2003-03-21 07:56
+			</p>
+<div class="content">Well I was thinking of porting all the GUI to wxWindows myself, so I guess that could be a great step because it would also compile for Linux (and Mac). So if someone wants to join... <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8285">
+<div class="inner">
+<dl class="postprofile" id="profile8285">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-28 15:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8285">
+<h3><a href="#p8285">oh I forgot...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a></strong> » </span>2003-03-21 08:53
+			</p>
+<div class="content">&gt;The client code compiles cleanly under linux
+<br/>
+<br/>compiles != works
+<br/>
+<br/>I've seen some Windowish stuff lately in DC++ client lib, thank god it's into #define WIN32 blocks, but some features may not have it's *nix counterpart. Nothing to worry much about in any case... now porting the GUI seems much more complicated.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8293">
+<div class="inner">
+<dl class="postprofile" id="profile8293">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8293">
+<h3><a href="#p8293"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-03-21 13:20
+			</p>
+<div class="content">compiles != works?  fair enough, I haven't tried compiling, and I'd find it a bit hard to use without any type of interface. <img alt=";-)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>At least knowadays you have a couple choices with regards to cross platform GUI toolkits... I heard a hint about someone porting to OS X, but only once, so I assume it didn't get far.  In any case, if someone non-experienced tries the porting, it'd be a great learning experience (say hello to mr. resumÃƒÂ©!).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8297">
+<div class="inner">
+<dl class="postprofile" id="profile8297">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2434">sploof</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-21 01:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8297">
+<h3><a href="#p8297"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2434">sploof</a></strong> » </span>2003-03-21 14:42
+			</p>
+<div class="content">Well, i think I may try and do the porting myself. Ill look up some articles and get some more experience in c++.  By the way, if anyone has some good links about porting win32 apps to linux, feel free to share them <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/></div>
+<div class="signature" id="sig8297">I am a Nerd.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8299">
+<div class="inner">
+<dl class="postprofile" id="profile8299">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-28 15:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8299">
+<h3><a href="#p8299">read my previous post pal!</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a></strong> » </span>2003-03-21 15:13
+			</p>
+<div class="content">I said before I'm trying to port DC++ GUI to wxWindows, so if you wanna join... If you don't, just allow me to give you at least some advice: you will have a very hard time to start on your own if you don't have C++ or Win32-Linux porting experience, though. <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8610">
+<div class="inner">
+<dl class="postprofile" id="profile8610">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8610">
+<h3><a href="#p8610"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-03-26 01:19
+			</p>
+<div class="content">I've been thinking of learning wxWindows since I don't really like the layout of DC++ or the use of WTL... =) I need to know a good GUI toolkit for my other projects, so I'll help you out with the wxWindows port Sploof! I only have Windows right now, no space for Linux, but it will come on my next 'puter soon. =) If the port works in Windows, it should work on Linux right? =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p8615">
+<div class="inner">
+<dl class="postprofile" id="profile8615">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8615">
+<h3><a href="#p8615"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-03-26 02:04
+			</p>
+<div class="content">That should have been "Who", not sploof. =) Why can't you edit your damn messages??</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p8839">
+<div class="inner">
+<dl class="postprofile" id="profile8839">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-28 15:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content8839">
+<h3><a href="#p8839">Porting to wxWindows</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a></strong> » </span>2003-03-28 11:01
+			</p>
+<div class="content">I'm currently comparing wxWindows GUI capabilities to those DC++ needs.
+<br/>I will prepare a document with the conclusions.
+<br/>
+<br/>We can start from Windows, and after it works, we'll tackle the Linux version. So it's about rebuilding DC++ GUI.
+<br/>
+<br/>What ideas have you got about the GUI? (you say there are things you don't like from current DC++). 
+<br/>
+<br/>After we make decisions about what to do with the GUI, we'll start coding.
+<br/>Meanwhile I'll wait for your opinions.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9298">
+<div class="inner">
+<dl class="postprofile" id="profile9298">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=85">Jase</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 09:40</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9298">
+<h3><a href="#p9298">Re: Porting to wxWindows</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=85">Jase</a></strong> » </span>2003-04-01 15:53
+			</p>
+<div class="content"><blockquote><div><cite>Who wrote:</cite>What ideas have you got about the GUI? (you say there are things you don't like from current DC++). </div></blockquote>
+<br/>Current GUI is great. I've been using DC_GUI and it is just awful :D I would be pleased if the GUI would be same as in windows version.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9707">
+<div class="inner">
+<dl class="postprofile" id="profile9707">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3527">Zalk</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 20:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9707">
+<h3><a href="#p9707">Is there or is there not a dc++ for linux???</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3527">Zalk</a></strong> » </span>2003-04-03 20:54
+			</p>
+<div class="content">I wonder if there is a dc++ for linux (Red Hat 8.0)?
+<br/>If there is one, can anyone give me a set by setp guide how to install it and download it?
+<br/>Thank Zalk <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/> <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/> <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/> <img alt=":?:" class="smilies" src="/images/smilies/icon_question.gif" title="Question"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9713">
+<div class="inner">
+<dl class="postprofile" id="profile9713">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9713">
+<h3><a href="#p9713"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-04-03 21:55
+			</p>
+<div class="content">Try <a class="postlink" href="http://dc.ketelhot.de/">this</a> client. It's not DC++, but it has a similar GUI.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10189">
+<div class="inner">
+<dl class="postprofile" id="profile10189">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10189">
+<h3><a href="#p10189"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-06 23:40
+			</p>
+<div class="content">Hi again, my motherboard fried, waiting for a new one... =/ Will take a week more or so.
+<br/>
+<br/>I agree with focusing on wxWindows for the Windows plattform, and then make any necessary adjustments for Linux after that.
+<br/>
+<br/>Here comes my ideas so far for the GUI:
+<br/>
+<br/>Since I'm interested in bringing segmented downloading to DC++ I want be able to group several downloads under one line in the up/download frame. A "+/-" to the left so that one can expand the group and see individual segments progress and from there modify segments. 
+<br/>
+<br/>I think there should be tabs for the uploads and downloads so that they are not in the same frame at the same time. (I'm not very interested in what others get from me. =))
+<br/>
+<br/>User should be able to choose and enable/disable tabs in every window type and that info should be saved. I see no reason to have a field with "Directory"  to the right in download queue fxp, that is in the left frame. In settings or maybee right click the tab-field and "customize".
+<br/>
+<br/>That's it  I think, the rest of the GUI works pretty well. =)
+<br/>
+<br/>We need a good place to share code and test-builds, we could use <!-- w --><a class="postlink" href="http://www.lowertech.net">www.lowertech.net</a><!-- w --> , one of my fast domains?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10190">
+<div class="inner">
+<dl class="postprofile" id="profile10190">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10190">
+<h3><a href="#p10190"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-06 23:46
+			</p>
+<div class="content">Sorry to hear about your motherboard dying.  Computer less (or even being down one) isn't so much fun.
+<br/>
+<br/>Why not just run the client and hang out, sharing it, on the DC++ Developer hub?  (see the sticky).  If you're serious about sharing code, someone should set up a cvs server too.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10199">
+<div class="inner">
+<dl class="postprofile" id="profile10199">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10199">
+<h3><a href="#p10199"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-07 01:04
+			</p>
+<div class="content">Never used CVS... =) Don't have my computer on 24/7 either, so no use for me to host it that way. Links for CVS info/programs? 
+<br/>
+<br/>Anyway, not many people use the devhub. =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10207">
+<div class="inner">
+<dl class="postprofile" id="profile10207">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10207">
+<h3><a href="#p10207"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-07 01:54
+			</p>
+<div class="content"><blockquote><div><cite>distiller wrote:</cite>Never used CVS... =) Don't have my computer on 24/7 either, so no use for me to host it that way. Links for CVS info/programs? <br/><br/>Anyway, not many people use the devhub. =)</div></blockquote>
+<br/>
+<br/>Not many people use the dev hub, but only people of note use it. <img alt=":-D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>  Fusbar, cologic, Opera, Sandos, Sedulus, aDe, mo, yilard, and even arne gets on once every couple days.
+<br/>
+<br/>You can check out wincvs.org or many other places for information on CVS.  It's stunningly popular for source management.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10235">
+<div class="inner">
+<dl class="postprofile" id="profile10235">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-28 15:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10235">
+<h3><a href="#p10235">To distiller...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a></strong> » </span>2003-04-07 08:01
+			</p>
+<div class="content">mmm... we'll keep this suggestions in mind... but new features should be left for regular DC++ team. I mean we all love segmented dl and so, but first I think there is some work to be done with the buffered sockets problem. 
+<br/>
+<br/>You know, it's impossible that I get 200KB from web or other P2P clients and only 30-40KB from DC++. Something is wrong there. So imagine segmented dl... 
+<br/>
+<br/>I'm currently reading some docs so I'll contact you when we are ready to start. I have very little time these days.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10325">
+<div class="inner">
+<dl class="postprofile" id="profile10325">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10325">
+<h3><a href="#p10325"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-07 21:42
+			</p>
+<div class="content">Additional changes to the DC++ code shouldn't be made by us in this project, we'll just make the GUI work with wx. But we could try to make my ideas possible to implement GUI-wise. I work full-time and have a girlfriend who deserves most of my other free time. =) So I have little time as well, but it will still be possible. I'll ask a friend to put up a CVS when we're ready to start.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p11701">
+<div class="inner">
+<dl class="postprofile" id="profile11701">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content11701">
+<h3><a href="#p11701"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-18 16:18
+			</p>
+<div class="content">I've started to realize just how much work this is. But I'm still up for it. =)
+<br/>
+<br/>Some things I've noted that will have to change:
+<br/>Application Class
+<br/>Threading
+<br/>Menues
+<br/>Dialoges, open, about, settings
+<br/>Treeview
+<br/>Tabs - up/downloads, settings
+<br/>Lists - up/downloads and fileview in queue
+<br/>Maybee event system (which could mean every "fire"?)
+<br/>Localization (enumeration)
+<br/>
+<br/>It's a 6 months project for 2 people. =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p11872">
+<div class="inner">
+<dl class="postprofile" id="profile11872">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2748">chrisster</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-28 00:50</dd>
+</dl>
+<div class="postbody">
+<div id="post_content11872">
+<h3><a href="#p11872"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2748">chrisster</a></strong> » </span>2003-04-20 00:31
+			</p>
+<div class="content">I didn't see this mentioned in the thread so I figured I'd throw it out.
+<br/>
+<br/>I have an idea for the GUI (from a coding standpoint).  Why not use the Qt toolkit for GUI coding?  I know for a fact that the Qt library is availble for both Windows and Linux (I have never done coding on a Mac so I don't know about that).  Since the client code compiles under Linux, then that same code (minus the #ifdef WIN32 macros) could be used in conjunction with a Qt application.
+<br/>
+<br/>I'm not sure how or if the function calls or class structures differ between the Windows and Linux ports, but I'm sure they can't be as different as ATL vs. X-Windows.
+<br/>
+<br/>Of course, this would mean a complete re-write of the GUI and not a true port of the GUI.  Nevertheless, it could make cross-platform development of DC++ easier in the future.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p11899">
+<div class="inner">
+<dl class="postprofile" id="profile11899">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content11899">
+<h3><a href="#p11899"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-20 07:58
+			</p>
+<div class="content">Why not use Mozilla's XUL?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p11956">
+<div class="inner">
+<dl class="postprofile" id="profile11956">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25">Windrider</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 15:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content11956">
+<h3><a href="#p11956"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25">Windrider</a></strong> » </span>2003-04-20 17:44
+			</p>
+<div class="content">Well Qt is way different from ATL/MFC although it's one of the best choices for corssplatform programming, but given the fact ATL uses MFC down under and that wxWindows is very similar to MFC, probably that makes wxWindows the best choice over other options (Qt, GTK, FLTK or FOX). 
+<br/>
+<br/>Volkris: Xul is simply too much, it's bigger than wxWindows or QT, slow, and bloated.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12009">
+<div class="inner">
+<dl class="postprofile" id="profile12009">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12009">
+<h3><a href="#p12009"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-20 22:48
+			</p>
+<div class="content"><blockquote><div><cite>Windrider wrote:</cite>Volkris: Xul is simply too much, it's bigger than wxWindows or QT, slow, and bloated.</div></blockquote>
+<br/>
+<br/>I was half joking there, I should have indicated it.
+<br/>
+<br/>But I was half serious.
+<br/>
+<br/>XUL is actually not as bad as you indicate. On my machines it's actually a bit faster than many QT applications (then again, what kind of bechmarks can actually determine what is faster?). And in what terms do you mean bigger?
+<br/>
+<br/>Especially with the forthcoming GRE, XUL has promise.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12095">
+<div class="inner">
+<dl class="postprofile" id="profile12095">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12095">
+<h3><a href="#p12095"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-21 15:45
+			</p>
+<div class="content">From what I've seen QT is really expensive, wxWindows is Free, open source and in my opinion the best alternative, it has everything we need, I think. =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12134">
+<div class="inner">
+<dl class="postprofile" id="profile12134">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25">Windrider</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 15:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12134">
+<h3><a href="#p12134"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25">Windrider</a></strong> » </span>2003-04-21 20:33
+			</p>
+<div class="content">Actually QT is free for Linux development as long as it's gpl, and there's a free versionof QT 2 for windows too as long as you make free software.
+<br/>
+<br/>Xul apps faster than QT? Surely that's bad coding of QT apps.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12142">
+<div class="inner">
+<dl class="postprofile" id="profile12142">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12142">
+<h3><a href="#p12142"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-21 21:28
+			</p>
+<div class="content"><blockquote><div><cite>Windrider wrote:</cite>Xul apps faster than QT? Surely that's bad coding of QT apps.</div></blockquote>
+<br/>
+<br/>Once you have the XUL engine running it's really fast.
+<br/>
+<br/>This makes sense to me, though. Whether it's on Windows or Linux, often working in the browser happens to be a little snappier than working with applications using native widgits. 
+<br/>
+<br/>But again, what is "faster"? These are just my perceptions on isolated trials. It only shows that XUL CAN feel faster than Qt, that it's not impossible.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12598">
+<div class="inner">
+<dl class="postprofile" id="profile12598">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2748">chrisster</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-28 00:50</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12598">
+<h3><a href="#p12598"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2748">chrisster</a></strong> » </span>2003-04-24 21:15
+			</p>
+<div class="content">With a program like DC++ where the intended purpose is file sharing, I can't imagine that GUI speed is that important - ease of coding and portability seems more important.
+<br/>
+<br/>Sure, it would be nice to have smooth GUI code (maybe), but the real issue is how efficient the network code runs.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12626">
+<div class="inner">
+<dl class="postprofile" id="profile12626">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12626">
+<h3><a href="#p12626"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-25 01:18
+			</p>
+<div class="content">Now, I missed out on all those "ergonomic user interface" classes in college, but GUI speed, though it might not matter to technical people, does matter a great deal to end users.  Pretty much anything should be fine on modern linux boxes, but speed and feedback do matter a great deal. <img alt=":-D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12649">
+<div class="inner">
+<dl class="postprofile" id="profile12649">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12649">
+<h3><a href="#p12649"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-25 09:23
+			</p>
+<div class="content">wxWindows is quick in my tests, and doesn't seem to be too hard to learn. =) It also has the needed threading, timing and variable types we need to make the code portable "easily", so I really think it's the best way to go. 
+<br/>
+<br/>I'll be making commercial programs later on that use the library I decide upon now. I won't be using QT then for obvious reasons, so why learn two libraries?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12708">
+<div class="inner">
+<dl class="postprofile" id="profile12708">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12708">
+<h3><a href="#p12708"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-25 16:21
+			</p>
+<div class="content">Well, why be bound to a specific GUI at all?
+<br/>Why not follow in DCTC's footsteps and make what amouts to a backend that can be connected to with whatever interface a user wishes? This is more the Linux way to do things anyway.
+<br/>
+<br/>Once you have something like that working you almost automatically get the ability to connect to the background process with a client actually runnnig on any other windows or Linux computer elsewhere on the Internet.
+<br/>
+<br/>
+<br/>
+<br/>Actually, why talk about making/porting a new client at all? It might just be easier to improve upon one of the already existant Linux clients than go throught he trouble of porting DC++. But what do I know.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12813">
+<div class="inner">
+<dl class="postprofile" id="profile12813">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12813">
+<h3><a href="#p12813"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-26 14:09
+			</p>
+<div class="content">DC++ is one of the leading clients, and I believe it will become #1 if it isn't already. DC++ will also get new features that make it more competetive than any other client. If DC++ can be used on more plattforms more users will be able to use the features and they will work better since more online clients support them. We need a port, and we need code that works on all platforms. wxWindows supports sockets, timers, threading and everything else we need for the code to work on all plattforms.
+<br/>
+<br/>About the idea of separating the GUI from the client, well, it would of course be possible but it isn't anything I'm interested in doing. I know the Linux way: "Make so many different versions that are all half-done that the users can not choose one good client."
+<br/>Let's not make DC++ that bad favor...  <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12903">
+<div class="inner">
+<dl class="postprofile" id="profile12903">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=491">Neg</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-19 12:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12903">
+<h3><a href="#p12903"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=491">Neg</a></strong> » </span>2003-04-27 13:49
+			</p>
+<div class="content">Im not that experienced with corsscompability GUI code but this is how i sloved my corosscompability isse with threads and sockets.
+<br/>
+<br/>I created classes for them and seperated them from what ever project i need them in. The only link bethwine them are the header files. This way nerly all my console applicatons is corsscompatible (only a few that use some wery odd functions need to be changed a bit befor compiling). Then if i compile it in a win it use the windows source files for my classes and in linux it use the linux sources (The thure is i use precompiled librarys but you get the picture).
+<br/>
+<br/>I have no ide if this method is efficent for GUI stuff but it works real nice for sockets and threads.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12931">
+<div class="inner">
+<dl class="postprofile" id="profile12931">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12931">
+<h3><a href="#p12931">that would be "cross-platform"</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-27 15:57
+			</p>
+<div class="content">The standard way would be to only have source base, and then test for the existance and versions of various predefined variables, such as WIN32, etc.  This way, you have a single source repository and you're using the existing mechanisms to determine what environment you're being compiled in, and react appropriately.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13018">
+<div class="inner">
+<dl class="postprofile" id="profile13018">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13018">
+<h3><a href="#p13018"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-28 10:49
+			</p>
+<div class="content">Or you don't use any platform specific code at all and use wxWindows or other libraries that use the appropiate code be them self. Less code and less problems. =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13196">
+<div class="inner">
+<dl class="postprofile" id="profile13196">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13196">
+<h3><a href="#p13196"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-29 14:08
+			</p>
+<div class="content"><blockquote><div><cite>distiller wrote:</cite>DC++ will also get new features that make it more competetive than any other client. If DC++ can be used on more plattforms more users will be able to use the features and they will work better since more online clients support them. We need a port, and we need code that works on all platforms. wxWindows supports sockets, timers, threading and everything else we need for the code to work on all plattforms.<br/><br/>About the idea of separating the GUI from the client, well, it would of course be possible but it isn't anything I'm interested in doing. I know the Linux way: "Make so many different versions that are all half-done that the users can not choose one good client."<br/>Let's not make DC++ that bad favor...  <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/></div></blockquote>
+<br/>
+<br/>Well, this is kind of funny to me.
+<br/>At least two Linux clients have more features than DC++, and are therefore more competitive except that they don't run on windows. Under this reasoning we should be porting THOSE to replace DC++.
+<br/>
+<br/>Seperation of GUI from client has nothing to do with half finished-ness of software. In fact if often results in multiple-finishedness as the same backend can be finished off in multiple ways. 
+<br/>
+<br/>But in the end, if you're worried about the half-done programs on Linux you'd be picking up one of those projects, not starting another.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13224">
+<div class="inner">
+<dl class="postprofile" id="profile13224">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13224">
+<h3><a href="#p13224"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-04-29 21:35
+			</p>
+<div class="content">DC++ is more widely used, mostly since it's the best DC-client for the windows plattform. Actually the Linux community doesn't need DC++ at all, but I want it on my Linux machine as I use DC++ on my windows machine. =) And please don't forget that using wxWindows doesn't only give us Linux support but Mac as well. (not that <strong class="text-strong">that's</strong> a top priority.. =)) Even if we ported a Linux client to windows it would not become as popular as DC++ is, at least not the next couple of years... Can you believe there's still people using NMDC??
+<br/>
+<br/>Also I am familiar with the DC++ source code and have no time to start studying another dc-client's source code. Yeah, just call me lazy. <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13237">
+<div class="inner">
+<dl class="postprofile" id="profile13237">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=672">yakko</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 258</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-27 06:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13237">
+<h3><a href="#p13237"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=672">yakko</a></strong> » </span>2003-04-29 23:24
+			</p>
+<div class="content">I'm not a programmer, but have been dabbling with Wine and DC++ works fine in Linux using Wine. Would it be possible to use <a class="postlink" href="http://www.winehq.com/?page=winelib">Winelib</a> to make a port in Linux?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13735">
+<div class="inner">
+<dl class="postprofile" id="profile13735">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-28 15:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13735">
+<h3><a href="#p13735">Starting port...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a></strong> » </span>2003-05-05 07:39
+			</p>
+<div class="content">ok, I'm requesting a sourceforge project. Things will go slowly first as my laptop is still repairing, but I think it'll be interesting.
+<br/>
+<br/>I think I'll redo not only the GUI part, but also some of the client one,
+<br/>because I want to fully use the wx library. This means using wxSockets,
+<br/>wxTimer and wxThreads...
+<br/>
+<br/>so this will end up being more a DC++ clone by itself than a DC++ port.
+<br/>Wish me luck!
+<br/>
+<br/>Who</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13736">
+<div class="inner">
+<dl class="postprofile" id="profile13736">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13736">
+<h3><a href="#p13736">Re: Starting port...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-05-05 08:24
+			</p>
+<div class="content"><blockquote><div><cite>Who wrote:</cite>so this will end up being more a DC++ clone by itself than a DC++ port.<br/>Wish me luck!<br/>Who</div></blockquote>
+<br/>
+<br/>Well, since you're entering the territory of clone, would you be willing to include some more advaned features that havn't made it into DC++?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13738">
+<div class="inner">
+<dl class="postprofile" id="profile13738">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-28 15:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13738">
+<h3><a href="#p13738">features</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=698">Who</a></strong> » </span>2003-05-05 08:32
+			</p>
+<div class="content">Hi,
+<br/>
+<br/>sure I'll add new features... but there is still a very long way <img alt=":-)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>My first aim is being able to connect to a hub, and do some basic functions.
+<br/>
+<br/>Meanwhile, you can submit your suggestions here.
+<br/>
+<br/>Who</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13788">
+<div class="inner">
+<dl class="postprofile" id="profile13788">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13788">
+<h3><a href="#p13788">Re: Starting port...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-05-06 00:41
+			</p>
+<div class="content"><blockquote><div><cite>volkris wrote:</cite>Well, since you're entering the territory of clone, would you be willing to include some more advaned features that havn't made it into DC++?</div></blockquote>
+<br/>
+<br/><strong class="text-strong">*ahem*</strong>  Like what?  Nothing I've seen you propose so far can't be done in DC++, as long as someone's willing to code it.  <img alt=";-)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p18181">
+<div class="inner">
+<dl class="postprofile" id="profile18181">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3011">Ryan O'Connell</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 6</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-30 23:18</dd>
+</dl>
+<div class="postbody">
+<div id="post_content18181">
+<h3><a href="#p18181"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3011">Ryan O'Connell</a></strong> » </span>2003-06-09 14:06
+			</p>
+<div class="content">I'd be very interested in cooperating with people porting DC++ to wxWindows. Is there any pair of hands needed? <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p44077">
+<div class="inner">
+<dl class="postprofile" id="profile44077">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18632">Cafesolo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-02-29 09:39</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Argentina</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44077">
+<h3><a href="#p44077"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18632">Cafesolo</a></strong> » </span>2004-02-29 09:42
+			</p>
+<div class="content">Hello, I'm a wxWindows developer. I would like to help in the DC++ wxWindows port. Please contact me by mail to lovisolo at datafull dot com.
+<br/>
+<br/>Greetings.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p44083">
+<div class="inner">
+<dl class="postprofile" id="profile44083">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44083">
+<h3><a href="#p44083">Re: Starting port...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-02-29 10:55
+			</p>
+<div class="content"><blockquote><div><cite>Who wrote:</cite>ok, I'm requesting a sourceforge project.</div></blockquote>
+<br/>Just out of curiosity, has this happened yet?</div>
+<div class="signature" id="sig44083">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p44105">
+<div class="inner">
+<dl class="postprofile" id="profile44105">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content44105">
+<h3><a href="#p44105">Re: Starting port...</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-02-29 17:24
+			</p>
+<div class="content"><blockquote><div><cite>TheParanoidOne wrote:</cite>Just out of curiosity, has this happened yet?</div></blockquote>
+<br/>
+<br/>I see <a class="postlink" href="http://sourceforge.net/projects/macdcpp/">Mac DC++</a> as a SF project... And they have stuff in CVS. 
+<br/>
+<br/>Unixman also hinted that he'd solicit for serious help for his linux port here.  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p45322">
+<div class="inner">
+<dl class="postprofile" id="profile45322">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-02 16:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45322">
+<h3><a href="#p45322"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a></strong> » </span>2004-03-12 15:25
+			</p>
+<div class="content">Just my two cents but what I would like is a DC++ port not a clone since there are many good hubs out there that just accept DC++ and oDC. Thus I would like a client that is DC++ but runs on Linux.
+<br/>
+<br/>Another thing is this port/clone project that was discussed dead or...?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p45378">
+<div class="inner">
+<dl class="postprofile" id="profile45378">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45378">
+<h3><a href="#p45378"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-13 01:30
+			</p>
+<div class="content"><blockquote><div><cite>Naga wrote:</cite>Just my two cents but what I would like is a DC++ port not a clone since there are many good hubs out there that just accept DC++ and oDC. Thus I would like a client that is DC++ but runs on Linux.</div></blockquote><br/>I'm a little confused, since arne calls DC++ mods clones.   Are you saying that you'd much rather have a ported DC++ than one of the existing unix DC clients?<br/><br/><blockquote><div><cite>Naga wrote:</cite>Another thing is this port/clone project that was discussed dead or...?</div></blockquote>
+<br/>The Linux one?  No, I don't think so.  I don't know what the progress is on it, the main porter wants the code to be in a pretty closed group until it gets usable/stable.  As for the Mac DC++ port, you can check the dates on the CVS commits in their sourceforge page, they all seem fairly recent.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p45427">
+<div class="inner">
+<dl class="postprofile" id="profile45427">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 45</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-02 16:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content45427">
+<h3><a href="#p45427"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14608">Naga</a></strong> » </span>2004-03-13 10:15
+			</p>
+<div class="content"><blockquote class="uncited"><div>I'm a little confused, since arne calls DC++ mods clones. Are you saying that you'd much rather have a ported DC++ than one of the existing unix DC clients?</div></blockquote>
+<br/>Yes for the above reason. I don't enjoy getting banned (yes it has happend) just for connecting to my favorite hub when running Linux. &lt;br&gt;
+<br/>And since the code contains comments about Linux (or is it Unix) compability I get the feeling that it is supposed to be portable. But since I'm a novice ( but willing to learn <img alt=":-)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> ) programmer I'm not sure.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			64 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=1585&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=1585&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Encryption? - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=35">Encryption?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			79 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=35&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=35&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p109">
+<div class="inner">
+<dl class="postprofile" id="profile109">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content109">
+<h3 class="first"><a href="#p109">Encryption?</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2003-01-04 20:57
+			</p>
+<div class="content">Here's another goodie I'm planning - client to client encryption...The way I see it it will be done the standard way, i e first a secret temporary key exchange using pk type encruption, and then using the secret key with a fast encryption algorithm to encrypt all data...
+<br/>My question is, does anyone have any experience with this? I can't decide on the exact algorithms to use, and whether to use something standard like openssl (which i don't like, the compressed source code distribution is 2.2 megs, bloat!!!), another library, or cook something on my own...suggestions?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p111">
+<div class="inner">
+<dl class="postprofile" id="profile111">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 224</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 22:47</dd>
+</dl>
+<div class="postbody">
+<div id="post_content111">
+<h3><a href="#p111"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=46">ender</a></strong> » </span>2003-01-04 22:21
+			</p>
+<div class="content"><a class="postlink" href="http://dc.ketelhot.de/">DCgui</a> has some kind of encryption (for chat) planned... Maybe you could contact it's author...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p202">
+<div class="inner">
+<dl class="postprofile" id="profile202">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25">Windrider</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 15:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content202">
+<h3><a href="#p202"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25">Windrider</a></strong> » </span>2003-01-05 18:03
+			</p>
+<div class="content">Mmm you might try using AES (aka Rjaendel) and something like El Gamal for key distribution. AES is fast, has a decent security and I remeber seeing distributions of it less than 100Kb long compressed.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p219">
+<div class="inner">
+<dl class="postprofile" id="profile219">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105">coma</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 21:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content219">
+<h3><a href="#p219"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105">coma</a></strong> » </span>2003-01-05 22:04
+			</p>
+<div class="content">I would definitely cut only the needed parts from some open-source crypto lib and not include a bloated one.
+<br/>
+<br/>Some candidates:
+<br/>
+<br/>* Crypto++, <!-- m --><a class="postlink" href="http://www.eskimo.com/~weidai/cryptlib.html">http://www.eskimo.com/~weidai/cryptlib.html</a><!-- m -->, probably too large but rather complete
+<br/>* Nettle, <!-- m --><a class="postlink" href="http://www.lysator.liu.se/~nisse/nettle/nettle.html">http://www.lysator.liu.se/~nisse/nettle/nettle.html</a><!-- m -->, smaller but has got most of what you'll need and you can pick only the parts you need
+<br/>
+<br/>I would probably go for ElGamal or RSA with 1024 or 2048 bit keys for the pk part and then AES with 256 bits keylength. Speed is not really a problem on desktop machines so why use smaller key?
+<br/>
+<br/>Nettle is nice since you got Yarrow in there for pseudo-rand nums.
+<br/>
+<br/>So rip out Yarrow, AES and RSA from nettle and off you go... <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p704">
+<div class="inner">
+<dl class="postprofile" id="profile704">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=253">eHast</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 18</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-09 07:36</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Lund, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content704">
+<h3><a href="#p704"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=253">eHast</a></strong> » </span>2003-01-09 15:38
+			</p>
+<div class="content">(Jay! I'm back. ;-)
+<br/>
+<br/>First off, I think encryption is a good idea. If for no other reason than a lot of people are paranoid and having an already established encryption scheme will alliviate the demand for 3rd party addons instead. (Creating even more interoperability difficulties.)
+<br/>
+<br/>You mention PK distribution, do you think this is actually needed? A lot of protocols support session keys, eg SSL. This would mean that a rather big and cumbersome part would be avoided. (Key management is not trivial.)
+<br/>
+<br/>Then comes the question of what to encode. Protocol data should be encrypted naturally, this is the important part. Encrypting all file transfers might be redundant, so perhaps a way of selecting "paranoia level" would be good? Also remember the golden rule in cryptography that this also requires a compression scheme for all transfers. Particularly if protocol data is encrypted with the same key as file data. Otherwise that is a big potential exploit.
+<br/>
+<br/>As I mentioned previously PK might be a bit overkill, but if it is included why not use it for more things? Having a PK in the system would mean that we could support authentication and signing of data as well. Eg the bzip filelists could be signed by the sender which would later allow for secure redistribution of them. (Naturally this is hypothetical, just pointing out that a PK system allows for more than pure encryption.)
+<br/>
+<br/>When it comes to what particular algorithm to use it might be beneficial to use an established protocol such as SSL or SSH to base on. This ensures that no mistakes are made on the pre-encryption level. (This is were most mistakes are done.) In Java it is very simple to add SSL to an application. I don't know how much more work it is with C++ though.
+<br/>
+<br/>It's probably good if the actual algorithm used (DES, Blowfish, AES etc.) is not set in stone. Most protocols allow for auto-negotiation of encryption schemes.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p712">
+<div class="inner">
+<dl class="postprofile" id="profile712">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=102">Locutus</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 21</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 20:25</dd>
+</dl>
+<div class="postbody">
+<div id="post_content712">
+<h3><a href="#p712"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=102">Locutus</a></strong> » </span>2003-01-09 18:07
+			</p>
+<div class="content">It would be extreamly nice to have ones IP address encrypted. The main reason this is so people can be 100% anonymous.
+<br/>
+<br/>I see no reason in encrypting file transfers.</div>
+<div class="signature" id="sig712">Web-Programmer - Application Developer</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p715">
+<div class="inner">
+<dl class="postprofile" id="profile715">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content715">
+<h3><a href="#p715"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-01-09 18:20
+			</p>
+<div class="content"><blockquote><div><cite>Locutus wrote:</cite>It would be extreamly nice to have ones IP address encrypted. The main reason this is so people can be 100% anonymous.<br/></div></blockquote>
+<br/>
+<br/>If it only was that easy <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p717">
+<div class="inner">
+<dl class="postprofile" id="profile717">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=253">eHast</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 18</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-09 07:36</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Lund, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content717">
+<h3><a href="#p717"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=253">eHast</a></strong> » </span>2003-01-09 18:44
+			</p>
+<div class="content">Oh it's trivial. You just have to encrypt the IP address used in DC and then put some garbage in your IP headers.
+<br/>
+<br/>Unfortunately decryption is a bit hairier.
+<br/>
+<br/>Seriously though. Encryption would be a requirement if you wanted to do a "package bouncing network" which could then make you more or less anonymous.
+<br/>
+<br/>And please notice that I haven't been even in the least sarcastic in this post. It took a /lot/ of effort. ;-)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p787">
+<div class="inner">
+<dl class="postprofile" id="profile787">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=30">Iceman[grrrr]</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 58</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:30</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> QuÃƒÂ©bec, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content787">
+<h3><a href="#p787"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=30">Iceman[grrrr]</a></strong> » </span>2003-01-10 12:14
+			</p>
+<div class="content"><blockquote><div><cite>Locutus wrote:</cite>It would be extreamly nice to have ones IP address encrypted. The main reason this is so people can be 100% anonymous.</div></blockquote>
+<br/>
+<br/>For people to connect to you, they need to know your IP.</div>
+<div class="signature" id="sig787">DC++ QoS Person</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p946">
+<div class="inner">
+<dl class="postprofile" id="profile946">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=160">the_bean</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 16:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content946">
+<h3><a href="#p946"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=160">the_bean</a></strong> » </span>2003-01-12 15:24
+			</p>
+<div class="content">And exactly what good would come out of encrypting the file transfers ?
+<br/>
+<br/>"Yes now noone besides the uploader and me knows what I'm downloading. Just like before."
+<br/>
+<br/>oh well it keeps the cpu warm.</div>
+<div class="signature" id="sig946">Anytime is coffee time !</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p973">
+<div class="inner">
+<dl class="postprofile" id="profile973">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=30">Iceman[grrrr]</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 58</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:30</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> QuÃƒÂ©bec, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content973">
+<h3><a href="#p973"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=30">Iceman[grrrr]</a></strong> » </span>2003-01-12 21:40
+			</p>
+<div class="content">for example, your ISP won't be able to check what you are currently getting if they didn't get the key...</div>
+<div class="signature" id="sig973">DC++ QoS Person</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p974">
+<div class="inner">
+<dl class="postprofile" id="profile974">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content974">
+<h3><a href="#p974"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-01-12 21:46
+			</p>
+<div class="content"><blockquote><div><cite>Iceman[grrrr] wrote:</cite>for example, your ISP won't be able to check what you are currently getting if they didn't get the key...</div></blockquote>
+<br/>
+<br/>Well...
+<br/>I don't know, but my guesstimate is that it would be illegal (or invalid evidence) to tap someone's traffic... even if it was legal, the usual way that people get disconnected from their ISP, is that a anti piracy organisation finds the user on the sharing networks by going there (and what does encryption help then..). It would not make sense for ISP's to disconnect users by actively searching for them - they know that people download stuff - thats a big buisness point for them!
+<br/>
+<br/>The exception would be schools and stuff like that, it would make sense if they sniffed..
+<br/>Thats what I think, anyway <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p1007">
+<div class="inner">
+<dl class="postprofile" id="profile1007">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=30">Iceman[grrrr]</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 58</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 16:30</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> QuÃƒÂ©bec, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1007">
+<h3><a href="#p1007"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=30">Iceman[grrrr]</a></strong> » </span>2003-01-13 03:08
+			</p>
+<div class="content">the ISP can be sued if they let you download illegal files and they don't do a thing, that's why they are supposed to control what you see...
+<br/>
+<br/>at least those are the laws in Canada and I think in the Sates too...</div>
+<div class="signature" id="sig1007">DC++ QoS Person</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p1020">
+<div class="inner">
+<dl class="postprofile" id="profile1020">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 138</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-07 14:14</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> SE</dd>
+</dl>
+<div class="postbody">
+<div id="post_content1020">
+<h3><a href="#p1020"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=193">aDe</a></strong> » </span>2003-01-13 09:21
+			</p>
+<div class="content">Here in sweden, the ISP is contacted by the antipiracy organisation, who then contacts the user, and tells them to stop sharing. Usually unsharing will solve everything, and nothing further happens. If the user keeps sharing, the ISP is likely to disconnect you. So the ISP does something- but only when they need to, thats my point.. as for downloading stuff, i heard that there is not yet a law good enough to do anything about it.. sharers are the target right now</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2183">
+<div class="inner">
+<dl class="postprofile" id="profile2183">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=75">TheekAzzaBreek</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 17:41</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2183">
+<h3><a href="#p2183"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=75">TheekAzzaBreek</a></strong> » </span>2003-01-27 22:47
+			</p>
+<div class="content">Arne,
+<br/>
+<br/>Have you ever thought about client-hub authentication? Scriptwriters all across the community are doing the weirdest things to seek and destroy  fake sharers, with moderate success, and nasty side effects. If a robust means of client validation could be constructed, the whole issue would simply disappear. 
+<br/>
+<br/>Not sure if this can be done at all in open source, though. Common sense tells me no, but then encryption has always been a black art to me</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2184">
+<div class="inner">
+<dl class="postprofile" id="profile2184">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=684">mathen</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-27 22:40</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2184">
+<h3><a href="#p2184"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=684">mathen</a></strong> » </span>2003-01-27 22:58
+			</p>
+<div class="content">Hello,
+<br/>
+<br/>i have add client&lt;-&gt;client encryption to dcgui. I use the ssl lib to setup a encrypted line after the "$key" cmd. The new "$Supports"-parameter is "SSL".
+<br/>
+<br/>Partial-Download-Support:
+<br/>
+<br/>Can dc++ support partial downloads ? I use dcgui with a modified "$Get"-command: "filename$pos$size". The new $Supports-parameter is "CHUNK".
+<br/>
+<br/>Best Regards
+<br/>
+<br/>Mathias</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2438">
+<div class="inner">
+<dl class="postprofile" id="profile2438">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=580">qqzm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 47</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 12:08</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2438">
+<h3><a href="#p2438"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=580">qqzm</a></strong> » </span>2003-01-30 10:19
+			</p>
+<div class="content">I think a distinction is needed here between "Security" and "Sender Anonymity".
+<br/>
+<br/>Security: Client Alice is sending file X to Client Bob. Alice's evil ISP SysOp Eve is trying to discover what files Alice is sending by watching all the packets coming from here machine. Having a secure connection (i.e. encrypting everything send to Bob) prevents Eve from looking at what is inside the packets.
+<br/>
+<br/>Sender Anonymity: Nomatter what Bob does (e.g.: edits the source of his client, snoops on his incoming connections and packets etc.), there is no way he can tell who is sending him the file.
+<br/>
+<br/>Preventing the BSA, MPAA and RIAA from finding you are sharing illegal content requires sender anonymity, NOT security. It relies on having a secure connection, but a secure connection does not guarantee sender anonymity.
+<br/>
+<br/>Sender anonymity is what we really need to protect the file sharing community from attack. It is, however, extremely difficult to achieve without incurring massive bandwidth overheads.
+<br/>
+<br/>Hopefully, someday we'll achieve this. Encrypting all the messages is the first step we need to get there.
+<br/>
+<br/>
+<br/><blockquote><div><cite>TheekAzzaBreek wrote:</cite>Not sure if this can be done at all in open source, though. Common sense tells me no, but then encryption has always been a black art to me</div></blockquote>
+<br/>
+<br/>Making the encryption scheme public knowledge has no effect as you still need to know the key used in order to decrypt it.
+<br/>
+<br/>
+<br/>On a side note: I think that the distribution of the clients' public keys is best done by the hub...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2443">
+<div class="inner">
+<dl class="postprofile" id="profile2443">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2443">
+<h3><a href="#p2443"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2003-01-30 11:35
+			</p>
+<div class="content">Well, it's security I'm after, and some fun implementing...
+<br/>As to SSL, I would use it if there was some small and nimble easy to use implementation, but all I find is openssl which is big, cumbersome and so on (hm...I actually used it once a few years ago =)...
+<br/>By public key system I meant the kind of session keying that ssl uses, i e use a public key to transfer a temporary session key, then encrypt everything with a normal crypto like aes or 3des using the session key...no need to involve the hub in other words...
+<br/>it would of course be of interest to use the keys to validate users, for people that have validation needs as well...then, real public keys that are distributed in a good way would make sense...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2825">
+<div class="inner">
+<dl class="postprofile" id="profile2825">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2825">
+<h3><a href="#p2825"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-02-02 03:16
+			</p>
+<div class="content"><blockquote><div><cite>mathen wrote:</cite>Partial-Download-Support:<br/><br/>Can dc++ support partial downloads ? I use dcgui with a modified "$Get"-command: "filename$pos$size". The new $Supports-parameter is "CHUNK".</div></blockquote>
+<br/>
+<br/>It looks like that would be a good topic for another thread... it might be lost here under the topic of encryption.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2875">
+<div class="inner">
+<dl class="postprofile" id="profile2875">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=879">d-.-b</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-01 22:26</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2875">
+<h3><a href="#p2875">freenet</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=879">d-.-b</a></strong> » </span>2003-02-02 20:21
+			</p>
+<div class="content">The 'D' in 'DC' is for 'direct'... <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>Well I think if you add anonymity to DC++ you'll get something like freenet. And freenet already does exist: <!-- m --><a class="postlink" href="http://freenetproject.org/">http://freenetproject.org/</a><!-- m --></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p3550">
+<div class="inner">
+<dl class="postprofile" id="profile3550">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3550">
+<h3><a href="#p3550"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-02-08 00:56
+			</p>
+<div class="content">How about <a class="postlink" href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/com/security_7bcc.asp?frame=true&amp;hidetoc=true">Microsoft's TLS implementation</a>? This might end up being a platform-dependent piece of DC if that's done, though. Another alternative is to use <a class="postlink" href="http://www.gnu.org/software/gnutls/gnutls.html">the GNU TLS library</a>; the only major disadvantage so far is that I haven't had any luck getting it to compile on Windows (anyone who wishes to try needs to get <a class="postlink" href="http://www.gnupg.org/(en)/related_software/libraries.html">libgcrypt</a> compiling first, for it is a GNU TLS dependency).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9762">
+<div class="inner">
+<dl class="postprofile" id="profile9762">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3569">chubs</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-04 08:26</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9762">
+<h3><a href="#p9762"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3569">chubs</a></strong> » </span>2003-04-04 08:31
+			</p>
+<div class="content">I know this thread is almost 2 months old but I feel encryption is becoming an increasingly important as more DirectConnect networks are monitored. 
+<br/>
+<br/>File Transfers should be encrypted between clients to prevent "digital finger printing". A read about a technology where they are monitoring files transfered between users (Our University does this). Perhaps some "junk" could be thrown into the file to make finger printing more difficult?
+<br/>
+<br/>I'm very interested in any type of truely secure and private file sharing technology.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9783">
+<div class="inner">
+<dl class="postprofile" id="profile9783">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9783">
+<h3><a href="#p9783"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-04 12:48
+			</p>
+<div class="content">Well, if you think your university is groking the DirectConnect protocol, they probably have a <a class="postlink" href="http://www.packeteer.com/products/packetshaper/">PacketShaper</a>.    I don't think it monitors the file content of transfers, persay, but it does understand DC in general.
+<br/>
+<br/>If you're truly a privacy buff, freenet is the way to go.  I don't think it's focused on the same types of files that you'll see on DC though.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9935">
+<div class="inner">
+<dl class="postprofile" id="profile9935">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 31</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-04 18:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ontario, Canada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9935">
+<h3><a href="#p9935"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3621">Brian</a></strong> » </span>2003-04-05 13:37
+			</p>
+<div class="content">i made an entirely encrypted DChub before and it worked fine wish i still had it though it was a great hub</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p9939">
+<div class="inner">
+<dl class="postprofile" id="profile9939">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9939">
+<h3><a href="#p9939"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-05 13:46
+			</p>
+<div class="content">You could likely affect the same outcome by using stunnel and one of the linux DC hub daemons, with appropriate wizardry client side.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p9972">
+<div class="inner">
+<dl class="postprofile" id="profile9972">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content9972">
+<h3><a href="#p9972"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-04-05 16:16
+			</p>
+<div class="content">Hm, encryption is fun --&gt; More bloat to an already bloated protocol implementation. 
+<br/>
+<br/>And, what do we actually gain by adding it?</div>
+<div class="signature" id="sig9972">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10103">
+<div class="inner">
+<dl class="postprofile" id="profile10103">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10103">
+<h3><a href="#p10103"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-06 13:03
+			</p>
+<div class="content">Why? To help people who are paranoid about illegal activities to gain a false sense of security.  There's a second classs of people who are genuinely interested in their own privacy and want to erect as many barriers to people snooping on them as possible - these are the same type of people who will use PGP to encrypt all of their email, not just ones that might contain private information.
+<br/>
+<br/>Public hubs wouldn't benefit much from SSL hub &lt;-&gt; client encryption, as anyone can come in, search, and get file lists.  Hubs requiring registered users are pretty well protected against that already, but both gain protection from your ISP or other upstreams sniffing you - however likely (and illegal without a warrant) that is.
+<br/>
+<br/>But that's my cynical take on the feature.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10153">
+<div class="inner">
+<dl class="postprofile" id="profile10153">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10153">
+<h3><a href="#p10153"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-04-06 17:40
+			</p>
+<div class="content">But if my ISP really want to snif my trafic it's trivial for them to do a man in the middle attack. 
+<br/>- Who on DC would buy an SSL certificate?</div>
+<div class="signature" id="sig10153">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p10155">
+<div class="inner">
+<dl class="postprofile" id="profile10155">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=305">yilard</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-11 11:04</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Slovakia</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10155">
+<h3><a href="#p10155"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=305">yilard</a></strong> » </span>2003-04-06 18:07
+			</p>
+<div class="content"><blockquote><div><cite>Dj_Offset wrote:</cite>But if my ISP really want to snif my trafic it's trivial for them to do a man in the middle attack. <br/>- Who on DC would buy an SSL certificate?</div></blockquote>
+<br/>
+<br/>Heh it is hard to believe, that ISPs would have resources to do man in the middle attacks to all your encrypted connections <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> Now they're making problems because they were asked to do it and it is trivially simple to make problems. It is always worth making barriers just to eat oponents resources.
+<br/>
+<br/>Additionally sniffing encrypted transactions is still illegal in most countries without asking law-court.</div>
+<div class="signature" id="sig10155"><em class="text-italics">In the age of super-boredom/hype and mediocrity/celebrate relentlessness/menace to society --KMFDM</em></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p10159">
+<div class="inner">
+<dl class="postprofile" id="profile10159">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content10159">
+<h3><a href="#p10159"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-04-06 18:59
+			</p>
+<div class="content"><blockquote><div><cite>yilard wrote:</cite><blockquote><div><cite>Dj_Offset wrote:</cite>But if my ISP really want to snif my trafic it's trivial for them to do a man in the middle attack. <br/>- Who on DC would buy an SSL certificate?</div></blockquote><br/><br/>Heh it is hard to believe, that ISPs would have resources to do man in the middle attacks to all your encrypted connections <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> Now they're making problems because they were asked to do it and it is trivially simple to make problems. It is always worth making barriers just to eat oponents resources.<br/><br/>Additionally sniffing encrypted transactions is still illegal in most countries without asking law-court.</div></blockquote>
+<br/>
+<br/>Sure it's illegal, but in those countries it's still illegal to snif your trafic. If they realy want to sniff _your_ trafic it should be no problem redirecting _your_ transactions via a transparent proxy (could be a cheap freenix box) and you will not notice it unless you actually check the ssl keys (through a trusted third party).
+<br/>
+<br/>- You've essentially gained nothing.
+<br/>Like someone pointed out before, use freenet if you don't feel comfortable with the nature of DC today.</div>
+<div class="signature" id="sig10159">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17340">
+<div class="inner">
+<dl class="postprofile" id="profile17340">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 202</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 11:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Salford, England.</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17340">
+<h3><a href="#p17340"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=144">OLDoMiNiON</a></strong> » </span>2003-06-03 12:22
+			</p>
+<div class="content">Interesting thread!
+<br/>Yeah, i think encryption would be useful on some parts of dc... the protocol especially.
+<br/>Another thing would be to encrypt an individual clients dc++ favourites list! There are reports of people hacking OP's box's, and stealing their OP passwords to reak havok on their hub..
+<br/>Coul the favourites file be encrypted to only operate on the machine that it was created for? or on one that has a licence or something?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17344">
+<div class="inner">
+<dl class="postprofile" id="profile17344">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17344">
+<h3><a href="#p17344"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-06-03 12:46
+			</p>
+<div class="content">You could encrypt the favourites file with a symmetric cipher requireing a password to decrypt it (each time you start the DC client). 
+<br/>- But this is implementation specific stuff. I don't see the point in protocol extensions for encryption. 
+<br/>
+<br/>&lt;paranoia&gt;
+<br/>- If one would need crypto, I vote for using SSL (so we don't have to change the protocol significantly)
+<br/>A hublist could contain SSL keys for each hub, and each hub could contain public keys for each user (for example via the description).
+<br/>The clients and hubs will need to know the public key of the hublist server (which is the trusted third party here). 
+<br/>The hublist is signed and the client verifies it is ok. The hubs connect to this server and notifies it about it's presence (via an encryptet channel).
+<br/>&lt;/paranoia&gt;</div>
+<div class="signature" id="sig17344">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17412">
+<div class="inner">
+<dl class="postprofile" id="profile17412">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17412">
+<h3><a href="#p17412"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-06-03 22:24
+			</p>
+<div class="content">My main issue with SSL is that (1) implementing such a complex protocol oneself, especially when openssl has had such security issues and was written by more competent people than many in this thread (including me), is stupid., and (2) there are no GPL-compatible libraries for it I've found on Windows.
+<br/>
+<br/>Fix that, and I'd be thrilled with SSL (or TLS, its successor).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17468">
+<div class="inner">
+<dl class="postprofile" id="profile17468">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17468">
+<h3><a href="#p17468"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-06-04 07:53
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>My main issue with SSL is that (1) implementing such a complex protocol oneself, especially when openssl has had such security issues and was written by more competent people than many in this thread (including me), is stupid., and (2) there are no GPL-compatible libraries for it I've found on Windows.<br/><br/>Fix that, and I'd be thrilled with SSL (or TLS, its successor).</div></blockquote>
+<br/>
+<br/>Implementing it should be fairly easy with BSD sockets or winsock... by putting  "SSL_" in front of each socket API call - ok, it's a [em]little[/em] more than that <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>. 
+<br/>The security holes have been in the OpenSSL libraries, not in the API (afaik). 
+<br/>Don't link it in statically, but use DLL's. If you encounter any security holes in that DLL, just replace it. - The people who need it for DC are probably paranoid enough to figure out that themeselves anyway (or atleast paranoid enough to upgrade)...
+<br/>
+<br/>I don't see why OpenSSL is any more non-GPL compatible on Windows than any other product - My interpretation of the OpenSSL issue is that you don't have true GPL on windows as you compile and link in alot of closed source windows libraries.
+<br/>
+<br/>That being said there are several well known SSL libraries. 
+<br/>- Mozilla's SSL libraries (GPL'ed and MPL'ed)
+<br/>- Microsoft has their own libraries in NT/2K/XP (probably a licensing issue)</div>
+<div class="signature" id="sig17468">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22117">
+<div class="inner">
+<dl class="postprofile" id="profile22117">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9461">mytoz</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-14 10:12</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22117">
+<h3><a href="#p22117">Encryption?</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9461">mytoz</a></strong> » </span>2003-07-14 12:02
+			</p>
+<div class="content">Why not use simple xor encryption?
+<br/>Its easy, fast and, simple.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p22122">
+<div class="inner">
+<dl class="postprofile" id="profile22122">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22122">
+<h3><a href="#p22122"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-07-14 12:23
+			</p>
+<div class="content">And what about the encryption key?</div>
+<div class="signature" id="sig22122">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22323">
+<div class="inner">
+<dl class="postprofile" id="profile22323">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22323">
+<h3><a href="#p22323"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-07-15 19:04
+			</p>
+<div class="content">ph33rm3R1AA</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23621">
+<div class="inner">
+<dl class="postprofile" id="profile23621">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 360</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-16 10:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23621">
+<h3><a href="#p23621"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a></strong> » </span>2003-07-25 10:20
+			</p>
+<div class="content">suddenly, the importance of encryption becomes clear.. the swedish ISP's has turned to the "trafic shaping" company NetIntact and their product PacketLogic that analyze the traffic and limits p2p traffic!
+<br/>
+<br/>"Ett fÃƒÂ¶rbud resulterar enligt operatÃƒÂ¶rerna bara till att fildelningsprogrammen bÃƒÂ¶rjar kryptera sin trafik och dÃƒÂ¥ blir nÃƒÂ¤st intill omÃƒÂ¶jlig att upptÃƒÂ¤cka."
+<br/>
+<br/>Translated:
+<br/>"A ban against filesharing and p2p applications will only make the p2p-apps to implement encryption and then it becomes impossible to detect, according to the ISPs"
+<br/>
+<br/>
+<br/>any progress arne? <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig23621"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://whyrar.omfg.se">http://whyrar.omfg.se</a> - Guide to RAR and DC behaviour!<br/><a class="postlink" href="http://bodstrom.omfg.se">http://bodstrom.omfg.se</a> - BodstrÃ¶msamhÃ¤llet, LÃ¤nksamling om hoten mot vÃ¥r personliga integritet</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23709">
+<div class="inner">
+<dl class="postprofile" id="profile23709">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2140">ToxicFool</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-11 23:10</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23709">
+<h3><a href="#p23709"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2140">ToxicFool</a></strong> » </span>2003-07-26 17:26
+			</p>
+<div class="content">I have been trying to look for encryption for chat and file shares.  Yet I was told on another forum that you'd have to change the client/server software.  Isn't there a way to kind of add-in a plugin of somesort?  Like a scrypt that leads to encryption on the servers?  
+<br/>
+<br/>Also what kind of encryption would they use?  I know ssh is 128 bit.. but would anyone want to go higher?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23798">
+<div class="inner">
+<dl class="postprofile" id="profile23798">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23798">
+<h3><a href="#p23798"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-27 15:55
+			</p>
+<div class="content"><blockquote><div><cite>cyberal wrote:</cite>suddenly, the importance of encryption becomes clear.. the swedish ISP's has turned to the "trafic shaping" company NetIntact and their product PacketLogic that analyze the traffic and limits p2p traffic!</div></blockquote>
+<br/>
+<br/><span style="color: red">OH MY FUCKING FLAMING LORD, QUALITY OF SERVICE!!</span>
+<br/>
+<br/>Americans (especially college students) have had to deal with it for a while, and only when Swedes see the problem does it become a problem?
+<br/>
+<br/>This is a good natured jibe, but it's got a real point.
+<br/>
+<br/>And as Sandos pointed out in-hub-discussion, you can encrypt the traffic, but you can't hide the fact that it's a huge amount of traffic.  Someone quoted the ifgure of 95% of all (swedish?) traffic is filesharing.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23813">
+<div class="inner">
+<dl class="postprofile" id="profile23813">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 147</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 07:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Canada           <!-- m --><a class="postlink" href="http://hub-link.sf.net">http://hub-link.sf.net</a><!-- m --></dd>
+</dl>
+<div class="postbody">
+<div id="post_content23813">
+<h3><a href="#p23813"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=56">HaArD</a></strong> » </span>2003-07-27 16:41
+			</p>
+<div class="content">I wonder... if Swedish users found that uploading strangled your ability to download do you think upload limiting would gain support? <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p24505">
+<div class="inner">
+<dl class="postprofile" id="profile24505">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10154">fnordpojk</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-04 02:33</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content24505">
+<h3><a href="#p24505"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10154">fnordpojk</a></strong> » </span>2003-08-04 04:03
+			</p>
+<div class="content">There are a bunch of Swedes who want upload limiting already due to the inherent problems with ADSL and maxing your upload. Personally I think this should be solved at the network layer, not the application layer.
+<br/>
+<br/>As for QoS/rate limiting, the PacketLogic has existed for quite a while now, but lately universities and ISPs have begun writing new rules, and enforcing them. Can't say I blame the universities, but the ISPs really should know better. Though one ISP (Telia) has obviously gotten what it's about - their PR person, when asked about rate limiting, filtering et c, said something along the lines of "We don't take responsibility for what is transmitted over our network. We just move bits. If the postal service was responsible for something sent in the mail, you'd think that ludicrous. We're just looking at ways to give everyone what they're paying for.".
+<br/>
+<br/>That is the kind of attitude I'd like ISPs to take. Still, I doubt many will, and therefore, encryption is needed in DC++.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p24507">
+<div class="inner">
+<dl class="postprofile" id="profile24507">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 360</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-16 10:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content24507">
+<h3><a href="#p24507"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a></strong> » </span>2003-08-04 06:57
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>Americans (especially college students) have had to deal with it for a while, and only when Swedes see the problem does it become a problem?</div></blockquote>
+<br/>huh? I would change that sentence to, "only when it becomes a problem in sweden, cyberal see that it is a problem". If this is huge where you live, I leave it up to you to tell us Gargoyle! <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>You (read sandos) are ofcourse correct, hiding the huge traffic amount can not be done, but I think that the ISPs (atleast the swedish ones) is satisfied with limiting just known p2p protocols for now (fasttrack etc). Limiting unknown traffic is a big step for them, question is if they even CAN do it with current custumer agreements?..</div>
+<div class="signature" id="sig24507"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://whyrar.omfg.se">http://whyrar.omfg.se</a> - Guide to RAR and DC behaviour!<br/><a class="postlink" href="http://bodstrom.omfg.se">http://bodstrom.omfg.se</a> - BodstrÃ¶msamhÃ¤llet, LÃ¤nksamling om hoten mot vÃ¥r personliga integritet</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p28437">
+<div class="inner">
+<dl class="postprofile" id="profile28437">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content28437">
+<h3><a href="#p28437"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-09-16 21:02
+			</p>
+<div class="content"><a class="postlink" href="http://net.libtomcrypt.org/">LibTomNet</a>, apparently, has been recently released, and though he "STRONGLY [RECOMMENDS] against people using this in field systems", it looks promising nonetheless.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p28450">
+<div class="inner">
+<dl class="postprofile" id="profile28450">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content28450">
+<h3><a href="#p28450"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-09-17 00:49
+			</p>
+<div class="content">I should probably clarify, to preempt the 'yeah, but you can't trust the protocol, it hasn't been analyzed' posts:
+<br/>
+<br/>I know.
+<br/>
+<br/>I/one can't trust the protocol, and it hasn't been analyzed outside of a couple of mailing list posts written in a few minutes (though the flaws they've pointed out have been fixed).
+<br/>
+<br/>That said, it's the first bit of code I've found to pop up that meets the following criteria:
+<br/><ul><li>License-compatible with the GPL (OpenSSL requires a license exemption it appears likely will not be added).</li><li>In a library form usable by another program (zebedee would otherwise fit, but it was quite obviously not designed with this in mind, and likely hasn't been intensively analyzed either, leading to no particular advantage over LibTomNet.)</li><li>Is portable to various types of Unix and Windows. (Which rules out Microsoft's TLS implementation.)</li><li>This 'requirement' may be optional, but I don't see crypto in DC happening without it due to compatibility reasons: it's possible to hand libtomnet an already established socket, once it's been discovered that the other end is capable of encryption, whilst allowing for the same socket to be used unencrypted if it turns out the other end doesn't support it.</li></ul>In the absence of any alternatives I've found, I'm going to keep watching LibTomNet to see how it matures, but I'd be quite interested for someone to come up with an more standard, analyzed, and known secure protocol implementation that conforms to the criteria I listed (or feel free to write your own, of course  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> ).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p28638">
+<div class="inner">
+<dl class="postprofile" id="profile28638">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content28638">
+<h3><a href="#p28638"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-09-19 16:28
+			</p>
+<div class="content">I don't have much to add to the above post, it seems pretty sensible.  The concern I have is with packeteer.   If client to client transfers become mostly encrypted, will they not be able to still tag us by the initial handshake?
+<br/>
+<br/>I'm also curious (because I know nothing of the subject) if encrypted traffic provided by the library you mention is indistinguishable from http-over-ssl traffic, or something else that a University might not want to block.  Even if it appears the same, transfers can probably be tagged by their length... but there has to be a line of what's "good enough" for now/initially.  I think your post sums it up pretty well.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p33202">
+<div class="inner">
+<dl class="postprofile" id="profile33202">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 66</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 23:05</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content33202">
+<h3><a href="#p33202"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114">distiller</a></strong> » </span>2003-11-15 08:17
+			</p>
+<div class="content">Using zblock/dropping connection every x MB should solve the problem with tagging based on connection time. Initial handshake between clients is a problem though... Some friends are starting to complain, getting 5 KB/s on a 10 Mbit conenction. Traffic shaping in action for sure.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p35197">
+<div class="inner">
+<dl class="postprofile" id="profile35197">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14586">zurf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-02 10:30</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35197">
+<h3><a href="#p35197"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=14586">zurf</a></strong> » </span>2003-12-02 10:40
+			</p>
+<div class="content">Why not make a similar system that some websites use to stop bots, you get a picture with a code that you need to type in before you can get the filelist or start a download from a user via search.
+<br/>
+<br/>That would atleast slow down the antipiracy agencys that rely on bots for "evidence" gathering.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p35230">
+<div class="inner">
+<dl class="postprofile" id="profile35230">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35230">
+<h3><a href="#p35230"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-12-02 17:41
+			</p>
+<div class="content"><blockquote><div><cite>zurf wrote:</cite>Why not make a similar system that some websites use to stop bots, you get a picture with a code that you need to type in before you can get the filelist or start a download from a user via search.</div></blockquote>
+<br/>
+<br/>This does not seem appreciably different from the challenge-response filters that some people have set up to protect their email from spammers.  Sure, it works, but what about all the collateral damage?
+<br/>
+<br/>(I'm not sure your system could work, given the largely automated way in which users expect to operate.)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p35398">
+<div class="inner">
+<dl class="postprofile" id="profile35398">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=660">Snooze</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 119</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-26 18:42</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denmark</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35398">
+<h3><a href="#p35398"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=660">Snooze</a></strong> » </span>2003-12-04 08:12
+			</p>
+<div class="content">Hmm...Just wondering ... Is there still being worked on encrypted transfers ? Or is this a plan for the future..?
+<br/>
+<br/>The reason im asking. is that more ISP's (like in the UK) is getting more and more agressive about sniffing what the users transfer and even selling the info to people like RIAA. This means that the request for upped security is building up fast..</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			79 posts
+							<ul>
+<li class="active"><span>1</span></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=35&amp;start=50" role="button">2</a></li>
+<li class="arrow next"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=35&amp;start=50" rel="next" role="button"><i aria-hidden="true" class="icon fa-chevron-right fa-fw"></i><span class="sr-only">Next</span></a></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

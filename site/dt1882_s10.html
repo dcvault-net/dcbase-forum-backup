@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Client &lt;-&gt; protocol questions - Page 1 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=1882&amp;start=10">Client &lt;-&gt; protocol questions</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			34 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p12200">
+<div class="inner">
+<dl class="postprofile" id="profile12200">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 27</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 17:58</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Stockholm, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12200">
+<h3 class="first"><a href="#p12200"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a></strong> » </span>2003-04-22 06:32
+			</p>
+<div class="content">Thank you! You are hereby declared to be my new hero!  <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>
+<br/>
+<br/>I'll try it a soon as I get back from work!
+<br/>
+<br/>/A</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12270">
+<div class="inner">
+<dl class="postprofile" id="profile12270">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 27</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 17:58</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Stockholm, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12270">
+<h3><a href="#p12270"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a></strong> » </span>2003-04-22 18:40
+			</p>
+<div class="content">Oh.. and by the way, if someone has an encoder as well, there is always room for another hero..  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>/A</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12310">
+<div class="inner">
+<dl class="postprofile" id="profile12310">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5125">HooMair</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 23:32</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12310">
+<h3><a href="#p12310"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5125">HooMair</a></strong> » </span>2003-04-23 00:03
+			</p>
+<div class="content">First: thanks to you, Gumboot...I'm playing around with the DC protocol at the moment and got caught at this DcLst decoding. Your source code has helped me understanding how this is done.
+<br/>
+<br/>I wanted to be able to decompress DcLst files in my linux console, and because I haven't found a tool for this task, I decided to write one myself. Since the postings here helped me a lot, I thought it would just be fair to publish my results here where they might help someone else someday...
+<br/>
+<br/>This C code has been successfully compiled with gcc / linux (and until now, it seems to work perfectly well), but I think it should be no problem to port it for example to windows...:
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>#include&lt;stdio.h&gt;<br/>#include&lt;stdlib.h&gt;<br/>#include&lt;string.h&gt;<br/><br/>int bitreader(char * st,int bp);<br/><br/>struct hnode {<br/>      int zero;<br/>      int one;<br/>      char symbol;<br/>} node[514];<br/><br/>int main(int argc,char *argv[])<br/>{<br/>if(argc&lt;3) {<br/>   printf("DcLst decompressor\n");<br/>   printf("coded 2003 by HooMair\n\n");<br/>   printf("Syntax: %s &lt;dclst-filename&gt; &lt;output-filename&gt;\n",argv[0]);<br/>   return 0;<br/>}<br/><br/>char is[9000000];<br/>int flen,i,f;<br/><br/>f=fopen(argv[1],"r");<br/>printf("file opened\n");<br/>flen=0;<br/>while(!feof(f)) {<br/>   is[flen]=fgetc(f);<br/>   flen++;<br/>}<br/>fclose(f);<br/><br/>printf("%i bytes read from %s\n",flen-1,argv[1]);<br/><br/>if(is[0]!='H' || is[1]!='E' || is[2]!='3' ||is[3]!=13) {<br/>   printf("ERROR: this is not a DcLst file!\n");<br/>   return 0;<br/>} else {<br/>   printf("File correctly identified as DcLst file\n");<br/>}<br/><br/>int size;<br/>size = *(int*)&amp;is[5];<br/>printf("uncompressed file size: %i\n",size);<br/><br/>short numcouples;<br/>numcouples = *(short*)&amp;is[9];<br/>printf("%i different encoded bytes found\n",numcouples);<br/><br/>unsigned char couples[256][2];<br/>int pos=11;<br/><br/>int nodecount=2,bitpos=0,j,currentnode=1;<br/><br/><br/>for(i=0;i&lt;numcouples;i++) {<br/>   couples[i][0]=is[pos];<br/>   pos++;<br/>   couples[i][1]=is[pos];<br/>   pos++;<br/>}<br/><br/>for(i=0;i&lt;514;i++) {<br/>   node[i].zero=0;<br/>   node[i].one=0;<br/>   node[i].symbol=0;<br/>}<br/><br/>bitpos=pos*8;<br/><br/>for(i=0;i&lt;numcouples;i++) {<br/>   for(j=0;j&lt;couples[i][1];j++) {<br/>      if(node[currentnode].symbol!=0) {<br/>         printf("error building huffman tree at node %i after %i nodes!\n",currentnode,nodecount);<br/>         return 0;<br/>      }<br/>      if(bitreader(is,bitpos)==0) {<br/>         if(node[currentnode].zero==0) { <br/>            node[currentnode].zero=nodecount; <br/>            currentnode=nodecount;<br/>            nodecount++;<br/>         } else {<br/>            currentnode=node[currentnode].zero;<br/>         }<br/>      } else {<br/>         if(node[currentnode].one==0) { <br/>            node[currentnode].one=nodecount; <br/>            currentnode=nodecount;<br/>            nodecount++; <br/>         } else {<br/>            currentnode=node[currentnode].one;<br/>         }<br/>      }<br/>      bitpos++;<br/>   }<br/>   if(node[currentnode].zero!=0 || node[currentnode].one!=0) {<br/>      printf("error building huffman tree at node %i!\n",currentnode);<br/>      return 0;<br/>   }            <br/>   node[currentnode].symbol=couples[i][0];<br/>   currentnode=1;<br/>}<br/><br/>bitpos=bitpos+(8-(bitpos%8));<br/><br/>printf("huffman tree building successful: %i nodes created\n",nodecount);<br/>printf("decompression started...\n");<br/><br/>f=fopen(argv[2],"w");<br/>int count=0;<br/><br/>do {<br/>   currentnode=1;<br/>   while(node[currentnode].symbol==0) {<br/>      if(bitreader(is,bitpos)==0) {<br/>         currentnode=node[currentnode].zero;<br/>      } else {<br/>         currentnode=node[currentnode].one;<br/>      }<br/>      bitpos++;<br/>   }<br/>   fputc(node[currentnode].symbol,f);<br/>   count++;<br/>} while(count&lt;size);<br/><br/>fclose(f);<br/><br/>printf("done!\n");<br/>}<br/><br/><br/><br/>int bitreader(char * st,int bp) <br/>{<br/>int charnum,bitnum;<br/>charnum=(bp-(bp%8))/8;<br/>bitnum=bp%8;<br/>if((st[charnum] &amp; (1&lt;&lt;bitnum))==0) return 0; else return 1;<br/>}<br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12333">
+<div class="inner">
+<dl class="postprofile" id="profile12333">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-16 01:08</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12333">
+<h3><a href="#p12333"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a></strong> » </span>2003-04-23 05:36
+			</p>
+<div class="content"><blockquote><div><cite>andlju wrote:</cite>Oh.. and by the way, if someone has an encoder as well, there is always room for another hero..  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div></blockquote>
+<br/>
+<br/>Well, if you can tell me you've tested my decoder and it works, then I'll post my huffman encoder.  (Just trying to get some free testing  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>)
+<br/>
+<br/>I guess then I'll be a hero twice over!   <img alt=":lol:" class="smilies" src="/images/smilies/icon_lol.gif" title="Laughing"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12396">
+<div class="inner">
+<dl class="postprofile" id="profile12396">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 27</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 17:58</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Stockholm, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12396">
+<h3><a href="#p12396"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a></strong> » </span>2003-04-23 16:26
+			</p>
+<div class="content">Well, I just tried it, and it works like a charm..!
+<br/>I was almost on my way to implement an encoder myself (sometimes, you need a challenge...), but I realize that it would take me quite some time to get it right.. So I would be really grateful if you could post an encoder as well!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12502">
+<div class="inner">
+<dl class="postprofile" id="profile12502">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-16 01:08</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12502">
+<h3><a href="#p12502"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a></strong> » </span>2003-04-24 06:14
+			</p>
+<div class="content">Well OK then.  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  Same priviso as above; mail me if you find any bugs.
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>/// &lt;summary&gt; <br/>/// Class for compressing NMDC file lists.<br/>/// &lt;/summary&gt; <br/>/// &lt;remarks&gt; <br/>/// Written by Paul Bartrum (paulbartrum@hotmail.com) <br/>/// &lt;/remarks&gt;<br/>public class NMDCHuffmanCompressor<br/>{<br/>   class HuffmanCompressionNode<br/>   {<br/>      public HuffmanCompressionNode Parent;<br/>      public HuffmanCompressionNode Zero;<br/>      public HuffmanCompressionNode One;<br/>      public int Frequency;<br/>      public int Symbol;<br/>   }<br/><br/>   struct HuffmanTableEntry<br/>   {<br/>      public int Code;<br/>      public int CodeLength;<br/>   }<br/><br/>   public static void Compress(Stream inputStream, Stream outputStream)<br/>   {<br/>      byte[] inputBuffer = new byte[inputStream.Length];<br/>      inputStream.Read(inputBuffer, 0, inputBuffer.Length);<br/>      Compress(inputBuffer, outputStream);<br/>   }<br/><br/>   public static void Compress(byte[] inputBuffer, Stream outputStream)<br/>   {<br/>      // Construct a frequency table and calculate the parity.<br/>      int[] frequencyTable = new int[256];<br/>      byte parity = 0;<br/>      foreach (byte b in inputBuffer)<br/>      {<br/>         frequencyTable[b] ++;<br/>         parity ^= b;<br/>      }<br/><br/>      // Create a node for each symbol.<br/>      HuffmanCompressionNode[] leaves = new HuffmanCompressionNode[256];<br/>      for (int i = 0; i &lt; 256; i ++)<br/>      {<br/>         // Ignore symbols that don't appear in the data.<br/>         if (frequencyTable[i] == 0)<br/>            continue;<br/><br/>         // Create a new node.<br/>         HuffmanCompressionNode node = new HuffmanCompressionNode();<br/>         node.Frequency = frequencyTable[i];<br/>         node.Symbol = i;<br/><br/>         // Add the node to the list of leaf nodes.<br/>         leaves[i] = node;<br/>      }<br/><br/>      System.Collections.ArrayList roots = new System.Collections.ArrayList(256);<br/><br/>      // Initially, every leaf node is a root.<br/>      foreach (HuffmanCompressionNode leaf in leaves)<br/>         if (leaf != null)<br/>            roots.Add(leaf);<br/><br/>      // Construct the huffman tree.<br/>      while (roots.Count &gt; 1)<br/>      {<br/>         // Find the two lowest frequency roots.<br/>         int lowestFrequency = int.MaxValue;<br/>         HuffmanCompressionNode lowestFrequencyRoot = null;<br/>         int secondLowestFrequency = int.MaxValue;<br/>         HuffmanCompressionNode secondLowestFrequencyRoot = null;<br/>         foreach (HuffmanCompressionNode root in roots)<br/>         {<br/>            if (root.Frequency &lt; lowestFrequency)<br/>            {<br/>               secondLowestFrequency = lowestFrequency;<br/>               secondLowestFrequencyRoot = lowestFrequencyRoot;<br/><br/>               lowestFrequency = root.Frequency;<br/>               lowestFrequencyRoot = root;<br/>            }<br/>            else if (root.Frequency &lt; secondLowestFrequency)<br/>            {<br/>               secondLowestFrequency = root.Frequency;<br/>               secondLowestFrequencyRoot = root;<br/>            }<br/>         }<br/><br/>         // Remove the two lowest roots from the list of roots.<br/>         roots.Remove(lowestFrequencyRoot);<br/>         roots.Remove(secondLowestFrequencyRoot);<br/><br/>         // Create the parent node.<br/>         HuffmanCompressionNode parent = new HuffmanCompressionNode();<br/>         parent.Frequency = lowestFrequencyRoot.Frequency + secondLowestFrequencyRoot.Frequency;<br/><br/>         // Connect the dots. :-)<br/>         lowestFrequencyRoot.Parent = parent;<br/>         secondLowestFrequencyRoot.Parent = parent;<br/>         parent.Zero = lowestFrequencyRoot;<br/>         parent.One = secondLowestFrequencyRoot;<br/>         roots.Add(parent);<br/>      }<br/><br/>      // Construct a table from the tree.<br/>      HuffmanTableEntry[] lookupTable = new HuffmanTableEntry[256];<br/>      int numNonZeroEntries = 0;<br/>      for (int i = 0; i &lt; 256; i ++)<br/>      {<br/>         HuffmanCompressionNode node = leaves[i];<br/>         if (node == null)<br/>            continue;<br/><br/>         while (node.Parent != null)<br/>         {<br/>            lookupTable[i].Code &lt;&lt;= 1;<br/>            if (node.Parent.One == node)<br/>               lookupTable[i].Code |= 1;<br/>            lookupTable[i].CodeLength ++;<br/>            node = node.Parent;<br/>         }<br/><br/>         numNonZeroEntries ++;<br/>      }<br/><br/><br/>      // Write header.<br/>      BinaryWriter writer = new BinaryWriter(outputStream);<br/>      writer.Write(new byte[] { (byte) 'H', (byte) 'E', (byte) '3', 13 });<br/>      writer.Write((byte) parity);<br/>      writer.Write((int) inputBuffer.Length);<br/><br/>      // Write couples.<br/>      writer.Write((short) numNonZeroEntries);<br/>      for (int i = 0; i &lt; 256; i ++)<br/>         if (lookupTable[i].CodeLength &gt; 0)<br/>         {<br/>            writer.Write((byte) i);<br/>            writer.Write((byte) lookupTable[i].CodeLength);<br/>         }<br/><br/>      // Write codes.<br/>      BitWriter bitWriter = new BitWriter(outputStream);<br/>      bitWriter.HighToLow = false;<br/>      for (int i = 0; i &lt; 256; i ++)<br/>         if (lookupTable[i].CodeLength &gt; 0)<br/>            bitWriter.WriteBits(lookupTable[i].Code, lookupTable[i].CodeLength);<br/><br/>      // Pad the rest of the byte.<br/>      bitWriter.Flush();<br/><br/>      // Start writing data to the output stream.<br/>      foreach (byte b in inputBuffer)<br/>         bitWriter.WriteBits(lookupTable[b].Code, lookupTable[b].CodeLength);<br/>      bitWriter.Flush();<br/>   }<br/>}<br/><br/>/// &lt;summary&gt;<br/>/// Writes bits to a stream.<br/>/// &lt;/summary&gt;<br/>public class BitWriter<br/>{<br/>   Stream output;<br/><br/>   // Settings.<br/>   bool highToLow;<br/><br/>   byte cachedByte;<br/>   int bitPos;<br/><br/>   public BitWriter(Stream output)<br/>   {<br/>      this.output = output;<br/>      this.highToLow = true;<br/>      this.cachedByte = 0;<br/>      this.bitPos = 0;<br/>   }<br/><br/>   public bool HighToLow<br/>   {<br/>      get { return highToLow; }<br/>      set { highToLow = value; }<br/>   }<br/><br/>   // The position in the current byte (0 - 8).<br/>   // Zero means that none of the bits in the current byte have been written.<br/>   public int BitPosition<br/>   {<br/>      get { return bitPos; }<br/>   }<br/><br/>   public void WriteBit(bool value) <br/>   {<br/>      WriteBits(value ? 1 : 0, 1);<br/>   }<br/><br/>   public void WriteBits(int value, int numBitsArg)<br/>   {<br/>      int numBits = numBitsArg;<br/>      if (numBits &lt; 0 || numBits &gt; 31)<br/>         throw new ArgumentOutOfRangeException("numBits");<br/><br/>      while (numBits &gt; 0)<br/>      {<br/>         int partialNumBits = Math.Min(numBits, 8 - this.bitPos);<br/>         if (highToLow)<br/>            this.cachedByte |= (byte) (GetUIntBits((uint) value, 32 - numBits, partialNumBits, true) &lt;&lt;<br/>               (8 - partialNumBits - this.bitPos));<br/>         else<br/>            this.cachedByte |= (byte) (GetUIntBits((uint) value, numBitsArg - numBits, partialNumBits, false) &lt;&lt;<br/>               this.bitPos);<br/>         this.bitPos += partialNumBits;<br/>         numBits -= partialNumBits;<br/><br/>         if (this.bitPos == 8)<br/>            Flush();<br/>      }<br/>   }<br/><br/>   public void Flush()<br/>   {<br/>      // Check if any data is cached.<br/>      if (this.bitPos == 0)<br/>         return;<br/><br/>      // Write the cached data to the stream.<br/>      output.WriteByte(this.cachedByte);<br/>      this.bitPos = 0;<br/>      this.cachedByte = 0;<br/>   }<br/><br/>   public static int GetUIntBits(uint value, int start, int length, bool highToLow)<br/>   {<br/>      if (highToLow)<br/>         start = 32 - start - length;   // Big-endian bit order.<br/>      return (int) ((uint) (value &amp; (((1 &lt;&lt; (start + length)) - 1) &amp; ~((1 &lt;&lt; start) - 1))) &gt;&gt; start);<br/>   }<br/>}</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12507">
+<div class="inner">
+<dl class="postprofile" id="profile12507">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12507">
+<h3><a href="#p12507"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2003-04-24 08:20
+			</p>
+<div class="content">heh, gumboot, a bit more and it should be your name on that client =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12514">
+<div class="inner">
+<dl class="postprofile" id="profile12514">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-16 01:08</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12514">
+<h3><a href="#p12514"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a></strong> » </span>2003-04-24 09:41
+			</p>
+<div class="content"><blockquote><div><cite>arnetheduck wrote:</cite>heh, gumboot, a bit more and it should be your name on that client =)</div></blockquote>
+<br/>LOL  <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>
+<br/>
+<br/>You're right.  In fact, I am hereby making that a requirement of using my code: you have to call your app "Gumboot's DC client".   <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12556">
+<div class="inner">
+<dl class="postprofile" id="profile12556">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 27</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 17:58</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Stockholm, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12556">
+<h3><a href="#p12556"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a></strong> » </span>2003-04-24 13:34
+			</p>
+<div class="content">Well.. I guess I almost could agree to that.. It's not like it is very likely to ever be released..   <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>Anyway, thank's again Gumboot! If I find any bugs (unlikely as that seems), I'll report them!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12721">
+<div class="inner">
+<dl class="postprofile" id="profile12721">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 27</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-28 17:58</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Stockholm, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12721">
+<h3><a href="#p12721"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1726">andlju</a></strong> » </span>2003-04-25 19:07
+			</p>
+<div class="content">In case you're curious, the encoder seems to work splendidly as well!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12741">
+<div class="inner">
+<dl class="postprofile" id="profile12741">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 22</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-16 01:08</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12741">
+<h3><a href="#p12741"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=414">Gumboot</a></strong> » </span>2003-04-25 23:51
+			</p>
+<div class="content">Great!  I was sure I had tested them and they worked, but I wasn't sure because both those files were restored from an old backup (long story).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23980">
+<div class="inner">
+<dl class="postprofile" id="profile23980">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9916">futti</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-27 08:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> mostly at the computer</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23980">
+<h3><a href="#p23980"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9916">futti</a></strong> » </span>2003-07-29 00:06
+			</p>
+<div class="content">Can anybody port this stuff to PHP or know where I can find it in PHP?
+<br/>I don't know these languages it's written in...  <img alt=":?" class="smilies" src="/images/smilies/icon_confused.gif" title="Confused"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p24128">
+<div class="inner">
+<dl class="postprofile" id="profile24128">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content24128">
+<h3><a href="#p24128"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-07-30 16:17
+			</p>
+<div class="content">Totally lame, untested and non-compressing PHP version of the HE3 encoder <img alt=";-)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>(It should work without much hassle at least... <img alt=":-)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>param:  your plain text list as a string
+<br/>returns: the encoded string
+<br/>
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>   function encode($in) {<br/>      $datalen = strlen($in);<br/>      $out = "HE3" . chr(0xD);<br/>      $checksum = 0;<br/>      if ($datalen == 0) return $out.chr(0) .chr(0).chr(0).chr(0).chr(0).chr(0).chr(0) ;<br/>      for ($i = 0; $i &lt; $datalen; $i++) $checksum ^= substr($in,$i,1);<br/>      $out .= chr($checksum) .  intval($datalen) . chr(255) . chr(0);<br/>      for ($i = 0; $i &lt; 255; $i++) $out .= chr(8);<br/>           for ($i = 0; $i &lt; 255; $i++) $out .= chr($i);<br/>           $out .= $in;<br/>      return $out;<br/>   }<br/></code></pre></div></div>
+<div class="signature" id="sig24128">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p24157">
+<div class="inner">
+<dl class="postprofile" id="profile24157">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9916">futti</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-27 08:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> mostly at the computer</dd>
+</dl>
+<div class="postbody">
+<div id="post_content24157">
+<h3><a href="#p24157"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9916">futti</a></strong> » </span>2003-07-30 22:15
+			</p>
+<div class="content">Havn't got a decoder to?  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>I will be testing later to day or tomorrow <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p24183">
+<div class="inner">
+<dl class="postprofile" id="profile24183">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 48</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 00:22</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oslo, Norway</dd>
+</dl>
+<div class="postbody">
+<div id="post_content24183">
+<h3><a href="#p24183"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1547">Dj_Offset</a></strong> » </span>2003-07-31 08:18
+			</p>
+<div class="content"><blockquote><div><cite>futti wrote:</cite>Havn't got a decoder to?  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> <br/>I will be testing later to day or tomorrow <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div></blockquote>
+<br/>
+<br/>Nah, I wrote the above in two minutes...
+<br/>The decoder have to decompress if the data is compressed, thus cannot be a quick and dirty hack the same way as the encoder... <img alt=";-)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/>
+<br/>
+<br/>That being said, I remember someone trying to do a DC client in PHP before, look over at sourceforge. Maybe you'll find what you are looking for there?</div>
+<div class="signature" id="sig24183">I wrote <a class="postlink" href="http://quickdc.sourceforge.net/">QuickDC</a> - A DC++ compatible client for Linux and FreeBSD.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p58482">
+<div class="inner">
+<dl class="postprofile" id="profile58482">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25370">darcone</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-07-13 21:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content58482">
+<h3><a href="#p58482"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25370">darcone</a></strong> » </span>2004-07-14 16:52
+			</p>
+<div class="content"><blockquote class="uncited"><div>11 = entry 1 [uncompressed byte, compressed code length (in bits)] </div></blockquote>
+<br/>
+<br/>Exactly what does this mean? is the first byte the word and the second the code ?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p58487">
+<div class="inner">
+<dl class="postprofile" id="profile58487">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content58487">
+<h3><a href="#p58487"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-07-14 17:14
+			</p>
+<div class="content">The first byte is the character, and the second is the length of the code in bits.  I would assume that the compression uses the same clever trick that DEFLATE uses in that bytes with the same code length have codes that come in the same order as the bytes.  Ex. if 'A'  and 'B' both have a code length of 3, then A's code would be 110 and B's would be 111 because 110 comes first.  It's not quite as cool as DEFLATE in that it doesn't store the code lengths as Huffman codes, though. <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p58496">
+<div class="inner">
+<dl class="postprofile" id="profile58496">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25370">darcone</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-07-13 21:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content58496">
+<h3><a href="#p58496"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=25370">darcone</a></strong> » </span>2004-07-14 17:42
+			</p>
+<div class="content">Oh, I assumed that the second byte was the code itself... So I have to do some trick to get the code for the characters?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89040">
+<div class="inner">
+<dl class="postprofile" id="profile89040">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101568">Bicou</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-18 21:54</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89040">
+<h3><a href="#p89040"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101568">Bicou</a></strong> » </span>2006-06-13 10:36
+			</p>
+<div class="content"><blockquote><div><cite>HooMair wrote:</cite>This C code has been successfully compiled with gcc / linux (and until now, it seems to work perfectly well), but I think it should be no problem to port it for example to windows...:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>#include&lt;stdio&gt;
+#include&lt;stdlib&gt;
+#include&lt;string&gt;
+
+int bitreader(char * st,int bp);
+
+struct hnode {
+		int zero;
+		int one;
+		char symbol;
+} node[514];
+
+[....code removed to preserve topic readability....]
+</code></pre></div></div></blockquote>
+I am using this very code in my DC client, using C/C++ &amp; Visual Studio 2003 (under WinXP), but someone on my hub has a file list which crashes the client in the bitreader() function (charnum becomes &gt; than strlen(st).. <img alt=":(" class="smilies" height="15" src="/images/smilies/icon_sad.gif" title="Sad" width="15"/>)<br/>
+<br/>
+Does someone have the same problem with the same file list? : <a class="postlink" href="http://tamaire.free.fr/-BoB-Wish.DcLst">http://tamaire.free.fr/-BoB-Wish.DcLst</a> (446kiB)<br/>
+Did someone ever had the same problem with another file list ?<br/>
+Thanks for the help</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89041">
+<div class="inner">
+<dl class="postprofile" id="profile89041">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105408">Quattro</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 166</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-01-11 14:23</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89041">
+<h3><a href="#p89041"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=105408">Quattro</a></strong> » </span>2006-06-13 11:14
+			</p>
+<div class="content">you're almost 2 years later than the last post <img alt=":P" class="smilies" height="15" src="/images/smilies/icon_razz.gif" title="Razz" width="15"/></div>
+<div class="signature" id="sig89041">You can send a message around the world in 1/7 of a second; yet it may take several years to move a simple idea through a 1/4 inch of human skull.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89086">
+<div class="inner">
+<dl class="postprofile" id="profile89086">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89086">
+<h3><a href="#p89086"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2006-06-14 02:04
+			</p>
+<div class="content">And the .DcLst format is deprecated (and even unsupported in the newest version) in favor of the more flexible and standard .xml.bz2 ones.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89220">
+<div class="inner">
+<dl class="postprofile" id="profile89220">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101568">Bicou</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-18 21:54</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89220">
+<h3><a href="#p89220"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101568">Bicou</a></strong> » </span>2006-06-15 17:19
+			</p>
+<div class="content">Quattro: it doesn't matter, I think it's better to use this topic rather than creating a new one<br/>
+PseudonympH: I'm on a lan hub where people use old client versions, so my bot needs to use this format  <img alt=":?" class="smilies" height="15" src="/images/smilies/icon_confused.gif" title="Confused" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89251">
+<div class="inner">
+<dl class="postprofile" id="profile89251">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89251">
+<h3><a href="#p89251"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2006-06-15 23:18
+			</p>
+<div class="content">But, then, why don't you use the bz2-extension filelist instead of the xml.bz2 one. The bz2-extension without xml is extremly simple to parse. I would imagine all clients you try to connect to will support it.</div>
+<div class="signature" id="sig89251">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89575">
+<div class="inner">
+<dl class="postprofile" id="profile89575">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101568">Bicou</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-18 21:54</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89575">
+<h3><a href="#p89575"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101568">Bicou</a></strong> » </span>2006-06-20 17:26
+			</p>
+<div class="content">Okay, thanks for the advice <img alt=":-)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			34 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

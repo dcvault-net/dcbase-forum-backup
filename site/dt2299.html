@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Patch for DC++ 0.242 to compile under VS.net 2003 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=2299">Patch for DC++ 0.242 to compile under VS.net 2003</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			12 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p12004">
+<div class="inner">
+<dl class="postprofile" id="profile12004">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4979">Hydra</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-20 21:10</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12004">
+<h3 class="first"><a href="#p12004">Patch for DC++ 0.242 to compile under VS.net 2003</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4979">Hydra</a></strong> » </span>2003-04-20 22:40
+			</p>
+<div class="content">Use "patch -lp 1 &lt; dcplusplus0.242-vs.net-2003-hydra.diff" to apply the diff, I used the "patch" tool from cygwin.  (adjust the -p parameter depending on your current directory at time of calling patch program)
+<br/>
+<br/>Grab the file here: 
+<br/>
+<br/><!-- m --><a class="postlink" href="http://www.zenadsl5874.zen.co.uk/temp/dcplusplus/dcplusplus0.242-vs.net-2003-hydra.diff">http://www.zenadsl5874.zen.co.uk/temp/d ... hydra.diff</a><!-- m -->
+<br/>
+<br/>Also, you'll need a fixed STL port 4.5.3,  see this post I made earlier:
+<br/>
+<br/><!-- m --><a class="postlink" href="http://dcplusplus.sourceforge.net/forum/viewtopic.php?t=2292">http://dcplusplus.sourceforge.net/forum ... php?t=2292</a><!-- m -->
+<br/>
+<br/>Please reply to this if you thought this post was useful.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12152">
+<div class="inner">
+<dl class="postprofile" id="profile12152">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2319">harhar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-16 05:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12152">
+<h3><a href="#p12152"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2319">harhar</a></strong> » </span>2003-04-21 22:40
+			</p>
+<div class="content">mmm, how do I use the diff file?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12169">
+<div class="inner">
+<dl class="postprofile" id="profile12169">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12169">
+<h3><a href="#p12169"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-04-22 00:03
+			</p>
+<div class="content">Get "patch".  You can find it in cygwin, or you can find a native windows version: <!-- m --><a class="postlink" href="http://hp.vector.co.jp/authors/VA010446/toolbox1/#difpat">http://hp.vector.co.jp/authors/VA010446 ... x1/#difpat</a><!-- m -->  That's just the first link I found it on, and I bookmarked it.  Patch, like diff, is command line.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12175">
+<div class="inner">
+<dl class="postprofile" id="profile12175">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2319">harhar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-16 05:00</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12175">
+<h3><a href="#p12175"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2319">harhar</a></strong> » </span>2003-04-22 01:03
+			</p>
+<div class="content">yep, works well.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22992">
+<div class="inner">
+<dl class="postprofile" id="profile22992">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22992">
+<h3><a href="#p22992"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2003-07-20 17:58
+			</p>
+<div class="content">I have tried to use the patch and i dose not work at all for me. I just get errors, somthing like 
+<br/>!Only in DCPlusPlus-0.242/vsnet2003fixed/: DCPlusPlus.sln.old
+<br/>!Only in DCPlusPlus-0.242/vsnet2003fixed/: DCPlusPlus.vcproj.old
+<br/>!Only in DCPlusPlus-0.242/vsnet2003fixed/MakeDefs: MakeDefs.vcproj.old
+<br/>!Only in DCPlusPlus-0.242/vsnet2003fixed/: app
+<br/>!Only in DCPlusPlus-0.242/vsnet2003fixed/: bzip2.vcproj.old
+<br/>
+<br/>
+<br/>and then i tries to locate the files manualla and patch them from this stage do I only get an error combined whit a message which says that I can find out put in filnamne.old.rej.
+<br/>
+<br/>Why do I have this problem thit this .diff file?
+<br/>( the one for STlport works perfectly and iÃ‚Â´m using the cygwin patchtool)
+<br/>Anyone please help!</div>
+<div class="signature" id="sig22992"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23115">
+<div class="inner">
+<dl class="postprofile" id="profile23115">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23115">
+<h3><a href="#p23115"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-21 16:25
+			</p>
+<div class="content"><blockquote><div><cite>joakim_tosteberg wrote:</cite>I have tried to use the patch and i dose not work at all for me. I just get errors, somthing like <br/>!Only in DCPlusPlus-0.242/vsnet2003fixed/: DCPlusPlus.sln.old<br/></div></blockquote><br/><br/>Those aren't errors, those are informative messages.  You can remove them from the .diff file if you want.<br/><br/><blockquote class="uncited"><div>and then i tries to locate the files manualla and patch them from this stage do I only get an error combined whit a message which says that I can find out put in filnamne.old.rej.</div></blockquote>
+<br/>
+<br/>Well, your source is probably a different version from the one that the patch was created against.  Mismatches are to be expected.  You can use a command line option to force it to search with a greater fuzz.  Otherwise, open the .rej file and the source file and manually move the different lines over.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23684">
+<div class="inner">
+<dl class="postprofile" id="profile23684">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23684">
+<h3><a href="#p23684"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2003-07-26 07:01
+			</p>
+<div class="content">mine still didn't compile after the patch. I had to change
+<br/>
+<br/>class DirectoryListingFrame : public MDITabChildWindowImpl&lt;DirectoryListingFrame, RGB(255, 0, 255)&gt;,  CSplitterImpl&lt;DirectoryListingFrame&gt;
+<br/>to
+<br/>class DirectoryListingFrame : public MDITabChildWindowImpl&lt;DirectoryListingFrame, RGB(255, 0, 255)&gt;, public CSplitterImpl&lt;DirectoryListingFrame&gt;
+<br/>
+<br/>in DirectoryListingFrm.h</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23691">
+<div class="inner">
+<dl class="postprofile" id="profile23691">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23691">
+<h3><a href="#p23691"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2003-07-26 09:52
+			</p>
+<div class="content">Tahts probably because the patch fails to patch that file, it tries to use this:
+<br/>
+<br/>***************
+<br/>*** 33,39 ****
+<br/>
+<br/>  #define STATUS_MESSAGE_MAP 9
+<br/>
+<br/>- class DirectoryListingFrame : public MDITabChildWindowImpl&lt;DirectoryListingFrame&gt;, CSplitterImpl&lt;DirectoryListingFrame&gt;
+<br/>  {
+<br/>  public:
+<br/>  	enum {
+<br/>
+<br/>
+<br/>--- 33,39 ----
+<br/>
+<br/>  #define STATUS_MESSAGE_MAP 9
+<br/>
+<br/>+ class DirectoryListingFrame : public MDITabChildWindowImpl&lt;DirectoryListingFrame&gt;, public CSplitterImpl&lt;DirectoryListingFrame&gt;
+<br/>  {
+<br/>  public:
+<br/>  	enum {
+<br/>
+<br/>
+<br/>but in the latest dc version the RGB(255, 0, 255) have been added and youÃ‚Â´ll have to change tagh manuall 8 thats my guess anyway).
+<br/>Myself I had to do all patching of the dcplusplus files manually.</div>
+<div class="signature" id="sig23691"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p30552">
+<div class="inner">
+<dl class="postprofile" id="profile30552">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content30552">
+<h3><a href="#p30552"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2003-10-11 10:30
+			</p>
+<div class="content">ah, no problems with 0263 either.. unstickifying</div>
+<div class="signature" id="sig30552"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p41067">
+<div class="inner">
+<dl class="postprofile" id="profile41067">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41067">
+<h3><a href="#p41067"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2004-01-24 03:19
+			</p>
+<div class="content">Just upgraded to VS.net 2003, and still working with an older version of DC++ (pre .263).  Does anyone have the diff mentioned up at the top of this post available?  If so, a link would be nice, or I can provide an e-mail address in Private Message if you'd prefer.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p41068">
+<div class="inner">
+<dl class="postprofile" id="profile41068">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41068">
+<h3><a href="#p41068"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2004-01-24 03:54
+			</p>
+<div class="content">dcplusplus0.242-vs.net-2003-hydra.diff
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Only in DCPlusPlus-0.242/vsnet2003fixed/: DCPlusPlus.sln.old<br/>Only in DCPlusPlus-0.242/vsnet2003fixed/: DCPlusPlus.vcproj.old<br/>Only in DCPlusPlus-0.242/vsnet2003fixed/MakeDefs: MakeDefs.vcproj.old<br/>Only in DCPlusPlus-0.242/vsnet2003fixed/: app<br/>Only in DCPlusPlus-0.242/vsnet2003fixed/: bzip2.vcproj.old<br/>diff -buar -X makediff.dat DCPlusPlus-0.242/clean/client/config.h DCPlusPlus-0.242/vsnet2003fixed/client/config.h<br/>--- DCPlusPlus-0.242/clean/client/config.h   2003-04-15 12:14:00.000000000 +0100<br/>+++ DCPlusPlus-0.242/vsnet2003fixed/client/config.h   2003-04-20 23:31:04.000000000 +0100<br/>@@ -67,7 +67,7 @@<br/> #endif<br/> <br/> // These are defined by the C99 standard, but vc 6.0/7.0 doesn't understand them<br/>-#if _MSC_VER == 1200 || _MSC_VER == 1300<br/>+#if _MSC_VER == 1200 || _MSC_VER == 1300 || _MSC_VER == 1310<br/> typedef signed char int8_t;<br/> typedef signed short int16_t;<br/> typedef signed long int32_t;<br/>Only in DCPlusPlus-0.242/vsnet2003fixed/: client.vcproj.old<br/>Only in DCPlusPlus-0.242/vsnet2003fixed/: vc7<br/>diff -buar -X makediff.dat DCPlusPlus-0.242/clean/windows/DirectoryListingFrm.h DCPlusPlus-0.242/vsnet2003fixed/windows/DirectoryListingFrm.h<br/>--- DCPlusPlus-0.242/clean/windows/DirectoryListingFrm.h   2003-04-15 12:14:00.000000000 +0100<br/>+++ DCPlusPlus-0.242/vsnet2003fixed/windows/DirectoryListingFrm.h   2003-04-20 23:34:55.000000000 +0100<br/>@@ -33,7 +33,7 @@<br/> <br/> #define STATUS_MESSAGE_MAP 9<br/> <br/>-class DirectoryListingFrame : public MDITabChildWindowImpl&lt;DirectoryListingFrame&gt;, CSplitterImpl&lt;DirectoryListingFrame&gt;<br/>+class DirectoryListingFrame : public MDITabChildWindowImpl&lt;DirectoryListingFrame&gt;, public CSplitterImpl&lt;DirectoryListingFrame&gt;<br/> {<br/> public:<br/>    enum {<br/>diff -buar -X makediff.dat DCPlusPlus-0.242/clean/windows/FlatTabCtrl.h DCPlusPlus-0.242/vsnet2003fixed/windows/FlatTabCtrl.h<br/>--- DCPlusPlus-0.242/clean/windows/FlatTabCtrl.h   2003-04-15 12:14:02.000000000 +0100<br/>+++ DCPlusPlus-0.242/vsnet2003fixed/windows/FlatTabCtrl.h   2003-04-20 23:33:40.000000000 +0100<br/>@@ -330,7 +330,7 @@<br/>    public:<br/> <br/>       typedef vector&lt;TabInfo*&gt; List;<br/>-      typedef List::iterator ListIter;<br/>+      typedef typename List::iterator ListIter;<br/> <br/>       enum { MAX_LENGTH = 20 };<br/> <br/>diff -buar -X makediff.dat DCPlusPlus-0.242/clean/windows/main.cpp DCPlusPlus-0.242/vsnet2003fixed/windows/main.cpp<br/>--- DCPlusPlus-0.242/clean/windows/main.cpp   2003-04-15 12:14:06.000000000 +0100<br/>+++ DCPlusPlus-0.242/vsnet2003fixed/windows/main.cpp   2003-04-21 00:08:57.000000000 +0100<br/>@@ -49,7 +49,7 @@<br/> #ifndef _DEBUG<br/> #if _MSC_VER == 1200<br/>    __pfnDliFailureHook = FailHook;<br/>-#elif _MSC_VER == 1300<br/>+#elif _MSC_VER == 1300 || _MSC_VER == 1310<br/>    __pfnDliFailureHook2 = FailHook;<br/> #else<br/> #error Unknown Compiler version<br/>Only in DCPlusPlus-0.242/vsnet2003fixed/: zlib.vcproj.old<br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p41149">
+<div class="inner">
+<dl class="postprofile" id="profile41149">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41149">
+<h3><a href="#p41149"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2004-01-24 19:26
+			</p>
+<div class="content">Thanks Twink!  That worked out great for me.  Compiled perfectly after those changes (And a couple other unrelated minor ones).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			12 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

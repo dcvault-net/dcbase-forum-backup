@@ -6,21 +6,21 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Parsers Specification thoughts during implementation - DCBase</title>
-<link href="/app.php/feed?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - DCBase" type="application/atom+xml"/> <link href="/app.php/feed/news?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - News" type="application/atom+xml"/> <link href="/app.php/feed/forums?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - All forums" type="application/atom+xml"/> <link href="/app.php/feed/topics?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - New Topics" type="application/atom+xml"/> <link href="/app.php/feed/topics_active?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - Active Topics" type="application/atom+xml"/> <link href="/app.php/feed/forum/55?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - Forum - Protocol Ideas" type="application/atom+xml"/> <link href="/app.php/feed/topic/635?sid=d8fd4663e86554cd5f432653318e10cb" rel="alternate" title="Feed - Topic - Parsers Specification thoughts during implementation" type="application/atom+xml"/>
-<link href="https://forum.dcbase.org/viewtopic.php?t=635" rel="canonical"/>
+      
+
 <!--
 	phpBB style name: prosilver
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
 	Modified by:
 -->
-<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
-<link href="styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
 <!--[if lte IE 9]>
 	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
 <![endif]-->
-<link href="overrides.css" rel="stylesheet"/></head>
+<link href="/overrides.css" rel="stylesheet"/></head>
 <body class="nojs notouch section-viewtopic ltr" id="phpbb">
 <div class="wrap" id="wrap">
 <a accesskey="t" class="top-anchor" id="top"></a>
@@ -49,14 +49,14 @@
 </ul>
 </div>
 </li>
-<li data-skip-responsive="true">
+<li data-last-responsive="true">
 <a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
 <i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
 </a>
 </li>
 <li class="rightside" data-skip-responsive="true">
 <a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Login</span>
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
 </a>
 </li>
 <li class="rightside" data-skip-responsive="true">
@@ -64,7 +64,7 @@
 <i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
 </a>
 </li>
-</ul>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
 <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
 <li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 <span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
@@ -91,25 +91,6 @@
 </div>
 </div>
 <div class="action-bar bar-top">
-<a class="button inert" href="#" title="Disabled in this archive">
-<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
-</a>
-<div class="dropdown-container dropdown-button-control topic-tools">
-<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
-<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
-<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
-</span>
-<div class="dropdown">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<ul class="dropdown-contents">
-<li>
-<a accesskey="p" href="/viewtopic.php?f=55&amp;t=635" title="Print view">
-<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
 <div class="pagination">
 			19 posts
 							<ul>
@@ -127,26 +108,17 @@
 </div>
 <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a> </dt>
 <dd class="profile-rank">Newbie</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Mar 2010, 22:11</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Mar 30, 2010 10:11 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2205">
 <h3 class="first"><a href="#p2205">Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>31 Mar 2010, 09:22
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>Wed Mar 31, 2010 9:22 am
 			</p>
 <div class="content">I am currently in progress of writing an ADC library in python at:<br/>
-<a class="postlink" href="https://github.com/udoprog/python-adc">http://github.com/udoprog/python-adc</a><br/>
+<a class="postlink" href="http://github.com/udoprog/python-adc">http://github.com/udoprog/python-adc</a><br/>
 <br/>
 I am basically finished writing the parser for the ADC grammar, and have a couple of questions/pointers I would wish to highlight.<br/>
 <br/>
@@ -212,23 +184,14 @@ If base32 strings are represented this way, base32 decoding can be performed ear
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=203" style="color: #AEB404;">Sulan</a> </dt>
 <dd class="profile-rank">Junior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 16</dd> <dd class="profile-joined"><strong>Joined:</strong> 19 Jan 2009, 20:33</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 16</dd> <dd class="profile-joined"><strong>Joined:</strong> Mon Jan 19, 2009 8:33 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2206">
 <h3><a href="#p2206">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=203" style="color: #AEB404;">Sulan</a></strong> » </span>31 Mar 2010, 09:57
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=203" style="color: #AEB404;">Sulan</a></strong> » </span>Wed Mar 31, 2010 9:57 am
 			</p>
 <div class="content">Using "type" as variable name? I thought it was bad practice to use builtin keywords as variable names.</div>
 </div>
@@ -250,23 +213,14 @@ If base32 strings are represented this way, base32 decoding can be performed ear
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=280" style="color: #AEB404;">Quicksilver</a> </dt>
 <dd class="profile-rank">Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> 17 Aug 2009, 21:32</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 56</dd> <dd class="profile-joined"><strong>Joined:</strong> Mon Aug 17, 2009 9:32 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2207">
 <h3><a href="#p2207">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=280" style="color: #AEB404;">Quicksilver</a></strong> » </span>31 Mar 2010, 10:11
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=280" style="color: #AEB404;">Quicksilver</a></strong> » </span>Wed Mar 31, 2010 10:11 am
 			</p>
 <div class="content">A) I doubt the intention of the spec was to provide a grammar that can be used as is in a parser!<br/>
 To me it seems the primary target was to provide syntax in a way that  defines a spec ... so humans understand it... its not meant to be directly fed to some parser tool! <br/>
@@ -293,24 +247,15 @@ C) because it was there..  also the reason why not Base64 is used.. besides Base
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a> </dt>
 <dd class="profile-rank">Junior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> 18 Feb 2010, 17:44</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 30</dd> <dd class="profile-joined"><strong>Joined:</strong> Thu Feb 18, 2010 5:44 pm</dd>
 <dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> England</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2208">
 <h3><a href="#p2208">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a></strong> » </span>31 Mar 2010, 10:18
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=343" style="color: #AEB404;">andyhhp</a></strong> » </span>Wed Mar 31, 2010 10:18 am
 			</p>
 <div class="content">You keep on saying "disambiguous" .<br/>
 <br/>
@@ -340,23 +285,14 @@ Sorry if I have got the wrong idea but Im just trying to make sure<br/>
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> </dt>
 <dd class="profile-rank">Senior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Dec 2008, 14:59</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Dec 30, 2008 2:59 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2209">
 <h3><a href="#p2209">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>31 Mar 2010, 10:25
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>Wed Mar 31, 2010 10:25 am
 			</p>
 <div class="content">udoprog: connect to the dev hub -&gt; adcs://devpublic.adcportal.com:16591<br/>
 we're all in there</div>
@@ -379,42 +315,15 @@ we're all in there</div>
 </div>
 <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=54">Pietry</a> </dt>
 <dd class="profile-rank">Senior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 328</dd> <dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 328</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Dec 04, 2007 7:25 am</dd>
 <dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
-<dd class="profile-contact">
-<strong>Contact:</strong>
-<div class="dropdown-container dropdown-left">
-<a class="dropdown-trigger" href="#" title="Contact Pietry">
-<i aria-hidden="true" class="icon fa-commenting-o fa-fw icon-lg"></i><span class="sr-only">Contact Pietry</span>
-</a>
-<div class="dropdown">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<div class="dropdown-contents contact-icons">
-<div>
-<a class="last-cell" href="http://www.death-squad.ro/dshub" title="Website">
-<span class="contact-icon phpbb_website-icon">Website</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2210">
 <h3><a href="#p2210">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=54">Pietry</a></strong> » </span>31 Mar 2010, 11:20
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=54">Pietry</a></strong> » </span>Wed Mar 31, 2010 11:20 am
 			</p>
 <div class="content"><blockquote><div><cite>Quicksilver wrote:</cite>I doubt the intention of the spec was to provide a grammar that can be used as is in a parser!<br/>
 To me it seems the primary target was to provide syntax in a way that defines a spec ... so humans understand it... its not meant to be directly fed to some parser tool! </div></blockquote>
@@ -465,42 +374,15 @@ Perhaps you can make a hack to fix this problem temporarily, but it surely is a 
 </div>
 <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=54">Pietry</a> </dt>
 <dd class="profile-rank">Senior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 328</dd> <dd class="profile-joined"><strong>Joined:</strong> 04 Dec 2007, 07:25</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 328</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Dec 04, 2007 7:25 am</dd>
 <dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Bucharest</dd>
-<dd class="profile-contact">
-<strong>Contact:</strong>
-<div class="dropdown-container dropdown-left">
-<a class="dropdown-trigger" href="#" title="Contact Pietry">
-<i aria-hidden="true" class="icon fa-commenting-o fa-fw icon-lg"></i><span class="sr-only">Contact Pietry</span>
-</a>
-<div class="dropdown">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<div class="dropdown-contents contact-icons">
-<div>
-<a class="last-cell" href="http://www.death-squad.ro/dshub" title="Website">
-<span class="contact-icon phpbb_website-icon">Website</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2211">
 <h3><a href="#p2211">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=54">Pietry</a></strong> » </span>31 Mar 2010, 11:28
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=54">Pietry</a></strong> » </span>Wed Mar 31, 2010 11:28 am
 			</p>
 <div class="content"><blockquote><div><cite>udoprog wrote:</cite>this is a base32 encoded string with varying length w/o padding, which makes it difficult to decode unless you make the correct assumption of which hashing algorithm is used, where you know which length the encoded data should be padded with. </div></blockquote>
 
@@ -532,23 +414,14 @@ Hope this clears things up</div>
 </div>
 <a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a> </dt>
 <dd class="profile-rank">Senior Member</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Dec 2008, 14:59</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 100</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Dec 30, 2008 2:59 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2212">
 <h3><a href="#p2212">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>31 Mar 2010, 11:56
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=199" style="color: #AEB404;">darkKlor</a></strong> » </span>Wed Mar 31, 2010 11:56 am
 			</p>
 <div class="content">Pietry: I mentioned it on dev, but doesn't<br/>
 RCM protocol separator token<br/>
@@ -580,23 +453,14 @@ I don't think positional parameters provide a huge amount of value anyway. I wou
 </div>
 <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a> </dt>
 <dd class="profile-rank">Newbie</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Mar 2010, 22:11</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Mar 30, 2010 10:11 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2213">
 <h3><a href="#p2213">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>31 Mar 2010, 12:34
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>Wed Mar 31, 2010 12:34 pm
 			</p>
 <div class="content"><blockquote><div><cite>andyhhp wrote:</cite>You keep on saying "disambiguous" .<br/>
 Sorry if I have got the wrong idea but Im just trying to make sure
@@ -647,23 +511,14 @@ Is the bandwidth overhead really an issue since the hash is such just a fraction
 </div>
 <a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a> </dt>
 <dd class="profile-rank">Newbie</dd>
-<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 30 Mar 2010, 22:11</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Mar 30, 2010 10:11 pm</dd>
 </dl>
 <div class="postbody">
 <div id="post_content2214">
 <h3><a href="#p2214">Re: Parsers Specification thoughts during implementation</a></h3>
-<ul class="post-buttons">
-<li>
-<a class="button button-icon-only inert" href="#" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-quote-left fa-fw"></i><span class="sr-only">Quote</span>
-</a>
-</li>
-</ul>
 <p class="author">
-<a class="unread unavail" href="#" title="Not archived">
-<i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span>
-</a>
-<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>31 Mar 2010, 12:43
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/memberlist.php?mode=viewprofile&amp;u=351">udoprog</a></strong> » </span>Wed Mar 31, 2010 12:43 pm
 			</p>
 <div class="content"><blockquote><div><cite>Sulan wrote:</cite>Using "type" as variable name? I thought it was bad practice to use builtin keywords as variable names.</div></blockquote>
 That is correct, the local variable 'type' should be replaced with something more prudent like 'header_type', but the field (self.type) does not shadow any declarations, so that should not pose any problems.</div>
@@ -679,45 +534,6 @@ That is correct, the local variable 'type' should be replaced with something mor
 </div>
 <hr class="divider"/>
 <div class="action-bar bar-bottom">
-<a class="button inert" href="#" title="Disabled in this archive">
-<span>Post Reply</span> <i aria-hidden="true" class="icon fa-reply fa-fw"></i>
-</a>
-<div class="dropdown-container dropdown-button-control topic-tools">
-<span class="button button-secondary dropdown-trigger dropdown-select" title="Topic tools">
-<i aria-hidden="true" class="icon fa-wrench fa-fw"></i>
-<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
-</span>
-<div class="dropdown">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<ul class="dropdown-contents">
-<li>
-<a accesskey="p" href="/viewtopic.php?f=55&amp;t=635" title="Print view">
-<i aria-hidden="true" class="icon fa-print fa-fw"></i><span>Print view</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<form action="#" method="post" onsubmit="return false">
-<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
-<span class="button button-secondary dropdown-trigger dropdown-select" title="Display and sorting options">
-<i aria-hidden="true" class="icon fa-sort-amount-asc fa-fw"></i>
-<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
-</span>
-<div class="dropdown hidden">
-<div class="pointer"><div class="pointer-inner"></div></div>
-<div class="dropdown-contents">
-<fieldset class="display-options">
-<label>Display: <select id="st" name="st"><option selected="selected" value="0">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
-<label>Sort by: <select id="sk" name="sk"><option value="a">Author</option><option selected="selected" value="t">Post time</option><option value="s">Subject</option></select></label>
-<label>Direction: <select id="sd" name="sd"><option selected="selected" value="a">Ascending</option><option value="d">Descending</option></select></label>
-<hr class="dashed"/>
-<input class="button2" name="sort" type="submit" value="Go"/>
-</fieldset>
-</div>
-</div>
-</div>
-</form>
 <div class="pagination">
 			19 posts
 							<ul>
@@ -786,6 +602,10 @@ That is correct, the local variable 'type' should be replaced with something mor
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
 <li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
@@ -795,21 +615,33 @@ That is correct, the local variable 'type' should be replaced with something mor
 <li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
 <li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
 </ul>
 </div>
 </div>
 </div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
 </div>
-<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forum (forum.dcbase.org), reconstructed from all available <a href="https://web.archive.org/">Internet Archive</a> snapshots (newest genuine capture per thread). Links to threads, forums or users that were never archived are shown in <span class="na">red</span> and cannot be opened. Login, search, posting and other interactive functions are disabled.</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
 <div class="navbar" role="navigation">
 <div class="inner">
 <ul class="nav-footer linklist" id="nav-footer" role="menubar">
 <li class="breadcrumbs">
 <span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
 <li class="rightside">All times are <span title="UTC">UTC</span></li>
-<li class="rightside">
-<a class="inert" data-ajax="true" data-refresh="true" href="#" role="menuitem" title="Disabled in this archive">
-<i aria-hidden="true" class="icon fa-trash fa-fw"></i><span>Delete cookies</span>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
 </a>
 </li>
 <li class="rightside" data-last-responsive="true">
@@ -854,7 +686,6 @@ That is correct, the local variable 'type' should be replaced with something mor
 <div>
 <a accesskey="z" class="anchor" id="bottom"></a>
 </div>
-
 
 
 

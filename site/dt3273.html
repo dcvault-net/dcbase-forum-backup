@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Smart Upload speed limiting - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=3273">Smart Upload speed limiting</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p17316">
+<div class="inner">
+<dl class="postprofile" id="profile17316">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2189">DTFT</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-12 13:22</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17316">
+<h3 class="first"><a href="#p17316">Smart Upload speed limiting</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2189">DTFT</a></strong> » </span>2003-06-03 07:45
+			</p>
+<div class="content">Hi All!
+<br/>
+<br/>I got an idea of a feature that will limit the upload speed with out abusing it. The idea is simple, let the user manually define maximum upload speed while the DC++ will automaticly set the maximum download speed for twice as much. The any Leech a$$ that will set the U/l to 100b/s will get 200b/s of D/l , while good falks like me, those who have slow cable
+<br/>will be able to limit the U/L to something reasonable that will no lay a waste to their D/l at the same time.
+<br/>
+<br/>Why I think it is needed, becaus eI got cable con. and I got 500Kb/s D/l OR 96Kb/s U/l connection, while I share plenty of good stuff ppl D/l from me at some 10KB/s my D/l speed drops to a pathetic 3-4KB/s and less...
+<br/>And since I'm almost constantly being D/led from it takes me a straigh 3-4 days to get some 700MB file.
+<br/>Notice, the only thing I expect is to at least get the same speed of D/L as I offer to others, seems like a reasonable request to me.
+<br/>
+<br/>So what do you think? Any chance of getting it in the next version?</div>
+<div class="signature" id="sig17316">---
+<br/>" I know what's best for you."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17319">
+<div class="inner">
+<dl class="postprofile" id="profile17319">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5711">Charalambos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 84</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-02 11:30</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17319">
+<h3><a href="#p17319">Re: Smart Upload speed limiting</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5711">Charalambos</a></strong> » </span>2003-06-03 08:03
+			</p>
+<div class="content"><blockquote><div><cite>DTFT wrote:</cite> let the user manually define maximum upload speed while the DC++ will automaticly set the maximum download speed for twice as much.</div></blockquote>
+<br/>
+<br/>So if someone has a 512/128 connection, he is then only able to dowload at max with 256? 
+<br/>
+<br/>I think many users have a connection where upstream is less than half of downstream.
+<br/>
+<br/>By the way, the feature of limiting the upload bandwidth is already implemented in some modified dc++ clients as bcdc or dc++k.
+<br/>You can only set it to a defined min value (i dont know exactly how many percent of your actual upstream, but i guess only something in the region of 70 or 80 % or somesuch).</div>
+<div class="signature" id="sig17319">There is no pleasure in having nothing to do; the fun is in having lots to do and not doing it.
+<br/>-<em class="text-italics">Mary Wilson Little</em></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17327">
+<div class="inner">
+<dl class="postprofile" id="profile17327">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2189">DTFT</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-12 13:22</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17327">
+<h3><a href="#p17327"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2189">DTFT</a></strong> » </span>2003-06-03 09:20
+			</p>
+<div class="content">Then let it be about the x4 of U/L , the number's not an issue, the idiea is.
+<br/>
+<br/>I'd get the modified DC++, the question is how much it's welcome at the hubs, I wouldn't like to get kicked for the "faulty clent"</div>
+<div class="signature" id="sig17327">---
+<br/>" I know what's best for you."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17375">
+<div class="inner">
+<dl class="postprofile" id="profile17375">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 360</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-16 10:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17375">
+<h3><a href="#p17375">Reserve UL speed to downloads</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a></strong> » </span>2003-06-03 18:09
+			</p>
+<div class="content">I think that "download speed is twice the upload speed"-idea is stupid... will never work! The best way to solve the "uploads slows down downloads"-problem would be if one could reserve, say 5 kB, of upload speed for the downloads! No cap settings, no cap tags, no nothing... just make dc++ "take" 5kB of the upload (no matter the bandwidth) and "lock" those 5kB to the downloads! I have no idea if this is even possible, but it sure would be good!</div>
+<div class="signature" id="sig17375"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://whyrar.omfg.se">http://whyrar.omfg.se</a> - Guide to RAR and DC behaviour!<br/><a class="postlink" href="http://bodstrom.omfg.se">http://bodstrom.omfg.se</a> - BodstrÃ¶msamhÃ¤llet, LÃ¤nksamling om hoten mot vÃ¥r personliga integritet</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17382">
+<div class="inner">
+<dl class="postprofile" id="profile17382">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 141</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-25 06:48</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17382">
+<h3><a href="#p17382"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6988">Gratch06</a></strong> » </span>2003-06-03 19:42
+			</p>
+<div class="content"><blockquote class="uncited"><div>just make dc++ "take" 5kB of the upload (no matter the bandwidth) and "lock" those 5kB to the downloads!</div></blockquote>
+<br/>
+<br/>I think this is a great idea.  Everyone on modems or other connections with slow uploads can now choose (or be forced) to chop 5K/s off of their uploads, leaving...let's see...0 Kb/s upload availability!  What a great way to make leeches and prohibit people on slow connections from contributing!  And people do lie about connection speeds, so setting it to only apply to people who choose such and such a connection speed wouldn't work either.  There are perfectly valid arguments for upload limiters, but I think it's been discussed repeatedly (search upload limiter) and it will not end up in the main DC++ app.
+<br/>
+<br/>My opinion on this is that if you need something with an upload limiter, download one of the other clients available that has it included (just do a search on this board for them).
+<br/>
+<br/>- Gratch</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17386">
+<div class="inner">
+<dl class="postprofile" id="profile17386">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17386">
+<h3><a href="#p17386"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-03 20:07
+			</p>
+<div class="content">Hrm.  As a bit of a modification of the idea I had in another thread a bit down, how about storing an average of a large number of your total uploads (it wouldn't be able to kick in until you reach a large number or else it would totally mess things up) then it just figured out some really small number based on that average of upload.  Then it doesn't matter what the person claims their connection speed is, only how fast it uploads in practice.  I don't know exactly how much you have to take off the top to fix downloads on those connections, but I figure if 5KB/s out of 96KB/s is sufficient, then possibly all you need would be a number like 5%.  Also, I didn't say it clearly before, but, it should be based on your total upload speeds, not on your single upload speeds, so that even a person who has 999 slots open all the time so that the upload at 1KB/s to everyone, it would still see their full 999KB/s upload (that is, if everyone got exactly 1, but you get the idea.)  Just like with the other idea I had, the principle abuse would be if people modify the average number (which I though should be encrypted to decrease the amount of that, but even if they did they'd have to keep modifying it -- oh, and if they tried to make the file readonly so it couldn't write the change, it would detect that on startup and disable the feature completely) and of course they could just modify the client, but that's already being done as you said up there, so you just can't really worry about that as there's just nothing you can do to stop them.
+<br/>
+<br/>It occurs to me that this averaging system might be useful for other things as well.  One thing that occurs to me just off the top of my head is that you could use it to force users to have a decent number of slots based on their bandwidth (so real T3 users are ok with a lot, but modem users shouldn't be allowed to set more than a bare minimum for getting into one hub, and I don't mean limiting them to just one or something, it would be reasonable like maybe 3.)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17603">
+<div class="inner">
+<dl class="postprofile" id="profile17603">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17603">
+<h3><a href="#p17603"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-06-05 01:47
+			</p>
+<div class="content">Got ideas for making bandwidth limiting non-abusable?  <strong class="text-strong">Show me the code</strong>
+<br/>
+<br/>There are some novel ideas for automating caps.   My code works wonderfully for me, and I even tested it at up to 100mbit speeds.   And it's in my mini-mod client.  You know what I do in it?  <span style="text-decoration: underline">I trust the user.</span>  Upload limiting is not a one-size-fits-all situation.
+<br/>
+<br/>If you want to try to reward those who upload, delve into the excellent ratings system thread and start coding. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p17732">
+<div class="inner">
+<dl class="postprofile" id="profile17732">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17732">
+<h3><a href="#p17732"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-06 00:44
+			</p>
+<div class="content">I'm sorry, I'm not an expert coder.  If I were, I'd just make it myself and then present my idea and code as something that I thought should be integrated into DC++.  I did catch one bit of an issue when thinking about that though.  If you are limiting the uploads, it will lower the average, so you have to sort of add back in the amount that you are limiting by into the averaging, which isn't 100% accurate.  Maybe a better way can be found, but that probably wouldn't be too bad if you add in a little tolerance or something.  If the percentage you take off the top is small enough, it should be fine to just add that amount back in since the variance wouldn't be that much really.
+<br/>
+<br/>Oh, and as for trusting the user.  If people really felt they could just do that, there'd be an upload limiter where you can just enter the number to limit by with any number that they feel like putting in there.  Do you honestly think that all the leechers out there are going to put a number higher than the absolute minimum that it allows you to enter, or, if you trust everyone so much that there's no minum, 1B/s will be what all those leechers put in.  If the user were trusted, DC++ would already have that option as it's not exactly so terribly complicated that they can't get it since they can just see how to do it from the people who have modified this client without even having to figure out how to do it the hard way if they didn't want to, though I suspect the people working on DC++ wouldn't really have to do that.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p17734">
+<div class="inner">
+<dl class="postprofile" id="profile17734">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 68</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-03 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content17734">
+<h3><a href="#p17734"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3520">Nazo</a></strong> » </span>2003-06-06 00:46
+			</p>
+<div class="content">Oh, and it would only have to add that amount back in when it actually hits the limit.  Every upload before that limit is reached wouldn't have any amount added to it in the average, so would be completely accurate.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>File hash identification - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=6595">File hash identification</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			13 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p34977">
+<div class="inner">
+<dl class="postprofile" id="profile34977">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content34977">
+<h3 class="first"><a href="#p34977">File hash identification</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2003-11-29 02:32
+			</p>
+<div class="content">I know there have been other discussion about this issue, but I couldn't find them right now. 
+<br/>
+<br/>I think the most important feature for dc++ is the identification of files, every file should get an unique code by hashing the file, this has the following advantages. I think the hash method should be the same as other known file networks like bittorent or emule, that way dc++ users can also use the 'sharereactor' sites. 
+<br/>
+<br/>- the 'automatic search for alternatives' would work much better becuase the filename is not important
+<br/>- 'match queue' would work much better for the same reason
+<br/>- you could add files by entering an URL, just like edonkey
+<br/>- you can search manually for the hash code instead of browsing and searching trough a lot of results to find the right file
+<br/>
+<br/>The hash ID should be included in the search results, file lists, and the download queue. 
+<br/>
+<br/>So I was wondering if this feature is still being developed, and what the priority is. I think this is by far the most important feature dc++ needs, and (although I'm not an C programmer) I don't think it's a very difficult feature to make, although it needs some protocol changes, but I don't think users would mind. 
+<br/>
+<br/><img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p34984">
+<div class="inner">
+<dl class="postprofile" id="profile34984">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content34984">
+<h3><a href="#p34984">Re: File hash identification</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-11-29 04:23
+			</p>
+<div class="content"><blockquote><div><cite>Wisp wrote:</cite>I think the hash method should be the same as other known file networks like bittorent or emule, that way dc++ users can also use the 'sharereactor' sites.</div></blockquote>
+<br/>
+<br/>This is good thinking, too bad edonkey and bittorrent uses different hashes. There are almost as many hashes are there are p2p networks out there. (md4, md5, SHA1, TTH, sig2dat, uuhash, various truncated vartiants). 
+<br/>
+<br/>The hashes that DC probably will end up with are TTH (TigerTree Hash) which are found in bitprints (<a class="postlink" href="http://www.bitzi.com/">http://www.bitzi.com/</a>, lists a few apps that use them), and I only know of two sites publishing magnets with bitprints in them:
+<br/>
+<br/><a class="postlink" href="http://www.sharelive.com">http://www.sharelive.com</a>
+<br/><a class="postlink" href="http://www.peerweb.org">http://www.peerweb.org</a>
+<br/>
+<br/>About the hashtree itself:
+<br/>
+<br/><a class="postlink" href="http://open-content.net/specs/draft-jchapweske-thex-02.html">http://open-content.net/specs/draft-jchapweske-thex-02.html</a>
+<br/>
+<br/>You might be able to get a client supporting this here:
+<br/>
+<br/><a class="postlink" href="http://wza.digitalbrains.com/DC/BCDCpp/">http://wza.digitalbrains.com/DC/BCDCpp/</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p35010">
+<div class="inner">
+<dl class="postprofile" id="profile35010">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35010">
+<h3><a href="#p35010">Re: File hash identification</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2003-11-29 10:28
+			</p>
+<div class="content"><blockquote><div><cite>sandos wrote:</cite><blockquote><div><cite>Wisp wrote:</cite>I think the hash method should be the The hashes that DC probably will end up with are TTH (TigerTree Hash) which are found in bitprints (<a class="postlink" href="http://www.bitzi.com/">http://www.bitzi.com/</a>, lists a few apps that use them), and I only know of two sites publishing magnets with bitprints in them:<br/><br/><a class="postlink" href="http://www.sharelive.com">http://www.sharelive.com</a><br/><a class="postlink" href="http://www.peerweb.org">http://www.peerweb.org</a><br/><br/>About the hashtree itself:<br/><br/><a class="postlink" href="http://open-content.net/specs/draft-jchapweske-thex-02.html">http://open-content.net/specs/draft-jchapweske-thex-02.html</a><br/><br/>You might be able to get a client supporting this here:<br/><br/><a class="postlink" href="http://wza.digitalbrains.com/DC/BCDCpp/">http://wza.digitalbrains.com/DC/BCDCpp/</a></div></blockquote></div></blockquote>
+<br/>Hmm why can't DC use the same as the Edonkey network? Emule is also opensource</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p35016">
+<div class="inner">
+<dl class="postprofile" id="profile35016">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12901">deesee++</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 9</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-01 11:17</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35016">
+<h3><a href="#p35016"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=12901">deesee++</a></strong> » </span>2003-11-29 13:03
+			</p>
+<div class="content"><blockquote class="uncited"><div>I know there have been other discussion about this issue, but I couldn't find them right now.</div></blockquote>
+<br/>
+<br/>Yeah, sometimes they aren't available "right now".. you have to search between 2:37am - 7:28am EST, only on Tuesday and Sunday.........yeah....
+<br/>
+<br/>Hashing is being worked on..
+<br/>After hashing will come multi source downloads..
+<br/>and sharereactor style websites too..
+<br/>then what will you have...?
+<br/>
+<br/>Just another kazaa, emule, torrent, _____,.. whatever.
+<br/>Only you have hubowners getting sued/shutdown.
+<br/>You have filelists for 'the man' to see just what you are illegally sharing (they don't post home movies on sharereactor, do they?).
+<br/>Plus with hashing it makes it very simple to verify that the files you are sharing are indeed illegal.
+<br/>
+<br/>dc++ is NOT like all the other p2p apps
+<br/>and THAT is dc's most important feature...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p35024">
+<div class="inner">
+<dl class="postprofile" id="profile35024">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35024">
+<h3><a href="#p35024"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2003-11-29 15:50
+			</p>
+<div class="content"><blockquote><div><cite>deesee++ wrote:</cite><blockquote class="uncited"><div>I know there have been other discussion about this issue, but I couldn't find them right now.</div></blockquote><br/><br/>Yeah, sometimes they aren't available "right now".. you have to search between 2:37am - 7:28am EST, only on Tuesday and Sunday.........yeah....<br/></div></blockquote>you're funny  <img alt=":?" class="smilies" src="/images/smilies/icon_confused.gif" title="Confused"/> <br/><blockquote class="uncited"><div>Hashing is being worked on..<br/>After hashing will come multi source downloads..<br/>and sharereactor style websites too..<br/>then what will you have...?<br/><br/>Just another kazaa, emule, torrent, _____,.. whatever.<br/>Only you have hubowners getting sued/shutdown.<br/>You have filelists for 'the man' to see just what you are illegally sharing (they don't post home movies on sharereactor, do they?).<br/>Plus with hashing it makes it very simple to verify that the files you are sharing are indeed illegal.<br/><br/>dc++ is NOT like all the other p2p apps<br/>and THAT is dc's most important feature...</div></blockquote>
+<br/>I don't want multisource downloading, file hashing is just something that dc++ needs, it's not an 'extra' feature, it would be an improvement of the basic dc++ functions like searching, resuming, etc etc</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p35043">
+<div class="inner">
+<dl class="postprofile" id="profile35043">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35043">
+<h3><a href="#p35043"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2003-11-29 23:09
+			</p>
+<div class="content">hmmm i can see this post going nowhere.... cologic is working on hashing for BCDC, if this features works well then he might submit the code to arnie, until then you can use BCDC to find problems with the hashing and maybe speed the process up.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p35194">
+<div class="inner">
+<dl class="postprofile" id="profile35194">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35194">
+<h3><a href="#p35194"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-12-01 19:12
+			</p>
+<div class="content">Shareaza uses the ed2k hashing only to supplement its TTH hashing...  Any well thought out DC client should do the same.
+<br/>
+<br/>However, if the release sites Sandos mentions are good, there's no need to ever add the ed2k hashes, except for legacy support.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p35218">
+<div class="inner">
+<dl class="postprofile" id="profile35218">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35218">
+<h3><a href="#p35218"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2003-12-02 17:03
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>Shareaza uses the ed2k hashing only to supplement its TTH hashing...  Any well thought out DC client should do the same.<br/><br/>However, if the release sites Sandos mentions are good, there's no need to ever add the ed2k hashes, except for legacy support.</div></blockquote>importing ed2k hashes isn't essential, but it would be a nice extra feature, dc users could also use sharereactor sites and exchange hashes
+<br/>
+<br/>the important thing is that dc++ has hashes do it can identify files better, even if they have a different name. 
+<br/>
+<br/>But i'm glad there is being worked on, keep up the good work <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p35219">
+<div class="inner">
+<dl class="postprofile" id="profile35219">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35219">
+<h3><a href="#p35219"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2003-12-02 17:04
+			</p>
+<div class="content">btw, why is the "edit" button removed at the forum?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p35241">
+<div class="inner">
+<dl class="postprofile" id="profile35241">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35241">
+<h3><a href="#p35241"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-12-02 18:38
+			</p>
+<div class="content">Actually, cologic has brought up a lot of research papers showing how collisions for MD4 (which is what ed2k links are based off of) are pretty easy to make.  It's better than the kazaa hash, but if kazaa dies, the **AA can construct fake files for ed2k hashes without too much trouble... (so I'm not convinced that it is a good idea at all)
+<br/>
+<br/>
+<br/>Regular users have always only been able to edit their posts in Help/Support and Programmer's Help...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p35242">
+<div class="inner">
+<dl class="postprofile" id="profile35242">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35242">
+<h3><a href="#p35242"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2003-12-02 18:39
+			</p>
+<div class="content"><blockquote><div><cite>Wisp wrote:</cite>btw, why is the "edit" button removed at the forum?</div></blockquote>You can edit your posts, but only in "help and support" and "programmers help"
+<br/>The cause to why it is so is that arne have configured it like that  <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+<div class="signature" id="sig35242"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p35368">
+<div class="inner">
+<dl class="postprofile" id="profile35368">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content35368">
+<h3><a href="#p35368"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-12-03 22:25
+			</p>
+<div class="content">I actually found another site with magnets+bitprints:
+<br/>
+<br/><a class="postlink" href="http://gamephilez.us/">http://gamephilez.us/</a>
+<br/>
+<br/>Not a very big one, but..</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p37988">
+<div class="inner">
+<dl class="postprofile" id="profile37988">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15771">clowne</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-22 19:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content37988">
+<h3><a href="#p37988"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15771">clowne</a></strong> » </span>2003-12-25 06:28
+			</p>
+<div class="content">agree, hashing is the most importanf feature dc++ can implement</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			13 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

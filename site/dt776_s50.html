@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Ratings server and protocol - Page 2 - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=776&amp;start=50">Ratings server and protocol</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			85 posts
+							<ul>
+<li class="arrow previous"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=776" rel="prev" role="button"><i aria-hidden="true" class="icon fa-chevron-left fa-fw"></i><span class="sr-only">Previous</span></a></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=776" role="button">1</a></li>
+<li class="active"><span>2</span></li>
+</ul>
+</div>
+</div>
+<div class="post has-profile bg2" id="p5172">
+<div class="inner">
+<dl class="postprofile" id="profile5172">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1136">Sapporo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-10 04:10</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> AZ, USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5172">
+<h3 class="first"><a href="#p5172"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1136">Sapporo</a></strong> » </span>2003-02-22 03:32
+			</p>
+<div class="content"><blockquote><div><cite>volkris wrote:</cite>What is to stop users from saying "If you let me download from you I'll credit you with double the upload points"? I honestly don't have a final solution to this, though I don't know how big a problem it actually is. <br/></div></blockquote>
+<br/>
+<br/>Unfortunately nothing since the rating server has to trust that the transfer of XX bytes happened. The rating server has no way of seeing if and what transfers are occuring, since that's all direct client&lt;-&gt;client communication.
+<br/>
+<br/>Originally, I was thinking that for every point reported there would have to be a corresponding report from the other client involved. "Yeah, that transferred actually happened." This probably would cut down on "'casual forging", but I don't see it being very difficult to get around though. It wouldn't be that hard for 2 clients to both just lie to the rating server and award points for nothing being transferred.
+<br/>
+<br/>I can now understand why the eMule client tracks it's own ratings with the users you download/upload from itself, locally.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5175">
+<div class="inner">
+<dl class="postprofile" id="profile5175">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 81</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-06 16:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ohio</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5175">
+<h3><a href="#p5175"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a></strong> » </span>2003-02-22 07:37
+			</p>
+<div class="content">As long as there is some identifier that makes a user unique. You can look through his reports and spot inconsistencies that would trigger an alert.
+<br/>
+<br/>Example
+<br/>There are 4 users (A, B, C, &amp; D)
+<br/>
+<br/>A reports, File1hash, 10k downloaded from B
+<br/>B reports, File1hash, 10k uploaded to A
+<br/>
+<br/>C reports, File1hash, 5k downloaded from B
+<br/>B reports, File1hash, 10k uploaded to C
+<br/>
+<br/>D reports, File1hash, 5k downloaded from B
+<br/>B reports, File1hash, 10k uploaded to D
+<br/>
+<br/>This trend start to point out that A and B are lying, and as more users download from B it starts to prove the point more.
+<br/>
+<br/>If cheating is found, their ratings are reset, or even locked at 0?
+<br/>
+<br/>This does not stop users who only report false data when talking with x client, but it does adds another level of complexity for the client to successfully abuse the system.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5204">
+<div class="inner">
+<dl class="postprofile" id="profile5204">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5204">
+<h3><a href="#p5204"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-02-22 18:06
+			</p>
+<div class="content"><blockquote><div><cite>mo wrote:</cite>This trend start to point out that A and B are lying, and as more users download from B it starts to prove the point more.</div></blockquote>
+<br/>
+<br/>Unfortunately, this doesn't help that much.
+<br/>In the "technological" case, the deception is negotiated on a case by case basis, so the inconsistancies won't pop up (assuming the clients actually can trust each other).
+<br/>
+<br/>In the "social conspiracy" case, the people in on it all know who the others are, so again the inconsistencies wouldn't appear there either.
+<br/>
+<br/>In the end we probably just have to accept this as a flaw that will be inserting some invalid data into the system (it won't be the only one). Some people will profit off of it unfairly, but that's life. P2P systems just can't really be made foolproof by their very natures.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5206">
+<div class="inner">
+<dl class="postprofile" id="profile5206">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1136">Sapporo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-10 04:10</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> AZ, USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5206">
+<h3><a href="#p5206"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1136">Sapporo</a></strong> » </span>2003-02-22 18:19
+			</p>
+<div class="content">Well, I don't think file hashes have been discussed yet. It doesn't matter though, as they can just as easily be faked.
+<br/>
+<br/><blockquote><div><cite>mo wrote:</cite>This does not stop users who only report false data when talking with x client, but it does adds another level of complexity for the client to successfully abuse the system.</div></blockquote>
+<br/>
+<br/>I see this as something that would be simple to implement in a hacked client. Following the example presented by volkris, they could implement a "Grant double points to user X for open slot" button. The hacked client would then compute the appropriate hash(forged) and tell the other client (would probably have to also be a hacked client) about it. They would then both report the same falsified data to the ratings server.
+<br/>
+<br/>All I'm saying is that its possible, but it may not be a frequent occurance. However, it really depends on the proliference of the hacked client and whether other hacked clients include this "feature".
+<br/>
+<br/>Security through obscurity is not a solution, it's a bandaid. Unfortunately, I don't see anyway of preventing this system from being abused. If a solution is not presented that solves this sort of abuse, it needs to be considered a risk. If I have to charge a well fortified bunker and I know I'll lose some men. I'm still going to take that d@mn bunker, because it's a calculated risk. The possible rewards out weigh the negative.
+<br/>
+<br/>So the question to ask is "If 30% of the DC users in the Ratings System are reporting forged data. How is the system affected?"</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5208">
+<div class="inner">
+<dl class="postprofile" id="profile5208">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 81</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-06 16:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ohio</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5208">
+<h3><a href="#p5208"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a></strong> » </span>2003-02-22 19:59
+			</p>
+<div class="content"><blockquote><div><cite>Sapporo wrote:</cite>Well, I don't think file hashes have been discussed yet. It doesn't matter though, as they can just as easily be faked.</div></blockquote><br/>The file hash was only a scheme to connect the ul report with the cooresponding dl report while maintaining data anonymity.<br/><br/><blockquote><div><cite>Sapporo wrote:</cite>Security through obscurity is not a solution, it's a bandaid</div></blockquote>
+<br/>Agreed, just trying to stop a 1 line hack of the client that any reasonable intelligent person could make.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5231">
+<div class="inner">
+<dl class="postprofile" id="profile5231">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5231">
+<h3><a href="#p5231"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-02-23 06:48
+			</p>
+<div class="content">Well, I had written something verbose and informative on this subject, but Internet Explorer lost it. I swear, I don't know how you guys can stand that browser. It's like going back to a mouse without a wheel. It's uncivilized! <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Anyway, the point of the post was that this is not that big of a problem. I'll retype the post tomorrow if I get a chance.
+<br/>
+<br/>I mainly just wanted to bitch about IE. Me and Microsoft products just don't get along. Ever.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5270">
+<div class="inner">
+<dl class="postprofile" id="profile5270">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5270">
+<h3><a href="#p5270"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-02-23 14:38
+			</p>
+<div class="content"><blockquote><div><cite>volkris wrote:</cite>Well, I had written something verbose and informative on this subject, but Internet Explorer lost it. I swear, I don't know how you guys can stand that browser. It's like going back to a mouse without a wheel. It's uncivilized! <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote><br/>Hey, watch your mouth - I have a mouse without a wheel <strong class="text-strong">and</strong> only Microsoft products to use for my project!<br/><br/>Though I must admit that I installed Opera first chance I got - mouse gestures are a godsend when surfin' the 'net.<br/><br/><blockquote><div><cite>volkris wrote:</cite>Anyway, the point of the post was that this is not that big of a problem. I'll retype the post tomorrow if I get a chance.</div></blockquote><br/>The whole "as long as there are not that many clients doing it it won't get too much out of hand"-argument you used on the lichlord forum?<br/><br/>Well, in any case, what you could do is check the whole up/download history for a user and check out he's been transferring at 15 Gb/s for more than a few hours, and group transfers with clients so that you can ascertain connections between them (example: "hmmm.... client A and client B has one megabyte per second transfer rate to each other but not to anyone else... let's calculate that as if they had 50 kb/s").<br/>Unfair to some users (users with same, local ISP) ? Most probably. <br/>Will it fix the problem? No. It will alleviate it, if properly coded, and should be done server side, which means it is irrelevant to the first "reference" rating server. It is a serious problem, though.<br/><br/><blockquote><div><cite>volkris wrote:</cite>I mainly just wanted to bitch about IE. Me and Microsoft products just don't get along. Ever.</div></blockquote>
+<br/>Microsoft bashing is an honored and traditional pastime wherever computer users meet and talk. Feel free to publish any humorous situation you have been involved in with Microsoft products, and we'll send you ours! <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>Sarf
+<br/>---
+<br/>For him to get a clue would require heroic implant surgery.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5283">
+<div class="inner">
+<dl class="postprofile" id="profile5283">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5283">
+<h3><a href="#p5283"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-02-23 17:09
+			</p>
+<div class="content">The solution to the problem with cheating clients might be to have (super-)trusted clients, either ops or a bot, which seeds the rating server with ratings that are correct:
+<br/>
+<br/><a class="postlink" href="http://www.advogato.org/trust-metric.html">http://www.advogato.org/trust-metric.html</a>
+<br/>
+<br/>The problem here is that their model of a attack is different from this attack as near as I can see, and the ratings system is entirely different from the one proposed here. Theirs is based on giving out certificates to users, with a level attached to it. This could be translated into certificates relating to different stuff: one for being able to upload files, one for uploading files at certain speeds, or for uploading a set amount of bytes.
+<br/>
+<br/>Anyway, I just wanted to mention it. I dont understand the math behind AvogatoÃ‚Â´s metric, so I cant really say whether its suited or not.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5353">
+<div class="inner">
+<dl class="postprofile" id="profile5353">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5353">
+<h3><a href="#p5353"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-02-24 03:18
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite><blockquote><div><cite>volkris wrote:</cite>Anyway, the point of the post was that this is not that big of a problem. I'll retype the post tomorrow if I get a chance.</div></blockquote><br/>The whole "as long as there are not that many clients doing it it won't get too much out of hand"-argument you used on the lichlord forum?</div></blockquote>
+<br/>
+<br/>I don't remember what I said on lichlord, but what you just said is part of the answer. The more immediate question is one of insuring that there aren't many clients doing it in the first place. 
+<br/>
+<br/>Let me try to summarize, I'm too tired to rewrite it all (not that I got anything at all accomplished this weekend <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>There are really two problems here. The case of users forming impromptu agreements will never be a huge concern unless it can be automated (IMO), and we can take steps to keep it from being automated pretty effectively. In the case of users conspiring to rip off the outside world, we can try to moderate the effectiveness of their consortium by gearing the ratings towards rewarding people in the same hub. Users can't really rip off the outside world if there is none, after all.
+<br/>
+<br/>Neither of these will stop the practices, but they'll hopefully lessen them to insignificance.
+<br/>
+<br/>And sandos, I havn't read that Advogato's trust metric link in years. I need to go back through it. I thinnk I will in just a second...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5462">
+<div class="inner">
+<dl class="postprofile" id="profile5462">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 15:39</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5462">
+<h3><a href="#p5462"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a></strong> » </span>2003-02-25 14:07
+			</p>
+<div class="content">This is a stupid ass idea. Not only is it a lame idea, it's a more effective way to incriminate yourself.
+<br/>
+<br/>"hey cops, don't bother looking for who is doing the fuckloads of transfers, you got this rating system to tell you."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5480">
+<div class="inner">
+<dl class="postprofile" id="profile5480">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5480">
+<h3><a href="#p5480"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-02-25 17:09
+			</p>
+<div class="content"><blockquote><div><cite>NoFiX wrote:</cite>"hey cops, don't bother looking for who is doing the fuckloads of transfers, you got this rating system to tell you."</div></blockquote>
+<br/>
+<br/>If all the cops cared about was the amount of transferring you've done they'd just go ask your ISP, moron. Nobody in this system reports WHAT you've downloaded.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5561">
+<div class="inner">
+<dl class="postprofile" id="profile5561">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 15:39</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5561">
+<h3><a href="#p5561"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a></strong> » </span>2003-02-26 13:39
+			</p>
+<div class="content">I don't recall saying download in any of my previous posts about this ignorant method of stealing slots. Maybe you should learn how to comprehend before responding?
+<br/>
+<br/>Oh and since when was DC++ the haven for ignorance? Oh, that's right, if it's open source and it's catching on...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5576">
+<div class="inner">
+<dl class="postprofile" id="profile5576">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5576">
+<h3><a href="#p5576"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-02-26 15:47
+			</p>
+<div class="content"><blockquote><div><cite>NoFiX wrote:</cite>I don't recall saying download in any of my previous posts about this ignorant method of stealing slots. Maybe you should learn how to comprehend before responding?<br/><br/>Oh and since when was DC++ the haven for ignorance? Oh, that's right, if it's open source and it's catching on...</div></blockquote><br/><br/><blockquote class="uncited"><div>"hey cops, don't bother looking for who is doing the fuckloads of transfers, you got this rating system to tell you."</div></blockquote>
+<br/>
+<br/>I didnt know transfers were illegal in any way?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5590">
+<div class="inner">
+<dl class="postprofile" id="profile5590">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 81</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-06 16:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ohio</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5590">
+<h3><a href="#p5590"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a></strong> » </span>2003-02-26 19:25
+			</p>
+<div class="content"><blockquote><div><cite>NoFIX wrote:</cite>hey cops, don't bother looking for who is doing the fuckloads of transfers, you got this rating system to tell you</div></blockquote>
+<br/>
+<br/>not only is there no data telling what files were transferred, there is also no data saying user x transferred it.
+<br/>
+<br/>but thanks for letting us in on your great language skills</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5610">
+<div class="inner">
+<dl class="postprofile" id="profile5610">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 15:39</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5610">
+<h3><a href="#p5610"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a></strong> » </span>2003-02-26 21:05
+			</p>
+<div class="content">Mo, please, can you comprehend anything?
+<br/>
+<br/>If DC++ would be able to discern users, thus ranking them, wether or not it shows the end user, the data would still be there regardless of what it is. Allowing anyone with minimal c++ skills to alter the DC++ code and show the rankings according on a per-channel basis.
+<br/>
+<br/>Don't say it isn't possible. It would be easily possible, it's common sense.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5636">
+<div class="inner">
+<dl class="postprofile" id="profile5636">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5636">
+<h3><a href="#p5636"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2003-02-26 22:35
+			</p>
+<div class="content"><blockquote><div><cite>NoFiX wrote:</cite>Mo, please, can you comprehend anything?<br/><br/>If DC++ would be able to discern users, thus ranking them, wether or not it shows the end user, the data would still be there regardless of what it is. Allowing anyone with minimal c++ skills to alter the DC++ code and show the rankings according on a per-channel basis.<br/><br/>Don't say it isn't possible. It would be easily possible, it's common sense.</div></blockquote>
+<br/>
+<br/>So what youre saying is that now they can easily spot people who share lots of copyrighted stuff? But, its DAMN easy to do that right now:
+<br/>
+<br/>1) Search for newly released, copyrighted material +
+<br/>2) Use the search spy / Snoop passive searchresults
+<br/>3) ...
+<br/>4) Profit!
+<br/>
+<br/>In what way would a rating system improve much over this method? What edge would anti-piracy elements get from a rating system? This method could be easily automated today! 
+<br/>
+<br/>I dont get it, you make it sound like its <em class="text-italics">hard</em> to find people sharing (much) illegal stuff, am I misinterpreting you? If youre so scared, why dont you start using freenet right away?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5676">
+<div class="inner">
+<dl class="postprofile" id="profile5676">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5676">
+<h3><a href="#p5676"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-02-27 13:50
+			</p>
+<div class="content"><blockquote><div><cite>NoFiX wrote:</cite>Mo, please, can you comprehend anything?<br/><br/>Don't say it isn't possible. It would be easily possible, it's common sense.</div></blockquote>
+<br/>
+<br/>Again, the black helicopters could pay your ISP a visit and determine how much you have been transferring much more easily and reliably this very day than they couldby looking at someone's rating under this proposed system. Such a rating would be a combination of various elements not limited to sheet transfer amounts. Your ISP's logs, on the other hand, would flat out give them your transfer amounts.
+<br/>
+<br/>Now, if you happen to live in an area of the world where transferring more than a certain amount is illegal then I would suggest immediately shutting down your DC client before you get caught, as you're incriminating yourself with every byte you transfer. I would also suggest rechecking the laws of your land, because as far as I know there IS no place on earth where it is illegal to transfer above a certain amount of data.
+<br/>
+<br/>I would speak more slowly for you here, but I don't want to risk your having to download any extra bytes. You never know which byte might trigger law enforcement to swoop down on you, after all. It would be nicely ironic if the period at the end of this sentence did it, though.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5737">
+<div class="inner">
+<dl class="postprofile" id="profile5737">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5737">
+<h3><a href="#p5737"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-02-28 04:57
+			</p>
+<div class="content">Ok, I reread the Advogato stuff and don't believe it would work very well here. If anyone wants to argue then great.
+<br/>
+<br/>I belive the Advogato methods would rely on social networking that is just not very compatible with DC's ad hoc nature. It is well suited for things like mail servers, though, which is I believe where the article was really going.
+<br/>
+<br/>It would also end up having to manage huge connected graphs that would take some serious magic to make perform well. 
+<br/>
+<br/>Lastly it seems to report less of a range of ratings, looking more towards a black and white, good versus bad type thing. The range is one of the great things about this proposal, as it lets clients focus on making the network a better place.
+<br/>
+<br/>If I've missed something let me know.
+<br/>
+<br/>As to the other problems, I finally remembered an old but powerful solution: weight reports based on reporters' scores (and perhaps reporters' rates of reporting). Honestly, if the top sharer in a hub wants to screw with the system I don't mind too too much <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5799">
+<div class="inner">
+<dl class="postprofile" id="profile5799">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5799">
+<h3><a href="#p5799"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-02-28 16:03
+			</p>
+<div class="content"><blockquote><div><cite>volkris wrote:</cite>[snipped Avogato text]<br/>As to the other problems, I finally remembered an old but powerful solution: weight reports based on reporters' scores (and perhaps reporters' rates of reporting). Honestly, if the top sharer in a hub wants to screw with the system I don't mind too too much <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote>
+<br/>Agree. 
+<br/>We do need to specify some way to identify people, though (such as the client returning a list with the servers it is subscribed to and what usernames it has there, or just decide to return one).
+<br/>The whole NoFIX issue might have been avoided (yes, yes, wishful thinking, I know).
+<br/>
+<br/>Sarf
+<br/>---
+<br/>Bored people are boring people.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5829">
+<div class="inner">
+<dl class="postprofile" id="profile5829">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 19</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-23 15:39</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5829">
+<h3><a href="#p5829"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1573">NoFiX</a></strong> » </span>2003-02-28 22:19
+			</p>
+<div class="content">Is it really that simple to goto any old ISP and request private information regarding the transfer of data about random users? You should realize, though, that the feds would need a reason to do just that, right? They can't just go to the ISP and request private information about random users, without bearing.
+<br/>
+<br/>And isn't it obvious the feds would rather take out the big-guys that feed all the little-guys, in the attempt to thwart the spread of illegal copy-written material? If this rating system was adopted and used then you, in effect, might as well dig the DC grave...
+<br/>
+<br/>And, no, this wasn't my main point to begin with. But it's a logical point that should be taken seriously.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p5841">
+<div class="inner">
+<dl class="postprofile" id="profile5841">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 81</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-06 16:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ohio</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5841">
+<h3><a href="#p5841"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a></strong> » </span>2003-03-01 04:09
+			</p>
+<div class="content">It's pretty simple to make the user information useless to anyone except a dc client
+<br/>the user/file information is held using hashes
+<br/>
+<br/>It's a one way encryption method, like CRC or MD5. 
+<br/>once the hash is created it can't be reversed. 
+<br/>
+<br/>If person A wanted to know person B's rating, he would generate a hash of person B using some known user information (ip, nick, connection speed, etc...). 
+<br/>
+<br/>for this example well say the result is <strong class="text-strong">1234ABC</strong>
+<br/>
+<br/>The user askes the server what the rating for <strong class="text-strong">1234ABC</strong>is 
+<br/>The server returns the rating cooresponding to the user 
+<br/>
+<br/>The same goes for filenames that are uploaded by the users.
+<br/>hash of filename = <strong class="text-strong">234jhgjh2k3j4</strong>
+<br/>
+<br/>pretty useless information if you were looking at the tables of data trying to figure out who user <strong class="text-strong">1234ABC</strong> is, that uploaded file <strong class="text-strong">234jhgjh2k3j4</strong></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p5843">
+<div class="inner">
+<dl class="postprofile" id="profile5843">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content5843">
+<h3><a href="#p5843"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-03-01 04:29
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>We do need to specify some way to identify people, though (such as the client returning a list with the servers it is subscribed to and what usernames it has there, or just decide to return one).</div></blockquote>
+<br/>
+<br/>Well the major problem with this is that ratings should only be considered if they are from the same server (or a trusted one), or else a user could set up his own fake ratings server. The Advogato stuff could be used in the scope of measuring trust of external ratings servers, and therefore external ratings. This might be overly complicated, though. At the same time, perhaps it would allow some higher level features that would make it all in all worthwhile.
+<br/>
+<br/>And NoFiX, these days it seems like it just might be that simple. But that's not the point at all, the point is that there is nothing illegal about transferring information, which is the ONLY thing that the rating indicates. 
+<br/>
+<br/>Mo, hashing isn't useful here at all. The ratings server will never know anything about what content's being transferred, so it will never have any information to hide.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6055">
+<div class="inner">
+<dl class="postprofile" id="profile6055">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 382</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-24 10:43</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6055">
+<h3><a href="#p6055"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=606">sarf</a></strong> » </span>2003-03-03 17:08
+			</p>
+<div class="content"><blockquote><div><cite>volkris wrote:</cite>Well the major problem with this is that ratings should only be considered if they are from the same server (or a trusted one), or else a user could set up his own fake ratings server. The Advogato stuff could be used in the scope of measuring trust of external ratings servers, and therefore external ratings. This might be overly complicated, though. At the same time, perhaps it would allow some higher level features that would make it all in all worthwhile.</div></blockquote>
+<br/>Yes. This is not something easily fixed, though. Hmm... have to think about different ways of handling fake servers, too (argh!).
+<br/>
+<br/>Sarf
+<br/>---
+<br/>The next person to pass us will die within a fortnight.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6125">
+<div class="inner">
+<dl class="postprofile" id="profile6125">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6125">
+<h3><a href="#p6125"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-03-04 03:29
+			</p>
+<div class="content"><blockquote><div><cite>sarf wrote:</cite>Yes. This is not something easily fixed, though. Hmm... have to think about different ways of handling fake servers, too (argh!).</div></blockquote>
+<br/>
+<br/>It might not be easily fixed, but it's not a huge problem in the first place.
+<br/>
+<br/>Being able to trust ratings from other servers would really only add, not being able to wouldn't detract too much. 
+<br/>
+<br/>One thing to note is that without considering ratings from other servers there will be much more of a sense of hub loyalty. Many people out there would actually support this and think it's better anyway.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p6126">
+<div class="inner">
+<dl class="postprofile" id="profile6126">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 81</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-06 16:20</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ohio</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6126">
+<h3><a href="#p6126"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1037">mo</a></strong> » </span>2003-03-04 04:04
+			</p>
+<div class="content"><blockquote><div><cite>volkris wrote:</cite>One thing to note is that without considering ratings from other servers there will be much more of a sense of hub loyalty. Many people out there would actually support this and think it's better anyway.</div></blockquote>
+<br/>I like the idea</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p6234">
+<div class="inner">
+<dl class="postprofile" id="profile6234">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1136">Sapporo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-10 04:10</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> AZ, USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content6234">
+<h3><a href="#p6234"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1136">Sapporo</a></strong> » </span>2003-03-04 23:52
+			</p>
+<div class="content"><blockquote><div><cite>volkris wrote:</cite>One thing to note is that without considering ratings from other servers there will be much more of a sense of hub loyalty. Many people out there would actually support this and think it's better anyway.</div></blockquote>
+<br/>
+<br/>Joining the Hub-centric camp now eh? lol</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12083">
+<div class="inner">
+<dl class="postprofile" id="profile12083">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12083">
+<h3><a href="#p12083"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-21 14:00
+			</p>
+<div class="content"><blockquote><div><cite>Sapporo wrote:</cite>Joining the Hub-centric camp now eh? lol</div></blockquote>
+<br/>
+<br/>Hub centricity (ha) has its place.
+<br/>For example, people gathering together in specific hubs to share similar information helps others find that information better. It's a definate method of ad-hoc routing that begins to approach the distributed dc++ goal others have expressed.
+<br/>
+<br/>That's not even to mention the social side of things.
+<br/>
+<br/>But this is all talking about the hub as the group including the actual hub and the clients connected to it. Being hub centric in terms of the actual server process leads to problems that DC++ is now overcoming.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p12155">
+<div class="inner">
+<dl class="postprofile" id="profile12155">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1136">Sapporo</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 36</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-10 04:10</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> AZ, USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12155">
+<h3><a href="#p12155"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1136">Sapporo</a></strong> » </span>2003-04-21 22:53
+			</p>
+<div class="content">Damn, have you been gone on vacation this whole time or something? lol</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p12158">
+<div class="inner">
+<dl class="postprofile" id="profile12158">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 121</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-02 23:07</dd>
+</dl>
+<div class="postbody">
+<div id="post_content12158">
+<h3><a href="#p12158"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=920">volkris</a></strong> » </span>2003-04-21 23:17
+			</p>
+<div class="content"><blockquote><div><cite>Sapporo wrote:</cite>Damn, have you been gone on vacation this whole time or something? lol</div></blockquote>
+<br/>
+<br/>Ha, you know how it is.
+<br/>Occasionally you look at the unconquerable pile of work in front of you and just get to thinking, "Gee, I wonder how my ol friends in DC++ forums are doing. I'll go ahead and set myself up for assured failure by spending hours in there checking."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p40655">
+<div class="inner">
+<dl class="postprofile" id="profile40655">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16956">[TVS]Dulf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-19 17:22</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40655">
+<h3><a href="#p40655"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16956">[TVS]Dulf</a></strong> » </span>2004-01-19 18:38
+			</p>
+<div class="content">Sorry for butting in as a newby, so long after the last update on this post, but I may have an idea on this..
+<br/>
+<br/><blockquote class="uncited"><div>What is to stop users from saying "If you let me download from you I'll credit you with double the upload points"? </div></blockquote>
+<br/>
+<br/>How about a quasi-central system (per hub or per hub-network or something) where you can earn points for being a nice guy (using the reporting feature you guys will implement) AND where you have the ability to offer a certain amount of your points to the user you want to DL from. This can be easily atomated on the uploading side (he who offers the most points/MB gets the next open slot first), and requires only a small amount of extra work on the downloading side (offer x points for a download) which most ppl will gladly do if it helps them get a file faster.
+<br/>
+<br/>now ppl that share good stuff will be offered lots of points for their stuff, in turn, they'll have lots of extra points for "buying" a download, and thats their reward for being a nice guy.
+<br/>
+<br/>A user that is new to a hub (or to that rating server) first has to earn points by sharing good stuff, or having a decent upload rate, before he can spend points on "cutting in line"
+<br/>
+<br/>just my two cents</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p40688">
+<div class="inner">
+<dl class="postprofile" id="profile40688">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40688">
+<h3><a href="#p40688"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-01-20 01:24
+			</p>
+<div class="content"><blockquote><div><cite>[TVS]Dulf wrote:</cite>Sorry for butting in as a newbie, so long after the last update on this post, but I may have an idea on this..</div></blockquote><br/>Don't bother thinking twice about it.<br/><br/><blockquote class="uncited"><div>This can be easily atomated on the uploading side (he who offers the most points/MB gets the next open slot first), and requires only a small amount of extra work on the downloading side (offer x points for a download) which most ppl will gladly do if it helps them get a file faster.</div></blockquote>
+<br/>
+<br/>Novel idea.  For me, it feels like that system would allow rich/old users to easily muscle out new users.  If I came into such a system, it would probably feel quite daunting.  That might be a bad initial reaction though. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>You could probably tune the "exchange rate" so that old users couldn't afford to use it all the time (and still build up a stockpile of points).
+<br/>
+<br/>The manual portions of your suggestion might play badly to DC++'s strong points: global users.  If you want, say, a particular piece of music to download overnight, you could get outbid by someone in a different timezone who's still awake.
+<br/>
+<br/>Also, is there any risk of either uploaders (or downloaders) "ripping off" the system somehow?
+<br/>
+<br/>Some of these points may be more broadly applicable, it has been a while since I last posted here.
+<br/>
+<br/>On a smaller scale, it looks like eMule's <a class="postlink" href="http://www.emule-project.net/home/perl/help.cgi?l=1&amp;rm=show_topic&amp;topic_id=135">secure user identification</a> might make per-client ratings/karma/ratios more possible without abuse.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p41276">
+<div class="inner">
+<dl class="postprofile" id="profile41276">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16956">[TVS]Dulf</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-19 17:22</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41276">
+<h3><a href="#p41276"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16956">[TVS]Dulf</a></strong> » </span>2004-01-25 21:37
+			</p>
+<div class="content">The security agains ripping off would mean something like: 
+<br/>A tells ratingserver "I just uploaded 10MB of this great new movie to B, for which B offered x points per 10MB, please give me x points from B"
+<br/>rating server asks B: "that true?" B could say:
+<br/>- yes thats true! all's well, A gets x point from B, next 10 MB
+<br/>- no, not true: 2 possibilities:
+<br/>- - It actually is true, but B cheats: server informs A, A terminates upload
+<br/>- - It really isnt true, A made a mistake/tries to cheat, A terminates upload (or not if he's in a giving mood)
+<br/>
+<br/>if halfway DLing the great movie the connection breaks, only points for 10 MB are not transferred, "most" of the points agreed upon are still transferred</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p41594">
+<div class="inner">
+<dl class="postprofile" id="profile41594">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 186</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-05 15:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41594">
+<h3><a href="#p41594"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=93">sandos</a></strong> » </span>2004-01-29 16:25
+			</p>
+<div class="content">Im just dumping some thoughts I had about ratings the other day here, and Im not replying to anyone in particular.
+<br/>
+<br/>I was basically thinking of non-centralised ratings, and the problem with trust. You can basically never trust other peers 100%, and this makes it bad to let trust propagate too much. This means, you cant send out any rating that youve based on anything other than youre own experiences. 
+<br/>
+<br/>The idea here is a simple client-2-client protocol that has the ability to lookup what a client thinks about any another client, and this will of course mostly return unknown. This way a client that wants to know a rating for a client can ask arbitrarily about it in the hub, and it CAN apply a chain-of-trust type algorithm to the received ratings if it wants to, BUT it may never return such mangled, un-safe ratings to any other asking client.
+<br/>
+<br/>This doesnt apply to a central repo of trust, but Im starting to like that idea less and less.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p41643">
+<div class="inner">
+<dl class="postprofile" id="profile41643">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15306">IntraDream</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-12 19:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> FL,USA</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41643">
+<h3><a href="#p41643"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=15306">IntraDream</a></strong> » </span>2004-01-30 03:35
+			</p>
+<div class="content">The idea of rating is IMO not very good, because as we all know the servers only know what we tell them. say u have 2 ip address's all of a sudden the rating system is out the door when u stick a fake client on both and notify the server u just uploaded 500 mb file from one and downloaded a 500 mb file from another. how long did it take for 90% of kazaa users to have 1000 superuser or whatever there gay system was after the implemented it. im not saying its a bad idea just its a bit of a dream its much like thinking of a way to make shared files hidden from the riaa. imposible unless u screen/trust every user.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p41791">
+<div class="inner">
+<dl class="postprofile" id="profile41791">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content41791">
+<h3><a href="#p41791"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-01-31 22:26
+			</p>
+<div class="content">1. IP addresses do not have to be the basis of your karma identity - see <a class="postlink" href="http://www.emule-project.net/home/perl/help.cgi?l=1&amp;rm=show_topic&amp;topic_id=135">eMule's secure user ID</a>
+<br/>2. Kazaa's ratings were stored locally, and broadcast locally when sending search results (from what I've seen).  It is a mockery of how a good system would be implemented.
+<br/>
+<br/>I think client-side is the best way to go, if it does get coded.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			85 posts
+							<ul>
+<li class="arrow previous"><a class="button button-icon-only" href="/dcpp_forums/viewtopic.php?f=6&amp;t=776" rel="prev" role="button"><i aria-hidden="true" class="icon fa-chevron-left fa-fw"></i><span class="sr-only">Previous</span></a></li>
+<li><a class="button" href="/dcpp_forums/viewtopic.php?f=6&amp;t=776" role="button">1</a></li>
+<li class="active"><span>2</span></li>
+</ul>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

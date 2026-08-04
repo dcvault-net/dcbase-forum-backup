@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>UDP Spoofing - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=4960">UDP Spoofing</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			17 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p26652">
+<div class="inner">
+<dl class="postprofile" id="profile26652">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 8</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-18 07:48</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26652">
+<h3 class="first"><a href="#p26652">UDP Spoofing</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a></strong> » </span>2003-08-27 11:03
+			</p>
+<div class="content">What about implementing UDP uploading into DC++? It would ensure the senders anonymity and that would leave the RIAA helpless in finding file sharers.
+<br/>
+<br/>UPD upploding would work much the same as file upploading works today, but instead of using sockets you'll use UDP datagrams that contain the pieces of the file contents. And you would spoof the datagrams with an invalid and random sender adress, they will reach their destination but the receiver would only see the false sender adress. The first problem with this how do one assert that all datagrams are delivered? Well, you have to number the datagrams and the receiver will calculate how many there should be (based on the file size) and request resends of missing datagrams through a private message to the sender via the hub.
+<br/>
+<br/>That's it... it's just to implement <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26687">
+<div class="inner">
+<dl class="postprofile" id="profile26687">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26687">
+<h3><a href="#p26687"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2003-08-27 19:58
+			</p>
+<div class="content"><img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/> UDP was not designed for sequenced guaranteed delivery. That is what TCP is for. You seem to want to be reinvent a particularly complicated wheel.
+<br/>
+<br/>UDP is a connectionless, unreliable, unordered datagram service.
+<br/>
+<br/>If I am the UDP sender, how do I:
+<br/><ul><li>Know whether the dest has received any of the packets I sent? UDP has no acknowledgement mechanism so I may be wasting time sending data into a black hole.</li><li>Know whether I am flooding the receiver? eg I am a 100Mb link and receiver is a 56k modem. Again, no ack mechanism and no flow control.</li></ul><br/>If I am the UDP receiver, how do I:<br/><ul><li>Know what sequence the packets are in? UDP does not have sequence numbers.</li><li>Request the re-sending of a packet? Again, no sequence numbers.</li><li>Store the data while awaiting packets? Assuming there were sequence numbers and I had all packets from 0 to 9999 except packet 3, where would I store this while I awaited the errant packet? In memory? On disk?</li></ul>
+<br/>
+<br/>There are more things, but I think I have made my point (I hope!) There is a reason why TCP exists.</div>
+<div class="signature" id="sig26687">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p26719">
+<div class="inner">
+<dl class="postprofile" id="profile26719">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 8</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-18 07:48</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26719">
+<h3><a href="#p26719"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a></strong> » </span>2003-08-28 07:38
+			</p>
+<div class="content"><blockquote><div><cite>TheParanoidOne wrote:</cite>:( UDP was not designed for sequenced guaranteed delivery. That is what TCP is for. You seem to want to be reinvent a particularly complicated wheel.<br/><br/>UDP is a connectionless, unreliable, unordered datagram service.</div></blockquote><br/><br/>Well it's not that unreliable as you might think, NFS (Network File System) is actually using UDP.<br/><br/><blockquote><div><cite>TheParanoidOne wrote:</cite>If I am the UDP sender, how do I:<br/><ul><li>Know whether the dest has received any of the packets I sent? UDP has no acknowledgement mechanism so I may be wasting time sending data into a black hole.</li><li>Know whether I am flooding the receiver? eg I am a 100Mb link and receiver is a 56k modem. Again, no ack mechanism and no flow control.</li></ul></div></blockquote><br/><br/><ul><li> Why would the sender want to know that? It's more important for the receiver to make sure all packages arrive.</li><li>Don't know actually...</li></ul><br/><blockquote><div><cite>TheParanoidOne wrote:</cite>If I am the UDP receiver, how do I:<br/><ul><li>Know what sequence the packets are in? UDP does not have sequence numbers.</li><li>Request the re-sending of a packet? Again, no sequence numbers.</li><li>Store the data while awaiting packets? Assuming there were sequence numbers and I had all packets from 0 to 9999 except packet 3, where would I store this while I awaited the errant packet? In memory? On disk?</li></ul></div></blockquote><br/><br/><ul><li>That's easy, you just give the datagrams sequence numbers. UPD doesn't have to support sequencing to do this. It's in the data.</li><li>Requesting is as I've stated done through the hub, you don't even have to change the protocol.</li><li>In memory and/or on this would work nicelly.</li></ul><br/><blockquote><div><cite>TheParanoidOne wrote:</cite>There are more things, but I think I have made my point (I hope!) There is a reason why TCP exists.</div></blockquote>
+<br/>
+<br/>Sorry but you haven't made any point since there exists filetransfering UDP solutions today and as I said NFS is a old and reliable UDP implementation used today.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26720">
+<div class="inner">
+<dl class="postprofile" id="profile26720">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26720">
+<h3><a href="#p26720"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-08-28 08:27
+			</p>
+<div class="content">Whilst all of TCP's flow control and reliability features can be implemented over a UDP substrate, they would seem to require interaction between the two clients. Spoofing one's source address makes such things significantly more difficult, in particular.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p26732">
+<div class="inner">
+<dl class="postprofile" id="profile26732">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 275</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-08 02:41</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Quebec</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26732">
+<h3><a href="#p26732"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a></strong> » </span>2003-08-28 12:29
+			</p>
+<div class="content">here what's cologic mean.
+<br/>
+<br/><blockquote class="uncited"><div>The Trivial File Transfer Protocol TFTP is defined in RFC-783 [TFTP:1]. <br/><br/>TFTP provides its own reliable delivery with UDP as its transport protocol, <span style="text-decoration: underline">using a simple stop-and-wait acknowledgment system</span>. Since TFTP has an effective window of only one 512 octet segment, it can provide good performance only over paths that have a small delay*bandwidth product. The TFTP file interface is very simple, <span style="text-decoration: underline">providing no access control or security</span></div></blockquote>.
+<br/>
+<br/>note the underline, need acknowledment and no control or security.
+<br/>there is better way to hide and IP other then spoofing.
+<br/>but has i sayed before, impliment it and DC won't be call DC anymore. <img alt=":wink:" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/></div>
+<div class="signature" id="sig26732">TheNOP
+<br/>
+<br/>Have you read the <a class="postlink" href="http://dcplusplus.sourceforge.net/faq/faq.php?list=all&amp;prog=1&amp;lang=en&amp;onlynewfaq=1">FAQ</a>?
+<br/>Or the sticky ? It might give you idea.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26743">
+<div class="inner">
+<dl class="postprofile" id="profile26743">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 8</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-18 07:48</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26743">
+<h3><a href="#p26743"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a></strong> » </span>2003-08-28 15:18
+			</p>
+<div class="content"><blockquote><div><cite>TheNOP wrote:</cite>there is better way to hide and IP other then spoofing.<br/></div></blockquote>
+<br/>Ok, how then? via a proxy is the only other solution I can think of... and that is not so good since the proxy becomes a bottleneck.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p26773">
+<div class="inner">
+<dl class="postprofile" id="profile26773">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 275</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-08 02:41</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Quebec</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26773">
+<h3><a href="#p26773"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a></strong> » </span>2003-08-28 23:20
+			</p>
+<div class="content"><blockquote><div><cite>toad wrote:</cite>Ok, how then? </div></blockquote>
+<br/>
+<br/>proxy is one, but could potentialy shift the treat from users to the proxy owner if not impliment correctly.
+<br/>and other one is <span style="font-size: 59%; line-height: 116%;">freenet</span> witch is acting like a delaying proxy.
+<br/>any ways to get a dout in a jury's minds can be thinks of, like 1 out of 3 transfers would be direct, the others by some one else could work.
+<br/>
+<br/>DC is DC, the others ways will be call ??? and will proly not use the DC protocol at all.</div>
+<div class="signature" id="sig26773">TheNOP
+<br/>
+<br/>Have you read the <a class="postlink" href="http://dcplusplus.sourceforge.net/faq/faq.php?list=all&amp;prog=1&amp;lang=en&amp;onlynewfaq=1">FAQ</a>?
+<br/>Or the sticky ? It might give you idea.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26796">
+<div class="inner">
+<dl class="postprofile" id="profile26796">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 8</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-18 07:48</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26796">
+<h3><a href="#p26796"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a></strong> » </span>2003-08-29 07:20
+			</p>
+<div class="content"><blockquote><div><cite>TheNOP wrote:</cite>DC is DC, the others ways will be call ??? and will proly not use the DC protocol at all.</div></blockquote>
+<br/>
+<br/>Precisely, the only way to protect DC from RIAA is to use UDP Spoofing since that is feasable within the existing protocol hence with a minor extension.
+<br/>
+<br/><em class="text-italics">(Edit: Fixed your quote tag -GMT)</em></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p26799">
+<div class="inner">
+<dl class="postprofile" id="profile26799">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26799">
+<h3><a href="#p26799"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-08-29 10:22
+			</p>
+<div class="content">Respond to my previous post, please. I could restate it all, but... Not worth it yet, because you haven't even tried to respond to it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26807">
+<div class="inner">
+<dl class="postprofile" id="profile26807">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 8</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-18 07:48</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26807">
+<h3><a href="#p26807"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1394">toad</a></strong> » </span>2003-08-29 13:59
+			</p>
+<div class="content"><blockquote><div><cite>cologic wrote:</cite>Respond to my previous post, please. I could restate it all, but... Not worth it yet, because you haven't even tried to respond to it.</div></blockquote>
+<br/>
+<br/>Huh!? there's nothing to respond to other than that you're right in that control and reliabilty can be built into a UDP Protocol, but you're wrong when you state that it needs the interaction between two parties. If you add a third party to the mix (a proxy, ie the hub), receiver doesn't have to know who the sender really is since the hub is relaying control messages like missing datagrams and stuff.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p26809">
+<div class="inner">
+<dl class="postprofile" id="profile26809">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a> </dt>
+<dd class="profile-rank">Programmer</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 337</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-06 18:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26809">
+<h3><a href="#p26809"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=165">cologic</a></strong> » </span>2003-08-29 14:08
+			</p>
+<div class="content">... (probably) noticeably increasing bandwidth demands on the hub, but I guess that's something that can be measured and which you may find a suitable tradeoff.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26864">
+<div class="inner">
+<dl class="postprofile" id="profile26864">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 275</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-08 02:41</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Quebec</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26864">
+<h3><a href="#p26864"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a></strong> » </span>2003-08-30 03:52
+			</p>
+<div class="content">toad 
+<br/>
+<br/>do you understand that by trying to make DC an anonymous client, DC will loose all the features we like in it ?
+<br/>
+<br/>if you're so concern about anonymity, try the other solutions, they already exist, then you will see what's are the tradeoffs.
+<br/>
+<br/>then post about it again if you want that to appen to DC.
+<br/>
+<br/>i, myself, think the tradeoff are to big to worth it.
+<br/>just switching network is simpler and would be faster to do than wait for DC to be anonymous.</div>
+<div class="signature" id="sig26864">TheNOP
+<br/>
+<br/>Have you read the <a class="postlink" href="http://dcplusplus.sourceforge.net/faq/faq.php?list=all&amp;prog=1&amp;lang=en&amp;onlynewfaq=1">FAQ</a>?
+<br/>Or the sticky ? It might give you idea.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p26865">
+<div class="inner">
+<dl class="postprofile" id="profile26865">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 275</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-08 02:41</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Quebec</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26865">
+<h3><a href="#p26865"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a></strong> » </span>2003-08-30 04:08
+			</p>
+<div class="content"><blockquote class="uncited"><div>the only way to protect DC from RIAA is to use UDP Spoofing </div></blockquote>
+<br/>
+<br/>1 you don't have to DC, DC can be a legit P2P network, if use to transfer only none copyrighted material.
+<br/>2 they can't stop DC development since it is opensource.
+<br/>who will they drag to court the courriers that post the source on internet ?
+<br/>hell it can also be post on anonymous network to spread it.</div>
+<div class="signature" id="sig26865">TheNOP
+<br/>
+<br/>Have you read the <a class="postlink" href="http://dcplusplus.sourceforge.net/faq/faq.php?list=all&amp;prog=1&amp;lang=en&amp;onlynewfaq=1">FAQ</a>?
+<br/>Or the sticky ? It might give you idea.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26880">
+<div class="inner">
+<dl class="postprofile" id="profile26880">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 506</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-03 12:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26880">
+<h3><a href="#p26880"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9">ivulfusbar</a></strong> » </span>2003-08-30 06:30
+			</p>
+<div class="content">a small comment, well? ofcourse opensource projects can be dragge dinto court.</div>
+<div class="signature" id="sig26880">Everyone is supposed to download from the hubs, - I don´t know why, but I never do anymore.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p26902">
+<div class="inner">
+<dl class="postprofile" id="profile26902">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 275</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-08 02:41</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Quebec</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26902">
+<h3><a href="#p26902"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9184">TheNOP</a></strong> » </span>2003-08-30 17:00
+			</p>
+<div class="content"><blockquote><div><cite>ivulfusbar wrote:</cite>a small comment, well? ofcourse opensource projects can be dragge dinto court.</div></blockquote>
+<br/>official maintainner, probably yes.
+<br/>if court can prove that DC is a "bad app" (read geared to transfer copyrighted materials only).
+<br/>after all it is how/what you use it for that can cause you problems with riaa, not DC itself.</div>
+<div class="signature" id="sig26902">TheNOP
+<br/>
+<br/>Have you read the <a class="postlink" href="http://dcplusplus.sourceforge.net/faq/faq.php?list=all&amp;prog=1&amp;lang=en&amp;onlynewfaq=1">FAQ</a>?
+<br/>Or the sticky ? It might give you idea.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26978">
+<div class="inner">
+<dl class="postprofile" id="profile26978">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26978">
+<h3><a href="#p26978"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-08-31 15:28
+			</p>
+<div class="content"><blockquote><div><cite>ivulfusbar wrote:</cite>a small comment, well? ofcourse opensource projects can be dragged into court.</div></blockquote>
+<br/>
+<br/>Witness Xmule.
+<br/>
+<br/><!-- m --><a class="postlink" href="http://xmule.org/">http://xmule.org/</a><!-- m -->
+<br/><!-- m --><a class="postlink" href="http://yro.slashdot.org/article.pl?sid=03/08/21/1333258">http://yro.slashdot.org/article.pl?sid=03/08/21/1333258</a><!-- m --></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p28599">
+<div class="inner">
+<dl class="postprofile" id="profile28599">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=11673">takeda</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-09-18 23:52</dd>
+</dl>
+<div class="postbody">
+<div id="post_content28599">
+<h3><a href="#p28599"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=11673">takeda</a></strong> » </span>2003-09-19 03:52
+			</p>
+<div class="content"><blockquote><div><cite>toad wrote:</cite>Well it's not that unreliable as you might think, NFS (Network File System) is actually using UDP.<br/></div></blockquote><br/><br/>The difference is that NFS doesn't spoof source address, without knowing who is sending there won't be way to control transfer, what about:<br/>- resending bad chunks<br/>- controlling amount and speed of sending data (ICMP)<br/><br/>I know that you could send that information through server but it will be waste of resources on server (mostly bandwidth)<br/>Not to mention that some ISPs block spoofed packets<br/><br/><blockquote class="uncited"><div><ul><li> Why would the sender want to know that? It's more important for the receiver to make sure all packages arrive.</li><li>Don't know actually...</li></ul></div></blockquote><br/>It will be waste of bandwidth if we send a lot of informations for nothing.<br/><br/><blockquote class="uncited"><div>Sorry but you haven't made any point since there exists filetransfering UDP solutions today and as I said NFS is a old and reliable UDP implementation used today.</div></blockquote>
+<br/>
+<br/>Do you know why newer version of NFS allow to use TCP?
+<br/>Why FTP uses TCP instead going after footsteps of TFTP
+<br/>
+<br/>Basically TCP and UDP have different purposes:
+<br/>- tcp is to realiable transfer data (files and other informations that shouldn't be corrupted.
+<br/>- udp is faster because it doesn't use ACKs, it's good for streaming, if you listen to radiostation when data is corrupted you only hear a noise but you still can continue.
+<br/>
+<br/>TFTP and older versions of NFS uses UDP, but they, re still using acknowledges.
+<br/>
+<br/>I think IPv6 could bring some help with p2p, I'm not very deep in that topic but won't it allow to use multicast by regular users?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			17 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

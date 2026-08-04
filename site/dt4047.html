@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>clocking your download speed before file transfers - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=4047">clocking your download speed before file transfers</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			19 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p21595">
+<div class="inner">
+<dl class="postprofile" id="profile21595">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9222">wing-wang</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-08 21:23</dd>
+</dl>
+<div class="postbody">
+<div id="post_content21595">
+<h3 class="first"><a href="#p21595">clocking your download speed before file transfers</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9222">wing-wang</a></strong> » </span>2003-07-09 20:46
+			</p>
+<div class="content">A good feature (in my mind) to add would be some sort of way to clock your transfer rate from clients before downloading.  I've ran into this almost 80% of the time i try to dl something; mr i have a dual t3 and 6/6 open slots gives me 456b/s when mr waaaa i have a 28.8kbps dial up gives me 3k/s.. and then some random dude with 768x128 adsl gives me 20k/s but other mr dude with same 6/6 open slots and con. gives me 3b/s, then there's all this talk about cable being the 'l337' way to go.. right.. i have yet to find anyone with a good cable connection(assuming that's what they really have).... it'll take me 5days4hours blah blah blah to finish a 3mb file, but i just found this out after spending 20 minutes looking at their list queing up all sorts of stuff to find... the booty transfer rate of death!%$!#% ahhhhhhh... derp! If that isn't bad enough, i/we then have to find more sources (that may not even have sfv's[bleh]) until finally someone comes up with a somewhat decent transfer rate.(which takes awhile for some reason) If there was a way to add a command to check transfer rates it would save myself and others (i'm sure) a lot of time queueing up 10 gigs to find mr i supposedly have t1 really only has a 14.4.  thanks for your time, consideration and trying to take over the irc crowd (i've been waiting for something worthy enough to replace it) to ensure that things still remain free. keep up the tedious coding.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p21596">
+<div class="inner">
+<dl class="postprofile" id="profile21596">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=580">qqzm</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 47</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 12:08</dd>
+</dl>
+<div class="postbody">
+<div id="post_content21596">
+<h3><a href="#p21596"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=580">qqzm</a></strong> » </span>2003-07-09 20:53
+			</p>
+<div class="content">And the Oscar for longest sentence ever goes to....wing-wang!
+<br/>
+<br/>
+<br/>How exactly do you suppose the client calculates the trasfer rate <em class="text-italics">before</em> it starts the transfer? This won't be possible to implement until those new psychic routers are available that Cisco are working on...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p21602">
+<div class="inner">
+<dl class="postprofile" id="profile21602">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content21602">
+<h3><a href="#p21602"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2003-07-09 22:46
+			</p>
+<div class="content">The only part of that post that is a feature request is the first sentence. The rest just seems to be some sort of rant. <img alt=":shock:" class="smilies" src="/images/smilies/icon_eek.gif" title="Shocked"/>
+<br/>
+<br/>I seem to remember something like this being discussed recently but I can't remember an which thread it was in. I suggest you search for it, as there has already been a discussion on the pros and cons of this.</div>
+<div class="signature" id="sig21602">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p21603">
+<div class="inner">
+<dl class="postprofile" id="profile21603">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content21603">
+<h3><a href="#p21603"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-09 23:41
+			</p>
+<div class="content">Yup, there are at least two <strong class="text-strong">real</strong> possible solutions to the <em class="text-italics">"problem"</em> that downloading from person A isn't as fast as downloading from person B:
+<br/>
+<br/><ul>Multisource Downloading<br/>Dropping sources below a certain speed<br/>Rotating among alternate sources, and settling for the fastest (thread by Wisp - this is only a specialized case of the above)</ul>
+<br/>
+<br/>W00T W00T.  Keep the redundant feature requests coming! &lt;-- heh</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p21606">
+<div class="inner">
+<dl class="postprofile" id="profile21606">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9222">wing-wang</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-08 21:23</dd>
+</dl>
+<div class="postbody">
+<div id="post_content21606">
+<h3><a href="#p21606"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9222">wing-wang</a></strong> » </span>2003-07-09 23:50
+			</p>
+<div class="content">dude... i need to get me one of those psychic cisco routers</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p21608">
+<div class="inner">
+<dl class="postprofile" id="profile21608">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content21608">
+<h3><a href="#p21608"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-09 23:57
+			</p>
+<div class="content"><blockquote><div><cite>wing-wang wrote:</cite>dude... i need to get me one of those psychic cisco routers</div></blockquote>
+<br/>
+<br/>Now if only they would merge functionality with <a class="postlink" href="http://www.joltid.com/index.php/peercache/">PeerCache</a>...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p21939">
+<div class="inner">
+<dl class="postprofile" id="profile21939">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6265">dominyx</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-12 01:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content21939">
+<h3><a href="#p21939"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6265">dominyx</a></strong> » </span>2003-07-13 03:16
+			</p>
+<div class="content">The program already keeps track of the current up/download, why can't it just display that for each user? That might not be perfect, but it could give you a good picture of the real speed of their connection... just my two cents.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p22121">
+<div class="inner">
+<dl class="postprofile" id="profile22121">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 255</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-10 14:26</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> no-la-usa-earth</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22121">
+<h3><a href="#p22121"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a></strong> » </span>2003-07-14 12:15
+			</p>
+<div class="content"><blockquote class="uncited"><div>The program already keeps track of the current up/download, why can't it just display that for each user?</div></blockquote>
+<br/>
+<br/>You would want dc++ to send small transfers to each user and display it (If I understand you correctly).  
+<br/>
+<br/>This, I believe, would sacrifice too much bandwidth to justify the benefit...and it would make search results take MUCH longer to load.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22137">
+<div class="inner">
+<dl class="postprofile" id="profile22137">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22137">
+<h3><a href="#p22137"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2003-07-14 15:42
+			</p>
+<div class="content">dc could download a test-file of 300kb, then checks the time it took and calculate the transfer speed
+<br/>
+<br/>wouldn't this be an option?
+<br/>
+<br/>I mostly download the filelist to check the speed, but sometimes the filelist is too small to see it transferring</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p22142">
+<div class="inner">
+<dl class="postprofile" id="profile22142">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 255</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-10 14:26</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> no-la-usa-earth</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22142">
+<h3><a href="#p22142"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a></strong> » </span>2003-07-14 15:58
+			</p>
+<div class="content">One problem is that many times, depending on the upload and/or download connection types, the download could start fast and then drop off to almost nothing.  
+<br/>
+<br/>The method is not truthful.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22144">
+<div class="inner">
+<dl class="postprofile" id="profile22144">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22144">
+<h3><a href="#p22144"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2003-07-14 15:59
+			</p>
+<div class="content"><blockquote><div><cite>jbyrd wrote:</cite>One problem is that many times, depending on the upload and/or download connection types, the download could start fast and then drop off to almost nothing.  <br/><br/>The method is not truthful.</div></blockquote>dc could measure the average rate, and offcourse it's not 100% reliable, but it's better than nothing</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p22153">
+<div class="inner">
+<dl class="postprofile" id="profile22153">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 255</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-10 14:26</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> no-la-usa-earth</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22153">
+<h3><a href="#p22153"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a></strong> » </span>2003-07-14 16:45
+			</p>
+<div class="content">A feature that is not reliable and misleading won't be included in the main dc++ code.  Your best chance is one of the modded ones. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22159">
+<div class="inner">
+<dl class="postprofile" id="profile22159">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 218</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 15:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22159">
+<h3><a href="#p22159"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3206">Wisp</a></strong> » </span>2003-07-14 16:59
+			</p>
+<div class="content"><blockquote><div><cite>jbyrd wrote:</cite>A feature that is not reliable and misleading won't be included in the main dc++ code.  Your best chance is one of the modded ones. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div></blockquote>the option "Maximum download speed to start new downloads" is also not 100% reliable, but it's still added in DC</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p22216">
+<div class="inner">
+<dl class="postprofile" id="profile22216">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6265">dominyx</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-12 01:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22216">
+<h3><a href="#p22216"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6265">dominyx</a></strong> » </span>2003-07-15 05:19
+			</p>
+<div class="content">Hmm, that was not what I was getting at. When your running DC, it displays your current upload and download on the statusbar. I'm not sure how the DC server works, but perhaps the server could update a list of the current up/down every 20-30 minutes from every user. I don't know, just kicking ideas around...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22276">
+<div class="inner">
+<dl class="postprofile" id="profile22276">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 255</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-10 14:26</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> no-la-usa-earth</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22276">
+<h3><a href="#p22276"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a></strong> » </span>2003-07-15 13:53
+			</p>
+<div class="content">The actual amount that each user has uploaded/downloaded? Or the speed?  The download statistics wouldn't benefit anyone.
+<br/>Again, the upload statistics would use bandwidth.  
+<br/>
+<br/>You may want to bring it up in the DCH++ forum.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p22285">
+<div class="inner">
+<dl class="postprofile" id="profile22285">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6265">dominyx</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 4</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-12 01:33</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22285">
+<h3><a href="#p22285"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6265">dominyx</a></strong> » </span>2003-07-15 15:17
+			</p>
+<div class="content">Yeah, I don't know what I was thinking about the downloads. But I don't see why the bandwidth would be such a problem, if the speed is only updated every 30 minutes or so. It can't be that difficult to append the filelist with some short speed statistics...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22287">
+<div class="inner">
+<dl class="postprofile" id="profile22287">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4385">SirPlus</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 11</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-12 18:41</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Australia</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22287">
+<h3><a href="#p22287"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4385">SirPlus</a></strong> » </span>2003-07-15 15:26
+			</p>
+<div class="content">Are we making it too complicated?
+<br/>
+<br/>How about  a much more simple solution
+<br/>
+<br/>If we have multiple sources and we are not happy with the current one then we double click on the unsatisfatory download and it goes to the next source. It could even try the next one and so on back to the first if the new one is one is below the speed of the first.
+<br/>
+<br/>There could be an timer delay of say 2 minutes minimum on the one source to allow it to settle down again and stop everyone from becomming too click happy. It could stop once it found something -say 50% (or more) better. If this process were manually initiated I don't think it would bog things down too much. 
+<br/>
+<br/>I know if you had this working on more than 5 sources and it took more than 10 minutes to get back to the first that you might have to wait for the source again but that would be a considered risk you would balance against being impatient. Perhaps if you double clicked again it woiuld end the process and zap you back to the fastest connection discovered.
+<br/>
+<br/>It would also mean I might get my slot quicker if I were patient!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p22292">
+<div class="inner">
+<dl class="postprofile" id="profile22292">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 255</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-10 14:26</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> no-la-usa-earth</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22292">
+<h3><a href="#p22292"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6158">jbyrd</a></strong> » </span>2003-07-15 15:57
+			</p>
+<div class="content"><blockquote class="uncited"><div>It can't be that difficult to append the filelist with some short speed statistics...</div></blockquote>
+<br/>
+<br/>Just download the filelist...check in the finished download folder and it will tell you the average speed of the download.
+<br/>
+<br/>What I thought you were saying was displaying the upload speed in the search window.  By having to update every 30 minutes, in a hub with 1200 users, the increase may be appreciable.  If it were accurate, it may be worth it, but since it's not...it's not.
+<br/>
+<br/>If you want a fast upload speed, your best bet would be to find a user that reports a 56k connection.  Chances are he is running a T3 and no one is using his slots. <img alt=":mrgreen:" class="smilies" src="/images/smilies/icon_mrgreen.gif" title="Mr. Green"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p22843">
+<div class="inner">
+<dl class="postprofile" id="profile22843">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content22843">
+<h3><a href="#p22843"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-19 19:11
+			</p>
+<div class="content"><blockquote><div><cite>dominyx wrote:</cite>I'm not sure how the DC server works, but perhaps the server could update a list of the current up/down every 20-30 minutes from every user. I don't know, just kicking ideas around...</div></blockquote>
+<br/>
+<br/>The hubs don't know anything about transfers, nor speeds from user to user.
+<br/>
+<br/>Having them collect these statistics is not a sane idea.
+<br/>
+<br/>
+<br/><strong class="text-strong">Please, enough speculation about how to implement this (or any) feature, unless you're going to pick up a copy of Visual Studio and code it.</strong>
+<br/>
+<br/>You tell us how you want the feature to behave, and we tell you if it's possible or not.  That's how it's supposed to work.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			19 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

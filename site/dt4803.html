@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Quarter Hour Time Chime - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="26" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=26" itemprop="url"><span itemprop="title">Other</span></a></span>
+<span class="crumb" data-forum-id="8" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=8" itemprop="url"><span itemprop="title">Hubs and scripts</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=8&amp;t=4803">Quarter Hour Time Chime</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Which hub software is the best? Where can I find script XXX? Discuss it here...(no, this is not for advertising your hub...)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p25857">
+<div class="inner">
+<dl class="postprofile" id="profile25857">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 53</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-09 15:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Wilmington, NC</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25857">
+<h3 class="first"><a href="#p25857">Quarter Hour Time Chime</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a></strong> » </span>2003-08-18 05:07
+			</p>
+<div class="content">Inspired by the code to broadcast a text message on a regular interval, I decided to come up with a quarter hour time chime to let my hub's users know what time it was (at least on my machine, which is important because my reboot messages always are in my time.)  This is a VB script for NMDCH.
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>' Quarter Hour Chime v 1.0<br/>' by Lightning Man<br/>' from InfoBot by HaArD<br/>' with elements from Shadowtek<br/><br/>Dim sBotName, iMinutes, iStarter, sTime<br/><br/>Sub main() <br/>   sBotName = "Chime" <br/>   iMinutes = 15 ' This script is designed to run on the quarter hour.  <br/>   ' If you change this you must change all the iStarter calculations below<br/>   <br/>   tmrScriptTimer.interval = 60000<br/>   tmrScriptTimer.enabled = True<br/>   iStarter = minute(Now) ' This section synchs the timer with the quarter hour<br/>   If iStarter = 0 Then tmrScriptTimer.tag = 15<br/>   If 0 &lt; iStarter &lt; 16 Then tmrScriptTimer.tag = iStarter<br/>   If 15 &lt; iStarter &lt; 31 Then tmrScriptTimer.tag = iStarter - 15<br/>   If 30 &lt; iStarter &lt; 46 Then tmrScriptTimer.tag = iStarter - 30<br/>   If 45 &lt; iStarter &lt; 60 Then tmrScriptTimer.tag = iStarter - 45<br/><br/>   ' The two lines below are for debugging purposes and may be deleted if you wish<br/>   ' colUsers.SendChatToAll CStr(sBotName), "Initialized"<br/>   ' colUsers.SendChatToAll CStr(sBotName), cLng(tmrScriptTimer.tag)<br/>End Sub <br/><br/>Sub tmrScriptTimer_Timer() <br/>   If tmrScriptTimer.tag = "" Then <br/>      tmrScriptTimer.tag = "0" <br/>   End If <br/>   tmrScriptTimer.tag = clng(tmrScriptTimer.tag) + 1 <br/>   If clng(tmrScriptTimer.tag) =&gt; iMinutes Then<br/>      tmrScriptTimer.tag = "0"<br/>      sTime = FormatDateTime(Time, vbLongTime) <br/>      colUsers.SendChatToAll CStr(sBotName), cStr("Bong! It's "+sTime+" US Eastern Time.")<br/>      ' Change time zone info to that of your local machine.<br/>   End If <br/>End Sub</code></pre></div>Let me know if you like it or have problems with it.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25883">
+<div class="inner">
+<dl class="postprofile" id="profile25883">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 53</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-09 15:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Wilmington, NC</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25883">
+<h3><a href="#p25883"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a></strong> » </span>2003-08-18 13:18
+			</p>
+<div class="content">Darn it.  There is an initialization problem because I don't know the proper syntax to make the evaluation I want on one line.  Until I learn it, I believe this will solve the problem.<blockquote class="uncited"><div>' Quarter Hour Chime v 1.1 <br/>' by Lightning Man <br/>' from InfoBot by HaArD <br/>' with elements from Shadowtek <br/><br/>Dim sBotName, iMinutes, iStarter, sTime <br/><br/>Sub main() <br/>   sBotName = "Chime" <br/>   iMinutes = 15 ' This script is designed to run on the quarter hour.  <br/>   ' If you change this you must change all the iStarter calculations below <br/> <br/>   tmrScriptTimer.interval = 60000 <br/>   tmrScriptTimer.enabled = True <br/>   iStarter = minute(Now) ' This section synchs the timer with the quarter hour <br/>   If iStarter = 0 Then tmrScriptTimer.tag = 15 <br/>   If iStarter &gt; 0 Then<br/>      If iStarter &lt; 16 Then tmrScriptTimer.tag = iStarter<br/>   End If <br/>   If iStarter &gt; 15 Then<br/>      If iStarter &lt; 31 Then tmrScriptTimer.tag = iStarter - 15<br/>   End If <br/>   If iStarter &gt; 30 Then<br/>      If iStarter &lt; 46 Then tmrScriptTimer.tag = iStarter - 30<br/>   End If <br/>   If iStarter &gt; 45 Then tmrScriptTimer.tag = iStarter - 45 <br/><br/>   ' The two lines below are for debugging purposes and may be deleted if you wish <br/>   ' colUsers.SendChatToAll CStr(sBotName), "Initialized" <br/>   ' colUsers.SendChatToAll CStr(sBotName), cLng(tmrScriptTimer.tag) <br/>End Sub <br/><br/>Sub tmrScriptTimer_Timer() <br/>   If tmrScriptTimer.tag = "" Then <br/>      tmrScriptTimer.tag = "0" <br/>   End If <br/>   tmrScriptTimer.tag = clng(tmrScriptTimer.tag) + 1 <br/>   If clng(tmrScriptTimer.tag) =&gt; iMinutes Then <br/>      tmrScriptTimer.tag = "0" <br/>      sTime = FormatDateTime(Time, vbLongTime) <br/>      colUsers.SendChatToAll CStr(sBotName), cStr("Bong! It's "+sTime+" US Eastern Time.") <br/>      ' Change time zone info to that of your local machine. <br/>   End If <br/>End Sub</div></blockquote>There has to be a more elegant way to say if iStarter is between two constants than double If statements.  Any ideas?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25885">
+<div class="inner">
+<dl class="postprofile" id="profile25885">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 53</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-09 15:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Wilmington, NC</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25885">
+<h3><a href="#p25885"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a></strong> » </span>2003-08-18 13:19
+			</p>
+<div class="content">That should have been a code tag instead of a quote tag and I can't change it myself.  Sorry.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25897">
+<div class="inner">
+<dl class="postprofile" id="profile25897">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 53</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-09 15:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Wilmington, NC</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25897">
+<h3><a href="#p25897"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a></strong> » </span>2003-08-18 14:42
+			</p>
+<div class="content">This is <strong class="text-strong">NOT</strong> yet tested.  Iam going to try it at home later, based on standard vb (which this sometimes doesn't duplicate.)<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>' Quarter Hour Chime v 1.2 NOT YET TESTED <br/>' by Lightning Man <br/>' from InfoBot by HaArD <br/>' with elements from Shadowtek <br/><br/>Dim sBotName, iMinutes, iStarter, sTime <br/><br/>Sub main() <br/>sBotName = "Chime" <br/>iMinutes = 15 ' This script is designed to run on the quarter hour. <br/>' If you change this you must change all the iStarter calculations below <br/><br/>tmrScriptTimer.interval = 60000 <br/>tmrScriptTimer.enabled = True <br/>iStarter = minute(Now) ' This section synchs the timer with the quarter hour <br/>If iStarter = 0 Then tmrScriptTimer.tag = 15 <br/>If iStarter &gt; 0 AndAlso iStarter &lt; 16 Then tmrScriptTimer.tag = iStarter <br/>If iStarter &gt; 15 AndAlso iStarter &lt; 31 Then tmrScriptTimer.tag = iStarter - 15 <br/>If iStarter &gt; 30 AndAlso iStarter &lt; 46 Then tmrScriptTimer.tag = iStarter - 30<br/>If iStarter &gt; 45 Then tmrScriptTimer.tag = iStarter - 45 <br/><br/>' The two lines below are for debugging purposes and may be deleted if you wish <br/>' colUsers.SendChatToAll CStr(sBotName), "Initialized" <br/>' colUsers.SendChatToAll CStr(sBotName), cLng(tmrScriptTimer.tag) <br/>End Sub <br/><br/>Sub tmrScriptTimer_Timer() <br/>If tmrScriptTimer.tag = "" Then <br/>tmrScriptTimer.tag = "0" <br/>End If <br/>tmrScriptTimer.tag = clng(tmrScriptTimer.tag) + 1 <br/>If clng(tmrScriptTimer.tag) =&gt; iMinutes Then <br/>tmrScriptTimer.tag = "0" <br/>sTime = FormatDateTime(Time, vbLongTime) <br/>colUsers.SendChatToAll CStr(sBotName), cStr("Bong! It's "+sTime+" US Eastern Time.") <br/>' Change time zone info to that of your local machine. <br/>End If <br/>End Sub</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25940">
+<div class="inner">
+<dl class="postprofile" id="profile25940">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 53</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-09 15:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Wilmington, NC</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25940">
+<h3><a href="#p25940"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a></strong> » </span>2003-08-18 21:37
+			</p>
+<div class="content">What is the phrase?  Keep it Simple, Sweetheart?  Anyway, I learned something: just plain 'And' works fine.  Final 1.2 version, guaranteed to work (until I find out it doesn't.)<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>' Quarter Hour Chime v 1.2<br/>' by Lightning Man <br/>' from InfoBot by HaArD <br/>' with elements from Shadowtek <br/><br/>Dim sBotName, iMinutes, iStarter, sTime <br/><br/>Sub main() <br/>   sBotName = "Chime" <br/>   iMinutes = 15 ' This script is designed to run on the quarter hour. <br/>   ' If you change this you must change all the iStarter calculations below <br/><br/>   tmrScriptTimer.interval = 60000 <br/>   tmrScriptTimer.enabled = True <br/>   iStarter = minute(Now) ' This section synchs the timer with the quarter hour <br/>   If iStarter = 0 Then tmrScriptTimer.tag = 15 <br/>   If iStarter &gt; 0 And iStarter &lt; 16 Then tmrScriptTimer.tag = iStarter <br/>   If iStarter &gt; 15 And iStarter &lt; 31 Then tmrScriptTimer.tag = iStarter - 15 <br/>   If iStarter &gt; 30 And iStarter &lt; 46 Then tmrScriptTimer.tag = iStarter - 30 <br/>   If iStarter &gt; 45 Then tmrScriptTimer.tag = iStarter - 45 <br/><br/>   ' The two lines below are for debugging purposes and may be deleted if you wish <br/>   ' colUsers.SendChatToAll CStr(sBotName), "Initialized" <br/>   ' colUsers.SendChatToAll CStr(sBotName), cLng(tmrScriptTimer.tag) <br/>End Sub <br/><br/>Sub tmrScriptTimer_Timer() <br/>   If tmrScriptTimer.tag = "" Then <br/>      tmrScriptTimer.tag = "0" <br/>   End If <br/>   tmrScriptTimer.tag = clng(tmrScriptTimer.tag) + 1 <br/>   If clng(tmrScriptTimer.tag) =&gt; iMinutes Then <br/>      tmrScriptTimer.tag = "0" <br/>      sTime = FormatDateTime(Time, vbLongTime) <br/>      colUsers.SendChatToAll CStr(sBotName), cStr("Bong! It's "+sTime+" US Eastern Time.") <br/>      ' Change time zone info to that of your local machine. <br/>   End If <br/>End Sub</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p26863">
+<div class="inner">
+<dl class="postprofile" id="profile26863">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 53</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-09 15:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Wilmington, NC</dd>
+</dl>
+<div class="postbody">
+<div id="post_content26863">
+<h3><a href="#p26863">Version 1.3</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a></strong> » </span>2003-08-30 03:20
+			</p>
+<div class="content">Adds an adjustment to keep it on the quarter hour, preventing drift.
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>' Quarter Hour Chime v 1.3 <br/>' by Lightning Man <br/>' from InfoBot by HaArD <br/>' with elements from Shadowtek <br/><br/>Dim sBotName, iMinutes, iStarter, sTime <br/><br/>Sub main() <br/>   sBotName = "Chime" <br/>   iMinutes = 15 ' This script is designed to run on the quarter hour. <br/>   ' If you change this you must change all the iStarter calculations below <br/><br/>   tmrScriptTimer.interval = 60000 <br/>   tmrScriptTimer.enabled = True <br/>   iStarter = minute(Now) ' This section synchs the timer with the quarter hour <br/>   If iStarter = 0 Then tmrScriptTimer.tag = 15 <br/>   If iStarter &gt; 0 And iStarter &lt; 16 Then tmrScriptTimer.tag = iStarter <br/>   If iStarter &gt; 15 And iStarter &lt; 31 Then tmrScriptTimer.tag = iStarter - 15 <br/>   If iStarter &gt; 30 And iStarter &lt; 46 Then tmrScriptTimer.tag = iStarter - 30 <br/>   If iStarter &gt; 45 Then tmrScriptTimer.tag = iStarter - 45 <br/><br/>   ' The two lines below are for debugging purposes and may be deleted if you wish <br/>   ' colUsers.SendChatToAll CStr(sBotName), "Initialized" <br/>   ' colUsers.SendChatToAll CStr(sBotName), cLng(tmrScriptTimer.tag) <br/>End Sub <br/><br/>Sub tmrScriptTimer_Timer() <br/>   If tmrScriptTimer.tag = "" Then <br/>      tmrScriptTimer.tag = "0" <br/>   End If <br/>   tmrScriptTimer.tag = clng(tmrScriptTimer.tag) + 1 <br/>   If clng(tmrScriptTimer.tag) =&gt; iMinutes Then <br/>      tmrScriptTimer.tag = "0" <br/>      sTime = FormatDateTime(Time, vbLongTime) <br/>      colUsers.SendChatToAll CStr(sBotName), cStr("Bong! It's "+sTime+" US Eastern Time.") <br/>      ' Change time zone info to that of your local machine. <br/><br/>      ' This if statement evaluates the current time and advances the timer one if drifted past the quarter hour.<br/>      If minute(Time) = 1 Or minute(Time) = 16 Or minute(Time) = 31 Or minute(Time) = 46 Then<br/>         If second(Time)&gt;30 Then tmrScriptTimer.tag = 1<br/>      End If<br/>   End If <br/>End Sub</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p27543">
+<div class="inner">
+<dl class="postprofile" id="profile27543">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 53</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-09 15:00</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Wilmington, NC</dd>
+</dl>
+<div class="postbody">
+<div id="post_content27543">
+<h3><a href="#p27543"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10338">Lightning Man</a></strong> » </span>2003-09-07 00:43
+			</p>
+<div class="content">Improved drift correction, changed interval mechanics so that you can do it in any interval that divides 60 evenly (1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 6 minutes, 10 minutes, 12 minutes, 15 minutes, 20 minutes, 30 minutes, an hour.)
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>' Quarter Hour Chime v 1.4 <br/>' by Lightning Man <br/>' from InfoBot by HaArD <br/>' with elements from Shadowtek <br/><br/>Dim sBotName, iMinutes, iChecker, iSynchT, sTime, sChecker<br/><br/>Sub main() <br/>   sBotName = "Chime" <br/>   iMinutes = 15  ' This number should be something that divides evenly into 60<br/>   tmrScriptTimer.interval = 60000 <br/>   tmrScriptTimer.enabled = True <br/>   ResynchTag<br/>End Sub <br/><br/>Sub tmrScriptTimer_Timer() <br/>   If tmrScriptTimer.tag = "" Then tmrScriptTimer.tag = "0"<br/>   tmrScriptTimer.tag = clng(tmrScriptTimer.tag) + 1 <br/>   If cLng(tmrScriptTimer.tag) =&gt; iMinutes Then <br/>      tmrScriptTimer.tag = "0" <br/>      sTime = FormatDateTime(Time, vbLongTime) <br/>      colUsers.SendChatToAll cStr(sBotName), cStr("Bong! It's "+sTime+" US Eastern Time.") <br/>      iSynchT = minute(Time) Mod iMinutes<br/>      ' Debugging line<br/>      ' colUsers.SendChatToAll cStr(sBotName), cLng(iSynchT) <br/>      If iSynchT &gt; 0 Then tmrScriptTimer.tag = iSynchT<br/>   End If <br/>End Sub<br/><br/>Public Function ResynchTag<br/>   iChecker = minute(Now) Mod iMinutes<br/>   sChecker = minute(Now)<br/>   If iChecker = 0 Then tmrScriptTimer.tag = iMinutes Else tmrScriptTimer.tag = iChecker<br/>   ' Debugging lines<br/>   ' colUsers.SendChatToAll cStr(sBotName), cLng(tmrScriptTimer.tag) <br/>   ' colUsers.SendChatToAll cStr(sBotName), cStr(sChecker)<br/>End Function</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			7 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=8">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Hubs and scripts”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

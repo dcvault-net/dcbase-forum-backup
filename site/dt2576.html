@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Slow script - database connections - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="26" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=26" itemprop="url"><span itemprop="title">Other</span></a></span>
+<span class="crumb" data-forum-id="8" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=8" itemprop="url"><span itemprop="title">Hubs and scripts</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=8&amp;t=2576">Slow script - database connections</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Which hub software is the best? Where can I find script XXX? Discuss it here...(no, this is not for advertising your hub...)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			3 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p13590">
+<div class="inner">
+<dl class="postprofile" id="profile13590">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1695">Gaborone</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-27 21:34</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13590">
+<h3 class="first"><a href="#p13590">Slow script - database connections</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1695">Gaborone</a></strong> » </span>2003-05-02 21:33
+			</p>
+<div class="content">Hi,
+<br/>
+<br/>I have a database connected to my script and there seem to be some problems with it.
+<br/>
+<br/>Sometimes, it takes a very long time to get the data out of the database, so the hub "dies". The script stops executing, and sometimes a pop-up window shows, and says that the script takes too long to execute.
+<br/>
+<br/>The database connection I use is the ADODB one.
+<br/>
+<br/>I' tried a couple of different ways of handling the database connection, but none of them seems to solve the problem.
+<br/>
+<br/>1. Never set either the connection object nor the Recordset object to "Nothing"
+<br/>
+<br/>2. Always set both the connection object and the Recordset object to "Nothing" after each query or update of the database.
+<br/>
+<br/>3. Always have the connection object open, but set the Recordset object to "Nothing" after each query or update of the database.
+<br/>
+<br/>Most often, I get the "Script is taking too long time to execute" pop-up when starting the hub (I do a query from the main sub in the script), but I don't get it every time.
+<br/>
+<br/>When about 250 users have connected to the hub, the script stops executing (I add information to the database on connection)
+<br/>
+<br/>I check that the database is not busy before trying to add anything to it. If it is busy, I queue the information to be added, and let the user connect anyway.
+<br/>
+<br/>I have tried different values on the ConnectionTimeout and the CommandTimeout properties of the connection object (10 seconds, 5 seconds and 1 second) but it doesn't seem to make any difference. I have code to deal with the error that should ocurr if the timeout is raised, but it won't execute.
+<br/>
+<br/>Please, is there anyone who can help me?
+<br/>
+<br/>/Gaborone</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p13629">
+<div class="inner">
+<dl class="postprofile" id="profile13629">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 210</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-23 22:24</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nevada</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13629">
+<h3><a href="#p13629"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=597">ButterflySoul</a></strong> » </span>2003-05-03 09:28
+			</p>
+<div class="content">Ok, I never had any problems with my own DB (once the code was working, that is), but then again, I never had over 100 users, except for a stress of a few minutes =p
+<br/>
+<br/>The fact that you end up 'taking too long to execute" might be due to an endless loop, which are very easy to get into when piloting a database via scripting, especially if you have an "On Error Resume Next" to try and get an error code.
+<br/>
+<br/>So the first thing I'd suggest doing is to (temporarly) put a check for EOF and BOF in all your loops where you do something in the lines of :
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>With (recordset object)<br/>  Do until (something)<br/>    (statements)<br/>    .MoveNext<br/>  Loop<br/>End With</code></pre></div><br/>You might be looking for a record that doesn't exist, and "kill" the safeguards of .MoveNext with an "On Error Resume Next" statement.<br/><br/>Another case is if you have something like that :<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>  Do Until x+1 = iParam<br/>     .MoveNext<br/>     x=x+1<br/>  Loop</code></pre></div><br/><em class="text-italics">(iParam being a number that you don't know in advance, but determined earlier in the code, and x being a freshly Dimed variable)</em><br/>With an "On Error Resume Next" statement, the code above will always loop endlessly (as I found out myself when I started using VBS with ADODB =)<br/>The first reason for this being that you need to make a CInt on iParam. iParam alone will never work. So the first line would need to be :<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Do Until x+1 = cInt(aParam(1))</code></pre></div><br/>Even with the first fix in place, it might still loop endlessly if iParam happens to be 1 =) That's because even if the equality following an "Until" is true, the loop is executed at least once. And after one loop, x+1 is equal to 2, and will never be equal to iParam again. So, the proper way to handle this would be :<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>   If cInt(aParam(1))&gt;1 Then<br/>      Do Until x+1 = cInt(aParam(1))<br/>         .MoveNext<br/>         x=x+1<br/>      Loop<br/>   End If</code></pre></div><br/><br/>When you work with recordsets via ADO, these kind of loops (or slight variations) are quite common and sometimes inevitable. I don't know what your code looks like, but these are the problems I ran into when I wrote my own script, so I thought I'd share the solutions with you, in case you ended up with an analog problem.<br/><br/>-----<br/><br/>As far as the Diming and Seting is concerned, I found out that the way working the best was to :<br/> - Dim a connection object (and recordset object if needed) at a sub level<br/><br/> - Never set the recordset to nothing. Just let it die like any variable when it gets out of scope.<br/><br/> - Permanent connections Dimed at script level are fine, but I used them all at Sub level without any problems. Since they end up as independant connections, it also lessens the risk of coliding with other Subs. By keeping them at Sub level, you can have a connection triggered by an OP command reading a user's record while at the same time, another connection trigered by a new login updates someone else's record.<br/>(the catch being that you end up Diming and killing a lot of connection objects, but generally speaking, it's safer)<br/><br/> - Open the connection in a dedicated sub.<br/>   example :<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>'----------<br/>Sub Something()<br/>'----------<br/>Dim objDBCon<br/>   OpenCon objDBCon, "file.mdb"<br/><br/>'----------<br/>Sub OpenCon(objConnection, sFileName)<br/>'----------<br/>   Dim fso<br/>   Set fso = CreateObject("Scripting.FileSystemObject")<br/>   If fso.FileExists(".\Scripts\Config\"&amp;sFileName) Then<br/>      Set objConnection = CreateObject("ADODB.Connection")<br/>      With objConnection<br/>         .ConnectionTimeout = 10<br/>         .ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\Scripts\Config\" &amp;sFileName<br/>         .Open<br/>      End With<br/>   Else<br/>      MsgBox "Warning... A database is missing. Couldn't open : " &amp;sFileName,16,"Critical : Config Database Missing"<br/>   End If<br/>End Sub</code></pre></div><br/><br/>  - Always pass update queries directly as an SQL string, rather than retreiving a recordset, changing values, and using the update/batchupdate method to comit the changes (like it's done in Aphrodite, for example). <strong class="text-strong">Never</strong> request or use a recordset if you don't need to actually read values. Slam the command directly on the connection object, then continue your sub as if nothing ever happened (kind of a "Fire and Forget" mindset). Use the SQL command Update to change the field(s) of an existing record, Insert to create a record, and Delete to erase (a) record(s).<br/>  Resort to a recordset and the SQL Select command <span style="text-decoration: underline">only</span> if you need to actually read some values from the DB.<br/>  Example :<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Sub OpConnected (curUser)<br/>   Dim objDBCon<br/>   OpenCon objDBCon, "dcdb.mdb"<br/>   objDBCon.Execute("Update UsrDynamic Set LastLogin=#" &amp;Now &amp;"#, LastIP=" &amp;Chr(34) &amp;curUser.IP() &amp;Chr(34) &amp;" Where UserName=" &amp;Chr(34) &amp;curUser.sName &amp;Chr(34))<br/>End Sub</code></pre></div><br/><br/>  - If your database often has new records added, or old records deleted, compact it every now and then. It will reduce its size, and improve perf (sometimes quite a lot, too). You can do so directly from your script by calling the Jet Replication Objects library, either in the Main Sub, while no connection is opened, either in another Sub, after a delete on several records (and after doing a .Close of your connection object, of course)<br/>  Example :<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Sub CompactDB(sFileName)<br/>   Dim fso, JetEngine<br/>   Set fso = CreateObject("Scripting.FileSystemObject")<br/>   Set JetEngine = CreateObject("JRO.JetEngine")<br/>   JetEngine.CompactDatabase "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=.\Scripts\Config\" &amp;sFileName, "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=.\" &amp;sFileName<br/>   fso.CopyFile ".\"&amp;sFileName, ".\Scripts\Config\"<br/>   fso.DeleteFile ".\"&amp;sFileName<br/>End Sub</code></pre></div>
+<br/>
+<br/>  - If you're storing a lot of different infos about users in your database, don't store everything in the same table. Store the info which needs to be updated (last IP, last login, etc) in a dedicated table, and store the static info (such as Registration date, password, etc) in another table, to speed things up. Use relationships and enforce referential integrity to keep them in Sync.
+<br/>
+<br/>------
+<br/>
+<br/>If it doesn't solve anything, give us a bit of code to look at =)</div>
+<div class="signature" id="sig13629">[CoZ] Children of Zeus
+<br/>-----
+<br/><a class="postlink" href="http://shadowdc.sourceforge.net/">Shadows DC Hub</a> - VBS and JS scripting at their best</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p13806">
+<div class="inner">
+<dl class="postprofile" id="profile13806">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1491">Tang</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 16</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-21 09:56</dd>
+</dl>
+<div class="postbody">
+<div id="post_content13806">
+<h3><a href="#p13806"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1491">Tang</a></strong> » </span>2003-05-06 07:25
+			</p>
+<div class="content">Firstly I would recommend using mysql.
+<br/>
+<br/>I've implimented a mysql connection from a hub script.  My web server also uses the mysql database so I can essentially make a nearly seamless connection between the hub and the web server.
+<br/>
+<br/>To use this script you'll have to download the mysql odbc driver.. select one from this list that supports your os.  <!-- m --><a class="postlink" href="http://www.mysql.com/downloads/api-myodbc-3.51.html">http://www.mysql.com/downloads/api-myodbc-3.51.html</a><!-- m -->
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Dim l_DB, l_RS, bConnect<br/><br/>' set the db connection and recordset objects.<br/>SET l_DB = CreateObject("ADODB.Connection")<br/>SET l_RS = CreateObject("ADODB.Recordset")<br/><br/>Sub Main()<br/>    ' connect to a local database.<br/>    l_DB.Open "DRIVER={MySQL ODBC 3.51 Driver}; DESC=; DATABASE=database_name; SERVER=localhost; UID=root; PASSWORD=password; PORT=3306; OPTION=; STMT=;"<br/><br/>    ' if the connection was complete.<br/>    If l_DB.Errors.Count = 0 Then<br/>        Set l_RS = l_DB.execute("SELECT * FROM table WHERE something=0 ORDER BY RAND() LIMIT 1;")<br/>        msgbox l_RS("ID").Value<br/>    End If<br/><br/>    ' set the connected state to true.<br/>    bConnect = True<br/><br/>End Sub<br/></code></pre></div>
+<br/>
+<br/>A few small things to note with the example I gave above.  If the database connection was not complete (if connecting to an offline remote database or something) the script will drop at the connection line.  So put it at the end of your Sub Main and then set a variable to true if connected.. if the connection failed then bConnect will = false.  If the connection is a success bConnect will = true.
+<br/>
+<br/>hope that helps a few people. =).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			3 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=8">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Hubs and scripts”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

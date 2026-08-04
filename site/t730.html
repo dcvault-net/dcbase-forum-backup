@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>AUT0 - Network connection auto detection extension - DCBase</title>
+      
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=21" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/" id="logo" title="DCNF Home"><span class="site_logo"></span></a>
+<h1>DCBase</h1>
+<p>Empowering and innovating features for the peer to peer masses</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-pencil-square-o fa-fw"></i><span>Register</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a data-navbar-reference="home" href="/" itemprop="url"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span itemprop="title">DCNF Home</span></a></span>
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/" itemprop="url"><span itemprop="title">Forums</span></a></span>
+<span class="crumb" data-forum-id="74" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=74" itemprop="url"><span itemprop="title">Protocols</span></a></span>
+<span class="crumb" data-forum-id="19" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=19" itemprop="url"><span itemprop="title">Advanced Direct Connect</span></a></span>
+<span class="crumb" data-forum-id="55" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/viewforum.php?f=55" itemprop="url"><span itemprop="title">Protocol Ideas</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/viewtopic.php?f=55&amp;t=730">AUT0 - Network connection auto detection extension</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Ideas for ADC may be presented here for others to review and point out flaws or further improve the idea.<br/></div>
+<div class="rules">
+<div class="inner">
+<strong>Forum rules</strong><br/>
+			If you have an account on the wiki, remember to update the ADC Proposals page for new ideas.<br/>
+<br/>
+<a class="postlink" href="http://dcbase.org/wiki/ADC_Proposals_list">http://dcbase.org/wiki/ADC_Proposals_list</a>
+</div>
+</div>
+<div class="action-bar bar-top">
+<div class="pagination">
+			4 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p2636">
+<div class="inner">
+<dl class="postprofile" id="profile2636">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Toast</span></strong> </dt>
+</dl>
+<div class="postbody">
+<div id="post_content2636">
+<h3 class="first"><a href="#p2636">AUT0 - Network connection auto detection extension</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><span class="username">Toast</span></strong> » </span>Thu Jan 13, 2011 6:09 pm
+			</p>
+<div class="content">the 'AUT0' extension (network connection auto detection extension).<br/>
+Rationale: Detect if client is capable of initiating active connections.<br/>
+<br/>
+After logging in:<br/>
+<br/>
+Client -&gt; 'HCHK 12345 ABCD'.<br/>
+<br/>
+Server sends a UDP packet containing token to the client's IP address at the given port as shown in the INF message.<br/>
+<br/>
+Server -&gt; 'ICHK ABCD'<br/>
+<br/>
+The server should send it from a UDP socket bound to the same port as the TCP server, which means the server will<br/>
+have to listen to both TCP and UDP.<br/>
+<br/>
+If client receives the packet, it knows it can receive UDP connections, and will advertise it in the INF message as<br/>
+a supported feature.<br/>
+<br/>
+If the client does not receive any UDP packets within a few seconds, it MAY try to reconfigure the router using<br/>
+UPnP/ZeroConf, and issue a HCHK command to the server again.<br/>
+<br/>
+If the client still doesn't receive any UDP packets, hole punching can be tried.<br/>
+The server will send a UDP packet to the hub (using the port of the TCP server), and reissue the HCHK command.<br/>
+The UDP packet SHOULD be echoed by the hub.<br/>
+This UDP packet should contain simply 'HECH {cid} {token}' (Hub echo).<br/>
+<br/>
+The hub should send a packet containing the token back:<br/>
+'IECH {token} {host:port}', aswell as the same message via TCP.<br/>
+<br/>
+If the client receives the message via UDP, it should now be able to determine the type of NAT.<br/>
+If the client receives the message via TCP only it knows it has a firewall blocking icomming communication.<br/>
+If the client does not receive the message, it should assume a firewall is blocking all UDP communication,<br/>
+and resume in passive mode.<br/>
+<br/>
+Requirements:<br/>
+'AUT0' in the extensions message (SUP) for client and hub.<br/>
+Server will also listen to UDP messages on the same port as the TCP port.<br/>
+<br/>
+The server MUST now respond to the 'HCHK' command via TCP<br/>
+The server MUST now respond to the 'HECH' command via UDP.<br/>
+<br/>
+The client will always initiate communication.<br/>
+<br/>
+-------------------------------------------------------------------------------<br/>
+<br/>
+Syntax: HCHK {port} {token}<br/>
+- port is a 16-bit port number where the client is listening for packets.<br/>
+- token is 4 bytes base32 encoded data specified by the client.<br/>
+<br/>
+Example:<br/>
+Client: 'HCHK 1511 BACD' (tcp)<br/>
+Server: 'ICHK BACD' (udp)<br/>
+<br/>
+-------------------------------------------------------------------------------<br/>
+<br/>
+Syntax: HECH {cid} {token}<br/>
+- cid is the client ID.<br/>
+- token is 4 bytes base32 encoded data specified by the client.<br/>
+<br/>
+Example:<br/>
+Client: 'HECH 3NGFVJUDBRHX2CYRJGQ5HACRDM5CTNLGZ36M64I BACD' (udp)<br/>
+Server: 'IECH BACD 192.168.0.1:1512' (udp)<br/>
+Server: 'IECH BACD 192.168.0.1:1512' (tcp)<br/>
+<br/>
+Security considerations:<br/>
+The hub must verify that IP address where the HECH command originated from<br/>
+matches the IP address where the user with the given CID is connected from.<br/>
+If the CID and IP does not match, or the CID is not used the hub MUST ignore<br/>
+the request.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p2640">
+<div class="inner">
+<dl class="postprofile" id="profile2640">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=332" style="color: #5F04B4;">Pirre</a> </dt>
+<dd class="profile-rank">Junior Member</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 31</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Nov 10, 2009 11:57 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2640">
+<h3><a href="#p2640">Re: AUT0 - Network connection auto detection extension</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=332" style="color: #5F04B4;">Pirre</a></strong> » </span>Fri Jan 14, 2011 7:43 am
+			</p>
+<div class="content">It would been a nice thing to have and surely needed.<br/>
+<br/>
+It will need also the client sending both his TCP and TLS port in his INF as this is not the case now.<br/>
+<br/>
+And there is 1 thing using UDP will not let you verify that there is a real clients TCP/TLS port listning on the clients side as far i know and you need a extra listner on the servers side.<br/>
+<br/>
+Why not having the hub send a real tcp (with or without TLS layer depending on the SUP info form the client) from a diff port then the hubs port and realy negotiate like the first steps in the client-client file transfer using the RCM (one with ADC0 feature in string if client supports and one without), that way you do not need the client ports in the INF (you will get them from the clients CTM). <br/>
+<br/>
+Using this would be a real test that it will be a TCP packet that is allowed (because a UDP is reaching the port does not mean a TCP can) and you can be sure its the DC client who is listning on that port and not something else.<br/>
+<br/>
+I have been on a P2P before where they had a UDP system like proposed here and the client used port 443 default. That test failed completely the day Skype was launched and used same default port. And yes i know the client will verify that the port is in use but the above TCP verification avoids such probs completely and avoid sending extra INF fields and avoids a extra listning socket hubs side.<br/>
+<br/>
+My 2 cents  <img alt=":lol:" class="smilies" height="17" src="/images/smilies/icon_lol.gif" title="Laughing" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p2746">
+<div class="inner">
+<dl class="postprofile" id="profile2746">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content2746">
+<h3><a href="#p2746">Re: AUT0 - Network connection auto detection extension</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Thu Apr 21, 2011 2:14 pm
+			</p>
+<div class="content">In Janurary;
+<blockquote class="uncited"><div>
+[2011-01-16 01:03:32] &lt;Pretorian&gt; On a different note, what does AUT0 do? I don't get it. It's... emulating RCM/CTM?<br/>
+[2011-01-16 01:06:39] &lt;Pretorian&gt; The port in CHK is useless information (it's already supplied in INF) and the CID in ECH is also pointless (it's an H-type message, so the hub already knows the CID)...<br/>
+[2011-01-16 01:09:08] &lt;Pretorian&gt; I'm not entirely sure it's even needed. Clients can a) assume active b) fallback to NAT-T if connection fails for X tries.
+</div></blockquote>
+
+In February;
+<blockquote class="uncited"><div>
+[2011-02-25 21:57:04] &lt;Pirre&gt; did you ever had a look @ that AUTO extention proposal ?   thats infact what is needed is 1 form or another but think it needs "sponsors" lol<br/>
+[2011-02-25 21:57:22] &lt;Pirre&gt; is=in<br/>
+[2011-02-25 21:57:55] &lt;Pretorian&gt; IIRC, it's pointless with NAT-T?<br/>
+[2011-02-25 21:58:04] &lt;Pretorian&gt; Or what was it about...<br/>
+[2011-02-25 21:58:38] &lt;Pirre&gt; hub detects if client is active or passive and informs client<br/>
+[2011-02-25 21:59:08] &lt;Pretorian&gt; Implement NAT-T and don't care?<br/>
+[2011-02-25 21:59:52] &lt;Pirre&gt; and no its not useless because nat exist as 1 if people put themself active nat is not used and 2 not all routers support nat<br/>
+[2011-02-25 22:01:45] &lt;Pirre&gt; these "misconfigurations" cause fustration for the client and endless ctm strings in the hub<br/>
+[2011-02-25 22:02:10] &lt;Pretorian&gt; 1) If users put themselves as "active" and the client detect that the client can't connect (for some reason), the client could default back to NAT-T...<br/>
+2) True, not all routers support NAT. However, I wonder whether people will understand "X hub tells you to check your connectivity" vs the client telling them so (or simply asking in the hub).<br/>
+[2011-02-25 22:02:29] &lt;Pretorian&gt; But if there's an implementation, I'll of course add it to ADC-Ext...<br/>
+[2011-02-25 22:03:24] &lt;Pirre&gt; there is only a proposision made by toast, a copy of another old spec ...<br/>
+[2011-02-25 22:03:40] &lt;Pretorian&gt; I'd have to re-read the proposal and change the writing to a simpler format since it's slightly confusing, I think, as it is now.<br/>
+[2011-02-25 22:03:52] &lt;Pirre&gt; a bit yes <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+[2011-02-25 22:05:08] &lt;Pretorian&gt; Also, since I'm a little sceptical myself about its usefulness, I'd have to convince myself of its usefulness to include (or not) a "you should implement this regardless of NAT-T" comment...<br/>
+[2011-02-25 22:13:23] &lt;Pretorian&gt; Simple C-C for TCP could be done without an extension today...<br/>
+[2011-02-25 22:13:55] &lt;Pirre&gt; true but then the client cant be "informed"<br/>
+[2011-02-25 22:14:07] &lt;Pretorian&gt; STA or MSG...<br/>
+[2011-02-25 22:14:13] &lt;Pirre&gt; infact inhere is a very basic tester<br/>
+[2011-02-25 22:15:55] &lt;Pirre&gt; then the client needs to send "something" to inform the hub he wants a test and can/will/use/receive the result<br/>
+[2011-02-25 22:16:06] &lt;Pretorian&gt; Technically, UDP could be tested also... E.g., assume that the hub "searches" for an item it knows/assumes the client has in its share...<br/>
+[2011-02-25 22:16:59] &lt;Pirre&gt; yep there a same system as the "testsurs" could be used<br/>
+[2011-02-25 22:17:20] &lt;Pirre&gt; a fake file that give a sch result<br/>
+[2011-02-25 22:17:25] &lt;Pretorian&gt; Right.<br/>
+[2011-02-25 22:17:54] &lt;Pretorian&gt; Doesn't even have to be a fake file...<br/>
+[2011-02-25 22:17:59] &lt;Pretorian&gt; Simply search for "a".<br/>
+[2011-02-25 22:18:27] &lt;Pirre&gt; lol<br/>
+[2011-02-25 22:18:46] &lt;Pirre&gt; if a user has shares yes lol<br/>
+[2011-02-25 22:19:18] &lt;Toast&gt; HTC Desire rox <img alt=":D" class="smilies" height="17" src="/images/smilies/icon_e_biggrin.gif" title="Very Happy" width="15"/><br/>
+[2011-02-25 22:19:26] &lt;Pretorian&gt; Well, highly likely.<br/>
+[2011-02-25 22:20:09] &lt;Pirre&gt; hehe new toys <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+[2011-02-25 22:20:58] &lt;Pretorian&gt; Hm, it should be the other way around, shouldn't it? Client searches for something... Not the hub.<br/>
+[2011-02-25 22:21:24] &lt;Pirre&gt; no a BSCH should reach him<br/>
+[2011-02-25 22:21:49] &lt;Pretorian&gt; Well, URES is what you want to test...<br/>
+[2011-02-25 22:22:18] &lt;Pirre&gt; thats outgoig no ?<br/>
+[2011-02-25 22:22:34] &lt;Pretorian&gt; Incoming from the client's point of view.<br/>
+[2011-02-25 22:23:15] &lt;Pretorian&gt; Client searches and will get a URES, which is what you want to check; whether the client can receive UDP traffic.<br/>
+[2011-02-25 22:23:49] &lt;Pirre&gt; you 100% right<br/>
+[2011-02-25 22:24:02] &lt;Pretorian&gt; Likewise with CTM... Client tries to connect to the hub...<br/>
+[2011-02-25 22:24:11] &lt;Pretorian&gt; (or, rather, some pseudo client.)<br/>
+[2011-02-25 22:24:54] &lt;Pretorian&gt; (Doesn't really matter.)<br/>
+[2011-02-25 22:25:24] &lt;Pretorian&gt; (Well, most hubs probably don't understand HCTM...)<br/>
+[2011-02-25 22:26:01] &lt;Pirre&gt; infact the hub should be "passive client" emulating in both cases imho<br/>
+[2011-02-25 22:26:53] &lt;Pirre&gt; but not for the searches offcourse there you are correct<br/>
+[2011-02-25 22:27:35] &lt;Pretorian&gt; So just say "if client and hub support AUTH, the client will perform a HCTM [and can simply disconnect if the hub connects] and a HSCH [searching for FOOBAR or something specifically stated]".<br/>
+[2011-02-25 22:29:48] &lt;Pirre&gt; true with one thing , hub should start with a rcm to receive the port and 2 of them 1 with feature ADCS and one without<br/>
+[2011-02-25 22:30:12] &lt;Pirre&gt; as far i know the client does not send port info ... in INF<br/>
+[2011-02-25 22:30:44] &lt;Pretorian&gt; The hub doesn't have to start with RCM if the client does a CTM on connect...<br/>
+[2011-02-25 22:30:49] &lt;Pretorian&gt; It does.<br/>
+[2011-02-25 22:31:03] &lt;Pretorian&gt; Remember that an RCM generates a CTM.<br/>
+[2011-02-25 22:31:39] &lt;Pretorian&gt; So you place the responsibility with the client handling the message of notification.<br/>
+[2011-02-25 22:31:59] &lt;Pirre&gt; yes<br/>
+[2011-02-25 22:32:07] &lt;Pretorian&gt; (Say, if the client hasn't received a connection/RES after 30 seconds, it can inform the user.)<br/>
+[2011-02-25 22:32:15] &lt;egik&gt; answer for dcpp team: where in core may catch sending RES adccommand as sample string or cast in string for adding this strings in cmd debug (with AdcDebug equal 1 this strings don't shown) or this is unreal? <br/>
+[2011-02-25 22:32:21] &lt;Pretorian&gt; But yes, you want to have a FCC (but you aren't required).<br/>
+[2011-02-25 22:33:07] &lt;Pretorian&gt; (By 'have to' I mean 'unless you want to generate seamingly meaningless traffic for hubs'.)<br/>
+[2011-02-25 22:34:13] &lt;Pirre&gt; thats exact what needs to be discused <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+[2011-02-25 22:36:06] &lt;Pretorian&gt; egik: I can't answer you, but you can always (I say 'always', even if I don't maintain the question tracker) ask in Launchpad or on ADCPortal (if you don't get an answer here).<br/>
+[2011-02-25 22:38:59] &lt;Pretorian&gt; Simplest SCH is probably searching for the TTH of an empty file.<br/>
+[2011-02-25 22:39:29] &lt;Pirre&gt; that will not give a res<br/>
+[2011-02-25 22:39:38] &lt;Pretorian&gt; Why not?<br/>
+[2011-02-25 22:40:46] &lt;Pirre&gt; client will only send res if tth found ...<br/>
+[2011-02-25 22:41:03] &lt;Pretorian&gt; The hub responds, remember.<br/>
+[2011-02-25 22:41:13] &lt;Pirre&gt; grrrrrrrrr lol<br/>
+[2011-02-25 22:41:26] &lt;Pirre&gt; true<br/>
+[2011-02-25 22:41:39] &lt;Pretorian&gt; So hub can always respond to the empty file TTH.<br/>
+[2011-02-25 22:41:44] &lt;Pirre&gt; yep<br/>
+[2011-02-25 22:41:54] &lt;Pretorian&gt; (or atleast in a HSCH context)<br/>
+[2011-02-25 22:42:53] &lt;Pirre&gt; should solve udp<br/>
+[2011-02-25 22:43:54] &lt;Pretorian&gt; And client simply will do a HCTM and disconnect once the token matches and a connection is established.<br/>
+[2011-02-25 22:44:40] &lt;Pirre&gt; also true<br/>
+[2011-02-25 22:45:16] &lt;Pirre&gt; 2 times if hub supports adcs verification and that will be a prob<br/>
+[2011-02-25 22:45:25] &lt;Pretorian&gt; Right.<br/>
+[2011-02-25 22:45:31] &lt;Pirre&gt; a normall adc has no certs<br/>
+[2011-02-25 22:46:37] &lt;Pirre&gt; same will be the case for udps if its going to use diff ports<br/>
+[2011-02-25 22:50:10] &lt;Pretorian&gt; I still wonder whether the client telling the user "it seems you don't support incoming connections, please do X" is useful. I mean, the user will notice quite quickly... But sure, if you want to get rid of annoying users. <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+[2011-02-25 22:50:42] &lt;Pretorian&gt; (Granted, the user can't tell for sure whether searches work immediately, unless they search for something that should generate responses.)<br/>
+[2011-02-25 22:52:25] &lt;Pirre&gt; problem is that the "source" telling the client its settings are wrong should be more or less relaible, otherwise you could indeed have a "failiure" counter<br/>
+[2011-02-25 22:52:38] &lt;Pretorian&gt; Right.<br/>
+[2011-02-25 22:54:27] &lt;Pirre&gt; 2300 CTM and RCM's from 1 client that is misconfigured<br/>
+[2011-02-25 22:54:31] &lt;Pirre&gt; lol<br/>
+[2011-02-25 22:54:39] &lt;Pretorian&gt; o_O<br/>
+[2011-02-25 22:55:02] &lt;Pirre&gt; big shares and udp works on him<br/>
+[2011-02-25 22:55:12] &lt;Pirre&gt; but not tcp <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+[2011-02-25 22:58:14] &lt;Pirre&gt; time for a <img alt=":beer:" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/emojione/assets/3.1/png/64/1f37a.png"/> intresting convo<br/>
+[2011-02-25 23:00:27] &lt;Pirre&gt; what you sugest can even be done scriptwise<br/>
+[2011-02-25 23:00:59] &lt;Pretorian&gt; <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+[2011-02-25 23:01:03] &lt;Pirre&gt; so if you "word" it i will try to "make" it lol<br/>
+[2011-02-26 00:14:01] &lt;Pirre&gt; only see 1 prob with your solution regarding auto pret and that it uses the server port to do the "verif" have no clue how well arnes shared_pointers deal with it ... think we need him or collogic to answer that unless you know more<br/>
+[2011-02-26 00:45:05] &lt;Pretorian&gt; Pirre: Implementation issue...<br/>
+[2011-02-26 00:45:52] &lt;Pretorian&gt; Just connect to the port...Really simply...
+</div></blockquote>
+
+cologic;
+<blockquote class="uncited"><div>
+[2011-02-02 11:01:28] &lt;cologic&gt; Oh, 'AUT0'. Cute pun.<br/>
+[2011-02-02 11:02:22] &lt;cologic&gt; "The server should send it from a UDP socket bound to the same port as the TCP server, which means the server will<br/>
+have to listen to both TCP and UDP." seems to address that concern though.<br/>
+[2011-02-02 11:02:47] &lt;cologic&gt; I'm not sure Toast quite understands UDP though, since it's not technically entirely coherent<br/>
+[2011-02-02 11:05:00] &lt;Pirre&gt; as i understoud it (and maybe i am wrong) , the verification uses a UDP packet to the client listners port what is TCP for xf<br/>
+[2011-02-02 11:05:34] &lt;cologic&gt; <br/>
+The hub should send a packet containing the token back:<br/>
+'IECH {token} {host:port}', aswell as the same message via TCP.<br/>
+<br/>
+If the client receives the message via UDP, it should now be able to determine the type of NAT.<br/>
+If the client receives the message via TCP only it knows it has a firewall blocking icomming communication.<br/>
+If the client does not receive the message, it should assume a firewall is blocking all UDP communication, and resume in passive mode.<br/>
+[2011-02-02 11:05:45] &lt;cologic&gt; So, it seems to probe each protocol separately.<br/>
+[2011-02-02 11:06:34] &lt;cologic&gt; For the client, at least.<br/>
+[2011-02-02 11:07:35] &lt;cologic&gt; But I also don't understand the separation between 'hub' and 'server'. They're different entities in that description, but what other machine is supposed to play the role of server?<br/>
+[2011-02-02 11:07:49] &lt;cologic&gt; Since it uses I/H commands<br/>
+[2011-02-02 11:09:01] &lt;Pirre&gt; for me the logic is that when verifying the clients connection the client is the server<br/>
+[2011-02-02 11:09:19] &lt;Pirre&gt; as thats exactly what is tested<br/>
+[2011-02-02 11:10:03] &lt;cologic&gt; so why have the 'client' as a separate role?<br/>
+[2011-02-02 11:10:24] &lt;Pirre&gt; have no clue there<br/>
+[2011-02-02 11:11:35] &lt;cologic&gt; one's interpretation of that protocol depends on how one assigns 'client' and 'server', so until/unless that's clarified I think dealing with that proposal involves chasing ghosts<br/>
+[2011-02-02 11:12:51] &lt;Pirre&gt; ye but a pitty it drags on that as its a nice feature capable of eliminating a lot of unneeded traffic in a hub<br/>
+[2011-02-02 11:12:53] &lt;cologic&gt; it is possible to imagine a protocol where one only has two machines but the roles are factored such that there's a 'floating' role worth splitting out, but I don't think (?) that's what Toast is trying to communicate<br/>
+[2011-02-02 11:12:56] &lt;cologic&gt; Yes<br/>
+[2011-02-02 11:13:15] &lt;cologic&gt; So, try to get Toast to clarify it I guess - it looks like you already have, without success, though<br/>
+[2011-02-02 11:13:33] &lt;Pirre&gt; not that good with words lol<br/>
+[2011-02-02 11:14:02] &lt;cologic&gt; (oh, other WINE quirk - ctrl-left/right in multiline edit controls just kind of stop at line boundaries. Other cursor movement keys mostly work though.)<br/>
+[2011-02-02 11:15:10] &lt;cologic&gt; Well, you're partly objecting on other bases, too - e.g. the Skype/port 443 concern.<br/>
+[2011-02-02 11:15:20] &lt;cologic&gt; Have you asked him in this hub about it?<br/>
+[2011-02-02 11:15:49] &lt;Pirre&gt; not yet, but i think the concept is taken from another hubsoft<br/>
+[2011-02-02 11:16:14] &lt;cologic&gt; Given his response to FleetCommand's criticisms of his English, he's got no basis to ignore you just because you don't write even somewhat less smooth English. :p<br/>
+[2011-02-02 11:16:41] &lt;Pirre&gt; o toast will not do that <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/><br/>
+[2011-02-02 11:17:22] &lt;cologic&gt; As in, Toast is just describing what some existing hub software already does?<br/>
+[2011-02-02 11:17:48] &lt;cologic&gt; Seems pointless without client support.<br/>
+[2011-02-02 11:20:30] &lt;Pirre&gt; ye thats what i mean, think it was uhub but not 100% sure and there are already some clients (maybe svn) that have it implenetd<br/>
+[2011-02-02 11:21:45] &lt;cologic&gt; Oh. Then it's even more important that either someone provides a more readable description of what they're doing (if it's a communication problem via Toast) or that some of the weirdness might be fixed (if Toast is describing it correctly).<br/>
+[2011-02-02 11:22:29] &lt;cologic&gt; And also means that Toast (or someone familiar with that hub software - e.g. jvk) is uniquely qualified to elaborate.<br/>
+[2011-02-02 11:23:06] &lt;Pirre&gt; will ask around <img alt=":)" class="smilies" height="17" src="/images/smilies/icon_e_smile.gif" title="Smile" width="15"/> <br/>
+[2011-02-02 11:24:22] &lt;cologic&gt; I broadly agree though that this is an obviously useful extension and is worth getting right.<br/>
+[2011-02-02 11:27:57] &lt;Pirre&gt; <a class="postlink" href="https://github.com/janvidar/uhub/blob/master/doc/extensions.txt">https://github.com/janvidar/uhub/blob/m ... nsions.txt</a>  only ref i can find and that it is used ... <br/>
+[2011-02-02 11:28:27] &lt;cologic&gt; Oh, looks like Toast copy/pasted from that
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p3010">
+<div class="inner">
+<dl class="postprofile" id="profile3010">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a> </dt>
+<dd class="profile-rank">Site Admin</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 214</dd> <dd class="profile-joined"><strong>Joined:</strong> Tue Jul 21, 2009 10:21 am</dd>
+</dl>
+<div class="postbody">
+<div id="post_content3010">
+<h3><a href="#p3010">Re: AUT0 - Network connection auto detection extension</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/memberlist.php?mode=viewprofile&amp;u=261" style="color: #B40404;">Pretorian</a></strong> » </span>Sun Mar 10, 2013 2:46 pm
+			</p>
+<div class="content">Had a new discussion today about this, and I had roughly the same ideas as my previous noting in the paste above, but here is a more constructed way.
+<blockquote class="uncited"><div>
+NATO - Network connection auto detection extension<br/>
+<br/>
+The client have no way to verify whether it can manage incoming TCP and/or UDP connections and messages. This extension intend to provide this capability by making the hub responsible for helping the client ascertain this information.<br/>
+<br/>
+Signal AUTO in the SUP to indicate support for this.<br/>
+<br/>
+The client may send a HCTM where the hub connects to the client as in a normal client-client connection. The client may disconnect after it has received the INF (matching the token only) in the client-client connection. If no connection is established within two minutes (120 seconds), it means the client has probably failed to properly set up the network for active mode.<br/>
+<br/>
+The client may send a HSCH for the 0-byte file hash where the hub responds with a URES for that file. Note that the hub must a) generate a CID for itself (as U-type messages require a CID) or b) generate a bot (with a CID) that sends the URES. If no message is receivedwithin two minutes (120 seconds), it means the client has probably failed to properly set up the network for active mode. Ten search results should be sent, to make sure that at least one arrived.<br/>
+<br/>
+Implementations should, upon failure, indicate as such to the user and fall back to an alternative method of connectivity.<br/>
+<br/>
+Note that the client should not perform this in all hubs it is connected to. It is up to the client to decide which hub it should do this verification in. A basic implementation may simply do it in the first hub it is connected to.<br/>
+<br/>
+Note that this procedure must likely be done each time the client is started as the connectivity may have changed during the client's downtime.
+</div></blockquote></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			4 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/viewforum.php?f=55">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Ideas”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=9"> <span> Site &amp; Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Site News</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Suggestions &amp; Problems</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=20"><span class="spacer"></span><span class="spacer"></span> <span>↳   Site Bugs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=41"><span class="spacer"></span><span class="spacer"></span> <span>↳   Implemented Suggestions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=56"><span class="spacer"></span> <span>↳   Wiki</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=57"><span class="spacer"></span><span class="spacer"></span> <span>↳   Suggestions &amp; Submitions</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=58"><span class="spacer"></span><span class="spacer"></span> <span>↳   Request Account</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=59"><span class="spacer"></span><span class="spacer"></span> <span>↳   Bugs</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=75"> <span> Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=13"><span class="spacer"></span> <span>↳   Clients</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=26"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=45"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=36"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=83"><span class="spacer"></span><span class="spacer"></span> <span>↳   DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Hub Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=27"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=35"><span class="spacer"></span><span class="spacer"></span> <span>↳   Plugins</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=37"><span class="spacer"></span><span class="spacer"></span> <span>↳   SDK</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=40"><span class="spacer"></span><span class="spacer"></span> <span>↳   Guides</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=28"><span class="spacer"></span> <span>↳   Bot Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=29"><span class="spacer"></span><span class="spacer"></span> <span>↳   Releases</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=30"><span class="spacer"></span> <span>↳   LUA Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=31"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=32"><span class="spacer"></span><span class="spacer"></span> <span>↳   Clientside Scripting</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=34"><span class="spacer"></span> <span>↳   Python Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=38"><span class="spacer"></span><span class="spacer"></span> <span>↳   Hubside Scripts</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=74"> <span> Protocols</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Advanced Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=33"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=18"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=55"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=87"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Pushed ideas</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=80"><span class="spacer"></span> <span>↳   Neo-Modus Direct Connect</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=81"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Talk</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=82"><span class="spacer"></span><span class="spacer"></span> <span>↳   Protocol Features</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=44"> <span> Resources</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=50"><span class="spacer"></span> <span>↳   Tutorials</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=51"><span class="spacer"></span> <span>↳   SDK/Libs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=62"><span class="spacer"></span> <span>↳   Documentation</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=63"><span class="spacer"></span> <span>↳   Icon Packs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hublists</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=84"><span class="spacer"></span> <span>↳   Links</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=86"><span class="spacer"></span> <span>↳   Chat logs</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=85"><span class="spacer"></span> <span>↳   Other resources</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=25"> <span> Developers Area</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=39"><span class="spacer"></span> <span>↳   Example Code</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=42"><span class="spacer"></span><span class="spacer"></span> <span>↳   Java Forum</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=43"><span class="spacer"></span> <span>↳   Questions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=88"> <span> Teams</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=89"><span class="spacer"></span> <span>↳   Security</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=90"><span class="spacer"></span> <span>↳   Cryptography</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=91"><span class="spacer"></span> <span>↳   Software</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=92"><span class="spacer"></span> <span>↳   Interoperability</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=93"><span class="spacer"></span> <span>↳   Protocol</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=94"><span class="spacer"></span> <span>↳   Infrastructure</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=96"> <span> DC Network Foundation</span></a></li>
+<li><a class="jumpbox-forum-link" href="/viewforum.php?f=54"> <span> Offtopic Discussions</span></a></li>
+<li><a class="jumpbox-cat-link" href="/viewforum.php?f=1"> <span> Staff</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Staff Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=60"><span class="spacer"></span><span class="spacer"></span> <span>↳   Wanted Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=61"><span class="spacer"></span><span class="spacer"></span> <span>↳   Review Articles</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Site  Pages</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=69"><span class="spacer"></span><span class="spacer"></span> <span>↳   Categories</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=70"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category I</span></a></li>
+<li><a class="jumpbox-sub-link" href="/viewforum.php?f=72"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>↳   Category II</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google (Crawler)</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="home" href="/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>DCNF Home</span></a></span> <span class="crumb"><a data-navbar-reference="index" href="/"><span>Forums</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

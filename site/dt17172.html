@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ADC Handshake - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=6" itemprop="url"><span itemprop="title">Protocol Alley</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=6&amp;t=17172">ADC Handshake</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Technical discussion about the NMDC and &lt;a href="<a class="postlink" href="http://dcpp.net/ADC.html%22%3EADC%3C/A">http://dcpp.net/ADC.html"&gt;ADC&lt;/A</a>&gt; protocol.  The NMDC protocol is documented in the &lt;a href="<a class="postlink" href="http://dcpp.net/wiki/%22%3EWiki%3C/a">http://dcpp.net/wiki/"&gt;Wiki&lt;/a</a>&gt;, so feel free to refer to it.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p87199">
+<div class="inner">
+<dl class="postprofile" id="profile87199">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=32847">Flow84</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 31</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-11-08 22:59</dd>
+</dl>
+<div class="postbody">
+<div id="post_content87199">
+<h3 class="first"><a href="#p87199">ADC Handshake</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=32847">Flow84</a></strong> » </span>2006-04-27 20:56
+			</p>
+<div class="content">Hi.
+<br/>
+<br/>Im wondering why there has been a change on who is sending first message in ADC protocol compared to NMDC.
+<br/>
+<br/><blockquote><div><cite>NMDC wrote:</cite><strong class="text-strong">Hub</strong><br/>$Lock &lt;lock&gt; Pk=&lt;pk&gt;|<br/><strong class="text-strong">Client</strong><br/>$Key &lt;key&gt;|$ValidateNick &lt;nick&gt;|<br/><strong class="text-strong">Hub</strong><br/>$HubName &lt;name&gt;|$Hello &lt;nick&gt;|<br/><strong class="text-strong">Client</strong><br/>$Version &lt;version&gt;|$MyINFO &lt;info&gt;|$GetNickList|</div></blockquote><br/><br/><blockquote><div><cite>ADC wrote:</cite><strong class="text-strong">Client</strong><br/>HSUP +BASE &lt;other&gt;<br/><strong class="text-strong">Hub</strong><br/>ISUP +BASE &lt;other&gt;<br/>ISID &lt;client&gt;<br/>IINF HU1 HI1 â€¦<br/><strong class="text-strong">Client</strong><br/>BINF &lt;my&gt; ID... PDâ€¦<br/><strong class="text-strong">Hub</strong><br/>IGPA â€¦<br/><strong class="text-strong">Client</strong><br/>HPAS â€¦<br/><strong class="text-strong">Hub</strong><br/>BINF &lt;all&gt;<br/>BINF &lt;Client&gt; â€¦<br/></div></blockquote>
+<br/>
+<br/>If the hub was sending first message in ADC too, there would be easy to make a NMDC/ADC Client hybrid as you would only need to react different depending on what command you get.
+<br/>
+<br/>And the user wouldnt need to be bother at all.
+<br/>This would make it invisable for the user that a hub converted from a NMDC hub to a ADC hub.
+<br/>
+<br/>Now i have stated my question and why.
+<br/>So please let me hear the reason why you have changed =)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p87219">
+<div class="inner">
+<dl class="postprofile" id="profile87219">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content87219">
+<h3><a href="#p87219"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2006-04-28 01:17
+			</p>
+<div class="content">Because every good RFC protocol has the client speak first.  Having the server speak first is kind of dumb.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p87221">
+<div class="inner">
+<dl class="postprofile" id="profile87221">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content87221">
+<h3><a href="#p87221"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2006-04-28 06:31
+			</p>
+<div class="content">Could the client simply open a port, wait a little while for a response, and if it doesn't get a $Lock simply send the HSUP? A bit dirty sure, but it would work in most cases.</div>
+<div class="signature" id="sig87221"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p87223">
+<div class="inner">
+<dl class="postprofile" id="profile87223">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29223">Carraya</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 112</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-09-21 16:43</dd>
+</dl>
+<div class="postbody">
+<div id="post_content87223">
+<h3><a href="#p87223"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29223">Carraya</a></strong> » </span>2006-04-28 07:28
+			</p>
+<div class="content"><blockquote><div><cite>Todi wrote:</cite>Could the client simply open a port, wait a little while for a response, and if it doesn't get a $Lock simply send the HSUP? A bit dirty sure, but it would work in most cases.</div></blockquote>
+<br/>
+<br/>We actually tried this with success, but I'm afraid that some hubsofts would disconnect if infact using NMDC but is a bit slow, because it would think it was junk data...</div>
+<div class="signature" id="sig87223">&lt;random funny comment&gt;</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p87237">
+<div class="inner">
+<dl class="postprofile" id="profile87237">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content87237">
+<h3><a href="#p87237"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-04-28 12:17
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>Because every good RFC protocol has the client speak first.  Having the server speak first is kind of dumb.</div></blockquote>
+<br/>Isn't SMTP a counterpoint to this?
+<br/>
+<br/>
+<br/>
+<br/>However, even if they were the same order, DC++ wouldn't be able to switch them without a changes.  It decides based on the format of the hub name whether to treat it as an ADC hub or a DC hub one.  I also think that making it somewhat manual for the client is important -- you can easily send a redirect on DC to get users to go to an ADC hub.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89365">
+<div class="inner">
+<dl class="postprofile" id="profile89365">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110305">youshi10</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 2</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-06-16 22:57</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89365">
+<h3><a href="#p89365"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=110305">youshi10</a></strong> » </span>2006-06-17 15:30
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>Because every good RFC protocol has the client speak first.  Having the server speak first is kind of dumb.</div></blockquote>
+
+Not only that; having the server speak first kind of defies the whole role or client and server, in the sense that client seeks to create active connections, where servers service clients requests by facilitating those requests as best necessary.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p91907">
+<div class="inner">
+<dl class="postprofile" id="profile91907">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=111707">NickDanger</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-08-19 06:28</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nick Danger Headquarters, Missouri</dd>
+</dl>
+<div class="postbody">
+<div id="post_content91907">
+<h3><a href="#p91907"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=111707">NickDanger</a></strong> » </span>2006-08-19 07:41
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>Because every good RFC protocol has the client speak first.  Having the server speak first is kind of dumb.</div></blockquote>
+
+Fair enough, but what if the client is really shy, but really has feelings for the server and just has issues expressing the way that it feels?<br/>
+<br/>
+Is it okay for the server to speak first under these circumstances?<br/>
+<br/>
+<img alt=":lol:" class="smilies" height="15" src="/images/smilies/icon_lol.gif" title="Laughing" width="15"/></div>
+<div class="signature" id="sig91907">-Nick Danger<br/>
+<a class="postlink" href="http://nickdanger.ro0t.com/"><img alt="Image" class="postimage" src="http://nickdanger.ro0t.com/images/dangerlogo_sm.gif"/></a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p92029">
+<div class="inner">
+<dl class="postprofile" id="profile92029">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13479">Dolda2000</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 20</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-11-13 01:11</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Täby, Sweden</dd>
+</dl>
+<div class="postbody">
+<div id="post_content92029">
+<h3><a href="#p92029"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=13479">Dolda2000</a></strong> » </span>2006-08-22 23:12
+			</p>
+<div class="content"><blockquote><div><cite>youshi10 wrote:</cite><blockquote><div><cite>PseudonympH wrote:</cite>Because every good RFC protocol has the client speak first.  Having the server speak first is kind of dumb.</div></blockquote>
+
+Not only that; having the server speak first kind of defies the whole role or client and server, in the sense that client seeks to create active connections, where servers service clients requests by facilitating those requests as best necessary.</div></blockquote>
+I'm not quite sure I can agree with that. Not only are SMTP, IMAP, POP3, FTP, SSH et al. counterexamples to the original point, but also consider that the connection attempt itself very well could be considered a request to the server, which should be dignified with a response. In particular, that allows the server to respond to the client immediately with a confirmation or rejection of the connection attempt, and allows to specify a more targeted error message upon rejection than just a TCP RST (like the SMTP 4xx error for telling the other side that the server is overloaded for the moment).<br/>
+<br/>
+Not that I'm saying that your points are bad -- I'm just saying that they aren't <em class="text-italics">universal</em>. Rather, I'd say it depends very much on the protocol in question. I'm not sure which one would be most suitable for the ADC protocol, but please don't just dismiss the issue by saying that "the server goes first" is bad programming in general. The OP's point isn't entirely bad either, though I think it would be rather unreliable to just rely on the server talking first to determine which protocol to speak. In particular, it would feel a bit stupid to change the protocol so fundamentally at this time for such a small advantage.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p96612">
+<div class="inner">
+<dl class="postprofile" id="profile96612">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114829">fluke</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-12-06 18:25</dd>
+</dl>
+<div class="postbody">
+<div id="post_content96612">
+<h3><a href="#p96612"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=114829">fluke</a></strong> » </span>2006-12-06 20:45
+			</p>
+<div class="content">From how I read the ADC protocol, it sounds like the hub has the option to speak first.  There is nothing in the description that prohibits the hub from sending a SUP or STA immediately on connect.  It is clear from the description that after the client sends it's SUP that the hub should respond with it's own SUP (even if it already provided it before).  For a ADC protocol banner similar to SMTP, FTP and so on, I would recommend issuing a "ISTA 010" followed by the greeting string.  But a client must still assume that an ADC hub will reserve responding until it gets a HSUP from the client.<br/>
+<br/>
+Btw, ADC protocol draft 0.12 contains a badly worded line of:<br/>
+"When the server receives this message the first time, it should reply in kind, assign an SID to the client, send an INF about itself and move to the IDENTIFY state."<br/>
+<br/>
+It should say:<br/>
+When the server receives this message the first time, it should reply in kind, assign an SID to the client, move to the IDENTIFY state and send an INF about itself.<br/>
+<br/>
+As it is worded now, it sounds like the client should be able to always expect an IINF after an ISID (and that INF is being sent as part of the PROTOCOL state).  As part of being moved into the identify state, it becomes valid for the hub to send a IQUI right after the ISID instead of a IINF.<br/>
+<br/>
+The issue that bothers me the most about the handshake in ADC protocol draft 0.12 is that there is always the overhead of assigning a sid before being able to send a URL redirect.  It would be nice if the protocol description allowed for use of the QUI flag of RD when using the STA command.  For example, when the hub is full I would like to be able to immediately send to any further connection attempts the following:<br/>
+<br/>
+ISTA 211 Hub is full, redirecting to less busy sister hub RD=adc://sisterhub<br/>
+<br/>
+I can think of cases where use of the RD flag would be nice for any STA codes of 21x (generic hub error), 22x (login/access error) or 23x (kick/ban/disconnects).<br/>
+<br/>
+In terms of auto-detection of hub type, it should not matter if ADC provides a banner or requires the client to send first.  Instead, the ADC protocol should make it a requirement that the hub never silently close/time-out a connection.  Rather, issuing a STA or QUI should be mandatory.  Hence, if a client waiting for a $Lock gets time-out with an STA, it should automatically mark the profile as being an ADC client and reconnect.  It should be fairly rare that someone would downgrade an ADC hub back to a DC hub.  So, once autodetection of an ADC hub via time-out is discovered then no further autodetection should be needed.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=6">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Protocol Alley”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

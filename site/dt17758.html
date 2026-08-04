@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>problem with linking :? - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=17758">problem with linking :?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			15 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p89881">
+<div class="inner">
+<dl class="postprofile" id="profile89881">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-03-06 15:54</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89881">
+<h3 class="first"><a href="#p89881">problem with linking :?</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a></strong> » </span>2006-06-26 00:37
+			</p>
+<div class="content">i try to add lua scripts to my client (0.689 =&gt; 0.691) and i have those errors:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Linking...
+client.lib(Client.obj) : error LNK2019: unresolved external symbol @lua_pushlightuserdata@8 referenced in function "protected: void __thiscall ScriptInstance::LuaPush&lt;class&gt;(class Client *)" (??$LuaPush@VClient@@@ScriptInstance@@IAEXPAVClient@@@Z)
+client.lib(ScriptManager.obj) : error LNK2001: unresolved external symbol @lua_pushlightuserdata@8
+client.lib(UserConnection.obj) : error LNK2001: unresolved external symbol @lua_pushlightuserdata@8
+client.lib(NmdcHub.obj) : error LNK2001: unresolved external symbol @lua_pushlightuserdata@8
+client.lib(Client.obj) : error LNK2019: unresolved external symbol @lua_settop@8 referenced in function "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __thiscall ClientScriptInstance::formatChatMessage(class Client *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?formatChatMessage@ClientScriptInstance@@QAE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PAVClient@@V23@@Z)
+client.lib(ScriptManager.obj) : error LNK2001: unresolved external symbol @lua_settop@8
+client.lib(Client.obj) : error LNK2019: unresolved external symbol @lua_tostring@8 referenced in function "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __thiscall ClientScriptInstance::formatChatMessage(class Client *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?formatChatMessage@ClientScriptInstance@@QAE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PAVClient@@V23@@Z)
+client.lib(ScriptManager.obj) : error LNK2001: unresolved external symbol @lua_tostring@8
+client.lib(Client.obj) : error LNK2019: unresolved external symbol @lua_isstring@8 referenced in function "public: class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; __thiscall ClientScriptInstance::formatChatMessage(class Client *,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt;)" (?formatChatMessage@ClientScriptInstance@@QAE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@PAVClient@@V23@@Z)
+client.lib(ScriptManager.obj) : error LNK2001: unresolved external symbol @lua_isstring@8
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_tonumber@8 referenced in function "public: int __thiscall LuaManager::PostMessageW(struct lua_State *)" (?PostMessageW@LuaManager@@QAEHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_touserdata@8 referenced in function "public: int __thiscall LuaManager::PostMessageW(struct lua_State *)" (?PostMessageW@LuaManager@@QAEHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_isnumber@8 referenced in function "public: int __thiscall LuaManager::PostMessageW(struct lua_State *)" (?PostMessageW@LuaManager@@QAEHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_type@8 referenced in function "public: int __thiscall LuaManager::PostMessageW(struct lua_State *)" (?PostMessageW@LuaManager@@QAEHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_gettop@4 referenced in function "public: int __thiscall LuaManager::PostMessageW(struct lua_State *)" (?PostMessageW@LuaManager@@QAEHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_pushnumber@12 referenced in function "protected: void __thiscall ScriptInstance::LuaPush(int)" (?LuaPush@ScriptInstance@@IAEXH@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_gettable@8 referenced in function "private: static int __fastcall Lunar&lt;struct&gt;::gc_T(struct lua_State *)" (?gc_T@?$Lunar@ULuaManager@@@@CIHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_pushvalue@8 referenced in function "private: static int __fastcall Lunar&lt;struct&gt;::gc_T(struct lua_State *)" (?gc_T@?$Lunar@ULuaManager@@@@CIHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaL_getmetafield@12 referenced in function "private: static int __fastcall Lunar&lt;struct&gt;::gc_T(struct lua_State *)" (?gc_T@?$Lunar@ULuaManager@@@@CIHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol _lua_pushfstring referenced in function "private: static int __fastcall Lunar&lt;struct&gt;::tostring_T(struct lua_State *)" (?tostring_T@?$Lunar@ULuaManager@@@@CIHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_settable@8 referenced in function "private: static void __fastcall Lunar&lt;struct&gt;::set(struct lua_State *,int,char const *)" (?set@?$Lunar@ULuaManager@@@@CIXPAUlua_State@@HPBD@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_insert@8 referenced in function "private: static void __fastcall Lunar&lt;struct&gt;::set(struct lua_State *,int,char const *)" (?set@?$Lunar@ULuaManager@@@@CIXPAUlua_State@@HPBD@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_pushstring@8 referenced in function "private: static void __fastcall Lunar&lt;struct&gt;::set(struct lua_State *,int,char const *)" (?set@?$Lunar@ULuaManager@@@@CIXPAUlua_State@@HPBD@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaL_typerror@12 referenced in function "public: static struct LuaManager * __fastcall Lunar&lt;struct&gt;::check(struct lua_State *,int)" (?check@?$Lunar@ULuaManager@@@@SIPAULuaManager@@PAUlua_State@@H@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaL_checkudata@12 referenced in function "public: static struct LuaManager * __fastcall Lunar&lt;struct&gt;::check(struct lua_State *,int)" (?check@?$Lunar@ULuaManager@@@@SIPAULuaManager@@PAUlua_State@@H@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_newuserdata@8 referenced in function "private: static void * __fastcall Lunar&lt;struct&gt;::pushuserdata(struct lua_State *,void *,unsigned int)" (?pushuserdata@?$Lunar@ULuaManager@@@@CIPAXPAUlua_State@@PAXI@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_checkstack@8 referenced in function "private: static void * __fastcall Lunar&lt;struct&gt;::pushuserdata(struct lua_State *,void *,unsigned int)" (?pushuserdata@?$Lunar@ULuaManager@@@@CIPAXPAUlua_State@@PAXI@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_pushlstring@12 referenced in function "private: static void __fastcall Lunar&lt;struct&gt;::weaktable(struct lua_State *,char const *)" (?weaktable@?$Lunar@ULuaManager@@@@CIXPAUlua_State@@PBD@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_setmetatable@8 referenced in function "private: static void __fastcall Lunar&lt;struct&gt;::weaktable(struct lua_State *,char const *)" (?weaktable@?$Lunar@ULuaManager@@@@CIXPAUlua_State@@PBD@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_newtable@4 referenced in function "private: static void __fastcall Lunar&lt;struct&gt;::weaktable(struct lua_State *,char const *)" (?weaktable@?$Lunar@ULuaManager@@@@CIXPAUlua_State@@PBD@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_error@4 referenced in function "public: int __thiscall LuaManager::GetSetting(struct lua_State *)" (?GetSetting@LuaManager@@QAEHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_remove@8 referenced in function "private: static int __fastcall Lunar&lt;struct&gt;::thunk(struct lua_State *)" (?thunk@?$Lunar@ULuaManager@@@@CIHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_replace@8 referenced in function "public: static int __fastcall Lunar&lt;struct&gt;::push(struct lua_State *,struct LuaManager *,bool)" (?push@?$Lunar@ULuaManager@@@@SIHPAUlua_State@@PAULuaManager@@_N@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_pushboolean@8 referenced in function "public: static int __fastcall Lunar&lt;struct&gt;::push(struct lua_State *,struct LuaManager *,bool)" (?push@?$Lunar@ULuaManager@@@@SIHPAUlua_State@@PAULuaManager@@_N@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol _luaL_error referenced in function "public: static int __fastcall Lunar&lt;struct&gt;::push(struct lua_State *,struct LuaManager *,bool)" (?push@?$Lunar@ULuaManager@@@@SIHPAUlua_State@@PAULuaManager@@_N@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaL_getmetatable@8 referenced in function "public: static int __fastcall Lunar&lt;struct&gt;::push(struct lua_State *,struct LuaManager *,bool)" (?push@?$Lunar@ULuaManager@@@@SIHPAUlua_State@@PAULuaManager@@_N@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_pushnil@4 referenced in function "public: static int __fastcall Lunar&lt;struct&gt;::push(struct lua_State *,struct LuaManager *,bool)" (?push@?$Lunar@ULuaManager@@@@SIHPAUlua_State@@PAULuaManager@@_N@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_pushcclosure@12 referenced in function "public: static void __fastcall Lunar&lt;struct&gt;::Register(struct lua_State *)" (?Register@?$Lunar@ULuaManager@@@@SIXPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaL_newmetatable@8 referenced in function "public: static void __fastcall Lunar&lt;struct&gt;::Register(struct lua_State *)" (?Register@?$Lunar@ULuaManager@@@@SIXPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_close@4 referenced in function "private: virtual __thiscall ScriptManager::~ScriptManager(void)" (??1ScriptManager@@EAE@XZ)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_strlen@8 referenced in function "public: int __thiscall LuaManager::SendUDPPacket(struct lua_State *)" (?SendUDPPacket@LuaManager@@QAEHPAUlua_State@@@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_pcall@16 referenced in function "private: bool __thiscall ScriptInstance::MakeCallRaw(class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,class _STL::basic_string&lt;char,class _STL::char_traits&lt;char&gt;,class _STL::allocator&lt;char&gt; &gt; const &amp;,int,int)" (?MakeCallRaw@ScriptInstance@@AAE_NABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@0HH@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_call@12 referenced in function "void __fastcall callalert(struct lua_State *,int)" (?callalert@@YIXPAUlua_State@@H@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaL_loadfile@8 referenced in function "int __fastcall lua_dofile(struct lua_State *,char const *)" (?lua_dofile@@YIHPAUlua_State@@PBD@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaL_loadbuffer@16 referenced in function "int __fastcall lua_dobuffer(struct lua_State *,char const *,unsigned int,char const *)" (?lua_dobuffer@@YIHPAUlua_State@@PBDI1@Z)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaopen_loadlib@4 referenced in function "public: void __thiscall ScriptManager::load(void)" (?load@ScriptManager@@QAEXXZ)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaopen_debug@4 referenced in function "public: void __thiscall ScriptManager::load(void)" (?load@ScriptManager@@QAEXXZ)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaopen_table@4 referenced in function "public: void __thiscall ScriptManager::load(void)" (?load@ScriptManager@@QAEXXZ)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaopen_math@4 referenced in function "public: void __thiscall ScriptManager::load(void)" (?load@ScriptManager@@QAEXXZ)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaopen_string@4 referenced in function "public: void __thiscall ScriptManager::load(void)" (?load@ScriptManager@@QAEXXZ)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaopen_io@4 referenced in function "public: void __thiscall ScriptManager::load(void)" (?load@ScriptManager@@QAEXXZ)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @luaopen_base@4 referenced in function "public: void __thiscall ScriptManager::load(void)" (?load@ScriptManager@@QAEXXZ)
+client.lib(ScriptManager.obj) : error LNK2019: unresolved external symbol @lua_open@0 referenced in function "public: void __thiscall ScriptManager::load(void)" (?load@ScriptManager@@QAEXXZ)
+L:\SRC\DCPlusPlus-0.689-src MOD\App/DCPlusPlus.exe : fatal error LNK1120: 47 unresolved externals</code></pre></div>
+can someone help me? <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/><br/>
+thanks.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89890">
+<div class="inner">
+<dl class="postprofile" id="profile89890">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89890">
+<h3><a href="#p89890"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2006-06-26 05:15
+			</p>
+<div class="content">Has the file containing the new code been added to the project?</div>
+<div class="signature" id="sig89890">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89897">
+<div class="inner">
+<dl class="postprofile" id="profile89897">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-03-06 15:54</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89897">
+<h3><a href="#p89897"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a></strong> » </span>2006-06-26 09:21
+			</p>
+<div class="content">hmm.. i add lua-5.0.2.vcproj to solution, but i think that i don't do everything (source seems to be good)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89903">
+<div class="inner">
+<dl class="postprofile" id="profile89903">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 83</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-04-03 20:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89903">
+<h3><a href="#p89903"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a></strong> » </span>2006-06-26 14:54
+			</p>
+<div class="content">in the properties of your project, in "Additional IncludeDirectories", have you added the lua/include directory?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89905">
+<div class="inner">
+<dl class="postprofile" id="profile89905">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-03-06 15:54</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89905">
+<h3><a href="#p89905"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a></strong> » </span>2006-06-26 18:45
+			</p>
+<div class="content">yes, i add /include folder
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>"$(SolutionDir)stlport";"$(SolutionDir)wtl";"$(SolutionDir)yassl\include";"./lua-5.0.2/include"</code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89914">
+<div class="inner">
+<dl class="postprofile" id="profile89914">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 223</dd> <dd class="profile-joined"><strong>Joined:</strong> 2005-01-15 11:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89914">
+<h3><a href="#p89914"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=101430">Pothead</a></strong> » </span>2006-06-26 23:53
+			</p>
+<div class="content">Try changing the Calling convention in the project properties. <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89916">
+<div class="inner">
+<dl class="postprofile" id="profile89916">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-03-06 15:54</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89916">
+<h3><a href="#p89916"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a></strong> » </span>2006-06-27 01:01
+			</p>
+<div class="content">for what i have to change this? <img alt=";)" class="smilies" height="15" src="/images/smilies/icon_wink.gif" title="Wink" width="15"/><br/>
+thanks.<br/>
+//edit<br/>
+no changes, still i have thesame errors <img alt=":(" class="smilies" height="15" src="/images/smilies/icon_sad.gif" title="Sad" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89917">
+<div class="inner">
+<dl class="postprofile" id="profile89917">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 83</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-04-03 20:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89917">
+<h3><a href="#p89917"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a></strong> » </span>2006-06-27 02:14
+			</p>
+<div class="content">check you also add the lua/include directory to the "client" project, since all the errors seem to be in client.lib.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89927">
+<div class="inner">
+<dl class="postprofile" id="profile89927">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-03-06 15:54</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89927">
+<h3><a href="#p89927"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a></strong> » </span>2006-06-27 10:28
+			</p>
+<div class="content">i already add /include folder to client.vcproj <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p89949">
+<div class="inner">
+<dl class="postprofile" id="profile89949">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 83</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-04-03 20:55</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89949">
+<h3><a href="#p89949"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a></strong> » </span>2006-06-27 23:01
+			</p>
+<div class="content">have you tried to compile a DC++ mod that already includes LUA scripts? if it works, you could then compare the way LUA is included in this mod with your own way.</div>
+<div class="notice">
+					Last edited by <a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=108129">poy</a> on 2006-06-28 18:54, edited 1 time in total.
+									</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p89967">
+<div class="inner">
+<dl class="postprofile" id="profile89967">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-03-06 15:54</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content89967">
+<h3><a href="#p89967"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a></strong> » </span>2006-06-28 13:40
+			</p>
+<div class="content">yyy :/ i try compare my client to bcdc++ and dcdm++ and i don't find any diffs.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p90190">
+<div class="inner">
+<dl class="postprofile" id="profile90190">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content90190">
+<h3><a href="#p90190"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-07-03 22:57
+			</p>
+<div class="content">Did you set the project dependencies correctly, so the lua lib gets compiled and linked with client.lib? (Make sure to do this for both Release and Debug configurations.)<br/>
+<br/>
+There are a lot of places things go wrong, so if you have more problems, try using WinDiff to compare the two source trees.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p90191">
+<div class="inner">
+<dl class="postprofile" id="profile90191">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-03-06 15:54</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content90191">
+<h3><a href="#p90191"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a></strong> » </span>2006-07-03 23:11
+			</p>
+<div class="content">hehe... i have no idea how-to add this, so i get source from zion++ and now i just have to copy lua.dll to dc directory <img alt=":D" class="smilies" height="15" src="/images/smilies/icon_biggrin.gif" title="Very Happy" width="15"/> but if u can, write clearly, how-to "set correctly project dependencies" ? i know, that project don't see lua /include files, but this is other problem, and i have another <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/><br/>
+i want to color all app like bcdc do it [by lua script] and i do somethings changes in code... and naturaly i have errors, that i don't understand <img alt=":P" class="smilies" height="15" src="/images/smilies/icon_razz.gif" title="Razz" width="15"/>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>l:\Src\DCPlusPlus-0.689-src MOD\windows\HubFrame.cpp(60): error C2039: 'SetBackgroundColor' : is not a member of 'WTL::CEditT&lt;TBase&gt;'
+        with
+        [
+            TBase=ATL::CWindow
+        ]
+</code></pre></div>
+i try wtl 8.0, 7.5 and modded from zion, nothing happends<br/>
+and i try to add this part of code [bcdc++]
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>//adrian edit
+	ctrlClient.SetFont(WinUtil::font);
+	ctrlClient.SetBackgroundColor(WinUtil::bgColor);
+	CHARFORMAT textFormat;
+	textFormat.dwMask = CFM_COLOR;
+	textFormat.dwEffects = 0;
+	textFormat.crTextColor = WinUtil::textColor;
+	ctrlClient.SetDefaultCharFormat(textFormat);
+//end</code></pre></div>
+any ideas?<br/>
+btw, maybe someone knows way to color chat and orther things by lua? [i mean someone have links to topics on other forums, or have some nice, clear advices <img alt=":)" class="smilies" height="15" src="/images/smilies/icon_smile.gif" title="Smile" width="15"/>]<br/>
+thanks.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p90212">
+<div class="inner">
+<dl class="postprofile" id="profile90212">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content90212">
+<h3><a href="#p90212"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2006-07-04 02:53
+			</p>
+<div class="content"><blockquote><div><cite>adrian_007 wrote:</cite>if u can, write clearly, how-to "set correctly project dependencies" ?</div></blockquote>
+
+Right click on the base item in the "Solution Explorer" window and select "Build Dependencies."</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p90222">
+<div class="inner">
+<dl class="postprofile" id="profile90222">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 32</dd> <dd class="profile-joined"><strong>Joined:</strong> 2006-03-06 15:54</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Poland</dd>
+</dl>
+<div class="postbody">
+<div id="post_content90222">
+<h3><a href="#p90222"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=107239">adrian_007</a></strong> » </span>2006-07-04 09:22
+			</p>
+<div class="content">hmm, and in project dependencies [client] i should mark lua... i forgot about that... when i wil have more time, i will re-write this. thanks all for helping <img alt=";)" class="smilies" height="15" src="/images/smilies/icon_wink.gif" title="Wink" width="15"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			15 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

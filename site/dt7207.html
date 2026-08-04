@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Search for Alternates problem - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=7207">Search for Alternates problem</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			18 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p38081">
+<div class="inner">
+<dl class="postprofile" id="profile38081">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7115">redlight</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-27 06:24</dd>
+</dl>
+<div class="postbody">
+<div id="post_content38081">
+<h3 class="first"><a href="#p38081">Search for Alternates problem</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7115">redlight</a></strong> » </span>2003-12-26 12:09
+			</p>
+<div class="content">The search for alternates used to only download files with the same filename as the one in the queue.  Now there is some kind of per token search through the search results.
+<br/>
+<br/>For example:
+<br/>I am downloading a rar set bh-xvid.r??.  Suppose I search for alternates on bh-xvid.r05.  DC++ will search for "bh xvid r05".  The search results include dmt-xvid-bh.r05, and that file is improperly added to the queue as an alternate for bh-xvid.r05.
+<br/>
+<br/>I found the following code in QueueFrame.cpp, but I am not sure how to modify it or even if it is the right place to modify.
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>LRESULT QueueFrame::onSearchAlternates(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/) {<br/>   if(ctrlQueue.GetSelectedCount() == 1) {<br/>      string tmp;<br/><br/>      int i = ctrlQueue.GetNextItem(-1, LVNI_SELECTED);<br/>      QueueItemInfo* ii = ctrlQueue.getItemData(i);<br/>      <br/>      string searchString = SearchManager::clean(ii-&gt;getSearchString());<br/>      if (searchString.size() &lt; 1)<br/>         string searchString = SearchManager::clean(ii-&gt;getTargetFileName());<br/>      StringList tok = StringTokenizer(searchString, ' ').getTokens();<br/>      <br/>      for(StringIter si = tok.begin(); si != tok.end(); ++si) {<br/>         bool found = false;<br/>         <br/>         for(StringIter j = searchFilter.begin(); j != searchFilter.end(); ++j) {<br/>            if(Util::stricmp(si-&gt;c_str(), j-&gt;c_str()) == 0) {<br/>               found = true;<br/>            }<br/>         }<br/>         <br/>         if(!found &amp;&amp; !si-&gt;empty()) {<br/>            tmp += *si + ' ';<br/>         }<br/>      }<br/>      if(!tmp.empty()) {<br/>         bool bigFile = (ii-&gt;getSize() &gt; 10*1024*1024);<br/>         if(bigFile) {<br/>            SearchFrame::openWindow(tmp, ii-&gt;getSize()-1, SearchManager::SIZE_ATLEAST, ShareManager::getInstance()-&gt;getType(ii-&gt;getTargetFileName()));<br/>         } else {<br/>            SearchFrame::openWindow(tmp, ii-&gt;getSize()+1, SearchManager::SIZE_ATMOST, ShareManager::getInstance()-&gt;getType(ii-&gt;getTargetFileName()));<br/>         }<br/>      }<br/>   } <br/>   <br/>   return 0;<br/>}<br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p38093">
+<div class="inner">
+<dl class="postprofile" id="profile38093">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content38093">
+<h3><a href="#p38093">Re: Search for Alternates problem</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-12-26 13:51
+			</p>
+<div class="content"><blockquote><div><cite>redlight wrote:</cite>The search for alternates used to only download files with the same filename as the one in the queue.  Now there is some kind of per token search through the search results.</div></blockquote>
+<br/>
+<br/>DC++ did (and still does, if you haven't set a specific alternate string) add a file as a source if the filename is the same, and the search result contains all of the tokens in the original filename.  If it contains additional tokens, the filename still matches.
+<br/>
+<br/>How is your example different from:
+<br/>bh-xvid_[sharereactor].r05
+<br/>
+<br/>Or similar?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p38105">
+<div class="inner">
+<dl class="postprofile" id="profile38105">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7115">redlight</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-27 06:24</dd>
+</dl>
+<div class="postbody">
+<div id="post_content38105">
+<h3><a href="#p38105"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7115">redlight</a></strong> » </span>2003-12-26 15:13
+			</p>
+<div class="content"><blockquote class="uncited"><div>DC++ did (and still does, if you haven't set a specific alternate string) add a file as a source if the filename is the same, and the search result contains all of the tokens in the original filename. If it contains additional tokens, the filename still matches. <br/></div></blockquote><br/><br/>I'm not sure what you mean by "specific alternate string."  But I just checked out 0.251, and it will only add alternates automatically if the filenames are an exact match.  By exact match I mean, if the file in my queue was bh-xvid.r05 then the search result would have to have the filename bh-xvid.r05 to be considered an alternate.   Further, bh-xvid_[sharereactor].r05 or dmt-xvid-bh.r05 (which is the wrong file altogether) would not download automatically in version 0.251.<br/><br/><blockquote class="uncited"><div>How is your example different from:<br/>bh-xvid_[sharereactor].r05<br/><br/>Or similar?<br/></div></blockquote>
+<br/>
+<br/>Well the difference is bh-xvid_[sharereactor].r05 is most likely the same file as bh-xvid.r05; whereas dmt-xvid-bh.r05 is from a different rar set.
+<br/>
+<br/>
+<br/>I'd just like to know where the code is that performs the comparison between the filenames in the queue and the filenames in the search results.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p38163">
+<div class="inner">
+<dl class="postprofile" id="profile38163">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7115">redlight</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-27 06:24</dd>
+</dl>
+<div class="postbody">
+<div id="post_content38163">
+<h3><a href="#p38163"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7115">redlight</a></strong> » </span>2003-12-27 10:07
+			</p>
+<div class="content">I fixed it.
+<br/>
+<br/>I replaced the code in QueueManager::onAction(SearchManagerListener::Types, SearchResult*) with the code from 0.251, and I modified it slightly to be compatible with 0.305.
+<br/>
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>// SearchManagerListener<br/>void QueueManager::onAction(SearchManagerListener::Types type, SearchResult* sr) throw() {<br/>   if(type == SearchManagerListener::SEARCH_RESULT &amp;&amp; BOOLSETTING(AUTO_SEARCH)) {<br/>      StringList l;<br/>       getTargetsBySize(l, sr-&gt;getSize(), Util::getFileExt(sr-&gt;getFile()));<br/>      <br/>      StringTokenizer t(SearchManager::clean(sr-&gt;getFileName()), ' ');<br/>      StringList&amp; tok = t.getTokens();<br/><br/>      for(StringIter i = l.begin(); i != l.end(); ++i) {<br/>         bool found = true;<br/><br/>         for(StringIter j = tok.begin(); j != tok.end(); ++j) {<br/>            if(Util::findSubString(*i, *j) == string::npos) {<br/>               found = false;<br/>               break;<br/>            }<br/>         }<br/><br/>         if(found) {<br/>            // Wow! found a new source that seems to match...add it...<br/>            try {<br/>               add(sr-&gt;getFile(), sr-&gt;getSize(), sr-&gt;getUser(), *i, Util::emptyString, QueueItem::FLAG_RESUME, <br/>                  QueueItem::DEFAULT, Util::emptyString, false);<br/>               dcdebug("QueueManager::onAction New source %s for target %s found\n", sr-&gt;getUser()-&gt;getNick().c_str(), i-&gt;c_str());<br/>               if(BOOLSETTING(AUTO_SEARCH_AUTO_MATCH))<br/>                  addList(sr-&gt;getUser(), QueueItem::FLAG_MATCH_QUEUE);<br/>            } catch(const Exception&amp;) {<br/>               // ...<br/>            }<br/>            // Ok, so let's match the file listing at once...<br/>         }<br/>      }<br/>   }<br/>}<br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p38618">
+<div class="inner">
+<dl class="postprofile" id="profile38618">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-31 01:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content38618">
+<h3><a href="#p38618"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a></strong> » </span>2003-12-31 01:39
+			</p>
+<div class="content">This is exactly what I have been looking for ! I am getting this kind of problem quite often and it drives me mad ! 
+<br/>
+<br/>Could you please tell me if the change you made works properly ? If so, could you tell me how I could implement this in my client ?
+<br/>
+<br/>That would be great indeed...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p39329">
+<div class="inner">
+<dl class="postprofile" id="profile39329">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7115">redlight</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 5</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-27 06:24</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39329">
+<h3><a href="#p39329"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=7115">redlight</a></strong> » </span>2004-01-06 15:12
+			</p>
+<div class="content">It works.  Replace the current QueueManager::onAction(SearchManagerListener::Types, SearchResult*) with the one in my last post.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p39894">
+<div class="inner">
+<dl class="postprofile" id="profile39894">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1015">deepdown</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-05 20:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39894">
+<h3><a href="#p39894"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1015">deepdown</a></strong> » </span>2004-01-12 00:31
+			</p>
+<div class="content">Me to, have this problem!
+<br/>
+<br/>I don't have any "<em class="text-italics">QueueFrame.cpp</em>" file...
+<br/>
+<br/>Which file should I alter ?
+<br/>(so I need the source code ?..)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p39910">
+<div class="inner">
+<dl class="postprofile" id="profile39910">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39910">
+<h3><a href="#p39910"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-01-12 01:36
+			</p>
+<div class="content"><blockquote><div><cite>deepdown wrote:</cite>Me to, have this problem!<br/><br/>I don't have any "<em class="text-italics">QueueFrame.cpp</em>" file...<br/><br/>Which file should I alter ?<br/>(so I need the source code ?..)</div></blockquote>
+<br/>
+<br/>QueueFrame.cpp is in the windows/ directory.
+<br/>
+<br/>However, his code goes into client/QueueManager.cpp.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p39917">
+<div class="inner">
+<dl class="postprofile" id="profile39917">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39917">
+<h3><a href="#p39917"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2004-01-12 04:42
+			</p>
+<div class="content"><blockquote><div><cite>deepdown wrote:</cite>Which file should I alter ?<br/>(so I need the source code ?..)</div></blockquote>
+<br/>
+<br/>yes you need to download the source, and have a compiler (microsoft visual c++ .net 2003) + the stl and wtl libraries. (or you could ask the patchs author politely if he can release a modded version)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p39927">
+<div class="inner">
+<dl class="postprofile" id="profile39927">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1015">deepdown</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 10</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-02-05 20:58</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39927">
+<h3><a href="#p39927"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1015">deepdown</a></strong> » </span>2004-01-12 10:16
+			</p>
+<div class="content">I'm running win2000.
+<br/>Don't have any file with the name; QueueFrame.cpp
+<br/>
+<br/>A release which solves this problem would be <span style="text-decoration: underline">really</span>appreciated.
+<br/>But who should I talk to ?
+<br/>
+<br/><em class="text-italics">I don't have any .net compilers on my computer  <img alt=":?" class="smilies" src="/images/smilies/icon_confused.gif" title="Confused"/> </em></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p39942">
+<div class="inner">
+<dl class="postprofile" id="profile39942">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 587</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-07 07:38</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden, Linkoping</dd>
+</dl>
+<div class="postbody">
+<div id="post_content39942">
+<h3><a href="#p39942"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5955">joakim_tosteberg</a></strong> » </span>2004-01-12 15:08
+			</p>
+<div class="content">My guess is that you have no idea about what you are doing, am I right?</div>
+<div class="signature" id="sig39942"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">TheParanoidOne's DC++ Intro</a>
+<br/><a class="postlink" href="http://www.dcpp.net/faq">DC++ FAQ</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p40127">
+<div class="inner">
+<dl class="postprofile" id="profile40127">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-31 01:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40127">
+<h3><a href="#p40127"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a></strong> » </span>2004-01-14 14:11
+			</p>
+<div class="content">I'm running PhantomDC++0.305 1.18c at the moment. I really like that client and I saw Twink's post in here... As I know that you are working on PhantomDC++, Twink, I would really appreciate if you could put that piece of code into the next release of PhantomDC.
+<br/>
+<br/>I think it would make good sense, because I consider that Search Problem a serious bug. I'm afraid I don't have the time to work on this myself. I will think of donating instead.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p40142">
+<div class="inner">
+<dl class="postprofile" id="profile40142">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40142">
+<h3><a href="#p40142"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-01-14 17:16
+			</p>
+<div class="content"><blockquote><div><cite>Dooble wrote:</cite>I think it would make good sense, because I consider that Search Problem a serious bug. I'm afraid I don't have the time to work on this myself. I will think of donating instead.</div></blockquote>
+<br/>
+<br/>Donating to who? <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  90% of phantom DC is arne.  7% is cologic, and 3% is twink.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p40217">
+<div class="inner">
+<dl class="postprofile" id="profile40217">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40217">
+<h3><a href="#p40217"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2004-01-15 05:19
+			</p>
+<div class="content">the donations were phantoms idea as PhantomDC did start off as a private client made for a certain hub, it wasn't really meant to become known in others, which also meant the donations went towards running the hub itself. But actually i dont think we've had any in ages,  I know I haven't accepted any.
+<br/>
+<br/>I do know that Phantom did give a good proportion of the donated stuff to arnie as he deserved it, specially as there is alot of arne and coloic's work in it.  Personally I would rather people gave the donations to arnie.
+<br/>
+<br/>This isn't really the forum to suggest things for my client either, I tend to not mention it here and suggest people use BCDC if the subject comes up.  oh and gargoyle, dont forget opera's percentage  <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/> (although I did have to change large portions of his things to work without his extra library functions). 
+<br/>
+<br/>I guess I'll look at what this patch actually does and see if its worth including anyway.</div>
+<div class="notice">
+					Last edited by <a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> on 2004-03-14 04:55, edited 1 time in total.
+									</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p40251">
+<div class="inner">
+<dl class="postprofile" id="profile40251">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a> </dt>
+<dd class="profile-rank">The Creator Himself</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 296</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-02 22:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40251">
+<h3><a href="#p40251"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=2" style="color: #AA0000;">arnetheduck</a></strong> » </span>2004-01-15 13:39
+			</p>
+<div class="content"><blockquote><div><cite>Twink wrote:</cite>I do know that Phantom did give a good proportion of the donated stuff to arnie as he deserved it, specially as there is alot of arnie and coloic's work in it.  Personally I would rather people gave the donations to arnie.</div></blockquote>
+<br/>he did?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p40280">
+<div class="inner">
+<dl class="postprofile" id="profile40280">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40280">
+<h3><a href="#p40280"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-01-15 18:01
+			</p>
+<div class="content"><blockquote><div><cite>Twink wrote:</cite>gargoyle, dont forget opera's percentage  <img alt=":P" class="smilies" src="/images/smilies/icon_razz.gif" title="Razz"/> </div></blockquote>
+<br/>Ooops, yeah.  He probably would appreciate some positive feedback, instead of just complaints about features, requests for new features, and support questions.  (That probably goes for...most of us actually.)</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p40313">
+<div class="inner">
+<dl class="postprofile" id="profile40313">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 12</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-12-31 01:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40313">
+<h3><a href="#p40313"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=16082">Dooble</a></strong> » </span>2004-01-15 21:21
+			</p>
+<div class="content">It's worth including the patch if we are talking about RAR Sharing. As long as File Hashing is not included in DC++ it will be needed to stop the search confusing the filenames....
+<br/>
+<br/>I also have to say I appreciate Opera's work. There are some very nice features in his client. I do not use it at the moment, because it crashes quite often with a VisualC++ Unhandled Exception.  <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>
+<br/>
+<br/>Well, I posted this thread in my favourite's Hub Forum and found somebody who is taking care of the problem and trying to implement the code. I'm looking forward to testing it....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p40337">
+<div class="inner">
+<dl class="postprofile" id="profile40337">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 436</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-01 04:31</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content40337">
+<h3><a href="#p40337"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=3144">Twink</a></strong> » </span>2004-01-16 04:50
+			</p>
+<div class="content"><blockquote><div><cite>arnetheduck wrote:</cite><blockquote><div><cite>Twink wrote:</cite>I do know that Phantom did give a good proportion of the donated stuff to arnie as he deserved it, specially as there is alot of arnie and coloic's work in it.  Personally I would rather people gave the donations to arnie.</div></blockquote><br/>he did?</div></blockquote>
+<br/>
+<br/>well I seem to remember him telling me so, however that was months ago (maybe 5-6?) and since the NZ currency wasn't that great back then it probably didn't end up being that much.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			18 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

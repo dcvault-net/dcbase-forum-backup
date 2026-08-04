@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>THEX/TTH, queue cleaning and file management - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=12874">THEX/TTH, queue cleaning and file management</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			5 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p65690">
+<div class="inner">
+<dl class="postprofile" id="profile65690">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29813">WollyHood</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-10-02 03:01</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Urth</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65690">
+<h3 class="first"><a href="#p65690">THEX/TTH, queue cleaning and file management</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=29813">WollyHood</a></strong> » </span>2004-10-04 02:44
+			</p>
+<div class="content">I wrote this post up and then realized there was a bugzilla feature request.  So what I am going to do is post this first, wait a day to see if anyone has useful comments or insights that I can use to moderate my request submissions.  Tomorrow night I will submit each request seperately with whatever modifications are needed to have it make sense.  Since some of the requests may be functionaly similar to others I now see I will use best judgement before submitting.  
+<br/>
+<br/>Oh, and I <strong class="text-strong"><span style="font-size: 117%; line-height: 116%;">love</span></strong> TTH.  Best thing since sliced bread.
+<br/>
+<br/>Also, thought up some other functions that would be nice.  I will post those later and seperately, in the interest of brevity.
+<br/>
+<br/>Wow, all that writing and I still haven't even started my actual post.  How do I turn off verbose output on myself?
+<br/>
+<br/>I have been trying to clean up my queue recently. Over time my queue has grown rather large, which I am certain is symptom unique to me among DC++ users (cough cough).  My first thought was to search through the queue and remove duplicate or otherwise unwanted files. That's when I first realized that I was going to have some trouble with my self-appointed task.
+<br/>
+<br/>The short of it is this: I would humbly request file management features. The ideal solution would be the ability to map the queue as a virtual drive and then manage it with standard file managers (think <a class="postlink" href="http://www.webdav.org/">WebDAV</a>/<a class="postlink" href="http://davenport.sourceforge.net/">Davenport</a> or mounting a virtual device in Linux). But ideals are not often practical solutions, so I will describe some informal use case examples and sketch out some (simple?/easy?) feature requests to address them.
+<br/>
+<br/><strong class="text-strong"><span style="text-decoration: underline">1. Searching the Queue</span></strong>
+<br/>My first idea was to search the queue to find files to remove. I open up the Download Queue tab and ... no search function. Small problem, that.
+<br/>
+<br/>Since there was no search available I went to my handy dandy text editor and found I could search the queue.xml easily enough. Moving between the editor and DC++ I could make some simple modifications but found it very time consuming. So I decided to modify the queue.xml file directly but found additional issues there.
+<br/>
+<br/>XML ignores blank spaces in data files and therefore writes each record across multiple lines to make data structures formatted for easy reading by human eyes. Or something. While it is a great feature of XML it made doing a search and replace/delete of whole XML records difficult to accomplish in the text editor without creating a malformed XML file. Not insurmountable but worth mentioning as a difficulty. The real problem was with what happened post editing.
+<br/>
+<br/>The queue.xml file appears to be read by DC++ only at startup and is subsequently written to as the queue is modified. Any changes I make to the queue.xml while DC++ is running would be overwritten by the blind writes. Making changes to queue.xml would have to occur after I had exited from DC++ and all final commits had been written by it to the file. Once that happened I could modify the file and start DC++ to load changes.  (I won't go into using a copy of queue.xml while DC++ is running as the problems inherent in that are obvious.)   Stopping and starting DC++ whenever I wanted to edit the Download Queue seemed a bit inelegant a solution so, except for major revisions, I think I will avoid that as a fix.
+<br/>
+<br/>Any way I go about this searching seems a bit of a kludge.
+<br/>
+<br/>So the requests here are:
+<br/><strong class="text-strong"><em class="text-italics">A:</em></strong> A search function under the Download Queue tab. The search should have the same elements as are found in the dialog box for adding ADL Searches.
+<br/><strong class="text-strong"><em class="text-italics">B:</em></strong> A filter function similar to ADL Search for the Download Queue, if it could retain the directory structure.
+<br/>
+<br/><strong class="text-strong"><span style="text-decoration: underline">2. Looking for Duplicates within the Download Queue tab</span></strong>
+<br/>Since searching and modifying the queue externally is impractical I turned my attention to hunting via the browsable interface. The easiest thing to do was go into directories containing many files and sort according to a variety of attributes (name, size, TTH) to find exact or probable duplicate files. This helped and was an easy quick fix, but the limitations were apparent.
+<br/>
+<br/>As I could only filter within a single directory I could not find duplicates when they existed outside of the directory of the original file. Unfortunately this appears to be the majority case for duplicate files.
+<br/>
+<br/>While the TTH sort made it very easy to spot exact duplicates small changes made to a file would make it impossible to use TTH. By small changes I mean changes which do not affect the function of a file but change file size or signature values. Examples would be ID3, IPTC or information files added to compressed archives.
+<br/>
+<br/>The requests here are:
+<br/><strong class="text-strong"><em class="text-italics">A:</em></strong> An automated duplicate file finder to sort and compare files by multiple attributes such as filename, file size and (especially) TTH. It should handle duplicates discovery automatically and display them for the user to make a final decision on disposition.
+<br/><strong class="text-strong"><em class="text-italics">B:</em></strong> Like in example 1, request B; A filter function similar to ADL Search for the Download Queue. However it should display the filtered files as if they were in a single directory so that sorting can be done by hand to find similar but not duplicate files (ie: where ID3 or metadata is changed but the data load is the same).
+<br/>
+<br/><strong class="text-strong"><span style="text-decoration: underline">3. Looking for Duplicates from Outside the Download Queue tab</span></strong>
+<br/>Then it dawned on me that I would miss a whole class of duplicate files if I focused only on those found in the  Download Queue.  The class I thought of were those files which I currently had or had already discarded. Two sources for files to be removed from the Download Queue sprang immediately to mind, those files that I had downloaded and those files which were on my system.
+<br/>
+<br/>Since I knew the search and filter functions available weren't going to meet my needs I decided to do a quick script to match TTH values from the two sources I noted against queue.xml (after exiting DC++). Two things became apparent after a little searching. First, there are no TTH values in the Download.log file. Second, there are no easily discovered ways to gather TTH values for local files. I did find a way around the second problem, kinda.
+<br/>
+<br/>I looked around for integrity checkers that I could use to create file hashes and none seemed to come up with a good test hash. Looking into it I realized that I didn't need a simple Tiger hash, but one that did a <a class="postlink" href="http://open-content.net/specs/draft-jchapweske-thex-02.html">THEX</a> (apparently a Tiger/1024 hash would be just as well). I asked <a class="postlink" href="http://xavvy.com/">Gojomo</a> and found out that <a class="postlink" href="http://bitzi.com/">Bitzi</a> would return the needed hash value but for this use should have submission to the Bitzi DB supressed (bitcollider -p). Yay! This is still a problem as bitcollider is suboptimal for scanning large numbers of files like integrity checkers do (<a class="postlink" href="http://www.slavasoft.com/fsum/overview.htm">fsum</a>, md5sum, <a class="postlink" href="http://www.tripwire.org/">tripwire</a>, etc.).
+<br/>
+<br/>Also, to deal with query to and from XML I found a tool called <a class="postlink" href="http://xmlstar.sourceforge.net/">XML Startlet</a> that looks ideal, so far.
+<br/>
+<br/>As I prepare to put some time into this I thought I would write up these requests. I think most of the function I am requesting already exists in DC++ and could be adapted to the particular tasks I mentioned.
+<br/>
+<br/>The requests are:
+<br/><strong class="text-strong"><em class="text-italics">A:</em></strong> First and foremost, please add a TTH argument to the download.log configuration format. This one little change would make a world of difference when clearing detritus from the Download Queue, either by additional functions in future DC++ versions or with external modification of the queue.xml. Another option would be to have an alternative download log file that could be written as an XML file for easier parsing.
+<br/><strong class="text-strong"><em class="text-italics">B:</em></strong> Allow creation of TTH hashes of any files on a computer, not just those shared. It would seem easiest to add a File Management tab with the same range of functions as the Sharing area in configuration. If you implement it this way please let the hashes be written to an XML file accessible by external applications. (But an external implementation of a command line THEX/TTH tool would be a powerful tool for many uses, even outside of DC++.)
+<br/><strong class="text-strong"><em class="text-italics">C:</em></strong> Add the ability to query TTH values from the Download Queue against TTH values in the Download.log file and those files stored locally on the computer/listed in the File Management area (or from a user maintained XML file of file names, sizes and TTH values).
+<br/>
+<br/>Would asking for the inclusion of a complete file manager/explorer type interface be too much? It would be nice. <img alt=":-)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> And for Christmas I would like ...
+<br/>
+<br/>If you have any questions about any of these requests or want to chat about design philosophy, or whatever, please feel free to post, email or IM me. When I finish doing whatever it is I end up doing I will try to get it into a final version for others to use and make it available.
+<br/>
+<br/>Dan
+<br/>
+<br/>.s
+<br/>/s
+<br/>.damnit!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65699">
+<div class="inner">
+<dl class="postprofile" id="profile65699">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65699">
+<h3><a href="#p65699"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-10-04 05:33
+			</p>
+<div class="content">Your coherent thoughts and effort are a breath of fresh air. Kudos to you. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>
+<br/>
+<br/>There is only one of your requests that already exists in DC++ and that is 2b. In the lower left corner of the download queue you will find a checkbox. That will toggle the queue between tree view and flat file view, allowing you to do sorts on any criteria you like.
+<br/>
+<br/>For the other requests, I agree with most of what you say is not available, but I would like to point out the following:
+<br/>
+<br/>DC++ has the ability (as you are no doubt aware) to open other people's open file lists. You can use this same feature to open up your own file list. This gives you access to the ADL search filters. These are not dynamic though, and would require re-opening the list each time you change a filter. This will also give you access to the Find feature. This will only let you search on file name though, not TTH.
+<br/>
+<br/><a class="postlink" href="http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=97">Bugzilla Bug 97 filter for the download queue</a> - As you can see, this has already been suggested. The request however isn't the most clearly written thing in the world and I would be happy to mark it as a duplicate if you were to submit a clearer request.
+<br/>
+<br/><a class="postlink" href="http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=29">Bugzilla Bug 29: blacklist for download sources</a> - You can add your comments here, and vote for it.
+<br/>
+<br/><a class="postlink" href="http://dcplusplus.sourceforge.net/cgi-bin/bugzilla/show_bug.cgi?id=69">Bugzilla Bug 69: Don't queue a file if a one with a matching TTH is already shared</a> - Ditto.
+<br/>
+<br/><blockquote><div><cite>WollyHood wrote:</cite>Would asking for the inclusion of a complete file manager/explorer type interface be too much? It would be nice.</div></blockquote>
+<br/>As far as I am aware, something similar is on a ToDo list somewhere.
+<br/>
+<br/>That's the bulk of my comments. I have other minor comments but they can wait till later.</div>
+<div class="signature" id="sig65699">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65701">
+<div class="inner">
+<dl class="postprofile" id="profile65701">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65701">
+<h3><a href="#p65701"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2004-10-04 07:30
+			</p>
+<div class="content">3B:
+<br/><!-- m --><a class="postlink" href="http://www.google.com/search?q=tthsum&amp;sourceid=opera&amp;num=0&amp;ie=utf-8&amp;oe=utf-8">http://www.google.com/search?q=tthsum&amp;s ... 8&amp;oe=utf-8</a><!-- m -->
+<br/>fetch the win32-bin version.</div>
+<div class="signature" id="sig65701"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p65729">
+<div class="inner">
+<dl class="postprofile" id="profile65729">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 366</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-06 07:46</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65729">
+<h3><a href="#p65729"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18878">PseudonympH</a></strong> » </span>2004-10-04 20:24
+			</p>
+<div class="content">3A: (This should work, but I don't have MSVC++ so I can't compile/test it.)
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>diff -uNr dcplusplus.orig/client/DownloadManager.cpp dcplusplus/client/DownloadManager.cpp<br/>--- dcplusplus.orig/client/DownloadManager.cpp  2004-10-04 16:13:33.046875000 -0400<br/>+++ dcplusplus/client/DownloadManager.cpp       2004-10-04 16:17:52.812500000 -0400<br/>@@ -722,6 +722,7 @@<br/>                params["speed"] = Util::formatBytes(d-&gt;getAverageSpeed()) + "/s";<br/>                params["time"] = Util::formatSeconds((GET_TICK() - d-&gt;getStart()) / 1000);<br/>                params["sfv"] = Util::toString(d-&gt;isSet(Download::FLAG_CRC32_OK) ? 1 : 0);<br/>+               params["tth"] = d-&gt;getTTH()-&gt;toBase32();<br/>                LOG(DOWNLOAD_AREA, Util::formatParams(SETTING(LOG_FORMAT_POST_DOWNLOAD), params));<br/>        }<br/></code></pre></div></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p65811">
+<div class="inner">
+<dl class="postprofile" id="profile65811">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content65811">
+<h3><a href="#p65811"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-10-06 16:16
+			</p>
+<div class="content"><blockquote><div><cite>PseudonympH wrote:</cite>3A: (This should work, but I don't have MSVC++ so I can't compile/test it.)</div></blockquote>
+<br/>I submitted this, along with an upload equivalent and documentation changes, to arne.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			5 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

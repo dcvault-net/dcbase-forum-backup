@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Help with bot (kick doesn't work) - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="26" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=26" itemprop="url"><span itemprop="title">Other</span></a></span>
+<span class="crumb" data-forum-id="8" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=8" itemprop="url"><span itemprop="title">Hubs and scripts</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=8&amp;t=4733">Help with bot (kick doesn't work)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Which hub software is the best? Where can I find script XXX? Discuss it here...(no, this is not for advertising your hub...)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			12 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p25556">
+<div class="inner">
+<dl class="postprofile" id="profile25556">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-02 22:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25556">
+<h3 class="first"><a href="#p25556">Help with bot (kick doesn't work)</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a></strong> » </span>2003-08-14 03:34
+			</p>
+<div class="content"><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    Case "kick"<br/>      sName=sText<br/>      If curUser.bOperator Then<br/>        curUser.PrivateMessage CStr(sBotName), "you have used Kick on "+sName+"."<br/>        If colUsers.Online(CStr(sName)) Then<br/>          curUser.PrivateMessage CStr(sBotName), sName+" is online."<br/>          sName.Kick<br/>          curUser.PrivateMessage CStr(sBotName), sName+" has been kicked XD"<br/>        Else <br/>          curUser.PrivateMessage CStr(sBotName), sName+" is NOT online. Unable to kick "+sName+"."<br/>        End If<br/>      Else<br/>        curUser.PrivateMessage CStr(sBotName), "Only operators may use the kick command!"<br/>      End If</code></pre></div>
+<br/>
+<br/>The sName.Kick line doesn't seem to work <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>. Can anyone please help me? Thanks.</div>
+<div class="signature" id="sig25556">--SKoRPioN9x, Thy superior.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25557">
+<div class="inner">
+<dl class="postprofile" id="profile25557">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-02 22:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25557">
+<h3><a href="#p25557"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a></strong> » </span>2003-08-14 03:37
+			</p>
+<div class="content">By the way, part of this bot has an Emote function, where you PrivateMessage "me eats shit" for example, and it says in the main chat "&lt;+&gt; skor9x eats shit &lt;+&gt;" (using my own name as an example, though i don't really eat shit <img alt=":lol:" class="smilies" src="/images/smilies/icon_lol.gif" title="Laughing"/>). Has that been done before or anything (i'm sure it has....and probably better so). If not, I can post that part of the code here, too <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig25557">--SKoRPioN9x, Thy superior.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25719">
+<div class="inner">
+<dl class="postprofile" id="profile25719">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-02 22:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25719">
+<h3><a href="#p25719"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a></strong> » </span>2003-08-15 20:53
+			</p>
+<div class="content">Can't anyone help me??? Anyway, since the black out (i live in CT, so i was in the dark for like 8 hours), i lost the script, and re-wrote it a little differently :
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Case "!kick"<br/>      If sText="" Then<br/>        curUser.PrivateMessage cstr(sBotName), "Who do you want to kick???"<br/>      Else<br/>        sName=sText<br/>        If curUser.bOperator Then <br/>          curUser.PrivateMessage CStr(sBotName), "you have used Kick on "+sName+"." <br/>          If colUsers.Online(CStr(sName)) Then <br/>            curUser.PrivateMessage CStr(sBotName), sName+" is online." <br/>            sName.Kick <br/>            curUser.PrivateMessage CStr(sBotName), sName+" has been kicked XD" <br/>          Else <br/>            curUser.PrivateMessage CStr(sBotName), sName+" is NOT online. Unable to kick "+sName+"." <br/>          End If <br/>        Else <br/>          curUser.PrivateMessage CStr(sBotName), "Only operators may use the kick command!" <br/>        End If<br/>      End If</code></pre></div>
+<br/>The difference here is that this works in the main chat, so the person doesn't have to PM the bot. But it has teh same problem: the sName.Kick doesn't work...</div>
+<div class="signature" id="sig25719">--SKoRPioN9x, Thy superior.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25721">
+<div class="inner">
+<dl class="postprofile" id="profile25721">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-02 22:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25721">
+<h3><a href="#p25721"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a></strong> » </span>2003-08-15 21:07
+			</p>
+<div class="content">Well I figured out that it's not ".Kick" that's not working, it's the sName that's messed up. I also tried "Disconnect()" and that also doesn't work. I have included another line using sName, and that also doesn't work (the one that checks to see if the person being kicked is an Operator). Here's the whole bot's code:
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Dim sBotName,bPrivate,sUsers<br/><br/>Sub Main()<br/>  sBotName = "DWIbot"<br/>  bPrivate = False<br/>  frmHub.RegisterBotName(sBotName)<br/>End Sub<br/><br/>Sub DataArival (curUser, sCurData)<br/>  If Left(sCurData,Len(sBotName)+6)="$To: "+sBotName+" " Then<br/>    s=Mid(CStr(sCurData),InStr(CStr(sCurData),"&gt;")+2)<br/>    If InStr(s," ")&gt;0 Then<br/>      sCmd=Left(s,InStr(s," ")-1)<br/>      sText=Mid(s,InStr(s," ")+1)<br/>    Else<br/>      sCmd=s<br/>    End If<br/>    bLeaving=False<br/>    Select Case LCase(sCmd)<br/>    <br/>    Case "me"<br/>      If sText="" Then<br/>        curUser.PrivateMessage cstr(sBotName), "You need to say more than that (example: 'me eats shit')" <br/>      Else<br/>        s=curUser.sName+" "+sText <br/>        colUsers.SendChatToAll cstr("+"), s+" &lt;+&gt;"<br/>      End If<br/><br/>    End Select<br/>  <br/>  ElseIf Left(sCurData,1)="&lt;" Then<br/>    s=Mid(CStr(sCurData),InStr(CStr(sCurData),"&gt;")+2)<br/>    <br/>    If InStr(s," ")&gt;0 Then<br/>      sCmd=Left(s,InStr(s," ")-1)<br/>      sText=Mid(s,InStr(s," ")+1)<br/>    Else<br/>      sCmd=s<br/>    End If<br/>    <br/>    Select Case LCase(sCmd)<br/>    <br/>    Case "!kick"<br/>      If sText="" Then<br/>        curUser.PrivateMessage cstr(sBotName), "Who do you want to kick???"<br/>      Else<br/>        sName=sText<br/>        If curUser.bOperator Then <br/>          curUser.PrivateMessage CStr(sBotName), "you have used Kick on "+sName+"." <br/>          If colUsers.Online(CStr(sName)) Then <br/>            If sName.bOperator=True Then<br/>              curUser.PrivateMessage CStr(sBotName), sName+" is an Operator. You may not boot operators &gt;:("<br/>            Else<br/>              curUser.PrivateMessage CStr(sBotName), sName+" is online." <br/>              sName.kick<br/>              colUsers.SendChatToAll CStr(sBotName), sName+" has been kicked by "+curUser+" XD" <br/>            End If<br/>          Else <br/>            curUser.PrivateMessage CStr(sBotName), sName+" is NOT online. Unable to kick "+sName+"." <br/>          End If <br/>        Else <br/>          curUser.PrivateMessage CStr(sBotName), "Only operators may use the kick command!" <br/>        End If<br/>      End If<br/>      <br/>    Case "!help"<br/>      curUser.PrivateMessage cstr(sBotName), "To emote, Private Message DWIbot with a message that starts with 'me' (example: 'me eats shit'). More features will be made available soon."<br/>    End Select<br/>  End If<br/>  <br/>End Sub</code></pre></div></div>
+<div class="signature" id="sig25721">--SKoRPioN9x, Thy superior.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25725">
+<div class="inner">
+<dl class="postprofile" id="profile25725">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-02 22:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25725">
+<h3><a href="#p25725"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a></strong> » </span>2003-08-15 22:44
+			</p>
+<div class="content">The kick part is now <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>      Case "!kick"<br/>        If sText="" Then<br/>          curUser.PrivateMessage cstr(sBotName), "On whom would you like to cast kick???"<br/>        Else<br/>          sUser=cstr(sText)<br/>          If curUser.bOperator Then <br/>            curUser.PrivateMessage CStr(sBotName), "Attempting to cast Kick on "+sUser+"." <br/>            If colUsers.Online(CStr(sUser)) Then <br/>              If colUsers.cstr(sUser).bOperator Then<br/>                curUser.PrivateMessage CStr(sBotName), sUser+" is an Operator. Operators are immune to the Kick spell &gt;:("<br/>              Else<br/>                curUser.PrivateMessage CStr(sBotName), sUser+" is present." <br/>                colUsers.cstr(sUser).kick<br/>                colUsers.SendChatToAll CStr(sBotName), "Kick has been successfuly cast on "+sUser+" by "+curUser+" XD" <br/>              End If<br/>            Else <br/>              curUser.PrivateMessage CStr(sBotName), sUser+" is NOT present. Spell was unsuccessful." <br/>            End If <br/>          Else <br/>            curUser.PrivateMessage CStr(sBotName), "You do not have enough MP to cast the Kick spell!" <br/>          End If<br/>        End If</code></pre></div>
+<br/>......it still doesn't work <img alt=":(" class="smilies" src="/images/smilies/icon_sad.gif" title="Sad"/>. Someone please help me.</div>
+<div class="signature" id="sig25725">--SKoRPioN9x, Thy superior.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25726">
+<div class="inner">
+<dl class="postprofile" id="profile25726">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-02 22:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25726">
+<h3><a href="#p25726"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a></strong> » </span>2003-08-15 22:47
+			</p>
+<div class="content">Why aren't there "Edit" buttons on these forums?  <img alt=":?" class="smilies" src="/images/smilies/icon_confused.gif" title="Confused"/>
+<br/>
+<br/>Anyway, it seems to get stuck on that colUsers.cstr(sUser).bOperator line... nothing after that happens. DWIbot only PMs "Attempting to cast kick on "+sUser to me. It doesn't say if the person who i'm trying to kick is an operator, nor does it go to the Else part. It just stops at that line.</div>
+<div class="signature" id="sig25726">--SKoRPioN9x, Thy superior.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25727">
+<div class="inner">
+<dl class="postprofile" id="profile25727">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-02 22:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25727">
+<h3><a href="#p25727"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a></strong> » </span>2003-08-15 22:58
+			</p>
+<div class="content">Thanks for your help, guys Ã‚Â¬_Ã‚Â¬. I got it to work myself (needed "ItemByName")</div>
+<div class="signature" id="sig25727">--SKoRPioN9x, Thy superior.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25729">
+<div class="inner">
+<dl class="postprofile" id="profile25729">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6543">InnerCity</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 105</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-17 05:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25729">
+<h3><a href="#p25729"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6543">InnerCity</a></strong> » </span>2003-08-15 23:20
+			</p>
+<div class="content">use   curUser.Kick()
+<br/>
+<br/>the best help that the scripters can give you is their works
+<br/>take a look at some of them
+<br/>
+<br/><!-- m --><a class="postlink" href="http://gadget.no-ip.info/">http://gadget.no-ip.info/</a><!-- m -->
+<br/><!-- m --><a class="postlink" href="http://dc.ww-ei.com/index.php?&amp;act=scripts">http://dc.ww-ei.com/index.php?&amp;act=scripts</a><!-- m --></div>
+<div class="signature" id="sig25729">Hi hi hoo</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25730">
+<div class="inner">
+<dl class="postprofile" id="profile25730">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 13</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-08-02 22:05</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25730">
+<h3><a href="#p25730"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=10120">skorpion9x</a></strong> » </span>2003-08-16 00:16
+			</p>
+<div class="content">Wouldn't curuser.kick kick the person who used the !kick command?
+<br/>Anyway, by looking at other works is how i figured out how to fix it; in fact, that's how i started the bot in the first place. Anyway, I have another problem on my hands now. See, I want it to PM the person being kicked when they get kicked, but that doesn't work. No matter where I put the line to PM them, if the kick is successful, they don't get the message:<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>      Case "!kick"<br/>        If sText="" Then<br/>          curUser.PrivateMessage cstr(sBotName), "On whom would you like to cast kick???"<br/>          colUsers.SendChatToAll cstr(sBotName), cstr(curUser.sName)+" has attempted to cast kick on... nobody"<br/>        Else<br/>          sUser=cstr(sText)<br/>          If curUser.bOperator Then <br/>            curUser.PrivateMessage CStr(sBotName), "Attempting to cast Kick on "+sUser+"." <br/>            If colUsers.Online(CStr(sUser)) Then <br/>              colUsers.ItemByName(cstr(sUser)).PrivateMessage cstr(sBotName), cstr(curUser.sName)+" has attempted to cast Kick on you."<br/>              If colUsers.ItemByName(cstr(sUser)).bOperator Then<br/>                curUser.PrivateMessage CStr(sBotName), sUser+" is an Operator. Operators are immune to the Kick spell &gt;:("<br/>              Else<br/>                curUser.PrivateMessage CStr(sBotName), sUser+" is present." <br/>                colUsers.ItemByName(CStr(sUser)).Kick<br/>                colUsers.SendChatToAll cstr(sBotName), "Kick has been successfully cast on "+cstr(sUser)+" by "+curUser.sName+" XD."<br/>                curUser.PrivateMessage CStr(sBotName), "Spell Successful"<br/>              End If<br/>            Else <br/>              curUser.PrivateMessage CStr(sBotName), sUser+" is NOT present. Spell was unsuccessful." <br/>            End If <br/>          Else <br/>            curUser.PrivateMessage CStr(sBotName), "You do not have enough MP to cast the Kick spell!" <br/>          End If<br/>        End If</code></pre></div>It's supposed to send the message to the person right after it finds out if they're online, happens before they actually get kicked, but it doesn't send the message. It does send the message to other operators, and myself, when someone uses it.</div>
+<div class="signature" id="sig25730">--SKoRPioN9x, Thy superior.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25738">
+<div class="inner">
+<dl class="postprofile" id="profile25738">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6543">InnerCity</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 105</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-17 05:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25738">
+<h3><a href="#p25738"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6543">InnerCity</a></strong> » </span>2003-08-16 02:43
+			</p>
+<div class="content">this is a extract of general bot, use it as model
+<br/>there are some functions used that doesnt appear in this extract, but you can find this fucntions if download the general bot script
+<br/>
+<br/> <div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Case sCmdPrefix+"kick"<br/>   If sUser="" Then<br/>    sA="Please give a username"<br/>   ElseIf bIsIP(sUser) Then<br/>    sA="Can't kick an IP number"<br/>   ElseIf Not colUsers.Online(CStr(sUser)) Then<br/>    sA="Can't kick because user '"+CStr(sUser)+"' is not here right now"<br/>   ElseIf bIsOP(sUser) And bIsPowerOP(curUser.sName)=False Then<br/>    sA="Can't kick an operator"<br/>   Else<br/>    sA="The user '"+CStr(sUser)+"' was kicked by "+CStr(curUser.sName)+" because: "+sInfo+". His IP was: "+CStr(colUsers.ItemByName(CStr(sUser)).IP)<br/>    colUsers.ItemByName(CStr(sUser)).PrivateMessage CStr(sBotName),"You are being kicked because: "+sInfo<br/>    frmHub.DoEventsForMe<br/>    colUsers.ItemByName(CStr(sUser)).Kick<br/>  ...<br/>   End If</code></pre></div></div>
+<div class="signature" id="sig25738">Hi hi hoo</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p25739">
+<div class="inner">
+<dl class="postprofile" id="profile25739">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6543">InnerCity</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 105</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-17 05:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25739">
+<h3><a href="#p25739"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6543">InnerCity</a></strong> » </span>2003-08-16 02:52
+			</p>
+<div class="content">may need this
+<br/>
+<br/><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>  End Select<br/>  If sA&lt;&gt;"" Then<br/>   If InStr(sA,"\n")&gt;1 Then sA=Replace(sA,"\n",vbCrLf)<br/>   If InStr(sA,"\t")&gt;1 Then sA=Replace(sA,"\t",vbTab)<br/>   If iSecurity=0 Then<br/>    colUsers.SendChatToAll CStr(sBotName),CStr(sA)<br/>   Else<br/>    curUser.SendData CStr("&lt;"+sBotName+" (private)&gt; "+sA)<br/>   End If<br/>  End If<br/> End If</code></pre></div>
+<br/>
+<br/>dont need to use sA variable and others if dont want, take only the structure model</div>
+<div class="signature" id="sig25739">Hi hi hoo</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p25740">
+<div class="inner">
+<dl class="postprofile" id="profile25740">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6543">InnerCity</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 105</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-17 05:35</dd>
+</dl>
+<div class="postbody">
+<div id="post_content25740">
+<h3><a href="#p25740"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6543">InnerCity</a></strong> » </span>2003-08-16 03:24
+			</p>
+<div class="content">sorry, this is not the real end, anyway, try to use
+<br/>colUsers.SendChatToAll CStr(sBotName),CStr(sA)
+<br/>curUser.PrivateMessage CStr(sBotName),CStr(sA)
+<br/>
+<br/>and define sA as you want</div>
+<div class="signature" id="sig25740">Hi hi hoo</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			12 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=8">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Hubs and scripts”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

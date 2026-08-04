@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>DC++ patching - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="25" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=25" itemprop="url"><span itemprop="title">Developers</span></a></span>
+<span class="crumb" data-forum-id="7" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=7" itemprop="url"><span itemprop="title">Programmer's Help</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=7&amp;t=4301">DC++ patching</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Problems compiling? Don't understand the source code? Don't know how to code your feature? Post here.<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p23010">
+<div class="inner">
+<dl class="postprofile" id="profile23010">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9742">Saurod</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-20 20:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23010">
+<h3 class="first"><a href="#p23010">DC++ patching</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9742">Saurod</a></strong> » </span>2003-07-20 20:33
+			</p>
+<div class="content">I just started digging into the DC++ source because I felt some features were missing and maybe I could help out fix a bug or two.  I'm wondering what the proper procedure for submitting patches is. Say I add a new feature, must there be a feature request first? Should I submit a patch as an attachment in the feature request or somewhere else? In what format should the patch be in?
+<br/>
+<br/>Currently I've added three features into my test source:
+<br/>* Per favorite user configurable auto grant slot (has been requested several months ago and I think somebody worked on it but it never got into a release)
+<br/>* Up/down arrows on list view column headers (has not been requested but it annoys me not to see how the items are sorted)
+<br/>* Info tips on list view items (has not been requested but I just don't like resizing the column just to see long share descriptions or whatever it may be)
+<br/>
+<br/>Is it just me or is this something that perhaps other users would want as well?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23011">
+<div class="inner">
+<dl class="postprofile" id="profile23011">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23011">
+<h3><a href="#p23011"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2003-07-20 20:37
+			</p>
+<div class="content"><blockquote><div><cite>compile.txt wrote:</cite>Submitting patches<br/><br/>If you think you've done something that more people could use, you can always submit a patch for inclusion in the original distribution. I will then consider whether I like the patch or not based on things that might seem to be completely random, which just might be the case. Popular reasons for rejecting a patch include, but are not limited to, ugly code, abusable features, feature that I don't like that bloat the applications and incompatibility with othermodifications I've already done.<br/><br/>To increase the chances of your patch being accepted, mail them to me (<!-- e --><a href="mailto:j_s@telia.com">j_s@telia.com</a><!-- e -->) as diffs against the latest code you can find (for the moment, it should be the cvs repository on sourceforge, but sometimes I forget to update it, so check the source code distribution of the latest release as well...). You can find a lot of<br/>information about diff and patch by googling for it.<br/><br/>By submitting a patch, you agree to that I get copyright of it. This to avoid stupid situations later on where the copyright is split out over a million people, each of which could stop further distribution of DC++. If you don't like this, start your own distribtution, if you're lucky it might become more popular than the original =).</div></blockquote></div>
+<div class="signature" id="sig23011">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23016">
+<div class="inner">
+<dl class="postprofile" id="profile23016">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9742">Saurod</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-20 20:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23016">
+<h3><a href="#p23016"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9742">Saurod</a></strong> » </span>2003-07-20 20:47
+			</p>
+<div class="content">Maybe I should have mentioned that I had read that... So submitting patches to the author is the way to go even though there's such a nice feature request tracker? If I just submit a patch nobody will know that the feature has been requested and if it will make it into a future release or if it has been turned down (and for what reason).</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23021">
+<div class="inner">
+<dl class="postprofile" id="profile23021">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23021">
+<h3><a href="#p23021"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2003-07-20 22:25
+			</p>
+<div class="content">I guess there would be no harm in attaching the patches to the appropriate request in the Feature Tracker. I'm not sure how often that is checked though. Unless one of the DC++ code contributers pops their heads in, the best bet would probably be to ask <strong class="text-strong">arne</strong> himself what the situation is.
+<br/>
+<br/>Also, I forgot to mention earlier - I like the changes you've made and hope they will be incorporated into the next version. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig23021">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23116">
+<div class="inner">
+<dl class="postprofile" id="profile23116">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23116">
+<h3><a href="#p23116">Re: DC++ patching</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-21 16:31
+			</p>
+<div class="content"><blockquote><div><cite>Saurod wrote:</cite>* Per favorite user configurable auto grant slot (has been requested several months ago and I think somebody worked on it but it never got into a release)</div></blockquote><br/>Me.  I hope you didn't just modify the User class, that's why mine was rejected.<br/><br/><blockquote class="uncited"><div>* Up/down arrows on list view column headers (has not been requested but it annoys me not to see how the items are sorted)</div></blockquote><br/>Good, this was on my todo list.  I thought it'd be nice to make it tri-state sorting too.<br/><br/><blockquote class="uncited"><div>* Info tips on list view items (has not been requested but I just don't like resizing the column just to see long share descriptions or whatever it may be)</div></blockquote>
+<br/>I don't mind column resizing since I saw the tip of double-clicking the separator to auto-size the column. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  But I'm sure it'd be a wecome addition.
+<br/>
+<br/>Welcome to the team.  Just follow the instructions above that are included in compile.txt in the source.  
+<br/>
+<br/>If there are feature tracker items for what you coded, put patches on there for posterity.  However, you should also mail them to arne's mail (either the one in the source, in the readme, or his sourceforge alias) so that he gets them in a timely fashion.  I think only Iceman[grrr] gets notifications of all changes to tracker items.  I do not, and I'm a SF project member.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23322">
+<div class="inner">
+<dl class="postprofile" id="profile23322">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9742">Saurod</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-20 20:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23322">
+<h3><a href="#p23322"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9742">Saurod</a></strong> » </span>2003-07-22 20:54
+			</p>
+<div class="content"><blockquote class="uncited"><div>Saurod wrote:<br/>* Per favorite user configurable auto grant slot (has been requested several months ago and I think somebody worked on it but it never got into a release)<br/><br/>Me. I hope you didn't just modify the User class, that's why mine was rejected.<br/></div></blockquote><br/><br/>I didn't just change the User class. I also had to change the HubManager (for saving the auto grant field per favorite user) and UploadManager (to check if the user should get a slot).<br/><br/><blockquote class="uncited"><div>Quote:<br/>* Up/down arrows on list view column headers (has not been requested but it annoys me not to see how the items are sorted)<br/><br/>Good, this was on my todo list. I thought it'd be nice to make it tri-state sorting too. </div></blockquote>
+<br/>
+<br/>Yeah tri-state would be nice, especially in the MainFrame!!! (Otherwise the info tip will blink quite a lot when you've sorted on user name or whatever and people are trying to connect to you all the time. )
+<br/>
+<br/>One final question about patching though. It can be quite cumbersome maintaining (and testing) one source tree per feature you've implemented. Is it acceptable to send a single patch for multiple features? It's easier for me with a single experimental source tree but if I was the one getting patches and I didn't want all the features it could be quite a lot of work to remove the unwanted code.
+<br/>
+<br/>Thanks for the welcome! I hope I'll be around quite some time.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23450">
+<div class="inner">
+<dl class="postprofile" id="profile23450">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23450">
+<h3><a href="#p23450"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-23 18:20
+			</p>
+<div class="content"><blockquote><div><cite>Saurod wrote:</cite>I didn't just change the User class. I also had to change the HubManager (for saving the auto grant field per favorite user) and UploadManager (to check if the user should get a slot).</div></blockquote><br/>Well, it was my understanding that Arne though it was wasteful to have a small list of favorite users, yet use the general Users list to store those attributes.  I think he was looking for a map between user nick (hub included? -- something to think about since DC++ handles nicks as globally unique.. mostly) and favorite user/granted user status.  I'd probably make alittle subclass if I did it again.<br/><br/><br/><blockquote class="uncited"><div>Yeah tri-state would be nice, especially in the MainFrame!!! (Otherwise the info tip will blink quite a lot when you've sorted on user name or whatever and people are trying to connect to you all the time. )</div></blockquote><br/>Plus, a lot of other applications behave that way (sort ascending, sort descending, and no sort), so it's natural to think that DC++ should as well.<br/><br/>Did you try your image maps with non-standard colors?  I took note of the 3D_FACE  style while creating the ImageList, but I haven't actually implemented anything myself...<br/><br/><blockquote class="uncited"><div>One final question about patching though. It can be quite cumbersome maintaining (and testing) one source tree per feature you've implemented. Is it acceptable to send a single patch for multiple features? It's easier for me with a single experimental source tree but if I was the one getting patches and I didn't want all the features it could be quite a lot of work to remove the unwanted code.</div></blockquote>
+<br/>I hear you loud and clear.  I always like to send individual feature patches, Arne might not accept them all, and if not, separate patches make his job easier...  I generally make a clean copy of the source tree, merge the feature that I want a patch for into it, compile it, run it, then do a diff with appropriate options (he wants unified for sure).  I've found no tool that lets you split differences into many .diff files, though that would, in my mind, be a killer app.
+<br/>
+<br/>Share and Enjoy!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p23501">
+<div class="inner">
+<dl class="postprofile" id="profile23501">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9742">Saurod</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 7</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-07-20 20:15</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23501">
+<h3><a href="#p23501"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=9742">Saurod</a></strong> » </span>2003-07-23 22:26
+			</p>
+<div class="content"><blockquote class="uncited"><div>Saurod wrote:<br/>I didn't just change the User class. I also had to change the HubManager (for saving the auto grant field per favorite user) and UploadManager (to check if the user should get a slot).<br/><br/>Well, it was my understanding that Arne though it was wasteful to have a small list of favorite users, yet use the general Users list to store those attributes. I think he was looking for a map between user nick (hub included? -- something to think about since DC++ handles nicks as globally unique.. mostly) and favorite user/granted user status. I'd probably make alittle subclass if I did it again. </div></blockquote><br/><br/>Ok I can understand that. For future functionality of favorite users it's of course best to separate the fav user information into a separate class. I hope it's ok to store a pointer to, say, a FavoriteUser instance in the User though so one doesn't have to do a lookup every time you want to know if the user is indeed a favorite user. The cost is the same as storing the bool (because of padding...) but future functionality have a cost linearly proportional to the number of fav users. <br/><br/>(snip)<br/><br/><blockquote class="uncited"><div>Did you try your image maps with non-standard colors? I took note of the 3D_FACE style while creating the ImageList, but I haven't actually implemented anything myself... </div></blockquote>
+<br/>
+<br/>Every ExListViewCtrl creates two 8x8 bitmaps in code and handle WM_SETTINGCHANGE (there was no easy way to handle WM_SYSCOLORCHANGE but I don't expect a lot of WM_SETTINGCHANGE messages either...). Standard colors (COLOR_3DFACE, COLOR_3DHIGHLIGHT and COLOR_3DSHADOW) are used so the arrows will always look mighty fine  <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/>
+<br/>
+<br/>(snip)
+<br/>
+<br/>Ok one source tree per feature it is :\</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p23565">
+<div class="inner">
+<dl class="postprofile" id="profile23565">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content23565">
+<h3><a href="#p23565"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2003-07-24 15:05
+			</p>
+<div class="content"><blockquote><div><cite>Saurod wrote:</cite>Every ExListViewCtrl creates two 8x8 bitmaps in code and handle WM_SETTINGCHANGE (there was no easy way to handle WM_SYSCOLORCHANGE but I don't expect a lot of WM_SETTINGCHANGE messages either...). Standard colors (COLOR_3DFACE, COLOR_3DHIGHLIGHT and COLOR_3DSHADOW) are used so the arrows will always look mighty fine  <img alt="8)" class="smilies" src="/images/smilies/icon_cool.gif" title="Cool"/> </div></blockquote><br/><br/>Sounds like the right way to do it. <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> <br/><br/><blockquote class="uncited"><div>Ok one source tree per feature it is :\</div></blockquote>
+<br/>It's what works for me... Do you have a good merge tool?  I tested a couple, and settled on Araxis Merge.  I didn't go the full route and get their 3 way merge version, but the standard works fine.  xAyiDe from the dev <a class="postlink inert" href="#" title="Disabled in this archive">hub</a> prefers Beyond Compare.  Either of those should lessen the amount of work you'll have to do.
+<br/>
+<br/>Share and Enjoy!</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			9 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=7">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Programmer's Help”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

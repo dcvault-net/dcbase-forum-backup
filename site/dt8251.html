@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>I added some new features to DC++.... - DC++</title>
+   
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/stylesheet.css" rel="stylesheet"/>
+<link href="/styles/prosilver/theme/en/stylesheet.css" rel="stylesheet"/>
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+<link href="/overrides.css" rel="stylesheet"/></head>
+<body class="nojs notouch section-viewtopic ltr" id="phpbb">
+<div class="wrap" id="wrap">
+<a accesskey="t" class="top-anchor" id="top"></a>
+<div id="page-header">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div class="site-description" id="site-description">
+<a class="logo" href="/dcpp_forums/" id="logo" title="Board index"><span class="site_logo"></span></a>
+<h1>DC++</h1>
+<p>DC++ Discussion Forum</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-main linklist" id="nav-main" role="menubar">
+<li class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true" id="quick-links">
+<a class="dropdown-trigger" href="#">
+<i aria-hidden="true" class="icon fa-bars fa-fw"></i><span>Quick links</span>
+</a>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li data-last-responsive="true">
+<a class="inert" href="#" rel="help" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-question-circle fa-fw"></i><span>FAQ</span>
+</a>
+</li>
+<li class="rightside" data-skip-responsive="true">
+<a accesskey="x" class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-power-off fa-fw"></i><span>Logout</span>
+</a>
+</li>
+<li class="nav-search"><a href="/search.html" role="menuitem"><i aria-hidden="true" class="icon fa-search fa-fw"></i><span>Search</span></a></li></ul>
+<ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar">
+<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<span class="crumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a accesskey="h" data-navbar-reference="index" href="/dcpp_forums/" itemprop="url"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+<span class="crumb" data-forum-id="23" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=23" itemprop="url"><span itemprop="title">DC++</span></a></span>
+<span class="crumb" data-forum-id="2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/dcpp_forums/viewforum.php?f=2" itemprop="url"><span itemprop="title">Feature Discussion (Archived)</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a class="anchor" id="start_here"></a>
+<div class="page-body" id="page-body" role="main">
+<h2 class="topic-title"><a href="/dcpp_forums/viewtopic.php?f=2&amp;t=8251">I added some new features to DC++....</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Archived discussion about features (predating the use of Bugzilla as a bug and feature tracker)<br/></div>
+<p>
+<strong>Moderator:</strong> <a class="inert" href="#" title="Disabled in this archive">Moderators</a>
+</p>
+<div class="action-bar bar-top">
+<div class="pagination">
+			18 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="post has-profile bg2" id="p43086">
+<div class="inner">
+<dl class="postprofile" id="profile43086">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18172">mr_asco</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-02-19 06:50</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> FINLAND</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43086">
+<h3 class="first"><a href="#p43086">I added some new features to DC++....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18172">mr_asco</a></strong> » </span>2004-02-19 09:17
+			</p>
+<div class="content">Hi all.
+<br/>
+<br/>I added some new features to DC 0.306.
+<br/>
+<br/>1) New column in public hubs listview, named "Country",
+<br/>where the hub country is shown. Cause dns resolving
+<br/>could take some time (about 3000 hub addresses) it is done
+<br/>asynchronously and list will be updated when all addresses
+<br/>is done. Hub addresses and countries is cached to
+<br/>xml-file for future use and faster resolving (so, only first time
+<br/>it could take some time <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>)). I added also bool setting to the
+<br/>advanced tab where the user can select whether to resolve
+<br/>(show) countries or not.
+<br/>
+<br/>2) Added "hubs list" combobox to the top of public hubs view,
+<br/>where user can select which hubs listing to use. it just handy
+<br/>to switch between different lists directly in hubs view <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/>
+<br/>
+<br/>That all...for now <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p43089">
+<div class="inner">
+<dl class="postprofile" id="profile43089">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43089">
+<h3><a href="#p43089">Re: I added some new features to DC++....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2004-02-19 10:20
+			</p>
+<div class="content"><blockquote><div><cite>mr_asco wrote:</cite>I added some new features to DC 0.306.</div></blockquote><br/>Great! Did you mail a patch to Arne yet? =)<br/><br/><blockquote><div><cite>mr_asco wrote:</cite>1) New column in public hubs listview, named "Country",<br/>where the hub country is shown. Cause dns resolving<br/>could take some time (about 3000 hub addresses) it is done<br/>asynchronously and list will be updated when all addresses<br/>is done. Hub addresses and countries is cached to<br/>xml-file for future use and faster resolving (so, only first time<br/>it could take some time <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>)). I added also bool setting to the<br/>advanced tab where the user can select whether to resolve<br/>(show) countries or not.</div></blockquote><br/>Sounds resource heavy, wouldn't it be easier to just implement hublist.org's XML hublist instead? I'm not sure, but i believe the country codes are already included there. 'Course, that would only work for that list, and not all lists.<br/><br/><blockquote><div><cite>mr_asco wrote:</cite>2) Added "hubs list" combobox to the top of public hubs view,where user can select which hubs listing to use. it just handy<br/>to switch between different lists directly in hubs view <img alt=":D" class="smilies" src="/images/smilies/icon_biggrin.gif" title="Very Happy"/></div></blockquote>
+<br/>Sounds like a nice feature, keep it up!</div>
+<div class="signature" id="sig43089"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p43097">
+<div class="inner">
+<dl class="postprofile" id="profile43097">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18172">mr_asco</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-02-19 06:50</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> FINLAND</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43097">
+<h3><a href="#p43097"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18172">mr_asco</a></strong> » </span>2004-02-19 13:00
+			</p>
+<div class="content"><blockquote class="uncited"><div>Sounds resource heavy, wouldn't it be easier to just implement hublist.org's XML hublist instead? I'm not sure, but i believe the country codes are already included there. 'Course, that would only work for that list, and not all lists. </div></blockquote>
+<br/>
+<br/>Damn...seems like hublist.org contains countries already.  <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/>
+<br/>Need to improve my code little bit. I mean it would check the hublist
+<br/>for country code before trying to resolve hub address....
+<br/>
+<br/>But for other hublists (that contains no country codes) the cache would be nice.  Havent checked yet how resource consuming my implementation really is  <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>  Tested in work (NT4 Celeron400 256Mb)
+<br/>and worked nicely. The only thing what needs to improvement is that resolving algorithm uses sorted array (more than 13000 items <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> hard coded to cpp-file and thus the localization is not possible.  It increased the exe-size about 100kb....</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p43125">
+<div class="inner">
+<dl class="postprofile" id="profile43125">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 1420</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-22 19:37</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43125">
+<h3><a href="#p43125"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=5106">TheParanoidOne</a></strong> » </span>2004-02-19 17:09
+			</p>
+<div class="content">I recommend sending a patch to arne, especially as these seem to be useful functions at first glance. If he doesn't accept it, you'll most likely get feedback on why and what you need to change for it to be accepted.
+<br/>
+<br/>More of this please! <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig43125">The world is coming to an end. Please log off.
+<br/>
+<br/><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">DC++ Guide</a> | <a class="postlink" href="http://www.b.ali.btinternet.co.uk/words/index.html">Words</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p43127">
+<div class="inner">
+<dl class="postprofile" id="profile43127">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43127">
+<h3><a href="#p43127">Re: I added some new features to DC++....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-02-19 17:10
+			</p>
+<div class="content"><blockquote><div><cite>Todi wrote:</cite>Great! Did you mail a patch to Arne yet? =)</div></blockquote>
+<br/>
+<br/>Seconded, just read compile.txt and send arne a mail in the diff format he wants.  =)
+<br/>
+<br/>As for the XML list, if you decide to use it, please make a new patch, Gadget's patch and modifed DC++ works for his list, but the columns are hard-coded, so any competing xml lists won't be able to easily add/remove columns on their own.
+<br/>
+<br/>Edit: do you cache each of the hublists in the dropdown?  That was my primary concern - causing more loads on the limited number of hublists that are in existence.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p43130">
+<div class="inner">
+<dl class="postprofile" id="profile43130">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43130">
+<h3><a href="#p43130"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-02-19 17:15
+			</p>
+<div class="content"><blockquote><div><cite>mr_asco wrote:</cite>The only thing what needs to improvement is that resolving algorithm uses sorted array (more than 13000 items <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/> hard coded to cpp-file and thus the localization is not possible.  It increased the exe-size about 100kb....</div></blockquote>
+<br/>
+<br/>Hmm, so are you doing name lookups, or whois lookups?  DNS lookups on names will be a little inaccurate, I'm not sure how to communicate that uncertainty to the user.  Also, if you did whois records, you probably could create a new country code XML on the fly...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p43137">
+<div class="inner">
+<dl class="postprofile" id="profile43137">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18172">mr_asco</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 3</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-02-19 06:50</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> FINLAND</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43137">
+<h3><a href="#p43137"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18172">mr_asco</a></strong> » </span>2004-02-19 18:36
+			</p>
+<div class="content"><blockquote class="uncited"><div>Hmm, so are you doing name lookups, or whois lookups? DNS lookups on names will be a little inaccurate, I'm not sure how to communicate that uncertainty to the user. Also, if you did whois records, you probably could create a new country code XML on the fly...</div></blockquote><br/><br/>No, my implementation is based on <a class="postlink" href="http://www.ip2nation.com">http://www.ip2nation.com</a><br/>search database, which they chosen to give away free of charge.<br/>Except that i donÃ‚Â´t use database but simple sorted array. Thus<br/>the only time consuming operation is resolving the actual ip-number<br/>from dns-name. So far it seems to work normally (actually i wrote little cmd utility for Linux/windows, called iploc, first <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/>).<br/><br/><blockquote class="uncited"><div> do you cache each of the hublists in the dropdown? That was my primary concern - causing more loads on the limited number of hublists that are in existence.</div></blockquote><br/><br/>I wrote simple HubListManager, which parses the list in settings window. This list is shown in combo. HubManager works as usual and loads one list at the time....Is that what you ment ? (sorry my bad anglish <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/> )<br/><br/><blockquote class="uncited"><div>Great! Did you mail a patch to Arne yet? =)</div></blockquote>
+<br/>
+<br/>Give me just few days, guys and i will... <img alt=":)" class="smilies" src="/images/smilies/icon_smile.gif" title="Smile"/></div>
+<div class="signature" id="sig43137">HUHH...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p43148">
+<div class="inner">
+<dl class="postprofile" id="profile43148">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17285">[B]bongretarded</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 47</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-01-28 00:16</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Auckland New Zealand</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43148">
+<h3><a href="#p43148"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=17285">[B]bongretarded</a></strong> » </span>2004-02-19 20:25
+			</p>
+<div class="content">hmmm i actially really like this feature about the hublist from certain countrys <img alt=";)" class="smilies" src="/images/smilies/icon_wink.gif" title="Wink"/> be good to find all those hidden away new zealand hubs under different names because international bandwidth in new zealand is sooo expensive!!!</div>
+<div class="signature" id="sig43148">A friend indeed is a friend in need a friend with weed is better</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p43232">
+<div class="inner">
+<dl class="postprofile" id="profile43232">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4821">[PT]Devilishly</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 96</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-18 10:57</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oporto, Portugal</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43232">
+<h3><a href="#p43232"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4821">[PT]Devilishly</a></strong> » </span>2004-02-20 19:11
+			</p>
+<div class="content">What about adding to user list a new parameter Ã¢â‚¬Å“CountryÃ¢â‚¬?( or the Country flag), based on user IP ?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p43255">
+<div class="inner">
+<dl class="postprofile" id="profile43255">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 699</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-03-04 17:16</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43255">
+<h3><a href="#p43255"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=1829">Todi</a></strong> » </span>2004-02-20 21:08
+			</p>
+<div class="content"><blockquote><div><cite>[PT]Devilishly wrote:</cite>What about adding to user list a new parameter ?Country?( or the Country flag), based on user IP ?</div></blockquote>
+<br/>Use a CDM if you need this, imho normal clients shouldn't be finding out other clients IP, unless you're an OP.</div>
+<div class="signature" id="sig43255"><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/gettingStarted.html"><strong class="text-strong">Beginner to DC++?</strong> Click me!</a>  ||  <a class="postlink" href="http://www.dslreports.com/faq/dc"><strong class="text-strong">Having a problem with DC++?</strong> Click me!</a></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p43288">
+<div class="inner">
+<dl class="postprofile" id="profile43288">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4821">[PT]Devilishly</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 96</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-04-18 10:57</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Oporto, Portugal</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43288">
+<h3><a href="#p43288"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=4821">[PT]Devilishly</a></strong> » </span>2004-02-21 01:24
+			</p>
+<div class="content"><blockquote><div><cite>Todi wrote:</cite><blockquote><div><cite>[PT]Devilishly wrote:</cite>What about adding to user list a new parameter ?Country?( or the Country flag), based on user IP ?</div></blockquote><br/>Use a CDM if you need this, imho normal clients shouldn't be finding out other clients IP, unless you're an OP.</div></blockquote>Im not suggesting to do so... When we are in public hubs it's interesting to see from where people are(or maybe not...)  <img alt=":roll:" class="smilies" src="/images/smilies/icon_rolleyes.gif" title="Rolling Eyes"/>
+<br/>
+<br/>Best regards,
+<br/>[PT]Devilishly</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p43338">
+<div class="inner">
+<dl class="postprofile" id="profile43338">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43338">
+<h3><a href="#p43338"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-02-21 17:50
+			</p>
+<div class="content"><blockquote><div><cite>mr_asco wrote:</cite>I wrote simple HubListManager, which parses the list in settings window. This list is shown in combo. HubManager works as usual and loads one list at the time....Is that what you ment ? (sorry my bad anglish <img alt=":oops:" class="smilies" src="/images/smilies/icon_redface.gif" title="Embarassed"/> )</div></blockquote>
+<br/>No, that's not quite what I mean.  After downloading the hublist, it's stored in HubManager::publicHubs until the user refreshes it or DC++ exits.  It would be nice to have each of the public hub lists in the dropdown cached into a similar variable when they're initially loaded.  Some users will, no doubt, switch hublists from the dropdown a couple of times during the course of running DC++, so keeping the lists in memory unless they explicitly refresh the displayed one seems to be reasonable.</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p43425">
+<div class="inner">
+<dl class="postprofile" id="profile43425">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 360</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-16 10:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43425">
+<h3><a href="#p43425"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a></strong> » </span>2004-02-22 03:31
+			</p>
+<div class="content"><blockquote><div><cite>Todi wrote:</cite>Use a CDM if you need this, imho normal clients shouldn't be finding out other clients IP, unless you're an OP.</div></blockquote>
+<br/>
+<br/>imo all clients should know all ips in the hub, that would eliminate the possibility to fake search results or hijack grant slots!</div>
+<div class="signature" id="sig43425"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://whyrar.omfg.se">http://whyrar.omfg.se</a> - Guide to RAR and DC behaviour!<br/><a class="postlink" href="http://bodstrom.omfg.se">http://bodstrom.omfg.se</a> - BodstrÃ¶msamhÃ¤llet, LÃ¤nksamling om hoten mot vÃ¥r personliga integritet</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p43426">
+<div class="inner">
+<dl class="postprofile" id="profile43426">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 360</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-16 10:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content43426">
+<h3><a href="#p43426"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a></strong> » </span>2004-02-22 03:32
+			</p>
+<div class="content"><blockquote><div><cite>GargoyleMT wrote:</cite>keeping the lists in memory unless they explicitly refresh the displayed one seems to be reasonable.</div></blockquote>
+<br/>
+<br/>or maybe even a must have! wouldn't wanna kill another hunlist feed!</div>
+<div class="signature" id="sig43426"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://whyrar.omfg.se">http://whyrar.omfg.se</a> - Guide to RAR and DC behaviour!<br/><a class="postlink" href="http://bodstrom.omfg.se">http://bodstrom.omfg.se</a> - BodstrÃ¶msamhÃ¤llet, LÃ¤nksamling om hoten mot vÃ¥r personliga integritet</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47115">
+<div class="inner">
+<dl class="postprofile" id="profile47115">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a> </dt>
+<dd class="profile-rank">DC++ Contributor</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 3212</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-08 02:46</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> .pa.us</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47115">
+<h3><a href="#p47115">Re: I added some new features to DC++....</a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username-coloured" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=216" style="color: #AA0000;">GargoyleMT</a></strong> » </span>2004-03-28 20:28
+			</p>
+<div class="content"><blockquote><div><cite>mr_asco wrote:</cite>1) New column in public hubs listview, named "Country",<br/>where the hub country is shown.</div></blockquote>
+<br/>
+<br/>Someone is asking me about this as I type this... What're you currently up to?</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47179">
+<div class="inner">
+<dl class="postprofile" id="profile47179">
+<dt class="has-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a> </dt>
+<dd class="profile-rank">Forum Moderator</dd>
+<dd class="profile-posts"><strong>Posts:</strong> 687</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-01-04 14:32</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47179">
+<h3><a href="#p47179"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=69">Sedulus</a></strong> » </span>2004-03-29 02:01
+			</p>
+<div class="content"><blockquote><div><cite>cyberal wrote:</cite>imo all clients should know all ips in the hub, that would eliminate the possibility to fake search results or hijack grant slots!</div></blockquote>
+<br/>
+<br/>eliminating fake udp responses (search results) is only possible if all (many/most) ISPs blocked outbound spoofed source IPs (egress filtering)</div>
+<div class="signature" id="sig47179"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://dc.selwerd.nl/">http://dc.selwerd.nl/</a>hublist.xml.bz2<br/><!-- m --><a class="postlink" href="http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html">http://www.b.ali.btinternet.co.uk/DCPlusPlus/index.html</a><!-- m --> (TheParanoidOne's DC++ Guide)<br/><!-- m --><a class="postlink" href="http://www.dslreports.com/faq/dc">http://www.dslreports.com/faq/dc</a><!-- m --> (BSOD2600's Direct Connect FAQ)</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg2" id="p47195">
+<div class="inner">
+<dl class="postprofile" id="profile47195">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 360</dd> <dd class="profile-joined"><strong>Joined:</strong> 2003-05-16 10:42</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47195">
+<h3><a href="#p47195"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=6498">cyberal</a></strong> » </span>2004-03-29 05:44
+			</p>
+<div class="content">hehe, well yes.. ofcourse you are correct... but faking source IPs is one level higher than just putting someone elses nick in the response..</div>
+<div class="signature" id="sig47195"><span style="font-size: 75%; line-height: 116%;"><a class="postlink" href="http://whyrar.omfg.se">http://whyrar.omfg.se</a> - Guide to RAR and DC behaviour!<br/><a class="postlink" href="http://bodstrom.omfg.se">http://bodstrom.omfg.se</a> - BodstrÃ¶msamhÃ¤llet, LÃ¤nksamling om hoten mot vÃ¥r personliga integritet</span></div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="post has-profile bg1" id="p47462">
+<div class="inner">
+<dl class="postprofile" id="profile47462">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18980">salkku</a> </dt>
+<dd class="profile-posts"><strong>Posts:</strong> 1</dd> <dd class="profile-joined"><strong>Joined:</strong> 2004-03-08 14:25</dd>
+</dl>
+<div class="postbody">
+<div id="post_content47462">
+<h3><a href="#p47462"></a></h3>
+<p class="author">
+<span><i aria-hidden="true" class="icon fa-file fa-fw icon-lightgray icon-md"></i><span class="sr-only">Post</span></span>
+<span class="responsive-hide">by <strong><a class="username" href="/dcpp_forums/memberlist.php?mode=viewprofile&amp;u=18980">salkku</a></strong> » </span>2004-03-30 18:13
+			</p>
+<div class="content">just a little noob note that if you make it use <!-- w --><a class="postlink" href="http://www.ip2nation.com">www.ip2nation.com</a><!-- w --> or any similar page, set the default 'country check' to none, so that the page wont get flooded...</div>
+</div>
+</div>
+<div class="back2top">
+<a class="top" href="#top" title="Top">
+<i aria-hidden="true" class="icon fa-chevron-circle-up fa-fw icon-gray"></i>
+<span class="sr-only">Top</span>
+</a>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<div class="action-bar bar-bottom">
+<div class="pagination">
+			18 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div class="action-bar actions-jump">
+<p class="jumpbox-return">
+<a accesskey="r" class="left-box arrow-left" href="/dcpp_forums/viewforum.php?f=2">
+<i aria-hidden="true" class="icon fa-angle-left fa-fw icon-black"></i><span>Return to “Feature Discussion (Archived)”</span>
+</a>
+</p>
+<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span class="button button-secondary dropdown-trigger dropdown-select" title="Jump to">
+<span>Jump to</span>
+<span class="caret"><i aria-hidden="true" class="icon fa-sort-down fa-fw"></i></span>
+</span>
+<div class="dropdown">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=23"> <span> DC++</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=19"><span class="spacer"></span> <span>↳   Support</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=1"><span class="spacer"></span> <span>↳   Open Discussion</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=18"><span class="spacer"></span> <span>↳   Proposals</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=2"><span class="spacer"></span> <span>↳   Feature Discussion (Archived)</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=24"> <span> adchpp</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=20"><span class="spacer"></span> <span>↳   adchpp general</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=21"><span class="spacer"></span> <span>↳   Plugins / Scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=22"><span class="spacer"></span> <span>↳   Plugin / Script help</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=13"><span class="spacer"></span> <span>↳   DCH++ General</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=14"><span class="spacer"></span> <span>↳   Beta Testers</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=25"> <span> Developers</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=6"><span class="spacer"></span> <span>↳   Protocol Alley</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=12"><span class="spacer"></span> <span>↳   Developer's resort</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=7"><span class="spacer"></span> <span>↳   Programmer's Help</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=26"> <span> Other</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=8"><span class="spacer"></span> <span>↳   Hubs and scripts</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=10"><span class="spacer"></span> <span>↳   Other Direct Connect tools</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=5"><span class="spacer"></span> <span>↳   Off Topic</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=15"><span class="spacer"></span> <span>↳   Hall of Fame</span></a></li>
+<li><a class="jumpbox-cat-link" href="/dcpp_forums/viewforum.php?f=27"> <span> Private Forums</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=17"><span class="spacer"></span> <span>↳   Moderators</span></a></li>
+<li><a class="jumpbox-sub-link" href="/dcpp_forums/viewforum.php?f=11"><span class="spacer"></span> <span>↳   Dump</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3><a class="inert" href="#" title="Disabled in this archive">Who is online</a></h3>
+<p>Users browsing this forum: <span class="username-coloured" style="color: #9E8DA7;">Google [Bot]</span> and 0 guests</p>
+</div>
+</div>
+<div class="page-footer" id="page-footer" role="contentinfo"><div class="archive-note">This is a static archive of the DCBase forums, rebuilt from a complete phpBB database backup so every post is preserved. It covers the old DC++ developer forum (archive.dcbase.org, 2003 to 2007) under <code>/dcpp_forums/</code> and the later forum.dcbase.org (2007 to 2019). Login, search, posting and other interactive functions are disabled; the few links shown in <span class="na">red</span> point at content that is not in the backup (uploaded files were not part of it).</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul class="nav-footer linklist" id="nav-footer" role="menubar">
+<li class="breadcrumbs">
+<span class="crumb"><a data-navbar-reference="index" href="/dcpp_forums/"><i aria-hidden="true" class="icon fa-home fa-fw"></i><span>Board index</span></a></span> </li>
+<li class="rightside">All times are <span title="UTC">UTC</span></li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-shield fa-fw"></i><span>The team</span>
+</a>
+</li>
+<li class="rightside" data-last-responsive="true">
+<a class="inert" href="#" role="menuitem" title="Disabled in this archive">
+<i aria-hidden="true" class="icon fa-envelope fa-fw"></i><span>Contact us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p class="footer-row">
+<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+</p>
+<p class="footer-row">
+<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Privacy</span>
+</a>
+			|
+			<a class="footer-link inert" href="#" role="menuitem" title="Disabled in this archive">
+<span class="footer-link-text">Terms</span>
+</a>
+</p>
+</div>
+<div class="darkenwrapper" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-title="AJAX error" id="darkenwrapper">
+<div class="darken" id="darken"> </div>
+</div>
+<div class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out." id="phpbb_alert">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<h3 class="alert_title"> </h3><p class="alert_text"></p>
+</div>
+<div class="phpbb_alert" id="phpbb_confirm">
+<a class="alert_close" href="#">
+<i aria-hidden="true" class="icon fa-times-circle fa-fw"></i>
+</a>
+<div class="alert_text"></div>
+</div>
+</div>
+</div>
+<div>
+<a accesskey="z" class="anchor" id="bottom"></a>
+</div>
+
+
+
+
+</body>
+</html>

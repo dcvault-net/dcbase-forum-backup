@@ -232,11 +232,17 @@ for key, ns in NS.items():
 worker_ns = {k: dict(urlbase=v["urlbase"], pmap=v["pmap"],
                      valid=sorted(v["valid"])) for k, v in NS.items()}
 WORKER_BODY = r'''
-async function handleSearch(url, env) {
+async function handleSearch(url, env, ctx) {
   const raw = (url.searchParams.get("q") || url.searchParams.get("keywords") || "").trim();
   if (!raw || !env.DB) return Response.json({ q: raw, results: [] });
   const terms = (raw.match(/[\p{L}\p{N}_]+/gu) || []).slice(0, 10);
   if (!terms.length) return Response.json({ q: raw, results: [] });
+  // Edge-cache identical searches so a crawler hitting search URLs cannot spike
+  // the D1 FTS table. Archived content is static, so results never change.
+  const cache = caches.default;
+  const cacheKey = new Request(url.origin + "/api/forum-search?q=" + encodeURIComponent(raw.toLowerCase()));
+  const hit = await cache.match(cacheKey);
+  if (hit) return hit;
   // quoted terms (implicit AND); prefix-match the final term for as-you-type feel
   const fts = terms.map((t, i) => '"' + t + '"' + (i === terms.length - 1 ? "*" : "")).join(" ");
   try {
@@ -245,16 +251,19 @@ async function handleSearch(url, env) {
       "snippet(search, 1, '@@H@@', '@@X@@', ' … ', 12) AS snip " +
       "FROM search WHERE search MATCH ? ORDER BY bm25(search) LIMIT 50");
     const { results } = await stmt.bind(fts).all();
-    return Response.json({ q: raw, count: results.length, results });
+    const resp = Response.json({ q: raw, count: results.length, results },
+      { headers: { "Cache-Control": "public, max-age=86400" } });
+    if (ctx && ctx.waitUntil) ctx.waitUntil(cache.put(cacheKey, resp.clone()));
+    return resp;
   } catch (e) {
     return Response.json({ q: raw, results: [], error: String(e) });
   }
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    if (url.pathname === "/api/forum-search") return handleSearch(url, env);
+    if (url.pathname === "/api/forum-search") return handleSearch(url, env, ctx);
     let path = url.pathname, q = url.searchParams;
     // pick namespace by path prefix (longest urlbase first)
     let nsKey = "", rest = path;
